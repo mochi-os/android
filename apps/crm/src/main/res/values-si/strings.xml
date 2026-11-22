@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">ගැලපෙන වස්තු නැත</string>
     <string name="crm_field_yes">ඔව්</string>
     <string name="crm_field_no">නැත</string>
-    <string name="crm_field_type_checkbox">පරීක්ෂා පෙට්ටිය</string>
     <string name="crm_comment_empty">තවම අදහස් නැත</string>
     <string name="crm_comment_attach">ගොනු අමුණන්න</string>
     <string name="crm_property_remove">ඉවත් කරන්න</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ක්ෂේත්‍රයක් එක් කරන්න</string>
     <string name="crm_class_delete">පන්තිය මකන්න</string>
     <string name="crm_class_delete_title">පන්තිය මකන්න</string>
-    <string name="crm_field_type_text">පෙළ</string>
-    <string name="crm_field_type_number">අංකය</string>
-    <string name="crm_field_type_user">පරිශීලකයා</string>
-    <string name="crm_field_type_date">දිනය</string>
-    <string name="crm_field_type_checklist">පරීක්ෂා ලැයිස්තුව</string>
     <string name="crm_field_name">නම</string>
     <string name="crm_field_type">වර්ගය</string>
     <string name="crm_field_flags">කොඩි</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">වෙනසක් කළා</string>
     <string name="crm_activity_attached">අමුණන ලදී</string>
     <string name="crm_activity_commented">අදහස් දැක්වීය</string>
+    <string name="crm_activity_moved">ගෙන ගියේය</string>
+    <string name="crm_activity_linked">සම්බන්ධ කළේය</string>
+    <string name="crm_activity_class">පංතිය වෙනස් කළේය</string>
     <string name="crm_attachment_empty">ඇමුණුම් නැත</string>
     <string name="crm_attachment_default_name">ඇමුණුම</string>
     <string name="crm_attachment_delete_confirm_title">ඇමුණුම මකන්නද?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">පෙරනිමි (කියවිය හැකි)</string>
     <string name="crm_class_parents">මාපිය පන්ති</string>
     <string name="crm_class_delete_message">ඔබට \"%1$s\" පන්තිය මැකීමට අවශ්‍ය බව සැබෑද? සියලුම ක්ෂේත්‍ර සහ ඒවායේ විකල්ප ද මකා දැමෙනු ඇත.</string>
-    <string name="crm_field_type_enumerated">ගණනය කළ</string>
     <string name="crm_field_label">ක්ෂේත්‍රය: %1$s</string>
     <string name="crm_field_readonly">කියවීමට පමණි</string>
     <string name="crm_field_sortable">වර්ග කළ හැකි</string>
     <string name="crm_field_filterable">පෙරිය හැකි</string>
     <string name="crm_field_show_on_card">කාඩ්පත මත පෙන්වන්න</string>
-    <string name="crm_field_multi">බහු තේරීම</string>
     <string name="crm_field_position">සංදර්ශන පිහිටුම</string>
     <string name="crm_field_position_header">ශීර්ෂකය</string>
     <string name="crm_field_validation">වලංගුකරණය</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">මායිම් වර්ණ ක්ෂේත්‍රය</string>
     <string name="crm_views_filter_classes">පන්ති වලට පෙරන්න</string>
     <string name="crm_views_by">%1$s අනුව</string>
-    <string name="crm_views_sorted">%1$s පෙළගස්වා ඇත</string>
     <string name="crm_design_preview_label">පෙරදසුන:</string>
     <string name="crm_design_preview_no_view">පෙරදසුන්වීමට දසුනක් නැත</string>
     <string name="crm_design_preview_no_class">මෙම දසුන සඳහා පන්තියක් නැත</string>
@@ -295,4 +289,7 @@
         <item quantity="one">ඇමුණුම් %1$s ක් එක් කිරීමට නොහැකි විය: %2$s</item>
         <item quantity="other">ඇමුණුම් %1$s ක් එක් කිරීමට නොහැකි විය: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">මව්</string>
+    <string name="crm_export_csv_id">හැඳුනුම</string>
+    <string name="crm_export_csv_class">පංතිය</string>
 </resources>

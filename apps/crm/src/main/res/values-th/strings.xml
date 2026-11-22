@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">ไม่มีออบเจกต์ที่ตรงกัน</string>
     <string name="crm_field_yes">ใช่</string>
     <string name="crm_field_no">ไม่</string>
-    <string name="crm_field_type_checkbox">ช่องทำเครื่องหมาย</string>
     <string name="crm_comment_empty">ยังไม่มีความคิดเห็น</string>
     <string name="crm_comment_attach">แนบไฟล์</string>
     <string name="crm_property_remove">ลบ</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">เพิ่มฟิลด์</string>
     <string name="crm_class_delete">ลบคลาส</string>
     <string name="crm_class_delete_title">ลบคลาส</string>
-    <string name="crm_field_type_text">ข้อความ</string>
-    <string name="crm_field_type_number">ตัวเลข</string>
-    <string name="crm_field_type_user">ผู้ใช้</string>
-    <string name="crm_field_type_date">วันที่</string>
-    <string name="crm_field_type_checklist">เช็คลิสต์</string>
     <string name="crm_field_name">ชื่อ</string>
     <string name="crm_field_type">ประเภท</string>
     <string name="crm_field_flags">แฟล็ก</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ทำการเปลี่ยนแปลง</string>
     <string name="crm_activity_attached">แนบแล้ว</string>
     <string name="crm_activity_commented">แสดงความคิดเห็นแล้ว</string>
+    <string name="crm_activity_moved">ย้ายแล้ว</string>
+    <string name="crm_activity_linked">ลิงก์แล้ว</string>
+    <string name="crm_activity_class">เปลี่ยนคลาส</string>
     <string name="crm_attachment_empty">ไม่มีไฟล์แนบ</string>
     <string name="crm_attachment_default_name">ไฟล์แนบ</string>
     <string name="crm_attachment_delete_confirm_title">ลบไฟล์แนบหรือไม่?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ค่าเริ่มต้น (อ่านได้)</string>
     <string name="crm_class_parents">คลาสแม่</string>
     <string name="crm_class_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบคลาส \"%1$s\" ฟิลด์และตัวเลือกทั้งหมดของฟิลด์จะถูกลบด้วย</string>
-    <string name="crm_field_type_enumerated">แบบแจกแจง</string>
     <string name="crm_field_label">ฟิลด์: %1$s</string>
     <string name="crm_field_readonly">อ่านอย่างเดียว</string>
     <string name="crm_field_sortable">เรียงลำดับได้</string>
     <string name="crm_field_filterable">กรองได้</string>
     <string name="crm_field_show_on_card">แสดงบนการ์ด</string>
-    <string name="crm_field_multi">เลือกได้หลายรายการ</string>
     <string name="crm_field_position">ตำแหน่งการแสดงผล</string>
     <string name="crm_field_position_header">ส่วนหัว</string>
     <string name="crm_field_validation">การตรวจสอบ</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">ฟิลด์สีกรอบ</string>
     <string name="crm_views_filter_classes">กรองตามคลาส</string>
     <string name="crm_views_by">โดย %1$s</string>
-    <string name="crm_views_sorted">เรียงลำดับ %1$s</string>
     <string name="crm_design_preview_label">ตัวอย่าง:</string>
     <string name="crm_design_preview_no_view">ไม่มีมุมมองให้แสดงตัวอย่าง</string>
     <string name="crm_design_preview_no_class">ไม่มีคลาสสำหรับมุมมองนี้</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">ไม่สามารถเพิ่มไฟล์แนบ %1$s รายการ: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">แม่</string>
+    <string name="crm_export_csv_id">รหัส</string>
+    <string name="crm_export_csv_class">คลาส</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Ei vastaavia kohteita</string>
     <string name="crm_field_yes">Kyllä</string>
     <string name="crm_field_no">Ei</string>
-    <string name="crm_field_type_checkbox">Valintaruutu</string>
     <string name="crm_comment_empty">Ei vielä kommentteja</string>
     <string name="crm_comment_attach">Liitä tiedostoja</string>
     <string name="crm_property_remove">Poista</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Lisää kenttä</string>
     <string name="crm_class_delete">Poista luokka</string>
     <string name="crm_class_delete_title">Poista luokka</string>
-    <string name="crm_field_type_text">Teksti</string>
-    <string name="crm_field_type_number">Luku</string>
-    <string name="crm_field_type_user">Käyttäjä</string>
-    <string name="crm_field_type_date">Päivämäärä</string>
-    <string name="crm_field_type_checklist">Tarkistuslista</string>
     <string name="crm_field_name">Nimi</string>
     <string name="crm_field_type">Tyyppi</string>
     <string name="crm_field_flags">Liput</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">teki muutoksen</string>
     <string name="crm_activity_attached">liitti</string>
     <string name="crm_activity_commented">kommentoi</string>
+    <string name="crm_activity_moved">siirsi</string>
+    <string name="crm_activity_linked">linkitti</string>
+    <string name="crm_activity_class">vaihtoi luokan</string>
     <string name="crm_attachment_empty">Ei liitteitä</string>
     <string name="crm_attachment_default_name">liite</string>
     <string name="crm_attachment_delete_confirm_title">Poistetaanko liite?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Oletus (luettava)</string>
     <string name="crm_class_parents">Yläluokat</string>
     <string name="crm_class_delete_message">Haluatko varmasti poistaa luokan \"%1$s\"? Myös kaikki kentät ja niiden vaihtoehdot poistetaan.</string>
-    <string name="crm_field_type_enumerated">Luetteloitu</string>
     <string name="crm_field_label">Kenttä: %1$s</string>
     <string name="crm_field_readonly">Vain luku</string>
     <string name="crm_field_sortable">Lajiteltavissa</string>
     <string name="crm_field_filterable">Suodatettavissa</string>
     <string name="crm_field_show_on_card">Näytä kortilla</string>
-    <string name="crm_field_multi">Monivalinta</string>
     <string name="crm_field_position">Näyttösijainti</string>
     <string name="crm_field_position_header">Otsake</string>
     <string name="crm_field_validation">Validointi</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Reunan värin kenttä</string>
     <string name="crm_views_filter_classes">Suodata luokkiin</string>
     <string name="crm_views_by">tekijältä %1$s</string>
-    <string name="crm_views_sorted">lajiteltu %1$s</string>
     <string name="crm_design_preview_label">Esikatselu:</string>
     <string name="crm_design_preview_no_view">Ei esikatseltavaa näkymää</string>
     <string name="crm_design_preview_no_class">Ei luokkaa tälle näkymälle</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s liitettä ei voitu lisätä: %2$s</item>
         <item quantity="other">%1$s liitettä ei voitu lisätä: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Yläkohde</string>
+    <string name="crm_export_csv_id">Tunnus</string>
+    <string name="crm_export_csv_class">Luokka</string>
 </resources>

@@ -141,8 +141,6 @@ class CrmAccountTest {
     @Test
     fun `a read begun for the previous account is not kept for the next`() {
         held()
-        repository.invalidateCache("x1")
-        runBlocking { repository.getObjects("x1") }
         hold = CountDownLatch(1)
         val before = informations.get()
         val read = thread { runBlocking { repository.getCrmInfo("x1") } }

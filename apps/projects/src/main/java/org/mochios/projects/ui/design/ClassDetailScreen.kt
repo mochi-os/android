@@ -83,17 +83,7 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.compose.foundation.layout.Box
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.api.userMessage
-
-@Composable
-private fun fieldTypeLabel(type: String): String = when (type) {
-    "text" -> stringResource(R.string.projects_field_type_text)
-    "number" -> stringResource(R.string.projects_field_type_number)
-    "enumerated" -> stringResource(R.string.projects_field_type_enumerated)
-    "user" -> stringResource(R.string.projects_field_type_user)
-    "date" -> stringResource(R.string.projects_field_type_date)
-    "checklist" -> stringResource(R.string.projects_field_type_checklist)
-    else -> type
-}
+import org.mochios.android.ui.components.fieldTypeLabel
 
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)

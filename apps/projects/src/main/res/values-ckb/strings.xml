@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">زیادکردنی خانە</string>
     <string name="projects_class_delete">سڕینەوەی پۆل</string>
     <string name="projects_class_delete_title">سڕینەوەی پۆل</string>
-    <string name="projects_field_type_text">دەق</string>
-    <string name="projects_field_type_number">ژمارە</string>
-    <string name="projects_field_type_user">بەکارهێنەر</string>
-    <string name="projects_field_type_date">بەروار</string>
-    <string name="projects_field_type_checklist">لیستی پشکنین</string>
     <string name="projects_field_name">ناو</string>
     <string name="projects_field_type">جۆر</string>
     <string name="projects_field_flags">ئاڵاکان</string>
@@ -166,13 +161,11 @@
     <string name="projects_class_move_up">گواستنەوە بۆ سەرەوە</string>
     <string name="projects_class_move_down">گواستنەوە بۆ خوارەوە</string>
     <string name="projects_class_delete_message">دڵنیایت لە سڕینەوەی پۆلی \"%1$s\"؟ هەموو خانە و بژاردەکانیشی دەسڕێنەوە.</string>
-    <string name="projects_field_type_enumerated">ژمێردراو</string>
     <string name="projects_field_label">خانە: %1$s</string>
     <string name="projects_field_readonly">تەنیا بۆ خوێندنەوە</string>
     <string name="projects_field_sortable">ڕیزکردن دەکرێت</string>
     <string name="projects_field_filterable">پاڵاوتن دەکرێت</string>
     <string name="projects_field_show_on_card">پیشاندان لەسەر کارت</string>
-    <string name="projects_field_multi">هەڵبژاردنی فرە</string>
     <string name="projects_field_position">شوێنی پیشاندان</string>
     <string name="projects_field_position_header">سەردێڕ</string>
     <string name="projects_field_position_body">ناوەڕۆک</string>
@@ -195,7 +188,6 @@
     <string name="projects_views_direction_desc">داکەوتوو</string>
     <string name="projects_views_filter_classes">پاڵاوتن بۆ پۆلەکان</string>
     <string name="projects_views_by">بەپێی %1$s</string>
-    <string name="projects_views_sorted">ڕیزکراو %1$s</string>
     <string name="projects_design_preview_label">پێشبینین:</string>
     <string name="projects_design_preview_no_view">هیچ ڕوانینێک نییە بۆ پێشبینین</string>
     <string name="projects_design_preview_no_class">هیچ پۆلێک نییە بۆ ئەم ڕوانینە</string>
@@ -304,6 +296,9 @@
     <string name="projects_settings_updated">پڕۆژە نوێ کرایەوە</string>
     <string name="projects_activity_attached">هاوپێچی کرد</string>
     <string name="projects_activity_commented">لێدوانی دا</string>
+    <string name="projects_activity_moved">ئەم بابەتەی گواستەوە</string>
+    <string name="projects_activity_linked">بەستەرێکی زیادکرد</string>
+    <string name="projects_activity_class">پۆلەکەی گۆڕی</string>
     <string name="projects_attachment_delete_confirm_message">ئەم هاوپێچە بە هەمیشەیی دەسڕدرێتەوە.</string>
     <string name="projects_attachment_delete_confirm_title">هاوپێچ بسڕدرێتەوە؟</string>
     <string name="projects_settings_unsubscribe_section">لابردنی بەشداری لە پڕۆژە</string>
@@ -341,4 +336,5 @@
         <item quantity="other">ئایا دڵنیایت لە سڕینەوەی \"%1$s\" و %2$s بڕگە لە ژێریدا؟ ئەم کردارە ناگەڕێتەوە.</item>
     </plurals>
     <string name="projects_create_attachments_failed">هاوپێچکردن نەکرا: %1$s</string>
+    <string name="projects_activity_unknown">نەناسراو</string>
 </resources>

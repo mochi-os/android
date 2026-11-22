@@ -29,7 +29,14 @@ private fun JsonObject.jsonString(key: String): String? =
         ?.asString
         ?.takeIf { value -> value.isNotBlank() }
 
+/**
+ * @property name The name typed, or the picked backup's until changed.
+ * @property privacy "private", or "public", which lets everyone view the CRM
+ *   and every signed-in person comment on it.
+ */
 data class CreateCrmUiState(
+    val name: String = "",
+    val privacy: String = "private",
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val backupPrefill: BackupPrefill? = null,
@@ -83,15 +90,28 @@ class CreateCrmViewModel @Inject constructor(
             // older project-shaped backups still say "project".
             val crm = root.getAsJsonObject("crm") ?: root.getAsJsonObject("project")
             val archive = uri.takeIf { repository.isArchive(uri) }
+            val name = crm?.jsonString("name")
             _uiState.value = _uiState.value.copy(
+                // The backup names the CRM until the user names it otherwise.
+                name = name ?: _uiState.value.name,
                 backupPrefill = BackupPrefill(
                     json = content,
                     fileName = fileName,
-                    name = crm?.jsonString("name"),
+                    name = name,
                     archive = archive
                 )
             )
         }
+    }
+
+    /** The name typed. */
+    fun setName(name: String) {
+        _uiState.value = _uiState.value.copy(name = name)
+    }
+
+    /** "public" or "private". */
+    fun setPrivacy(privacy: String) {
+        _uiState.value = _uiState.value.copy(privacy = privacy)
     }
 
     /** The screen has shown the unreadable-backup notice. */

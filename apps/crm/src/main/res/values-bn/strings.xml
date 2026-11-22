@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">কোনো মিলে যাওয়া অবজেক্ট নেই</string>
     <string name="crm_field_yes">হ্যাঁ</string>
     <string name="crm_field_no">না</string>
-    <string name="crm_field_type_checkbox">চেকবক্স</string>
     <string name="crm_comment_empty">এখনও কোনো মন্তব্য নেই</string>
     <string name="crm_comment_attach">ফাইল সংযুক্ত করুন</string>
     <string name="crm_property_remove">সরান</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ফিল্ড যোগ করুন</string>
     <string name="crm_class_delete">ক্লাস মুছুন</string>
     <string name="crm_class_delete_title">ক্লাস মুছুন</string>
-    <string name="crm_field_type_text">টেক্সট</string>
-    <string name="crm_field_type_number">সংখ্যা</string>
-    <string name="crm_field_type_user">ব্যবহারকারী</string>
-    <string name="crm_field_type_date">তারিখ</string>
-    <string name="crm_field_type_checklist">চেকলিস্ট</string>
     <string name="crm_field_name">নাম</string>
     <string name="crm_field_type">ধরন</string>
     <string name="crm_field_flags">ফ্ল্যাগসমূহ</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">একটি পরিবর্তন করেছেন</string>
     <string name="crm_activity_attached">সংযুক্ত করেছেন</string>
     <string name="crm_activity_commented">মন্তব্য করেছেন</string>
+    <string name="crm_activity_moved">সরিয়েছেন</string>
+    <string name="crm_activity_linked">লিঙ্ক করেছেন</string>
+    <string name="crm_activity_class">শ্রেণী পরিবর্তন করেছেন</string>
     <string name="crm_attachment_empty">কোনো সংযুক্তি নেই</string>
     <string name="crm_attachment_default_name">সংযুক্তি</string>
     <string name="crm_attachment_delete_confirm_title">সংযুক্তি মুছবেন?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">উপরে সরান</string>
     <string name="crm_class_move_down">নিচে সরান</string>
     <string name="crm_class_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" ক্লাসটি মুছে ফেলতে চান? সব ফিল্ড এবং তাদের অপশনও মুছে যাবে।</string>
-    <string name="crm_field_type_enumerated">এনুমারেটেড</string>
     <string name="crm_field_label">ফিল্ড: %1$s</string>
     <string name="crm_field_readonly">শুধুমাত্র পাঠযোগ্য</string>
     <string name="crm_field_sortable">সাজানোযোগ্য</string>
     <string name="crm_field_filterable">ফিল্টারযোগ্য</string>
     <string name="crm_field_show_on_card">কার্ডে দেখান</string>
-    <string name="crm_field_multi">একাধিক নির্বাচন</string>
     <string name="crm_field_position">প্রদর্শন অবস্থান</string>
     <string name="crm_field_position_header">হেডার</string>
     <string name="crm_field_position_body">বডি</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">অধঃক্রম</string>
     <string name="crm_views_filter_classes">ক্লাস অনুসারে ফিল্টার করুন</string>
     <string name="crm_views_by">%1$s অনুসারে</string>
-    <string name="crm_views_sorted">%1$s সাজানো</string>
     <string name="crm_design_preview_label">প্রিভিউ:</string>
     <string name="crm_design_preview_no_view">প্রিভিউ করার মতো কোনো ভিউ নেই</string>
     <string name="crm_design_preview_no_class">এই ভিউয়ের জন্য কোনো ক্লাস নেই</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$sটি অ্যাটাচমেন্ট যোগ করা যায়নি: %2$s</item>
         <item quantity="other">%1$sটি অ্যাটাচমেন্ট যোগ করা যায়নি: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">প্যারেন্ট</string>
+    <string name="crm_export_csv_id">আইডি</string>
+    <string name="crm_export_csv_class">শ্রেণী</string>
 </resources>

@@ -370,4 +370,13 @@
     <string name="devices_username">පරිශීලක නාමය</string>
     <string name="devices_warning">මුරපදය දැන් පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>
     <string name="devices_unused">කවදාවත් භාවිත කර නැත</string>
+    <string name="field_type_text">පෙළ</string>
+    <string name="field_type_number">අංකය</string>
+    <string name="field_type_enumerated">ගණනය කළ</string>
+    <string name="field_type_user">පරිශීලකයා</string>
+    <string name="field_type_date">දිනය</string>
+    <string name="field_type_checkbox">පරීක්ෂා පෙට්ටිය</string>
+    <string name="field_type_checklist">පරීක්ෂා ලැයිස්තුව</string>
+    <string name="view_list_sorted_ascending">ආරෝහණ ලෙස වර්ග කර ඇත</string>
+    <string name="view_list_sorted_descending">අවරෝහණ ලෙස වර්ග කර ඇත</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Uyğun obyekt yoxdur</string>
     <string name="crm_field_yes">Bəli</string>
     <string name="crm_field_no">Xeyr</string>
-    <string name="crm_field_type_checkbox">İşarələmə qutusu</string>
     <string name="crm_comment_empty">Hələ şərh yoxdur</string>
     <string name="crm_comment_attach">Faylları qoş</string>
     <string name="crm_property_remove">Sil</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Sahə əlavə et</string>
     <string name="crm_class_delete">Sinifi sil</string>
     <string name="crm_class_delete_title">Sinifi sil</string>
-    <string name="crm_field_type_text">Mətn</string>
-    <string name="crm_field_type_number">Rəqəm</string>
-    <string name="crm_field_type_user">İstifadəçi</string>
-    <string name="crm_field_type_date">Tarix</string>
-    <string name="crm_field_type_checklist">Yoxlama siyahısı</string>
     <string name="crm_field_name">Ad</string>
     <string name="crm_field_type">Növ</string>
     <string name="crm_field_flags">Bayraqlar</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">dəyişiklik etdi</string>
     <string name="crm_activity_attached">əlavə etdi</string>
     <string name="crm_activity_commented">şərh yazdı</string>
+    <string name="crm_activity_moved">köçürdü</string>
+    <string name="crm_activity_linked">əlaqələndirdi</string>
+    <string name="crm_activity_class">sinfi dəyişdi</string>
     <string name="crm_attachment_empty">Qoşma yoxdur</string>
     <string name="crm_attachment_default_name">qoşma</string>
     <string name="crm_attachment_delete_confirm_title">Qoşma silinsin?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Yuxarı köçür</string>
     <string name="crm_class_move_down">Aşağı köçür</string>
     <string name="crm_class_delete_message">\"%1$s\" sinifini silmək istədiyinizə əminsiniz? Bütün sahələr və onların seçimləri də silinəcək.</string>
-    <string name="crm_field_type_enumerated">Sadalanmış</string>
     <string name="crm_field_label">Sahə: %1$s</string>
     <string name="crm_field_readonly">Yalnız oxunan</string>
     <string name="crm_field_sortable">Sıralana bilən</string>
     <string name="crm_field_filterable">Süzgəclənə bilən</string>
     <string name="crm_field_show_on_card">Kartda göstər</string>
-    <string name="crm_field_multi">Çoxlu seçim</string>
     <string name="crm_field_position">Göstərmə mövqeyi</string>
     <string name="crm_field_position_header">Başlıq</string>
     <string name="crm_field_position_body">Gövdə</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Azalan</string>
     <string name="crm_views_filter_classes">Siniflərə süzgəc</string>
     <string name="crm_views_by">%1$s üzrə</string>
-    <string name="crm_views_sorted">sıralanma %1$s</string>
     <string name="crm_design_preview_label">Önizləmə:</string>
     <string name="crm_design_preview_no_view">Önizləmək üçün görünüş yoxdur</string>
     <string name="crm_design_preview_no_class">Bu görünüş üçün sinif yoxdur</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s qoşma əlavə edilə bilmədi: %2$s</item>
         <item quantity="other">%1$s qoşma əlavə edilə bilmədi: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Əsas</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Sinif</string>
 </resources>

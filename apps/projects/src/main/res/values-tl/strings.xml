@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Magdagdag ng field</string>
     <string name="projects_class_delete">I-delete ang class</string>
     <string name="projects_class_delete_title">I-delete ang class</string>
-    <string name="projects_field_type_text">Teksto</string>
-    <string name="projects_field_type_number">Numero</string>
-    <string name="projects_field_type_user">User</string>
-    <string name="projects_field_type_date">Petsa</string>
-    <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Pangalan</string>
     <string name="projects_field_type">Uri</string>
     <string name="projects_field_flags">Mga flag</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Payagan ang mga merge request sa mga object ng klaseng ito.</string>
     <string name="projects_class_parents">Mga magulang na klase</string>
     <string name="projects_class_delete_message">Sigurado ka bang gusto mong tanggalin ang klaseng \"%1$s\"? Lahat ng field at kanilang mga opsyon ay buburahin din.</string>
-    <string name="projects_field_type_enumerated">Enumerated</string>
     <string name="projects_field_label">Field: %1$s</string>
     <string name="projects_field_readonly">Read-only</string>
     <string name="projects_field_sortable">Pwedeng i-sort</string>
     <string name="projects_field_filterable">Pwedeng i-filter</string>
     <string name="projects_field_show_on_card">Ipakita sa card</string>
-    <string name="projects_field_multi">Multi-select</string>
     <string name="projects_field_position">Posisyon ng display</string>
     <string name="projects_field_position_header">Header</string>
     <string name="projects_field_validation">Validation</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Field ng kulay ng hangganan</string>
     <string name="projects_views_filter_classes">I-filter sa mga klase</string>
     <string name="projects_views_by">ayon kay %1$s</string>
-    <string name="projects_views_sorted">naka-sort %1$s</string>
     <string name="projects_design_preview_label">Preview:</string>
     <string name="projects_design_preview_no_view">Walang view para i-preview</string>
     <string name="projects_design_preview_no_class">Walang klase para sa view na ito</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Na-update ang proyekto</string>
     <string name="projects_activity_attached">nag-attach</string>
     <string name="projects_activity_commented">nagkomento</string>
+    <string name="projects_activity_moved">inilipat ang object na ito</string>
+    <string name="projects_activity_linked">nagdagdag ng link</string>
+    <string name="projects_activity_class">binago ang klase</string>
     <string name="projects_attachment_delete_confirm_message">Permanenteng buburahin ang attachment na ito.</string>
     <string name="projects_attachment_delete_confirm_title">Burahin ang attachment?</string>
     <string name="projects_settings_unsubscribe_section">Mag-unsubscribe sa proyekto</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Sigurado ka bang gusto mong i-delete ang \"%1$s\" at ang %2$s na item sa ilalim nito? Hindi na ito maibabalik.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Hindi ma-attach: %1$s</string>
+    <string name="projects_activity_unknown">Hindi alam</string>
 </resources>

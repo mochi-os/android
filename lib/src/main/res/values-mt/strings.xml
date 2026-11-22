@@ -377,4 +377,13 @@
     <string name="devices_username">Isem tal-utent</string>
     <string name="devices_warning">Ikkupja l-password issa: ma tistax tintwera mill-ġdid.</string>
     <string name="devices_unused">Qatt ma ntuża</string>
+    <string name="field_type_text">Test</string>
+    <string name="field_type_number">Numru</string>
+    <string name="field_type_enumerated">Enumerat</string>
+    <string name="field_type_user">Utent</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Kaxxa tal-għażla</string>
+    <string name="field_type_checklist">Lista ta\' kontroll</string>
+    <string name="view_list_sorted_ascending">issortjat b\'mod axxendenti</string>
+    <string name="view_list_sorted_descending">issortjat b\'mod dixxendenti</string>
 </resources>

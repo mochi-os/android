@@ -374,4 +374,13 @@
     <string name="devices_username">Имя пользователя</string>
     <string name="devices_warning">Скопируйте пароль сейчас: он больше не будет показан.</string>
     <string name="devices_unused">Ни разу не использовалось</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Число</string>
+    <string name="field_type_enumerated">Перечисляемое</string>
+    <string name="field_type_user">Пользователь</string>
+    <string name="field_type_date">Дата</string>
+    <string name="field_type_checkbox">Флажок</string>
+    <string name="field_type_checklist">Чек-лист</string>
+    <string name="view_list_sorted_ascending">сортировка по возрастанию</string>
+    <string name="view_list_sorted_descending">сортировка по убыванию</string>
 </resources>

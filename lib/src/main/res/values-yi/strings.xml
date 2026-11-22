@@ -370,4 +370,13 @@
     <string name="devices_username">באַניצער־נאָמען</string>
     <string name="devices_warning">קאָפּירט דעם פּאַראָל איצט: מען קען אים ניט ווידער ווײַזן.</string>
     <string name="devices_unused">קיינמאָל נישט גענוצט</string>
+    <string name="field_type_text">טעקסט</string>
+    <string name="field_type_number">נומער</string>
+    <string name="field_type_enumerated">אויסגערעכנט</string>
+    <string name="field_type_user">באַניצער</string>
+    <string name="field_type_date">דאַטע</string>
+    <string name="field_type_checkbox">טשעקבאָקס</string>
+    <string name="field_type_checklist">טשעקליסטע</string>
+    <string name="view_list_sorted_ascending">סאָרטירט אַרויפֿגייענדיק</string>
+    <string name="view_list_sorted_descending">סאָרטירט אַראָפּגייענדיק</string>
 </resources>

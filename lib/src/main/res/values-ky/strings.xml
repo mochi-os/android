@@ -370,4 +370,13 @@
     <string name="devices_username">Колдонуучунун аты</string>
     <string name="devices_warning">Сырсөздү азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
     <string name="devices_unused">Эч качан колдонулган эмес</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Сан</string>
+    <string name="field_type_enumerated">Тизмеленген</string>
+    <string name="field_type_user">Колдонуучу</string>
+    <string name="field_type_date">Күн</string>
+    <string name="field_type_checkbox">Белги кутусу</string>
+    <string name="field_type_checklist">Текшерүү тизмеси</string>
+    <string name="view_list_sorted_ascending">өсүү тартибинде иреттелген</string>
+    <string name="view_list_sorted_descending">кемүү тартибинде иреттелген</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Asnjë objekt përputhës</string>
     <string name="crm_field_yes">Po</string>
     <string name="crm_field_no">Jo</string>
-    <string name="crm_field_type_checkbox">Kuti zgjedhjeje</string>
     <string name="crm_comment_empty">Ende pa komente</string>
     <string name="crm_comment_attach">Bashkëngjit skedarë</string>
     <string name="crm_property_remove">Hiq</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Shto fushë</string>
     <string name="crm_class_delete">Fshi klasën</string>
     <string name="crm_class_delete_title">Fshi klasën</string>
-    <string name="crm_field_type_text">Teksti</string>
-    <string name="crm_field_type_number">Numri</string>
-    <string name="crm_field_type_user">Përdoruesi</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Listë kontrolli</string>
     <string name="crm_field_name">Emri</string>
     <string name="crm_field_type">Lloji</string>
     <string name="crm_field_flags">Flamujt</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">bëri një ndryshim</string>
     <string name="crm_activity_attached">bashkëngjiti</string>
     <string name="crm_activity_commented">komentoi</string>
+    <string name="crm_activity_moved">zhvendosi</string>
+    <string name="crm_activity_linked">lidhi</string>
+    <string name="crm_activity_class">ndryshoi klasën</string>
     <string name="crm_attachment_empty">Asnjë bashkëngjitje</string>
     <string name="crm_attachment_default_name">bashkëngjitje</string>
     <string name="crm_attachment_delete_confirm_title">Të fshihet bashkëngjitja?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">I parazgjedhur (i lexueshëm)</string>
     <string name="crm_class_parents">Klasat prind</string>
     <string name="crm_class_delete_message">Jeni i sigurt që dëshironi të fshini klasën \"%1$s\"? Të gjitha fushat dhe opsionet e tyre gjithashtu do të fshihen.</string>
-    <string name="crm_field_type_enumerated">E numëruar</string>
     <string name="crm_field_label">Fusha: %1$s</string>
     <string name="crm_field_readonly">Vetëm për lexim</string>
     <string name="crm_field_sortable">E renditshme</string>
     <string name="crm_field_filterable">E filtrueshme</string>
     <string name="crm_field_show_on_card">Shfaq në kartë</string>
-    <string name="crm_field_multi">Përzgjedhje e shumëfishtë</string>
     <string name="crm_field_position">Pozicioni i shfaqjes</string>
     <string name="crm_field_position_header">Kreu</string>
     <string name="crm_field_validation">Validimi</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Fusha e ngjyrës së kornizës</string>
     <string name="crm_views_filter_classes">Filtro sipas klasave</string>
     <string name="crm_views_by">sipas %1$s</string>
-    <string name="crm_views_sorted">renditur %1$s</string>
     <string name="crm_design_preview_label">Pamja paraprake:</string>
     <string name="crm_design_preview_no_view">Nuk ka pamje për t\'u parë</string>
     <string name="crm_design_preview_no_class">Nuk ka klasë për këtë pamje</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s bashkëngjitje nuk mund të shtohej: %2$s</item>
         <item quantity="other">%1$s bashkëngjitje nuk mund të shtoheshin: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Prindi</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasa</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">لا توجد كائنات مطابقة</string>
     <string name="crm_field_yes">نعم</string>
     <string name="crm_field_no">لا</string>
-    <string name="crm_field_type_checkbox">مربع اختيار</string>
     <string name="crm_comment_empty">لا توجد تعليقات بعد</string>
     <string name="crm_comment_attach">إرفاق ملفات</string>
     <string name="crm_property_remove">إزالة</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">إضافة حقل</string>
     <string name="crm_class_delete">حذف الفئة</string>
     <string name="crm_class_delete_title">حذف الفئة</string>
-    <string name="crm_field_type_text">نص</string>
-    <string name="crm_field_type_number">الرقم</string>
-    <string name="crm_field_type_user">المستخدم</string>
-    <string name="crm_field_type_date">التاريخ</string>
-    <string name="crm_field_type_checklist">قائمة المهام</string>
     <string name="crm_field_name">الاسم</string>
     <string name="crm_field_type">النوع</string>
     <string name="crm_field_flags">الأعلام</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">أجرى تغييراً</string>
     <string name="crm_activity_attached">أرفق</string>
     <string name="crm_activity_commented">علّق</string>
+    <string name="crm_activity_moved">نقل</string>
+    <string name="crm_activity_linked">ربط</string>
+    <string name="crm_activity_class">غيّر الفئة</string>
     <string name="crm_attachment_empty">لا توجد مرفقات</string>
     <string name="crm_attachment_default_name">مرفق</string>
     <string name="crm_attachment_delete_confirm_title">حذف المرفق؟</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">نقل لأعلى</string>
     <string name="crm_class_move_down">نقل لأسفل</string>
     <string name="crm_class_delete_message">هل أنت متأكد أنك تريد حذف الفئة \"%1$s\"؟ سيتم أيضاً حذف جميع الحقول وخياراتها.</string>
-    <string name="crm_field_type_enumerated">مُعدَّد</string>
     <string name="crm_field_label">الحقل: %1$s</string>
     <string name="crm_field_readonly">للقراءة فقط</string>
     <string name="crm_field_sortable">قابل للفرز</string>
     <string name="crm_field_filterable">قابل للتصفية</string>
     <string name="crm_field_show_on_card">إظهار على البطاقة</string>
-    <string name="crm_field_multi">تحديد متعدد</string>
     <string name="crm_field_position">موضع العرض</string>
     <string name="crm_field_position_header">الترويسة</string>
     <string name="crm_field_position_body">المتن</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">تنازلي</string>
     <string name="crm_views_filter_classes">التصفية حسب الفئات</string>
     <string name="crm_views_by">حسب %1$s</string>
-    <string name="crm_views_sorted">مرتّب %1$s</string>
     <string name="crm_design_preview_label">معاينة:</string>
     <string name="crm_design_preview_no_view">لا يوجد عرض لمعاينته</string>
     <string name="crm_design_preview_no_class">لا توجد فئة لهذا العرض</string>
@@ -303,4 +297,7 @@
         <item quantity="many">تعذّرت إضافة %1$s مرفقًا: %2$s</item>
         <item quantity="other">تعذّرت إضافة %1$s مرفق: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">الأصل</string>
+    <string name="crm_export_csv_id">المعرّف</string>
+    <string name="crm_export_csv_class">فئة</string>
 </resources>

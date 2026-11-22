@@ -370,4 +370,13 @@
     <string name="devices_username">Nama pengguna</string>
     <string name="devices_warning">Salin kata sandi sekarang: kata sandi tidak dapat ditampilkan lagi.</string>
     <string name="devices_unused">Belum pernah digunakan</string>
+    <string name="field_type_text">Teks</string>
+    <string name="field_type_number">Angka</string>
+    <string name="field_type_enumerated">Terenumerasi</string>
+    <string name="field_type_user">Pengguna</string>
+    <string name="field_type_date">Tanggal</string>
+    <string name="field_type_checkbox">Kotak centang</string>
+    <string name="field_type_checklist">Daftar periksa</string>
+    <string name="view_list_sorted_ascending">diurutkan naik</string>
+    <string name="view_list_sorted_descending">diurutkan turun</string>
 </resources>

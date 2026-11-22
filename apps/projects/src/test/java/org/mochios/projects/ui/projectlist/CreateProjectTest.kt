@@ -6,6 +6,8 @@
 package org.mochios.projects.ui.projectlist
 
 import android.os.Looper
+import androidx.compose.ui.test.junit4.StateRestorationTester
+import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
@@ -116,6 +118,34 @@ class CreateProjectTest {
         val body = created().single()
         assertTrue("THE POINT: private: $body", body.contains("privacy=private"))
         assertTrue(body.contains("template=kanban"))
+    }
+
+    @Test
+    fun `the form keeps its step and what was typed when the screen is made again`() {
+        val api = Retrofit.Builder()
+            .baseUrl(server.url("/projects/"))
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ProjectsApi::class.java)
+        val model = CreateProjectViewModel(ProjectsRepository(api, FileStore(context), context, SessionManager(context)))
+        until { !model.uiState.value.templatesLoading }
+        val tester = StateRestorationTester(rule)
+        tester.setContent { CreateProjectScreen(onBack = {}, onCreated = {}, viewModel = model) }
+        rule.waitForIdle()
+        rule.onNodeWithText(context.getString(R.string.projects_create_name)).performTextInput("Website")
+        rule.onNode(isToggleable()).performClick()
+        rule.onNodeWithText(context.getString(R.string.projects_create_next)).performClick()
+        rule.onNodeWithText("Kanban board").performClick()
+        rule.waitForIdle()
+        // As a rotation, or a change of theme or font size, does.
+        tester.emulateSavedInstanceStateRestore()
+        rule.waitForIdle()
+        rule.onNodeWithText(context.getString(R.string.projects_create_action)).performClick()
+        until { created().isNotEmpty() }
+        val body = created().single()
+        assertTrue("THE POINT: the name typed: $body", body.contains("name=Website"))
+        assertTrue("the switch as set", body.contains("privacy=public"))
+        assertTrue("the template picked", body.contains("template=kanban"))
     }
 
     @Test

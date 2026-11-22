@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Žádné odpovídající objekty</string>
     <string name="crm_field_yes">Ano</string>
     <string name="crm_field_no">Ne</string>
-    <string name="crm_field_type_checkbox">Zaškrtávací pole</string>
     <string name="crm_comment_empty">Zatím žádné komentáře</string>
     <string name="crm_comment_attach">Připojit soubory</string>
     <string name="crm_property_remove">Odebrat</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Přidat pole</string>
     <string name="crm_class_delete">Smazat třídu</string>
     <string name="crm_class_delete_title">Smazat třídu</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Číslo</string>
-    <string name="crm_field_type_user">Uživatel</string>
-    <string name="crm_field_type_date">Datum</string>
-    <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Název</string>
     <string name="crm_field_type">Typ</string>
     <string name="crm_field_flags">Příznaky</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">provedl změnu</string>
     <string name="crm_activity_attached">přiložil(a)</string>
     <string name="crm_activity_commented">okomentoval(a)</string>
+    <string name="crm_activity_moved">přesunul(a)</string>
+    <string name="crm_activity_linked">propojil(a)</string>
+    <string name="crm_activity_class">změnil(a) třídu</string>
     <string name="crm_attachment_empty">Žádné přílohy</string>
     <string name="crm_attachment_default_name">příloha</string>
     <string name="crm_attachment_delete_confirm_title">Smazat přílohu?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Posunout nahoru</string>
     <string name="crm_class_move_down">Posunout dolů</string>
     <string name="crm_class_delete_message">Opravdu chcete smazat třídu \"%1$s\"? Všechna pole a jejich možnosti budou rovněž smazány.</string>
-    <string name="crm_field_type_enumerated">Výčet</string>
     <string name="crm_field_label">Pole: %1$s</string>
     <string name="crm_field_readonly">Pouze pro čtení</string>
     <string name="crm_field_sortable">Lze řadit</string>
     <string name="crm_field_filterable">Lze filtrovat</string>
     <string name="crm_field_show_on_card">Zobrazit na kartě</string>
-    <string name="crm_field_multi">Vícenásobný výběr</string>
     <string name="crm_field_position">Pozice zobrazení</string>
     <string name="crm_field_position_header">Záhlaví</string>
     <string name="crm_field_position_body">Obsah</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Sestupně</string>
     <string name="crm_views_filter_classes">Filtrovat na třídy</string>
     <string name="crm_views_by">podle %1$s</string>
-    <string name="crm_views_sorted">řazeno %1$s</string>
     <string name="crm_design_preview_label">Náhled:</string>
     <string name="crm_design_preview_no_view">Žádný pohled k zobrazení náhledu</string>
     <string name="crm_design_preview_no_class">Pro tento pohled není žádná třída</string>
@@ -297,4 +291,7 @@
         <item quantity="few">%1$s přílohy se nepodařilo přidat: %2$s</item>
         <item quantity="other">%1$s příloh se nepodařilo přidat: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Rodič</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Třída</string>
 </resources>

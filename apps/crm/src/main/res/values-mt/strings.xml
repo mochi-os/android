@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">L-ebda oġġetti li jaqblu</string>
     <string name="crm_field_yes">Iva</string>
     <string name="crm_field_no">Le</string>
-    <string name="crm_field_type_checkbox">Kaxxa tal-għażla</string>
     <string name="crm_comment_empty">L-ebda kummenti s\'issa</string>
     <string name="crm_comment_attach">Ehmeż files</string>
     <string name="crm_property_remove">Neħħi</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Żid kamp</string>
     <string name="crm_class_delete">Ħassar klassi</string>
     <string name="crm_class_delete_title">Ħassar klassi</string>
-    <string name="crm_field_type_text">Test</string>
-    <string name="crm_field_type_number">Numru</string>
-    <string name="crm_field_type_user">Utent</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Lista ta\' kontroll</string>
     <string name="crm_field_name">Isem</string>
     <string name="crm_field_type">Tip</string>
     <string name="crm_field_flags">Bandieri</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">għamel bidla</string>
     <string name="crm_activity_attached">hemeż</string>
     <string name="crm_activity_commented">ikkummenta</string>
+    <string name="crm_activity_moved">ċaqlaq</string>
+    <string name="crm_activity_linked">għaqqad</string>
+    <string name="crm_activity_class">biddel il-klassi</string>
     <string name="crm_attachment_empty">L-ebda mehmuż</string>
     <string name="crm_attachment_default_name">mehmuż</string>
     <string name="crm_attachment_delete_confirm_title">Tħassar l-anness?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Default (jinqara)</string>
     <string name="crm_class_parents">Klassijiet ġenituri</string>
     <string name="crm_class_delete_message">Żgur li trid tħassar il-klassi \"%1$s\"? Il-kampijiet kollha u l-għażliet tagħhom jitħassru wkoll.</string>
-    <string name="crm_field_type_enumerated">Enumerat</string>
     <string name="crm_field_label">Kamp: %1$s</string>
     <string name="crm_field_readonly">Jinqara biss</string>
     <string name="crm_field_sortable">Jista\' jiġi ordnat</string>
     <string name="crm_field_filterable">Jista\' jiġi ffiltrat</string>
     <string name="crm_field_show_on_card">Uri fuq il-karta</string>
-    <string name="crm_field_multi">Għażla multipla</string>
     <string name="crm_field_position">Pożizzjoni tal-wiri</string>
     <string name="crm_field_position_header">Intestatura</string>
     <string name="crm_field_validation">Validazzjoni</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Kamp tal-kulur tal-bordura</string>
     <string name="crm_views_filter_classes">Iffiltra għall-klassijiet</string>
     <string name="crm_views_by">minn %1$s</string>
-    <string name="crm_views_sorted">ordnat %1$s</string>
     <string name="crm_design_preview_label">Anteprima:</string>
     <string name="crm_design_preview_no_view">L-ebda veduta x\'tagħmel preview</string>
     <string name="crm_design_preview_no_class">L-ebda klassi għal din il-veduta</string>
@@ -301,4 +295,7 @@
         <item quantity="many">%1$s mehmuż ma setgħux jiżdiedu: %2$s</item>
         <item quantity="other">%1$s mehmuż ma setgħux jiżdiedu: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Ġenitur</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klassi</string>
 </resources>

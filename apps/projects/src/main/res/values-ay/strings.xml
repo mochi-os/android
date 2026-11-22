@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Campo yapxataña</string>
     <string name="projects_class_delete">Clase chhaqtayaña</string>
     <string name="projects_class_delete_title">Clase chhaqtayaña</string>
-    <string name="projects_field_type_text">Texto</string>
-    <string name="projects_field_type_number">Jakhu</string>
-    <string name="projects_field_type_user">Apnaqiri</string>
-    <string name="projects_field_type_date">Uru</string>
-    <string name="projects_field_type_checklist">Comprobación lista</string>
     <string name="projects_field_name">Suti</string>
     <string name="projects_field_type">Kasta</string>
     <string name="projects_field_flags">Banderanaka</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Alaxar apaña</string>
     <string name="projects_class_move_down">Aynachar apaña</string>
     <string name="projects_class_delete_message">¿Chiqpach \"%1$s\" clase chhaqtayañ muntati? Taqi camponaka opcionanakapampiw chhaqtayatäni.</string>
-    <string name="projects_field_type_enumerated">Jakhuyata</string>
     <string name="projects_field_label">Campo: %1$s</string>
     <string name="projects_field_readonly">Ullañatakiki</string>
     <string name="projects_field_sortable">Siqichasiñjama</string>
     <string name="projects_field_filterable">Filtrasiñjama</string>
     <string name="projects_field_show_on_card">Tarjetan uñacht\'ayaña</string>
-    <string name="projects_field_multi">Walja ajllita</string>
     <string name="projects_field_position">Uñacht\'ayañ chiqa</string>
     <string name="projects_field_position_header">P\'iqi</string>
     <string name="projects_field_position_body">Contenido</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Jach\'at jisk\'aru</string>
     <string name="projects_views_filter_classes">Clasenakar filtraña</string>
     <string name="projects_views_by">%1$s tuqi</string>
-    <string name="projects_views_sorted">%1$s siqichata</string>
     <string name="projects_design_preview_label">Nayraqat uñjawi:</string>
     <string name="projects_design_preview_no_view">Nayraqat uñjañatakix janiw vista utjkiti</string>
     <string name="projects_design_preview_no_class">Aka vistatakix janiw clasex utjkiti</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proyecto machaqachata</string>
     <string name="projects_activity_attached">chinuqata</string>
     <string name="projects_activity_commented">comentawayi</string>
+    <string name="projects_activity_moved">aka objeto astawayi</string>
+    <string name="projects_activity_linked">mä enlace yapxatawayi</string>
+    <string name="projects_activity_class">clase mayjt\'ayawayi</string>
     <string name="projects_attachment_delete_confirm_message">Aka adjuntox wiñayatak chhaqtayatäniwa.</string>
     <string name="projects_attachment_delete_confirm_title">¿Adjunto chhaqtayañati?</string>
     <string name="projects_settings_unsubscribe_section">Proyectot suscripción apaqaña</string>
@@ -338,4 +333,5 @@
         <item quantity="other">Chiqpach \"%1$s\" ukat manqhapankir %2$s itemanaka chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Janiw apkatañ atkänti: %1$s</string>
+    <string name="projects_activity_unknown">Jan uñt\'ata</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Lisää kenttä</string>
     <string name="projects_class_delete">Poista luokka</string>
     <string name="projects_class_delete_title">Poista luokka</string>
-    <string name="projects_field_type_text">Teksti</string>
-    <string name="projects_field_type_number">Luku</string>
-    <string name="projects_field_type_user">Käyttäjä</string>
-    <string name="projects_field_type_date">Päivämäärä</string>
-    <string name="projects_field_type_checklist">Tarkistuslista</string>
     <string name="projects_field_name">Nimi</string>
     <string name="projects_field_type">Tyyppi</string>
     <string name="projects_field_flags">Liput</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Salli yhdistämispyynnöt tämän luokan objekteille.</string>
     <string name="projects_class_parents">Yläluokat</string>
     <string name="projects_class_delete_message">Haluatko varmasti poistaa luokan \"%1$s\"? Myös kaikki sen kentät ja niiden valinnat poistetaan.</string>
-    <string name="projects_field_type_enumerated">Luetteloitu</string>
     <string name="projects_field_label">Kenttä: %1$s</string>
     <string name="projects_field_readonly">Vain luku</string>
     <string name="projects_field_sortable">Lajiteltavissa</string>
     <string name="projects_field_filterable">Suodatettavissa</string>
     <string name="projects_field_show_on_card">Näytä kortilla</string>
-    <string name="projects_field_multi">Monivalinta</string>
     <string name="projects_field_position">Näyttösijainti</string>
     <string name="projects_field_position_header">Otsake</string>
     <string name="projects_field_validation">Validointi</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Reunaviivan värin kenttä</string>
     <string name="projects_views_filter_classes">Rajaa luokkiin</string>
     <string name="projects_views_by">%1$s mukaan</string>
-    <string name="projects_views_sorted">lajiteltu %1$s</string>
     <string name="projects_design_preview_label">Esikatselu:</string>
     <string name="projects_design_preview_no_view">Ei esikatseltavaa näkymää</string>
     <string name="projects_design_preview_no_class">Tälle näkymälle ei ole luokkaa</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekti päivitetty</string>
     <string name="projects_activity_attached">liitti</string>
     <string name="projects_activity_commented">kommentoi</string>
+    <string name="projects_activity_moved">siirsi tämän kohteen</string>
+    <string name="projects_activity_linked">lisäsi linkin</string>
+    <string name="projects_activity_class">vaihtoi luokan</string>
     <string name="projects_attachment_delete_confirm_message">Tämä liite poistetaan pysyvästi.</string>
     <string name="projects_attachment_delete_confirm_title">Poistetaanko liite?</string>
     <string name="projects_settings_unsubscribe_section">Peruuta projektin tilaus</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Haluatko varmasti poistaa kohteen \"%1$s\" ja sen alla olevat %2$s kohdetta? Tätä toimintoa ei voi kumota.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Liittäminen epäonnistui: %1$s</string>
+    <string name="projects_activity_unknown">Tuntematon</string>
 </resources>

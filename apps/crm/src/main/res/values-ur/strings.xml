@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">کوئی مماثل آبجیکٹس نہیں</string>
     <string name="crm_field_yes">ہاں</string>
     <string name="crm_field_no">نہیں</string>
-    <string name="crm_field_type_checkbox">چیک باکس</string>
     <string name="crm_comment_empty">ابھی تک کوئی تبصرے نہیں</string>
     <string name="crm_comment_attach">فائلیں منسلک کریں</string>
     <string name="crm_property_remove">ہٹائیں</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">فیلڈ شامل کریں</string>
     <string name="crm_class_delete">کلاس حذف کریں</string>
     <string name="crm_class_delete_title">کلاس حذف کریں</string>
-    <string name="crm_field_type_text">متن</string>
-    <string name="crm_field_type_number">نمبر</string>
-    <string name="crm_field_type_user">صارف</string>
-    <string name="crm_field_type_date">تاریخ</string>
-    <string name="crm_field_type_checklist">چیک لسٹ</string>
     <string name="crm_field_name">نام</string>
     <string name="crm_field_type">قسم</string>
     <string name="crm_field_flags">فلیگز</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ایک تبدیلی کی</string>
     <string name="crm_activity_attached">منسلک کیا</string>
     <string name="crm_activity_commented">تبصرہ کیا</string>
+    <string name="crm_activity_moved">نے منتقل کیا</string>
+    <string name="crm_activity_linked">نے لنک کیا</string>
+    <string name="crm_activity_class">نے کلاس تبدیل کی</string>
     <string name="crm_attachment_empty">کوئی منسلکات نہیں</string>
     <string name="crm_attachment_default_name">منسلکہ</string>
     <string name="crm_attachment_delete_confirm_title">منسلکہ حذف کریں؟</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ڈیفالٹ (پڑھنے کے قابل)</string>
     <string name="crm_class_parents">والدین کلاسز</string>
     <string name="crm_class_delete_message">کیا آپ واقعی کلاس \"%1$s\" کو حذف کرنا چاہتے ہیں؟ تمام فیلڈز اور ان کے آپشنز بھی حذف ہو جائیں گے۔</string>
-    <string name="crm_field_type_enumerated">گنتی شدہ</string>
     <string name="crm_field_label">فیلڈ: %1$s</string>
     <string name="crm_field_readonly">صرف پڑھنے کے لیے</string>
     <string name="crm_field_sortable">ترتیب دینے کے قابل</string>
     <string name="crm_field_filterable">فلٹر کرنے کے قابل</string>
     <string name="crm_field_show_on_card">کارڈ پر دکھائیں</string>
-    <string name="crm_field_multi">متعدد انتخاب</string>
     <string name="crm_field_position">ڈسپلے پوزیشن</string>
     <string name="crm_field_position_header">ہیڈر</string>
     <string name="crm_field_validation">توثیق</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">بارڈر کا رنگ فیلڈ</string>
     <string name="crm_views_filter_classes">کلاسز پر فلٹر</string>
     <string name="crm_views_by">بذریعہ %1$s</string>
-    <string name="crm_views_sorted">ترتیب دی گئی %1$s</string>
     <string name="crm_design_preview_label">پیش نظارہ:</string>
     <string name="crm_design_preview_no_view">پیش نظارے کے لیے کوئی ویو نہیں</string>
     <string name="crm_design_preview_no_class">اس ویو کے لیے کوئی کلاس نہیں</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s اٹیچمنٹ شامل نہیں کی جا سکی: %2$s</item>
         <item quantity="other">%1$s اٹیچمنٹس شامل نہیں کی جا سکیں: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">پیرنٹ</string>
+    <string name="crm_export_csv_id">آئی ڈی</string>
+    <string name="crm_export_csv_class">کلاس</string>
 </resources>

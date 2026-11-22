@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ફીલ્ડ ઉમેરો</string>
     <string name="projects_class_delete">ક્લાસ કાઢી નાખો</string>
     <string name="projects_class_delete_title">ક્લાસ કાઢી નાખો</string>
-    <string name="projects_field_type_text">ટેક્સ્ટ</string>
-    <string name="projects_field_type_number">સંખ્યા</string>
-    <string name="projects_field_type_user">વપરાશકર્તા</string>
-    <string name="projects_field_type_date">તારીખ</string>
-    <string name="projects_field_type_checklist">ચેકલિસ્ટ</string>
     <string name="projects_field_name">નામ</string>
     <string name="projects_field_type">પ્રકાર</string>
     <string name="projects_field_flags">ફ્લેગ્સ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">આ વર્ગના ઓબ્જેક્ટ્સ પર મર્જ વિનંતીઓને મંજૂરી આપો.</string>
     <string name="projects_class_parents">પેરન્ટ વર્ગો</string>
     <string name="projects_class_delete_message">શું તમે ખરેખર વર્ગ \"%1$s\" કાઢી નાખવા માંગો છો? તમામ ફીલ્ડ્સ અને તેમના વિકલ્પો પણ કાઢી નાખવામાં આવશે.</string>
-    <string name="projects_field_type_enumerated">ગણતરી કરેલ</string>
     <string name="projects_field_label">ફીલ્ડ: %1$s</string>
     <string name="projects_field_readonly">ફક્ત-વાંચન</string>
     <string name="projects_field_sortable">ક્રમબદ્ધ કરી શકાય તેવું</string>
     <string name="projects_field_filterable">ફિલ્ટર કરી શકાય તેવું</string>
     <string name="projects_field_show_on_card">કાર્ડ પર બતાવો</string>
-    <string name="projects_field_multi">બહુ-પસંદગી</string>
     <string name="projects_field_position">પ્રદર્શન સ્થાન</string>
     <string name="projects_field_position_header">હેડર</string>
     <string name="projects_field_validation">માન્યતા</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">સરહદ રંગ ફીલ્ડ</string>
     <string name="projects_views_filter_classes">વર્ગો પર ફિલ્ટર કરો</string>
     <string name="projects_views_by">%1$s દ્વારા</string>
-    <string name="projects_views_sorted">%1$s ક્રમબદ્ધ</string>
     <string name="projects_design_preview_label">પૂર્વાવલોકન:</string>
     <string name="projects_design_preview_no_view">પૂર્વાવલોકન માટે કોઈ દૃશ્ય નથી</string>
     <string name="projects_design_preview_no_class">આ દૃશ્ય માટે કોઈ વર્ગ નથી</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">પ્રોજેક્ટ અપડેટ થયો</string>
     <string name="projects_activity_attached">જોડ્યું</string>
     <string name="projects_activity_commented">ટિપ્પણી કરી</string>
+    <string name="projects_activity_moved">આ ઑબ્જેક્ટ ખસેડ્યું</string>
+    <string name="projects_activity_linked">એક લિંક ઉમેરી</string>
+    <string name="projects_activity_class">વર્ગ બદલ્યો</string>
     <string name="projects_attachment_delete_confirm_message">આ જોડાણ કાયમ માટે કાઢી નાખવામાં આવશે.</string>
     <string name="projects_attachment_delete_confirm_title">જોડાણ કાઢી નાખવું?</string>
     <string name="projects_settings_unsubscribe_section">પ્રોજેક્ટમાંથી સબ્સ્ક્રિપ્શન રદ કરો</string>
@@ -339,4 +334,5 @@
         <item quantity="other">શું તમે ખરેખર \"%1$s\" અને તેની નીચેની %2$s વસ્તુઓ કાઢી નાખવા માંગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</item>
     </plurals>
     <string name="projects_create_attachments_failed">જોડી શકાયું નથી: %1$s</string>
+    <string name="projects_activity_unknown">અજાણ્યું</string>
 </resources>

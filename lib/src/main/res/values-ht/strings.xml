@@ -369,4 +369,13 @@
     <string name="devices_username">Non itilizatè</string>
     <string name="devices_warning">Kopye modpas la kounye a: li pa ka parèt ankò.</string>
     <string name="devices_unused">Pa janm itilize</string>
+    <string name="field_type_text">Tèks</string>
+    <string name="field_type_number">Nimewo</string>
+    <string name="field_type_enumerated">Enimere</string>
+    <string name="field_type_user">Itilizatè</string>
+    <string name="field_type_date">Dat</string>
+    <string name="field_type_checkbox">Kaz</string>
+    <string name="field_type_checklist">Lis verifikasyon</string>
+    <string name="view_list_sorted_ascending">klase an lòd monte</string>
+    <string name="view_list_sorted_descending">klase an lòd desann</string>
 </resources>

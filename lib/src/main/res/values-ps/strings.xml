@@ -370,4 +370,13 @@
     <string name="devices_username">د کاروونکي نوم</string>
     <string name="devices_warning">پاسورډ اوس کاپي کړئ: بیا به ونه ښودل شي.</string>
     <string name="devices_unused">هېڅکله نه دی کارول شوی</string>
+    <string name="field_type_text">متن</string>
+    <string name="field_type_number">شمیره</string>
+    <string name="field_type_enumerated">شمیرل شوی</string>
+    <string name="field_type_user">کاروونکی</string>
+    <string name="field_type_date">نېټه</string>
+    <string name="field_type_checkbox">چک بکس</string>
+    <string name="field_type_checklist">چک لیست</string>
+    <string name="view_list_sorted_ascending">له کم څخه ډېر ته ترتیب شوی</string>
+    <string name="view_list_sorted_descending">له ډېر څخه کم ته ترتیب شوی</string>
 </resources>

@@ -372,4 +372,13 @@
     <string name="devices_username">Корисничко име</string>
     <string name="devices_warning">Копирајте лозинку одмах: неће поново бити приказана.</string>
     <string name="devices_unused">Никад коришћено</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Број</string>
+    <string name="field_type_enumerated">Набројано</string>
+    <string name="field_type_user">Корисник</string>
+    <string name="field_type_date">Датум</string>
+    <string name="field_type_checkbox">Поље за потврду</string>
+    <string name="field_type_checklist">Чек-листа</string>
+    <string name="view_list_sorted_ascending">сортирано растуће</string>
+    <string name="view_list_sorted_descending">сортирано опадајуће</string>
 </resources>

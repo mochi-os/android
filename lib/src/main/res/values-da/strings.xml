@@ -372,4 +372,13 @@
     <string name="devices_username">Brugernavn</string>
     <string name="devices_warning">Kopier adgangskoden nu: den kan ikke vises igen.</string>
     <string name="devices_unused">Aldrig brugt</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">Tal</string>
+    <string name="field_type_enumerated">Opregnet</string>
+    <string name="field_type_user">Bruger</string>
+    <string name="field_type_date">Dato</string>
+    <string name="field_type_checkbox">Afkrydsningsfelt</string>
+    <string name="field_type_checklist">Tjekliste</string>
+    <string name="view_list_sorted_ascending">sorteret stigende</string>
+    <string name="view_list_sorted_descending">sorteret faldende</string>
 </resources>

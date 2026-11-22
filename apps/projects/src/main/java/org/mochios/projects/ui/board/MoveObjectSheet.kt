@@ -41,6 +41,7 @@ import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.util.objectTitle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -189,7 +190,7 @@ fun MoveObjectSheet(
                         }
                     }
                     itemsIndexed(columnObjects, key = { _, it -> "after_${it.id}" }) { index, other ->
-                        val label = other.readable.ifBlank { "$prefix-${other.number}" }
+                        val label = objectTitle(other, uiState.projectDetails?.classes.orEmpty(), prefix)
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()

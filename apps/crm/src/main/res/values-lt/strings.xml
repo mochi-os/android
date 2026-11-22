@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Atitinkančių objektų nėra</string>
     <string name="crm_field_yes">Taip</string>
     <string name="crm_field_no">Ne</string>
-    <string name="crm_field_type_checkbox">Žymimasis langelis</string>
     <string name="crm_comment_empty">Dar nėra komentarų</string>
     <string name="crm_comment_attach">Pridėti failus</string>
     <string name="crm_property_remove">Šalinti</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Pridėti lauką</string>
     <string name="crm_class_delete">Ištrinti klasę</string>
     <string name="crm_class_delete_title">Ištrinti klasę</string>
-    <string name="crm_field_type_text">Tekstas</string>
-    <string name="crm_field_type_number">Skaičius</string>
-    <string name="crm_field_type_user">Vartotojas</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Užduočių sąrašas</string>
     <string name="crm_field_name">Pavadinimas</string>
     <string name="crm_field_type">Tipas</string>
     <string name="crm_field_flags">Žymos</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">atliko pakeitimą</string>
     <string name="crm_activity_attached">pridėjo</string>
     <string name="crm_activity_commented">pakomentavo</string>
+    <string name="crm_activity_moved">perkėlė</string>
+    <string name="crm_activity_linked">susiejo</string>
+    <string name="crm_activity_class">pakeitė klasę</string>
     <string name="crm_attachment_empty">Priedų nėra</string>
     <string name="crm_attachment_default_name">priedas</string>
     <string name="crm_attachment_delete_confirm_title">Ištrinti priedą?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Numatytasis (skaitomas)</string>
     <string name="crm_class_parents">Tėvinės klasės</string>
     <string name="crm_class_delete_message">Ar tikrai norite ištrinti klasę \"%1$s\"? Visi laukai ir jų parinktys taip pat bus ištrinti.</string>
-    <string name="crm_field_type_enumerated">Išvardytas</string>
     <string name="crm_field_label">Laukas: %1$s</string>
     <string name="crm_field_readonly">Tik skaitymui</string>
     <string name="crm_field_sortable">Rūšiuojamas</string>
     <string name="crm_field_filterable">Filtruojamas</string>
     <string name="crm_field_show_on_card">Rodyti kortelėje</string>
-    <string name="crm_field_multi">Kelių pasirinkimas</string>
     <string name="crm_field_position">Rodymo padėtis</string>
     <string name="crm_field_position_header">Antraštė</string>
     <string name="crm_field_validation">Tikrinimas</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Rėmelio spalvos laukas</string>
     <string name="crm_views_filter_classes">Filtruoti pagal klases</string>
     <string name="crm_views_by">pagal %1$s</string>
-    <string name="crm_views_sorted">surūšiuota %1$s</string>
     <string name="crm_design_preview_label">Peržiūra:</string>
     <string name="crm_design_preview_no_view">Nėra rodinio peržiūrai</string>
     <string name="crm_design_preview_no_class">Šiam rodiniui nėra klasės</string>
@@ -297,4 +291,7 @@
         <item quantity="few">Nepavyko pridėti %1$s priedų: %2$s</item>
         <item quantity="other">Nepavyko pridėti %1$s priedų: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Tėvas</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasė</string>
 </resources>

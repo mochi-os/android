@@ -370,4 +370,13 @@
     <string name="devices_username">Хэрэглэгчийн нэр</string>
     <string name="devices_warning">Нууц үгийг одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
     <string name="devices_unused">Хэзээ ч ашиглаагүй</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Тоо</string>
+    <string name="field_type_enumerated">Тоологдсон</string>
+    <string name="field_type_user">Хэрэглэгч</string>
+    <string name="field_type_date">Огноо</string>
+    <string name="field_type_checkbox">Чекбокс</string>
+    <string name="field_type_checklist">Жагсаалт</string>
+    <string name="view_list_sorted_ascending">өсөхөөр эрэмбэлсэн</string>
+    <string name="view_list_sorted_descending">буурахаар эрэмбэлсэн</string>
 </resources>

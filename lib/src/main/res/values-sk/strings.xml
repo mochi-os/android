@@ -374,4 +374,13 @@
     <string name="devices_username">Používateľské meno</string>
     <string name="devices_warning">Skopírujte heslo teraz: už sa nezobrazí.</string>
     <string name="devices_unused">Nikdy nepoužité</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Číslo</string>
+    <string name="field_type_enumerated">Vymenovaný</string>
+    <string name="field_type_user">Používateľ</string>
+    <string name="field_type_date">Dátum</string>
+    <string name="field_type_checkbox">Zaškrtávacie pole</string>
+    <string name="field_type_checklist">Zoznam úloh</string>
+    <string name="view_list_sorted_ascending">zoradené vzostupne</string>
+    <string name="view_list_sorted_descending">zoradené zostupne</string>
 </resources>

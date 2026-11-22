@@ -127,8 +127,6 @@ import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
 
 
-// The access levels that may change a project's design (web's canDesign).
-internal val DESIGN_ACCESS = setOf("owner", "design")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectScreen(
@@ -161,8 +159,9 @@ fun ProjectScreen(
     }
     VisibleEntityEffect("projects", projectId, socketKey = projectId)
 
+    // Every project: the All projects search filters its own list, not the drawer.
     val drawerItems = remember(listUiState.projects) {
-        listViewModel.filteredProjects().map { project ->
+        listUiState.projects.map { project ->
             DrawerItem(
                 id = project.fingerprint.ifEmpty { project.id },
                 title = project.name,
@@ -540,9 +539,7 @@ private fun ProjectContent(
     }
 
     LaunchedEffect(initialObjectId) {
-        if (initialObjectId != null) {
-            viewModel.selectObject(initialObjectId)
-        }
+        viewModel.openInitialObject(initialObjectId)
     }
 
     val details = uiState.projectDetails
@@ -688,7 +685,8 @@ private fun ProjectContent(
                                 // Add column — only meaningful on a board view that
                                 // groups by a field (mirrors web's overflow "Add
                                 // column"). Creates a new option on the grouping field.
-                                if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                                // A column is an option of the design.
+                                if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() && viewModel.canDesign()) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_board_add_column)) },
                                         onClick = {
@@ -734,7 +732,7 @@ private fun ProjectContent(
                                 // Design changes forward to the owner, so the
                                 // editor is offered on the access level, as web
                                 // does - a subscriber granted design may reshape.
-                                if (details?.project?.access in DESIGN_ACCESS) {
+                                if (viewModel.canDesign()) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_design)) },
                                         onClick = {
@@ -763,7 +761,7 @@ private fun ProjectContent(
             // down there. A column-less board draws no plus, so it keeps it.
             val boardHasColumns = activeView?.viewtype == "board" &&
                 activeView.columns.isNotBlank()
-            if (details != null && !boardHasColumns) {
+            if (details != null && !boardHasColumns && viewModel.canCreate()) {
                 MochiFab(onClick = { createObject(null, emptyMap()) }) {
                     Icon(
                         Icons.Default.Add,

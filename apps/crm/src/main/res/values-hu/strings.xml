@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Nincs egyező objektum</string>
     <string name="crm_field_yes">Igen</string>
     <string name="crm_field_no">Nem</string>
-    <string name="crm_field_type_checkbox">Jelölőnégyzet</string>
     <string name="crm_comment_empty">Még nincsenek hozzászólások</string>
     <string name="crm_comment_attach">Fájlok csatolása</string>
     <string name="crm_property_remove">Eltávolítás</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Mező hozzáadása</string>
     <string name="crm_class_delete">Osztály törlése</string>
     <string name="crm_class_delete_title">Osztály törlése</string>
-    <string name="crm_field_type_text">Szöveg</string>
-    <string name="crm_field_type_number">Szám</string>
-    <string name="crm_field_type_user">Felhasználó</string>
-    <string name="crm_field_type_date">Dátum</string>
-    <string name="crm_field_type_checklist">Ellenőrzőlista</string>
     <string name="crm_field_name">Név</string>
     <string name="crm_field_type">Típus</string>
     <string name="crm_field_flags">Jelzések</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">módosítást hajtott végre</string>
     <string name="crm_activity_attached">csatolta</string>
     <string name="crm_activity_commented">hozzászólt</string>
+    <string name="crm_activity_moved">áthelyezte</string>
+    <string name="crm_activity_linked">összekapcsolta</string>
+    <string name="crm_activity_class">módosította az osztályt</string>
     <string name="crm_attachment_empty">Nincsenek mellékletek</string>
     <string name="crm_attachment_default_name">melléklet</string>
     <string name="crm_attachment_delete_confirm_title">Törli a mellékletet?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Alapértelmezett (olvasható)</string>
     <string name="crm_class_parents">Szülőosztályok</string>
     <string name="crm_class_delete_message">Biztosan törli a(z) \"%1$s\" osztályt? Az összes mező és azok opciói is törlésre kerülnek.</string>
-    <string name="crm_field_type_enumerated">Felsorolt</string>
     <string name="crm_field_label">Mező: %1$s</string>
     <string name="crm_field_readonly">Csak olvasható</string>
     <string name="crm_field_sortable">Rendezhető</string>
     <string name="crm_field_filterable">Szűrhető</string>
     <string name="crm_field_show_on_card">Megjelenítés a kártyán</string>
-    <string name="crm_field_multi">Többszörös választás</string>
     <string name="crm_field_position">Megjelenítési pozíció</string>
     <string name="crm_field_position_header">Fejléc</string>
     <string name="crm_field_validation">Érvényesítés</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Keretszín mező</string>
     <string name="crm_views_filter_classes">Szűrés osztályokra</string>
     <string name="crm_views_by">%1$s szerint</string>
-    <string name="crm_views_sorted">rendezve: %1$s</string>
     <string name="crm_design_preview_label">Előnézet:</string>
     <string name="crm_design_preview_no_view">Nincs megjeleníthető nézet</string>
     <string name="crm_design_preview_no_class">Nincs osztály ehhez a nézethez</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s mellékletet nem sikerült hozzáadni: %2$s</item>
         <item quantity="other">%1$s mellékletet nem sikerült hozzáadni: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Szülő</string>
+    <string name="crm_export_csv_id">Azonosító</string>
+    <string name="crm_export_csv_class">Osztály</string>
 </resources>

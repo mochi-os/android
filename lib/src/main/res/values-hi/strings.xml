@@ -370,4 +370,13 @@
     <string name="devices_username">उपयोगकर्ता नाम</string>
     <string name="devices_warning">पासवर्ड अभी कॉपी करें: इसे दोबारा नहीं दिखाया जा सकता।</string>
     <string name="devices_unused">कभी उपयोग नहीं हुआ</string>
+    <string name="field_type_text">टेक्स्ट</string>
+    <string name="field_type_number">संख्या</string>
+    <string name="field_type_enumerated">गणनात्मक</string>
+    <string name="field_type_user">यूज़र</string>
+    <string name="field_type_date">दिनांक</string>
+    <string name="field_type_checkbox">चेकबॉक्स</string>
+    <string name="field_type_checklist">चेकलिस्ट</string>
+    <string name="view_list_sorted_ascending">आरोही क्रम में सॉर्ट किया गया</string>
+    <string name="view_list_sorted_descending">अवरोही क्रम में सॉर्ट किया गया</string>
 </resources>

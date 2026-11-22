@@ -370,4 +370,13 @@
     <string name="devices_username">Orúkọ olùmúlò</string>
     <string name="devices_warning">Ṣe àdàkọ ọ̀rọ̀ ìgbaniwọlé báyìí: kò ní farahàn mọ́.</string>
     <string name="devices_unused">Kò tíì lò rí</string>
+    <string name="field_type_text">Ọ̀rọ̀</string>
+    <string name="field_type_number">Nọ́mbà</string>
+    <string name="field_type_enumerated">Tí a kà</string>
+    <string name="field_type_user">Olùmúlò</string>
+    <string name="field_type_date">Ọjọ́</string>
+    <string name="field_type_checkbox">Àpótí àyẹ̀wò</string>
+    <string name="field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
+    <string name="view_list_sorted_ascending">tí a tò gòkè</string>
+    <string name="view_list_sorted_descending">tí a tò sọkalẹ̀</string>
 </resources>

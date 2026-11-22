@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">הוסף שדה</string>
     <string name="projects_class_delete">מחק מחלקה</string>
     <string name="projects_class_delete_title">מחק מחלקה</string>
-    <string name="projects_field_type_text">טקסט</string>
-    <string name="projects_field_type_number">מספר</string>
-    <string name="projects_field_type_user">משתמש</string>
-    <string name="projects_field_type_date">תאריך</string>
-    <string name="projects_field_type_checklist">רשימת משימות</string>
     <string name="projects_field_name">שם</string>
     <string name="projects_field_type">סוג</string>
     <string name="projects_field_flags">דגלים</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">אפשר בקשות מיזוג על אובייקטים ממחלקה זו.</string>
     <string name="projects_class_parents">מחלקות אב</string>
     <string name="projects_class_delete_message">האם אתה בטוח שברצונך למחוק את המחלקה \"%1$s\"? כל השדות והאפשרויות שלהם יימחקו גם כן.</string>
-    <string name="projects_field_type_enumerated">ערכים מנויים</string>
     <string name="projects_field_label">שדה: %1$s</string>
     <string name="projects_field_readonly">לקריאה בלבד</string>
     <string name="projects_field_sortable">ניתן למיון</string>
     <string name="projects_field_filterable">ניתן לסינון</string>
     <string name="projects_field_show_on_card">הצג על הכרטיס</string>
-    <string name="projects_field_multi">בחירה מרובה</string>
     <string name="projects_field_position">מיקום תצוגה</string>
     <string name="projects_field_position_header">כותרת</string>
     <string name="projects_field_validation">אימות</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">שדה צבע מסגרת</string>
     <string name="projects_views_filter_classes">סנן לפי מחלקות</string>
     <string name="projects_views_by">לפי %1$s</string>
-    <string name="projects_views_sorted">ממוין %1$s</string>
     <string name="projects_design_preview_label">תצוגה מקדימה:</string>
     <string name="projects_design_preview_no_view">אין תצוגה להציג</string>
     <string name="projects_design_preview_no_class">אין מחלקה לתצוגה זו</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">הפרויקט עודכן</string>
     <string name="projects_activity_attached">צירף/ה</string>
     <string name="projects_activity_commented">הגיב/ה</string>
+    <string name="projects_activity_moved">העביר/ה את האובייקט הזה</string>
+    <string name="projects_activity_linked">הוסיף/ה קישור</string>
+    <string name="projects_activity_class">שינה/תה את המחלקה</string>
     <string name="projects_attachment_delete_confirm_message">הקובץ המצורף הזה יימחק לצמיתות.</string>
     <string name="projects_attachment_delete_confirm_title">למחוק את הקובץ המצורף?</string>
     <string name="projects_settings_unsubscribe_section">ביטול הרשמה לפרויקט</string>
@@ -342,4 +337,5 @@
         <item quantity="other">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת %2$s הפריטים שמתחתיו? לא ניתן לבטל פעולה זו.</item>
     </plurals>
     <string name="projects_create_attachments_failed">לא ניתן היה לצרף: %1$s</string>
+    <string name="projects_activity_unknown">לא ידוע</string>
 </resources>

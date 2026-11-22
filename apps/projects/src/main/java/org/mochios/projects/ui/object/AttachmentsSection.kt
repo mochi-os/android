@@ -45,14 +45,16 @@ import java.io.File
  * Inline attachments section inside PropertiesTab, matching the web's
  * object-detail-panel (no separate tab). The picker uploads straight away, so
  * the files of an [upload] in flight show above the gallery until it ends.
+ * Null callbacks, for a reader who may not write, leave out adding and
+ * deleting.
  */
 @Composable
 fun AttachmentsSection(
     attachments: List<Attachment>,
     projectId: String,
     upload: Upload?,
-    onAddAttachments: (List<Uri>) -> Unit,
-    onDeleteAttachment: (String) -> Unit,
+    onAddAttachments: ((List<Uri>) -> Unit)?,
+    onDeleteAttachment: ((String) -> Unit)?,
 ) {
     val context = LocalContext.current
     val defaultName = stringResource(R.string.projects_attachment_default_name)
@@ -62,7 +64,7 @@ fun AttachmentsSection(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         if (uris.isNotEmpty()) {
-            onAddAttachments(uris)
+            onAddAttachments?.invoke(uris)
         }
     }
 
@@ -91,11 +93,13 @@ fun AttachmentsSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = upload == null) {
-                if (upload != null) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
-                } else {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_attachment_add))
+            if (onAddAttachments != null) {
+                MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = upload == null) {
+                    if (upload != null) {
+                        CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                    } else {
+                        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_attachment_add))
+                    }
                 }
             }
         }
@@ -114,7 +118,11 @@ fun AttachmentsSection(
                 urlBuilder = urlBuilder,
                 thumbnailUrlBuilder = thumbnailUrlBuilder,
                 previewUrlBuilder = previewUrlBuilder,
-                onDelete = { attachment -> pendingDelete = attachment },
+                onDelete = if (onDeleteAttachment != null) {
+                    { attachment -> pendingDelete = attachment }
+                } else {
+                    null
+                },
                 modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
             )
         }
@@ -128,7 +136,7 @@ fun AttachmentsSection(
             text = stringResource(R.string.projects_attachment_delete_confirm_message),
             confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
-                onDeleteAttachment(toDelete.id)
+                onDeleteAttachment?.invoke(toDelete.id)
                 pendingDelete = null
             },
             destructive = true,

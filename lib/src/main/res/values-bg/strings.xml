@@ -370,4 +370,13 @@
     <string name="devices_username">Потребителско име</string>
     <string name="devices_warning">Копирайте паролата сега: не може да бъде показана отново.</string>
     <string name="devices_unused">Никога не е използван</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Число</string>
+    <string name="field_type_enumerated">Изброен</string>
+    <string name="field_type_user">Потребител</string>
+    <string name="field_type_date">Дата</string>
+    <string name="field_type_checkbox">Чекбокс</string>
+    <string name="field_type_checklist">Чек-лист</string>
+    <string name="view_list_sorted_ascending">сортирано във възходящ ред</string>
+    <string name="view_list_sorted_descending">сортирано в низходящ ред</string>
 </resources>

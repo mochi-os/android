@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Níl aon réad ag teacht</string>
     <string name="crm_field_yes">Tá</string>
     <string name="crm_field_no">Níl</string>
-    <string name="crm_field_type_checkbox">Ticbhosca</string>
     <string name="crm_comment_empty">Níl aon trácht fós</string>
     <string name="crm_comment_attach">Ceangail comhaid</string>
     <string name="crm_property_remove">Bain</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Cuir réimse leis</string>
     <string name="crm_class_delete">Scrios rang</string>
     <string name="crm_class_delete_title">Scrios rang</string>
-    <string name="crm_field_type_text">Téacs</string>
-    <string name="crm_field_type_number">Uimhir</string>
-    <string name="crm_field_type_user">Úsáideoir</string>
-    <string name="crm_field_type_date">Dáta</string>
-    <string name="crm_field_type_checklist">Seicliosta</string>
     <string name="crm_field_name">Ainm</string>
     <string name="crm_field_type">Cineál</string>
     <string name="crm_field_flags">Bratacha</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">rinneadh athrú</string>
     <string name="crm_activity_attached">cheangail</string>
     <string name="crm_activity_commented">rinne trácht</string>
+    <string name="crm_activity_moved">bhog</string>
+    <string name="crm_activity_linked">nasc</string>
+    <string name="crm_activity_class">d\'athraigh an rang</string>
     <string name="crm_attachment_empty">Gan iatáin</string>
     <string name="crm_attachment_default_name">iatán</string>
     <string name="crm_attachment_delete_confirm_title">Scrios an ceangaltán?</string>
@@ -199,13 +196,11 @@
     <string name="crm_class_title_field_default">Réamhshocrú (inléite)</string>
     <string name="crm_class_parents">Aicmí tuismitheora</string>
     <string name="crm_class_delete_message">An bhfuil tú cinnte gur mhaith leat an aicme \"%1$s\" a scriosadh? Scriosfar gach réimse agus na roghanna atá acu chomh maith.</string>
-    <string name="crm_field_type_enumerated">Áirithe</string>
     <string name="crm_field_label">Réimse: %1$s</string>
     <string name="crm_field_readonly">Inléite amháin</string>
     <string name="crm_field_sortable">In-shórtáilte</string>
     <string name="crm_field_filterable">In-scagtha</string>
     <string name="crm_field_show_on_card">Taispeáin ar an gcárta</string>
-    <string name="crm_field_multi">Ilroghnú</string>
     <string name="crm_field_position">Suíomh taispeána</string>
     <string name="crm_field_position_header">Ceanntásc</string>
     <string name="crm_field_validation">Bailíochtú</string>
@@ -224,7 +219,6 @@
     <string name="crm_views_border_field">Réimse datha imlíne</string>
     <string name="crm_views_filter_classes">Scag de réir aicmí</string>
     <string name="crm_views_by">de réir %1$s</string>
-    <string name="crm_views_sorted">sórtáilte %1$s</string>
     <string name="crm_design_preview_label">Réamhamharc:</string>
     <string name="crm_design_preview_no_view">Níl aon amharc le réamhamharc air</string>
     <string name="crm_design_preview_no_class">Níl aon aicme don amharc seo</string>
@@ -303,4 +297,7 @@
         <item quantity="many">Níorbh fhéidir %1$s gceangaltán a chur leis: %2$s</item>
         <item quantity="other">Níorbh fhéidir %1$s ceangaltán a chur leis: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Tuismitheoir</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Rang</string>
 </resources>

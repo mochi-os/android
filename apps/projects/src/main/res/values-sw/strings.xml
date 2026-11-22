@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ongeza uga</string>
     <string name="projects_class_delete">Futa darasa</string>
     <string name="projects_class_delete_title">Futa darasa</string>
-    <string name="projects_field_type_text">Maandishi</string>
-    <string name="projects_field_type_number">Nambari</string>
-    <string name="projects_field_type_user">Mtumiaji</string>
-    <string name="projects_field_type_date">Tarehe</string>
-    <string name="projects_field_type_checklist">Orodha ya ukaguzi</string>
     <string name="projects_field_name">Jina</string>
     <string name="projects_field_type">Aina</string>
     <string name="projects_field_flags">Alama</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Ruhusu maombi ya kuunganisha kwenye vitu vya darasa hili.</string>
     <string name="projects_class_parents">Madarasa ya mzazi</string>
     <string name="projects_class_delete_message">Una uhakika unataka kufuta darasa \"%1$s\"? Nyuga zote na chaguzi zake pia zitafutwa.</string>
-    <string name="projects_field_type_enumerated">Iliyoorodheshwa</string>
     <string name="projects_field_label">Uga: %1$s</string>
     <string name="projects_field_readonly">Kusoma tu</string>
     <string name="projects_field_sortable">Inayoweza kupangwa</string>
     <string name="projects_field_filterable">Inayoweza kuchujwa</string>
     <string name="projects_field_show_on_card">Onyesha kwenye kadi</string>
-    <string name="projects_field_multi">Chagua nyingi</string>
     <string name="projects_field_position">Nafasi ya kuonyesha</string>
     <string name="projects_field_position_header">Kichwa</string>
     <string name="projects_field_validation">Uthibitishaji</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Uga wa rangi ya mpaka</string>
     <string name="projects_views_filter_classes">Chuja kwa madarasa</string>
     <string name="projects_views_by">kwa %1$s</string>
-    <string name="projects_views_sorted">imepangwa %1$s</string>
     <string name="projects_design_preview_label">Hakiki:</string>
     <string name="projects_design_preview_no_view">Hakuna mwonekano wa kuhakiki</string>
     <string name="projects_design_preview_no_class">Hakuna darasa kwa mwonekano huu</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Mradi umesasishwa</string>
     <string name="projects_activity_attached">aliambatisha</string>
     <string name="projects_activity_commented">alitoa maoni</string>
+    <string name="projects_activity_moved">alihamisha kitu hiki</string>
+    <string name="projects_activity_linked">aliongeza kiungo</string>
+    <string name="projects_activity_class">alibadilisha darasa</string>
     <string name="projects_attachment_delete_confirm_message">Kiambatisho hiki kitafutwa kabisa.</string>
     <string name="projects_attachment_delete_confirm_title">Futa kiambatisho?</string>
     <string name="projects_settings_unsubscribe_section">Acha kufuatilia mradi</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Una uhakika unataka kufuta \"%1$s\" na vipengee %2$s vilivyo chini yake? Kitendo hiki hakiwezi kutenduliwa.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Imeshindwa kuambatisha: %1$s</string>
+    <string name="projects_activity_unknown">Haijulikani</string>
 </resources>

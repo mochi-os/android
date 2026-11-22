@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">အကွက် ထည့်မည်</string>
     <string name="projects_class_delete">အတန်းအစား ဖျက်မည်</string>
     <string name="projects_class_delete_title">အတန်းအစား ဖျက်မည်</string>
-    <string name="projects_field_type_text">စာသား</string>
-    <string name="projects_field_type_number">ကိန်းဂဏန်း</string>
-    <string name="projects_field_type_user">သုံးစွဲသူ</string>
-    <string name="projects_field_type_date">ရက်စွဲ</string>
-    <string name="projects_field_type_checklist">စစ်ဆေးစာရင်း</string>
     <string name="projects_field_name">အမည်</string>
     <string name="projects_field_type">အမျိုးအစား</string>
     <string name="projects_field_flags">အလံများ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ဤအတန်းအစား၏ အရာဝတ္ထုများပေါ်တွင် ပေါင်းစည်းမှု တောင်းဆိုချက်များကို ခွင့်ပြုပါ။</string>
     <string name="projects_class_parents">မိဘ အတန်းအစားများ</string>
     <string name="projects_class_delete_message">အတန်းအစား \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။ အကွက်များနှင့် ၎င်းတို့၏ ရွေးချယ်စရာများအားလုံးကိုလည်း ဖျက်ပစ်ပါမည်။</string>
-    <string name="projects_field_type_enumerated">စာရင်းပြုစုထားသော</string>
     <string name="projects_field_label">အကွက် - %1$s</string>
     <string name="projects_field_readonly">ဖတ်ရန်သာ</string>
     <string name="projects_field_sortable">စီစဉ်နိုင်သော</string>
     <string name="projects_field_filterable">စစ်ထုတ်နိုင်သော</string>
     <string name="projects_field_show_on_card">ကတ်ပေါ်တွင် ပြသရန်</string>
-    <string name="projects_field_multi">အများရွေး</string>
     <string name="projects_field_position">ပြသမှု တည်နေရာ</string>
     <string name="projects_field_position_header">ခေါင်းစီး</string>
     <string name="projects_field_validation">မှန်ကန်မှု စစ်ဆေးခြင်း</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ဘောင်အရောင် အကွက်</string>
     <string name="projects_views_filter_classes">အတန်းအစားများသို့ စစ်ထုတ်ရန်</string>
     <string name="projects_views_by">%1$s အလိုက်</string>
-    <string name="projects_views_sorted">%1$s ဖြင့် စီထားသည်</string>
     <string name="projects_design_preview_label">ကြိုကြည့်ရှုခြင်း -</string>
     <string name="projects_design_preview_no_view">ကြိုကြည့်ရှုရန် မြင်ကွင်း မရှိပါ</string>
     <string name="projects_design_preview_no_class">ဤမြင်ကွင်းအတွက် အတန်းအစား မရှိပါ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ပရောဂျက် ပြင်ဆင်ပြီးပါပြီ</string>
     <string name="projects_activity_attached">ပူးတွဲခဲ့သည်</string>
     <string name="projects_activity_commented">မှတ်ချက်ပေးခဲ့သည်</string>
+    <string name="projects_activity_moved">ဤအရာဝတ္ထုကို ရွှေ့ခဲ့သည်</string>
+    <string name="projects_activity_linked">လင့်ခ်တစ်ခု ထည့်ခဲ့သည်</string>
+    <string name="projects_activity_class">အတန်းအစားကို ပြောင်းခဲ့သည်</string>
     <string name="projects_attachment_delete_confirm_message">ဤပူးတွဲဖိုင်ကို အပြီးအပိုင် ဖျက်ပါမည်။</string>
     <string name="projects_attachment_delete_confirm_title">ပူးတွဲဖိုင်ကို ဖျက်မလား?</string>
     <string name="projects_settings_unsubscribe_section">ပရောဂျက် စာရင်းသွင်းမှု ရပ်ရန်</string>
@@ -337,4 +332,5 @@
         <item quantity="other">\"%1$s\" နှင့် ၎င်းအောက်ရှိ %2$s ခု ကို ဖျက်မှာ သေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</item>
     </plurals>
     <string name="projects_create_attachments_failed">ပူးတွဲ၍ မရပါ: %1$s</string>
+    <string name="projects_activity_unknown">မသိရသော</string>
 </resources>

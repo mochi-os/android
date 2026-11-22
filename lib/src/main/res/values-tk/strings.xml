@@ -370,4 +370,13 @@
     <string name="devices_username">Ulanyjy ady</string>
     <string name="devices_warning">Paroly häzir göçüriň: gaýtadan görkezilmez.</string>
     <string name="devices_unused">Hiç haçan ulanylmadyk</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">San</string>
+    <string name="field_type_enumerated">Sanawly</string>
+    <string name="field_type_user">Ulanyjy</string>
+    <string name="field_type_date">Sene</string>
+    <string name="field_type_checkbox">Bellik gutusy</string>
+    <string name="field_type_checklist">Kontrol sanawy</string>
+    <string name="view_list_sorted_ascending">artýan tertipde tertiplenen</string>
+    <string name="view_list_sorted_descending">kemelýän tertipde tertiplenen</string>
 </resources>

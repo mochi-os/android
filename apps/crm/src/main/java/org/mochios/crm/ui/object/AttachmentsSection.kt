@@ -43,22 +43,27 @@ import org.mochios.crm.R
  * Inline attachments section inside PropertiesTab, matching the web's
  * object-detail-panel (no separate tab). The picker uploads straight away, so
  * the files of an [upload] in flight show above the gallery until it ends.
+ * Without [onAddAttachments] nothing can be added, and without
+ * [onDeleteAttachment] nothing deleted; with neither and no files the section
+ * is left out, as the web's read-only one is.
  */
 @Composable
 fun AttachmentsSection(
     attachments: List<Attachment>,
     crmId: String,
     upload: Upload?,
-    onAddAttachments: (List<Uri>) -> Unit,
-    onDeleteAttachment: (String) -> Unit,
+    onAddAttachments: ((List<Uri>) -> Unit)?,
+    onDeleteAttachment: ((String) -> Unit)?,
 ) {
+    if (onAddAttachments == null && attachments.isEmpty() && upload == null) return
+
     var pendingDelete by remember { mutableStateOf<Attachment?>(null) }
 
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
         if (uris.isNotEmpty()) {
-            onAddAttachments(uris)
+            onAddAttachments?.invoke(uris)
         }
     }
 
@@ -85,11 +90,13 @@ fun AttachmentsSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = upload == null) {
-                if (upload != null) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
-                } else {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_attachment_add))
+            if (onAddAttachments != null) {
+                MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = upload == null) {
+                    if (upload != null) {
+                        CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                    } else {
+                        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_attachment_add))
+                    }
                 }
             }
         }
@@ -107,14 +114,18 @@ fun AttachmentsSection(
                 attachments = ordered,
                 urlBuilder = urlBuilder,
                 thumbnailUrlBuilder = thumbnailUrlBuilder,
-                onDelete = { attachment -> pendingDelete = attachment },
+                onDelete = if (onDeleteAttachment != null) {
+                    { attachment -> pendingDelete = attachment }
+                } else {
+                    null
+                },
                 modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
             )
         }
     }
 
     val toDelete = pendingDelete
-    if (toDelete != null) {
+    if (toDelete != null && onDeleteAttachment != null) {
         MochiAlertDialog(
             onDismissRequest = { pendingDelete = null },
             title = stringResource(R.string.crm_attachment_delete_confirm_title),

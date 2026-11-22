@@ -48,14 +48,13 @@ fun CreateCrmScreen(
     val uiState by viewModel.uiState.collectAsState()
     val upload by viewModel.upload.collectAsState()
 
-    var name by remember { mutableStateOf("") }
-    // On means public, which lets everyone view the CRM and every signed-in
-    // person comment on it, so it starts off and says so.
-    var allowPublic by remember { mutableStateOf(false) }
+    // The form is the view model's, so a rotation or a theme change keeps it.
+    // Public lets everyone view the CRM and every signed-in person comment on
+    // it, so it starts off and says so.
+    val name = uiState.name
+    val allowPublic = uiState.privacy == "public"
     val context = LocalContext.current
-    var backupJson by remember { mutableStateOf<String?>(null) }
-    var backupName by remember { mutableStateOf<String?>(null) }
-    var backupArchive by remember { mutableStateOf<Uri?>(null) }
+    val backup = uiState.backupPrefill
 
     // OpenDocument, not GetContent: exports are zipped now, and only this
     // contract takes more than one type, so both the zip and a bare .json
@@ -65,16 +64,6 @@ fun CreateCrmScreen(
     ) { uri: Uri? ->
         if (uri != null) {
             viewModel.readBackup(uri)
-        }
-    }
-
-    // Seed the fields once the ViewModel has read the picked backup.
-    LaunchedEffect(uiState.backupPrefill) {
-        uiState.backupPrefill?.let { prefill ->
-            backupJson = prefill.json
-            backupName = prefill.fileName
-            backupArchive = prefill.archive
-            prefill.name?.let { value -> name = value }
         }
     }
 
@@ -103,14 +92,13 @@ fun CreateCrmScreen(
         error = uiState.error,
         onBack = onBack,
         onSubmit = {
-            val privacy = if (allowPublic) "public" else "private"
-            viewModel.createCrm(name, privacy, backupJson, backupArchive)
+            viewModel.createCrm(name, uiState.privacy, backup?.json, backup?.archive)
         }
     ) { padding ->
         CreateEntityForm(padding) {
             MochiTextField(
                 value = name,
-                onValueChange = { value -> name = value },
+                onValueChange = { value -> viewModel.setName(value) },
                 label = { Text(stringResource(R.string.crm_create_name)) },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
@@ -120,7 +108,7 @@ fun CreateCrmScreen(
             LabeledSwitchRow(
                 label = stringResource(R.string.crm_create_public),
                 checked = allowPublic,
-                onCheckedChange = { checked -> allowPublic = checked }
+                onCheckedChange = { checked -> viewModel.setPrivacy(if (checked) "public" else "private") }
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -140,7 +128,7 @@ fun CreateCrmScreen(
                     modifier = Modifier.size(18.dp)
                 )
                 Spacer(modifier = Modifier.size(8.dp))
-                Text(backupName ?: stringResource(R.string.crm_create_upload_json))
+                Text(backup?.fileName ?: stringResource(R.string.crm_create_upload_json))
             }
         }
     }

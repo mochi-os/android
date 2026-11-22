@@ -370,4 +370,13 @@
     <string name="devices_username">Nome de usuario</string>
     <string name="devices_warning">Copia o contrasinal agora: non se poderá mostrar de novo.</string>
     <string name="devices_unused">Nunca usado</string>
+    <string name="field_type_text">Texto</string>
+    <string name="field_type_number">Número</string>
+    <string name="field_type_enumerated">Enumerado</string>
+    <string name="field_type_user">Usuario</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Caixa de verificación</string>
+    <string name="field_type_checklist">Lista de comprobación</string>
+    <string name="view_list_sorted_ascending">ordenado de forma ascendente</string>
+    <string name="view_list_sorted_descending">ordenado de forma descendente</string>
 </resources>

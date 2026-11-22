@@ -370,4 +370,13 @@
     <string name="devices_username">صارف نالو</string>
     <string name="devices_warning">پاسورڊ هاڻي ڪاپي ڪريو: هي وري نه ڏيکاريو ويندو.</string>
     <string name="devices_unused">ڪڏهن به استعمال نه ٿيو</string>
+    <string name="field_type_text">ٽيڪسٽ</string>
+    <string name="field_type_number">نمبر</string>
+    <string name="field_type_enumerated">ڳڻيل</string>
+    <string name="field_type_user">صارف</string>
+    <string name="field_type_date">تاريخ</string>
+    <string name="field_type_checkbox">چيڪ بڪس</string>
+    <string name="field_type_checklist">چيڪ لسٽ</string>
+    <string name="view_list_sorted_ascending">گهٽ کان وڌيڪ ترتيب ڏنل</string>
+    <string name="view_list_sorted_descending">وڌيڪ کان گهٽ ترتيب ڏنل</string>
 </resources>

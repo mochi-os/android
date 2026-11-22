@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Mana tupaq objetokuna</string>
     <string name="crm_field_yes">Arí</string>
     <string name="crm_field_no">Manan</string>
-    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_empty">Manaraq comentariokuna kanchu</string>
     <string name="crm_comment_attach">Archivokunata k\'askachiy</string>
     <string name="crm_property_remove">Qichuy</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Campo yapay</string>
     <string name="crm_class_delete">Clase wischuy</string>
     <string name="crm_class_delete_title">Clase wischuy</string>
-    <string name="crm_field_type_text">Qillqa</string>
-    <string name="crm_field_type_number">Yupay</string>
-    <string name="crm_field_type_user">Apaykachaq</string>
-    <string name="crm_field_type_date">P\'unchaw</string>
-    <string name="crm_field_type_checklist">Lista</string>
     <string name="crm_field_name">Suti</string>
     <string name="crm_field_type">Layan</string>
     <string name="crm_field_flags">Banderakuna</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">huk hukchayta ruwarqan</string>
     <string name="crm_activity_attached">k\'askachisqa</string>
     <string name="crm_activity_commented">comentarqan</string>
+    <string name="crm_activity_moved">astarqan</string>
+    <string name="crm_activity_linked">t\'inkirqan</string>
+    <string name="crm_activity_class">clase nisqata t\'ikrarqan</string>
     <string name="crm_attachment_empty">Mana adjuntokuna kanchu</string>
     <string name="crm_attachment_default_name">adjunto</string>
     <string name="crm_attachment_delete_confirm_title">¿Adjuntota wischunki?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Predeterminado (ñawinchaypaq allin)</string>
     <string name="crm_class_parents">Tayta clasekuna</string>
     <string name="crm_class_delete_message">¿Cheqaqchu \"%1$s\" claseta wischuyta munanki? Llapan campokuna akllanankunapas wischusqa kanqa.</string>
-    <string name="crm_field_type_enumerated">Yupasqa</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_readonly">Ñawinchanallapaq</string>
     <string name="crm_field_sortable">Ordenakuq</string>
     <string name="crm_field_filterable">Filtrakuq</string>
     <string name="crm_field_show_on_card">Tarjetapi rikuchiy</string>
-    <string name="crm_field_multi">Achkata akllay</string>
     <string name="crm_field_position">Rikuchina kasqan</string>
     <string name="crm_field_position_header">Uma</string>
     <string name="crm_field_validation">Takyachiy</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Pata llimp\'i campo</string>
     <string name="crm_views_filter_classes">Clasekunaman filtray</string>
     <string name="crm_views_by">%1$s-pa</string>
-    <string name="crm_views_sorted">%1$s ordenasqa</string>
     <string name="crm_design_preview_label">Ñawpaq qhaway:</string>
     <string name="crm_design_preview_no_view">Ñawpaq qhawanapaq mana vista kanchu</string>
     <string name="crm_design_preview_no_class">Kay vistapaq mana clase kanchu</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s adjuntokunata mana yapayta atikurqanchu: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Tayta</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Clase</string>
 </resources>

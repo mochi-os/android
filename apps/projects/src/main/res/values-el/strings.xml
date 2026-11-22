@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Προσθήκη πεδίου</string>
     <string name="projects_class_delete">Διαγραφή κλάσης</string>
     <string name="projects_class_delete_title">Διαγραφή κλάσης</string>
-    <string name="projects_field_type_text">Κείμενο</string>
-    <string name="projects_field_type_number">Αριθμός</string>
-    <string name="projects_field_type_user">Χρήστης</string>
-    <string name="projects_field_type_date">Ημερομηνία</string>
-    <string name="projects_field_type_checklist">Λίστα ελέγχου</string>
     <string name="projects_field_name">Όνομα</string>
     <string name="projects_field_type">Τύπος</string>
     <string name="projects_field_flags">Σημαίες</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Να επιτρέπονται αιτήματα συγχώνευσης σε αντικείμενα αυτής της κλάσης.</string>
     <string name="projects_class_parents">Γονικές κλάσεις</string>
     <string name="projects_class_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την κλάση \"%1$s\"; Όλα τα πεδία και οι επιλογές τους θα διαγραφούν επίσης.</string>
-    <string name="projects_field_type_enumerated">Απαριθμημένο</string>
     <string name="projects_field_label">Πεδίο: %1$s</string>
     <string name="projects_field_readonly">Μόνο για ανάγνωση</string>
     <string name="projects_field_sortable">Με δυνατότητα ταξινόμησης</string>
     <string name="projects_field_filterable">Με δυνατότητα φιλτραρίσματος</string>
     <string name="projects_field_show_on_card">Εμφάνιση στην κάρτα</string>
-    <string name="projects_field_multi">Πολλαπλή επιλογή</string>
     <string name="projects_field_position">Θέση εμφάνισης</string>
     <string name="projects_field_position_header">Κεφαλίδα</string>
     <string name="projects_field_validation">Επικύρωση</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Πεδίο χρώματος περιγράμματος</string>
     <string name="projects_views_filter_classes">Φιλτράρισμα σε κλάσεις</string>
     <string name="projects_views_by">ανά %1$s</string>
-    <string name="projects_views_sorted">ταξινόμηση %1$s</string>
     <string name="projects_design_preview_label">Προεπισκόπηση:</string>
     <string name="projects_design_preview_no_view">Δεν υπάρχει προβολή για προεπισκόπηση</string>
     <string name="projects_design_preview_no_class">Δεν υπάρχει κλάση για αυτή την προβολή</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Το έργο ενημερώθηκε</string>
     <string name="projects_activity_attached">επισύναψε</string>
     <string name="projects_activity_commented">σχολίασε</string>
+    <string name="projects_activity_moved">μετακίνησε αυτό το αντικείμενο</string>
+    <string name="projects_activity_linked">πρόσθεσε έναν σύνδεσμο</string>
+    <string name="projects_activity_class">άλλαξε την κλάση</string>
     <string name="projects_attachment_delete_confirm_message">Αυτό το συνημμένο θα διαγραφεί οριστικά.</string>
     <string name="projects_attachment_delete_confirm_title">Διαγραφή συνημμένου;</string>
     <string name="projects_settings_unsubscribe_section">Κατάργηση εγγραφής από το έργο</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\" και τα %2$s στοιχεία κάτω από αυτό; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Δεν ήταν δυνατή η επισύναψη: %1$s</string>
+    <string name="projects_activity_unknown">Άγνωστο</string>
 </resources>

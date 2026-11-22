@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Gabat gelýän obýektler ýok</string>
     <string name="crm_field_yes">Hawa</string>
     <string name="crm_field_no">Ýok</string>
-    <string name="crm_field_type_checkbox">Bellik gutusy</string>
     <string name="crm_comment_empty">Heniz teswirler ýok</string>
     <string name="crm_comment_attach">Faýllar goşmak</string>
     <string name="crm_property_remove">Aýyr</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Meýdan goşmak</string>
     <string name="crm_class_delete">Klass pozmak</string>
     <string name="crm_class_delete_title">Klass pozmak</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">San</string>
-    <string name="crm_field_type_user">Ulanyjy</string>
-    <string name="crm_field_type_date">Sene</string>
-    <string name="crm_field_type_checklist">Kontrol sanawy</string>
     <string name="crm_field_name">At</string>
     <string name="crm_field_type">Görnüş</string>
     <string name="crm_field_flags">Belliler</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">üýtgeşme etdi</string>
     <string name="crm_activity_attached">goşdy</string>
     <string name="crm_activity_commented">teswir ýazdy</string>
+    <string name="crm_activity_moved">göçürdi</string>
+    <string name="crm_activity_linked">baglanyşdyrdy</string>
+    <string name="crm_activity_class">klasy üýtgetdi</string>
     <string name="crm_attachment_empty">Goşundy ýok</string>
     <string name="crm_attachment_default_name">goşundy</string>
     <string name="crm_attachment_delete_confirm_title">Goşundyny pozmalymy?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Deslapky (okalýan)</string>
     <string name="crm_class_parents">Ene klaslar</string>
     <string name="crm_class_delete_message">\"%1$s\" klasyny pozmak isleýändigiňize ynanýarsyňyzmy? Ähli meýdanlar we olaryň opsiýalary hem pozular.</string>
-    <string name="crm_field_type_enumerated">Sanawly</string>
     <string name="crm_field_label">Meýdan: %1$s</string>
     <string name="crm_field_readonly">Diňe okamak üçin</string>
     <string name="crm_field_sortable">Tertipläp bolýan</string>
     <string name="crm_field_filterable">Süzgüçlenip bolýan</string>
     <string name="crm_field_show_on_card">Kartoçkada görkez</string>
-    <string name="crm_field_multi">Köp saýlawly</string>
     <string name="crm_field_position">Görkeziş ýerleşişi</string>
     <string name="crm_field_position_header">Sözbaşy</string>
     <string name="crm_field_validation">Barlag</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Çyzyk reňki meýdany</string>
     <string name="crm_views_filter_classes">Klaslar boýunça süz</string>
     <string name="crm_views_by">%1$s boýunça</string>
-    <string name="crm_views_sorted">%1$s tertibinde</string>
     <string name="crm_design_preview_label">Öňünden görnüş:</string>
     <string name="crm_design_preview_no_view">Görkezer ýaly görnüş ýok</string>
     <string name="crm_design_preview_no_class">Bu görnüş üçin klas ýok</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s goşundyny goşup bolmady: %2$s</item>
         <item quantity="other">%1$s goşundyny goşup bolmady: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Ene-ata</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klass</string>
 </resources>

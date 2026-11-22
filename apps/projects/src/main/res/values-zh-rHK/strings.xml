@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_field_type_user">用戶</string>
     <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
 
     <string name="projects_create_name">名稱</string>
@@ -32,7 +31,6 @@
     <string name="projects_field_position_default">預設</string>
     <string name="projects_settings_tab_people">用戶</string>
     <string name="projects_sort_number">編號</string>
-    <string name="projects_field_type_number">編號</string>
     <string name="projects_views_sort_number">編號</string>
     <string name="projects_settings_tab_general">一般</string>
     <string name="projects_request_status_draft">草稿</string>
@@ -198,9 +196,6 @@
     <string name="projects_class_delete">刪除類別</string>
     <string name="projects_class_delete_title">刪除類別</string>
     <string name="projects_class_delete_message">確定要刪除類別「%1$s」嗎？所有欄位及其選項亦會一併刪除。</string>
-    <string name="projects_field_type_text">文字</string>
-    <string name="projects_field_type_enumerated">列舉</string>
-    <string name="projects_field_type_checklist">清單</string>
     <string name="projects_field_label">欄位：%1$s</string>
     <string name="projects_field_flags">標記</string>
     <string name="projects_field_required">必填</string>
@@ -208,7 +203,6 @@
     <string name="projects_field_sortable">可排序</string>
     <string name="projects_field_filterable">可篩選</string>
     <string name="projects_field_show_on_card">於卡片顯示</string>
-    <string name="projects_field_multi">多選</string>
     <string name="projects_field_position">顯示位置</string>
     <string name="projects_field_position_header">頂部</string>
     <string name="projects_field_position_sidebar">側欄</string>
@@ -242,7 +236,6 @@
     <string name="projects_views_filter_classes">篩選至類別</string>
     <string name="projects_views_sort_rank">排名</string>
     <string name="projects_views_by">依 %1$s</string>
-    <string name="projects_views_sorted">已排序 %1$s</string>
     <string name="projects_design_preview_label">預覽：</string>
     <string name="projects_design_preview_no_view">沒有可預覽的檢視</string>
     <string name="projects_design_preview_no_class">此檢視沒有類別</string>
@@ -296,4 +289,5 @@
     <string name="projects_settings_access_updated">存取權限已更新</string>
     <string name="projects_board_add_column">新增欄位</string>
     <string name="projects_create_attachments_failed">無法附加：%1$s</string>
+    <string name="projects_activity_unknown">未知</string>
 </resources>

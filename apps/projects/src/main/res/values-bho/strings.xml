@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">फील्ड जोड़ीं</string>
     <string name="projects_class_delete">वर्ग मेटाईं</string>
     <string name="projects_class_delete_title">वर्ग मेटाईं</string>
-    <string name="projects_field_type_text">टेक्स्ट</string>
-    <string name="projects_field_type_number">संख्या</string>
-    <string name="projects_field_type_user">उपयोगकर्ता</string>
-    <string name="projects_field_type_date">तारीख</string>
-    <string name="projects_field_type_checklist">चेकलिस्ट</string>
     <string name="projects_field_name">नाम</string>
     <string name="projects_field_type">प्रकार</string>
     <string name="projects_field_flags">झंडा</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">ऊपर ले जाईं</string>
     <string name="projects_class_move_down">नीचे ले जाईं</string>
     <string name="projects_class_delete_message">का रउआ सचमुच वर्ग \"%1$s\" के मिटावल चाहत बानी? सभ क्षेत्र आ ओकर विकल्प भी मिटा दिहल जइहें।</string>
-    <string name="projects_field_type_enumerated">गणनात्मक</string>
     <string name="projects_field_label">क्षेत्र: %1$s</string>
     <string name="projects_field_readonly">केवल पठन</string>
     <string name="projects_field_sortable">क्रमबद्ध करे लायक</string>
     <string name="projects_field_filterable">छानल जा सके वाला</string>
     <string name="projects_field_show_on_card">कार्ड पर देखाईं</string>
-    <string name="projects_field_multi">बहु-चयन</string>
     <string name="projects_field_position">प्रदर्शन स्थिति</string>
     <string name="projects_field_position_header">शीर्षक</string>
     <string name="projects_field_position_body">मुख्य भाग</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">घटत क्रम</string>
     <string name="projects_views_filter_classes">वर्ग पर छानीं</string>
     <string name="projects_views_by">%1$s के अनुसार</string>
-    <string name="projects_views_sorted">%1$s क्रमबद्ध</string>
     <string name="projects_design_preview_label">पूर्वावलोकन:</string>
     <string name="projects_design_preview_no_view">पूर्वावलोकन खातिर कौनो दृश्य नइखे</string>
     <string name="projects_design_preview_no_class">ई दृश्य खातिर कौनो वर्ग नइखे</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">प्रोजेक्ट अपडेट भइल</string>
     <string name="projects_activity_attached">जोड़लस</string>
     <string name="projects_activity_commented">टिप्पणी कइलस</string>
+    <string name="projects_activity_moved">ई वस्तु के खिसकवलस</string>
+    <string name="projects_activity_linked">एगो लिंक जोड़लस</string>
+    <string name="projects_activity_class">वर्ग बदललस</string>
     <string name="projects_attachment_delete_confirm_message">ई संलग्नक हमेशा खातिर मिटा दिहल जाई।</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक मिटावल जाव?</string>
     <string name="projects_settings_unsubscribe_section">परियोजना से सदस्यता खतम करीं</string>
@@ -339,4 +334,5 @@
         <item quantity="other">का रउआ \"%1$s\" आ ओकरा नीचे के %2$s आइटम मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</item>
     </plurals>
     <string name="projects_create_attachments_failed">संलग्न ना हो सकल: %1$s</string>
+    <string name="projects_activity_unknown">अनजान</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Meýdan goşmak</string>
     <string name="projects_class_delete">Klass pozmak</string>
     <string name="projects_class_delete_title">Klass pozmak</string>
-    <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">San</string>
-    <string name="projects_field_type_user">Ulanyjy</string>
-    <string name="projects_field_type_date">Sene</string>
-    <string name="projects_field_type_checklist">Kontrol sanawy</string>
     <string name="projects_field_name">At</string>
     <string name="projects_field_type">Görnüş</string>
     <string name="projects_field_flags">Belliler</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Bu klasyň obýektlerinde birleşdirme talaplaryna rugsat ber.</string>
     <string name="projects_class_parents">Ene klaslar</string>
     <string name="projects_class_delete_message">\"%1$s\" klasyny pozmak isleýändigiňize ynanýarsyňyzmy? Ähli meýdanlar we olaryň opsiýalary hem pozular.</string>
-    <string name="projects_field_type_enumerated">Sanawly</string>
     <string name="projects_field_label">Meýdan: %1$s</string>
     <string name="projects_field_readonly">Diňe okamak üçin</string>
     <string name="projects_field_sortable">Tertipläp bolýan</string>
     <string name="projects_field_filterable">Süzgüçlenip bolýan</string>
     <string name="projects_field_show_on_card">Kartoçkada görkez</string>
-    <string name="projects_field_multi">Köp saýlawly</string>
     <string name="projects_field_position">Görkeziş ýerleşişi</string>
     <string name="projects_field_position_header">Sözbaşy</string>
     <string name="projects_field_validation">Barlag</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Çäk reňk meýdany</string>
     <string name="projects_views_filter_classes">Klaslara süz</string>
     <string name="projects_views_by">%1$s boýunça</string>
-    <string name="projects_views_sorted">tertiplenen %1$s</string>
     <string name="projects_design_preview_label">Öňünden görnüş:</string>
     <string name="projects_design_preview_no_view">Öňünden görkezere görnüş ýok</string>
     <string name="projects_design_preview_no_class">Bu görnüş üçin klas ýok</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Taslama täzelendi</string>
     <string name="projects_activity_attached">goşdy</string>
     <string name="projects_activity_commented">teswir ýazdy</string>
+    <string name="projects_activity_moved">bu obýekti göçürdi</string>
+    <string name="projects_activity_linked">baglanyşyk goşdy</string>
+    <string name="projects_activity_class">klasy üýtgetdi</string>
     <string name="projects_attachment_delete_confirm_message">Bu goşundy hemişelik pozular.</string>
     <string name="projects_attachment_delete_confirm_title">Goşundyny pozmalymy?</string>
     <string name="projects_settings_unsubscribe_section">Taslama abunalygyny bes et</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" we onuň aşagyndaky %2$s elementi pozmak isleýändigiňize ynamlymy? Bu hereket yzyna gaýtarylyp bilinmez.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Goşup bolmady: %1$s</string>
+    <string name="projects_activity_unknown">Näbelli</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Tu objeyên li hev tên tune</string>
     <string name="crm_field_yes">Erê</string>
     <string name="crm_field_no">Na</string>
-    <string name="crm_field_type_checkbox">Qutiya kontrol</string>
     <string name="crm_comment_empty">Hêj tu şîrove tune</string>
     <string name="crm_comment_attach">Pelan pêve bike</string>
     <string name="crm_property_remove">Rake</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Qad zêde bike</string>
     <string name="crm_class_delete">Polê jê bibe</string>
     <string name="crm_class_delete_title">Polê jê bibe</string>
-    <string name="crm_field_type_text">Nivîs</string>
-    <string name="crm_field_type_number">Hejmar</string>
-    <string name="crm_field_type_user">Bikarhêner</string>
-    <string name="crm_field_type_date">Dîrok</string>
-    <string name="crm_field_type_checklist">Lîsteya kontrolê</string>
     <string name="crm_field_name">Nav</string>
     <string name="crm_field_type">Cure</string>
     <string name="crm_field_flags">Ala</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">guhertinek çêkir</string>
     <string name="crm_activity_attached">pêve kir</string>
     <string name="crm_activity_commented">şîrove kir</string>
+    <string name="crm_activity_moved">guhast</string>
+    <string name="crm_activity_linked">girê da</string>
+    <string name="crm_activity_class">pol guhert</string>
     <string name="crm_attachment_empty">Pêvek tune</string>
     <string name="crm_attachment_default_name">pêvek</string>
     <string name="crm_attachment_delete_confirm_title">Pêvekê jê bibe?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Standard (xwendinbar)</string>
     <string name="crm_class_parents">Çînên dê û bav</string>
     <string name="crm_class_delete_message">Ma tu pê ewle yî ku dixwazî çîna \"%1$s\" jê bibî? Hemû qad û vebijêrkên wan jî dê werin jêbirin.</string>
-    <string name="crm_field_type_enumerated">Hejmartî</string>
     <string name="crm_field_label">Qad: %1$s</string>
     <string name="crm_field_readonly">Tenê xwendin</string>
     <string name="crm_field_sortable">Rêzkirinbar</string>
     <string name="crm_field_filterable">Parzûnbar</string>
     <string name="crm_field_show_on_card">Li ser kartê nîşan bide</string>
-    <string name="crm_field_multi">Pir-hilbijartin</string>
     <string name="crm_field_position">Cihê nîşandanê</string>
     <string name="crm_field_position_header">Sernivîs</string>
     <string name="crm_field_validation">Pejirandin</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Qada rengê sînor</string>
     <string name="crm_views_filter_classes">Bi çînan parzûn bike</string>
     <string name="crm_views_by">ji aliyê %1$s</string>
-    <string name="crm_views_sorted">rêzkirî %1$s</string>
     <string name="crm_design_preview_label">Pêşdîtin:</string>
     <string name="crm_design_preview_no_view">Ti dîtin ji bo pêşdîtinê tune</string>
     <string name="crm_design_preview_no_class">Ji bo vê dîtinê ti çîn tune</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s pêvek nehat zêdekirin: %2$s</item>
         <item quantity="other">%1$s pêvek nehatin zêdekirin: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Dêûbav</string>
+    <string name="crm_export_csv_id">Nasname</string>
+    <string name="crm_export_csv_class">Pol</string>
 </resources>

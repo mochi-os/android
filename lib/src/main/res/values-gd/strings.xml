@@ -374,4 +374,13 @@
     <string name="devices_username">Ainm-cleachdaiche</string>
     <string name="devices_warning">Dèan lethbhreac dhen fhacal-faire an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
     <string name="devices_unused">Cha deach a chleachdadh a-riamh</string>
+    <string name="field_type_text">Teacsa</string>
+    <string name="field_type_number">Àireamh</string>
+    <string name="field_type_enumerated">Àireamhaichte</string>
+    <string name="field_type_user">Cleachdaiche</string>
+    <string name="field_type_date">Ceann-là</string>
+    <string name="field_type_checkbox">Bogsa-cromaige</string>
+    <string name="field_type_checklist">Liosta-dearbhaidh</string>
+    <string name="view_list_sorted_ascending">air an seòrsachadh a\' dìreadh</string>
+    <string name="view_list_sorted_descending">air an seòrsachadh a\' teàrnadh</string>
 </resources>

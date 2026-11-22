@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">No hi ha objectes coincidents</string>
     <string name="crm_field_yes">Sí</string>
     <string name="crm_field_no">No</string>
-    <string name="crm_field_type_checkbox">Casella de selecció</string>
     <string name="crm_comment_empty">Encara no hi ha comentaris</string>
     <string name="crm_comment_attach">Adjunta fitxers</string>
     <string name="crm_property_remove">Elimina</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Afegeix un camp</string>
     <string name="crm_class_delete">Suprimeix la classe</string>
     <string name="crm_class_delete_title">Suprimeix la classe</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Número</string>
-    <string name="crm_field_type_user">Usuari</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Llista de comprovació</string>
     <string name="crm_field_name">Nom</string>
     <string name="crm_field_type">Tipus</string>
     <string name="crm_field_flags">Banderes</string>
@@ -148,13 +142,11 @@
     <string name="crm_class_move_up">Mou amunt</string>
     <string name="crm_class_move_down">Mou avall</string>
     <string name="crm_class_delete_message">Esteu segur que voleu eliminar la classe \"%1$s\"? També s\'eliminaran tots els camps i les seves opcions.</string>
-    <string name="crm_field_type_enumerated">Enumerat</string>
     <string name="crm_field_label">Camp: %1$s</string>
     <string name="crm_field_readonly">Només lectura</string>
     <string name="crm_field_sortable">Ordenable</string>
     <string name="crm_field_filterable">Filtrable</string>
     <string name="crm_field_show_on_card">Mostra a la targeta</string>
-    <string name="crm_field_multi">Selecció múltiple</string>
     <string name="crm_field_position">Posició de visualització</string>
     <string name="crm_field_position_header">Capçalera</string>
     <string name="crm_field_position_body">Cos</string>
@@ -177,7 +169,6 @@
     <string name="crm_views_direction_desc">Descendent</string>
     <string name="crm_views_filter_classes">Filtra per classes</string>
     <string name="crm_views_by">per %1$s</string>
-    <string name="crm_views_sorted">ordenat %1$s</string>
     <string name="crm_design_preview_label">Previsualització:</string>
     <string name="crm_design_preview_no_view">Cap vista per previsualitzar</string>
     <string name="crm_design_preview_no_class">Cap classe per a aquesta vista</string>
@@ -219,6 +210,9 @@
     <string name="crm_activity_made_change">ha fet un canvi</string>
     <string name="crm_activity_attached">ha adjuntat</string>
     <string name="crm_activity_commented">ha comentat</string>
+    <string name="crm_activity_moved">ha mogut</string>
+    <string name="crm_activity_linked">ha enllaçat</string>
+    <string name="crm_activity_class">ha canviat la classe</string>
     <string name="crm_attachment_empty">Cap adjunt</string>
     <string name="crm_attachment_default_name">adjunt</string>
     <string name="crm_attachment_delete_confirm_title">Voleu suprimir l\'adjunt?</string>
@@ -297,4 +291,7 @@
         <item quantity="one">No s\'ha pogut afegir %1$s fitxer adjunt: %2$s</item>
         <item quantity="other">No s\'han pogut afegir %1$s fitxers adjunts: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Pare</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Classe</string>
 </resources>

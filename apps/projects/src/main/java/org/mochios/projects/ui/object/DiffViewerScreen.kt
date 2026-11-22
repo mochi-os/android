@@ -8,14 +8,9 @@ package org.mochios.projects.ui.`object`
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.SwapHoriz
@@ -28,12 +23,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -50,7 +42,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.projects.R
@@ -64,8 +57,12 @@ data class FileStats(
     val deletions: Int
 )
 
+/**
+ * @property diff The diff as the server sent it; null until it has, "" for
+ *   branches with no changes between them.
+ */
 data class DiffViewerUiState(
-    val diffHtml: String = "",
+    val diff: String? = null,
     val isLoading: Boolean = false,
     val error: MochiError? = null,
     val isUnified: Boolean = true,
@@ -78,7 +75,6 @@ class DiffViewerViewModel @Inject constructor(
     private val repository: ProjectsRepository
 ) : ViewModel() {
 
-    val projectId: String = savedStateHandle.get<String>("projectId") ?: ""
     val repo: String = savedStateHandle.get<String>("repo") ?: ""
     val source: String = savedStateHandle.get<String>("source") ?: ""
     val target: String = savedStateHandle.get<String>("target") ?: ""
@@ -91,18 +87,12 @@ class DiffViewerViewModel @Inject constructor(
         loadDiff()
     }
 
-    private var rawDiff: String = ""
-
     private fun loadPreference() {
         viewModelScope.launch {
             try {
-                val pref = repository.getDiffPreference()
-                val unified = pref != "split"
+                val unified = repository.getDiffPreference() != "split"
                 if (unified != _uiState.value.isUnified) {
-                    _uiState.value = _uiState.value.copy(
-                        isUnified = unified,
-                        diffHtml = if (rawDiff.isNotEmpty()) renderDiff(rawDiff, unified) else _uiState.value.diffHtml
-                    )
+                    _uiState.value = _uiState.value.copy(isUnified = unified)
                 }
             } catch (_: Exception) {
                 // Default ("unified") already set; ignore failures.
@@ -115,11 +105,9 @@ class DiffViewerViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val diff = repository.getDiff(repo, target, source)
-                rawDiff = diff
-                val stats = parseFileStats(diff)
                 _uiState.value = _uiState.value.copy(
-                    diffHtml = renderDiff(diff, _uiState.value.isUnified),
-                    fileStats = stats,
+                    diff = diff,
+                    fileStats = parseFileStats(diff),
                     isLoading = false
                 )
             } catch (e: Exception) {
@@ -133,10 +121,7 @@ class DiffViewerViewModel @Inject constructor(
 
     fun toggleViewMode() {
         val newUnified = !_uiState.value.isUnified
-        _uiState.value = _uiState.value.copy(
-            isUnified = newUnified,
-            diffHtml = renderDiff(rawDiff, newUnified)
-        )
+        _uiState.value = _uiState.value.copy(isUnified = newUnified)
         viewModelScope.launch {
             try {
                 repository.setDiffPreference(if (newUnified) "unified" else "split")
@@ -169,106 +154,130 @@ class DiffViewerViewModel @Inject constructor(
         }
         return stats
     }
+}
 
-    private fun renderDiff(diff: String, unified: Boolean): String {
-        val escaped = diff
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
+private fun escape(text: String): String = text
+    .replace("&", "&amp;")
+    .replace("<", "&lt;")
+    .replace(">", "&gt;")
 
-        return if (unified) renderUnified(escaped) else renderSplit(escaped)
+/**
+ * The page the diff viewer shows: the changed files and their added and
+ * removed line counts, in the user's number format, at the top of the same
+ * scrolling page as the diff, so a long list of files never leaves the diff
+ * without room; then the diff, [unified] or side by side.
+ */
+internal fun diffPage(diff: String, unified: Boolean, stats: List<FileStats>, format: Format): String {
+    val summary = if (stats.isEmpty()) "" else buildString {
+        append("<table class=\"summary\">")
+        for (stat in stats) {
+            append("<tr><td class=\"name\">").append(escape(stat.file)).append("</td><td class=\"count\">")
+            if (stat.additions > 0) append("<span class=\"plus\">+").append(format.formatNumber(stat.additions)).append("</span> ")
+            if (stat.deletions > 0) append("<span class=\"minus\">-").append(format.formatNumber(stat.deletions)).append("</span>")
+            append("</td></tr>")
+        }
+        append("</table>")
+    }
+    val escaped = escape(diff)
+    val body = if (unified) renderUnified(escaped) else renderSplit(escaped)
+    return wrapHtml(summary + body, !unified)
+}
+
+private fun renderUnified(escaped: String): String =
+    escaped.split("\n").joinToString("\n") { line ->
+        when {
+            line.startsWith("+") -> "<div class=\"add\">$line</div>"
+            line.startsWith("-") -> "<div class=\"del\">$line</div>"
+            line.startsWith("@@") -> "<div class=\"hunk\">$line</div>"
+            line.startsWith("diff ") -> "<div class=\"file\">$line</div>"
+            else -> "<div class=\"ctx\">$line</div>"
+        }
     }
 
-    private fun renderUnified(escaped: String): String {
-        val lines = escaped.split("\n")
-        val htmlLines = lines.joinToString("\n") { line ->
-            when {
-                line.startsWith("+") -> "<div class=\"add\">$line</div>"
-                line.startsWith("-") -> "<div class=\"del\">$line</div>"
-                line.startsWith("@@") -> "<div class=\"hunk\">$line</div>"
-                line.startsWith("diff ") -> "<div class=\"file\">$line</div>"
-                else -> "<div class=\"ctx\">$line</div>"
+private fun renderSplit(escaped: String): String {
+    val lines = escaped.split("\n")
+    val sb = StringBuilder()
+    val leftLines = mutableListOf<Pair<String, String>>() // class, content
+    val rightLines = mutableListOf<Pair<String, String>>()
+
+    fun flushSplit() {
+        val maxLen = maxOf(leftLines.size, rightLines.size)
+        for (i in 0 until maxLen) {
+            val (lc, lt) = leftLines.getOrElse(i) { "empty" to "" }
+            val (rc, rt) = rightLines.getOrElse(i) { "empty" to "" }
+            sb.append("<tr><td class=\"$lc\">$lt</td><td class=\"$rc\">$rt</td></tr>\n")
+        }
+        leftLines.clear()
+        rightLines.clear()
+    }
+
+    sb.append("<table class=\"split\">")
+    for (line in lines) {
+        when {
+            line.startsWith("diff ") || line.startsWith("@@") -> {
+                flushSplit()
+                val cls = if (line.startsWith("@@")) "hunk" else "file"
+                sb.append("<tr><td class=\"$cls\" colspan=\"2\">$line</td></tr>\n")
+            }
+            line.startsWith("-") -> leftLines.add("del" to line)
+            line.startsWith("+") -> rightLines.add("add" to line)
+            else -> {
+                flushSplit()
+                sb.append("<tr><td class=\"ctx\">$line</td><td class=\"ctx\">$line</td></tr>\n")
             }
         }
-        return wrapHtml(htmlLines, false)
     }
+    flushSplit()
+    sb.append("</table>")
+    return sb.toString()
+}
 
-    private fun renderSplit(escaped: String): String {
-        val lines = escaped.split("\n")
-        val sb = StringBuilder()
-        val leftLines = mutableListOf<Pair<String, String>>() // class, content
-        val rightLines = mutableListOf<Pair<String, String>>()
+private fun wrapHtml(body: String, isSplit: Boolean): String {
+    val splitCss = if (isSplit) """
+        table.split { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        table.split td { padding: 1px 4px; white-space: pre-wrap; word-break: break-all; width: 50%; vertical-align: top; border-right: 1px solid #d0d0d0; }
+        table.split td:last-child { border-right: none; }
+        .empty { background: #f5f5f5; }
+        @media (prefers-color-scheme: dark) { .empty { background: #222; } table.split td { border-right-color: #444; } }
+    """ else """
+        div { padding: 1px 4px; white-space: pre-wrap; word-break: break-all; }
+    """
 
-        fun flushSplit() {
-            val maxLen = maxOf(leftLines.size, rightLines.size)
-            for (i in 0 until maxLen) {
-                val (lc, lt) = leftLines.getOrElse(i) { "empty" to "" }
-                val (rc, rt) = rightLines.getOrElse(i) { "empty" to "" }
-                sb.append("<tr><td class=\"$lc\">$lt</td><td class=\"$rc\">$rt</td></tr>\n")
+    return """
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body { font-family: monospace; font-size: 12px; margin: 0; padding: 8px; background: #fff; }
+            table.summary { width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 11px; }
+            table.summary td { padding: 2px 4px; vertical-align: top; }
+            table.summary .name { word-break: break-all; color: #24292e; }
+            table.summary .count { text-align: right; white-space: nowrap; }
+            .plus { color: #22863a; }
+            .minus { color: #cb2431; }
+            .add { background: #e6ffed; color: #22863a; }
+            .del { background: #ffeef0; color: #cb2431; }
+            .hunk { background: #f1f8ff; color: #032f62; font-weight: bold; margin-top: 8px; }
+            .file { background: #f1f8ff; color: #032f62; font-weight: bold; margin-top: 12px; }
+            .ctx { color: #24292e; }
+            $splitCss
+            @media (prefers-color-scheme: dark) {
+                body { background: #1a1c1e; }
+                table.summary .name { color: #e3e2e6; }
+                .plus { color: #7ee787; }
+                .minus { color: #f85149; }
+                .add { background: #1b3a28; color: #7ee787; }
+                .del { background: #3c1b20; color: #f85149; }
+                .hunk { background: #1c2d41; color: #79c0ff; }
+                .file { background: #1c2d41; color: #79c0ff; }
+                .ctx { color: #e3e2e6; }
             }
-            leftLines.clear()
-            rightLines.clear()
-        }
-
-        sb.append("<table>")
-        for (line in lines) {
-            when {
-                line.startsWith("diff ") || line.startsWith("@@") -> {
-                    flushSplit()
-                    val cls = if (line.startsWith("@@")) "hunk" else "file"
-                    sb.append("<tr><td class=\"$cls\" colspan=\"2\">$line</td></tr>\n")
-                }
-                line.startsWith("-") -> leftLines.add("del" to line)
-                line.startsWith("+") -> rightLines.add("add" to line)
-                else -> {
-                    flushSplit()
-                    sb.append("<tr><td class=\"ctx\">$line</td><td class=\"ctx\">$line</td></tr>\n")
-                }
-            }
-        }
-        flushSplit()
-        sb.append("</table>")
-        return wrapHtml(sb.toString(), true)
-    }
-
-    private fun wrapHtml(body: String, isSplit: Boolean): String {
-        val splitCss = if (isSplit) """
-            table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-            td { padding: 1px 4px; white-space: pre-wrap; word-break: break-all; width: 50%; vertical-align: top; border-right: 1px solid #d0d0d0; }
-            td:last-child { border-right: none; }
-            .empty { background: #f5f5f5; }
-            @media (prefers-color-scheme: dark) { .empty { background: #222; } td { border-right-color: #444; } }
-        """ else """
-            div { padding: 1px 4px; white-space: pre-wrap; word-break: break-all; }
-        """
-
-        return """
-            <!DOCTYPE html>
-            <html>
-            <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                body { font-family: monospace; font-size: 12px; margin: 0; padding: 8px; background: #fff; }
-                .add { background: #e6ffed; color: #22863a; }
-                .del { background: #ffeef0; color: #cb2431; }
-                .hunk { background: #f1f8ff; color: #032f62; font-weight: bold; margin-top: 8px; }
-                .file { background: #f1f8ff; color: #032f62; font-weight: bold; margin-top: 12px; }
-                .ctx { color: #24292e; }
-                $splitCss
-                @media (prefers-color-scheme: dark) {
-                    body { background: #1a1c1e; }
-                    .add { background: #1b3a28; color: #7ee787; }
-                    .del { background: #3c1b20; color: #f85149; }
-                    .hunk { background: #1c2d41; color: #79c0ff; }
-                    .file { background: #1c2d41; color: #79c0ff; }
-                    .ctx { color: #e3e2e6; }
-                }
-            </style>
-            </head>
-            <body>$body</body>
-            </html>
-        """.trimIndent()
-    }
+        </style>
+        </head>
+        <body>$body</body>
+        </html>
+    """.trimIndent()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -293,7 +302,7 @@ fun DiffViewerScreen(
                         selected = uiState.isUnified,
                         onClick = { viewModel.toggleViewMode() },
                         label = { Text(if (uiState.isUnified) stringResource(R.string.projects_diff_unified) else stringResource(R.string.projects_diff_split)) },
-                        leadingIcon = { Icon(Icons.Default.SwapHoriz, contentDescription = null, modifier = androidx.compose.ui.Modifier.height(16.dp)) }
+                        leadingIcon = { Icon(Icons.Default.SwapHoriz, contentDescription = null, modifier = Modifier.height(16.dp)) }
                     )
                 }
             )
@@ -304,6 +313,7 @@ fun DiffViewerScreen(
                 .padding(padding)
                 .fillMaxSize()
         ) {
+            val diff = uiState.diff
             when {
                 uiState.isLoading -> {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
@@ -316,67 +326,30 @@ fun DiffViewerScreen(
                     )
                 }
 
-                uiState.diffHtml.isNotBlank() -> {
-                    Column(modifier = Modifier.fillMaxSize()) {
-                        // File stats
-                        if (uiState.fileStats.isNotEmpty()) {
-                            Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) {
-                                uiState.fileStats.forEach { stat ->
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Text(
-                                            text = stat.file,
-                                            style = MaterialTheme.typography.labelSmall,
-                                            modifier = Modifier.weight(1f)
-                                        )
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        if (stat.additions > 0) {
-                                            Text(
-                                                text = "+${stat.additions}",
-                                                style = MaterialTheme.typography.labelSmall,
-                                                color = androidx.compose.ui.graphics.Color(0xFF22863A)
-                                            )
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                        }
-                                        if (stat.deletions > 0) {
-                                            Text(
-                                                text = "-${stat.deletions}",
-                                                style = MaterialTheme.typography.labelSmall,
-                                                color = androidx.compose.ui.graphics.Color(0xFFCB2431)
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                            Spacer(modifier = Modifier.height(4.dp))
-                        }
-
-                        AndroidView(
-                            factory = { context ->
-                                WebView(context).apply {
-                                    webViewClient = WebViewClient()
-                                    settings.javaScriptEnabled = false
-                                    settings.loadWithOverviewMode = true
-                                    settings.useWideViewPort = true
-                                }
-                            },
-                            update = { webView ->
-                                webView.loadDataWithBaseURL(
-                                    null,
-                                    uiState.diffHtml,
-                                    "text/html",
-                                    "UTF-8",
-                                    null
-                                )
-                            },
-                            modifier = Modifier.fillMaxSize()
-                        )
+                // On what the server sent, not on the page made of it, which
+                // always has markup.
+                !diff.isNullOrBlank() -> {
+                    val format = LocalFormat.current
+                    val page = remember(diff, uiState.isUnified, uiState.fileStats, format) {
+                        diffPage(diff, uiState.isUnified, uiState.fileStats, format)
                     }
+                    AndroidView(
+                        factory = { context ->
+                            WebView(context).apply {
+                                webViewClient = WebViewClient()
+                                settings.javaScriptEnabled = false
+                                settings.loadWithOverviewMode = true
+                                settings.useWideViewPort = true
+                            }
+                        },
+                        update = { webView ->
+                            webView.loadDataWithBaseURL(null, page, "text/html", "UTF-8", null)
+                        },
+                        modifier = Modifier.fillMaxSize()
+                    )
                 }
 
-                else -> {
+                diff != null -> {
                     Text(
                         text = stringResource(R.string.projects_diff_empty),
                         modifier = Modifier.align(Alignment.Center),

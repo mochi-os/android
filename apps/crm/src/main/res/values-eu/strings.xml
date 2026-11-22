@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Bat datorren objekturik ez</string>
     <string name="crm_field_yes">Bai</string>
     <string name="crm_field_no">Ez</string>
-    <string name="crm_field_type_checkbox">Kontrol-laukia</string>
     <string name="crm_comment_empty">Oraindik iruzkinik ez</string>
     <string name="crm_comment_attach">Erantsi fitxategiak</string>
     <string name="crm_property_remove">Kendu</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Gehitu eremua</string>
     <string name="crm_class_delete">Ezabatu klasea</string>
     <string name="crm_class_delete_title">Ezabatu klasea</string>
-    <string name="crm_field_type_text">Testua</string>
-    <string name="crm_field_type_number">Zenbakia</string>
-    <string name="crm_field_type_user">Erabiltzailea</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Egiaztapen-zerrenda</string>
     <string name="crm_field_name">Izena</string>
     <string name="crm_field_type">Mota</string>
     <string name="crm_field_flags">Banderak</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">aldaketa bat egin du</string>
     <string name="crm_activity_attached">erantsi du</string>
     <string name="crm_activity_commented">iruzkindu du</string>
+    <string name="crm_activity_moved">lekuz aldatu du</string>
+    <string name="crm_activity_linked">estekatu du</string>
+    <string name="crm_activity_class">klasea aldatu du</string>
     <string name="crm_attachment_empty">Eranskinik ez</string>
     <string name="crm_attachment_default_name">eranskina</string>
     <string name="crm_attachment_delete_confirm_title">Eranskina ezabatu?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Lehenetsia (irakurgarria)</string>
     <string name="crm_class_parents">Klase gurasoak</string>
     <string name="crm_class_delete_message">Ziur zaude \"%1$s\" klasea ezabatu nahi duzula? Eremu guztiak eta haien aukerak ere ezabatuko dira.</string>
-    <string name="crm_field_type_enumerated">Zerrendatua</string>
     <string name="crm_field_label">Eremua: %1$s</string>
     <string name="crm_field_readonly">Irakurtzeko soilik</string>
     <string name="crm_field_sortable">Ordenagarria</string>
     <string name="crm_field_filterable">Iragazgarria</string>
     <string name="crm_field_show_on_card">Erakutsi txartelean</string>
-    <string name="crm_field_multi">Hautaketa anitza</string>
     <string name="crm_field_position">Bistaratze-kokapena</string>
     <string name="crm_field_position_header">Goiburua</string>
     <string name="crm_field_validation">Balidazioa</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Ertzaren kolorearen eremua</string>
     <string name="crm_views_filter_classes">Iragazi klaseen arabera</string>
     <string name="crm_views_by">%1$s arabera</string>
-    <string name="crm_views_sorted">%1$s ordenatuta</string>
     <string name="crm_design_preview_label">Aurrebista:</string>
     <string name="crm_design_preview_no_view">Ez dago aurrebista egiteko ikuspegirik</string>
     <string name="crm_design_preview_no_class">Ez dago klaserik ikuspegi honentzat</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Ezin izan da %1$s eranskin gehitu: %2$s</item>
         <item quantity="other">Ezin izan dira %1$s eranskin gehitu: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Gurasoa</string>
+    <string name="crm_export_csv_id">IDa</string>
+    <string name="crm_export_csv_class">Klasea</string>
 </resources>

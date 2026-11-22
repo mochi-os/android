@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ավելացնել դաշտ</string>
     <string name="projects_class_delete">Ջնջել դասը</string>
     <string name="projects_class_delete_title">Ջնջել դասը</string>
-    <string name="projects_field_type_text">Տեքստ</string>
-    <string name="projects_field_type_number">Թիվ</string>
-    <string name="projects_field_type_user">Օգտատեր</string>
-    <string name="projects_field_type_date">Ամսաթիվ</string>
-    <string name="projects_field_type_checklist">Ստուգաթերթիկ</string>
     <string name="projects_field_name">Անուն</string>
     <string name="projects_field_type">Տեսակ</string>
     <string name="projects_field_flags">Դրոշներ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Թույլատրել միաձուլման հարցումներ այս դասի օբյեկտների վրա:</string>
     <string name="projects_class_parents">Ծնող դասեր</string>
     <string name="projects_class_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" դասը: Բոլոր դաշտերը և դրանց ընտրանքները նույնպես կջնջվեն:</string>
-    <string name="projects_field_type_enumerated">Թվարկված</string>
     <string name="projects_field_label">Դաշտ՝ %1$s</string>
     <string name="projects_field_readonly">Միայն կարդալու համար</string>
     <string name="projects_field_sortable">Տեսակավորելի</string>
     <string name="projects_field_filterable">Զտելի</string>
     <string name="projects_field_show_on_card">Ցուցադրել քարտի վրա</string>
-    <string name="projects_field_multi">Բազմակի ընտրություն</string>
     <string name="projects_field_position">Ցուցադրման դիրք</string>
     <string name="projects_field_position_header">Վերնագիր</string>
     <string name="projects_field_validation">Վավերացում</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Եզրագծի գույնի դաշտ</string>
     <string name="projects_views_filter_classes">Զտել ըստ դասերի</string>
     <string name="projects_views_by">ըստ %1$s</string>
-    <string name="projects_views_sorted">տեսակավորված %1$s</string>
     <string name="projects_design_preview_label">Նախադիտում՝</string>
     <string name="projects_design_preview_no_view">Չկա տեսք նախադիտելու համար</string>
     <string name="projects_design_preview_no_class">Այս տեսքի համար դաս չկա</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Նախագիծը թարմացվեց</string>
     <string name="projects_activity_attached">կցեց</string>
     <string name="projects_activity_commented">մեկնաբանեց</string>
+    <string name="projects_activity_moved">տեղափոխեց այս օբյեկտը</string>
+    <string name="projects_activity_linked">ավելացրեց հղում</string>
+    <string name="projects_activity_class">փոխեց դասը</string>
     <string name="projects_attachment_delete_confirm_message">Այս կցորդը ընդմիշտ կջնջվի։</string>
     <string name="projects_attachment_delete_confirm_title">Ջնջե՞լ կցորդը։</string>
     <string name="projects_settings_unsubscribe_section">Չեղարկել նախագծի բաժանորդագրությունը</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը և դրա տակ գտնվող %2$s տարրը։ Այս գործողությունը հնարավոր չէ հետարկել։</item>
     </plurals>
     <string name="projects_create_attachments_failed">Չհաջողվեց կցել: %1$s</string>
+    <string name="projects_activity_unknown">Անհայտ</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Tambah medan</string>
     <string name="projects_class_delete">Padam kelas</string>
     <string name="projects_class_delete_title">Padam kelas</string>
-    <string name="projects_field_type_text">Teks</string>
-    <string name="projects_field_type_number">Nombor</string>
-    <string name="projects_field_type_user">Pengguna</string>
-    <string name="projects_field_type_date">Tarikh</string>
-    <string name="projects_field_type_checklist">Senarai semak</string>
     <string name="projects_field_name">Nama</string>
     <string name="projects_field_type">Jenis</string>
     <string name="projects_field_flags">Bendera</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Benarkan permintaan gabungan pada objek kelas ini.</string>
     <string name="projects_class_parents">Kelas induk</string>
     <string name="projects_class_delete_message">Adakah anda pasti mahu memadam kelas \"%1$s\"? Semua medan dan pilihannya juga akan dipadam.</string>
-    <string name="projects_field_type_enumerated">Tersenarai</string>
     <string name="projects_field_label">Medan: %1$s</string>
     <string name="projects_field_readonly">Baca sahaja</string>
     <string name="projects_field_sortable">Boleh diisih</string>
     <string name="projects_field_filterable">Boleh ditapis</string>
     <string name="projects_field_show_on_card">Tunjukkan pada kad</string>
-    <string name="projects_field_multi">Pilihan berbilang</string>
     <string name="projects_field_position">Kedudukan paparan</string>
     <string name="projects_field_position_header">Pengepala</string>
     <string name="projects_field_validation">Pengesahan</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Medan warna sempadan</string>
     <string name="projects_views_filter_classes">Tapis kepada kelas</string>
     <string name="projects_views_by">oleh %1$s</string>
-    <string name="projects_views_sorted">diisih %1$s</string>
     <string name="projects_design_preview_label">Pratonton:</string>
     <string name="projects_design_preview_no_view">Tiada paparan untuk dipratonton</string>
     <string name="projects_design_preview_no_class">Tiada kelas untuk paparan ini</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projek dikemas kini</string>
     <string name="projects_activity_attached">melampirkan</string>
     <string name="projects_activity_commented">mengulas</string>
+    <string name="projects_activity_moved">memindahkan objek ini</string>
+    <string name="projects_activity_linked">menambah pautan</string>
+    <string name="projects_activity_class">menukar kelas</string>
     <string name="projects_attachment_delete_confirm_message">Lampiran ini akan dipadamkan secara kekal.</string>
     <string name="projects_attachment_delete_confirm_title">Padamkan lampiran?</string>
     <string name="projects_settings_unsubscribe_section">Berhenti melanggan projek</string>
@@ -338,4 +333,5 @@
         <item quantity="other">Adakah anda pasti mahu memadam \"%1$s\" dan %2$s item di bawahnya? Tindakan ini tidak boleh dibatalkan.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Tidak dapat melampirkan: %1$s</string>
+    <string name="projects_activity_unknown">Tidak diketahui</string>
 </resources>

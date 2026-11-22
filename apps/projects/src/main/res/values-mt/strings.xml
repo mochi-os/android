@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Żid kamp</string>
     <string name="projects_class_delete">Ħassar klassi</string>
     <string name="projects_class_delete_title">Ħassar klassi</string>
-    <string name="projects_field_type_text">Test</string>
-    <string name="projects_field_type_number">Numru</string>
-    <string name="projects_field_type_user">Utent</string>
-    <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Lista ta\' kontroll</string>
     <string name="projects_field_name">Isem</string>
     <string name="projects_field_type">Tip</string>
     <string name="projects_field_flags">Bandieri</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Ippermetti talbiet ta\' merge fuq oġġetti ta\' din il-klassi.</string>
     <string name="projects_class_parents">Klassijiet ġenituri</string>
     <string name="projects_class_delete_message">Żgur trid tħassar il-klassi \"%1$s\"? Il-kampi kollha u l-għażliet tagħhom jitħassru wkoll.</string>
-    <string name="projects_field_type_enumerated">Enumerat</string>
     <string name="projects_field_label">Kamp: %1$s</string>
     <string name="projects_field_readonly">Jinqara biss</string>
     <string name="projects_field_sortable">Jista\' jiġi ordnat</string>
     <string name="projects_field_filterable">Jista\' jiġi ffiltrat</string>
     <string name="projects_field_show_on_card">Uri fuq il-karta</string>
-    <string name="projects_field_multi">Għażla multipla</string>
     <string name="projects_field_position">Pożizzjoni tal-wiri</string>
     <string name="projects_field_position_header">Intestatura</string>
     <string name="projects_field_validation">Validazzjoni</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Kamp tal-kulur tal-bordura</string>
     <string name="projects_views_filter_classes">Iffiltra għall-klassijiet</string>
     <string name="projects_views_by">skont %1$s</string>
-    <string name="projects_views_sorted">issortjat %1$s</string>
     <string name="projects_design_preview_label">Anteprima:</string>
     <string name="projects_design_preview_no_view">L-ebda veduta x\'tara</string>
     <string name="projects_design_preview_no_class">L-ebda klassi għal din il-veduta</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proġett aġġornat</string>
     <string name="projects_activity_attached">hemeż</string>
     <string name="projects_activity_commented">ikkummenta</string>
+    <string name="projects_activity_moved">ċaqlaq dan l-oġġett</string>
+    <string name="projects_activity_linked">żied link</string>
+    <string name="projects_activity_class">biddel il-klassi</string>
     <string name="projects_attachment_delete_confirm_message">Dan l-anness se jitħassar għal dejjem.</string>
     <string name="projects_attachment_delete_confirm_title">Tħassar l-anness?</string>
     <string name="projects_settings_unsubscribe_section">Waqqaf l-abbonament mill-proġett</string>
@@ -345,4 +340,5 @@
         <item quantity="other">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Ma setgħux jiġu mehmużin: %1$s</string>
+    <string name="projects_activity_unknown">Mhux magħruf</string>
 </resources>

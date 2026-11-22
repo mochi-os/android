@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Pridėti lauką</string>
     <string name="projects_class_delete">Ištrinti klasę</string>
     <string name="projects_class_delete_title">Ištrinti klasę</string>
-    <string name="projects_field_type_text">Tekstas</string>
-    <string name="projects_field_type_number">Skaičius</string>
-    <string name="projects_field_type_user">Vartotojas</string>
-    <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Užduočių sąrašas</string>
     <string name="projects_field_name">Pavadinimas</string>
     <string name="projects_field_type">Tipas</string>
     <string name="projects_field_flags">Žymos</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Leisti šios klasės objektams sujungimo užklausas.</string>
     <string name="projects_class_parents">Tėvinės klasės</string>
     <string name="projects_class_delete_message">Ar tikrai norite ištrinti klasę \"%1$s\"? Visi laukai ir jų parinktys taip pat bus ištrinti.</string>
-    <string name="projects_field_type_enumerated">Išvardytas</string>
     <string name="projects_field_label">Laukas: %1$s</string>
     <string name="projects_field_readonly">Tik skaitymui</string>
     <string name="projects_field_sortable">Rūšiuojamas</string>
     <string name="projects_field_filterable">Filtruojamas</string>
     <string name="projects_field_show_on_card">Rodyti kortelėje</string>
-    <string name="projects_field_multi">Kelių pasirinkimas</string>
     <string name="projects_field_position">Rodymo padėtis</string>
     <string name="projects_field_position_header">Antraštė</string>
     <string name="projects_field_validation">Tikrinimas</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Rėmelio spalvos laukas</string>
     <string name="projects_views_filter_classes">Filtruoti pagal klases</string>
     <string name="projects_views_by">pagal %1$s</string>
-    <string name="projects_views_sorted">surūšiuota %1$s</string>
     <string name="projects_design_preview_label">Peržiūra:</string>
     <string name="projects_design_preview_no_view">Nėra rodinio peržiūrai</string>
     <string name="projects_design_preview_no_class">Šiam rodiniui nėra klasės</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projektas atnaujintas</string>
     <string name="projects_activity_attached">pridėjo</string>
     <string name="projects_activity_commented">pakomentavo</string>
+    <string name="projects_activity_moved">perkėlė šį objektą</string>
+    <string name="projects_activity_linked">pridėjo nuorodą</string>
+    <string name="projects_activity_class">pakeitė klasę</string>
     <string name="projects_attachment_delete_confirm_message">Šis priedas bus visam laikui ištrintas.</string>
     <string name="projects_attachment_delete_confirm_title">Ištrinti priedą?</string>
     <string name="projects_settings_unsubscribe_section">Atsisakyti projekto prenumeratos</string>
@@ -342,4 +337,5 @@
         <item quantity="other">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementų po juo? Šio veiksmo atšaukti negalima.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nepavyko pridėti: %1$s</string>
+    <string name="projects_activity_unknown">Nežinoma</string>
 </resources>

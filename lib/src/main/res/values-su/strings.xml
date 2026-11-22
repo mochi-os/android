@@ -370,4 +370,13 @@
     <string name="devices_username">Ngaran pamaké</string>
     <string name="devices_warning">Salin kecap konci ayeuna: moal dipidangkeun deui.</string>
     <string name="devices_unused">Can kungsi dipake</string>
+    <string name="field_type_text">Téks</string>
+    <string name="field_type_number">Wilangan</string>
+    <string name="field_type_enumerated">Énumérasi</string>
+    <string name="field_type_user">Pamaké</string>
+    <string name="field_type_date">Tanggal</string>
+    <string name="field_type_checkbox">Kotak centang</string>
+    <string name="field_type_checklist">Ceklis</string>
+    <string name="view_list_sorted_ascending">diurutkeun naék</string>
+    <string name="view_list_sorted_descending">diurutkeun turun</string>
 </resources>

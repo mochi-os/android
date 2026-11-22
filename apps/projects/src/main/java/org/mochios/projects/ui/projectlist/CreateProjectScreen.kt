@@ -69,16 +69,6 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 
-// The two steps of the create flow.
-private const val STEP_DETAILS = 0
-private const val STEP_TEMPLATE = 1
-
-// The server caps a prefix at 20 characters, so a long name like
-// "Android project Testing Name" becomes "android-project-test".
-private const val PREFIX_MAX = 20
-
-private fun prefixFromName(name: String): String = slugify(name, PREFIX_MAX)
-
 /**
  * Two-step create form: details, then template. Both steps share one
  * destination so typed fields survive; a backup carries its own design and
@@ -93,19 +83,17 @@ fun CreateProjectScreen(
     val uiState by viewModel.uiState.collectAsState()
     val upload by viewModel.upload.collectAsState()
 
-    var step by remember { mutableStateOf(STEP_DETAILS) }
-    var name by remember { mutableStateOf("") }
-    var prefix by remember { mutableStateOf("") }
+    // The form lives in the view model, so recreating the screen keeps it.
+    var step by viewModel::step
+    var name by viewModel::name
+    var prefix by viewModel::prefix
     // The prefix auto-tracks the name until the user edits it by hand.
-    var prefixEdited by remember { mutableStateOf(false) }
-    // On means public, which lets anyone view the project and every signed-in
-    // person comment on it, so it starts off.
-    var allowSearch by remember { mutableStateOf(false) }
-    // Nothing is preselected — the user must pick a template before creating.
-    var selectedTemplate by remember { mutableStateOf<String?>(null) }
-    var backupJson by remember { mutableStateOf<String?>(null) }
-    var backupName by remember { mutableStateOf<String?>(null) }
-    var backupArchive by remember { mutableStateOf<Uri?>(null) }
+    var prefixEdited by viewModel::prefixEdited
+    var allowSearch by viewModel::allowSearch
+    var selectedTemplate by viewModel::selectedTemplate
+    val backupJson = viewModel.backupJson
+    val backupName = viewModel.backupName
+    val backupArchive = viewModel.backupArchive
 
     // OpenDocument, not GetContent: exports are zipped now, and only this
     // contract takes more than one type, so both the zip and a bare .json
@@ -125,20 +113,6 @@ fun CreateProjectScreen(
         if (uiState.backupReadFailed) {
             Toast.makeText(context, importFailed, Toast.LENGTH_LONG).show()
             viewModel.consumeBackupReadFailed()
-        }
-    }
-
-    // Seed the fields once the ViewModel has read the picked backup.
-    LaunchedEffect(uiState.backupPrefill) {
-        uiState.backupPrefill?.let { prefill ->
-            backupJson = prefill.json
-            backupName = prefill.fileName
-            backupArchive = prefill.archive
-            prefill.name?.let { value -> name = value }
-            prefill.prefix?.let { value ->
-                prefix = prefixFromName(value)
-                prefixEdited = true
-            }
         }
     }
 

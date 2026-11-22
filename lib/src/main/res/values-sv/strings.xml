@@ -370,4 +370,13 @@
     <string name="devices_username">Användarnamn</string>
     <string name="devices_warning">Kopiera lösenordet nu: det kan inte visas igen.</string>
     <string name="devices_unused">Aldrig använd</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Tal</string>
+    <string name="field_type_enumerated">Uppräknad</string>
+    <string name="field_type_user">Användare</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Kryssruta</string>
+    <string name="field_type_checklist">Checklista</string>
+    <string name="view_list_sorted_ascending">sorterat stigande</string>
+    <string name="view_list_sorted_descending">sorterat fallande</string>
 </resources>

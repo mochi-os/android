@@ -370,4 +370,13 @@
     <string name="devices_username">ชื่อผู้ใช้</string>
     <string name="devices_warning">คัดลอกรหัสผ่านตอนนี้ เพราะจะไม่แสดงอีก</string>
     <string name="devices_unused">ไม่เคยใช้</string>
+    <string name="field_type_text">ข้อความ</string>
+    <string name="field_type_number">ตัวเลข</string>
+    <string name="field_type_enumerated">แบบแจกแจง</string>
+    <string name="field_type_user">ผู้ใช้</string>
+    <string name="field_type_date">วันที่</string>
+    <string name="field_type_checkbox">ช่องทำเครื่องหมาย</string>
+    <string name="field_type_checklist">เช็คลิสต์</string>
+    <string name="view_list_sorted_ascending">เรียงจากน้อยไปมาก</string>
+    <string name="view_list_sorted_descending">เรียงจากมากไปน้อย</string>
 </resources>

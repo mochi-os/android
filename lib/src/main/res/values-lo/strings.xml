@@ -369,4 +369,13 @@
     <string name="devices_username">ຊື່ຜູ້ໃຊ້</string>
     <string name="devices_warning">ສຳເນົາລະຫັດຜ່ານດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
     <string name="devices_unused">ບໍ່ເຄີຍໃຊ້</string>
+    <string name="field_type_text">ຂໍ້ຄວາມ</string>
+    <string name="field_type_number">ຕົວເລກ</string>
+    <string name="field_type_enumerated">ມີລາຍການກຳນົດ</string>
+    <string name="field_type_user">ຜູ້ໃຊ້</string>
+    <string name="field_type_date">ວັນທີ</string>
+    <string name="field_type_checkbox">ກ່ອງໝາຍ</string>
+    <string name="field_type_checklist">ລາຍການກວດສອບ</string>
+    <string name="view_list_sorted_ascending">ຈັດລຽງຈາກໜ້ອຍຫາຫຼາຍ</string>
+    <string name="view_list_sorted_descending">ຈັດລຽງຈາກຫຼາຍຫາໜ້ອຍ</string>
 </resources>

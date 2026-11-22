@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Нема совпаѓачки објекти</string>
     <string name="crm_field_yes">Да</string>
     <string name="crm_field_no">Не</string>
-    <string name="crm_field_type_checkbox">Поле за избор</string>
     <string name="crm_comment_empty">Сè уште нема коментари</string>
     <string name="crm_comment_attach">Прикачи датотеки</string>
     <string name="crm_property_remove">Отстрани</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Додај поле</string>
     <string name="crm_class_delete">Избриши класа</string>
     <string name="crm_class_delete_title">Избриши класа</string>
-    <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Број</string>
-    <string name="crm_field_type_user">Корисник</string>
-    <string name="crm_field_type_date">Датум</string>
-    <string name="crm_field_type_checklist">Список</string>
     <string name="crm_field_name">Име</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Знаменца</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">направи промена</string>
     <string name="crm_activity_attached">прикачи</string>
     <string name="crm_activity_commented">коментираше</string>
+    <string name="crm_activity_moved">премести</string>
+    <string name="crm_activity_linked">поврза</string>
+    <string name="crm_activity_class">ја промени класата</string>
     <string name="crm_attachment_empty">Нема прилози</string>
     <string name="crm_attachment_default_name">прилог</string>
     <string name="crm_attachment_delete_confirm_title">Да се избрише прилогот?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Стандардно (читливо)</string>
     <string name="crm_class_parents">Родителски класи</string>
     <string name="crm_class_delete_message">Дали сте сигурни дека сакате да ја избришете класата \"%1$s\"? Сите полиња и нивните опции исто така ќе бидат избришани.</string>
-    <string name="crm_field_type_enumerated">Набројано</string>
     <string name="crm_field_label">Поле: %1$s</string>
     <string name="crm_field_readonly">Само за читање</string>
     <string name="crm_field_sortable">Може да се подредува</string>
     <string name="crm_field_filterable">Може да се филтрира</string>
     <string name="crm_field_show_on_card">Прикажи на картичката</string>
-    <string name="crm_field_multi">Повеќекратен избор</string>
     <string name="crm_field_position">Позиција на прикажување</string>
     <string name="crm_field_position_header">Заглавие</string>
     <string name="crm_field_validation">Валидација</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Поле за боја на рамка</string>
     <string name="crm_views_filter_classes">Филтрирај по класи</string>
     <string name="crm_views_by">по %1$s</string>
-    <string name="crm_views_sorted">подредено %1$s</string>
     <string name="crm_design_preview_label">Преглед:</string>
     <string name="crm_design_preview_no_view">Нема преглед за прикажување</string>
     <string name="crm_design_preview_no_class">Нема класа за овој преглед</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s прилог не можеше да се додаде: %2$s</item>
         <item quantity="other">%1$s прилози не можеа да се додадат: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Родител</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Класа</string>
 </resources>

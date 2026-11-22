@@ -16,7 +16,9 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.NumberFormat
 import org.mochios.android.i18n.UserPreferences
 import org.mochios.projects.model.MergeCheck
+import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.`object`.aheadBehind
+import org.mochios.projects.ui.board.columnCount
 import org.mochios.projects.ui.board.nestedCount
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
@@ -49,5 +51,14 @@ class CountFormatTest {
         rule.waitForIdle()
         assertWritten(texts[0], "12.345", "1.000")
         assertWritten(texts[1], "1.234")
+    }
+
+    @Test
+    fun `a column's card count, filtered and not`() {
+        val format = Format(UserPreferences(numberFormat = NumberFormat.EUROPEAN_DOT_COMMA))
+        val cards = (1..1234).map { index -> ProjectObject(id = "o$index") }
+        assertWritten(columnCount(cards, null, format), "1.234")
+        val shown = cards.take(1001).map { card -> card.id }.toSet()
+        assertWritten(columnCount(cards, shown, format), "1.001/1.234")
     }
 }

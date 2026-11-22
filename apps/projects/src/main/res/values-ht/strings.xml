@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ajoute chan</string>
     <string name="projects_class_delete">Efase klas</string>
     <string name="projects_class_delete_title">Efase klas</string>
-    <string name="projects_field_type_text">Tèks</string>
-    <string name="projects_field_type_number">Nimewo</string>
-    <string name="projects_field_type_user">Itilizatè</string>
-    <string name="projects_field_type_date">Dat</string>
-    <string name="projects_field_type_checklist">Lis verifikasyon</string>
     <string name="projects_field_name">Non</string>
     <string name="projects_field_type">Tip</string>
     <string name="projects_field_flags">Drapo</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Pèmèt demann fizyon sou objè klas sa a.</string>
     <string name="projects_class_parents">Klas paran</string>
     <string name="projects_class_delete_message">Èske ou sèten ou vle efase klas \"%1$s\" la? Tout chan ak opsyon yo ap efase tou.</string>
-    <string name="projects_field_type_enumerated">Enimere</string>
     <string name="projects_field_label">Chan: %1$s</string>
     <string name="projects_field_readonly">Lekti sèlman</string>
     <string name="projects_field_sortable">Kapab triye</string>
     <string name="projects_field_filterable">Kapab filtre</string>
     <string name="projects_field_show_on_card">Montre sou kat la</string>
-    <string name="projects_field_multi">Plizyè chwa</string>
     <string name="projects_field_position">Pozisyon afichaj</string>
     <string name="projects_field_position_header">Antèt</string>
     <string name="projects_field_validation">Validasyon</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Chan koulè bòdi</string>
     <string name="projects_views_filter_classes">Filtre pou klas</string>
     <string name="projects_views_by">pa %1$s</string>
-    <string name="projects_views_sorted">triye %1$s</string>
     <string name="projects_design_preview_label">Apèsi:</string>
     <string name="projects_design_preview_no_view">Pa gen vi pou montre apèsi</string>
     <string name="projects_design_preview_no_class">Pa gen klas pou vi sa a</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Pwojè mete ajou</string>
     <string name="projects_activity_attached">tache</string>
     <string name="projects_activity_commented">kòmante</string>
+    <string name="projects_activity_moved">deplase objè sa a</string>
+    <string name="projects_activity_linked">ajoute yon lyen</string>
+    <string name="projects_activity_class">chanje klas la</string>
     <string name="projects_attachment_delete_confirm_message">Fichye atache sa a pral efase pou tout tan.</string>
     <string name="projects_attachment_delete_confirm_title">Efase fichye atache a?</string>
     <string name="projects_settings_unsubscribe_section">Sispann abònman ak pwojè a</string>
@@ -337,4 +332,5 @@
         <item quantity="other">Èske ou sèten ou vle efase \"%1$s\" ak %2$s atik ki anba li yo? Aksyon sa a pa ka anile.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Pa t kapab tache: %1$s</string>
+    <string name="projects_activity_unknown">Enkoni</string>
 </resources>

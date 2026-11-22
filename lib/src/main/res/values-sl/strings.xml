@@ -374,4 +374,13 @@
     <string name="devices_username">Uporabniško ime</string>
     <string name="devices_warning">Kopirajte geslo zdaj: ne bo ga več mogoče prikazati.</string>
     <string name="devices_unused">Nikoli uporabljeno</string>
+    <string name="field_type_text">Besedilo</string>
+    <string name="field_type_number">Število</string>
+    <string name="field_type_enumerated">Naštevni</string>
+    <string name="field_type_user">Uporabnik</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Potrditveno polje</string>
+    <string name="field_type_checklist">Kontrolni seznam</string>
+    <string name="view_list_sorted_ascending">razvrščeno naraščajoče</string>
+    <string name="view_list_sorted_descending">razvrščeno padajoče</string>
 </resources>

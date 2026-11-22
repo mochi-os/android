@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Chan eil nithean a\' freagairt</string>
     <string name="crm_field_yes">Tha</string>
     <string name="crm_field_no">Chan eil</string>
-    <string name="crm_field_type_checkbox">Bogsa-cromaige</string>
     <string name="crm_comment_empty">Chan eil beachdan ann fhathast</string>
     <string name="crm_comment_attach">Ceangail faidhlichean</string>
     <string name="crm_property_remove">Thoir air falbh</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Cuir raon ris</string>
     <string name="crm_class_delete">Sguab às clas</string>
     <string name="crm_class_delete_title">Sguab às clas</string>
-    <string name="crm_field_type_text">Teacsa</string>
-    <string name="crm_field_type_number">Àireamh</string>
-    <string name="crm_field_type_user">Cleachdaiche</string>
-    <string name="crm_field_type_date">Ceann-là</string>
-    <string name="crm_field_type_checklist">Liosta-dearbhaidh</string>
     <string name="crm_field_name">Ainm</string>
     <string name="crm_field_type">Seòrsa</string>
     <string name="crm_field_flags">Brataichean</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">rinn e atharrachadh</string>
     <string name="crm_activity_attached">cheangail</string>
     <string name="crm_activity_commented">thug seachad beachd</string>
+    <string name="crm_activity_moved">ghluais</string>
+    <string name="crm_activity_linked">rinn ceangal</string>
+    <string name="crm_activity_class">dh\'atharraich an clas</string>
     <string name="crm_attachment_empty">Chan eil ceanglachain ann</string>
     <string name="crm_attachment_default_name">ceanglachan</string>
     <string name="crm_attachment_delete_confirm_title">Sguab às an ceanglachan?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Bunaiteach (so-leughte)</string>
     <string name="crm_class_parents">Clasaichean pàrant</string>
     <string name="crm_class_delete_message">A bheil thu cinnteach gu bheil thu airson an clas \"%1$s\" a dhubhadh às? Thèid a h-uile raon agus na roghainnean aca a dhubhadh às cuideachd.</string>
-    <string name="crm_field_type_enumerated">Àireamhaichte</string>
     <string name="crm_field_label">Raon: %1$s</string>
     <string name="crm_field_readonly">Leughadh a-mhàin</string>
     <string name="crm_field_sortable">So-sheòrsachaidh</string>
     <string name="crm_field_filterable">So-chriathraidh</string>
     <string name="crm_field_show_on_card">Seall air a\' chairt</string>
-    <string name="crm_field_multi">Ioma-thaghadh</string>
     <string name="crm_field_position">Suidheachadh taisbeanaidh</string>
     <string name="crm_field_position_header">Bann-cinn</string>
     <string name="crm_field_validation">Dearbhadh</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Raon dath an iomaill</string>
     <string name="crm_views_filter_classes">Criathraich a-rèir chlasaichean</string>
     <string name="crm_views_by">le %1$s</string>
-    <string name="crm_views_sorted">air a sheòrsachadh %1$s</string>
     <string name="crm_design_preview_label">Ro-shealladh:</string>
     <string name="crm_design_preview_no_view">Chan eil sealladh ann airson ro-shealladh</string>
     <string name="crm_design_preview_no_class">Chan eil clas ann airson an t-seallaidh seo</string>
@@ -299,4 +293,7 @@
         <item quantity="few">Cha deach %1$s ceanglachain a chur ris: %2$s</item>
         <item quantity="other">Cha deach %1$s ceanglachan a chur ris: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Pàrant</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Clas</string>
 </resources>

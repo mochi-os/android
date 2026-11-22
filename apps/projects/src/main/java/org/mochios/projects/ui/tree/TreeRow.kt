@@ -52,7 +52,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -64,16 +63,17 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
-import org.mochios.android.ui.components.personAvatarPath
+import org.mochios.android.ui.components.FieldChoice
+import org.mochios.android.ui.components.FieldValue
+import org.mochios.android.ui.components.fieldDisplay
 import org.mochios.projects.R
-import org.mochios.projects.model.Person
 import org.mochios.projects.model.ProjectField
-import org.mochios.projects.ui.board.parseColor
 import org.mochios.projects.ui.`object`.DeleteObjectDialog
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.projects.util.HIERARCHY_ROOT
 import org.mochios.projects.util.parentAllowed
 import org.mochios.projects.util.objectTitle
+import org.mochios.projects.util.readableId
 import org.mochios.projects.util.parentTargets
 import org.mochios.android.R as MochiR
 
@@ -84,7 +84,8 @@ fun TreeRow(
     viewModel: ProjectViewModel,
     onToggleExpand: () -> Unit,
     onClick: () -> Unit,
-    onDelete: () -> Unit,
+    /** Null, as the move and the drag, for a reader who may not write. */
+    onDelete: (() -> Unit)?,
     onReparent: ((newParentId: String) -> Unit)? = null,
     dragState: DragState? = null,
     onDragDrop: ((sourceId: String, edge: DragEdge) -> Unit)? = null,
@@ -162,14 +163,19 @@ fun TreeRow(
             .alpha(0.9f)
     } else Modifier
 
-    // The class's title field is dropped from the card body: obj.readable
-    // already carries it, so it would print twice.
+    // The class's title field is dropped from the card body: the title
+    // already shows it, so it would print twice.
     val titleFieldId = viewModel.getClassById(obj.objectClass)?.title.orEmpty()
-    // objects/list doesn't always send a readable label, so fall back to the
-    // class's own title field before giving up on the readable id.
-    val title = obj.stringValue(titleFieldId).ifBlank { obj.readable }
-        .ifBlank { if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}" }
+    val title = objectTitle(obj, projectDetails?.classes.orEmpty(), prefix)
     val bodyFields = cardFields.filter { field -> field.id != titleFieldId }
+    val format = LocalFormat.current
+    val choice: (ProjectField) -> (String) -> FieldChoice? = { field ->
+        { id ->
+            viewModel.getOptionsForObject(obj.objectClass, field.id).find { option -> option.id == id }
+                ?.let { option -> FieldChoice(option.name, option.colour) }
+        }
+    }
+    val person: (String) -> String? = { id -> people.find { member -> member.id == id }?.name }
     // Prefer a multi-line text field for the description, but a single-line one
     // is the description in most schemas too — only the title is special.
     val descriptionField = bodyFields.firstOrNull { field ->
@@ -181,9 +187,11 @@ fun TreeRow(
     // priority always open the meta row directly under the description instead
     // of landing on a wrapped second line behind an owner or a date.
     val metaOrder = listOf("enumerated", "user", "date")
+    // Only what shows: an unticked box or an empty checklist adds no gap.
     val metaFields = bodyFields
         .filter { field ->
-            field.id != descriptionField?.id && obj.stringValue(field.id).isNotBlank()
+            field.id != descriptionField?.id &&
+                fieldDisplay(field.fieldtype, obj.stringValue(field.id), format, field.name, choice(field), person) != null
         }
         .sortedBy { field ->
             metaOrder.indexOf(field.fieldtype).takeIf { rank -> rank >= 0 } ?: metaOrder.size
@@ -229,14 +237,19 @@ fun TreeRow(
                 }
 
                 Text(
-                    text = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}",
+                    text = readableId(obj, prefix),
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary
                 )
 
                 Spacer(modifier = Modifier.weight(1f))
 
-                Box {
+                val hierarchy = projectDetails?.hierarchy.orEmpty()
+                val movable = onReparent != null && (
+                    parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
+                        parentTargets(obj, uiState.objects, hierarchy).isNotEmpty()
+                    )
+                if (movable || onDelete != null) Box {
                     MochiIconButton(
                         onClick = { showContextMenu = true },
                         modifier = Modifier.size(32.dp)
@@ -252,10 +265,7 @@ fun TreeRow(
                         expanded = showContextMenu,
                         onDismissRequest = { showContextMenu = false }
                     ) {
-                        val hierarchy = projectDetails?.hierarchy.orEmpty()
-                        val movable = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
-                            parentTargets(obj, uiState.objects, hierarchy).isNotEmpty()
-                        if (onReparent != null && movable) {
+                        if (movable) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.projects_tree_move)) },
                                 onClick = {
@@ -270,15 +280,17 @@ fun TreeRow(
                                 },
                             )
                         }
-                        MochiDropdownMenuItem(
-                            text = { Text(stringResource(MochiR.string.common_delete)) },
-                            onClick = {
-                                showContextMenu = false
-                                showDeleteConfirm = true
-                            },
-                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                            destructive = true,
-                        )
+                        if (onDelete != null) {
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(MochiR.string.common_delete)) },
+                                onClick = {
+                                    showContextMenu = false
+                                    showDeleteConfirm = true
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                                destructive = true,
+                            )
+                        }
                     }
                 }
             }
@@ -316,12 +328,12 @@ fun TreeRow(
                         .padding(start = bodyStart, top = 6.dp)
                 ) {
                     metaFields.forEach { field ->
-                        MetaValue(
-                            field = field,
-                            objectClass = obj.objectClass,
+                        FieldValue(
+                            type = field.fieldtype,
                             value = obj.stringValue(field.id),
-                            viewModel = viewModel,
-                            people = people,
+                            name = field.name,
+                            choice = choice(field),
+                            person = person,
                             modifier = Modifier.alignByBaseline(),
                         )
                     }
@@ -330,7 +342,7 @@ fun TreeRow(
         }
     }
 
-    if (showDeleteConfirm) {
+    if (showDeleteConfirm && onDelete != null) {
         DeleteObjectDialog(
             title = objectTitle(obj, projectDetails?.classes.orEmpty(), prefix),
             descendants = viewModel.collectDescendants(obj.id).size,
@@ -383,7 +395,7 @@ fun TreeRow(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = parent.readable.ifBlank { "#${parent.number}" },
+                                text = objectTitle(parent, projectDetails?.classes.orEmpty(), prefix),
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }
@@ -394,102 +406,4 @@ fun TreeRow(
             dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
-}
-
-@Composable
-private fun MetaValue(
-    field: ProjectField,
-    /** The owning object's class, which is what scopes an option id. */
-    objectClass: String,
-    value: String,
-    viewModel: ProjectViewModel,
-    people: List<Person>,
-    modifier: Modifier = Modifier,
-) {
-    // Each item aligns to its text baseline in the FlowRow (via [modifier]).
-    val rowModifier = modifier
-    when (field.fieldtype) {
-        "enumerated" -> {
-            val option = viewModel.getOptionsForObject(objectClass, field.id).find { it.id == value }
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                if (option != null && option.colour.isNotBlank()) {
-                    Box(
-                        modifier = Modifier
-                            .size(10.dp)
-                            .background(parseColor(option.colour), CircleShape)
-                    )
-                    Spacer(modifier = Modifier.width(6.dp))
-                }
-                MetaText(option?.name ?: value)
-            }
-        }
-
-        "user" -> {
-            val person = people.find { it.id == value }
-            val name = person?.name?.takeIf { it.isNotBlank() } ?: value
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                // The field value is the person's entity id, which is what the
-                // people app serves an avatar under — without src the avatar
-                // could only ever be seeded initials, never the real photo.
-                EntityAvatar(
-                    name = name,
-                    src = personAvatarPath(value),
-                    seed = value,
-                    size = 22.dp,
-                )
-                Spacer(modifier = Modifier.width(6.dp))
-                MetaText(name)
-            }
-        }
-
-        "date" -> {
-            val format = LocalFormat.current
-            val seconds = value.toLongOrNull() ?: value.toDoubleOrNull()?.toLong()
-            val label = seconds?.let { format.formatDate(it) }?.takeIf { it.isNotBlank() } ?: value
-            val overdue = seconds != null &&
-                seconds > 0 &&
-                seconds < System.currentTimeMillis() / 1000
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    Icons.Default.Schedule,
-                    contentDescription = null,
-                    modifier = Modifier.size(16.dp),
-                    tint = if (overdue) {
-                        MaterialTheme.colorScheme.error
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                )
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(
-                    text = label,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = if (overdue) {
-                        MaterialTheme.colorScheme.error
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-
-        else -> {
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                MetaText(value)
-            }
-        }
-    }
-}
-
-@Composable
-private fun MetaText(text: String) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.bodyMedium,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        maxLines = 1,
-        overflow = TextOverflow.Ellipsis,
-    )
 }

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Tambah field</string>
     <string name="projects_class_delete">Hapus kelas</string>
     <string name="projects_class_delete_title">Hapus kelas</string>
-    <string name="projects_field_type_text">Téks</string>
-    <string name="projects_field_type_number">Wilangan</string>
-    <string name="projects_field_type_user">Pamaké</string>
-    <string name="projects_field_type_date">Tanggal</string>
-    <string name="projects_field_type_checklist">Ceklis</string>
     <string name="projects_field_name">Ngaran</string>
     <string name="projects_field_type">Tipe</string>
     <string name="projects_field_flags">Bandéra</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Idinan paménta ngahijikeun dina obyék kelas ieu.</string>
     <string name="projects_class_parents">Kelas indung</string>
     <string name="projects_class_delete_message">Anjeun yakin hoyong mupus kelas \"%1$s\"? Sakabéh médan jeung pilihanana ogé bakal dipupus.</string>
-    <string name="projects_field_type_enumerated">Énumérasi</string>
     <string name="projects_field_label">Médan: %1$s</string>
     <string name="projects_field_readonly">Maca-wungkul</string>
     <string name="projects_field_sortable">Bisa diurutkeun</string>
     <string name="projects_field_filterable">Bisa disaring</string>
     <string name="projects_field_show_on_card">Témbongkeun dina kartu</string>
-    <string name="projects_field_multi">Multi-pilihan</string>
     <string name="projects_field_position">Posisi tampilan</string>
     <string name="projects_field_position_header">Lulugu</string>
     <string name="projects_field_validation">Validasi</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Médan warna wates</string>
     <string name="projects_views_filter_classes">Saring ka kelas</string>
     <string name="projects_views_by">ku %1$s</string>
-    <string name="projects_views_sorted">diurutkeun %1$s</string>
     <string name="projects_design_preview_label">Pratampilan:</string>
     <string name="projects_design_preview_no_view">Teu aya témbongan pikeun diémprokan</string>
     <string name="projects_design_preview_no_class">Teu aya kelas pikeun témbongan ieu</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proyék diropéa</string>
     <string name="projects_activity_attached">ngalampirkeun</string>
     <string name="projects_activity_commented">ngoméntaran</string>
+    <string name="projects_activity_moved">mindahkeun objék ieu</string>
+    <string name="projects_activity_linked">nambihan tumbu</string>
+    <string name="projects_activity_class">ngarobah kelas</string>
     <string name="projects_attachment_delete_confirm_message">Lampiran ieu bakal dihapus permanén.</string>
     <string name="projects_attachment_delete_confirm_title">Hapus lampiran?</string>
     <string name="projects_settings_unsubscribe_section">Eureun langganan proyék</string>
@@ -338,4 +333,5 @@
         <item quantity="other">Anjeun yakin hayang ngahapus \"%1$s\" jeung %2$s barang di handapeunana? Aksi ieu teu bisa dibalikeun.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Teu bisa ngalampirkeun: %1$s</string>
+    <string name="projects_activity_unknown">Teu dipikanyaho</string>
 </resources>

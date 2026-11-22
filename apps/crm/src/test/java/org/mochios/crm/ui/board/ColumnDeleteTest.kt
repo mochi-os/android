@@ -124,7 +124,9 @@ class ColumnDeleteTest {
     @Test
     fun `without design access a column offers no Delete`() {
         show("write", "[]")
-        assertTrue(offered(context.getString(R.string.crm_board_rename)))
+        // Its menu keeps Collapse, which is the user's own view of the board.
+        assertTrue(offered(context.getString(MochiR.string.common_collapse)))
+        assertTrue(!offered(context.getString(R.string.crm_board_rename)))
         assertTrue(!offered(context.getString(MochiR.string.common_delete)))
         settle(200)
         assertEquals(emptyList<Any>(), server.of(delete))

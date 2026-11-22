@@ -285,4 +285,11 @@
     <string name="devices_done">Listo</string>
     <string name="devices_used">Último uso %1$s</string>
     <string name="devices_username">Nombre de usuario</string>
+    <string name="field_type_text">Texto</string>
+    <string name="field_type_number">Número</string>
+    <string name="field_type_enumerated">Enumerado</string>
+    <string name="field_type_user">Usuario</string>
+    <string name="field_type_date">Fecha</string>
+    <string name="field_type_checkbox">Casilla</string>
+    <string name="field_type_checklist">Lista de verificación</string>
 </resources>

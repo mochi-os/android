@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">هیڅ سمونوال شیان نشته</string>
     <string name="crm_field_yes">هو</string>
     <string name="crm_field_no">نه</string>
-    <string name="crm_field_type_checkbox">چک بکس</string>
     <string name="crm_comment_empty">تر اوسه هیڅ تبصرې نشته</string>
     <string name="crm_comment_attach">فایلونه ضمیمه کړئ</string>
     <string name="crm_property_remove">لرې کول</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ساحه اضافه کړئ</string>
     <string name="crm_class_delete">ټولګی ړنګ کړئ</string>
     <string name="crm_class_delete_title">ټولګی ړنګ کړئ</string>
-    <string name="crm_field_type_text">متن</string>
-    <string name="crm_field_type_number">شمیره</string>
-    <string name="crm_field_type_user">کاروونکی</string>
-    <string name="crm_field_type_date">نېټه</string>
-    <string name="crm_field_type_checklist">چک لیست</string>
     <string name="crm_field_name">نوم</string>
     <string name="crm_field_type">ډول</string>
     <string name="crm_field_flags">بیرغونه</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">بدلون يې راوست</string>
     <string name="crm_activity_attached">ضمیمه یې کړه</string>
     <string name="crm_activity_commented">تبصره یې وکړه</string>
+    <string name="crm_activity_moved">ویې لېږداوه</string>
+    <string name="crm_activity_linked">ویې تړلو</string>
+    <string name="crm_activity_class">ټولګی یې بدل کړ</string>
     <string name="crm_attachment_empty">هیڅ ضمیمې نشته</string>
     <string name="crm_attachment_default_name">ضمیمه</string>
     <string name="crm_attachment_delete_confirm_title">ضمیمه ړنګه شي؟</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">اصلي (لوستلو وړ)</string>
     <string name="crm_class_parents">د موروپلار ټولګي</string>
     <string name="crm_class_delete_message">ایا تاسو ډاډه یاست چې غواړئ ټولګی \"%1$s\" حذف کړئ؟ ټولې ساحې او د هغوی اختیارونه به هم حذف شي.</string>
-    <string name="crm_field_type_enumerated">شمیرل شوی</string>
     <string name="crm_field_label">ساحه: %1$s</string>
     <string name="crm_field_readonly">یوازې د لوستلو</string>
     <string name="crm_field_sortable">د ترتیب وړ</string>
     <string name="crm_field_filterable">د فلټر وړ</string>
     <string name="crm_field_show_on_card">په کارت کې ښکاره کړئ</string>
-    <string name="crm_field_multi">ګڼ-ټاکنه</string>
     <string name="crm_field_position">د ښودلو ځای</string>
     <string name="crm_field_position_header">سرلیک</string>
     <string name="crm_field_validation">تصدیق</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">د څنډې د رنګ ساحه</string>
     <string name="crm_views_filter_classes">ټولګیو ته فلټر کړئ</string>
     <string name="crm_views_by">د %1$s له خوا</string>
-    <string name="crm_views_sorted">%1$s ترتیب شوی</string>
     <string name="crm_design_preview_label">مخکتنه:</string>
     <string name="crm_design_preview_no_view">د مخکتنې لپاره هیڅ لیدلوری نشته</string>
     <string name="crm_design_preview_no_class">د دې لیدلوري لپاره هیڅ ټولګی نشته</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s ضمیمه اضافه نشوه: %2$s</item>
         <item quantity="other">%1$s ضمیمې اضافه نشوې: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">مور</string>
+    <string name="crm_export_csv_id">پېژندنه</string>
+    <string name="crm_export_csv_class">ټولګی</string>
 </resources>

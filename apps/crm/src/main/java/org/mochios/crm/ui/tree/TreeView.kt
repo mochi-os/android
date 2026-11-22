@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.model.canWrite
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.crm.R
@@ -74,6 +75,9 @@ fun TreeView(
         derivedStateOf { flattenTree(roots, 0, childMap, expandedState) }
     }
 
+    // Moving, reordering and deleting rows is writing, as on the web.
+    val writable = canWrite(crmDetails?.crm?.access)
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
@@ -91,16 +95,28 @@ fun TreeView(
                     expandedState[node.obj.id] = !(expandedState[node.obj.id] ?: true)
                 },
                 onClick = { onObjectClick(node.obj.id) },
-                onDelete = { viewModel.deleteObject(node.obj.id) },
-                onReparent = { newParentId -> viewModel.reparentObject(node.obj.id, newParentId) },
-                onDragDrop = { sourceId, edge ->
-                    handleTreeDrop(
-                        sourceId = sourceId,
-                        targetNode = node,
-                        edge = edge,
-                        viewModel = viewModel,
-                    )
-                }
+                onDelete = if (writable) {
+                    { viewModel.deleteObject(node.obj.id) }
+                } else {
+                    null
+                },
+                onReparent = if (writable) {
+                    { newParentId -> viewModel.reparentObject(node.obj.id, newParentId) }
+                } else {
+                    null
+                },
+                onDragDrop = if (writable) {
+                    { sourceId, edge ->
+                        handleTreeDrop(
+                            sourceId = sourceId,
+                            targetNode = node,
+                            edge = edge,
+                            viewModel = viewModel,
+                        )
+                    }
+                } else {
+                    null
+                },
             )
         }
     }

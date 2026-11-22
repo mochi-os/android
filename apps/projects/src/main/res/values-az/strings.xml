@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Sahə əlavə et</string>
     <string name="projects_class_delete">Sinifi sil</string>
     <string name="projects_class_delete_title">Sinifi sil</string>
-    <string name="projects_field_type_text">Mətn</string>
-    <string name="projects_field_type_number">Rəqəm</string>
-    <string name="projects_field_type_user">İstifadəçi</string>
-    <string name="projects_field_type_date">Tarix</string>
-    <string name="projects_field_type_checklist">Yoxlama siyahısı</string>
     <string name="projects_field_name">Ad</string>
     <string name="projects_field_type">Növ</string>
     <string name="projects_field_flags">Bayraqlar</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Yuxarı köçür</string>
     <string name="projects_class_move_down">Aşağı köçür</string>
     <string name="projects_class_delete_message">\"%1$s\" sinfini silmək istədiyinizə əminsinizmi? Bütün sahələr və onların seçimləri də silinəcək.</string>
-    <string name="projects_field_type_enumerated">Sadalanmış</string>
     <string name="projects_field_label">Sahə: %1$s</string>
     <string name="projects_field_readonly">Yalnız oxunan</string>
     <string name="projects_field_sortable">Sıralana bilən</string>
     <string name="projects_field_filterable">Süzgəclənə bilən</string>
     <string name="projects_field_show_on_card">Kartda göstər</string>
-    <string name="projects_field_multi">Çoxlu seçim</string>
     <string name="projects_field_position">Göstərmə mövqeyi</string>
     <string name="projects_field_position_header">Başlıq</string>
     <string name="projects_field_position_body">Gövdə</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Azalan</string>
     <string name="projects_views_filter_classes">Siniflərə süz</string>
     <string name="projects_views_by">%1$s üzrə</string>
-    <string name="projects_views_sorted">%1$s sıralanmış</string>
     <string name="projects_design_preview_label">Önizləmə:</string>
     <string name="projects_design_preview_no_view">Önizləmə üçün görünüş yoxdur</string>
     <string name="projects_design_preview_no_class">Bu görünüş üçün sinif yoxdur</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Layihə yeniləndi</string>
     <string name="projects_activity_attached">əlavə etdi</string>
     <string name="projects_activity_commented">şərh yazdı</string>
+    <string name="projects_activity_moved">bu obyekti köçürdü</string>
+    <string name="projects_activity_linked">keçid əlavə etdi</string>
+    <string name="projects_activity_class">sinfi dəyişdi</string>
     <string name="projects_attachment_delete_confirm_message">Bu qoşma həmişəlik silinəcək.</string>
     <string name="projects_attachment_delete_confirm_title">Qoşma silinsin?</string>
     <string name="projects_settings_unsubscribe_section">Layihə abunəliyindən çıx</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" və onun altındakı %2$s elementi silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Qoşmaq mümkün olmadı: %1$s</string>
+    <string name="projects_activity_unknown">Naməlum</string>
 </resources>

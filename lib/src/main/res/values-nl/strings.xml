@@ -370,4 +370,13 @@
     <string name="devices_username">Gebruikersnaam</string>
     <string name="devices_warning">Kopieer het wachtwoord nu: het kan niet opnieuw worden getoond.</string>
     <string name="devices_unused">Nooit gebruikt</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">Getal</string>
+    <string name="field_type_enumerated">Opsomming</string>
+    <string name="field_type_user">Gebruiker</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Selectievakje</string>
+    <string name="field_type_checklist">Checklist</string>
+    <string name="view_list_sorted_ascending">oplopend gesorteerd</string>
+    <string name="view_list_sorted_descending">aflopend gesorteerd</string>
 </resources>

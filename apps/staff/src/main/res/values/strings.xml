@@ -250,7 +250,7 @@
     <string name="staff_disputes_status_responded">Responded</string>
     <string name="staff_disputes_status_reviewing">Reviewing</string>
     <string name="staff_disputes_stripe_bank_cannot_process">bank could not process</string>
-    <string name="staff_disputes_stripe_check_returned">check returned</string>
+    <string name="staff_disputes_stripe_check_returned">cheque returned</string>
     <string name="staff_disputes_stripe_credit_not_processed">credit not processed</string>
     <string name="staff_disputes_stripe_customer_initiated">customer initiated</string>
     <string name="staff_disputes_stripe_debit_not_authorized">debit not authorised</string>

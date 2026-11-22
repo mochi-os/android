@@ -370,4 +370,13 @@
     <string name="devices_username">ಬಳಕೆದಾರಹೆಸರು</string>
     <string name="devices_warning">ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="devices_unused">ಎಂದಿಗೂ ಬಳಸಿಲ್ಲ</string>
+    <string name="field_type_text">ಪಠ್ಯ</string>
+    <string name="field_type_number">ಸಂಖ್ಯೆ</string>
+    <string name="field_type_enumerated">ಎಣಿಕೆಯ</string>
+    <string name="field_type_user">ಬಳಕೆದಾರ</string>
+    <string name="field_type_date">ದಿನಾಂಕ</string>
+    <string name="field_type_checkbox">ಚೆಕ್‌ಬಾಕ್ಸ್</string>
+    <string name="field_type_checklist">ಚೆಕ್‌ಲಿಸ್ಟ್</string>
+    <string name="view_list_sorted_ascending">ಆರೋಹಣ ಕ್ರಮದಲ್ಲಿ ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
+    <string name="view_list_sorted_descending">ಅವರೋಹಣ ಕ್ರಮದಲ್ಲಿ ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
 </resources>

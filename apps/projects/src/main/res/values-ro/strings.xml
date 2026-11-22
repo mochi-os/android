@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Adaugă câmp</string>
     <string name="projects_class_delete">Șterge clasa</string>
     <string name="projects_class_delete_title">Șterge clasa</string>
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Număr</string>
-    <string name="projects_field_type_user">Utilizator</string>
-    <string name="projects_field_type_date">Dată</string>
-    <string name="projects_field_type_checklist">Listă de verificare</string>
     <string name="projects_field_name">Nume</string>
     <string name="projects_field_type">Tip</string>
     <string name="projects_field_flags">Indicatoare</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Permite cereri de îmbinare pentru obiectele acestei clase.</string>
     <string name="projects_class_parents">Clase părinte</string>
     <string name="projects_class_delete_message">Sigur dorești să ștergi clasa \"%1$s\"? Toate câmpurile și opțiunile lor vor fi de asemenea șterse.</string>
-    <string name="projects_field_type_enumerated">Enumerat</string>
     <string name="projects_field_label">Câmp: %1$s</string>
     <string name="projects_field_readonly">Doar citire</string>
     <string name="projects_field_sortable">Sortabil</string>
     <string name="projects_field_filterable">Filtrabil</string>
     <string name="projects_field_show_on_card">Afișează pe card</string>
-    <string name="projects_field_multi">Selecție multiplă</string>
     <string name="projects_field_position">Poziție de afișare</string>
     <string name="projects_field_position_header">Antet</string>
     <string name="projects_field_validation">Validare</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Câmp pentru culoarea marginii</string>
     <string name="projects_views_filter_classes">Filtrează după clase</string>
     <string name="projects_views_by">după %1$s</string>
-    <string name="projects_views_sorted">sortat %1$s</string>
     <string name="projects_design_preview_label">Previzualizare:</string>
     <string name="projects_design_preview_no_view">Nicio vizualizare de previzualizat</string>
     <string name="projects_design_preview_no_class">Nicio clasă pentru această vizualizare</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proiect actualizat</string>
     <string name="projects_activity_attached">a atașat</string>
     <string name="projects_activity_commented">a comentat</string>
+    <string name="projects_activity_moved">a mutat acest obiect</string>
+    <string name="projects_activity_linked">a adăugat un link</string>
+    <string name="projects_activity_class">a schimbat clasa</string>
     <string name="projects_attachment_delete_confirm_message">Acest atașament va fi șters definitiv.</string>
     <string name="projects_attachment_delete_confirm_title">Ștergeți atașamentul?</string>
     <string name="projects_settings_unsubscribe_section">Dezabonare de la proiect</string>
@@ -341,4 +336,5 @@
         <item quantity="other">Sigur vrei să ștergi „%1$s” și %2$s de elemente aflate sub el? Această acțiune nu poate fi anulată.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nu s-a putut atașa: %1$s</string>
+    <string name="projects_activity_unknown">Necunoscut</string>
 </resources>

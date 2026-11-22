@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Өріс қосу</string>
     <string name="projects_class_delete">Сыныпты жою</string>
     <string name="projects_class_delete_title">Сыныпты жою</string>
-    <string name="projects_field_type_text">Мәтін</string>
-    <string name="projects_field_type_number">Сан</string>
-    <string name="projects_field_type_user">Пайдаланушы</string>
-    <string name="projects_field_type_date">Күн</string>
-    <string name="projects_field_type_checklist">Тапсырмалар тізімі</string>
     <string name="projects_field_name">Атау</string>
     <string name="projects_field_type">Түрі</string>
     <string name="projects_field_flags">Жалаушалар</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Осы сыныптың нысандарында біріктіру сұрауларына рұқсат беру.</string>
     <string name="projects_class_parents">Аталық сыныптар</string>
     <string name="projects_class_delete_message">\"%1$s\" сыныбын жойғыңыз келетініне сенімдісіз бе? Барлық өрістер мен олардың опциялары да жойылады.</string>
-    <string name="projects_field_type_enumerated">Санамаланған</string>
     <string name="projects_field_label">Өріс: %1$s</string>
     <string name="projects_field_readonly">Тек оқуға арналған</string>
     <string name="projects_field_sortable">Сұрыпталатын</string>
     <string name="projects_field_filterable">Сүзгіленетін</string>
     <string name="projects_field_show_on_card">Картада көрсету</string>
-    <string name="projects_field_multi">Көп таңдау</string>
     <string name="projects_field_position">Көрсету орны</string>
     <string name="projects_field_position_header">Тақырыпша</string>
     <string name="projects_field_validation">Тексеру</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Жиек түсінің өрісі</string>
     <string name="projects_views_filter_classes">Сыныптар бойынша сүзу</string>
     <string name="projects_views_by">%1$s бойынша</string>
-    <string name="projects_views_sorted">%1$s сұрыпталған</string>
     <string name="projects_design_preview_label">Алдын ала қарау:</string>
     <string name="projects_design_preview_no_view">Қарауға арналған көрініс жоқ</string>
     <string name="projects_design_preview_no_class">Бұл көрініс үшін сынып жоқ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Жоба жаңартылды</string>
     <string name="projects_activity_attached">тіркеді</string>
     <string name="projects_activity_commented">пікір қалдырды</string>
+    <string name="projects_activity_moved">осы нысанды жылжытты</string>
+    <string name="projects_activity_linked">сілтеме қосты</string>
+    <string name="projects_activity_class">сыныбын өзгертті</string>
     <string name="projects_attachment_delete_confirm_message">Бұл тіркеме біржола жойылады.</string>
     <string name="projects_attachment_delete_confirm_title">Тіркеме жойылсын ба?</string>
     <string name="projects_settings_unsubscribe_section">Жоба жазылымынан бас тарту</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" және оның астындағы %2$s элементті жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Тіркеу мүмкін болмады: %1$s</string>
+    <string name="projects_activity_unknown">Белгісіз</string>
 </resources>

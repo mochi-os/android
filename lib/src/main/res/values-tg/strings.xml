@@ -370,4 +370,13 @@
     <string name="devices_username">Номи корбар</string>
     <string name="devices_warning">Ниҳонвожаро ҳозир нусха кунед: он дигар нишон дода намешавад.</string>
     <string name="devices_unused">Ҳеҷ гоҳ истифода нашудааст</string>
+    <string name="field_type_text">Матн</string>
+    <string name="field_type_number">Адад</string>
+    <string name="field_type_enumerated">Шумурдашуда</string>
+    <string name="field_type_user">Корбар</string>
+    <string name="field_type_date">Сана</string>
+    <string name="field_type_checkbox">Парчаминтихоб</string>
+    <string name="field_type_checklist">Рӯйхат</string>
+    <string name="view_list_sorted_ascending">бо тартиби афзоиш мураттаб шуд</string>
+    <string name="view_list_sorted_descending">бо тартиби камшавӣ мураттаб шуд</string>
 </resources>

@@ -41,7 +41,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.projects.R
+import org.mochios.projects.util.objectTitle
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectDetails
@@ -233,7 +235,7 @@ private fun BoardPreviewColumn(
                 modifier = Modifier.weight(1f)
             )
             Text(
-                text = "${cards.size}",
+                text = LocalFormat.current.formatNumber(cards.size),
                 fontSize = 9.sp,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -268,7 +270,7 @@ private fun MiniCard(
 
     val cls = project.classes.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = titleFieldId?.let { obj.stringValue(it) }?.ifBlank { obj.readable } ?: obj.readable
+    val title = objectTitle(obj, project.classes, project.project.prefix)
 
     // Show one extra body field (if present) — pick the first card-eligible
     // field that isn't the title or column/row/border field.
@@ -395,9 +397,7 @@ private fun TreeRowMini(
     depth: Int,
     hasChildren: Boolean
 ) {
-    val cls = project.classes.find { it.id == obj.objectClass }
-    val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = titleFieldId?.let { obj.stringValue(it) }?.ifBlank { obj.readable } ?: obj.readable
+    val title = objectTitle(obj, project.classes, project.project.prefix)
 
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
     val accent = if (borderFieldId != null) {

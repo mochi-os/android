@@ -81,17 +81,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.api.userMessage
-
-@Composable
-private fun fieldTypeLabel(type: String): String = when (type) {
-    "text" -> stringResource(R.string.projects_field_type_text)
-    "number" -> stringResource(R.string.projects_field_type_number)
-    "enumerated" -> stringResource(R.string.projects_field_type_enumerated)
-    "user" -> stringResource(R.string.projects_field_type_user)
-    "date" -> stringResource(R.string.projects_field_type_date)
-    "checklist" -> stringResource(R.string.projects_field_type_checklist)
-    else -> type
-}
+import org.mochios.android.ui.components.fieldTypeLabel
 
 private val POSITION_KEYS = listOf("", "header", "body", "sidebar")
 
@@ -197,7 +187,6 @@ fun FieldDetailScreen(
             var isSortable by remember(field.id, seed) { mutableStateOf(field.isSortable) }
             var isFilterable by remember(field.id, seed) { mutableStateOf(field.isFilterable) }
             var showOnCard by remember(field.id, seed) { mutableStateOf(field.showOnCard) }
-            var isMulti by remember(field.id, seed) { mutableStateOf(field.isMulti) }
             var editRows by remember(field.id, seed) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
             var editPosition by remember(field.id, seed) { mutableStateOf(field.position) }
             var editPattern by remember(field.id, seed) { mutableStateOf(field.pattern) }
@@ -251,10 +240,6 @@ fun FieldDetailScreen(
                 FlagRow(stringResource(R.string.projects_field_sortable), isSortable) { isSortable = it }
                 FlagRow(stringResource(R.string.projects_field_filterable), isFilterable) { isFilterable = it }
                 FlagRow(stringResource(R.string.projects_field_show_on_card), showOnCard) { showOnCard = it }
-
-                if (field.fieldtype == "enumerated") {
-                    FlagRow(stringResource(R.string.projects_field_multi), isMulti) { isMulti = it }
-                }
 
                 Spacer(modifier = Modifier.height(12.dp))
 
@@ -347,7 +332,6 @@ fun FieldDetailScreen(
                 val rowsInt = editRows.toIntOrNull()
                 val hasChanges = editName != field.name
                         || flags.toSet() != savedFlags
-                        || isMulti != field.isMulti
                         || showOnCard != field.showOnCard
                         || (rowsInt ?: 0) != field.rows
                         || editPosition != field.position
@@ -364,7 +348,6 @@ fun FieldDetailScreen(
                             viewModel.updateField(
                                 name = editName.takeIf { it != field.name },
                                 flags = flags.joinToString(","),
-                                multi = isMulti.takeIf { it != field.isMulti },
                                 card = showOnCard.takeIf { it != field.showOnCard },
                                 position = editPosition.takeIf { it != field.position },
                                 rows = editRows.takeIf { (rowsInt ?: 0) != field.rows },

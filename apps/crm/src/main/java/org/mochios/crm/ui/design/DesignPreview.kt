@@ -36,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalResources
+import org.mochios.android.i18n.LocalFormat
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -90,8 +91,11 @@ fun DesignPreview(
     }
 
     val resources = LocalResources.current
-    val sampleObjects = remember(view, candidateClasses, crm.options, crm.fields, resources) {
-        buildSampleObjects(crm, candidateClasses, view) { index -> resources.getString(R.string.crm_design_sample, index.toString()) }
+    val format = LocalFormat.current
+    val sampleObjects = remember(view, candidateClasses, crm.options, crm.fields, resources, format) {
+        buildSampleObjects(crm, candidateClasses, view) { index ->
+            resources.getString(R.string.crm_design_sample, format.formatNumber(index))
+        }
     }
 
     Column(modifier = modifier.fillMaxWidth()) {
@@ -235,7 +239,7 @@ private fun BoardPreviewColumn(
                 modifier = Modifier.weight(1f)
             )
             Text(
-                text = "${cards.size}",
+                text = LocalFormat.current.formatNumber(cards.size),
                 fontSize = 9.sp,
                 color = MaterialTheme.colorScheme.primary
             )

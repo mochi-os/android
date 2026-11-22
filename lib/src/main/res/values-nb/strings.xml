@@ -370,4 +370,13 @@
     <string name="devices_username">Brukernavn</string>
     <string name="devices_warning">Kopier passordet nå: det kan ikke vises igjen.</string>
     <string name="devices_unused">Aldri brukt</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">Tall</string>
+    <string name="field_type_enumerated">Oppregnet</string>
+    <string name="field_type_user">Bruker</string>
+    <string name="field_type_date">Dato</string>
+    <string name="field_type_checkbox">Avkrysningsboks</string>
+    <string name="field_type_checklist">Sjekkliste</string>
+    <string name="view_list_sorted_ascending">sortert stigende</string>
+    <string name="view_list_sorted_descending">sortert synkende</string>
 </resources>

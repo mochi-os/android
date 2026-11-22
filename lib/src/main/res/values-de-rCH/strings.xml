@@ -278,4 +278,11 @@
     <string name="devices_done">Fertig</string>
     <string name="devices_used">Zuletzt verwendet %1$s</string>
     <string name="devices_username">Benutzername</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Nummer</string>
+    <string name="field_type_enumerated">Aufzählung</string>
+    <string name="field_type_user">Benutzer</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Kontrollkästchen</string>
+    <string name="field_type_checklist">Checkliste</string>
 </resources>

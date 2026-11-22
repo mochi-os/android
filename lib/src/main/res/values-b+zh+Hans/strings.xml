@@ -370,4 +370,13 @@
     <string name="devices_username">用户名</string>
     <string name="devices_warning">请立即复制密码：它无法再次显示。</string>
     <string name="devices_unused">从未使用</string>
+    <string name="field_type_text">文本</string>
+    <string name="field_type_number">数字</string>
+    <string name="field_type_enumerated">枚举</string>
+    <string name="field_type_user">用户</string>
+    <string name="field_type_date">日期</string>
+    <string name="field_type_checkbox">复选框</string>
+    <string name="field_type_checklist">清单</string>
+    <string name="view_list_sorted_ascending">升序排列</string>
+    <string name="view_list_sorted_descending">降序排列</string>
 </resources>

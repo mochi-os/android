@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Brak pasujących obiektów</string>
     <string name="crm_field_yes">Tak</string>
     <string name="crm_field_no">Nie</string>
-    <string name="crm_field_type_checkbox">Pole wyboru</string>
     <string name="crm_comment_empty">Brak komentarzy</string>
     <string name="crm_comment_attach">Dołącz pliki</string>
     <string name="crm_property_remove">Usuń</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Dodaj pole</string>
     <string name="crm_class_delete">Usuń klasę</string>
     <string name="crm_class_delete_title">Usuń klasę</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Liczba</string>
-    <string name="crm_field_type_user">Użytkownik</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Lista kontrolna</string>
     <string name="crm_field_name">Nazwa</string>
     <string name="crm_field_type">Typ</string>
     <string name="crm_field_flags">Flagi</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">wprowadził zmianę</string>
     <string name="crm_activity_attached">załączył(a)</string>
     <string name="crm_activity_commented">skomentował(a)</string>
+    <string name="crm_activity_moved">przeniósł(a)</string>
+    <string name="crm_activity_linked">powiązał(a)</string>
+    <string name="crm_activity_class">zmienił(a) klasę</string>
     <string name="crm_attachment_empty">Brak załączników</string>
     <string name="crm_attachment_default_name">załącznik</string>
     <string name="crm_attachment_delete_confirm_title">Usunąć załącznik?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Domyślne (czytelne)</string>
     <string name="crm_class_parents">Klasy nadrzędne</string>
     <string name="crm_class_delete_message">Czy na pewno chcesz usunąć klasę \"%1$s\"? Wszystkie pola i ich opcje również zostaną usunięte.</string>
-    <string name="crm_field_type_enumerated">Wyliczeniowe</string>
     <string name="crm_field_label">Pole: %1$s</string>
     <string name="crm_field_readonly">Tylko do odczytu</string>
     <string name="crm_field_sortable">Sortowalne</string>
     <string name="crm_field_filterable">Filtrowalne</string>
     <string name="crm_field_show_on_card">Pokaż na karcie</string>
-    <string name="crm_field_multi">Wielokrotny wybór</string>
     <string name="crm_field_position">Pozycja wyświetlania</string>
     <string name="crm_field_position_header">Nagłówek</string>
     <string name="crm_field_validation">Walidacja</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Pole koloru obramowania</string>
     <string name="crm_views_filter_classes">Filtruj według klas</string>
     <string name="crm_views_by">według %1$s</string>
-    <string name="crm_views_sorted">sortowanie %1$s</string>
     <string name="crm_design_preview_label">Podgląd:</string>
     <string name="crm_design_preview_no_view">Brak widoku do podglądu</string>
     <string name="crm_design_preview_no_class">Brak klasy dla tego widoku</string>
@@ -299,4 +293,7 @@
         <item quantity="many">Nie udało się dodać %1$s załączników: %2$s</item>
         <item quantity="other">Nie udało się dodać %1$s załącznika: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Rodzic</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasa</string>
 </resources>

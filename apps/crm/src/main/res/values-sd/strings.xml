@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">ڪا ملندڙ شيون نه آهن</string>
     <string name="crm_field_yes">ها</string>
     <string name="crm_field_no">نه</string>
-    <string name="crm_field_type_checkbox">چيڪ بڪس</string>
     <string name="crm_comment_empty">اڃا ڪو تبصرو نه آهي</string>
     <string name="crm_comment_attach">فائلون ڳنڍيو</string>
     <string name="crm_property_remove">هٽايو</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">فيلڊ شامل ڪريو</string>
     <string name="crm_class_delete">ڪلاس ختم ڪريو</string>
     <string name="crm_class_delete_title">ڪلاس ختم ڪريو</string>
-    <string name="crm_field_type_text">ٽيڪسٽ</string>
-    <string name="crm_field_type_number">نمبر</string>
-    <string name="crm_field_type_user">صارف</string>
-    <string name="crm_field_type_date">تاريخ</string>
-    <string name="crm_field_type_checklist">چيڪ لسٽ</string>
     <string name="crm_field_name">نالو</string>
     <string name="crm_field_type">قسم</string>
     <string name="crm_field_flags">نشان</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">هڪ تبديلي ڪئي</string>
     <string name="crm_activity_attached">ڳنڍيو</string>
     <string name="crm_activity_commented">تبصرو ڪيو</string>
+    <string name="crm_activity_moved">منتقل ڪيو</string>
+    <string name="crm_activity_linked">لنڪ ڪيو</string>
+    <string name="crm_activity_class">ڪلاس تبديل ڪيو</string>
     <string name="crm_attachment_empty">ڪوبه ڳنڍيل فائل ناهي</string>
     <string name="crm_attachment_default_name">ڳنڍيل فائل</string>
     <string name="crm_attachment_delete_confirm_title">ڳنڍيل فائل ڊاهيو؟</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ڊفالٽ (پڙهڻ لائق)</string>
     <string name="crm_class_parents">والدين ڪلاسون</string>
     <string name="crm_class_delete_message">ڇا توھان واقعي ڪلاس \"%1$s\" حذف ڪرڻ چاھيو ٿا؟ سڀ فيلڊ ۽ انھن جا آپشن پڻ حذف ٿي ويندا.</string>
-    <string name="crm_field_type_enumerated">ڳڻيل</string>
     <string name="crm_field_label">فيلڊ: %1$s</string>
     <string name="crm_field_readonly">صرف پڙهڻ لاءِ</string>
     <string name="crm_field_sortable">ترتيب ڏيڻ لائق</string>
     <string name="crm_field_filterable">فلٽر ڪرڻ لائق</string>
     <string name="crm_field_show_on_card">ڪارڊ تي ڏيکاريو</string>
-    <string name="crm_field_multi">گھڻ-چونڊ</string>
     <string name="crm_field_position">ڊسپلي پوزيشن</string>
     <string name="crm_field_position_header">هيڊر</string>
     <string name="crm_field_validation">تصديق</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">بارڊر رنگ فيلڊ</string>
     <string name="crm_views_filter_classes">ڪلاسن تي فلٽر ڪريو</string>
     <string name="crm_views_by">%1$s جي ذريعي</string>
-    <string name="crm_views_sorted">%1$s ترتيب ڏنل</string>
     <string name="crm_design_preview_label">اڳ ڏيک:</string>
     <string name="crm_design_preview_no_view">اڳواٽ ڏسڻ لاءِ ڪو منظر نه آھي</string>
     <string name="crm_design_preview_no_class">ھن منظر لاءِ ڪو ڪلاس نه آھي</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s ڳنڍيل فائل شامل نه ٿي سگهي: %2$s</item>
         <item quantity="other">%1$s ڳنڍيل فائلون شامل نه ٿي سگهيون: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">والدين</string>
+    <string name="crm_export_csv_id">سڃاڻپ</string>
+    <string name="crm_export_csv_class">ڪلاس</string>
 </resources>

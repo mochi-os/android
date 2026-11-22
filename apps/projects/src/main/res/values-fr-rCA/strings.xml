@@ -27,13 +27,11 @@
     <string name="projects_settings_unsubscribe_title">Se désabonner</string>
     <string name="projects_request_status_open">Ouvrir</string>
     <string name="projects_board_new">Nouveau</string>
-    <string name="projects_field_type_user">Utilisateur</string>
     <string name="projects_access_level_owner">Propriétaire</string>
     <string name="projects_loading">Chargement…</string>
     <string name="projects_field_position_default">Par défaut</string>
     <string name="projects_settings_tab_people">Personnes</string>
     <string name="projects_sort_number">Numéro</string>
-    <string name="projects_field_type_number">Numéro</string>
     <string name="projects_views_sort_number">Numéro</string>
     <string name="projects_settings_tab_general">Général</string>
     <string name="projects_request_status_draft">Brouillon</string>
@@ -60,8 +58,6 @@
     <string name="projects_move_current">Actuelle</string>
     <string name="projects_class_move_up">Déplacer vers le haut</string>
     <string name="projects_class_move_down">Déplacer vers le bas</string>
-    <string name="projects_field_type_text">Texte</string>
-    <string name="projects_field_type_date">Date</string>
     <string name="projects_field_required">Requis</string>
     <string name="projects_views_sort_by">Trier par</string>
     <string name="projects_design">Conception</string>
@@ -207,15 +203,12 @@
     <string name="projects_class_delete">Supprimer la classe</string>
     <string name="projects_class_delete_title">Supprimer la classe</string>
     <string name="projects_class_delete_message">Voulez-vous vraiment supprimer la classe \"%1$s\"? Tous les champs et leurs options seront également supprimés.</string>
-    <string name="projects_field_type_enumerated">Énuméré</string>
-    <string name="projects_field_type_checklist">Liste de contrôle</string>
     <string name="projects_field_label">Champ : %1$s</string>
     <string name="projects_field_flags">Indicateurs</string>
     <string name="projects_field_readonly">Lecture seule</string>
     <string name="projects_field_sortable">Triable</string>
     <string name="projects_field_filterable">Filtrable</string>
     <string name="projects_field_show_on_card">Afficher sur la carte</string>
-    <string name="projects_field_multi">Sélection multiple</string>
     <string name="projects_field_position">Position d\'affichage</string>
     <string name="projects_field_position_header">En-tête</string>
     <string name="projects_field_position_sidebar">Barre latérale</string>
@@ -249,7 +242,6 @@
     <string name="projects_views_filter_classes">Filtrer par classes</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_views_by">par %1$s</string>
-    <string name="projects_views_sorted">trié %1$s</string>
     <string name="projects_design_preview_label">Aperçu :</string>
     <string name="projects_design_preview_no_view">Aucune vue à prévisualiser</string>
     <string name="projects_design_preview_no_class">Aucune classe pour cette vue</string>
@@ -307,4 +299,5 @@
     <string name="projects_settings_updated">Projet mis à jour</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>
     <string name="projects_attachment_remove">Retirer la pièce jointe</string>
+    <string name="projects_activity_unknown">Inconnu</string>
 </resources>

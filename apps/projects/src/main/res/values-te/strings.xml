@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ఫీల్డ్‌ను జోడించండి</string>
     <string name="projects_class_delete">క్లాస్‌ను తొలగించండి</string>
     <string name="projects_class_delete_title">క్లాస్‌ను తొలగించండి</string>
-    <string name="projects_field_type_text">టెక్స్ట్</string>
-    <string name="projects_field_type_number">సంఖ్య</string>
-    <string name="projects_field_type_user">యూజర్</string>
-    <string name="projects_field_type_date">తేదీ</string>
-    <string name="projects_field_type_checklist">చెక్‌లిస్ట్</string>
     <string name="projects_field_name">పేరు</string>
     <string name="projects_field_type">రకం</string>
     <string name="projects_field_flags">ఫ్లాగ్‌లు</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ఈ తరగతి వస్తువులపై విలీన అభ్యర్థనలను అనుమతించండి.</string>
     <string name="projects_class_parents">మాతృ తరగతులు</string>
     <string name="projects_class_delete_message">మీరు \"%1$s\" తరగతిని తొలగించాలనుకుంటున్నారని నిజంగా అనుకుంటున్నారా? అన్ని ఫీల్డ్‌లు మరియు వాటి ఎంపికలు కూడా తొలగించబడతాయి.</string>
-    <string name="projects_field_type_enumerated">జాబితా చేయబడినది</string>
     <string name="projects_field_label">ఫీల్డ్: %1$s</string>
     <string name="projects_field_readonly">చదవడానికి మాత్రమే</string>
     <string name="projects_field_sortable">క్రమబద్ధీకరించదగినది</string>
     <string name="projects_field_filterable">వడపోయదగినది</string>
     <string name="projects_field_show_on_card">కార్డుపై చూపండి</string>
-    <string name="projects_field_multi">బహుళ-ఎంపిక</string>
     <string name="projects_field_position">ప్రదర్శన స్థానం</string>
     <string name="projects_field_position_header">హెడర్</string>
     <string name="projects_field_validation">ధృవీకరణ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">అంచు రంగు ఫీల్డ్</string>
     <string name="projects_views_filter_classes">తరగతులకు వడపోత</string>
     <string name="projects_views_by">%1$s ద్వారా</string>
-    <string name="projects_views_sorted">%1$s క్రమబద్ధీకరించబడింది</string>
     <string name="projects_design_preview_label">ప్రివ్యూ:</string>
     <string name="projects_design_preview_no_view">మునుజూపుకు వీక్షణ లేదు</string>
     <string name="projects_design_preview_no_class">ఈ వీక్షణకు తరగతి లేదు</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ప్రాజెక్ట్ అప్‌డేట్ చేయబడింది</string>
     <string name="projects_activity_attached">జోడించారు</string>
     <string name="projects_activity_commented">వ్యాఖ్యానించారు</string>
+    <string name="projects_activity_moved">ఈ ఆబ్జెక్ట్‌ను తరలించారు</string>
+    <string name="projects_activity_linked">ఒక లింక్‌ను జోడించారు</string>
+    <string name="projects_activity_class">తరగతిని మార్చారు</string>
     <string name="projects_attachment_delete_confirm_message">ఈ జోడింపు శాశ్వతంగా తొలగించబడుతుంది.</string>
     <string name="projects_attachment_delete_confirm_title">జోడింపును తొలగించాలా?</string>
     <string name="projects_settings_unsubscribe_section">ప్రాజెక్ట్ సభ్యత్వాన్ని రద్దు చేయండి</string>
@@ -339,4 +334,5 @@
         <item quantity="other">మీరు \"%1$s\"ని మరియు దాని కింద ఉన్న %2$s అంశాలను తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</item>
     </plurals>
     <string name="projects_create_attachments_failed">జతచేయడం సాధ్యపడలేదు: %1$s</string>
+    <string name="projects_activity_unknown">తెలియదు</string>
 </resources>

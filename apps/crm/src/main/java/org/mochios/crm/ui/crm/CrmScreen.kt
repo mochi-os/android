@@ -159,8 +159,9 @@ fun CrmScreen(
     }
     VisibleEntityEffect("crm", crmId, socketKey = crmId)
 
+    // Every CRM: the All CRMs search filters its own list, not the drawer.
     val drawerItems = remember(listUiState.crm) {
-        listViewModel.filteredCrm().map { crm ->
+        listUiState.crm.map { crm ->
             DrawerItem(
                 id = crm.fingerprint.ifEmpty { crm.id },
                 title = crm.name,
@@ -487,9 +488,7 @@ private fun CrmContent(
     }
 
     LaunchedEffect(initialObjectId) {
-        if (initialObjectId != null) {
-            viewModel.selectObject(initialObjectId)
-        }
+        viewModel.openLinked(initialObjectId)
     }
 
     val context = LocalContext.current
@@ -510,6 +509,11 @@ private fun CrmContent(
 
     val exportSaved = stringResource(R.string.crm_export_saved)
     val exportFailed = stringResource(R.string.crm_export_failed)
+    val csvHeadings = listOf(
+        stringResource(R.string.crm_export_csv_id),
+        stringResource(R.string.crm_export_csv_class),
+        stringResource(R.string.crm_export_csv_parent),
+    )
     // The picker only reports where the file goes; the ViewModel writes it.
     // A launcher's type is fixed when it is remembered, so the two exports
     // need one each, chosen by what the pending export holds.
@@ -685,7 +689,9 @@ private fun CrmContent(
                                 // Add column — only meaningful on a board view that
                                 // groups by a field (mirrors web's overflow "Add
                                 // column"). Creates a new option on the grouping field.
-                                if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                                if (activeView?.viewtype == "board" && activeView.columns.isNotBlank() &&
+                                    viewModel.canDesign()
+                                ) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_board_add_column)) },
                                         onClick = {
@@ -728,10 +734,10 @@ private fun CrmContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
-                                // Reshaping the design is the owner's to do, so
-                                // it is offered on the same terms as the link
-                                // above rather than on every subscribed CRM.
-                                if (details?.crm?.owner?.local == true) {
+                                // The design is for the owner and anyone they
+                                // granted design access, whose changes the
+                                // owner's server takes, as on the web.
+                                if (viewModel.canDesign()) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_design)) },
                                         onClick = {
@@ -753,7 +759,7 @@ private fun CrmContent(
                                     text = { Text(stringResource(R.string.crm_export_csv)) },
                                     onClick = {
                                         showOverflow = false
-                                        viewModel.exportCsv()
+                                        viewModel.exportCsv(csvHeadings)
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.TableChart, contentDescription = null) },
                                 )
@@ -771,7 +777,7 @@ private fun CrmContent(
             // A CRM with no class defined has nothing an object could be created
             // as, so the form would open with its Create permanently disabled
             // and no way to tell why. Hidden rather than dead.
-            if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
+            if (details != null && details.classes.isNotEmpty() && !boardHasColumns && viewModel.canCreate()) {
                 MochiFab(onClick = { create(emptyMap()) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }

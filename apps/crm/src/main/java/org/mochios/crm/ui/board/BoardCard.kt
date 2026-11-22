@@ -6,7 +6,6 @@
 package org.mochios.crm.ui.board
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -50,8 +49,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.i18n.Format
+import org.mochios.android.model.canWrite
+import org.mochios.android.ui.components.FieldChoice
+import org.mochios.android.ui.components.FieldDisplay
+import org.mochios.android.ui.components.FieldValue
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.fieldDisplay
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -61,9 +65,9 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
-import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
+import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
 import org.mochios.crm.ui.crm.CrmViewModel
@@ -119,10 +123,14 @@ fun BoardCard(
     val title = titleFieldId?.let { obj.stringValue(it) }.orEmpty().ifBlank { untitled }
     val cardFields = viewModel.getCardFields(obj.objectClass)
 
+    // Moving a card is writing: without write access it neither drags nor
+    // offers Move to column, as on the web.
+    val writable = canWrite(crmDetails?.crm?.access)
+
     // Drag-drop wiring — only top-level cards participate. Nested children stay
     // visual-only to avoid confusing dual-target situations (the parent and
     // the child both being valid drop targets at the same point).
-    val isDragSource = cardDragState != null && !isNested && cardIndexInColumn >= 0
+    val isDragSource = writable && cardDragState != null && !isNested && cardIndexInColumn >= 0
     val isBeingDragged by remember(cardDragState, obj.id, isDragSource) {
         derivedStateOf { isDragSource && cardDragState!!.isDragging(obj.id) }
     }
@@ -245,7 +253,7 @@ fun BoardCard(
                     if (hasChildren && collapsed) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = "${children.size}",
+                            text = LocalFormat.current.formatNumber(children.size),
                             fontSize = 10.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -253,7 +261,7 @@ fun BoardCard(
                     // Overflow menu — accessible fallback for the
                     // MoveObjectSheet now that long-press is reserved for
                     // drag-start.
-                    if (!isNested) {
+                    if (!isNested && writable) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Box {
                             MochiIconButton(
@@ -284,79 +292,20 @@ fun BoardCard(
                     }
                 }
 
-                // Body fields (top-level only, matching web's !isNested check)
+                // Body fields (top-level only, matching web's !isNested check).
+                // A field with nothing to show, such as an unticked box, takes
+                // no place.
                 if (!isNested) {
-                    val bodyFields = cardFields.filter {
-                        it.id != columnFieldId && it.id != rowFieldId && it.id != titleFieldId
-                    }
-                    val fieldsWithValues = bodyFields.filter { obj.stringValue(it.id).isNotBlank() }
-                    if (fieldsWithValues.isNotEmpty()) {
+                    val format = LocalFormat.current
+                    val shown = cardFields
+                        .filter { field ->
+                            field.id != columnFieldId && field.id != rowFieldId && field.id != titleFieldId
+                        }
+                        .mapNotNull { field -> fieldShown(field, obj, viewModel, people, format) }
+                    if (shown.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(4.dp))
                         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                            fieldsWithValues.forEach { field ->
-                                val value = obj.stringValue(field.id)
-                                when (field.fieldtype) {
-                                    "enumerated" -> {
-                                        val options = viewModel.getOptionsForObject(
-                                            obj.objectClass,
-                                            field.id,
-                                        )
-                                        val opt = options.find { it.id == value }
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            if (opt != null && opt.colour.isNotBlank()) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .size(8.dp)
-                                                        .background(
-                                                            parseColor(opt.colour),
-                                                            MaterialTheme.shapes.extraSmall
-                                                        )
-                                                )
-                                                Spacer(modifier = Modifier.width(4.dp))
-                                            }
-                                            Text(
-                                                text = opt?.name ?: value,
-                                                fontSize = 10.sp,
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                                maxLines = 1,
-                                                overflow = TextOverflow.Ellipsis
-                                            )
-                                        }
-                                    }
-                                    "user" -> {
-                                        // Resolve the entity ID to a member name
-                                        // (matching the detail view and web);
-                                        // fall back to the raw value if unknown.
-                                        val resolved = people.find { person -> person.id == value }
-                                            ?.name?.takeIf { name -> name.isNotBlank() } ?: value
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            EntityAvatar(
-                                                name = resolved,
-                                                src = personAvatarPath(value),
-                                                seed = value,
-                                                size = 14.dp,
-                                            )
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                            Text(
-                                                text = resolved,
-                                                fontSize = 10.sp,
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                                maxLines = 1,
-                                                overflow = TextOverflow.Ellipsis
-                                            )
-                                        }
-                                    }
-                                    else -> {
-                                        Text(
-                                            text = value.take(80),
-                                            fontSize = 10.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
-                                }
-                            }
+                            shown.forEach { display -> FieldValue(display, compact = true) }
                         }
                     }
                 }
@@ -403,6 +352,32 @@ fun BoardCard(
         )
     }
 }
+
+/**
+ * How [field]'s value on [obj] shows on a card or a tree row, by the field's
+ * type: an option of [obj]'s class by its name and colour, a person by the
+ * name [people] gives them (else their fingerprint, never the id), a date as
+ * its calendar day, a number in the user's format, a checklist as its
+ * progress. Null when there is nothing to show.
+ */
+internal fun fieldShown(
+    field: CrmField,
+    obj: CrmObject,
+    viewModel: CrmViewModel,
+    people: List<Person>,
+    format: Format,
+): FieldDisplay? = fieldDisplay(
+    type = field.fieldtype,
+    value = obj.stringValue(field.id),
+    format = format,
+    name = field.name,
+    choice = { id ->
+        viewModel.getOptionsForObject(obj.objectClass, field.id)
+            .find { option -> option.id == id }
+            ?.let { option -> FieldChoice(option.name, option.colour) }
+    },
+    person = { id -> people.find { person -> person.id == id }?.name },
+)
 
 /** "+N nested": the cards folded under one past the deepest level drawn. */
 @Composable

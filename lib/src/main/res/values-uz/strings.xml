@@ -371,4 +371,13 @@
     <string name="devices_username">Foydalanuvchi nomi</string>
     <string name="devices_warning">Parolni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
     <string name="devices_unused">Hech qachon foydalanilmagan</string>
+    <string name="field_type_text">Matn</string>
+    <string name="field_type_number">Raqam</string>
+    <string name="field_type_enumerated">Sanab o\'tilgan</string>
+    <string name="field_type_user">Foydalanuvchi</string>
+    <string name="field_type_date">Sana</string>
+    <string name="field_type_checkbox">Belgilash katakchasi</string>
+    <string name="field_type_checklist">Roʻyxat</string>
+    <string name="view_list_sorted_ascending">oʻsish boʻyicha saralangan</string>
+    <string name="view_list_sorted_descending">kamayish boʻyicha saralangan</string>
 </resources>

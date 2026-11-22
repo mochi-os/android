@@ -10,7 +10,6 @@ data class ProjectField(
     val name: String = "",
     val fieldtype: String = "",
     val flags: String = "",
-    val multi: Int = 0,
     val rank: Int = 0,
     val card: Int = 0,
     val position: String = "",
@@ -21,7 +20,6 @@ data class ProjectField(
     val minlength: Int = 0,
     val maxlength: Int = 0
 ) {
-    val isMulti get() = multi != 0
     val showOnCard get() = card != 0
     val isRequired get() = "required" in flags
     val isReadonly get() = "readonly" in flags

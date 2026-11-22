@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Pievienot lauku</string>
     <string name="projects_class_delete">Dzēst klasi</string>
     <string name="projects_class_delete_title">Dzēst klasi</string>
-    <string name="projects_field_type_text">Teksts</string>
-    <string name="projects_field_type_number">Skaitlis</string>
-    <string name="projects_field_type_user">Lietotājs</string>
-    <string name="projects_field_type_date">Datums</string>
-    <string name="projects_field_type_checklist">Kontrolsaraksts</string>
     <string name="projects_field_name">Nosaukums</string>
     <string name="projects_field_type">Tips</string>
     <string name="projects_field_flags">Karogi</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Atļaut sapludināšanas pieprasījumus šīs klases objektiem.</string>
     <string name="projects_class_parents">Vecākklases</string>
     <string name="projects_class_delete_message">Vai tiešām vēlaties dzēst klasi \"%1$s\"? Visi lauki un to opcijas arī tiks dzēsti.</string>
-    <string name="projects_field_type_enumerated">Uzskaitījums</string>
     <string name="projects_field_label">Lauks: %1$s</string>
     <string name="projects_field_readonly">Tikai lasāms</string>
     <string name="projects_field_sortable">Kārtojams</string>
     <string name="projects_field_filterable">Filtrējams</string>
     <string name="projects_field_show_on_card">Rādīt uz kartītes</string>
-    <string name="projects_field_multi">Vairākizvēle</string>
     <string name="projects_field_position">Attēlošanas pozīcija</string>
     <string name="projects_field_position_header">Galvene</string>
     <string name="projects_field_validation">Validācija</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Apmales krāsas lauks</string>
     <string name="projects_views_filter_classes">Filtrēt pēc klasēm</string>
     <string name="projects_views_by">pēc %1$s</string>
-    <string name="projects_views_sorted">kārtots %1$s</string>
     <string name="projects_design_preview_label">Priekšskatījums:</string>
     <string name="projects_design_preview_no_view">Nav skata, ko priekšskatīt</string>
     <string name="projects_design_preview_no_class">Šim skatam nav klases</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekts atjaunināts</string>
     <string name="projects_activity_attached">pievienoja</string>
     <string name="projects_activity_commented">komentēja</string>
+    <string name="projects_activity_moved">pārvietoja šo objektu</string>
+    <string name="projects_activity_linked">pievienoja saiti</string>
+    <string name="projects_activity_class">mainīja klasi</string>
     <string name="projects_attachment_delete_confirm_message">Šis pielikums tiks neatgriezeniski izdzēsts.</string>
     <string name="projects_attachment_delete_confirm_title">Izdzēst pielikumu?</string>
     <string name="projects_settings_unsubscribe_section">Atcelt projekta abonementu</string>
@@ -341,4 +336,5 @@
         <item quantity="other">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumus zem tā? Šo darbību nevar atsaukt.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Neizdevās pievienot: %1$s</string>
+    <string name="projects_activity_unknown">Nezināms</string>
 </resources>

@@ -50,7 +50,6 @@
     <string name="crm_links_no_matches">Nenhum objeto correspondente</string>
     <string name="crm_field_yes">Sim</string>
     <string name="crm_field_no">Não</string>
-    <string name="crm_field_type_checkbox">Caixa de seleção</string>
     <string name="crm_comment_empty">Ainda não há comentários</string>
     <string name="crm_comment_attach">Anexar arquivos</string>
     <string name="crm_property_remove">Remover</string>
@@ -83,10 +82,6 @@
     <string name="crm_class_add_field">Adicionar campo</string>
     <string name="crm_class_delete">Excluir classe</string>
     <string name="crm_class_delete_title">Excluir classe</string>
-    <string name="crm_field_type_text">Texto</string>
-    <string name="crm_field_type_number">Número</string>
-    <string name="crm_field_type_user">Usuário</string>
-    <string name="crm_field_type_date">Data</string>
     <string name="crm_field_name">Nome</string>
     <string name="crm_field_type">Tipo</string>
     <string name="crm_field_flags">Sinalizações</string>
@@ -190,13 +185,11 @@
     <string name="crm_class_title_field_default">Padrão (legível)</string>
     <string name="crm_class_parents">Classes pai</string>
     <string name="crm_class_delete_message">Tem certeza de que deseja excluir a classe \"%1$s\"? Todos os campos e suas opções também serão excluídos.</string>
-    <string name="crm_field_type_enumerated">Enumerado</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_readonly">Somente leitura</string>
     <string name="crm_field_sortable">Ordenável</string>
     <string name="crm_field_filterable">Filtrável</string>
     <string name="crm_field_show_on_card">Mostrar no cartão</string>
-    <string name="crm_field_multi">Seleção múltipla</string>
     <string name="crm_field_position">Posição de exibição</string>
     <string name="crm_field_position_header">Cabeçalho</string>
     <string name="crm_field_validation">Validação</string>
@@ -215,7 +208,6 @@
     <string name="crm_views_border_field">Campo da cor da borda</string>
     <string name="crm_views_filter_classes">Filtrar por classes</string>
     <string name="crm_views_by">por %1$s</string>
-    <string name="crm_views_sorted">ordenado %1$s</string>
     <string name="crm_design_preview_label">Pré-visualização:</string>
     <string name="crm_design_preview_no_view">Nenhuma visualização para pré-visualizar</string>
     <string name="crm_design_preview_no_class">Nenhuma classe para esta visualização</string>
@@ -259,4 +251,7 @@
         <item quantity="one">Tem certeza de que deseja excluir \"%1$s\" e o %2$s item abaixo dele? Esta ação não pode ser desfeita.</item>
         <item quantity="other">Tem certeza de que deseja excluir \"%1$s\" e os %2$s itens abaixo dele? Esta ação não pode ser desfeita.</item>
     </plurals>
+    <string name="crm_export_csv_parent">Pai</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Classe</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ක්ෂේත්‍රයක් එක් කරන්න</string>
     <string name="projects_class_delete">පන්තිය මකන්න</string>
     <string name="projects_class_delete_title">පන්තිය මකන්න</string>
-    <string name="projects_field_type_text">පෙළ</string>
-    <string name="projects_field_type_number">අංකය</string>
-    <string name="projects_field_type_user">පරිශීලකයා</string>
-    <string name="projects_field_type_date">දිනය</string>
-    <string name="projects_field_type_checklist">පරීක්ෂා ලැයිස්තුව</string>
     <string name="projects_field_name">නම</string>
     <string name="projects_field_type">වර්ගය</string>
     <string name="projects_field_flags">කොඩි</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">මෙම පන්තියේ වස්තූන් මත ඒකාබද්ධ කිරීමේ ඉල්ලීම් ඉඩ දෙන්න.</string>
     <string name="projects_class_parents">මාපිය පන්ති</string>
     <string name="projects_class_delete_message">ඔබට \"%1$s\" පන්තිය මැකීමට අවශ්‍ය බව සහතිකද? සියලුම ක්ෂේත්‍ර සහ ඒවායේ විකල්ප ද මකා දැමෙනු ඇත.</string>
-    <string name="projects_field_type_enumerated">ගණනය කළ</string>
     <string name="projects_field_label">ක්ෂේත්‍රය: %1$s</string>
     <string name="projects_field_readonly">කියවීමට පමණි</string>
     <string name="projects_field_sortable">වර්ග කළ හැකි</string>
     <string name="projects_field_filterable">පෙරිය හැකි</string>
     <string name="projects_field_show_on_card">කාඩ්පතෙහි පෙන්වන්න</string>
-    <string name="projects_field_multi">බහු තේරීම</string>
     <string name="projects_field_position">සංදර්ශන පිහිටුම</string>
     <string name="projects_field_position_header">ශීර්ෂකය</string>
     <string name="projects_field_validation">වලංගුකරණය</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">මායිම් වර්ණ ක්ෂේත්‍රය</string>
     <string name="projects_views_filter_classes">පන්ති සඳහා පෙරන්න</string>
     <string name="projects_views_by">%1$s විසින්</string>
-    <string name="projects_views_sorted">%1$s වර්ග කර ඇත</string>
     <string name="projects_design_preview_label">පෙරදසුන:</string>
     <string name="projects_design_preview_no_view">පෙරදසුන් කිරීමට දසුනක් නැත</string>
     <string name="projects_design_preview_no_class">මෙම දසුන සඳහා පන්තියක් නැත</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ව්‍යාපෘතිය යාවත්කාලීන කරන ලදී</string>
     <string name="projects_activity_attached">අමුණන ලදී</string>
     <string name="projects_activity_commented">අදහස් දැක්වීය</string>
+    <string name="projects_activity_moved">මෙම වස්තුව ගෙන ගියේය</string>
+    <string name="projects_activity_linked">සබැඳියක් එක් කළේය</string>
+    <string name="projects_activity_class">පංතිය වෙනස් කළේය</string>
     <string name="projects_attachment_delete_confirm_message">මෙම ඇමුණුම ස්ථිරවම මකා දැමෙනු ඇත.</string>
     <string name="projects_attachment_delete_confirm_title">ඇමුණුම මකන්නද?</string>
     <string name="projects_settings_unsubscribe_section">ව්‍යාපෘති දායකත්වය අවලංගු කරන්න</string>
@@ -339,4 +334,5 @@
         <item quantity="other">ඔබට \"%1$s\" සහ ඊට යටතේ ඇති අයිතම %2$s මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</item>
     </plurals>
     <string name="projects_create_attachments_failed">ඇමිණීමට නොහැකි විය: %1$s</string>
+    <string name="projects_activity_unknown">නොදන්නා</string>
 </resources>

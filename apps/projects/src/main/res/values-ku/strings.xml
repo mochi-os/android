@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Qad zêde bike</string>
     <string name="projects_class_delete">Polê jê bibe</string>
     <string name="projects_class_delete_title">Polê jê bibe</string>
-    <string name="projects_field_type_text">Nivîs</string>
-    <string name="projects_field_type_number">Hejmar</string>
-    <string name="projects_field_type_user">Bikarhêner</string>
-    <string name="projects_field_type_date">Dîrok</string>
-    <string name="projects_field_type_checklist">Lîsteya kontrolê</string>
     <string name="projects_field_name">Nav</string>
     <string name="projects_field_type">Cure</string>
     <string name="projects_field_flags">Ala</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Destûrê bide daxwazên tevlihevkirinê li ser tiştên vê çînê.</string>
     <string name="projects_class_parents">Çînên dê û bav</string>
     <string name="projects_class_delete_message">Bi rastî tu dixwazî çîna \"%1$s\" jê bibî? Hemû qad û vebijarkên wan jî dê werin jêbirin.</string>
-    <string name="projects_field_type_enumerated">Hejmartî</string>
     <string name="projects_field_label">Qad: %1$s</string>
     <string name="projects_field_readonly">Tenê xwendin</string>
     <string name="projects_field_sortable">Rêzkirinbar</string>
     <string name="projects_field_filterable">Parzûnbar</string>
     <string name="projects_field_show_on_card">Li ser kartê nîşan bide</string>
-    <string name="projects_field_multi">Pir-hilbijartin</string>
     <string name="projects_field_position">Cihê nîşandanê</string>
     <string name="projects_field_position_header">Sernivîs</string>
     <string name="projects_field_validation">Pejirandin</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Qada renga sînor</string>
     <string name="projects_views_filter_classes">Parzûn bike çînan</string>
     <string name="projects_views_by">ji aliyê %1$s</string>
-    <string name="projects_views_sorted">rêzkirî %1$s</string>
     <string name="projects_design_preview_label">Pêşdîtin:</string>
     <string name="projects_design_preview_no_view">Tu nêrîn ji bo pêşdîtinê tune</string>
     <string name="projects_design_preview_no_class">Ji bo vê nêrînê tu çîn tune</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proje hate nûkirin</string>
     <string name="projects_activity_attached">pêve kir</string>
     <string name="projects_activity_commented">şîrove kir</string>
+    <string name="projects_activity_moved">ev obje guhast</string>
+    <string name="projects_activity_linked">girêdanek zêde kir</string>
+    <string name="projects_activity_class">pol guhert</string>
     <string name="projects_attachment_delete_confirm_message">Ev pêvek dê her û her were jêbirin.</string>
     <string name="projects_attachment_delete_confirm_title">Pêvekê jê bibe?</string>
     <string name="projects_settings_unsubscribe_section">Aboneytiya projeyê betal bike</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Tu bawer î ku dixwazî \"%1$s\" û %2$s hêman di binê wê de jê bibî? Ev kar nikare were vegerandin.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nehat pêvekirin: %1$s</string>
+    <string name="projects_activity_unknown">Nediyar</string>
 </resources>

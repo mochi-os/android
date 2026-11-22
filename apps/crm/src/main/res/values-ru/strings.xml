@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Нет подходящих объектов</string>
     <string name="crm_field_yes">Да</string>
     <string name="crm_field_no">Нет</string>
-    <string name="crm_field_type_checkbox">Флажок</string>
     <string name="crm_comment_empty">Комментариев пока нет</string>
     <string name="crm_comment_attach">Прикрепить файлы</string>
     <string name="crm_property_remove">Удалить</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Добавить поле</string>
     <string name="crm_class_delete">Удалить класс</string>
     <string name="crm_class_delete_title">Удалить класс</string>
-    <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Число</string>
-    <string name="crm_field_type_user">Пользователь</string>
-    <string name="crm_field_type_date">Дата</string>
-    <string name="crm_field_type_checklist">Чек-лист</string>
     <string name="crm_field_name">Название</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Флаги</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">внёс изменение</string>
     <string name="crm_activity_attached">прикрепил(а)</string>
     <string name="crm_activity_commented">прокомментировал(а)</string>
+    <string name="crm_activity_moved">переместил(а)</string>
+    <string name="crm_activity_linked">связал(а)</string>
+    <string name="crm_activity_class">изменил(а) класс</string>
     <string name="crm_attachment_empty">Нет вложений</string>
     <string name="crm_attachment_default_name">вложение</string>
     <string name="crm_attachment_delete_confirm_title">Удалить вложение?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">По умолчанию (читаемое)</string>
     <string name="crm_class_parents">Родительские классы</string>
     <string name="crm_class_delete_message">Вы уверены, что хотите удалить класс \"%1$s\"? Все поля и их варианты также будут удалены.</string>
-    <string name="crm_field_type_enumerated">Перечисляемое</string>
     <string name="crm_field_label">Поле: %1$s</string>
     <string name="crm_field_readonly">Только для чтения</string>
     <string name="crm_field_sortable">Сортируемое</string>
     <string name="crm_field_filterable">Фильтруемое</string>
     <string name="crm_field_show_on_card">Показывать на карточке</string>
-    <string name="crm_field_multi">Множественный выбор</string>
     <string name="crm_field_position">Положение отображения</string>
     <string name="crm_field_position_header">Заголовок</string>
     <string name="crm_field_validation">Проверка</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Поле цвета рамки</string>
     <string name="crm_views_filter_classes">Фильтровать по классам</string>
     <string name="crm_views_by">по %1$s</string>
-    <string name="crm_views_sorted">сортировка %1$s</string>
     <string name="crm_design_preview_label">Предпросмотр:</string>
     <string name="crm_design_preview_no_view">Нет вида для предпросмотра</string>
     <string name="crm_design_preview_no_class">Нет класса для этого вида</string>
@@ -299,4 +293,7 @@
         <item quantity="many">Не удалось добавить %1$s вложений: %2$s</item>
         <item quantity="other">Не удалось добавить %1$s вложения: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Родитель</string>
+    <string name="crm_export_csv_id">Идентификатор</string>
+    <string name="crm_export_csv_class">Класс</string>
 </resources>

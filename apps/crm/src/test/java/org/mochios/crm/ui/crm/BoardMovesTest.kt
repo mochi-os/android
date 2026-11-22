@@ -166,7 +166,7 @@ class BoardMovesTest {
         val shown = model.getFilteredObjects().map { obj -> obj.id }.toSet()
         // The view keeps companies; its "status:open" filter would have left a alone.
         assertEquals(setOf("a", "b", "d", "w"), shown)
-        model.exportCsv()
+        model.exportCsv(listOf("ID", "Class", "Parent"))
         val csv = model.uiState.value.pendingExport?.content.orEmpty()
         assertTrue(csv, csv.lines().any { line -> line.startsWith("b,") })
         assertTrue(csv, csv.lines().any { line -> line.startsWith("d,") })

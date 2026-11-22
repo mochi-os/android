@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">إضافة حقل</string>
     <string name="projects_class_delete">حذف الفئة</string>
     <string name="projects_class_delete_title">حذف الفئة</string>
-    <string name="projects_field_type_text">نص</string>
-    <string name="projects_field_type_number">الرقم</string>
-    <string name="projects_field_type_user">المستخدم</string>
-    <string name="projects_field_type_date">التاريخ</string>
-    <string name="projects_field_type_checklist">قائمة المهام</string>
     <string name="projects_field_name">الاسم</string>
     <string name="projects_field_type">النوع</string>
     <string name="projects_field_flags">الأعلام</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">نقل لأعلى</string>
     <string name="projects_class_move_down">نقل لأسفل</string>
     <string name="projects_class_delete_message">هل أنت متأكد من أنك تريد حذف الفئة \"%1$s\"؟ سيتم أيضاً حذف جميع الحقول وخياراتها.</string>
-    <string name="projects_field_type_enumerated">مُعدَّد</string>
     <string name="projects_field_label">الحقل: %1$s</string>
     <string name="projects_field_readonly">للقراءة فقط</string>
     <string name="projects_field_sortable">قابل للفرز</string>
     <string name="projects_field_filterable">قابل للتصفية</string>
     <string name="projects_field_show_on_card">إظهار على البطاقة</string>
-    <string name="projects_field_multi">تحديد متعدد</string>
     <string name="projects_field_position">موضع العرض</string>
     <string name="projects_field_position_header">الترويسة</string>
     <string name="projects_field_position_body">المتن</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">تنازلي</string>
     <string name="projects_views_filter_classes">التصفية حسب الفئات</string>
     <string name="projects_views_by">حسب %1$s</string>
-    <string name="projects_views_sorted">مُرتَّب %1$s</string>
     <string name="projects_design_preview_label">معاينة:</string>
     <string name="projects_design_preview_no_view">لا يوجد عرض للمعاينة</string>
     <string name="projects_design_preview_no_class">لا توجد فئة لهذا العرض</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">تم تحديث المشروع</string>
     <string name="projects_activity_attached">أرفق</string>
     <string name="projects_activity_commented">علّق</string>
+    <string name="projects_activity_moved">نقل هذا العنصر</string>
+    <string name="projects_activity_linked">أضاف رابطًا</string>
+    <string name="projects_activity_class">غيّر الفئة</string>
     <string name="projects_attachment_delete_confirm_message">سيتم حذف هذا المرفق نهائيًا.</string>
     <string name="projects_attachment_delete_confirm_title">حذف المرفق؟</string>
     <string name="projects_settings_unsubscribe_section">إنهاء الاشتراك في المشروع</string>
@@ -347,4 +342,5 @@
         <item quantity="other">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
     </plurals>
     <string name="projects_create_attachments_failed">تعذّر الإرفاق: %1$s</string>
+    <string name="projects_activity_unknown">غير معروف</string>
 </resources>

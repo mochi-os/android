@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="staff_disputes_reason_unauthorised">Unauthorized</string>
-    <string name="staff_disputes_stripe_check_returned">cheque returned</string>
     <string name="staff_disputes_stripe_debit_not_authorized">debit not authorized</string>
     <string name="staff_disputes_stripe_unrecognized">unrecognized charge</string>
 </resources>

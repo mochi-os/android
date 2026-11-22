@@ -56,7 +56,6 @@ import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 import org.mochios.projects.model.Repository
 import org.mochios.projects.model.Template
-import org.mochios.projects.model.Watcher
 import java.io.File
 import javax.inject.Inject
 import java.util.concurrent.ConcurrentHashMap
@@ -167,8 +166,17 @@ class ProjectsRepository @Inject constructor(
     suspend fun searchDirectory(query: String): List<Project> =
         api.searchDirectory(query).unwrap()
 
+    /** The recommended projects, each with its blurb as the description a card shows. */
     suspend fun getRecommendations(): List<Project> =
-        api.getRecommendations().unwrap().projects
+        api.getRecommendations().unwrap().projects.map { recommendation ->
+            Project(
+                id = recommendation.id,
+                fingerprint = recommendation.fingerprint,
+                name = recommendation.name,
+                description = recommendation.blurb,
+                server = recommendation.server,
+            )
+        }
 
     suspend fun probe(url: String): Project =
         api.probe(url).unwrap()
@@ -198,23 +206,28 @@ class ProjectsRepository @Inject constructor(
     suspend fun getBranches(repo: String): List<Branch> =
         api.getBranches(repo).unwrap().branches
 
-    suspend fun checkMerge(repo: String, source: String, target: String): MergeCheck {
-        val r = api.checkMerge(repo, source, target).unwrap()
-        return MergeCheck(
-            canMerge = r.canMerge,
-            conflicts = r.conflicts,
-            base = r.base,
-            ahead = r.ahead,
-            behind = r.behind
-        )
-    }
+    /** Whether [source] merges into [target]; a check that could not compare them throws its reason. */
+    suspend fun checkMerge(repo: String, source: String, target: String): MergeCheck =
+        api.checkMerge(repo, source, target).unwrap()
 
     suspend fun getDiff(repo: String, base: String, head: String): String =
         api.getDiff(repo, base, head).unwrap()
 
-    suspend fun merge(project: String, repo: String, source: String, target: String, message: String, method: String? = null) {
-        api.merge(repo, project, source, target, message, method).unwrap()
-    }
+    /**
+     * Merges [source] into [target]; with [request], the merge request it
+     * completes, which the server records merged in the same call. Returns
+     * whether it did: false from a server that takes no request, or that
+     * could not record it after merging.
+     */
+    suspend fun merge(
+        project: String,
+        repo: String,
+        source: String,
+        target: String,
+        message: String,
+        method: String? = null,
+        request: String? = null,
+    ): Boolean = api.merge(repo, project, source, target, message, method, request).unwrap().recorded == true
 
     suspend fun getDiffPreference(): String =
         api.getDiffPreference().unwrap().preference
@@ -322,17 +335,12 @@ class ProjectsRepository @Inject constructor(
         rowField: String? = null,
         rowValue: String? = null,
         scopeParent: String? = null,
-        promote: Boolean = false
     ) {
         val row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() }
         api.moveObject(
             projectId, objectId,
-            MoveObjectRequest(field, value, rank, row, scopeParent, if (promote) "true" else null)
+            MoveObjectRequest(field, value, rank, row, scopeParent)
         ).unwrap()
-    }
-
-    suspend fun setValues(projectId: String, objectId: String, values: Map<String, String>) {
-        api.setValues(projectId, objectId, values).unwrap()
     }
 
     suspend fun setValue(projectId: String, objectId: String, fieldId: String, value: String) {
@@ -447,17 +455,15 @@ class ProjectsRepository @Inject constructor(
 
     // ---- Activity ----
 
-    suspend fun getActivity(projectId: String, objectId: String): List<Activity> =
-        api.getActivity(projectId, objectId).unwrap().activities
+    /** A page of [limit] entries of the object's history, newest first, from [offset]. */
+    suspend fun getActivity(projectId: String, objectId: String, limit: Int, offset: Int): List<Activity> =
+        api.getActivity(projectId, objectId, limit, offset).unwrap().activities
 
     // ---- Watchers ----
 
-    data class WatcherResult(val watchers: List<Watcher>, val watching: Boolean)
-
-    suspend fun getWatchers(projectId: String, objectId: String): WatcherResult {
-        val response = api.getWatchers(projectId, objectId).unwrap()
-        return WatcherResult(watchers = response.watchers, watching = response.watching)
-    }
+    /** Whether the signed-in person watches the object. */
+    suspend fun isWatching(projectId: String, objectId: String): Boolean =
+        api.getWatchers(projectId, objectId).unwrap().watching
 
     suspend fun addWatcher(projectId: String, objectId: String) {
         api.addWatcher(projectId, objectId).unwrap()
@@ -523,9 +529,6 @@ class ProjectsRepository @Inject constructor(
 
     // ---- Views ----
 
-    suspend fun getViews(projectId: String): List<ProjectView> =
-        api.getViews(projectId).unwrap().views
-
     suspend fun createView(
         projectId: String,
         name: String,
@@ -568,9 +571,6 @@ class ProjectsRepository @Inject constructor(
 
     // ---- Classes ----
 
-    suspend fun getClasses(projectId: String): List<ProjectClass> =
-        api.getClasses(projectId).unwrap().classes
-
     suspend fun createClass(projectId: String, name: String): ProjectClass =
         api.createClass(projectId, name).unwrap()
 
@@ -583,9 +583,6 @@ class ProjectsRepository @Inject constructor(
     }
 
     // ---- Hierarchy ----
-
-    suspend fun getHierarchy(projectId: String, classId: String): List<String> =
-        api.getHierarchy(projectId, classId).unwrap().parents
 
     /** [parents] as [org.mochios.projects.util.hierarchyParameter] spells them. */
     suspend fun setHierarchy(projectId: String, classId: String, parents: String) {
@@ -603,8 +600,7 @@ class ProjectsRepository @Inject constructor(
         name: String,
         fieldtype: String,
         flags: String? = null,
-        multi: Boolean? = null
-    ): ProjectField = api.createField(projectId, classId, name, fieldtype, flags, multi).unwrap()
+    ): ProjectField = api.createField(projectId, classId, name, fieldtype, flags).unwrap()
 
     suspend fun reorderFields(projectId: String, classId: String, order: String) {
         api.reorderFields(projectId, classId, order).unwrap()
@@ -616,7 +612,6 @@ class ProjectsRepository @Inject constructor(
         fieldId: String,
         name: String? = null,
         flags: String? = null,
-        multi: Boolean? = null,
         card: Boolean? = null,
         position: String? = null,
         rows: String? = null,
@@ -626,7 +621,7 @@ class ProjectsRepository @Inject constructor(
     ) {
         api.updateField(
             projectId, classId, fieldId,
-            UpdateFieldRequest(name, flags, multi, card, position, rows, pattern, minlength, maxlength)
+            UpdateFieldRequest(name, flags, card, position, rows, pattern, minlength, maxlength)
         ).unwrap()
     }
 
@@ -635,9 +630,6 @@ class ProjectsRepository @Inject constructor(
     }
 
     // ---- Options ----
-
-    suspend fun getOptions(projectId: String, classId: String, fieldId: String): List<FieldOption> =
-        api.getOptions(projectId, classId, fieldId).unwrap().options
 
     suspend fun createOption(
         projectId: String,

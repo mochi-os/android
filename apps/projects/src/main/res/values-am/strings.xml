@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">መስክ ጨምር</string>
     <string name="projects_class_delete">ክፍል ሰርዝ</string>
     <string name="projects_class_delete_title">ክፍል ሰርዝ</string>
-    <string name="projects_field_type_text">ጽሁፍ</string>
-    <string name="projects_field_type_number">ቁጥር</string>
-    <string name="projects_field_type_user">ተጠቃሚ</string>
-    <string name="projects_field_type_date">ቀን</string>
-    <string name="projects_field_type_checklist">ዝርዝር</string>
     <string name="projects_field_name">ስም</string>
     <string name="projects_field_type">አይነት</string>
     <string name="projects_field_flags">ባንዲራዎች</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">ወደ ላይ አንቀሳቅስ</string>
     <string name="projects_class_move_down">ወደ ታች አንቀሳቅስ</string>
     <string name="projects_class_delete_message">ክፍሉን \"%1$s\" ለመሰረዝ እርግጠኛ ነዎት? ሁሉም ሜዳዎች እና አማራጮቻቸውም ይሰረዛሉ።</string>
-    <string name="projects_field_type_enumerated">የተዘረዘረ</string>
     <string name="projects_field_label">ሜዳ፦ %1$s</string>
     <string name="projects_field_readonly">ለንባብ ብቻ</string>
     <string name="projects_field_sortable">ሊደረደር የሚችል</string>
     <string name="projects_field_filterable">ሊጣራ የሚችል</string>
     <string name="projects_field_show_on_card">በካርዱ ላይ አሳይ</string>
-    <string name="projects_field_multi">ብዙ ምርጫ</string>
     <string name="projects_field_position">የማሳያ ቦታ</string>
     <string name="projects_field_position_header">ራስጌ</string>
     <string name="projects_field_position_body">አካል</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">ከላይ ወደ ታች</string>
     <string name="projects_views_filter_classes">ወደ ክፍሎች አጣራ</string>
     <string name="projects_views_by">በ %1$s</string>
-    <string name="projects_views_sorted">የተደረደረ %1$s</string>
     <string name="projects_design_preview_label">ቅድመ ዕይታ:</string>
     <string name="projects_design_preview_no_view">ለቅድመ-እይታ የሚሆን እይታ የለም</string>
     <string name="projects_design_preview_no_class">ለዚህ እይታ ምንም ክፍል የለም</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ፕሮጀክት ተዘምኗል</string>
     <string name="projects_activity_attached">አያይዟል</string>
     <string name="projects_activity_commented">አስተያየት ሰጥቷል</string>
+    <string name="projects_activity_moved">ይህን ነገር አንቀሳቅሷል</string>
+    <string name="projects_activity_linked">አገናኝ አክሏል</string>
+    <string name="projects_activity_class">ክፍሉን ቀይሯል</string>
     <string name="projects_attachment_delete_confirm_message">ይህ አባሪ እስከመጨረሻው ይሰረዛል።</string>
     <string name="projects_attachment_delete_confirm_title">አባሪ ይሰረዝ?</string>
     <string name="projects_settings_unsubscribe_section">ከፕሮጀክት ደንበኝነት ውጣ</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\"ን እና ከሥሩ ያሉትን %2$s ንጥሎች መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ እርምጃ ሊቀለበስ አይችልም።</item>
     </plurals>
     <string name="projects_create_attachments_failed">ማያያዝ አልተቻለም፦ %1$s</string>
+    <string name="projects_activity_unknown">ያልታወቀ</string>
 </resources>

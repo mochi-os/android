@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Дал келген объекттер жок</string>
     <string name="crm_field_yes">Ооба</string>
     <string name="crm_field_no">Жок</string>
-    <string name="crm_field_type_checkbox">Белги кутусу</string>
     <string name="crm_comment_empty">Комментарийлер азырынча жок</string>
     <string name="crm_comment_attach">Файлдарды тиркөө</string>
     <string name="crm_property_remove">Алуу</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Талаа кошуу</string>
     <string name="crm_class_delete">Классты жок кылуу</string>
     <string name="crm_class_delete_title">Классты жок кылуу</string>
-    <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Сан</string>
-    <string name="crm_field_type_user">Колдонуучу</string>
-    <string name="crm_field_type_date">Күн</string>
-    <string name="crm_field_type_checklist">Текшерүү тизмеси</string>
     <string name="crm_field_name">Аты</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Желектер</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">өзгөртүү киргизди</string>
     <string name="crm_activity_attached">тиркеди</string>
     <string name="crm_activity_commented">пикир калтырды</string>
+    <string name="crm_activity_moved">жылдырды</string>
+    <string name="crm_activity_linked">байланыштырды</string>
+    <string name="crm_activity_class">классты өзгөрттү</string>
     <string name="crm_attachment_empty">Тиркемелер жок</string>
     <string name="crm_attachment_default_name">тиркеме</string>
     <string name="crm_attachment_delete_confirm_title">Тиркеме өчүрүлсүнбү?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Демейки (окуу үчүн ыңгайлуу)</string>
     <string name="crm_class_parents">Башкы класстар</string>
     <string name="crm_class_delete_message">\"%1$s\" классын чындап өчүргүңүз келеби? Бардык талаалар жана алардын варианттары да өчүрүлөт.</string>
-    <string name="crm_field_type_enumerated">Тизмеленген</string>
     <string name="crm_field_label">Талаа: %1$s</string>
     <string name="crm_field_readonly">Окуу үчүн гана</string>
     <string name="crm_field_sortable">Сорттолуучу</string>
     <string name="crm_field_filterable">Чыпкалануучу</string>
     <string name="crm_field_show_on_card">Картада көрсөтүү</string>
-    <string name="crm_field_multi">Бир нече тандоо</string>
     <string name="crm_field_position">Көрсөтүү орду</string>
     <string name="crm_field_position_header">Аталыш</string>
     <string name="crm_field_validation">Текшерүү</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Чек ара түсүнүн талаасы</string>
     <string name="crm_views_filter_classes">Класстар боюнча чыпкалоо</string>
     <string name="crm_views_by">%1$s боюнча</string>
-    <string name="crm_views_sorted">%1$s сорттолгон</string>
     <string name="crm_design_preview_label">Алдын ала көрүү:</string>
     <string name="crm_design_preview_no_view">Алдын ала көрө турган көрүнүш жок</string>
     <string name="crm_design_preview_no_class">Бул көрүнүш үчүн класс жок</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s тиркемени кошуу мүмкүн болгон жок: %2$s</item>
         <item quantity="other">%1$s тиркемени кошуу мүмкүн болгон жок: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Ата-эне</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Класс</string>
 </resources>

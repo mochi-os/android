@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">შესაბამისი ობიექტები არ არის</string>
     <string name="crm_field_yes">დიახ</string>
     <string name="crm_field_no">არა</string>
-    <string name="crm_field_type_checkbox">ფლაგი</string>
     <string name="crm_comment_empty">კომენტარები ჯერ არ არის</string>
     <string name="crm_comment_attach">ფაილების მიმაგრება</string>
     <string name="crm_property_remove">წაშლა</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ველის დამატება</string>
     <string name="crm_class_delete">კლასის წაშლა</string>
     <string name="crm_class_delete_title">კლასის წაშლა</string>
-    <string name="crm_field_type_text">ტექსტი</string>
-    <string name="crm_field_type_number">რიცხვი</string>
-    <string name="crm_field_type_user">მომხმარებელი</string>
-    <string name="crm_field_type_date">თარიღი</string>
-    <string name="crm_field_type_checklist">ჩამონათვალი</string>
     <string name="crm_field_name">სახელი</string>
     <string name="crm_field_type">ტიპი</string>
     <string name="crm_field_flags">დროშები</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">შეიტანა ცვლილება</string>
     <string name="crm_activity_attached">დაურთო</string>
     <string name="crm_activity_commented">დააკომენტარა</string>
+    <string name="crm_activity_moved">გადაიტანა</string>
+    <string name="crm_activity_linked">დააკავშირა</string>
+    <string name="crm_activity_class">შეცვალა კლასი</string>
     <string name="crm_attachment_empty">დანართები არ არის</string>
     <string name="crm_attachment_default_name">დანართი</string>
     <string name="crm_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ნაგულისხმევი (წაკითხვადი)</string>
     <string name="crm_class_parents">მშობელი კლასები</string>
     <string name="crm_class_delete_message">ნამდვილად გსურთ კლასის \"%1$s\" წაშლა? ყველა ველი და მათი ვარიანტებიც წაიშლება.</string>
-    <string name="crm_field_type_enumerated">ჩამოთვლადი</string>
     <string name="crm_field_label">ველი: %1$s</string>
     <string name="crm_field_readonly">მხოლოდ წაკითხვადი</string>
     <string name="crm_field_sortable">დახარისხებადი</string>
     <string name="crm_field_filterable">ფილტრირებადი</string>
     <string name="crm_field_show_on_card">ბარათზე ჩვენება</string>
-    <string name="crm_field_multi">მრავლობითი არჩევანი</string>
     <string name="crm_field_position">ჩვენების პოზიცია</string>
     <string name="crm_field_position_header">სათაური</string>
     <string name="crm_field_validation">ვალიდაცია</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">საზღვრის ფერის ველი</string>
     <string name="crm_views_filter_classes">კლასებზე გაფილტვრა</string>
     <string name="crm_views_by">%1$s-ის მიხედვით</string>
-    <string name="crm_views_sorted">დალაგებულია %1$s</string>
     <string name="crm_design_preview_label">გადახედვა:</string>
     <string name="crm_design_preview_no_view">გადასახედი ხედი არ არის</string>
     <string name="crm_design_preview_no_class">ამ ხედისთვის კლასი არ არის</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s დანართის დამატება ვერ მოხერხდა: %2$s</item>
         <item quantity="other">%1$s დანართის დამატება ვერ მოხერხდა: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">მშობელი</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">კლასი</string>
 </resources>

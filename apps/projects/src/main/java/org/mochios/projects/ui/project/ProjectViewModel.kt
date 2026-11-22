@@ -27,6 +27,9 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.model.canCreate
+import org.mochios.android.model.canDesign
+import org.mochios.android.model.canWrite
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
@@ -83,6 +86,9 @@ data class ProjectUiState(
     /** Project members, for resolving user-field display names on cards. */
     val people: List<org.mochios.projects.model.Person> = emptyList(),
 )
+
+/** The saved-state key that records the route's object as opened. */
+private const val INITIAL_OPENED = "initialOpened"
 
 /** Seconds in a day, for turning an ISO date into an epoch-second sort key. */
 private const val SECONDS_PER_DAY = 86_400L
@@ -151,7 +157,7 @@ internal fun compareFieldValues(
 
 @HiltViewModel
 class ProjectViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
+    private val savedStateHandle: SavedStateHandle,
     private val repository: ProjectsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
@@ -673,6 +679,18 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Opens the object the route named ([objectId]) once for this screen: a
+     * return from the create form or the design, a rotation or a process
+     * restart leaves the sheet as the user left it. The record of it is kept
+     * with the route's own state.
+     */
+    fun openInitialObject(objectId: String?) {
+        if (objectId == null || savedStateHandle.get<Boolean>(INITIAL_OPENED) == true) return
+        savedStateHandle[INITIAL_OPENED] = true
+        selectObject(objectId)
+    }
+
     fun deleteObject(objectId: String) {
         viewModelScope.launch {
             try {
@@ -695,11 +713,10 @@ class ProjectViewModel @Inject constructor(
         rowField: String? = null,
         rowValue: String? = null,
         scopeParent: String? = null,
-        promote: Boolean = false
     ) {
         viewModelScope.launch {
             try {
-                repository.moveObject(projectId, objectId, field, value, rank, rowField, rowValue, scopeParent, promote)
+                repository.moveObject(projectId, objectId, field, value, rank, rowField, rowValue, scopeParent)
                 refreshObjects()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
@@ -902,11 +919,17 @@ class ProjectViewModel @Inject constructor(
      */
     fun columnHolds(fieldId: String, optionId: String): Boolean =
         _uiState.value.objects.any { obj ->
-            obj.stringValue(fieldId) == optionId || obj.listValue(fieldId).contains(optionId)
+            obj.stringValue(fieldId) == optionId
         }
 
-    /** Whether the signed-in person may change the project's design. */
-    fun canDesign(): Boolean = _uiState.value.projectDetails?.project?.access in DESIGN_ACCESS
+    /** Whether the signed-in person may change the project's design: its columns among it. */
+    fun canDesign(): Boolean = canDesign(_uiState.value.projectDetails?.project?.access)
+
+    /** Whether the signed-in person may change objects: move, drag, delete and copy them. */
+    fun canWrite(): Boolean = canWrite(_uiState.value.projectDetails?.project?.access)
+
+    /** Whether the signed-in person may create objects. */
+    fun canCreate(): Boolean = canCreate(_uiState.value.projectDetails?.project?.access)
 
     /**
      * The objects a card dropped into column [value] of [field] is placed
@@ -1005,10 +1028,7 @@ class ProjectViewModel @Inject constructor(
         // Field-value filters: OR within one field, AND across fields
         for ((fieldId, selected) in state.fieldFilters) {
             if (selected.isEmpty()) continue
-            objects = objects.filter { obj ->
-                obj.stringValue(fieldId) in selected ||
-                    obj.listValue(fieldId).any { value -> value in selected }
-            }
+            objects = objects.filter { obj -> obj.stringValue(fieldId) in selected }
         }
 
         // A view's stored filter is not applied: the web does not read it, and

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">പൊരുത്തപ്പെടുന്ന ഒബ്ജക്ടുകളൊന്നുമില്ല</string>
     <string name="crm_field_yes">അതെ</string>
     <string name="crm_field_no">ഇല്ല</string>
-    <string name="crm_field_type_checkbox">ചെക്ക്ബോക്സ്</string>
     <string name="crm_comment_empty">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="crm_comment_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="crm_property_remove">നീക്കം ചെയ്യുക</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ഫീൽഡ് ചേർക്കുക</string>
     <string name="crm_class_delete">ക്ലാസ് ഇല്ലാതാക്കുക</string>
     <string name="crm_class_delete_title">ക്ലാസ് ഇല്ലാതാക്കുക</string>
-    <string name="crm_field_type_text">ടെക്സ്റ്റ്</string>
-    <string name="crm_field_type_number">സംഖ്യ</string>
-    <string name="crm_field_type_user">ഉപയോക്താവ്</string>
-    <string name="crm_field_type_date">തീയതി</string>
-    <string name="crm_field_type_checklist">ചെക്ക്‌ലിസ്റ്റ്</string>
     <string name="crm_field_name">പേര്</string>
     <string name="crm_field_type">തരം</string>
     <string name="crm_field_flags">ഫ്ലാഗുകൾ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ഒരു മാറ്റം വരുത്തി</string>
     <string name="crm_activity_attached">അറ്റാച്ച് ചെയ്തു</string>
     <string name="crm_activity_commented">അഭിപ്രായമിട്ടു</string>
+    <string name="crm_activity_moved">നീക്കി</string>
+    <string name="crm_activity_linked">ലിങ്ക് ചെയ്തു</string>
+    <string name="crm_activity_class">ക്ലാസ് മാറ്റി</string>
     <string name="crm_attachment_empty">അറ്റാച്ച്മെന്റുകൾ ഇല്ല</string>
     <string name="crm_attachment_default_name">അറ്റാച്ച്മെന്റ്</string>
     <string name="crm_attachment_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കണോ?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">സ്ഥിരസ്ഥിതി (വായിക്കാവുന്നത്)</string>
     <string name="crm_class_parents">പേരന്റ് ക്ലാസുകൾ</string>
     <string name="crm_class_delete_message">\"%1$s\" എന്ന ക്ലാസ് ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? എല്ലാ ഫീൽഡുകളും അവയുടെ ഓപ്ഷനുകളും കൂടി ഇല്ലാതാക്കും.</string>
-    <string name="crm_field_type_enumerated">എണ്ണപ്പെട്ടത്</string>
     <string name="crm_field_label">ഫീൽഡ്: %1$s</string>
     <string name="crm_field_readonly">വായിക്കാൻ മാത്രം</string>
     <string name="crm_field_sortable">ക്രമീകരിക്കാവുന്നത്</string>
     <string name="crm_field_filterable">ഫിൽട്ടർ ചെയ്യാവുന്നത്</string>
     <string name="crm_field_show_on_card">കാർഡിൽ കാണിക്കുക</string>
-    <string name="crm_field_multi">ഒന്നിലധികം തിരഞ്ഞെടുപ്പ്</string>
     <string name="crm_field_position">ഡിസ്പ്ലേ സ്ഥാനം</string>
     <string name="crm_field_position_header">ഹെഡർ</string>
     <string name="crm_field_validation">സാധൂകരണം</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">ബോർഡർ നിറത്തിന്റെ ഫീൽഡ്</string>
     <string name="crm_views_filter_classes">ക്ലാസുകളിലേക്ക് ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="crm_views_by">%1$s പ്രകാരം</string>
-    <string name="crm_views_sorted">%1$s ക്രമീകരിച്ചു</string>
     <string name="crm_design_preview_label">പ്രിവ്യൂ:</string>
     <string name="crm_design_preview_no_view">പ്രിവ്യൂ ചെയ്യാൻ വ്യൂ ഇല്ല</string>
     <string name="crm_design_preview_no_class">ഈ വ്യൂവിന് ക്ലാസ് ഇല്ല</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s അറ്റാച്ച്മെന്റ് ചേർക്കാനായില്ല: %2$s</item>
         <item quantity="other">%1$s അറ്റാച്ച്മെന്റുകൾ ചേർക്കാനായില്ല: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">പാരന്റ്</string>
+    <string name="crm_export_csv_id">ഐഡി</string>
+    <string name="crm_export_csv_class">ക്ലാസ്</string>
 </resources>

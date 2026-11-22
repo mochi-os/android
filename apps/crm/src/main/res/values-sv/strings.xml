@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Inga matchande objekt</string>
     <string name="crm_field_yes">Ja</string>
     <string name="crm_field_no">Nej</string>
-    <string name="crm_field_type_checkbox">Kryssruta</string>
     <string name="crm_comment_empty">Inga kommentarer ännu</string>
     <string name="crm_comment_attach">Bifoga filer</string>
     <string name="crm_property_remove">Ta bort</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Lägg till fält</string>
     <string name="crm_class_delete">Ta bort klass</string>
     <string name="crm_class_delete_title">Ta bort klass</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Tal</string>
-    <string name="crm_field_type_user">Användare</string>
-    <string name="crm_field_type_date">Datum</string>
-    <string name="crm_field_type_checklist">Checklista</string>
     <string name="crm_field_name">Namn</string>
     <string name="crm_field_type">Typ</string>
     <string name="crm_field_flags">Flaggor</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">gjorde en ändring</string>
     <string name="crm_activity_attached">bifogade</string>
     <string name="crm_activity_commented">kommenterade</string>
+    <string name="crm_activity_moved">flyttade</string>
+    <string name="crm_activity_linked">länkade</string>
+    <string name="crm_activity_class">ändrade klassen</string>
     <string name="crm_attachment_empty">Inga bilagor</string>
     <string name="crm_attachment_default_name">bilaga</string>
     <string name="crm_attachment_delete_confirm_title">Ta bort bilagan?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Standard (läsbar)</string>
     <string name="crm_class_parents">Föräldraklasser</string>
     <string name="crm_class_delete_message">Är du säker på att du vill radera klassen \"%1$s\"? Alla fält och deras alternativ kommer också att raderas.</string>
-    <string name="crm_field_type_enumerated">Uppräknad</string>
     <string name="crm_field_label">Fält: %1$s</string>
     <string name="crm_field_readonly">Skrivskyddad</string>
     <string name="crm_field_sortable">Sorterbar</string>
     <string name="crm_field_filterable">Filtrerbar</string>
     <string name="crm_field_show_on_card">Visa på kort</string>
-    <string name="crm_field_multi">Flerval</string>
     <string name="crm_field_position">Visningsposition</string>
     <string name="crm_field_position_header">Sidhuvud</string>
     <string name="crm_field_validation">Validering</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Kantfärgsfält</string>
     <string name="crm_views_filter_classes">Filtrera till klasser</string>
     <string name="crm_views_by">av %1$s</string>
-    <string name="crm_views_sorted">sorterat %1$s</string>
     <string name="crm_design_preview_label">Förhandsvisning:</string>
     <string name="crm_design_preview_no_view">Ingen vy att förhandsvisa</string>
     <string name="crm_design_preview_no_class">Ingen klass för denna vy</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s bilaga kunde inte läggas till: %2$s</item>
         <item quantity="other">%1$s bilagor kunde inte läggas till: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Överordnad</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klass</string>
 </resources>

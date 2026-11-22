@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Campo yapay</string>
     <string name="projects_class_delete">Clase wischuy</string>
     <string name="projects_class_delete_title">Clase wischuy</string>
-    <string name="projects_field_type_text">Qillqa</string>
-    <string name="projects_field_type_number">Yupay</string>
-    <string name="projects_field_type_user">Apaykachaq</string>
-    <string name="projects_field_type_date">P\'unchaw</string>
-    <string name="projects_field_type_checklist">Lista</string>
     <string name="projects_field_name">Suti</string>
     <string name="projects_field_type">Layan</string>
     <string name="projects_field_flags">Banderakuna</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Kay clasep objetonkunapi hukllachana mañakuykunata saqiy.</string>
     <string name="projects_class_parents">Tayta clasekuna</string>
     <string name="projects_class_delete_message">¿Cheqaqchu \"%1$s\" claseta wischuyta munanki? Llapan campokuna akllanankunapas wischusqa kanqa.</string>
-    <string name="projects_field_type_enumerated">Yupasqa</string>
     <string name="projects_field_label">Campo: %1$s</string>
     <string name="projects_field_readonly">Ñawinchanallapaq</string>
     <string name="projects_field_sortable">Ordenakuq</string>
     <string name="projects_field_filterable">Filtrakuq</string>
     <string name="projects_field_show_on_card">Tarjetapi rikuchiy</string>
-    <string name="projects_field_multi">Achkata akllay</string>
     <string name="projects_field_position">Rikuchina kasqan</string>
     <string name="projects_field_position_header">Uma</string>
     <string name="projects_field_validation">Takyachiy</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Pata llimp\'i campo</string>
     <string name="projects_views_filter_classes">Clasekunaman filtray</string>
     <string name="projects_views_by">%1$s-pa</string>
-    <string name="projects_views_sorted">%1$s ordenasqa</string>
     <string name="projects_design_preview_label">Ñawpaq qhaway:</string>
     <string name="projects_design_preview_no_view">Ñawpaq qhawanapaq mana vista kanchu</string>
     <string name="projects_design_preview_no_class">Kay vistapaq mana clase kanchu</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proyecto musuqchasqa</string>
     <string name="projects_activity_attached">k\'askachisqa</string>
     <string name="projects_activity_commented">comentarqan</string>
+    <string name="projects_activity_moved">kay objetota astarqan</string>
+    <string name="projects_activity_linked">huk t\'inkita yapaykurqan</string>
+    <string name="projects_activity_class">clase nisqata t\'ikrarqan</string>
     <string name="projects_attachment_delete_confirm_message">Kay adjuntoqa wiñaypaq wischusqa kanqa.</string>
     <string name="projects_attachment_delete_confirm_title">¿Adjuntota wischunki?</string>
     <string name="projects_settings_unsubscribe_section">Proyectomanta suscripcionta qichuy</string>
@@ -338,4 +333,5 @@
         <item quantity="other">\"%1$s\"-ta, ukhunpi kaq %2$s itemkuna-tawan wischuyta munanki? Kay ruway mana kutichipuy atinmanchu.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Mana k\'askachiyta atikurqanchu: %1$s</string>
+    <string name="projects_activity_unknown">Mana riqsisqa</string>
 </resources>

@@ -370,4 +370,13 @@
     <string name="devices_username">Όνομα χρήστη</string>
     <string name="devices_warning">Αντιγράψτε τον κωδικό πρόσβασης τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
     <string name="devices_unused">Δεν έχει χρησιμοποιηθεί ποτέ</string>
+    <string name="field_type_text">Κείμενο</string>
+    <string name="field_type_number">Αριθμός</string>
+    <string name="field_type_enumerated">Απαριθμημένο</string>
+    <string name="field_type_user">Χρήστης</string>
+    <string name="field_type_date">Ημερομηνία</string>
+    <string name="field_type_checkbox">Πλαίσιο ελέγχου</string>
+    <string name="field_type_checklist">Λίστα ελέγχου</string>
+    <string name="view_list_sorted_ascending">ταξινόμηση κατά αύξουσα σειρά</string>
+    <string name="view_list_sorted_descending">ταξινόμηση κατά φθίνουσα σειρά</string>
 </resources>

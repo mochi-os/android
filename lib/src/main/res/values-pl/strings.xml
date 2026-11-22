@@ -374,4 +374,13 @@
     <string name="devices_username">Nazwa użytkownika</string>
     <string name="devices_warning">Skopiuj hasło teraz: nie będzie pokazane ponownie.</string>
     <string name="devices_unused">Nigdy nieużyty</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">Liczba</string>
+    <string name="field_type_enumerated">Wyliczeniowe</string>
+    <string name="field_type_user">Użytkownik</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Pole wyboru</string>
+    <string name="field_type_checklist">Lista kontrolna</string>
+    <string name="view_list_sorted_ascending">sortowanie rosnąco</string>
+    <string name="view_list_sorted_descending">sortowanie malejąco</string>
 </resources>

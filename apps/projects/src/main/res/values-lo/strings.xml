@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ເພີ່ມຊ່ອງຂໍ້ມູນ</string>
     <string name="projects_class_delete">ລົບຄລາສ</string>
     <string name="projects_class_delete_title">ລົບຄລາສ</string>
-    <string name="projects_field_type_text">ຂໍ້ຄວາມ</string>
-    <string name="projects_field_type_number">ຕົວເລກ</string>
-    <string name="projects_field_type_user">ຜູ້ໃຊ້</string>
-    <string name="projects_field_type_date">ວັນທີ</string>
-    <string name="projects_field_type_checklist">ລາຍການກວດສອບ</string>
     <string name="projects_field_name">ຊື່</string>
     <string name="projects_field_type">ປະເພດ</string>
     <string name="projects_field_flags">ທຸງ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ອະນຸຍາດການຮ້ອງຂໍລວມສຳລັບວັດຖຸຂອງຄລາສນີ້.</string>
     <string name="projects_class_parents">ຄລາສແມ່</string>
     <string name="projects_class_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບຄລາສ \"%1$s\"? ຊ່ອງທັງໝົດແລະຕົວເລືອກຂອງມັນຈະຖືກລຶບເຊັ່ນກັນ.</string>
-    <string name="projects_field_type_enumerated">ມີລາຍການກຳນົດ</string>
     <string name="projects_field_label">ຊ່ອງ: %1$s</string>
     <string name="projects_field_readonly">ອ່ານຢ່າງດຽວ</string>
     <string name="projects_field_sortable">ຈັດລຽງໄດ້</string>
     <string name="projects_field_filterable">ກັ່ນຕອງໄດ້</string>
     <string name="projects_field_show_on_card">ສະແດງເທິງບັດ</string>
-    <string name="projects_field_multi">ເລືອກໄດ້ຫຼາຍລາຍການ</string>
     <string name="projects_field_position">ຕຳແໜ່ງສະແດງ</string>
     <string name="projects_field_position_header">ສ່ວນຫົວ</string>
     <string name="projects_field_validation">ການກວດສອບ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ຊ່ອງສີຂອບ</string>
     <string name="projects_views_filter_classes">ກັ່ນຕອງຕາມຄລາສ</string>
     <string name="projects_views_by">ໂດຍ %1$s</string>
-    <string name="projects_views_sorted">ຈັດລຽງ %1$s</string>
     <string name="projects_design_preview_label">ຕົວຢ່າງ:</string>
     <string name="projects_design_preview_no_view">ບໍ່ມີມຸມມອງເພື່ອສະແດງຕົວຢ່າງ</string>
     <string name="projects_design_preview_no_class">ບໍ່ມີຄລາສສຳລັບມຸມມອງນີ້</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ອັບເດດໂຄງການແລ້ວ</string>
     <string name="projects_activity_attached">ໄດ້ແນບ</string>
     <string name="projects_activity_commented">ໄດ້ສະແດງຄຳເຫັນ</string>
+    <string name="projects_activity_moved">ໄດ້ຍ້າຍວັດຖຸນີ້</string>
+    <string name="projects_activity_linked">ໄດ້ເພີ່ມລິ້ງ</string>
+    <string name="projects_activity_class">ໄດ້ປ່ຽນຄລາສ</string>
     <string name="projects_attachment_delete_confirm_message">ໄຟລ໌ແນບນີ້ຈະຖືກລຶບຖາວອນ.</string>
     <string name="projects_attachment_delete_confirm_title">ລຶບໄຟລ໌ແນບບໍ?</string>
     <string name="projects_settings_unsubscribe_section">ເຊົາຕິດຕາມໂຄງການ</string>
@@ -337,4 +332,5 @@
         <item quantity="other">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"%1$s\" ແລະ %2$s ລາຍການ ທີ່ຢູ່ກ້ອງມັນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</item>
     </plurals>
     <string name="projects_create_attachments_failed">ບໍ່ສາມາດແນບໄດ້: %1$s</string>
+    <string name="projects_activity_unknown">ບໍ່ຮູ້ຈັກ</string>
 </resources>

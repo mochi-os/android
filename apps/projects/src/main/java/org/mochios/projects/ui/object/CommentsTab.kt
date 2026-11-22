@@ -51,6 +51,8 @@ import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.ui.components.replyCount
+import org.mochios.android.format.personName
+import org.mochios.android.util.fingerprint
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
 import org.mochios.projects.R
@@ -66,6 +68,8 @@ fun CommentsTab(
     /** The object commented on, which the unsent comment is kept under. */
     target: String,
     onCreateComment: (String, String?, List<Uri>) -> Unit,
+    /** Whether the reader may comment; without it the composer is not shown. */
+    canComment: Boolean = true,
     resolveFileName: suspend (Uri) -> String,
     onUpdateComment: (String, String) -> Unit,
     onDeleteComment: (String) -> Unit,
@@ -112,7 +116,11 @@ fun CommentsTab(
                         avatarUrlBuilder = avatarUrlBuilder,
                         drafts = drafts,
                         currentUserId = currentUserId,
-                        onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
+                        onReply = if (canComment) {
+                            { id, _ -> drafts.update(target) { it.copy(reply = id) } }
+                        } else {
+                            null
+                        },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment
                     )
@@ -120,7 +128,7 @@ fun CommentsTab(
             }
         }
 
-        Reading(draftState) { draft ->
+        if (canComment) Reading(draftState) { draft ->
             val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
             ComposeBar(
                 value = draft.text,
@@ -149,7 +157,7 @@ fun CommentsTab(
                         ReplyComposerBanner(
                             label = stringResource(
                                 R.string.projects_comment_replying_to,
-                                comment.name.ifBlank { comment.authorId },
+                                personName(comment.name, fingerprint(comment.authorId)),
                             ),
                             preview = comment.markdownSource.ifBlank { comment.text },
                             cancelLabel = stringResource(R.string.projects_comment_clear_reply),
@@ -188,7 +196,8 @@ private fun CommentItem(
     avatarUrlBuilder: ((Comment) -> OwnedAddress?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
-    onReply: (String, String) -> Unit,
+    /** Null where the reader may not comment, so there is nothing to reply with. */
+    onReply: ((String, String) -> Unit)?,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
     // Folds the comment this one replies to, from the thread line beside it.
@@ -228,7 +237,7 @@ private fun CommentItem(
         onCollapseParent = onCollapseParent,
     ) {
         CommentActions(
-            onReply = { onReply(comment.id, comment.name) },
+            onReply = onReply?.let { reply -> { reply(comment.id, comment.name) } },
             onEdit = { drafts.edit(comment.id, comment.text) }.takeIf { mine },
             onDelete = { onDelete(comment.id) }.takeIf { mine },
         )

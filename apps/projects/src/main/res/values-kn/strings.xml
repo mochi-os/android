@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ಫೀಲ್ಡ್ ಸೇರಿಸಿ</string>
     <string name="projects_class_delete">ಕ್ಲಾಸ್ ಅಳಿಸಿ</string>
     <string name="projects_class_delete_title">ಕ್ಲಾಸ್ ಅಳಿಸಿ</string>
-    <string name="projects_field_type_text">ಪಠ್ಯ</string>
-    <string name="projects_field_type_number">ಸಂಖ್ಯೆ</string>
-    <string name="projects_field_type_user">ಬಳಕೆದಾರ</string>
-    <string name="projects_field_type_date">ದಿನಾಂಕ</string>
-    <string name="projects_field_type_checklist">ಚೆಕ್‌ಲಿಸ್ಟ್</string>
     <string name="projects_field_name">ಹೆಸರು</string>
     <string name="projects_field_type">ಪ್ರಕಾರ</string>
     <string name="projects_field_flags">ಫ್ಲ್ಯಾಗ್‌ಗಳು</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ಈ ವರ್ಗದ ವಸ್ತುಗಳ ಮೇಲೆ ವಿಲೀನ ವಿನಂತಿಗಳನ್ನು ಅನುಮತಿಸಿ.</string>
     <string name="projects_class_parents">ಮೂಲ ಕ್ಲಾಸ್‌ಗಳು</string>
     <string name="projects_class_delete_message">ನೀವು ನಿಜವಾಗಿಯೂ \"%1$s\" ವರ್ಗವನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ? ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳು ಮತ್ತು ಅವುಗಳ ಆಯ್ಕೆಗಳನ್ನು ಸಹ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
-    <string name="projects_field_type_enumerated">ಎಣಿಕೆಯ</string>
     <string name="projects_field_label">ಕ್ಷೇತ್ರ: %1$s</string>
     <string name="projects_field_readonly">ಓದಲು-ಮಾತ್ರ</string>
     <string name="projects_field_sortable">ವಿಂಗಡಿಸಬಹುದಾದ</string>
     <string name="projects_field_filterable">ಫಿಲ್ಟರ್ ಮಾಡಬಹುದಾದ</string>
     <string name="projects_field_show_on_card">ಕಾರ್ಡ್‌ನಲ್ಲಿ ತೋರಿಸಿ</string>
-    <string name="projects_field_multi">ಬಹು-ಆಯ್ಕೆ</string>
     <string name="projects_field_position">ಪ್ರದರ್ಶನ ಸ್ಥಾನ</string>
     <string name="projects_field_position_header">ಶಿರೋಲೇಖ</string>
     <string name="projects_field_validation">ಮೌಲ್ಯಮಾಪನ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ಗಡಿ ಬಣ್ಣದ ಕ್ಷೇತ್ರ</string>
     <string name="projects_views_filter_classes">ವರ್ಗಗಳಿಗೆ ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="projects_views_by">%1$s ಮೂಲಕ</string>
-    <string name="projects_views_sorted">%1$s ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
     <string name="projects_design_preview_label">ಪೂರ್ವವೀಕ್ಷಣೆ:</string>
     <string name="projects_design_preview_no_view">ಪೂರ್ವವೀಕ್ಷಿಸಲು ಯಾವುದೇ ವೀಕ್ಷಣೆಯಿಲ್ಲ</string>
     <string name="projects_design_preview_no_class">ಈ ವೀಕ್ಷಣೆಗೆ ಯಾವುದೇ ವರ್ಗವಿಲ್ಲ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ಪ್ರಾಜೆಕ್ಟ್ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="projects_activity_attached">ಲಗತ್ತಿಸಿದರು</string>
     <string name="projects_activity_commented">ಕಾಮೆಂಟ್ ಮಾಡಿದರು</string>
+    <string name="projects_activity_moved">ಈ ವಸ್ತುವನ್ನು ಸರಿಸಿದರು</string>
+    <string name="projects_activity_linked">ಲಿಂಕ್ ಸೇರಿಸಿದರು</string>
+    <string name="projects_activity_class">ವರ್ಗವನ್ನು ಬದಲಾಯಿಸಿದರು</string>
     <string name="projects_attachment_delete_confirm_message">ಈ ಲಗತ್ತನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="projects_attachment_delete_confirm_title">ಲಗತ್ತನ್ನು ಅಳಿಸುವುದೇ?</string>
     <string name="projects_settings_unsubscribe_section">ಯೋಜನೆಯ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡಿ</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ %2$s ಐಟಂಗಳನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</item>
     </plurals>
     <string name="projects_create_attachments_failed">ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
+    <string name="projects_activity_unknown">ಅಜ್ಞಾತ</string>
 </resources>

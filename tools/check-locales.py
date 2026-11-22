@@ -394,6 +394,18 @@ def check_overlays(module_dir: Path) -> list[str]:
     if not english:
         return []
     findings = []
+    # Android 7+ gives an English reader with no catalogue of its own (en-GB,
+    # en-CA, plain en) the nearest regional one before values/, so every key a
+    # regional overlay changes must also sit in values-en, spelt as values/
+    # spells it, or values-en-rUS reaches every English reader.
+    neutral = load_strings(res / "values-en")
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not OVERLAY_RE.match(vd.name) or vd.name == "values-en":
+            continue
+        for key, value in load_strings(vd).items():
+            if key in english and value != english[key] and neutral.get(key) != english[key]:
+                findings.append(f"{vd.name} {key}: values-en does not carry it as values/ does, "
+                                f"so every English reader is given {vd.name}'s text")
     for vd in sorted(res.iterdir()):
         if not vd.is_dir() or not OVERLAY_RE.match(vd.name):
             continue

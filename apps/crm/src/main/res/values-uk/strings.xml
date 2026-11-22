@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Немає відповідних об\'єктів</string>
     <string name="crm_field_yes">Так</string>
     <string name="crm_field_no">Ні</string>
-    <string name="crm_field_type_checkbox">Прапорець</string>
     <string name="crm_comment_empty">Коментарів ще немає</string>
     <string name="crm_comment_attach">Додати файли</string>
     <string name="crm_property_remove">Видалити</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Додати поле</string>
     <string name="crm_class_delete">Видалити клас</string>
     <string name="crm_class_delete_title">Видалити клас</string>
-    <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Число</string>
-    <string name="crm_field_type_user">Користувач</string>
-    <string name="crm_field_type_date">Дата</string>
-    <string name="crm_field_type_checklist">Контрольний список</string>
     <string name="crm_field_name">Назва</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Прапорці</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">вніс зміну</string>
     <string name="crm_activity_attached">прикріпив(ла)</string>
     <string name="crm_activity_commented">прокоментував(ла)</string>
+    <string name="crm_activity_moved">перемістив(ла)</string>
+    <string name="crm_activity_linked">звʼязав(ла)</string>
+    <string name="crm_activity_class">змінив(ла) клас</string>
     <string name="crm_attachment_empty">Немає вкладень</string>
     <string name="crm_attachment_default_name">вкладення</string>
     <string name="crm_attachment_delete_confirm_title">Видалити вкладення?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">За замовчуванням (читабельне)</string>
     <string name="crm_class_parents">Батьківські класи</string>
     <string name="crm_class_delete_message">Ви впевнені, що хочете видалити клас \"%1$s\"? Усі поля та їхні параметри також буде видалено.</string>
-    <string name="crm_field_type_enumerated">Перелік</string>
     <string name="crm_field_label">Поле: %1$s</string>
     <string name="crm_field_readonly">Лише для читання</string>
     <string name="crm_field_sortable">Можна сортувати</string>
     <string name="crm_field_filterable">Можна фільтрувати</string>
     <string name="crm_field_show_on_card">Показувати на картці</string>
-    <string name="crm_field_multi">Множинний вибір</string>
     <string name="crm_field_position">Позиція відображення</string>
     <string name="crm_field_position_header">Заголовок</string>
     <string name="crm_field_validation">Перевірка</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Поле кольору рамки</string>
     <string name="crm_views_filter_classes">Фільтрувати за класами</string>
     <string name="crm_views_by">за %1$s</string>
-    <string name="crm_views_sorted">сортовано %1$s</string>
     <string name="crm_design_preview_label">Попередній перегляд:</string>
     <string name="crm_design_preview_no_view">Немає подання для перегляду</string>
     <string name="crm_design_preview_no_class">Немає класу для цього подання</string>
@@ -299,4 +293,7 @@
         <item quantity="many">Не вдалося додати %1$s вкладень: %2$s</item>
         <item quantity="other">Не вдалося додати %1$s вкладення: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Батьківський</string>
+    <string name="crm_export_csv_id">Ідентифікатор</string>
+    <string name="crm_export_csv_class">Клас</string>
 </resources>

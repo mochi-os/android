@@ -372,4 +372,13 @@
     <string name="devices_username">Nume de utilizator</string>
     <string name="devices_warning">Copiază parola acum: nu mai poate fi afișată.</string>
     <string name="devices_unused">Nefolosit niciodată</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Număr</string>
+    <string name="field_type_enumerated">Enumerat</string>
+    <string name="field_type_user">Utilizator</string>
+    <string name="field_type_date">Dată</string>
+    <string name="field_type_checkbox">Casetă de selectare</string>
+    <string name="field_type_checklist">Listă de verificare</string>
+    <string name="view_list_sorted_ascending">sortat crescător</string>
+    <string name="view_list_sorted_descending">sortat descrescător</string>
 </resources>

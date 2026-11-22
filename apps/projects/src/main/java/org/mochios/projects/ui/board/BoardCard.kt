@@ -61,9 +61,14 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.FieldChoice
+import org.mochios.android.ui.components.FieldValue
+import org.mochios.android.ui.components.fieldDisplay
 import org.mochios.projects.R
+import org.mochios.projects.model.ProjectField
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.util.objectTitle
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 
@@ -112,17 +117,15 @@ fun BoardCard(
     val prefix = projectDetails?.project?.prefix ?: ""
     val cls = projectDetails?.classes?.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
-    val title = if (titleFieldId != null) {
-        obj.stringValue(titleFieldId).ifBlank { "$prefix-${obj.number}" }
-    } else {
-        obj.readable.ifBlank { "$prefix-${obj.number}" }
-    }
+    val title = objectTitle(obj, projectDetails?.classes.orEmpty(), prefix)
     val cardFields = viewModel.getCardFields(obj.objectClass)
+    // Moving a card is a write; a reader's cards neither drag nor offer a move.
+    val writable = viewModel.canWrite()
 
     // Drag-drop wiring — only top-level cards participate. Nested children stay
     // visual-only to avoid confusing dual-target situations (the parent and
     // the child both being valid drop targets at the same point).
-    val isDragSource = cardDragState != null && !isNested && cardIndexInColumn >= 0
+    val isDragSource = writable && cardDragState != null && !isNested && cardIndexInColumn >= 0
     val isBeingDragged by remember(cardDragState, obj.id, isDragSource) {
         derivedStateOf { isDragSource && cardDragState!!.isDragging(obj.id) }
     }
@@ -242,7 +245,7 @@ fun BoardCard(
                     if (hasChildren && collapsed) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = "${children.size}",
+                            text = LocalFormat.current.formatNumber(children.size),
                             fontSize = 10.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -250,7 +253,7 @@ fun BoardCard(
                     // Overflow menu — accessible fallback for the
                     // MoveObjectSheet now that long-press is reserved for
                     // drag-start.
-                    if (!isNested) {
+                    if (!isNested && writable) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Box {
                             MochiIconButton(
@@ -286,62 +289,25 @@ fun BoardCard(
                     val bodyFields = cardFields.filter {
                         it.id != columnFieldId && it.id != rowFieldId && it.id != titleFieldId
                     }
-                    val fieldsWithValues = bodyFields.filter { obj.stringValue(it.id).isNotBlank() }
-                    if (fieldsWithValues.isNotEmpty()) {
+                    // Each by its type, as the web's card: an option by name and
+                    // colour, a person by name, a date and a number in the
+                    // user's format, a checklist's progress, a ticked box by
+                    // its field's name. Only what shows takes a line.
+                    val format = LocalFormat.current
+                    val choice: (ProjectField) -> (String) -> FieldChoice? = { field ->
+                        { id ->
+                            viewModel.getOptionsForObject(obj.objectClass, field.id).find { option -> option.id == id }
+                                ?.let { option -> FieldChoice(option.name, option.colour) }
+                        }
+                    }
+                    val person: (String) -> String? = { id -> people.find { member -> member.id == id }?.name }
+                    val shown = bodyFields.mapNotNull { field ->
+                        fieldDisplay(field.fieldtype, obj.stringValue(field.id), format, field.name, choice(field), person)
+                    }
+                    if (shown.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(4.dp))
                         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                            fieldsWithValues.forEach { field ->
-                                val value = obj.stringValue(field.id)
-                                when (field.fieldtype) {
-                                    "enumerated" -> {
-                                        val options = viewModel.getOptionsForObject(obj.objectClass, field.id)
-                                        val opt = options.find { it.id == value }
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            if (opt != null && opt.colour.isNotBlank()) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .size(8.dp)
-                                                        .background(
-                                                            parseColor(opt.colour),
-                                                            MaterialTheme.shapes.extraSmall
-                                                        )
-                                                )
-                                                Spacer(modifier = Modifier.width(4.dp))
-                                            }
-                                            Text(
-                                                text = opt?.name ?: value,
-                                                fontSize = 10.sp,
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                                maxLines = 1,
-                                                overflow = TextOverflow.Ellipsis
-                                            )
-                                        }
-                                    }
-                                    "user" -> {
-                                        // Resolve the entity ID to a member name
-                                        // (matching the detail view and web);
-                                        // fall back to the raw value if unknown.
-                                        val resolved = people.find { it.id == value }
-                                            ?.name?.takeIf { it.isNotBlank() } ?: value
-                                        Text(
-                                            text = resolved,
-                                            fontSize = 10.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
-                                    else -> {
-                                        Text(
-                                            text = value.take(80),
-                                            fontSize = 10.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
-                                        )
-                                    }
-                                }
-                            }
+                            shown.forEach { display -> FieldValue(display, compact = true) }
                         }
                     }
                 }

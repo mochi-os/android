@@ -95,6 +95,25 @@ class Format(
         return formatDateInternal(date, zoneOf(zone))
     }
 
+    /**
+     * A calendar day in the user's date format, read in no zone: a date
+     * field's `2026-11-17` is the 17th for every reader, and a day before 1970
+     * is written like any other. Written at noon UTC, as [formatMonthYear] is.
+     */
+    fun formatDate(date: LocalDate): String =
+        formatDateInternal(Date(date.atTime(12, 0).toInstant(ZoneOffset.UTC).toEpochMilli()), TimeZone.getTimeZone("UTC"))
+
+    /**
+     * The calendar day a date field's [value] holds ([calendarDate]), a moment
+     * stored by an older writer read as its date in the user's zone.
+     */
+    fun calendarDate(value: String): LocalDate? =
+        org.mochios.android.i18n.calendarDate(value, timeZone.toZoneId())
+
+    /** Today's date in the user's zone, what a due date is compared with. */
+    fun today(now: Long = System.currentTimeMillis()): LocalDate =
+        java.time.Instant.ofEpochMilli(now).atZone(timeZone.toZoneId()).toLocalDate()
+
 
     /**
      * Epoch seconds → user-format time of day, without seconds: what a

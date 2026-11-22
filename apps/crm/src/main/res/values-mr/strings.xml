@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">जुळणारे ऑब्जेक्ट्स नाहीत</string>
     <string name="crm_field_yes">होय</string>
     <string name="crm_field_no">नाही</string>
-    <string name="crm_field_type_checkbox">चेकबॉक्स</string>
     <string name="crm_comment_empty">अद्याप कमेंट्स नाहीत</string>
     <string name="crm_comment_attach">फाइल्स संलग्न करा</string>
     <string name="crm_property_remove">काढा</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">फील्ड जोडा</string>
     <string name="crm_class_delete">वर्ग हटवा</string>
     <string name="crm_class_delete_title">वर्ग हटवा</string>
-    <string name="crm_field_type_text">मजकूर</string>
-    <string name="crm_field_type_number">संख्या</string>
-    <string name="crm_field_type_user">वापरकर्ता</string>
-    <string name="crm_field_type_date">तारीख</string>
-    <string name="crm_field_type_checklist">चेकलिस्ट</string>
     <string name="crm_field_name">नाव</string>
     <string name="crm_field_type">प्रकार</string>
     <string name="crm_field_flags">फ्लॅग्ज</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">बदल केला</string>
     <string name="crm_activity_attached">संलग्न केले</string>
     <string name="crm_activity_commented">टिप्पणी केली</string>
+    <string name="crm_activity_moved">हलवले</string>
+    <string name="crm_activity_linked">जोडले</string>
+    <string name="crm_activity_class">वर्ग बदलला</string>
     <string name="crm_attachment_empty">कोणतीही संलग्नके नाहीत</string>
     <string name="crm_attachment_default_name">संलग्नक</string>
     <string name="crm_attachment_delete_confirm_title">संलग्नक हटवायचे?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">डीफॉल्ट (वाचनीय)</string>
     <string name="crm_class_parents">मूळ वर्ग</string>
     <string name="crm_class_delete_message">तुम्हाला \"%1$s\" हा वर्ग हटवायचा आहे का? सर्व फील्ड आणि त्यांचे पर्याय देखील हटवले जातील.</string>
-    <string name="crm_field_type_enumerated">सूचीबद्ध</string>
     <string name="crm_field_label">फील्ड: %1$s</string>
     <string name="crm_field_readonly">केवळ-वाचनीय</string>
     <string name="crm_field_sortable">क्रमवारी लावण्यायोग्य</string>
     <string name="crm_field_filterable">फिल्टर करण्यायोग्य</string>
     <string name="crm_field_show_on_card">कार्डवर दाखवा</string>
-    <string name="crm_field_multi">बहु-निवड</string>
     <string name="crm_field_position">प्रदर्शन स्थान</string>
     <string name="crm_field_position_header">शीर्षलेख</string>
     <string name="crm_field_validation">वैधीकरण</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">किनार रंग फील्ड</string>
     <string name="crm_views_filter_classes">वर्गांनुसार फिल्टर करा</string>
     <string name="crm_views_by">%1$s नुसार</string>
-    <string name="crm_views_sorted">%1$s क्रमवारीत</string>
     <string name="crm_design_preview_label">पूर्वावलोकन:</string>
     <string name="crm_design_preview_no_view">पूर्वावलोकन करण्यासाठी दृश्य नाही</string>
     <string name="crm_design_preview_no_class">या दृश्यासाठी वर्ग नाही</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s संलग्नक जोडता आले नाही: %2$s</item>
         <item quantity="other">%1$s संलग्नके जोडता आली नाहीत: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">पॅरेंट</string>
+    <string name="crm_export_csv_id">आयडी</string>
+    <string name="crm_export_csv_class">वर्ग</string>
 </resources>

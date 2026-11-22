@@ -370,4 +370,13 @@
     <string name="devices_username">صارف نام</string>
     <string name="devices_warning">پاس ورڈ ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>
     <string name="devices_unused">کبھی استعمال نہیں ہوا</string>
+    <string name="field_type_text">متن</string>
+    <string name="field_type_number">نمبر</string>
+    <string name="field_type_enumerated">گنتی شدہ</string>
+    <string name="field_type_user">صارف</string>
+    <string name="field_type_date">تاریخ</string>
+    <string name="field_type_checkbox">چیک باکس</string>
+    <string name="field_type_checklist">چیک لسٹ</string>
+    <string name="view_list_sorted_ascending">صعودی ترتیب میں</string>
+    <string name="view_list_sorted_descending">نزولی ترتیب میں</string>
 </resources>

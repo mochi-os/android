@@ -105,7 +105,6 @@ internal fun viewListLabels(): ViewListLabels {
             resources.getString(R.string.crm_views_delete_message, viewName)
         },
         byField = { fieldName -> resources.getString(R.string.crm_views_by, fieldName) },
-        sortedBy = { direction -> resources.getString(R.string.crm_views_sorted, direction) },
         typeBoard = stringResource(R.string.crm_views_type_board),
         typeList = stringResource(R.string.crm_views_type_list),
         dragRow = stringResource(R.string.crm_drag_row),

@@ -34,7 +34,9 @@ import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.MochiTextField
@@ -105,7 +107,7 @@ fun AccessTab(
                 selected = { name -> resources.getString(R.string.crm_access_selected, name) }
             ),
             users = uiState.userSearchResults.map { user ->
-                AccessCandidate(user.id, user.name.ifBlank { user.id })
+                AccessCandidate(user.id, personName(user.name, fingerprint(user.id)))
             },
             groups = uiState.groups.map { group ->
                 AccessCandidate("@${group.id}", group.name, group.id)
@@ -153,7 +155,7 @@ fun AccessTab(
                             )
                             Spacer(Modifier.width(12.dp))
                             Text(
-                                person.name.ifBlank { person.id },
+                                personName(person.name, fingerprint(person.id)),
                                 style = MaterialTheme.typography.bodyLarge,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,

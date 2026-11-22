@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Keine passenden Objekte</string>
     <string name="crm_field_yes">Ja</string>
     <string name="crm_field_no">Nein</string>
-    <string name="crm_field_type_checkbox">Kontrollkästchen</string>
     <string name="crm_comment_empty">Noch keine Kommentare</string>
     <string name="crm_comment_attach">Dateien anhängen</string>
     <string name="crm_property_remove">Entfernen</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Feld hinzufügen</string>
     <string name="crm_class_delete">Klasse löschen</string>
     <string name="crm_class_delete_title">Klasse löschen</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Zahl</string>
-    <string name="crm_field_type_user">Benutzer</string>
-    <string name="crm_field_type_date">Datum</string>
-    <string name="crm_field_type_checklist">Checkliste</string>
     <string name="crm_field_name">Name</string>
     <string name="crm_field_type">Typ</string>
     <string name="crm_field_flags">Markierungen</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">hat eine Änderung vorgenommen</string>
     <string name="crm_activity_attached">hat angehängt</string>
     <string name="crm_activity_commented">hat kommentiert</string>
+    <string name="crm_activity_moved">hat verschoben</string>
+    <string name="crm_activity_linked">hat verknüpft</string>
+    <string name="crm_activity_class">hat die Klasse geändert</string>
     <string name="crm_attachment_empty">Keine Anhänge</string>
     <string name="crm_attachment_default_name">Anhang</string>
     <string name="crm_attachment_delete_confirm_title">Anhang löschen?</string>
@@ -199,13 +196,11 @@
     <string name="crm_class_title_field_default">Standard (lesbar)</string>
     <string name="crm_class_parents">Übergeordnete Klassen</string>
     <string name="crm_class_delete_message">Möchten Sie die Klasse \"%1$s\" wirklich löschen? Alle Felder und ihre Optionen werden ebenfalls gelöscht.</string>
-    <string name="crm_field_type_enumerated">Aufzählung</string>
     <string name="crm_field_label">Feld: %1$s</string>
     <string name="crm_field_readonly">Schreibgeschützt</string>
     <string name="crm_field_sortable">Sortierbar</string>
     <string name="crm_field_filterable">Filterbar</string>
     <string name="crm_field_show_on_card">Auf Karte anzeigen</string>
-    <string name="crm_field_multi">Mehrfachauswahl</string>
     <string name="crm_field_position">Anzeigeposition</string>
     <string name="crm_field_position_header">Kopfbereich</string>
     <string name="crm_field_validation">Validierung</string>
@@ -224,7 +219,6 @@
     <string name="crm_views_border_field">Rahmenfarbenfeld</string>
     <string name="crm_views_filter_classes">Auf Klassen filtern</string>
     <string name="crm_views_by">nach %1$s</string>
-    <string name="crm_views_sorted">sortiert %1$s</string>
     <string name="crm_design_preview_label">Vorschau:</string>
     <string name="crm_design_preview_no_view">Keine Ansicht zum Anzeigen</string>
     <string name="crm_design_preview_no_class">Keine Klasse für diese Ansicht</string>
@@ -297,4 +291,7 @@
         <item quantity="one">%1$s Anhang konnte nicht hinzugefügt werden: %2$s</item>
         <item quantity="other">%1$s Anhänge konnten nicht hinzugefügt werden: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Übergeordnet</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasse</string>
 </resources>

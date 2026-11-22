@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Babu objects masu daidai</string>
     <string name="crm_field_yes">Ee</string>
     <string name="crm_field_no">A\'a</string>
-    <string name="crm_field_type_checkbox">Akwatin zaɓi</string>
     <string name="crm_comment_empty">Babu sharhi tukuna</string>
     <string name="crm_comment_attach">Haɗa fayiloli</string>
     <string name="crm_property_remove">Cire</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Ƙara fili</string>
     <string name="crm_class_delete">Goge class</string>
     <string name="crm_class_delete_title">Goge class</string>
-    <string name="crm_field_type_text">Rubutu</string>
-    <string name="crm_field_type_number">Lamba</string>
-    <string name="crm_field_type_user">Mai amfani</string>
-    <string name="crm_field_type_date">Kwanan wata</string>
-    <string name="crm_field_type_checklist">Jerin dubawa</string>
     <string name="crm_field_name">Suna</string>
     <string name="crm_field_type">Nau\'i</string>
     <string name="crm_field_flags">Tutoci</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ya yi canji</string>
     <string name="crm_activity_attached">ya makala</string>
     <string name="crm_activity_commented">ya yi sharhi</string>
+    <string name="crm_activity_moved">ya matsar</string>
+    <string name="crm_activity_linked">ya haɗa</string>
+    <string name="crm_activity_class">ya canza aji</string>
     <string name="crm_attachment_empty">Babu abubuwan da aka haɗa</string>
     <string name="crm_attachment_default_name">abin da aka haɗa</string>
     <string name="crm_attachment_delete_confirm_title">A goge abin da aka makala?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Tsoho (mai karantawa)</string>
     <string name="crm_class_parents">Azuzuwan iyaye</string>
     <string name="crm_class_delete_message">Kana da tabbacin kana son goge ajin \"%1$s\"? Za a kuma goge dukan filaye da zaɓuɓɓukansu.</string>
-    <string name="crm_field_type_enumerated">An lissafa</string>
     <string name="crm_field_label">Filin: %1$s</string>
     <string name="crm_field_readonly">Karatu kawai</string>
     <string name="crm_field_sortable">Mai jeranawa</string>
     <string name="crm_field_filterable">Mai tacewa</string>
     <string name="crm_field_show_on_card">Nuna a kan kati</string>
-    <string name="crm_field_multi">Zaɓi-da-yawa</string>
     <string name="crm_field_position">Matsayin nuni</string>
     <string name="crm_field_position_header">Kanun labari</string>
     <string name="crm_field_validation">Tabbatarwa</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Filin launin iyaka</string>
     <string name="crm_views_filter_classes">Tace zuwa azuzuwa</string>
     <string name="crm_views_by">ta %1$s</string>
-    <string name="crm_views_sorted">an jera %1$s</string>
     <string name="crm_design_preview_label">Bita:</string>
     <string name="crm_design_preview_no_view">Babu ra\'ayi don bita</string>
     <string name="crm_design_preview_no_class">Babu aji don wannan ra\'ayin</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Ba a iya ƙara haɗewa %1$s ba: %2$s</item>
         <item quantity="other">Ba a iya ƙara haɗe-haɗe %1$s ba: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Iyaye</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Aji</string>
 </resources>

@@ -54,6 +54,10 @@
     <string name="crm_exporting">Preparing export…</string>
     <string name="crm_export_saved">CRM data saved</string>
     <string name="crm_export_failed">Couldn\'t save export</string>
+    <!-- The CSV export's first three column headings. -->
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Class</string>
+    <string name="crm_export_csv_parent">Parent</string>
     <string name="crm_untitled">Untitled</string>
 
     <!-- Sort &amp; filter -->
@@ -163,7 +167,6 @@
     <!-- Checkbox field -->
     <string name="crm_field_yes">Yes</string>
     <string name="crm_field_no">No</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
 
     <!-- Comments -->
     <string name="crm_comment_replying_to">Replying to %1$s</string>
@@ -189,6 +192,9 @@
     <string name="crm_activity_made_change">made a change</string>
     <string name="crm_activity_attached">attached</string>
     <string name="crm_activity_commented">commented</string>
+    <string name="crm_activity_moved">moved</string>
+    <string name="crm_activity_linked">linked</string>
+    <string name="crm_activity_class">changed class</string>
 
     <!-- Attachments -->
     <string name="crm_attachments">Attachments</string>
@@ -276,14 +282,6 @@
     <string name="crm_class_delete_title">Delete class</string>
     <string name="crm_class_delete_message">Are you sure you want to delete the class \"%1$s\"? All fields and their options will also be deleted.</string>
 
-    <!-- Field types -->
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Number</string>
-    <string name="crm_field_type_enumerated">Enumerated</string>
-    <string name="crm_field_type_user">User</string>
-    <string name="crm_field_type_date">Date</string>
-    <string name="crm_field_type_checklist">Checklist</string>
-
     <!-- Field detail -->
     <string name="crm_field_label">Field: %1$s</string>
     <string name="crm_field_name">Name</string>
@@ -294,7 +292,6 @@
     <string name="crm_field_sortable">Sortable</string>
     <string name="crm_field_filterable">Filterable</string>
     <string name="crm_field_show_on_card">Show on card</string>
-    <string name="crm_field_multi">Multi-select</string>
     <string name="crm_field_position">Display position</string>
     <string name="crm_field_position_default">Default</string>
     <string name="crm_field_position_header">Header</string>
@@ -316,7 +313,7 @@
     <!-- Options -->
     <string name="crm_option_add">Add option</string>
     <string name="crm_option_edit">Edit option</string>
-    <string name="crm_option_color">Color</string>
+    <string name="crm_option_color">Colour</string>
     <string name="crm_option_delete_title">Delete option</string>
     <string name="crm_option_delete_message">Are you sure you want to delete the option \"%1$s\"?</string>
 
@@ -333,7 +330,7 @@
     <string name="crm_views_type_list">List</string>
     <string name="crm_views_columns_field">Columns field</string>
     <string name="crm_views_rows_field">Rows field (swimlanes)</string>
-    <string name="crm_views_border_field">Border color field</string>
+    <string name="crm_views_border_field">Border colour field</string>
     <string name="crm_views_sort_by">Sort by</string>
     <string name="crm_views_direction">Direction</string>
     <string name="crm_views_direction_asc">Ascending</string>
@@ -343,7 +340,6 @@
     <string name="crm_views_sort_updated">Updated</string>
     <string name="crm_views_sort_rank">Rank</string>
     <string name="crm_views_by">by %1$s</string>
-    <string name="crm_views_sorted">sorted %1$s</string>
 
     <!-- Design preview -->
     <string name="crm_design_preview_label">Preview:</string>

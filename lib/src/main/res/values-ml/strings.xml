@@ -370,4 +370,13 @@
     <string name="devices_username">ഉപയോക്തൃനാമം</string>
     <string name="devices_warning">പാസ്‌വേഡ് ഇപ്പോൾ തന്നെ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
     <string name="devices_unused">ഒരിക്കലും ഉപയോഗിച്ചിട്ടില്ല</string>
+    <string name="field_type_text">ടെക്സ്റ്റ്</string>
+    <string name="field_type_number">സംഖ്യ</string>
+    <string name="field_type_enumerated">എണ്ണപ്പെട്ടത്</string>
+    <string name="field_type_user">ഉപയോക്താവ്</string>
+    <string name="field_type_date">തീയതി</string>
+    <string name="field_type_checkbox">ചെക്ക്ബോക്സ്</string>
+    <string name="field_type_checklist">ചെക്ക്‌ലിസ്റ്റ്</string>
+    <string name="view_list_sorted_ascending">ആരോഹണ ക്രമത്തിൽ അടുക്കിയത്</string>
+    <string name="view_list_sorted_descending">അവരോഹണ ക്രമത്തിൽ അടുക്കിയത്</string>
 </resources>

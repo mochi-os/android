@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Azikho izinto ezifanayo</string>
     <string name="crm_field_yes">Yebo</string>
     <string name="crm_field_no">Cha</string>
-    <string name="crm_field_type_checkbox">Ibhokisi lokumaka</string>
     <string name="crm_comment_empty">Awekho amazwana okwamanje</string>
     <string name="crm_comment_attach">Namathisela amafayela</string>
     <string name="crm_property_remove">Khipha</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Engeza inkambu</string>
     <string name="crm_class_delete">Susa iklasi</string>
     <string name="crm_class_delete_title">Susa iklasi</string>
-    <string name="crm_field_type_text">Umbhalo</string>
-    <string name="crm_field_type_number">Inombolo</string>
-    <string name="crm_field_type_user">Umsebenzisi</string>
-    <string name="crm_field_type_date">Usuku</string>
-    <string name="crm_field_type_checklist">Uhlu lokuhlola</string>
     <string name="crm_field_name">Igama</string>
     <string name="crm_field_type">Uhlobo</string>
     <string name="crm_field_flags">Amafulegi</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">wenze ushintsho</string>
     <string name="crm_activity_attached">unamathisele</string>
     <string name="crm_activity_commented">uphawulile</string>
+    <string name="crm_activity_moved">uhambisile</string>
+    <string name="crm_activity_linked">uxhumanisile</string>
+    <string name="crm_activity_class">ushintshe iklasi</string>
     <string name="crm_attachment_empty">Azikho izinamathiselo</string>
     <string name="crm_attachment_default_name">isinamathiselo</string>
     <string name="crm_attachment_delete_confirm_title">Susa isinamathiselo?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Okuzenzakalelayo (okufundekayo)</string>
     <string name="crm_class_parents">Amakilasi omzali</string>
     <string name="crm_class_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa ikilasi elithi \"%1$s\"? Zonke izinkambu nezinketho zazo nazo zizosulwa.</string>
-    <string name="crm_field_type_enumerated">Okubalwe ngokulandelana</string>
     <string name="crm_field_label">Inkambu: %1$s</string>
     <string name="crm_field_readonly">Okufundekayo kuphela</string>
     <string name="crm_field_sortable">Kungahlelwa</string>
     <string name="crm_field_filterable">Kungahlungwa</string>
     <string name="crm_field_show_on_card">Bonisa ekhadini</string>
-    <string name="crm_field_multi">Ukukhetha okuningi</string>
     <string name="crm_field_position">Indawo yokubonisa</string>
     <string name="crm_field_position_header">Isihloko</string>
     <string name="crm_field_validation">Ukuqinisekiswa</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Inkambu yombala womngcele</string>
     <string name="crm_views_filter_classes">Hlunga ngokuya ngamakilasi</string>
     <string name="crm_views_by">ngo-%1$s</string>
-    <string name="crm_views_sorted">kuhlelwe %1$s</string>
     <string name="crm_design_preview_label">Ukubuka kuqala:</string>
     <string name="crm_design_preview_no_view">Asikho isibuko esingabukwa kuqala</string>
     <string name="crm_design_preview_no_class">Alikho ikilasi laleso sibuko</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Akukwazekanga ukwengeza okunamathiselwe (%1$s): %2$s</item>
         <item quantity="other">Akukwazekanga ukwengeza okunamathiselwe (%1$s): %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Umzali</string>
+    <string name="crm_export_csv_id">I-ID</string>
+    <string name="crm_export_csv_class">Iklasi</string>
 </resources>

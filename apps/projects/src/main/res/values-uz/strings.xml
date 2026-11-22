@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Maydon qoʻshish</string>
     <string name="projects_class_delete">Sinfni oʻchirish</string>
     <string name="projects_class_delete_title">Sinfni oʻchirish</string>
-    <string name="projects_field_type_text">Matn</string>
-    <string name="projects_field_type_number">Raqam</string>
-    <string name="projects_field_type_user">Foydalanuvchi</string>
-    <string name="projects_field_type_date">Sana</string>
-    <string name="projects_field_type_checklist">Roʻyxat</string>
     <string name="projects_field_name">Nomi</string>
     <string name="projects_field_type">Tur</string>
     <string name="projects_field_flags">Bayroqlar</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Bu sinfdagi obyektlar uchun birlashtirish so\'rovlariga ruxsat berish.</string>
     <string name="projects_class_parents">Ota sinflar</string>
     <string name="projects_class_delete_message">\"%1$s\" sinfini o\'chirishni xohlaysizmi? Barcha maydonlar va ularning variantlari ham o\'chiriladi.</string>
-    <string name="projects_field_type_enumerated">Sanab o\'tilgan</string>
     <string name="projects_field_label">Maydon: %1$s</string>
     <string name="projects_field_readonly">Faqat oʻqish uchun</string>
     <string name="projects_field_sortable">Saralanadigan</string>
     <string name="projects_field_filterable">Filtrlanadigan</string>
     <string name="projects_field_show_on_card">Kartada ko\'rsatish</string>
-    <string name="projects_field_multi">Bir nechta tanlov</string>
     <string name="projects_field_position">Koʻrsatish joyi</string>
     <string name="projects_field_position_header">Sarlavha</string>
     <string name="projects_field_validation">Tekshirish</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Chegara rangi maydoni</string>
     <string name="projects_views_filter_classes">Sinflar bo\'yicha filtrlash</string>
     <string name="projects_views_by">%1$s bo\'yicha</string>
-    <string name="projects_views_sorted">%1$s bo\'yicha saralangan</string>
     <string name="projects_design_preview_label">Oldindan ko\'rish:</string>
     <string name="projects_design_preview_no_view">Oldindan ko\'rish uchun ko\'rinish yo\'q</string>
     <string name="projects_design_preview_no_class">Bu ko\'rinish uchun sinf yo\'q</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Loyiha yangilandi</string>
     <string name="projects_activity_attached">biriktirdi</string>
     <string name="projects_activity_commented">izoh qoldirdi</string>
+    <string name="projects_activity_moved">ushbu obyektni koʻchirdi</string>
+    <string name="projects_activity_linked">havola qoʻshdi</string>
+    <string name="projects_activity_class">sinfni oʻzgartirdi</string>
     <string name="projects_attachment_delete_confirm_message">Bu biriktirma butunlay o\'chiriladi.</string>
     <string name="projects_attachment_delete_confirm_title">Biriktirma o\'chirilsinmi?</string>
     <string name="projects_settings_unsubscribe_section">Loyiha obunasini bekor qilish</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" va uning ostidagi %2$s elementni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Biriktirib boʻlmadi: %1$s</string>
+    <string name="projects_activity_unknown">Nomaʼlum</string>
 </resources>

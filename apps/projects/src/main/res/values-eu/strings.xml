@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Gehitu eremua</string>
     <string name="projects_class_delete">Ezabatu klasea</string>
     <string name="projects_class_delete_title">Ezabatu klasea</string>
-    <string name="projects_field_type_text">Testua</string>
-    <string name="projects_field_type_number">Zenbakia</string>
-    <string name="projects_field_type_user">Erabiltzailea</string>
-    <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Egiaztapen-zerrenda</string>
     <string name="projects_field_name">Izena</string>
     <string name="projects_field_type">Mota</string>
     <string name="projects_field_flags">Banderak</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Baimendu bateratze-eskaerak klase honetako objektuetan.</string>
     <string name="projects_class_parents">Klase gurasoak</string>
     <string name="projects_class_delete_message">Ziur \"%1$s\" klasea ezabatu nahi duzula? Eremu guztiak eta haien aukerak ere ezabatuko dira.</string>
-    <string name="projects_field_type_enumerated">Zerrendatua</string>
     <string name="projects_field_label">Eremua: %1$s</string>
     <string name="projects_field_readonly">Irakurtzeko soilik</string>
     <string name="projects_field_sortable">Ordenagarria</string>
     <string name="projects_field_filterable">Iragazgarria</string>
     <string name="projects_field_show_on_card">Erakutsi txartelean</string>
-    <string name="projects_field_multi">Hautaketa anitza</string>
     <string name="projects_field_position">Bistaratze-kokapena</string>
     <string name="projects_field_position_header">Goiburua</string>
     <string name="projects_field_validation">Balidazioa</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Ertzaren kolorearen eremua</string>
     <string name="projects_views_filter_classes">Iragazi klaseetara</string>
     <string name="projects_views_by">%1$s arabera</string>
-    <string name="projects_views_sorted">%1$s ordenatuta</string>
     <string name="projects_design_preview_label">Aurrebista:</string>
     <string name="projects_design_preview_no_view">Ez dago ikuspegirik aurrebistarako</string>
     <string name="projects_design_preview_no_class">Ez dago klaserik ikuspegi honentzat</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proiektua eguneratu da</string>
     <string name="projects_activity_attached">erantsi du</string>
     <string name="projects_activity_commented">iruzkindu du</string>
+    <string name="projects_activity_moved">objektu hau lekuz aldatu du</string>
+    <string name="projects_activity_linked">esteka bat gehitu du</string>
+    <string name="projects_activity_class">klasea aldatu du</string>
     <string name="projects_attachment_delete_confirm_message">Eranskin hau betiko ezabatuko da.</string>
     <string name="projects_attachment_delete_confirm_title">Eranskina ezabatu?</string>
     <string name="projects_settings_unsubscribe_section">Utzi proiektuaren harpidetza</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Ziur al zaude \"%1$s\" eta haren azpiko %2$s elementu ezabatu nahi dituzula? Ekintza hau ezin da desegin.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Ezin izan da erantsi: %1$s</string>
+    <string name="projects_activity_unknown">Ezezaguna</string>
 </resources>

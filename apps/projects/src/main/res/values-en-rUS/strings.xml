@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="projects_option_color">Color</string>
+    <string name="projects_views_border_field">Border color field</string>
+</resources>

@@ -56,6 +56,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -138,10 +140,7 @@ fun BoardView(
 
     // Group objects by column value
     val objectsByColumn = columnOptions.associate { option ->
-        option.id to filteredObjects.filter { obj ->
-            obj.stringValue(columnFieldId) == option.id ||
-                obj.listValue(columnFieldId).contains(option.id)
-        }
+        option.id to filteredObjects.filter { obj -> obj.stringValue(columnFieldId) == option.id }
     }
 
     // Add unassigned column
@@ -182,6 +181,7 @@ fun BoardView(
     // menu to collapse it from, as on the web.
     val collapsedByField by viewModel.collapsedColumns.collectAsState()
     val collapsedIds = collapsedByField[columnFieldId].orEmpty()
+    val designable = viewModel.canDesign()
 
     PagedZoomableBoard(
         pageCount = pages.size,
@@ -238,15 +238,16 @@ fun BoardView(
                     }
                 }
             },
-            columnReorderEnabled = !isUnassigned,
+            // Reordering, renaming and deleting a column change the design.
+            columnReorderEnabled = !isUnassigned && designable,
             onObjectClick = onObjectClick,
-            onRename = if (isUnassigned) null else {
+            onRename = if (isUnassigned || !designable) null else {
                 { newName -> viewModel.renameColumnOption(columnFieldId, columnOption.id, newName) }
             },
             // Only an empty column, counting every object that holds the
             // option and not only the cards shown, and only for a designer:
             // the server leaves the objects of a deleted option holding it.
-            onDelete = if (isUnassigned || !viewModel.canDesign() ||
+            onDelete = if (isUnassigned || !designable ||
                 viewModel.columnHolds(columnFieldId, columnOption.id)
             ) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
@@ -254,7 +255,7 @@ fun BoardView(
             onCollapse = if (isUnassigned) null else {
                 { viewModel.toggleColumnCollapsed(columnFieldId, columnOption.id) }
             },
-            onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
+            onCreateInColumn = if (onCreateObject != null && !isUnassigned && viewModel.canCreate()) {
                 { onCreateObject(mapOf(columnFieldId to columnOption.id)) }
             } else null,
         )
@@ -263,14 +264,15 @@ fun BoardView(
 
 
 /**
- * A column's card count, as its header and its strip show it. While a filter is
- * on it reads "shown/total", so the column still tells you how much it holds.
+ * A column's card count, as its header and its strip show it, in the user's
+ * number format. While a filter is on it reads "shown/total", so the column
+ * still tells you how much it holds.
  */
-private fun columnCount(objects: List<ProjectObject>, visibleIds: Set<String>?): String =
+internal fun columnCount(objects: List<ProjectObject>, visibleIds: Set<String>?, format: Format): String =
     if (visibleIds == null) {
-        objects.size.toString()
+        format.formatNumber(objects.size)
     } else {
-        "${objects.count { obj -> obj.id in visibleIds }}/${objects.size}"
+        "${format.formatNumber(objects.count { obj -> obj.id in visibleIds })}/${format.formatNumber(objects.size)}"
     }
 
 /**
@@ -290,7 +292,7 @@ private fun CollapsedColumn(
     val itemId = "column:${option.id}"
     CollapsedBoardColumn(
         name = option.name,
-        count = columnCount(objects, visibleIds),
+        count = columnCount(objects, visibleIds, LocalFormat.current),
         colour = option.colour.takeIf { it.isNotBlank() }?.let { parseColor(it) },
         highlighted = cardDragState.draggingItemId != null && cardDragState.targetItemId == itemId,
         onExpand = { viewModel.toggleColumnCollapsed(columnFieldId, option.id) },
@@ -377,10 +379,7 @@ private fun BoardColumn(
             emptyList()
         } else {
             rowOptions.map { rowOption ->
-                rowOption to viewModel.sortObjects(objects.filter { obj ->
-                    obj.stringValue(rowFieldId) == rowOption.id ||
-                        obj.listValue(rowFieldId).contains(rowOption.id)
-                })
+                rowOption to viewModel.sortObjects(objects.filter { obj -> obj.stringValue(rowFieldId) == rowOption.id })
             }
         }
     }
@@ -474,7 +473,7 @@ private fun BoardColumn(
                     .padding(horizontal = 8.dp, vertical = 2.dp)
             ) {
                 Text(
-                    text = columnCount(objects, visibleIds),
+                    text = columnCount(objects, visibleIds, LocalFormat.current),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

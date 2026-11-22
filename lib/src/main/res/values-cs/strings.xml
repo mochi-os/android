@@ -373,4 +373,13 @@
     <string name="devices_username">Uživatelské jméno</string>
     <string name="devices_warning">Zkopírujte heslo nyní: znovu ho nelze zobrazit.</string>
     <string name="devices_unused">Nikdy nepoužito</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Číslo</string>
+    <string name="field_type_enumerated">Výčet</string>
+    <string name="field_type_user">Uživatel</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Zaškrtávací pole</string>
+    <string name="field_type_checklist">Checklist</string>
+    <string name="view_list_sorted_ascending">seřazeno vzestupně</string>
+    <string name="view_list_sorted_descending">seřazeno sestupně</string>
 </resources>

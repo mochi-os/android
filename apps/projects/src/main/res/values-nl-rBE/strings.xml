@@ -97,11 +97,6 @@
     <string name="projects_class_add_field">Veld toevoegen</string>
     <string name="projects_class_delete">Klasse verwijderen</string>
     <string name="projects_class_delete_title">Klasse verwijderen</string>
-    <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">Getal</string>
-    <string name="projects_field_type_user">Gebruiker</string>
-    <string name="projects_field_type_date">Datum</string>
-    <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Naam</string>
     <string name="projects_field_type">Type</string>
     <string name="projects_field_flags">Vlaggen</string>
@@ -222,13 +217,11 @@
     <string name="projects_class_merge_requests_description">Samenvoegverzoeken toestaan op objecten van deze klasse.</string>
     <string name="projects_class_parents">Bovenliggende klassen</string>
     <string name="projects_class_delete_message">Weet u zeker dat u de klasse \"%1$s\" wilt verwijderen? Alle velden en hun opties worden ook verwijderd.</string>
-    <string name="projects_field_type_enumerated">Opgesomd</string>
     <string name="projects_field_label">Veld: %1$s</string>
     <string name="projects_field_readonly">Alleen-lezen</string>
     <string name="projects_field_sortable">Sorteerbaar</string>
     <string name="projects_field_filterable">Filterbaar</string>
     <string name="projects_field_show_on_card">Weergeven op kaart</string>
-    <string name="projects_field_multi">Meerkeuze</string>
     <string name="projects_field_position">Weergavepositie</string>
     <string name="projects_field_position_header">Koptekst</string>
     <string name="projects_field_validation">Validatie</string>
@@ -247,7 +240,6 @@
     <string name="projects_views_border_field">Veld voor randkleur</string>
     <string name="projects_views_filter_classes">Filteren op klassen</string>
     <string name="projects_views_by">op %1$s</string>
-    <string name="projects_views_sorted">gesorteerd %1$s</string>
     <string name="projects_design_preview_label">Voorbeeld:</string>
     <string name="projects_design_preview_no_view">Geen weergave om te bekijken</string>
     <string name="projects_design_preview_no_class">Geen klasse voor deze weergave</string>
@@ -317,4 +309,5 @@
         <item quantity="one">Weet u zeker dat u \"%1$s\" en het %2$s item eronder wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</item>
         <item quantity="other">Weet u zeker dat u \"%1$s\" en de %2$s items eronder wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</item>
     </plurals>
+    <string name="projects_activity_unknown">Onbekend</string>
 </resources>

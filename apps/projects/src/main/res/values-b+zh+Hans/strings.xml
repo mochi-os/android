@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">添加字段</string>
     <string name="projects_class_delete">删除类</string>
     <string name="projects_class_delete_title">删除类</string>
-    <string name="projects_field_type_text">文本</string>
-    <string name="projects_field_type_number">数字</string>
-    <string name="projects_field_type_user">用户</string>
-    <string name="projects_field_type_date">日期</string>
-    <string name="projects_field_type_checklist">清单</string>
     <string name="projects_field_name">名称</string>
     <string name="projects_field_type">类型</string>
     <string name="projects_field_flags">标记</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">允许对此类对象提交合并请求。</string>
     <string name="projects_class_parents">父类</string>
     <string name="projects_class_delete_message">确定要删除类\"%1$s\"吗?所有字段及其选项也将被删除。</string>
-    <string name="projects_field_type_enumerated">枚举</string>
     <string name="projects_field_label">字段:%1$s</string>
     <string name="projects_field_readonly">只读</string>
     <string name="projects_field_sortable">可排序</string>
     <string name="projects_field_filterable">可筛选</string>
     <string name="projects_field_show_on_card">在卡片上显示</string>
-    <string name="projects_field_multi">多选</string>
     <string name="projects_field_position">显示位置</string>
     <string name="projects_field_position_header">标题栏</string>
     <string name="projects_field_validation">验证</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">边框颜色字段</string>
     <string name="projects_views_filter_classes">筛选到类</string>
     <string name="projects_views_by">按 %1$s</string>
-    <string name="projects_views_sorted">排序 %1$s</string>
     <string name="projects_design_preview_label">预览:</string>
     <string name="projects_design_preview_no_view">没有可预览的视图</string>
     <string name="projects_design_preview_no_class">此视图没有类</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">项目已更新</string>
     <string name="projects_activity_attached">添加了附件</string>
     <string name="projects_activity_commented">发表了评论</string>
+    <string name="projects_activity_moved">移动了此对象</string>
+    <string name="projects_activity_linked">添加了链接</string>
+    <string name="projects_activity_class">更改了类</string>
     <string name="projects_attachment_delete_confirm_message">此附件将被永久删除。</string>
     <string name="projects_attachment_delete_confirm_title">删除附件?</string>
     <string name="projects_settings_unsubscribe_section">退订项目</string>
@@ -338,4 +333,5 @@
         <item quantity="other">确定要删除 \"%1$s\" 及其下的 %2$s 项吗?此操作无法撤销。</item>
     </plurals>
     <string name="projects_create_attachments_failed">无法附加：%1$s</string>
+    <string name="projects_activity_unknown">未知</string>
 </resources>

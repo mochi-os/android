@@ -369,4 +369,13 @@
     <string name="devices_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="devices_warning">ចម្លងពាក្យសម្ងាត់ឥឡូវនេះ៖ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
     <string name="devices_unused">មិនដែលប្រើ</string>
+    <string name="field_type_text">អត្ថបទ</string>
+    <string name="field_type_number">លេខ</string>
+    <string name="field_type_enumerated">បានរាប់បញ្ជី</string>
+    <string name="field_type_user">អ្នកប្រើប្រាស់</string>
+    <string name="field_type_date">កាលបរិច្ឆេទ</string>
+    <string name="field_type_checkbox">ប្រអប់ធីក</string>
+    <string name="field_type_checklist">បញ្ជីពិនិត្យ</string>
+    <string name="view_list_sorted_ascending">តម្រៀបតាមលំដាប់កើន</string>
+    <string name="view_list_sorted_descending">តម្រៀបតាមលំដាប់ថយ</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Janiw kikip objetonakax utjkiti</string>
     <string name="crm_field_yes">Jisa</string>
     <string name="crm_field_no">Janiwa</string>
-    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_empty">Janira comentarionaka</string>
     <string name="crm_comment_attach">Archivonak apkataña</string>
     <string name="crm_property_remove">Aparma</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Campo yapxataña</string>
     <string name="crm_class_delete">Clase chhaqtayaña</string>
     <string name="crm_class_delete_title">Clase chhaqtayaña</string>
-    <string name="crm_field_type_text">Texto</string>
-    <string name="crm_field_type_number">Jakhu</string>
-    <string name="crm_field_type_user">Apnaqiri</string>
-    <string name="crm_field_type_date">Uru</string>
-    <string name="crm_field_type_checklist">Comprobación lista</string>
     <string name="crm_field_name">Suti</string>
     <string name="crm_field_type">Kasta</string>
     <string name="crm_field_flags">Banderanaka</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">mä mayjt\'awi lurawayi</string>
     <string name="crm_activity_attached">chinuqata</string>
     <string name="crm_activity_commented">comentawayi</string>
+    <string name="crm_activity_moved">astawayi</string>
+    <string name="crm_activity_linked">chikt\'awayi</string>
+    <string name="crm_activity_class">clase mayjt\'ayawayi</string>
     <string name="crm_attachment_empty">Janiw adjuntonakax utjkiti</string>
     <string name="crm_attachment_default_name">adjunto</string>
     <string name="crm_attachment_delete_confirm_title">¿Adjunto chhaqtayañati?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Alaxar apaña</string>
     <string name="crm_class_move_down">Aynachar apaña</string>
     <string name="crm_class_delete_message">¿Chiqpach \"%1$s\" clase chhaqtayañ muntati? Taqi camponaka opcionanakapampiw chhaqtayatäni.</string>
-    <string name="crm_field_type_enumerated">Jakhuyata</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_readonly">Ullañatakiki</string>
     <string name="crm_field_sortable">Siqichasiñjama</string>
     <string name="crm_field_filterable">Filtrasiñjama</string>
     <string name="crm_field_show_on_card">Tarjetan uñacht\'ayaña</string>
-    <string name="crm_field_multi">Walja ajllita</string>
     <string name="crm_field_position">Uñacht\'ayañ chiqa</string>
     <string name="crm_field_position_header">P\'iqi</string>
     <string name="crm_field_position_body">Contenido</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Jach\'at jisk\'aru</string>
     <string name="crm_views_filter_classes">Clasenakar filtraña</string>
     <string name="crm_views_by">%1$s tuqi</string>
-    <string name="crm_views_sorted">%1$s siqichata</string>
     <string name="crm_design_preview_label">Nayraqat uñjawi:</string>
     <string name="crm_design_preview_no_view">Nayraqat uñjañatakix janiw vista utjkiti</string>
     <string name="crm_design_preview_no_class">Aka vistatakix janiw clasex utjkiti</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s adjuntonakax janiw yapxatañ atkänti: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Awki</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Clase</string>
 </resources>

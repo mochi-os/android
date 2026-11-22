@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Přidat pole</string>
     <string name="projects_class_delete">Smazat třídu</string>
     <string name="projects_class_delete_title">Smazat třídu</string>
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Číslo</string>
-    <string name="projects_field_type_user">Uživatel</string>
-    <string name="projects_field_type_date">Datum</string>
-    <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Název</string>
     <string name="projects_field_type">Typ</string>
     <string name="projects_field_flags">Příznaky</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Posunout nahoru</string>
     <string name="projects_class_move_down">Posunout dolů</string>
     <string name="projects_class_delete_message">Opravdu chcete smazat třídu \"%1$s\"? Všechna pole a jejich možnosti budou rovněž smazány.</string>
-    <string name="projects_field_type_enumerated">Výčet</string>
     <string name="projects_field_label">Pole: %1$s</string>
     <string name="projects_field_readonly">Pouze pro čtení</string>
     <string name="projects_field_sortable">Lze řadit</string>
     <string name="projects_field_filterable">Lze filtrovat</string>
     <string name="projects_field_show_on_card">Zobrazit na kartě</string>
-    <string name="projects_field_multi">Vícenásobný výběr</string>
     <string name="projects_field_position">Pozice zobrazení</string>
     <string name="projects_field_position_header">Záhlaví</string>
     <string name="projects_field_position_body">Obsah</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Sestupně</string>
     <string name="projects_views_filter_classes">Filtrovat na třídy</string>
     <string name="projects_views_by">podle %1$s</string>
-    <string name="projects_views_sorted">seřazeno %1$s</string>
     <string name="projects_design_preview_label">Náhled:</string>
     <string name="projects_design_preview_no_view">Žádné zobrazení k náhledu</string>
     <string name="projects_design_preview_no_class">Žádná třída pro toto zobrazení</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekt aktualizován</string>
     <string name="projects_activity_attached">přiložil(a)</string>
     <string name="projects_activity_commented">okomentoval(a)</string>
+    <string name="projects_activity_moved">přesunul(a) tento objekt</string>
+    <string name="projects_activity_linked">přidal(a) odkaz</string>
+    <string name="projects_activity_class">změnil(a) třídu</string>
     <string name="projects_attachment_delete_confirm_message">Tato příloha bude trvale smazána.</string>
     <string name="projects_attachment_delete_confirm_title">Smazat přílohu?</string>
     <string name="projects_settings_unsubscribe_section">Odhlásit odběr projektu</string>
@@ -341,4 +336,5 @@
         <item quantity="other">Opravdu chcete smazat „%1$s“ a %2$s položek pod ní? Tuto akci nelze vrátit zpět.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nepodařilo se připojit: %1$s</string>
+    <string name="projects_activity_unknown">Neznámý</string>
 </resources>

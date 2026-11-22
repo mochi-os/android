@@ -370,4 +370,13 @@
     <string name="devices_username">Apnaqiri suti</string>
     <string name="devices_warning">Contraseña jichha copiam: janiw wasitat uñachayañjamakiti.</string>
     <string name="devices_unused">Janiw apnaqatäkiti</string>
+    <string name="field_type_text">Texto</string>
+    <string name="field_type_number">Jakhu</string>
+    <string name="field_type_enumerated">Jakhuyata</string>
+    <string name="field_type_user">Apnaqiri</string>
+    <string name="field_type_date">Uru</string>
+    <string name="field_type_checkbox">Casilla</string>
+    <string name="field_type_checklist">Comprobación lista</string>
+    <string name="view_list_sorted_ascending">jisk\'at jach\'aru siqichata</string>
+    <string name="view_list_sorted_descending">jach\'at jisk\'aru siqichata</string>
 </resources>

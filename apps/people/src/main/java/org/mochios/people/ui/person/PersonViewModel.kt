@@ -23,12 +23,13 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.sync.ContactProperty
+import org.mochios.android.util.fingerprint
+import org.mochios.android.util.isFingerprint
 import org.mochios.people.R
 import org.mochios.people.api.ContactsListResponse
 import org.mochios.people.api.StandingResponse
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.repository.PeopleRepository
-import java.security.MessageDigest
 import javax.inject.Inject
 
 sealed class FriendState {
@@ -74,26 +75,13 @@ fun friendState(standing: StandingResponse, person: String, me: String? = null):
     return FriendState.NotFriend
 }
 
-/** The letters core writes an entity's fingerprint in. */
-private const val FINGERPRINT_LETTERS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz"
-
-/** The nine-letter fingerprint core derives from an entity id. */
-internal fun fingerprintOf(id: String): String {
-    val hash = MessageDigest.getInstance("SHA-256").digest(id.toByteArray())
-    return String(CharArray(9) { index -> FINGERPRINT_LETTERS[(hash[index].toInt() and 0xff) % FINGERPRINT_LETTERS.length] })
-}
-
-/** A route that names a person by fingerprint rather than by id. */
-internal fun isFingerprint(route: String): Boolean =
-    route.length == 9 && route.all { it in FINGERPRINT_LETTERS }
-
 /**
  * Whether [info] is the person [route] asked for: their id, or the
  * fingerprint derived from it. The answer is their server's, relayed, so it
  * is the one place another identity could be named.
  */
 internal fun answersFor(route: String, info: PersonInformation): Boolean =
-    info.id.isNotBlank() && (info.id == route || (isFingerprint(route) && fingerprintOf(info.id) == route))
+    info.id.isNotBlank() && (info.id == route || (isFingerprint(route) && fingerprint(info.id) == route))
 
 /**
  * Where the viewer stands with a person, read off the contacts response: a

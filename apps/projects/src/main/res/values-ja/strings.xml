@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">フィールドを追加</string>
     <string name="projects_class_delete">クラスを削除</string>
     <string name="projects_class_delete_title">クラスを削除</string>
-    <string name="projects_field_type_text">テキスト</string>
-    <string name="projects_field_type_number">数値</string>
-    <string name="projects_field_type_user">ユーザー</string>
-    <string name="projects_field_type_date">日付</string>
-    <string name="projects_field_type_checklist">チェックリスト</string>
     <string name="projects_field_name">名前</string>
     <string name="projects_field_type">タイプ</string>
     <string name="projects_field_flags">フラグ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">このクラスのオブジェクトでマージリクエストを許可します。</string>
     <string name="projects_class_parents">親クラス</string>
     <string name="projects_class_delete_message">クラス \"%1$s\" を削除してもよろしいですか?すべてのフィールドとそのオプションも削除されます。</string>
-    <string name="projects_field_type_enumerated">列挙型</string>
     <string name="projects_field_label">フィールド: %1$s</string>
     <string name="projects_field_readonly">読み取り専用</string>
     <string name="projects_field_sortable">並べ替え可能</string>
     <string name="projects_field_filterable">フィルター可能</string>
     <string name="projects_field_show_on_card">カードに表示</string>
-    <string name="projects_field_multi">複数選択</string>
     <string name="projects_field_position">表示位置</string>
     <string name="projects_field_position_header">ヘッダー</string>
     <string name="projects_field_validation">検証</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">枠線色フィールド</string>
     <string name="projects_views_filter_classes">クラスでフィルター</string>
     <string name="projects_views_by">%1$s 別</string>
-    <string name="projects_views_sorted">%1$s で並び替え</string>
     <string name="projects_design_preview_label">プレビュー:</string>
     <string name="projects_design_preview_no_view">プレビューするビューがありません</string>
     <string name="projects_design_preview_no_class">このビューにはクラスがありません</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">プロジェクトを更新しました</string>
     <string name="projects_activity_attached">添付しました</string>
     <string name="projects_activity_commented">コメントしました</string>
+    <string name="projects_activity_moved">このオブジェクトを移動しました</string>
+    <string name="projects_activity_linked">リンクを追加しました</string>
+    <string name="projects_activity_class">クラスを変更しました</string>
     <string name="projects_attachment_delete_confirm_message">この添付ファイルは完全に削除されます。</string>
     <string name="projects_attachment_delete_confirm_title">添付ファイルを削除しますか?</string>
     <string name="projects_settings_unsubscribe_section">プロジェクトの購読を解除</string>
@@ -338,4 +333,5 @@
         <item quantity="other">「%1$s」とその下にある%2$s 件の項目を削除しますか？この操作は取り消せません。</item>
     </plurals>
     <string name="projects_create_attachments_failed">添付できませんでした：%1$s</string>
+    <string name="projects_activity_unknown">不明</string>
 </resources>

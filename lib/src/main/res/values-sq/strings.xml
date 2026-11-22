@@ -370,4 +370,13 @@
     <string name="devices_username">Emri i përdoruesit</string>
     <string name="devices_warning">Kopjojeni fjalëkalimin tani: nuk mund të shfaqet sërish.</string>
     <string name="devices_unused">Nuk është përdorur kurrë</string>
+    <string name="field_type_text">Teksti</string>
+    <string name="field_type_number">Numri</string>
+    <string name="field_type_enumerated">E numëruar</string>
+    <string name="field_type_user">Përdoruesi</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Kuti zgjedhjeje</string>
+    <string name="field_type_checklist">Listë kontrolli</string>
+    <string name="view_list_sorted_ascending">renditur në rritje</string>
+    <string name="view_list_sorted_descending">renditur në zbritje</string>
 </resources>

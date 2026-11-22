@@ -86,6 +86,8 @@ fun CreateObjectScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val upload by viewModel.upload.collectAsState()
+    // Held by the view model, so a rotation or a theme change keeps it.
+    val form by viewModel.form.collectAsState()
     val details = uiState.details
 
     val classes = details?.classes.orEmpty()
@@ -130,11 +132,9 @@ fun CreateObjectScreen(
     // Held rather than derived, because the type picker below writes to it. The
     // opening value can only be known once the design has loaded, so it is
     // seeded on arrival and left alone after that.
-    var selectedClassId by remember { mutableStateOf("") }
+    val selectedClassId = form.classId
     LaunchedEffect(initialClassId) {
-        if (selectedClassId.isBlank()) {
-            selectedClassId = initialClassId
-        }
+        viewModel.seedClass(initialClassId)
     }
     var classExpanded by remember { mutableStateOf(false) }
 
@@ -157,7 +157,7 @@ fun CreateObjectScreen(
                 .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { obj -> parentLabel(obj) })
         }
     }
-    var selectedParentId by remember { mutableStateOf<String?>(null) }
+    val selectedParentId = form.parent
     var parentExpanded by remember { mutableStateOf(false) }
 
     // A class that may sit at the top level offers a "none" entry and opens on
@@ -168,61 +168,35 @@ fun CreateObjectScreen(
     val required = parentRequired(hierarchy, selectedClassId)
     // A copy opens under its original's parent, while its class can take it.
     LaunchedEffect(source) {
-        if (selectedParentId == null) selectedParentId = source?.parent?.takeIf { id -> id.isNotBlank() }
+        viewModel.seedParent(source?.parent)
     }
     LaunchedEffect(selectedClassId, parentCandidates) {
-        selectedParentId = parentChoice(selectedParentId, parentCandidates, required)
+        viewModel.selectParent(parentChoice(viewModel.form.value.parent, parentCandidates, required))
     }
 
     // Per-field values entered on the form, keyed by field id. The title
     // field's value is sent as the object's title; the rest go as the
     // create's values, in the same request.
-    val fieldValues = remember { mutableStateMapOf<String, String>() }
+    val fieldValues = form.values
     val classFields = fields[selectedClassId].orEmpty().sortedBy { field -> field.rank }
     val classOptions = options[selectedClassId].orEmpty()
     val titleFieldId = classes.firstOrNull { cls -> cls.id == selectedClassId }?.title.orEmpty()
 
-    // Files picked to attach on create.
-    val pendingFiles = remember { mutableStateListOf<Uri>() }
-    // The attachments a copy carries over, which Create copies; any may be
-    // taken off first.
-    val copies = remember { mutableStateListOf<Attachment>() }
-    var copiesSeeded by remember { mutableStateOf(false) }
-    LaunchedEffect(uiState.copied) {
-        if (!copiesSeeded && uiState.copied.isNotEmpty()) {
-            copies.addAll(uiState.copied)
-            copiesSeeded = true
-        }
-    }
+    // Files picked to attach on create, and the attachments a copy carries
+    // over, which Create copies; any may be taken off first.
+    val pendingFiles = form.files
+    val copies = form.copies
     val defaultName = stringResource(R.string.crm_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
     ) { uris: List<Uri> ->
-        pendingFiles.addAll(uris)
+        viewModel.addFiles(uris)
     }
 
-    // Seed defaults when the selected class changes: clear prior values, then
-    // auto-select the first option of required enumerated fields. The grouping
-    // field is deliberately not pre-filled - a board column's "+" sets it via
-    // presetValues.
+    // Seed the values when the selected class changes: the presets, then the
+    // first option of each required enumerated field.
     LaunchedEffect(selectedClassId, preset) {
-        fieldValues.clear()
-        // Presets first (a board column's "+" sets its stage, a copy every
-        // value); the required-field defaults below fill only what they left
-        // blank.
-        preset.forEach { (fieldId, value) ->
-            if (viewModel.usableValue(selectedClassId, fieldId, value)) {
-                fieldValues[fieldId] = value
-            }
-        }
-        fields[selectedClassId].orEmpty().forEach { field ->
-            if (field.fieldtype == "enumerated" && field.isRequired &&
-                fieldValues[field.id].isNullOrBlank()
-            ) {
-                val fieldOptions = classOptions[field.id].orEmpty()
-                if (fieldOptions.isNotEmpty()) fieldValues[field.id] = fieldOptions.first().id
-            }
-        }
+        viewModel.seedValues(selectedClassId, preset)
     }
 
     val missingRequired = classFields.any { field ->
@@ -311,7 +285,7 @@ fun CreateObjectScreen(
                                     title = title,
                                     parent = selectedParentId,
                                     initialValues = initialValues,
-                                    uris = pendingFiles.toList(),
+                                    uris = pendingFiles,
                                     copies = copies.map { attachment -> attachment.id },
                                 )
                             },
@@ -408,10 +382,9 @@ fun CreateObjectScreen(
                                         MochiDropdownMenuItem(
                                             text = { Text(cls.name) },
                                             onClick = {
-                                                selectedClassId = cls.id
                                                 // The old parent may not be
                                                 // allowed for the new class.
-                                                selectedParentId = null
+                                                viewModel.selectClass(cls.id)
                                                 classExpanded = false
                                             },
                                         )
@@ -467,7 +440,7 @@ fun CreateObjectScreen(
                                                 )
                                             },
                                             onClick = {
-                                                selectedParentId = null
+                                                viewModel.selectParent(null)
                                                 parentExpanded = false
                                             },
                                         )
@@ -476,7 +449,7 @@ fun CreateObjectScreen(
                                         MochiDropdownMenuItem(
                                             text = { Text(parentLabel(candidate)) },
                                             onClick = {
-                                                selectedParentId = candidate.id
+                                                viewModel.selectParent(candidate.id)
                                                 parentExpanded = false
                                             },
                                         )
@@ -495,7 +468,7 @@ fun CreateObjectScreen(
                                 options = classOptions[field.id] ?: emptyList(),
                                 canWrite = editable,
                                 people = uiState.people,
-                                onValueChange = { value -> fieldValues[field.id] = value },
+                                onValueChange = { value -> viewModel.setValue(field.id, value) },
                                 onSearchUsers = { query -> viewModel.searchPeople(query) }
                             )
                             Spacer(modifier = Modifier.height(12.dp))
@@ -543,7 +516,7 @@ fun CreateObjectScreen(
                                     modifier = Modifier.weight(1f),
                                 )
                                 MochiIconButton(
-                                    onClick = { copies.removeAt(index) },
+                                    onClick = { viewModel.removeCopy(index) },
                                     enabled = !uiState.isCreating,
                                 ) {
                                     Icon(
@@ -577,7 +550,7 @@ fun CreateObjectScreen(
                                     modifier = Modifier.weight(1f),
                                 )
                                 MochiIconButton(
-                                    onClick = { pendingFiles.removeAt(index) },
+                                    onClick = { viewModel.removeFile(index) },
                                     enabled = !uiState.isCreating,
                                 ) {
                                     Icon(

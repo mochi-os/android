@@ -370,4 +370,13 @@
     <string name="devices_username">વપરાશકર્તા નામ</string>
     <string name="devices_warning">પાસવર્ડ હમણાં જ કૉપિ કરો: તે ફરીથી બતાવી શકાશે નહીં.</string>
     <string name="devices_unused">ક્યારેય ઉપયોગ થયો નથી</string>
+    <string name="field_type_text">ટેક્સ્ટ</string>
+    <string name="field_type_number">સંખ્યા</string>
+    <string name="field_type_enumerated">ગણતરી કરેલ</string>
+    <string name="field_type_user">વપરાશકર્તા</string>
+    <string name="field_type_date">તારીખ</string>
+    <string name="field_type_checkbox">ચેકબૉક્સ</string>
+    <string name="field_type_checklist">ચેકલિસ્ટ</string>
+    <string name="view_list_sorted_ascending">ચઢતા ક્રમમાં ગોઠવેલું</string>
+    <string name="view_list_sorted_descending">ઊતરતા ક્રમમાં ગોઠવેલું</string>
 </resources>

@@ -370,4 +370,13 @@
     <string name="devices_username">Navê bikarhêner</string>
     <string name="devices_warning">Şîfreyê niha kopî bike: careke din nayê nîşandan.</string>
     <string name="devices_unused">Qet nehatiye bikaranîn</string>
+    <string name="field_type_text">Nivîs</string>
+    <string name="field_type_number">Hejmar</string>
+    <string name="field_type_enumerated">Hejmartî</string>
+    <string name="field_type_user">Bikarhêner</string>
+    <string name="field_type_date">Dîrok</string>
+    <string name="field_type_checkbox">Qutiya kontrol</string>
+    <string name="field_type_checklist">Lîsteya kontrolê</string>
+    <string name="view_list_sorted_ascending">bi rêza hilkişandî</string>
+    <string name="view_list_sorted_descending">bi rêza daketî</string>
 </resources>

@@ -52,7 +52,6 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.Template
-import org.mochios.crm.model.Watcher
 import org.mochios.crm.util.hierarchyParameter
 import java.io.File
 import javax.inject.Inject
@@ -130,12 +129,6 @@ class CrmsRepository @Inject constructor(
         objectsCache.remove(crmId)
     }
 
-    fun invalidateCache(crmId: String) {
-        crmInfoCache.remove(crmId)
-        objectsCache.remove(crmId)
-        watchedCache.remove(crmId)
-    }
-
     // ---- Crms ----
 
     /** The user's CRMs, which those pinned to the home screen are brought into line with. */
@@ -163,8 +156,17 @@ class CrmsRepository @Inject constructor(
     suspend fun searchDirectory(query: String): List<Crm> =
         api.searchDirectory(query).unwrap()
 
+    /** The CRMs the directory recommends, each with its blurb as its description. */
     suspend fun getRecommendations(): List<Crm> =
-        api.getRecommendations().unwrap().crms
+        api.getRecommendations().unwrap().crms.map { recommended ->
+            Crm(
+                id = recommended.id,
+                fingerprint = recommended.fingerprint,
+                name = recommended.name,
+                description = recommended.blurb,
+                server = recommended.server,
+            )
+        }
 
     suspend fun probe(url: String): Crm =
         api.probe(url).unwrap()
@@ -292,7 +294,6 @@ class CrmsRepository @Inject constructor(
         rowField: String? = null,
         rowValue: String? = null,
         scopeParent: String? = null,
-        promote: Boolean = false
     ) {
         api.moveObject(
             crmId,
@@ -303,7 +304,6 @@ class CrmsRepository @Inject constructor(
                 rank = rank,
                 row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
                 scope = scopeParent,
-                promote = if (promote) "true" else null,
             )
         ).unwrap()
     }
@@ -383,17 +383,15 @@ class CrmsRepository @Inject constructor(
 
     // ---- Activity ----
 
-    suspend fun getActivity(crmId: String, objectId: String): List<Activity> =
-        api.getActivity(crmId, objectId).unwrap().activities
+    /** [limit] of [objectId]'s activity entries from [offset], newest first. */
+    suspend fun getActivity(crmId: String, objectId: String, limit: Int, offset: Int): List<Activity> =
+        api.getActivity(crmId, objectId, limit, offset).unwrap().activities
 
     // ---- Watchers ----
 
-    data class WatcherResult(val watchers: List<Watcher>, val watching: Boolean)
-
-    suspend fun getWatchers(crmId: String, objectId: String): WatcherResult {
-        val response = api.getWatchers(crmId, objectId).unwrap()
-        return WatcherResult(watchers = response.watchers, watching = response.watching)
-    }
+    /** Whether the signed-in person watches [objectId]. */
+    suspend fun getWatching(crmId: String, objectId: String): Boolean =
+        api.getWatchers(crmId, objectId).unwrap().watching
 
     suspend fun addWatcher(crmId: String, objectId: String) {
         api.addWatcher(crmId, objectId).unwrap()
@@ -531,8 +529,7 @@ class CrmsRepository @Inject constructor(
         name: String,
         fieldtype: String,
         flags: String? = null,
-        multi: Boolean? = null
-    ): CrmField = api.createField(crmId, classId, name, fieldtype, flags, multi).unwrap()
+    ): CrmField = api.createField(crmId, classId, name, fieldtype, flags).unwrap()
 
     suspend fun reorderFields(crmId: String, classId: String, order: String) {
         api.reorderFields(crmId, classId, order).unwrap()

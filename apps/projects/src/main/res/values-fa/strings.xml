@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">افزودن فیلد</string>
     <string name="projects_class_delete">حذف کلاس</string>
     <string name="projects_class_delete_title">حذف کلاس</string>
-    <string name="projects_field_type_text">متن</string>
-    <string name="projects_field_type_number">عدد</string>
-    <string name="projects_field_type_user">کاربر</string>
-    <string name="projects_field_type_date">تاریخ</string>
-    <string name="projects_field_type_checklist">چک‌لیست</string>
     <string name="projects_field_name">نام</string>
     <string name="projects_field_type">نوع</string>
     <string name="projects_field_flags">پرچم‌ها</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">اجازه دادن درخواست‌های ادغام روی اشیاء این کلاس.</string>
     <string name="projects_class_parents">کلاس‌های والد</string>
     <string name="projects_class_delete_message">آیا مطمئن هستید که می‌خواهید کلاس \"%1$s\" را حذف کنید؟ تمام فیلدها و گزینه‌های آنها نیز حذف خواهند شد.</string>
-    <string name="projects_field_type_enumerated">شمارشی</string>
     <string name="projects_field_label">فیلد: %1$s</string>
     <string name="projects_field_readonly">فقط خواندنی</string>
     <string name="projects_field_sortable">قابل مرتب‌سازی</string>
     <string name="projects_field_filterable">قابل فیلتر کردن</string>
     <string name="projects_field_show_on_card">نمایش روی کارت</string>
-    <string name="projects_field_multi">چندانتخابی</string>
     <string name="projects_field_position">موقعیت نمایش</string>
     <string name="projects_field_position_header">سرصفحه</string>
     <string name="projects_field_validation">اعتبارسنجی</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">فیلد رنگ حاشیه</string>
     <string name="projects_views_filter_classes">فیلتر بر اساس کلاس‌ها</string>
     <string name="projects_views_by">بر اساس %1$s</string>
-    <string name="projects_views_sorted">مرتب‌شده %1$s</string>
     <string name="projects_design_preview_label">پیش‌نمایش:</string>
     <string name="projects_design_preview_no_view">نمایی برای پیش‌نمایش وجود ندارد</string>
     <string name="projects_design_preview_no_class">کلاسی برای این نما وجود ندارد</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">پروژه به‌روزرسانی شد</string>
     <string name="projects_activity_attached">پیوست کرد</string>
     <string name="projects_activity_commented">نظر داد</string>
+    <string name="projects_activity_moved">این شیء را جابه‌جا کرد</string>
+    <string name="projects_activity_linked">پیوندی افزود</string>
+    <string name="projects_activity_class">کلاس را تغییر داد</string>
     <string name="projects_attachment_delete_confirm_message">این پیوست برای همیشه حذف خواهد شد.</string>
     <string name="projects_attachment_delete_confirm_title">پیوست حذف شود؟</string>
     <string name="projects_settings_unsubscribe_section">قطع اشتراک از پروژه</string>
@@ -339,4 +334,5 @@
         <item quantity="other">آیا از حذف «%1$s» و %2$s مورد زیر آن مطمئن هستید؟ این عمل قابل بازگشت نیست.</item>
     </plurals>
     <string name="projects_create_attachments_failed">پیوست کردن ممکن نشد: %1$s</string>
+    <string name="projects_activity_unknown">ناشناخته</string>
 </resources>

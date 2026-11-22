@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ഫീൽഡ് ചേർക്കുക</string>
     <string name="projects_class_delete">ക്ലാസ് ഇല്ലാതാക്കുക</string>
     <string name="projects_class_delete_title">ക്ലാസ് ഇല്ലാതാക്കുക</string>
-    <string name="projects_field_type_text">ടെക്സ്റ്റ്</string>
-    <string name="projects_field_type_number">സംഖ്യ</string>
-    <string name="projects_field_type_user">ഉപയോക്താവ്</string>
-    <string name="projects_field_type_date">തീയതി</string>
-    <string name="projects_field_type_checklist">ചെക്ക്‌ലിസ്റ്റ്</string>
     <string name="projects_field_name">പേര്</string>
     <string name="projects_field_type">തരം</string>
     <string name="projects_field_flags">ഫ്ലാഗുകൾ</string>
@@ -170,13 +165,11 @@
     <string name="projects_class_merge_requests_description">ഈ ക്ലാസിലെ ഒബ്ജക്ടുകളിൽ മെർജ് അഭ്യർത്ഥനകൾ അനുവദിക്കുക.</string>
     <string name="projects_class_parents">പേരന്റ് ക്ലാസുകൾ</string>
     <string name="projects_class_delete_message">\"%1$s\" എന്ന ക്ലാസ് ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ? എല്ലാ ഫീൽഡുകളും അവയുടെ ഓപ്ഷനുകളും ഇല്ലാതാക്കും.</string>
-    <string name="projects_field_type_enumerated">എണ്ണപ്പെട്ടത്</string>
     <string name="projects_field_label">ഫീൽഡ്: %1$s</string>
     <string name="projects_field_readonly">വായിക്കാൻ മാത്രം</string>
     <string name="projects_field_sortable">ക്രമീകരിക്കാവുന്നത്</string>
     <string name="projects_field_filterable">ഫിൽട്ടർ ചെയ്യാവുന്നത്</string>
     <string name="projects_field_show_on_card">കാർഡിൽ കാണിക്കുക</string>
-    <string name="projects_field_multi">ഒന്നിലധികം തിരഞ്ഞെടുപ്പ്</string>
     <string name="projects_field_position">ഡിസ്പ്ലേ സ്ഥാനം</string>
     <string name="projects_field_position_header">ഹെഡർ</string>
     <string name="projects_field_validation">സാധൂകരണം</string>
@@ -195,7 +188,6 @@
     <string name="projects_views_border_field">ബോർഡർ നിറം ഫീൽഡ്</string>
     <string name="projects_views_filter_classes">ക്ലാസുകളിലേക്ക് ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="projects_views_by">%1$s പ്രകാരം</string>
-    <string name="projects_views_sorted">%1$s ക്രമീകരിച്ചു</string>
     <string name="projects_design_preview_label">പ്രിവ്യൂ:</string>
     <string name="projects_design_preview_no_view">പ്രിവ്യൂ ചെയ്യാൻ വ്യൂ ഇല്ല</string>
     <string name="projects_design_preview_no_class">ഈ വ്യൂവിന് ക്ലാസ് ഇല്ല</string>
@@ -304,6 +296,9 @@
     <string name="projects_settings_updated">പ്രോജക്റ്റുകൾ</string>
     <string name="projects_activity_attached">അറ്റാച്ച് ചെയ്തു</string>
     <string name="projects_activity_commented">അഭിപ്രായമിട്ടു</string>
+    <string name="projects_activity_moved">ഈ ഒബ്ജക്റ്റ് നീക്കി</string>
+    <string name="projects_activity_linked">ഒരു ലിങ്ക് ചേർത്തു</string>
+    <string name="projects_activity_class">ക്ലാസ് മാറ്റി</string>
     <string name="projects_attachment_delete_confirm_message">ഈ അറ്റാച്ച്മെന്റ് ശാശ്വതമായി ഇല്ലാതാക്കും.</string>
     <string name="projects_attachment_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കണോ?</string>
     <string name="projects_settings_unsubscribe_section">പ്രോജക്റ്റ് സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കുക</string>
@@ -341,4 +336,5 @@
         <item quantity="other">\"%1$s\", അതിന് കീഴിലുള്ള %2$s ഇനങ്ങൾ എന്നിവ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</item>
     </plurals>
     <string name="projects_create_attachments_failed">അറ്റാച്ച് ചെയ്യാനായില്ല: %1$s</string>
+    <string name="projects_activity_unknown">അജ്ഞാതം</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ফিল্ড যোগ করুন</string>
     <string name="projects_class_delete">ক্লাস মুছুন</string>
     <string name="projects_class_delete_title">ক্লাস মুছুন</string>
-    <string name="projects_field_type_text">টেক্সট</string>
-    <string name="projects_field_type_number">সংখ্যা</string>
-    <string name="projects_field_type_user">ব্যবহারকারী</string>
-    <string name="projects_field_type_date">তারিখ</string>
-    <string name="projects_field_type_checklist">চেকলিস্ট</string>
     <string name="projects_field_name">নাম</string>
     <string name="projects_field_type">ধরন</string>
     <string name="projects_field_flags">ফ্ল্যাগসমূহ</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">উপরে সরান</string>
     <string name="projects_class_move_down">নিচে সরান</string>
     <string name="projects_class_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" ক্লাসটি মুছতে চান? সমস্ত ফিল্ড এবং তাদের অপশনও মুছে ফেলা হবে।</string>
-    <string name="projects_field_type_enumerated">এনুমারেটেড</string>
     <string name="projects_field_label">ফিল্ড: %1$s</string>
     <string name="projects_field_readonly">শুধুমাত্র পাঠযোগ্য</string>
     <string name="projects_field_sortable">সাজানোযোগ্য</string>
     <string name="projects_field_filterable">ফিল্টারযোগ্য</string>
     <string name="projects_field_show_on_card">কার্ডে দেখান</string>
-    <string name="projects_field_multi">একাধিক নির্বাচন</string>
     <string name="projects_field_position">প্রদর্শন অবস্থান</string>
     <string name="projects_field_position_header">হেডার</string>
     <string name="projects_field_position_body">বডি</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">অধঃক্রম</string>
     <string name="projects_views_filter_classes">ক্লাসে ফিল্টার করুন</string>
     <string name="projects_views_by">%1$s দ্বারা</string>
-    <string name="projects_views_sorted">%1$s সাজানো</string>
     <string name="projects_design_preview_label">প্রিভিউ:</string>
     <string name="projects_design_preview_no_view">প্রিভিউ করার জন্য কোনও ভিউ নেই</string>
     <string name="projects_design_preview_no_class">এই ভিউয়ের জন্য কোনও ক্লাস নেই</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">প্রকল্প আপডেট করা হয়েছে</string>
     <string name="projects_activity_attached">সংযুক্ত করেছেন</string>
     <string name="projects_activity_commented">মন্তব্য করেছেন</string>
+    <string name="projects_activity_moved">এই অবজেক্টটি সরিয়েছেন</string>
+    <string name="projects_activity_linked">একটি লিঙ্ক যোগ করেছেন</string>
+    <string name="projects_activity_class">শ্রেণী পরিবর্তন করেছেন</string>
     <string name="projects_attachment_delete_confirm_message">এই সংযুক্তি স্থায়ীভাবে মুছে ফেলা হবে।</string>
     <string name="projects_attachment_delete_confirm_title">সংযুক্তি মুছবেন?</string>
     <string name="projects_settings_unsubscribe_section">প্রকল্প থেকে সদস্যতা ত্যাগ করুন</string>
@@ -339,4 +334,5 @@
         <item quantity="other">আপনি কি নিশ্চিত যে \"%1$s\" এবং এর অধীনের %2$s আইটেম মুছতে চান? এই অ্যাকশন পূর্বাবস্থায় ফেরানো যাবে না।</item>
     </plurals>
     <string name="projects_create_attachments_failed">সংযুক্ত করা যায়নি: %1$s</string>
+    <string name="projects_activity_unknown">অজানা</string>
 </resources>

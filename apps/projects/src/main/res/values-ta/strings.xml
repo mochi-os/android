@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">புலம் சேர்</string>
     <string name="projects_class_delete">வகுப்பை நீக்கு</string>
     <string name="projects_class_delete_title">வகுப்பை நீக்கு</string>
-    <string name="projects_field_type_text">உரை</string>
-    <string name="projects_field_type_number">எண்</string>
-    <string name="projects_field_type_user">பயனர்</string>
-    <string name="projects_field_type_date">தேதி</string>
-    <string name="projects_field_type_checklist">சரிபார்ப்பு பட்டியல்</string>
     <string name="projects_field_name">பெயர்</string>
     <string name="projects_field_type">வகை</string>
     <string name="projects_field_flags">கொடிகள்</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">இந்த வகுப்பின் பொருள்களில் ஒன்றிணைப்பு கோரிக்கைகளை அனுமதிக்கவும்.</string>
     <string name="projects_class_parents">பெற்றோர் வகுப்புகள்</string>
     <string name="projects_class_delete_message">\"%1$s\" வகுப்பை நீக்க விரும்புகிறீர்களா? அனைத்து புலங்கள் மற்றும் அவற்றின் விருப்பங்களும் நீக்கப்படும்.</string>
-    <string name="projects_field_type_enumerated">எண்ணப்பட்டது</string>
     <string name="projects_field_label">புலம்: %1$s</string>
     <string name="projects_field_readonly">படிக்க மட்டும்</string>
     <string name="projects_field_sortable">வரிசைப்படுத்தக்கூடியது</string>
     <string name="projects_field_filterable">வடிகட்டக்கூடியது</string>
     <string name="projects_field_show_on_card">அட்டையில் காட்டு</string>
-    <string name="projects_field_multi">பல தேர்வு</string>
     <string name="projects_field_position">காட்சி நிலை</string>
     <string name="projects_field_position_header">தலைப்பு</string>
     <string name="projects_field_validation">சரிபார்ப்பு</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">எல்லை நிறம் புலம்</string>
     <string name="projects_views_filter_classes">வகுப்புகளுக்கு வடிகட்டு</string>
     <string name="projects_views_by">%1$s வாரியாக</string>
-    <string name="projects_views_sorted">%1$s வரிசைப்படுத்தப்பட்டது</string>
     <string name="projects_design_preview_label">முன்னோட்டம்:</string>
     <string name="projects_design_preview_no_view">முன்னோட்டம் காட்ட காட்சி இல்லை</string>
     <string name="projects_design_preview_no_class">இந்தக் காட்சிக்கு வகுப்பு இல்லை</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">திட்டம் புதுப்பிக்கப்பட்டது</string>
     <string name="projects_activity_attached">இணைத்தார்</string>
     <string name="projects_activity_commented">கருத்திட்டார்</string>
+    <string name="projects_activity_moved">இந்தப் பொருளை நகர்த்தினார்</string>
+    <string name="projects_activity_linked">ஓர் இணைப்பைச் சேர்த்தார்</string>
+    <string name="projects_activity_class">வகுப்பை மாற்றினார்</string>
     <string name="projects_attachment_delete_confirm_message">இந்த இணைப்பு நிரந்தரமாக நீக்கப்படும்.</string>
     <string name="projects_attachment_delete_confirm_title">இணைப்பை நீக்கவா?</string>
     <string name="projects_settings_unsubscribe_section">திட்டச் சந்தாவை நிறுத்து</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\"-ஐயும் அதன் கீழுள்ள %2$s உருப்படிகளையும் நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</item>
     </plurals>
     <string name="projects_create_attachments_failed">இணைக்க முடியவில்லை: %1$s</string>
+    <string name="projects_activity_unknown">தெரியாதது</string>
 </resources>

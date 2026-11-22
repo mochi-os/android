@@ -5,8 +5,11 @@
 
 package org.mochios.projects.model
 
+import com.google.gson.annotations.SerializedName
+
+/** Whether a merge request's branches merge, as `merge/check` answers. */
 data class MergeCheck(
-    val canMerge: Boolean = false,
+    @SerializedName("mergeable") val canMerge: Boolean = false,
     val conflicts: List<String> = emptyList(),
     val base: String = "",
     val ahead: Int = 0,

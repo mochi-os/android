@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">אין אובייקטים תואמים</string>
     <string name="crm_field_yes">כן</string>
     <string name="crm_field_no">לא</string>
-    <string name="crm_field_type_checkbox">תיבת סימון</string>
     <string name="crm_comment_empty">עדיין אין תגובות</string>
     <string name="crm_comment_attach">צרף קבצים</string>
     <string name="crm_property_remove">הסר</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">הוסף שדה</string>
     <string name="crm_class_delete">מחק מחלקה</string>
     <string name="crm_class_delete_title">מחק מחלקה</string>
-    <string name="crm_field_type_text">טקסט</string>
-    <string name="crm_field_type_number">מספר</string>
-    <string name="crm_field_type_user">משתמש</string>
-    <string name="crm_field_type_date">תאריך</string>
-    <string name="crm_field_type_checklist">רשימת משימות</string>
     <string name="crm_field_name">שם</string>
     <string name="crm_field_type">סוג</string>
     <string name="crm_field_flags">דגלים</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ביצע שינוי</string>
     <string name="crm_activity_attached">צירף/ה</string>
     <string name="crm_activity_commented">הגיב/ה</string>
+    <string name="crm_activity_moved">העביר/ה</string>
+    <string name="crm_activity_linked">קישר/ה</string>
+    <string name="crm_activity_class">שינה/תה את המחלקה</string>
     <string name="crm_attachment_empty">אין קבצים מצורפים</string>
     <string name="crm_attachment_default_name">קובץ מצורף</string>
     <string name="crm_attachment_delete_confirm_title">למחוק את הקובץ המצורף?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ברירת מחדל (קריא)</string>
     <string name="crm_class_parents">מחלקות אב</string>
     <string name="crm_class_delete_message">האם אתה בטוח שברצונך למחוק את המחלקה \"%1$s\"? כל השדות והאפשרויות שלהם יימחקו גם כן.</string>
-    <string name="crm_field_type_enumerated">ערכים מנויים</string>
     <string name="crm_field_label">שדה: %1$s</string>
     <string name="crm_field_readonly">לקריאה בלבד</string>
     <string name="crm_field_sortable">ניתן למיון</string>
     <string name="crm_field_filterable">ניתן לסינון</string>
     <string name="crm_field_show_on_card">הצג על הכרטיס</string>
-    <string name="crm_field_multi">בחירה מרובה</string>
     <string name="crm_field_position">מיקום תצוגה</string>
     <string name="crm_field_position_header">כותרת</string>
     <string name="crm_field_validation">אימות</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">שדה צבע מסגרת</string>
     <string name="crm_views_filter_classes">סנן למחלקות</string>
     <string name="crm_views_by">לפי %1$s</string>
-    <string name="crm_views_sorted">ממוין %1$s</string>
     <string name="crm_design_preview_label">תצוגה מקדימה:</string>
     <string name="crm_design_preview_no_view">אין תצוגה להצגה מקדימה</string>
     <string name="crm_design_preview_no_class">אין מחלקה לתצוגה זו</string>
@@ -297,4 +291,7 @@
         <item quantity="two">לא ניתן היה להוסיף %1$s קבצים מצורפים: %2$s</item>
         <item quantity="other">לא ניתן היה להוסיף %1$s קבצים מצורפים: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">אב</string>
+    <string name="crm_export_csv_id">מזהה</string>
+    <string name="crm_export_csv_class">מחלקה</string>
 </resources>

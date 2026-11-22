@@ -370,4 +370,13 @@
     <string name="devices_username">Apaykachaq suti</string>
     <string name="devices_warning">Contraseñata kunan copiay: manaña rikuchikunqachu.</string>
     <string name="devices_unused">Mana hayk\'aqpas llamk\'achisqa</string>
+    <string name="field_type_text">Qillqa</string>
+    <string name="field_type_number">Yupay</string>
+    <string name="field_type_enumerated">Yupasqa</string>
+    <string name="field_type_user">Apaykachaq</string>
+    <string name="field_type_date">P\'unchaw</string>
+    <string name="field_type_checkbox">Casilla</string>
+    <string name="field_type_checklist">Lista</string>
+    <string name="view_list_sorted_ascending">wicharispa ordenasqa</string>
+    <string name="view_list_sorted_descending">uraykuspa ordenasqa</string>
 </resources>

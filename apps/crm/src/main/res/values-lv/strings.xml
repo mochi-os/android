@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Nav atbilstošu objektu</string>
     <string name="crm_field_yes">Jā</string>
     <string name="crm_field_no">Nē</string>
-    <string name="crm_field_type_checkbox">Izvēles rūtiņa</string>
     <string name="crm_comment_empty">Vēl nav komentāru</string>
     <string name="crm_comment_attach">Pievienot failus</string>
     <string name="crm_property_remove">Noņemt</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Pievienot lauku</string>
     <string name="crm_class_delete">Dzēst klasi</string>
     <string name="crm_class_delete_title">Dzēst klasi</string>
-    <string name="crm_field_type_text">Teksts</string>
-    <string name="crm_field_type_number">Skaitlis</string>
-    <string name="crm_field_type_user">Lietotājs</string>
-    <string name="crm_field_type_date">Datums</string>
-    <string name="crm_field_type_checklist">Kontrolsaraksts</string>
     <string name="crm_field_name">Nosaukums</string>
     <string name="crm_field_type">Tips</string>
     <string name="crm_field_flags">Karogi</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">veica izmaiņas</string>
     <string name="crm_activity_attached">pievienoja</string>
     <string name="crm_activity_commented">komentēja</string>
+    <string name="crm_activity_moved">pārvietoja</string>
+    <string name="crm_activity_linked">sasaistīja</string>
+    <string name="crm_activity_class">mainīja klasi</string>
     <string name="crm_attachment_empty">Nav pielikumu</string>
     <string name="crm_attachment_default_name">pielikums</string>
     <string name="crm_attachment_delete_confirm_title">Izdzēst pielikumu?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Noklusējums (lasāms)</string>
     <string name="crm_class_parents">Vecākklases</string>
     <string name="crm_class_delete_message">Vai tiešām vēlaties dzēst klasi \"%1$s\"? Tiks dzēsti arī visi lauki un to opcijas.</string>
-    <string name="crm_field_type_enumerated">Uzskaitījums</string>
     <string name="crm_field_label">Lauks: %1$s</string>
     <string name="crm_field_readonly">Tikai lasāms</string>
     <string name="crm_field_sortable">Kārtojams</string>
     <string name="crm_field_filterable">Filtrējams</string>
     <string name="crm_field_show_on_card">Rādīt uz kartītes</string>
-    <string name="crm_field_multi">Vairākizvēle</string>
     <string name="crm_field_position">Attēlošanas pozīcija</string>
     <string name="crm_field_position_header">Galvene</string>
     <string name="crm_field_validation">Validācija</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Apmales krāsas lauks</string>
     <string name="crm_views_filter_classes">Filtrēt pēc klasēm</string>
     <string name="crm_views_by">pēc %1$s</string>
-    <string name="crm_views_sorted">sakārtots %1$s</string>
     <string name="crm_design_preview_label">Priekšskatījums:</string>
     <string name="crm_design_preview_no_view">Nav skata, ko priekšskatīt</string>
     <string name="crm_design_preview_no_class">Šim skatam nav klases</string>
@@ -297,4 +291,7 @@
         <item quantity="one">Neizdevās pievienot %1$s pielikumu: %2$s</item>
         <item quantity="other">Neizdevās pievienot %1$s pielikumus: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Vecāks</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klase</string>
 </resources>

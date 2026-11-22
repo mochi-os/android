@@ -37,6 +37,8 @@ import org.mochios.android.util.attachmentModel
 import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
+import org.mochios.android.format.personName
+import org.mochios.android.util.fingerprint
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentDrafts
@@ -64,6 +66,11 @@ fun CommentsTab(
     drafts: CommentDrafts,
     /** The object commented on, which the unsent comment is kept under. */
     target: String,
+    /**
+     * Whether the user may comment. Without it the thread is read only: no
+     * composer, and no reply, edit or delete, as on the web.
+     */
+    canComment: Boolean = true,
     onCreateComment: (String, String?, List<Uri>) -> Unit,
     resolveFileName: suspend (Uri) -> String,
     onUpdateComment: (String, String) -> Unit,
@@ -110,6 +117,7 @@ fun CommentsTab(
                         avatarUrlBuilder = avatarUrlBuilder,
                         drafts = drafts,
                         currentUserId = currentUserId,
+                        canComment = canComment,
                         onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment
@@ -118,7 +126,7 @@ fun CommentsTab(
             }
         }
 
-        Reading(draftState) { draft ->
+        if (canComment) Reading(draftState) { draft ->
             val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
             ComposeBar(
                 value = draft.text,
@@ -147,7 +155,7 @@ fun CommentsTab(
                         ReplyComposerBanner(
                             label = stringResource(
                                 R.string.crm_comment_replying_to,
-                                comment.name.ifBlank { comment.authorId },
+                                personName(comment.name, fingerprint(comment.authorId)),
                             ),
                             preview = comment.markdownSource.ifBlank { comment.text },
                             cancelLabel = stringResource(R.string.crm_comment_clear_reply),
@@ -186,6 +194,7 @@ private fun CommentItem(
     avatarUrlBuilder: ((Comment) -> OwnedAddress?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
+    canComment: Boolean,
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
@@ -193,12 +202,12 @@ private fun CommentItem(
     onCollapseParent: (() -> Unit)? = null,
 ) {
     val edit = drafts.edit(comment.id)
-    val mine = currentUserId != null && comment.authorId == currentUserId
+    val mine = canComment && currentUserId != null && comment.authorId == currentUserId
     var collapsed by rememberSaveable(comment.id) { mutableStateOf(false) }
     val replies = remember(comment) { replyCount(comment) { it.children } }
 
     SharedCommentItem(
-        name = comment.name,
+        name = personName(comment.name, fingerprint(comment.authorId)),
         body = comment.text,
         created = comment.created,
         edited = comment.edited,
@@ -226,7 +235,7 @@ private fun CommentItem(
         onCollapseParent = onCollapseParent,
     ) {
         CommentActions(
-            onReply = { onReply(comment.id, comment.name) },
+            onReply = { onReply(comment.id, comment.name) }.takeIf { canComment },
             onEdit = { drafts.edit(comment.id, comment.text) }.takeIf { mine },
             onDelete = { onDelete(comment.id) }.takeIf { mine },
         )
@@ -241,6 +250,7 @@ private fun CommentItem(
             avatarUrlBuilder = avatarUrlBuilder,
             drafts = drafts,
             currentUserId = currentUserId,
+            canComment = canComment,
             onReply = onReply,
             onEdit = onEdit,
             onDelete = onDelete,

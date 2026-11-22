@@ -374,4 +374,13 @@
     <string name="devices_username">Імя карыстальніка</string>
     <string name="devices_warning">Скапіюйце пароль зараз: паказаць яго зноў немагчыма.</string>
     <string name="devices_unused">Ніколі не выкарыстоўвалася</string>
+    <string name="field_type_text">Тэкст</string>
+    <string name="field_type_number">Лік</string>
+    <string name="field_type_enumerated">Пералічаны</string>
+    <string name="field_type_user">Карыстальнік</string>
+    <string name="field_type_date">Дата</string>
+    <string name="field_type_checkbox">Сцяжок</string>
+    <string name="field_type_checklist">Спіс задач</string>
+    <string name="view_list_sorted_ascending">адсартавана па ўзрастанні</string>
+    <string name="view_list_sorted_descending">адсартавана па ўбыванні</string>
 </resources>

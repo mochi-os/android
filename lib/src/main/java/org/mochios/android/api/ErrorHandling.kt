@@ -19,7 +19,18 @@ sealed class MochiError : Exception() {
     data class ForbiddenError(override val message: String? = null, val errorCode: String? = null) : MochiError()
     data class NotFoundError(override val message: String? = null) : MochiError()
     data class ServerError(val code: Int, override val message: String? = null) : MochiError()
-    data class Unknown(override val message: String? = null) : MochiError()
+    /**
+     * Any other refusal - a 400, a 409, a 429 - or a failure the client could
+     * not place. [code] is the HTTP status where the server answered one, and
+     * [errorCode] the error's code where the body carries one beside its
+     * message, as core's own refusals do; an app's labelled refusal sends its
+     * message alone, so a caller tells one apart by its status.
+     */
+    data class Unknown(
+        override val message: String? = null,
+        val code: Int? = null,
+        val errorCode: String? = null,
+    ) : MochiError()
     /** Client-side validation or local error that resolves to a string resource. */
     data class Local(val messageRes: Int) : MochiError()
 }
@@ -32,7 +43,13 @@ fun Throwable.toMochiError(): MochiError {
             403 -> MochiError.ForbiddenError(apiError.message ?: apiError.error, apiError.error)
             404 -> MochiError.NotFoundError(apiError.message ?: apiError.error)
             in 500..599 -> MochiError.ServerError(code, apiError.message ?: apiError.error)
-            else -> MochiError.Unknown(apiError.message ?: apiError.error)
+            // `error` is a code only where a message comes with it; alone, it
+            // is the message.
+            else -> MochiError.Unknown(
+                apiError.message ?: apiError.error,
+                code,
+                apiError.error.takeIf { apiError.message != null },
+            )
         }
         is HttpException -> when (code()) {
             401 -> MochiError.AuthError()
@@ -41,7 +58,7 @@ fun Throwable.toMochiError(): MochiError {
             // Don't pass message() — it's the raw HTTP reason phrase, not a
             // user-facing string. userMessage() renders a clean localised line.
             in 500..599 -> MochiError.ServerError(code())
-            else -> MochiError.Unknown()
+            else -> MochiError.Unknown(code = code())
         }
         is UnknownHostException -> MochiError.NetworkError(this)
         is SocketTimeoutException -> MochiError.NetworkError(this)

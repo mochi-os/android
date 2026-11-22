@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Tiada objek yang sepadan</string>
     <string name="crm_field_yes">Ya</string>
     <string name="crm_field_no">Tidak</string>
-    <string name="crm_field_type_checkbox">Kotak semak</string>
     <string name="crm_comment_empty">Tiada komen lagi</string>
     <string name="crm_comment_attach">Lampirkan fail</string>
     <string name="crm_property_remove">Alih keluar</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Tambah medan</string>
     <string name="crm_class_delete">Padam kelas</string>
     <string name="crm_class_delete_title">Padam kelas</string>
-    <string name="crm_field_type_text">Teks</string>
-    <string name="crm_field_type_number">Nombor</string>
-    <string name="crm_field_type_user">Pengguna</string>
-    <string name="crm_field_type_date">Tarikh</string>
-    <string name="crm_field_type_checklist">Senarai semak</string>
     <string name="crm_field_name">Nama</string>
     <string name="crm_field_type">Jenis</string>
     <string name="crm_field_flags">Bendera</string>
@@ -155,13 +149,11 @@
     <string name="crm_class_title_field_default">Lalai (boleh dibaca)</string>
     <string name="crm_class_parents">Kelas induk</string>
     <string name="crm_class_delete_message">Adakah anda pasti mahu memadam kelas \"%1$s\"? Semua medan dan pilihannya juga akan dipadamkan.</string>
-    <string name="crm_field_type_enumerated">Tersenarai</string>
     <string name="crm_field_label">Medan: %1$s</string>
     <string name="crm_field_readonly">Baca sahaja</string>
     <string name="crm_field_sortable">Boleh diisih</string>
     <string name="crm_field_filterable">Boleh ditapis</string>
     <string name="crm_field_show_on_card">Tunjukkan pada kad</string>
-    <string name="crm_field_multi">Pilihan berbilang</string>
     <string name="crm_field_position">Kedudukan paparan</string>
     <string name="crm_field_position_header">Pengepala</string>
     <string name="crm_field_validation">Pengesahan</string>
@@ -180,7 +172,6 @@
     <string name="crm_views_border_field">Medan warna sempadan</string>
     <string name="crm_views_filter_classes">Tapis kepada kelas</string>
     <string name="crm_views_by">mengikut %1$s</string>
-    <string name="crm_views_sorted">diisih %1$s</string>
     <string name="crm_design_preview_label">Pratonton:</string>
     <string name="crm_design_preview_no_view">Tiada paparan untuk dipratonton</string>
     <string name="crm_design_preview_no_class">Tiada kelas untuk paparan ini</string>
@@ -222,6 +213,9 @@
     <string name="crm_activity_made_change">membuat perubahan</string>
     <string name="crm_activity_attached">melampirkan</string>
     <string name="crm_activity_commented">mengulas</string>
+    <string name="crm_activity_moved">memindahkan</string>
+    <string name="crm_activity_linked">memautkan</string>
+    <string name="crm_activity_class">menukar kelas</string>
     <string name="crm_attachment_empty">Tiada lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_delete_confirm_title">Padamkan lampiran?</string>
@@ -295,4 +289,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s lampiran tidak dapat ditambah: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Induk</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Kelas</string>
 </resources>

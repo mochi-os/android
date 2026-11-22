@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">無相符的物件</string>
     <string name="crm_field_yes">是</string>
     <string name="crm_field_no">否</string>
-    <string name="crm_field_type_checkbox">核取方塊</string>
     <string name="crm_comment_empty">尚無留言</string>
     <string name="crm_comment_attach">附加檔案</string>
     <string name="crm_property_remove">移除</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">新增欄位</string>
     <string name="crm_class_delete">刪除類別</string>
     <string name="crm_class_delete_title">刪除類別</string>
-    <string name="crm_field_type_text">文字</string>
-    <string name="crm_field_type_number">數字</string>
-    <string name="crm_field_type_user">使用者</string>
-    <string name="crm_field_type_date">日期</string>
-    <string name="crm_field_type_checklist">檢查清單</string>
     <string name="crm_field_name">名稱</string>
     <string name="crm_field_type">類型</string>
     <string name="crm_field_flags">標記</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">進行了變更</string>
     <string name="crm_activity_attached">加入了附件</string>
     <string name="crm_activity_commented">發表了留言</string>
+    <string name="crm_activity_moved">移動了</string>
+    <string name="crm_activity_linked">連結了</string>
+    <string name="crm_activity_class">變更了類別</string>
     <string name="crm_attachment_empty">無附件</string>
     <string name="crm_attachment_default_name">附件</string>
     <string name="crm_attachment_delete_confirm_title">刪除附件?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">預設(可讀)</string>
     <string name="crm_class_parents">父類別</string>
     <string name="crm_class_delete_message">您確定要刪除類別「%1$s」嗎?所有欄位及其選項也將被刪除。</string>
-    <string name="crm_field_type_enumerated">列舉</string>
     <string name="crm_field_label">欄位:%1$s</string>
     <string name="crm_field_readonly">唯讀</string>
     <string name="crm_field_sortable">可排序</string>
     <string name="crm_field_filterable">可篩選</string>
     <string name="crm_field_show_on_card">顯示於卡片</string>
-    <string name="crm_field_multi">多選</string>
     <string name="crm_field_position">顯示位置</string>
     <string name="crm_field_position_header">標頭</string>
     <string name="crm_field_validation">驗證</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">邊框顏色欄位</string>
     <string name="crm_views_filter_classes">篩選類別</string>
     <string name="crm_views_by">依 %1$s</string>
-    <string name="crm_views_sorted">依 %1$s 排序</string>
     <string name="crm_design_preview_label">預覽:</string>
     <string name="crm_design_preview_no_view">沒有可預覽的檢視</string>
     <string name="crm_design_preview_no_class">此檢視沒有對應的類別</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s 個附件無法新增：%2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">父項</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">類別</string>
 </resources>

@@ -6,6 +6,11 @@
 package org.mochios.projects.ui.project
 
 import android.net.Uri
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -99,6 +104,66 @@ class CreateObjectViewModel @Inject constructor(
 
     /** The attachments picked on the form, while Create uploads them. */
     val upload: StateFlow<Upload?> = tracker.state
+
+    // The form, held here rather than in the screen, so a rotation or a
+    // change of theme or font size, which recreate the screen, keep it. Each
+    // is seeded once from the design, the route and the object copied, and
+    // the user's edits are left alone after that.
+
+    /** The class picked, "" until the design has loaded. */
+    var classId by mutableStateOf("")
+
+    /** The parent picked; null for none or not yet picked. */
+    var parentId by mutableStateOf<String?>(null)
+
+    /** The values typed, by field id. */
+    val values = mutableStateMapOf<String, String>()
+
+    /** Files picked to attach, uploaded once the object exists. */
+    val files = mutableStateListOf<Uri>()
+
+    /** The attachments a copy carries over, which Create copies; any may be taken off first. */
+    val copies = mutableStateListOf<Attachment>()
+
+    /** The opening class the parent was last seeded for. */
+    private var parentSeed: String? = null
+
+    /** What the values were last seeded from: the class, its fields and options, and the preset. */
+    private var valuesSeed: Any? = null
+
+    private var copiesSeeded = false
+
+    /** Opens the form on [initial] until a class is picked. */
+    fun seedClass(initial: String) {
+        if (classId.isBlank()) classId = initial
+    }
+
+    /** Puts [parent] in the parent picker once for each opening class [initial]. */
+    fun seedParent(initial: String, parent: String?) {
+        if (parentSeed == initial) return
+        parentSeed = initial
+        parentId = parent
+    }
+
+    /**
+     * Replaces the values with [next] of them when [seed], what they are
+     * seeded from, has changed since the last time; a screen drawn again over
+     * the same class keeps what was typed.
+     */
+    fun seedValues(seed: Any, next: (Map<String, String>) -> Map<String, String>) {
+        if (seed == valuesSeed) return
+        valuesSeed = seed
+        val seeded = next(values.toMap())
+        values.clear()
+        values.putAll(seeded)
+    }
+
+    /** Carries over a copy's attachments once they are read. */
+    fun seedCopies(copied: List<Attachment>) {
+        if (copiesSeeded || copied.isEmpty()) return
+        copies.addAll(copied)
+        copiesSeeded = true
+    }
 
     init {
         load()

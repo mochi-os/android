@@ -370,4 +370,13 @@
     <string name="devices_username">उपयोगकर्ता नाम</string>
     <string name="devices_warning">पासवर्ड अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
     <string name="devices_unused">कबो इस्तेमाल ना भइल</string>
+    <string name="field_type_text">टेक्स्ट</string>
+    <string name="field_type_number">संख्या</string>
+    <string name="field_type_enumerated">गणनात्मक</string>
+    <string name="field_type_user">उपयोगकर्ता</string>
+    <string name="field_type_date">तारीख</string>
+    <string name="field_type_checkbox">चेकबॉक्स</string>
+    <string name="field_type_checklist">चेकलिस्ट</string>
+    <string name="view_list_sorted_ascending">बढ़त क्रम में सजावल</string>
+    <string name="view_list_sorted_descending">घटत क्रम में सजावल</string>
 </resources>

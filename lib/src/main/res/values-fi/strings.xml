@@ -370,4 +370,13 @@
     <string name="devices_username">Käyttäjätunnus</string>
     <string name="devices_warning">Kopioi salasana nyt: sitä ei voi näyttää uudelleen.</string>
     <string name="devices_unused">Ei koskaan käytetty</string>
+    <string name="field_type_text">Teksti</string>
+    <string name="field_type_number">Luku</string>
+    <string name="field_type_enumerated">Luetteloitu</string>
+    <string name="field_type_user">Käyttäjä</string>
+    <string name="field_type_date">Päivämäärä</string>
+    <string name="field_type_checkbox">Valintaruutu</string>
+    <string name="field_type_checklist">Tarkistuslista</string>
+    <string name="view_list_sorted_ascending">lajiteltu nousevasti</string>
+    <string name="view_list_sorted_descending">lajiteltu laskevasti</string>
 </resources>

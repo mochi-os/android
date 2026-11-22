@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Ingen matchende objekter</string>
     <string name="crm_field_yes">Ja</string>
     <string name="crm_field_no">Nej</string>
-    <string name="crm_field_type_checkbox">Afkrydsningsfelt</string>
     <string name="crm_comment_empty">Ingen kommentarer endnu</string>
     <string name="crm_comment_attach">Vedhæft filer</string>
     <string name="crm_property_remove">Fjern</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Tilføj felt</string>
     <string name="crm_class_delete">Slet klasse</string>
     <string name="crm_class_delete_title">Slet klasse</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Tal</string>
-    <string name="crm_field_type_user">Bruger</string>
-    <string name="crm_field_type_date">Dato</string>
-    <string name="crm_field_type_checklist">Tjekliste</string>
     <string name="crm_field_name">Navn</string>
     <string name="crm_field_type">Type</string>
     <string name="crm_field_flags">Flag</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">foretog en ændring</string>
     <string name="crm_activity_attached">vedhæftede</string>
     <string name="crm_activity_commented">kommenterede</string>
+    <string name="crm_activity_moved">flyttede</string>
+    <string name="crm_activity_linked">linkede</string>
+    <string name="crm_activity_class">ændrede klassen</string>
     <string name="crm_attachment_empty">Ingen vedhæftninger</string>
     <string name="crm_attachment_default_name">vedhæftning</string>
     <string name="crm_attachment_delete_confirm_title">Slet vedhæftning?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Flyt op</string>
     <string name="crm_class_move_down">Flyt ned</string>
     <string name="crm_class_delete_message">Er du sikker på, at du vil slette klassen \"%1$s\"? Alle felter og deres indstillinger vil også blive slettet.</string>
-    <string name="crm_field_type_enumerated">Opregnet</string>
     <string name="crm_field_label">Felt: %1$s</string>
     <string name="crm_field_readonly">Skrivebeskyttet</string>
     <string name="crm_field_sortable">Kan sorteres</string>
     <string name="crm_field_filterable">Kan filtreres</string>
     <string name="crm_field_show_on_card">Vis på kort</string>
-    <string name="crm_field_multi">Flervalg</string>
     <string name="crm_field_position">Visningsposition</string>
     <string name="crm_field_position_header">Sidehoved</string>
     <string name="crm_field_position_body">Hoveddel</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Faldende</string>
     <string name="crm_views_filter_classes">Filtrér til klasser</string>
     <string name="crm_views_by">efter %1$s</string>
-    <string name="crm_views_sorted">sorteret %1$s</string>
     <string name="crm_design_preview_label">Forhåndsvisning:</string>
     <string name="crm_design_preview_no_view">Ingen visning at forhåndsvise</string>
     <string name="crm_design_preview_no_class">Ingen klasse for denne visning</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s vedhæftning kunne ikke tilføjes: %2$s</item>
         <item quantity="other">%1$s vedhæftninger kunne ikke tilføjes: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Overordnet</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasse</string>
 </resources>

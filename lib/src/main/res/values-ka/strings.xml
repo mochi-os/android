@@ -370,4 +370,13 @@
     <string name="devices_username">მომხმარებლის სახელი</string>
     <string name="devices_warning">დააკოპირეთ პაროლი ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
     <string name="devices_unused">არასოდეს გამოყენებულა</string>
+    <string name="field_type_text">ტექსტი</string>
+    <string name="field_type_number">რიცხვი</string>
+    <string name="field_type_enumerated">ჩამოთვლადი</string>
+    <string name="field_type_user">მომხმარებელი</string>
+    <string name="field_type_date">თარიღი</string>
+    <string name="field_type_checkbox">ფლაგი</string>
+    <string name="field_type_checklist">ჩამონათვალი</string>
+    <string name="view_list_sorted_ascending">დალაგებულია ზრდადობით</string>
+    <string name="view_list_sorted_descending">დალაგებულია კლებადობით</string>
 </resources>

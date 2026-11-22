@@ -378,4 +378,13 @@
     <string name="devices_username">اسم المستخدم</string>
     <string name="devices_warning">انسخ كلمة المرور الآن: لا يمكن عرضها مرة أخرى.</string>
     <string name="devices_unused">لم يُستخدم قط</string>
+    <string name="field_type_text">نص</string>
+    <string name="field_type_number">الرقم</string>
+    <string name="field_type_enumerated">مُعدَّد</string>
+    <string name="field_type_user">المستخدم</string>
+    <string name="field_type_date">التاريخ</string>
+    <string name="field_type_checkbox">مربع اختيار</string>
+    <string name="field_type_checklist">قائمة المهام</string>
+    <string name="view_list_sorted_ascending">مرتّب تصاعديًا</string>
+    <string name="view_list_sorted_descending">مرتّب تنازليًا</string>
 </resources>

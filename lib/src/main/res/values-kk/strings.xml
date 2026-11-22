@@ -371,4 +371,13 @@
     <string name="devices_username">Пайдаланушы аты</string>
     <string name="devices_warning">Құпия сөзді қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>
     <string name="devices_unused">Ешқашан пайдаланылмаған</string>
+    <string name="field_type_text">Мәтін</string>
+    <string name="field_type_number">Сан</string>
+    <string name="field_type_enumerated">Санамаланған</string>
+    <string name="field_type_user">Пайдаланушы</string>
+    <string name="field_type_date">Күн</string>
+    <string name="field_type_checkbox">Белгілеу ұяшығы</string>
+    <string name="field_type_checklist">Тапсырмалар тізімі</string>
+    <string name="view_list_sorted_ascending">өсу ретімен сұрыпталған</string>
+    <string name="view_list_sorted_descending">кему ретімен сұрыпталған</string>
 </resources>

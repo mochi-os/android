@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">فيلڊ شامل ڪريو</string>
     <string name="projects_class_delete">ڪلاس ختم ڪريو</string>
     <string name="projects_class_delete_title">ڪلاس ختم ڪريو</string>
-    <string name="projects_field_type_text">ٽيڪسٽ</string>
-    <string name="projects_field_type_number">نمبر</string>
-    <string name="projects_field_type_user">صارف</string>
-    <string name="projects_field_type_date">تاريخ</string>
-    <string name="projects_field_type_checklist">چيڪ لسٽ</string>
     <string name="projects_field_name">نالو</string>
     <string name="projects_field_type">قسم</string>
     <string name="projects_field_flags">نشان</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">هن ڪلاس جي شين تي ملائڻ جون درخواستون اجازت ڏيو.</string>
     <string name="projects_class_parents">والدين ڪلاسون</string>
     <string name="projects_class_delete_message">ڇا توهان پڪ سان ڪلاس \"%1$s\" ختم ڪرڻ چاهيو ٿا؟ سڀ فيلڊ ۽ انهن جا اختيار به ختم ڪيا ويندا.</string>
-    <string name="projects_field_type_enumerated">ڳڻيل</string>
     <string name="projects_field_label">فيلڊ: %1$s</string>
     <string name="projects_field_readonly">صرف پڙهڻ لاءِ</string>
     <string name="projects_field_sortable">ترتيب ڏيڻ لائق</string>
     <string name="projects_field_filterable">فلٽر ڪرڻ لائق</string>
     <string name="projects_field_show_on_card">ڪارڊ تي ڏيکاريو</string>
-    <string name="projects_field_multi">گھڻ-چونڊ</string>
     <string name="projects_field_position">ڊسپلي پوزيشن</string>
     <string name="projects_field_position_header">هيڊر</string>
     <string name="projects_field_validation">تصديق</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">بارڊر رنگ فيلڊ</string>
     <string name="projects_views_filter_classes">ڪلاسن مطابق فلٽر</string>
     <string name="projects_views_by">%1$s مطابق</string>
-    <string name="projects_views_sorted">ترتيب ڏنل %1$s</string>
     <string name="projects_design_preview_label">اڳ ڏيک:</string>
     <string name="projects_design_preview_no_view">اڳ ڏيک لاءِ ڪو ويو نه آهي</string>
     <string name="projects_design_preview_no_class">هن ويو لاءِ ڪو ڪلاس نه آهي</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">پروجيڪٽ اپڊيٽ ٿيو</string>
     <string name="projects_activity_attached">ڳنڍيو</string>
     <string name="projects_activity_commented">تبصرو ڪيو</string>
+    <string name="projects_activity_moved">ھي شيءِ منتقل ڪئي</string>
+    <string name="projects_activity_linked">هڪ لنڪ شامل ڪيو</string>
+    <string name="projects_activity_class">ڪلاس تبديل ڪيو</string>
     <string name="projects_attachment_delete_confirm_message">هي ڳنڍيل فائل هميشه لاءِ ڊهي ويندي.</string>
     <string name="projects_attachment_delete_confirm_title">ڳنڍيل فائل ڊاهيو؟</string>
     <string name="projects_settings_unsubscribe_section">منصوبي جي رڪنيت ڇڏيو</string>
@@ -339,4 +334,5 @@
         <item quantity="other">ڇا توهان پڪ سان \"%1$s\" ۽ ان جي هيٺان %2$s شيون ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</item>
     </plurals>
     <string name="projects_create_attachments_failed">ڳنڍي نه سگهيا: %1$s</string>
+    <string name="projects_activity_unknown">اڻڄاتل</string>
 </resources>

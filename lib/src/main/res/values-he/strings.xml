@@ -374,4 +374,13 @@
     <string name="devices_username">שם משתמש</string>
     <string name="devices_warning">העתיקו את הסיסמה עכשיו: לא ניתן יהיה להציג אותה שוב.</string>
     <string name="devices_unused">לא היה בשימוש מעולם</string>
+    <string name="field_type_text">טקסט</string>
+    <string name="field_type_number">מספר</string>
+    <string name="field_type_enumerated">ערכים מנויים</string>
+    <string name="field_type_user">משתמש</string>
+    <string name="field_type_date">תאריך</string>
+    <string name="field_type_checkbox">תיבת סימון</string>
+    <string name="field_type_checklist">רשימת משימות</string>
+    <string name="view_list_sorted_ascending">ממוין בסדר עולה</string>
+    <string name="view_list_sorted_descending">ממוין בסדר יורד</string>
 </resources>

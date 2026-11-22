@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Иловаи майдон</string>
     <string name="projects_class_delete">Нест кардани синф</string>
     <string name="projects_class_delete_title">Нест кардани синф</string>
-    <string name="projects_field_type_text">Матн</string>
-    <string name="projects_field_type_number">Адад</string>
-    <string name="projects_field_type_user">Корбар</string>
-    <string name="projects_field_type_date">Сана</string>
-    <string name="projects_field_type_checklist">Рӯйхат</string>
     <string name="projects_field_name">Ном</string>
     <string name="projects_field_type">Намуд</string>
     <string name="projects_field_flags">Парчамҳо</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Иҷозати дархостҳои якҷошавӣ дар объектҳои ин синф.</string>
     <string name="projects_class_parents">Синфҳои волидайн</string>
     <string name="projects_class_delete_message">Шумо мутмаин ҳастед, ки мехоҳед синфи \"%1$s\"-ро нест кунед? Ҳамаи майдонҳо ва имконоти онҳо низ нест карда мешаванд.</string>
-    <string name="projects_field_type_enumerated">Шумурдашуда</string>
     <string name="projects_field_label">Майдон: %1$s</string>
     <string name="projects_field_readonly">Танҳо барои хондан</string>
     <string name="projects_field_sortable">Мураттабшаванда</string>
     <string name="projects_field_filterable">Полоишшаванда</string>
     <string name="projects_field_show_on_card">Дар корт нишон додан</string>
-    <string name="projects_field_multi">Интихоби бисёр</string>
     <string name="projects_field_position">Мавқеи намоиш</string>
     <string name="projects_field_position_header">Сарлавҳа</string>
     <string name="projects_field_validation">Тасдиқкунӣ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Майдони ранги ҳошия</string>
     <string name="projects_views_filter_classes">Полоиш ба синфҳо</string>
     <string name="projects_views_by">аз рӯи %1$s</string>
-    <string name="projects_views_sorted">мураттаб шудааст %1$s</string>
     <string name="projects_design_preview_label">Пешнамоиш:</string>
     <string name="projects_design_preview_no_view">Ягон намуд барои пешнамоиш нест</string>
     <string name="projects_design_preview_no_class">Барои ин намуд синф нест</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Лоиҳа навсозӣ шуд</string>
     <string name="projects_activity_attached">замима кард</string>
     <string name="projects_activity_commented">шарҳ дод</string>
+    <string name="projects_activity_moved">ин объектро кӯчонд</string>
+    <string name="projects_activity_linked">пайванд илова кард</string>
+    <string name="projects_activity_class">синфро иваз кард</string>
     <string name="projects_attachment_delete_confirm_message">Ин замима абадан нест карда мешавад.</string>
     <string name="projects_attachment_delete_confirm_title">Замима нест карда шавад?</string>
     <string name="projects_settings_unsubscribe_section">Бекор кардани обунаи лоиҳа</string>
@@ -338,4 +333,5 @@
         <item quantity="other">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\" ва %2$s ҷузъи зери онро нест кунед? Ин амалро бекор кардан мумкин нест.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Замима карда нашуд: %1$s</string>
+    <string name="projects_activity_unknown">Номаълум</string>
 </resources>

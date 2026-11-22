@@ -370,4 +370,13 @@
     <string name="devices_username">İstifadəçi adı</string>
     <string name="devices_warning">Şifrəni indi kopyalayın: bir daha göstərilə bilməz.</string>
     <string name="devices_unused">Heç vaxt istifadə olunmayıb</string>
+    <string name="field_type_text">Mətn</string>
+    <string name="field_type_number">Rəqəm</string>
+    <string name="field_type_enumerated">Sadalanmış</string>
+    <string name="field_type_user">İstifadəçi</string>
+    <string name="field_type_date">Tarix</string>
+    <string name="field_type_checkbox">İşarələmə qutusu</string>
+    <string name="field_type_checklist">Yoxlama siyahısı</string>
+    <string name="view_list_sorted_ascending">artan sıra ilə sıralanıb</string>
+    <string name="view_list_sorted_descending">azalan sıra ilə sıralanıb</string>
 </resources>

@@ -370,4 +370,13 @@
     <string name="devices_username">Sunan mai amfani</string>
     <string name="devices_warning">Kwafi kalmar sirri yanzu: ba za a sake nuna ta ba.</string>
     <string name="devices_unused">Ba a taɓa amfani da shi ba</string>
+    <string name="field_type_text">Rubutu</string>
+    <string name="field_type_number">Lamba</string>
+    <string name="field_type_enumerated">An lissafa</string>
+    <string name="field_type_user">Mai amfani</string>
+    <string name="field_type_date">Kwanan wata</string>
+    <string name="field_type_checkbox">Akwatin zaɓi</string>
+    <string name="field_type_checklist">Jerin dubawa</string>
+    <string name="view_list_sorted_ascending">an jera hawa sama</string>
+    <string name="view_list_sorted_descending">an jera sauka ƙasa</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ساحه اضافه کړئ</string>
     <string name="projects_class_delete">ټولګی ړنګ کړئ</string>
     <string name="projects_class_delete_title">ټولګی ړنګ کړئ</string>
-    <string name="projects_field_type_text">متن</string>
-    <string name="projects_field_type_number">شمیره</string>
-    <string name="projects_field_type_user">کاروونکی</string>
-    <string name="projects_field_type_date">نېټه</string>
-    <string name="projects_field_type_checklist">چک لیست</string>
     <string name="projects_field_name">نوم</string>
     <string name="projects_field_type">ډول</string>
     <string name="projects_field_flags">بیرغونه</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">د دې ټولګي په توکو کې د یوځای کولو غوښتنو ته اجازه ورکړئ.</string>
     <string name="projects_class_parents">د موروپلار ټولګي</string>
     <string name="projects_class_delete_message">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" ټولګی وړ کړئ؟ ټولې ساحې او د هغو اختیارونه به هم وړ شي.</string>
-    <string name="projects_field_type_enumerated">شمیرل شوی</string>
     <string name="projects_field_label">ساحه: %1$s</string>
     <string name="projects_field_readonly">یوازې د لوستلو</string>
     <string name="projects_field_sortable">د ترتیب وړ</string>
     <string name="projects_field_filterable">د فلټر وړ</string>
     <string name="projects_field_show_on_card">په کارت کې ښودل</string>
-    <string name="projects_field_multi">ګڼ-ټاکنه</string>
     <string name="projects_field_position">د ښودلو ځای</string>
     <string name="projects_field_position_header">سرلیک</string>
     <string name="projects_field_validation">تصدیق</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">د څنډې د رنګ ساحه</string>
     <string name="projects_views_filter_classes">ټولګیو ته فلټر کړئ</string>
     <string name="projects_views_by">د %1$s له خوا</string>
-    <string name="projects_views_sorted">ترتیب شوی %1$s</string>
     <string name="projects_design_preview_label">مخکتنه:</string>
     <string name="projects_design_preview_no_view">د مخکتنې لپاره هیڅ لید نشته</string>
     <string name="projects_design_preview_no_class">د دې لید لپاره هیڅ ټولګی نشته</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">پروژه تازه شوه</string>
     <string name="projects_activity_attached">ضمیمه یې کړه</string>
     <string name="projects_activity_commented">تبصره یې وکړه</string>
+    <string name="projects_activity_moved">دا توکی یې ولېږداوه</string>
+    <string name="projects_activity_linked">یو لینک یې اضافه کړ</string>
+    <string name="projects_activity_class">ټولګی یې بدل کړ</string>
     <string name="projects_attachment_delete_confirm_message">دا ضمیمه به د تل لپاره ړنګه شي.</string>
     <string name="projects_attachment_delete_confirm_title">ضمیمه ړنګه شي؟</string>
     <string name="projects_settings_unsubscribe_section">د پروژې له ګډون وتل</string>
@@ -339,4 +334,5 @@
         <item quantity="other">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" او د هغه لاندې %2$s توکي ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</item>
     </plurals>
     <string name="projects_create_attachments_failed">ضمیمه کول ونشول: %1$s</string>
+    <string name="projects_activity_unknown">نامعلوم</string>
 </resources>

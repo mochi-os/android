@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Добавить поле</string>
     <string name="projects_class_delete">Удалить класс</string>
     <string name="projects_class_delete_title">Удалить класс</string>
-    <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Число</string>
-    <string name="projects_field_type_user">Пользователь</string>
-    <string name="projects_field_type_date">Дата</string>
-    <string name="projects_field_type_checklist">Чек-лист</string>
     <string name="projects_field_name">Название</string>
     <string name="projects_field_type">Тип</string>
     <string name="projects_field_flags">Флаги</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Разрешить запросы на слияние для объектов этого класса.</string>
     <string name="projects_class_parents">Родительские классы</string>
     <string name="projects_class_delete_message">Вы уверены, что хотите удалить класс \"%1$s\"? Все поля и их варианты также будут удалены.</string>
-    <string name="projects_field_type_enumerated">Перечисляемое</string>
     <string name="projects_field_label">Поле: %1$s</string>
     <string name="projects_field_readonly">Только для чтения</string>
     <string name="projects_field_sortable">Сортируемое</string>
     <string name="projects_field_filterable">Фильтруемое</string>
     <string name="projects_field_show_on_card">Показывать на карточке</string>
-    <string name="projects_field_multi">Множественный выбор</string>
     <string name="projects_field_position">Положение отображения</string>
     <string name="projects_field_position_header">Заголовок</string>
     <string name="projects_field_validation">Проверка</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Поле цвета рамки</string>
     <string name="projects_views_filter_classes">Фильтр по классам</string>
     <string name="projects_views_by">по %1$s</string>
-    <string name="projects_views_sorted">сортировка %1$s</string>
     <string name="projects_design_preview_label">Предпросмотр:</string>
     <string name="projects_design_preview_no_view">Нет представления для просмотра</string>
     <string name="projects_design_preview_no_class">Для этого представления нет класса</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Проект обновлён</string>
     <string name="projects_activity_attached">прикрепил(а)</string>
     <string name="projects_activity_commented">прокомментировал(а)</string>
+    <string name="projects_activity_moved">переместил(а) этот объект</string>
+    <string name="projects_activity_linked">добавил(а) ссылку</string>
+    <string name="projects_activity_class">изменил(а) класс</string>
     <string name="projects_attachment_delete_confirm_message">Это вложение будет удалено навсегда.</string>
     <string name="projects_attachment_delete_confirm_title">Удалить вложение?</string>
     <string name="projects_settings_unsubscribe_section">Отписаться от проекта</string>
@@ -343,4 +338,5 @@
         <item quantity="other">Вы уверены, что хотите удалить «%1$s» и %2$s вложенного элемента? Это действие необратимо.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Не удалось прикрепить: %1$s</string>
+    <string name="projects_activity_unknown">Неизвестно</string>
 </resources>

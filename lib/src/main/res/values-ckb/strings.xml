@@ -370,4 +370,13 @@
     <string name="devices_username">ناوی بەکارهێنەر</string>
     <string name="devices_warning">ئێستا وشەی نهێنی کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>
     <string name="devices_unused">هەرگیز بەکارنەهاتووە</string>
+    <string name="field_type_text">دەق</string>
+    <string name="field_type_number">ژمارە</string>
+    <string name="field_type_enumerated">ژمێردراو</string>
+    <string name="field_type_user">بەکارهێنەر</string>
+    <string name="field_type_date">بەروار</string>
+    <string name="field_type_checkbox">بۆکسی پشکنین</string>
+    <string name="field_type_checklist">لیستی پشکنین</string>
+    <string name="view_list_sorted_ascending">بە شێوەی سەرکەوتوو ڕیزکراوە</string>
+    <string name="view_list_sorted_descending">بە شێوەی داکەوتوو ڕیزکراوە</string>
 </resources>

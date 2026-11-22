@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">फील्ड जोडा</string>
     <string name="projects_class_delete">वर्ग हटवा</string>
     <string name="projects_class_delete_title">वर्ग हटवा</string>
-    <string name="projects_field_type_text">मजकूर</string>
-    <string name="projects_field_type_number">संख्या</string>
-    <string name="projects_field_type_user">वापरकर्ता</string>
-    <string name="projects_field_type_date">तारीख</string>
-    <string name="projects_field_type_checklist">चेकलिस्ट</string>
     <string name="projects_field_name">नाव</string>
     <string name="projects_field_type">प्रकार</string>
     <string name="projects_field_flags">फ्लॅग्ज</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">या वर्गाच्या ऑब्जेक्ट्सवर मर्ज विनंत्यांना परवानगी द्या.</string>
     <string name="projects_class_parents">मूळ वर्ग</string>
     <string name="projects_class_delete_message">आपण \"%1$s\" वर्ग हटवू इच्छिता याची खात्री आहे का? सर्व फील्ड आणि त्यांचे पर्याय देखील हटवले जातील.</string>
-    <string name="projects_field_type_enumerated">सूचीबद्ध</string>
     <string name="projects_field_label">फील्ड: %1$s</string>
     <string name="projects_field_readonly">केवळ-वाचनीय</string>
     <string name="projects_field_sortable">क्रमवारी लावण्यायोग्य</string>
     <string name="projects_field_filterable">फिल्टर करण्यायोग्य</string>
     <string name="projects_field_show_on_card">कार्डवर दर्शवा</string>
-    <string name="projects_field_multi">बहु-निवड</string>
     <string name="projects_field_position">प्रदर्शन स्थान</string>
     <string name="projects_field_position_header">शीर्षलेख</string>
     <string name="projects_field_validation">वैधीकरण</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">सीमारेषा रंग फील्ड</string>
     <string name="projects_views_filter_classes">वर्गांनुसार फिल्टर करा</string>
     <string name="projects_views_by">%1$s द्वारे</string>
-    <string name="projects_views_sorted">%1$s क्रमवारी लावलेले</string>
     <string name="projects_design_preview_label">पूर्वावलोकन:</string>
     <string name="projects_design_preview_no_view">पूर्वावलोकनासाठी कोणतेही दृश्य नाही</string>
     <string name="projects_design_preview_no_class">या दृश्यासाठी कोणताही वर्ग नाही</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">प्रोजेक्ट अद्यतनित केला</string>
     <string name="projects_activity_attached">संलग्न केले</string>
     <string name="projects_activity_commented">टिप्पणी केली</string>
+    <string name="projects_activity_moved">हा घटक हलवला</string>
+    <string name="projects_activity_linked">एक दुवा जोडला</string>
+    <string name="projects_activity_class">वर्ग बदलला</string>
     <string name="projects_attachment_delete_confirm_message">हे संलग्नक कायमचे हटवले जाईल.</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक हटवायचे?</string>
     <string name="projects_settings_unsubscribe_section">प्रकल्पाची सदस्यता रद्द करा</string>
@@ -339,4 +334,5 @@
         <item quantity="other">तुम्हाला खरोखरच \"%1$s\" आणि त्याखालील %2$s आयटम हटवायचे आहेत का? ही क्रिया परत करता येणार नाही.</item>
     </plurals>
     <string name="projects_create_attachments_failed">संलग्न करता आले नाही: %1$s</string>
+    <string name="projects_activity_unknown">अज्ञात</string>
 </resources>

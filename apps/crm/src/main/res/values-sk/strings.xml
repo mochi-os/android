@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Žiadne zodpovedajúce objekty</string>
     <string name="crm_field_yes">Áno</string>
     <string name="crm_field_no">Nie</string>
-    <string name="crm_field_type_checkbox">Zaškrtávacie pole</string>
     <string name="crm_comment_empty">Zatiaľ žiadne komentáre</string>
     <string name="crm_comment_attach">Pripojiť súbory</string>
     <string name="crm_property_remove">Odstrániť</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Pridať pole</string>
     <string name="crm_class_delete">Odstrániť triedu</string>
     <string name="crm_class_delete_title">Odstrániť triedu</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Číslo</string>
-    <string name="crm_field_type_user">Používateľ</string>
-    <string name="crm_field_type_date">Dátum</string>
-    <string name="crm_field_type_checklist">Zoznam úloh</string>
     <string name="crm_field_name">Názov</string>
     <string name="crm_field_type">Typ</string>
     <string name="crm_field_flags">Príznaky</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">vykonal zmenu</string>
     <string name="crm_activity_attached">priložil(a)</string>
     <string name="crm_activity_commented">komentoval(a)</string>
+    <string name="crm_activity_moved">presunul(a)</string>
+    <string name="crm_activity_linked">prepojil(a)</string>
+    <string name="crm_activity_class">zmenil(a) triedu</string>
     <string name="crm_attachment_empty">Žiadne prílohy</string>
     <string name="crm_attachment_default_name">príloha</string>
     <string name="crm_attachment_delete_confirm_title">Odstrániť prílohu?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Predvolené (čitateľné)</string>
     <string name="crm_class_parents">Nadradené triedy</string>
     <string name="crm_class_delete_message">Naozaj chcete odstrániť triedu \"%1$s\"? Odstránia sa aj všetky polia a ich možnosti.</string>
-    <string name="crm_field_type_enumerated">Vymenovaný</string>
     <string name="crm_field_label">Pole: %1$s</string>
     <string name="crm_field_readonly">Iba na čítanie</string>
     <string name="crm_field_sortable">Zoraditeľné</string>
     <string name="crm_field_filterable">Filtrovateľné</string>
     <string name="crm_field_show_on_card">Zobraziť na karte</string>
-    <string name="crm_field_multi">Viacnásobný výber</string>
     <string name="crm_field_position">Pozícia zobrazenia</string>
     <string name="crm_field_position_header">Hlavička</string>
     <string name="crm_field_validation">Overenie</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Pole farby orámovania</string>
     <string name="crm_views_filter_classes">Filtrovať podľa tried</string>
     <string name="crm_views_by">podľa %1$s</string>
-    <string name="crm_views_sorted">zoradené %1$s</string>
     <string name="crm_design_preview_label">Náhľad:</string>
     <string name="crm_design_preview_no_view">Žiadne zobrazenie na náhľad</string>
     <string name="crm_design_preview_no_class">Pre toto zobrazenie nie je žiadna trieda</string>
@@ -297,4 +291,7 @@
         <item quantity="few">Nepodarilo sa pridať %1$s prílohy: %2$s</item>
         <item quantity="other">Nepodarilo sa pridať %1$s príloh: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Rodič</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Trieda</string>
 </resources>

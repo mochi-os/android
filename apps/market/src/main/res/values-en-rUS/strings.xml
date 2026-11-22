@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="market_chargeback_reason_check_returned">Check returned</string>
     <string name="market_chargeback_reason_debit_not_authorized">Debit not authorized</string>
     <string name="market_chargeback_reason_subscription_canceled">Subscription canceled</string>
     <string name="market_chargeback_reason_unrecognized">Unrecognized charge</string>

@@ -370,4 +370,13 @@
     <string name="devices_username">Maqaa fayyadamaa</string>
     <string name="devices_warning">Jecha darbii amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
     <string name="devices_unused">Gonkumaa hin fayyadamne</string>
+    <string name="field_type_text">Barreeffama</string>
+    <string name="field_type_number">Lakkoofsa</string>
+    <string name="field_type_enumerated">Lakkaa\'ame</string>
+    <string name="field_type_user">Fayyadamaa</string>
+    <string name="field_type_date">Guyyaa</string>
+    <string name="field_type_checkbox">Saanduqa filannoo</string>
+    <string name="field_type_checklist">Tarree sakatta\'iinsaa</string>
+    <string name="view_list_sorted_ascending">ol kaʼaatti tartiibeffame</string>
+    <string name="view_list_sorted_descending">gad buʼaatti tartiibeffame</string>
 </resources>

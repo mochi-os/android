@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Niciun obiect potrivit</string>
     <string name="crm_field_yes">Da</string>
     <string name="crm_field_no">Nu</string>
-    <string name="crm_field_type_checkbox">Casetă de selectare</string>
     <string name="crm_comment_empty">Încă niciun comentariu</string>
     <string name="crm_comment_attach">Atașează fișiere</string>
     <string name="crm_property_remove">Elimină</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Adaugă câmp</string>
     <string name="crm_class_delete">Șterge clasa</string>
     <string name="crm_class_delete_title">Șterge clasa</string>
-    <string name="crm_field_type_text">Text</string>
-    <string name="crm_field_type_number">Număr</string>
-    <string name="crm_field_type_user">Utilizator</string>
-    <string name="crm_field_type_date">Dată</string>
-    <string name="crm_field_type_checklist">Listă de verificare</string>
     <string name="crm_field_name">Nume</string>
     <string name="crm_field_type">Tip</string>
     <string name="crm_field_flags">Indicatoare</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">a făcut o modificare</string>
     <string name="crm_activity_attached">a atașat</string>
     <string name="crm_activity_commented">a comentat</string>
+    <string name="crm_activity_moved">a mutat</string>
+    <string name="crm_activity_linked">a legat</string>
+    <string name="crm_activity_class">a schimbat clasa</string>
     <string name="crm_attachment_empty">Niciun atașament</string>
     <string name="crm_attachment_default_name">atașament</string>
     <string name="crm_attachment_delete_confirm_title">Ștergeți atașamentul?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Implicit (lizibil)</string>
     <string name="crm_class_parents">Clase părinte</string>
     <string name="crm_class_delete_message">Sigur dorești să ștergi clasa \"%1$s\"? Toate câmpurile și opțiunile lor vor fi de asemenea șterse.</string>
-    <string name="crm_field_type_enumerated">Enumerat</string>
     <string name="crm_field_label">Câmp: %1$s</string>
     <string name="crm_field_readonly">Doar citire</string>
     <string name="crm_field_sortable">Sortabil</string>
     <string name="crm_field_filterable">Filtrabil</string>
     <string name="crm_field_show_on_card">Afișează pe card</string>
-    <string name="crm_field_multi">Selecție multiplă</string>
     <string name="crm_field_position">Poziție de afișare</string>
     <string name="crm_field_position_header">Antet</string>
     <string name="crm_field_validation">Validare</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Câmp pentru culoarea bordurii</string>
     <string name="crm_views_filter_classes">Filtrează după clase</string>
     <string name="crm_views_by">după %1$s</string>
-    <string name="crm_views_sorted">sortat %1$s</string>
     <string name="crm_design_preview_label">Previzualizare:</string>
     <string name="crm_design_preview_no_view">Nicio vizualizare de previzualizat</string>
     <string name="crm_design_preview_no_class">Nicio clasă pentru această vizualizare</string>
@@ -297,4 +291,7 @@
         <item quantity="few">%1$s atașamente nu au putut fi adăugate: %2$s</item>
         <item quantity="other">%1$s de atașamente nu au putut fi adăugate: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Părinte</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Clasă</string>
 </resources>

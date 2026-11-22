@@ -370,4 +370,13 @@
     <string name="devices_username">ユーザー名</string>
     <string name="devices_warning">今すぐパスワードをコピーしてください。再表示することはできません。</string>
     <string name="devices_unused">未使用</string>
+    <string name="field_type_text">テキスト</string>
+    <string name="field_type_number">数値</string>
+    <string name="field_type_enumerated">列挙型</string>
+    <string name="field_type_user">ユーザー</string>
+    <string name="field_type_date">日付</string>
+    <string name="field_type_checkbox">チェックボックス</string>
+    <string name="field_type_checklist">チェックリスト</string>
+    <string name="view_list_sorted_ascending">昇順で並べ替え</string>
+    <string name="view_list_sorted_descending">降順で並べ替え</string>
 </resources>

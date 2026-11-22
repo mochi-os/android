@@ -379,4 +379,13 @@
     <string name="devices_username">Enw defnyddiwr</string>
     <string name="devices_warning">Copïwch y cyfrinair nawr: ni ellir ei ddangos eto.</string>
     <string name="devices_unused">Heb ei ddefnyddio erioed</string>
+    <string name="field_type_text">Testun</string>
+    <string name="field_type_number">Rhif</string>
+    <string name="field_type_enumerated">Rhestrol</string>
+    <string name="field_type_user">Defnyddiwr</string>
+    <string name="field_type_date">Dyddiad</string>
+    <string name="field_type_checkbox">Blwch ticio</string>
+    <string name="field_type_checklist">Rhestr wirio</string>
+    <string name="view_list_sorted_ascending">trefnwyd yn esgynnol</string>
+    <string name="view_list_sorted_descending">trefnwyd yn ddisgynnol</string>
 </resources>

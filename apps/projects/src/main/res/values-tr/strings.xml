@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Alan ekle</string>
     <string name="projects_class_delete">Sınıfı sil</string>
     <string name="projects_class_delete_title">Sınıfı sil</string>
-    <string name="projects_field_type_text">Metin</string>
-    <string name="projects_field_type_number">Sayı</string>
-    <string name="projects_field_type_user">Kullanıcı</string>
-    <string name="projects_field_type_date">Tarih</string>
-    <string name="projects_field_type_checklist">Kontrol listesi</string>
     <string name="projects_field_name">Ad</string>
     <string name="projects_field_type">Tür</string>
     <string name="projects_field_flags">Bayraklar</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Bu sınıfın nesnelerinde birleştirme isteklerine izin ver.</string>
     <string name="projects_class_parents">Üst sınıflar</string>
     <string name="projects_class_delete_message">\"%1$s\" sınıfını silmek istediğinizden emin misiniz? Tüm alanlar ve seçenekleri de silinecek.</string>
-    <string name="projects_field_type_enumerated">Numaralandırılmış</string>
     <string name="projects_field_label">Alan: %1$s</string>
     <string name="projects_field_readonly">Salt okunur</string>
     <string name="projects_field_sortable">Sıralanabilir</string>
     <string name="projects_field_filterable">Filtrelenebilir</string>
     <string name="projects_field_show_on_card">Kartta göster</string>
-    <string name="projects_field_multi">Çoklu seçim</string>
     <string name="projects_field_position">Görüntüleme konumu</string>
     <string name="projects_field_position_header">Başlık</string>
     <string name="projects_field_validation">Doğrulama</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Kenarlık rengi alanı</string>
     <string name="projects_views_filter_classes">Sınıflara göre filtrele</string>
     <string name="projects_views_by">%1$s tarafından</string>
-    <string name="projects_views_sorted">sıralama: %1$s</string>
     <string name="projects_design_preview_label">Önizleme:</string>
     <string name="projects_design_preview_no_view">Önizlenecek görünüm yok</string>
     <string name="projects_design_preview_no_class">Bu görünüm için sınıf yok</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proje güncellendi</string>
     <string name="projects_activity_attached">ekledi</string>
     <string name="projects_activity_commented">yorum yaptı</string>
+    <string name="projects_activity_moved">bu nesneyi taşıdı</string>
+    <string name="projects_activity_linked">bağlantı ekledi</string>
+    <string name="projects_activity_class">sınıfı değiştirdi</string>
     <string name="projects_attachment_delete_confirm_message">Bu ek kalıcı olarak silinecek.</string>
     <string name="projects_attachment_delete_confirm_title">Ek silinsin mi?</string>
     <string name="projects_settings_unsubscribe_section">Proje aboneliğinden çık</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" öğesini ve altındaki %2$s öğeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Eklenemedi: %1$s</string>
+    <string name="projects_activity_unknown">Bilinmiyor</string>
 </resources>

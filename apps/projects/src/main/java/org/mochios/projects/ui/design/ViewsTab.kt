@@ -105,10 +105,6 @@ internal fun viewListLabels(): ViewListLabels {
             resources.getString(R.string.projects_views_delete_message, viewName)
         },
         byField = { fieldName -> resources.getString(R.string.projects_views_by, fieldName) },
-        sortedBy = { direction ->
-            val label = if (direction == "desc") R.string.projects_views_direction_desc else R.string.projects_views_direction_asc
-            resources.getString(R.string.projects_views_sorted, resources.getString(label))
-        },
         typeBoard = stringResource(R.string.projects_views_type_board),
         typeList = stringResource(R.string.projects_views_type_list),
         dragRow = stringResource(R.string.projects_drag_row),

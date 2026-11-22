@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Համապատասխան օբյեկտներ չկան</string>
     <string name="crm_field_yes">Այո</string>
     <string name="crm_field_no">Ոչ</string>
-    <string name="crm_field_type_checkbox">Նշավանդակ</string>
     <string name="crm_comment_empty">Դեռ մեկնաբանություններ չկան</string>
     <string name="crm_comment_attach">Կցել պատասխանի ֆայլեր</string>
     <string name="crm_property_remove">Հեռացնել</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Ավելացնել դաշտ</string>
     <string name="crm_class_delete">Ջնջել դասը</string>
     <string name="crm_class_delete_title">Ջնջել դասը</string>
-    <string name="crm_field_type_text">Տեքստ</string>
-    <string name="crm_field_type_number">Թիվ</string>
-    <string name="crm_field_type_user">Օգտատեր</string>
-    <string name="crm_field_type_date">Ամսաթիվ</string>
-    <string name="crm_field_type_checklist">Ստուգաթերթիկ</string>
     <string name="crm_field_name">Անուն</string>
     <string name="crm_field_type">Տեսակ</string>
     <string name="crm_field_flags">Դրոշներ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">կատարեց փոփոխություն</string>
     <string name="crm_activity_attached">կցեց</string>
     <string name="crm_activity_commented">մեկնաբանեց</string>
+    <string name="crm_activity_moved">տեղափոխեց</string>
+    <string name="crm_activity_linked">կապեց</string>
+    <string name="crm_activity_class">փոխեց դասը</string>
     <string name="crm_attachment_empty">Կցորդներ չկան</string>
     <string name="crm_attachment_default_name">կցորդ</string>
     <string name="crm_attachment_delete_confirm_title">Ջնջե՞լ կցորդը։</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Լռելյայն (ընթեռնելի)</string>
     <string name="crm_class_parents">Ծնող դասեր</string>
     <string name="crm_class_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" դասը։ Բոլոր դաշտերը և դրանց ընտրանքները նույնպես կջնջվեն։</string>
-    <string name="crm_field_type_enumerated">Թվարկված</string>
     <string name="crm_field_label">Դաշտ՝ %1$s</string>
     <string name="crm_field_readonly">Միայն կարդալու համար</string>
     <string name="crm_field_sortable">Տեսակավորելի</string>
     <string name="crm_field_filterable">Զտելի</string>
     <string name="crm_field_show_on_card">Ցույց տալ քարտի վրա</string>
-    <string name="crm_field_multi">Բազմակի ընտրություն</string>
     <string name="crm_field_position">Ցուցադրման դիրք</string>
     <string name="crm_field_position_header">Վերնագիր</string>
     <string name="crm_field_validation">Վավերացում</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Եզրագծի գույնի դաշտ</string>
     <string name="crm_views_filter_classes">Զտել ըստ դասերի</string>
     <string name="crm_views_by">ըստ %1$s</string>
-    <string name="crm_views_sorted">տեսակավորված %1$s</string>
     <string name="crm_design_preview_label">Նախադիտում՝</string>
     <string name="crm_design_preview_no_view">Չկա նախադիտելու տեսք</string>
     <string name="crm_design_preview_no_class">Այս տեսքի համար դաս չկա</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Չհաջողվեց ավելացնել %1$s կցորդ: %2$s</item>
         <item quantity="other">Չհաջողվեց ավելացնել %1$s կցորդ: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Ծնող</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Դաս</string>
 </resources>

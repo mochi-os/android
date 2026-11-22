@@ -51,13 +51,11 @@
     <string name="projects_request_field_title">Título</string>
     <string name="projects_request_status_open">Abrir</string>
     <string name="projects_board_new">Nuevo</string>
-    <string name="projects_field_type_user">Usuario</string>
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_loading">Cargando…</string>
     <string name="projects_field_position_default">Predeterminado</string>
     <string name="projects_settings_tab_people">Personas</string>
     <string name="projects_sort_number">Número</string>
-    <string name="projects_field_type_number">Número</string>
     <string name="projects_views_sort_number">Número</string>
     <string name="projects_settings_tab_general">General</string>
     <string name="projects_request_status_draft">Borrador</string>
@@ -85,8 +83,6 @@
     <string name="projects_move_position_top">Mejores</string>
     <string name="projects_class_move_up">Mover hacia arriba</string>
     <string name="projects_class_move_down">Mover hacia abajo</string>
-    <string name="projects_field_type_text">Texto</string>
-    <string name="projects_field_type_date">Fecha</string>
     <string name="projects_field_required">Requerido</string>
     <string name="projects_views_sort_by">Ordenar por</string>
     <string name="projects_design">Diseño</string>
@@ -214,15 +210,12 @@
     <string name="projects_class_parents">Clases padre</string>
     <string name="projects_class_fields">Campos</string>
     <string name="projects_class_delete_message">¿Seguro que querés eliminar la clase \"%1$s\"? También se eliminarán todos los campos y sus opciones.</string>
-    <string name="projects_field_type_enumerated">Enumerado</string>
-    <string name="projects_field_type_checklist">Lista de verificación</string>
     <string name="projects_field_label">Campo: %1$s</string>
     <string name="projects_field_flags">Indicadores</string>
     <string name="projects_field_readonly">Solo lectura</string>
     <string name="projects_field_sortable">Ordenable</string>
     <string name="projects_field_filterable">Filtrable</string>
     <string name="projects_field_show_on_card">Mostrar en la tarjeta</string>
-    <string name="projects_field_multi">Selección múltiple</string>
     <string name="projects_field_position">Posición de visualización</string>
     <string name="projects_field_position_header">Encabezado</string>
     <string name="projects_field_position_sidebar">Barra lateral</string>
@@ -246,7 +239,6 @@
     <string name="projects_views_filter_classes">Filtrar por clases</string>
     <string name="projects_views_sort_rank">Orden</string>
     <string name="projects_views_by">por %1$s</string>
-    <string name="projects_views_sorted">ordenado %1$s</string>
     <string name="projects_design_preview_label">Vista previa:</string>
     <string name="projects_design_preview_no_view">No hay vista para previsualizar</string>
     <string name="projects_design_preview_no_class">No hay clase para esta vista</string>
@@ -306,4 +298,5 @@
     <string name="projects_board_delete_column_message">¿Estás seguro de que querés eliminar la columna \"%1$s\"? Esto no se puede deshacer.</string>
     <string name="projects_object_delete_named">¿Estás seguro de que querés eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
     <string name="projects_create_attachments_failed">No se pudo adjuntar: %1$s</string>
+    <string name="projects_activity_unknown">Desconocido</string>
 </resources>

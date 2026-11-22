@@ -21,13 +21,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.DriveFileMove
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -51,7 +49,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -63,14 +60,12 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
-import org.mochios.android.ui.components.personAvatarPath
+import org.mochios.android.ui.components.FieldValue
 import org.mochios.crm.R
-import org.mochios.crm.util.dateSeconds
 import org.mochios.crm.model.CrmDetails
-import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
-import org.mochios.crm.ui.board.parseColor
+import org.mochios.crm.ui.board.fieldShown
 import org.mochios.crm.ui.`object`.DeleteObjectDialog
 import org.mochios.crm.ui.`object`.descendantCount
 import org.mochios.crm.ui.crm.CrmViewModel
@@ -86,7 +81,9 @@ fun TreeRow(
     viewModel: CrmViewModel,
     onToggleExpand: () -> Unit,
     onClick: () -> Unit,
-    onDelete: () -> Unit,
+    // Null where the user may not change objects: the row then offers
+    // neither Move nor Delete, and does not drag.
+    onDelete: (() -> Unit)?,
     onReparent: ((newParentId: String) -> Unit)? = null,
     dragState: DragState? = null,
     onDragDrop: ((sourceId: String, edge: DragEdge) -> Unit)? = null,
@@ -189,12 +186,15 @@ fun TreeRow(
     // Ordered by type rather than by the class's field order, so the status and
     // priority always open the meta row directly under the description instead
     // of landing on a wrapped second line behind an owner or a date.
+    // A field with nothing to show, such as an unticked box, takes no place.
     val metaOrder = listOf("enumerated", "user", "date")
+    val format = LocalFormat.current
     val metaFields = bodyFields
-        .filter { field ->
-            field.id != descriptionField?.id && obj.stringValue(field.id).isNotBlank()
+        .filter { field -> field.id != descriptionField?.id }
+        .mapNotNull { field ->
+            fieldShown(field, obj, viewModel, people, format)?.let { display -> field to display }
         }
-        .sortedBy { field ->
+        .sortedBy { (field, _) ->
             metaOrder.indexOf(field.fieldtype).takeIf { rank -> rank >= 0 } ?: metaOrder.size
         }
 
@@ -247,7 +247,12 @@ fun TreeRow(
 
                 Spacer(modifier = Modifier.weight(1f))
 
-                Box {
+                val hierarchy = crmDetails?.hierarchy.orEmpty()
+                val movable = onReparent != null && (
+                    parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
+                        parentTargets(obj, allObjects, hierarchy).isNotEmpty()
+                    )
+                if (movable || onDelete != null) Box {
                     MochiIconButton(
                         onClick = { showContextMenu = true },
                         modifier = Modifier.size(32.dp)
@@ -263,10 +268,7 @@ fun TreeRow(
                         expanded = showContextMenu,
                         onDismissRequest = { showContextMenu = false }
                     ) {
-                        val hierarchy = crmDetails?.hierarchy.orEmpty()
-                        val movable = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
-                            parentTargets(obj, allObjects, hierarchy).isNotEmpty()
-                        if (onReparent != null && movable) {
+                        if (movable) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_tree_move)) },
                                 onClick = {
@@ -281,15 +283,17 @@ fun TreeRow(
                                 },
                             )
                         }
-                        MochiDropdownMenuItem(
-                            text = { Text(stringResource(MochiR.string.common_delete)) },
-                            onClick = {
-                                showContextMenu = false
-                                showDeleteDialog = true
-                            },
-                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                            destructive = true,
-                        )
+                        if (onDelete != null) {
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(MochiR.string.common_delete)) },
+                                onClick = {
+                                    showContextMenu = false
+                                    showDeleteDialog = true
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                                destructive = true,
+                            )
+                        }
                     }
                 }
             }
@@ -326,22 +330,15 @@ fun TreeRow(
                         .fillMaxWidth()
                         .padding(start = bodyStart, top = 6.dp)
                 ) {
-                    metaFields.forEach { field ->
-                        MetaValue(
-                            field = field,
-                            objectClass = obj.objectClass,
-                            value = obj.stringValue(field.id),
-                            viewModel = viewModel,
-                            people = people,
-                            modifier = Modifier.alignByBaseline(),
-                        )
+                    metaFields.forEach { (_, display) ->
+                        FieldValue(display, modifier = Modifier.alignByBaseline())
                     }
                 }
             }
         }
     }
 
-    if (showDeleteDialog) {
+    if (showDeleteDialog && onDelete != null) {
         // The server deletes everything under the row with it.
         DeleteObjectDialog(
             title = title,
@@ -415,105 +412,4 @@ fun TreeRow(
             dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
-}
-
-@Composable
-private fun MetaValue(
-    field: CrmField,
-    /** The owning object's class, which is what scopes an option id. */
-    objectClass: String,
-    value: String,
-    viewModel: CrmViewModel,
-    people: List<Person>,
-    modifier: Modifier = Modifier,
-) {
-    // Each item aligns to its text baseline in the FlowRow (via [modifier]).
-    val rowModifier = modifier
-    when (field.fieldtype) {
-        "enumerated" -> {
-            val option = viewModel.getOptionsForObject(objectClass, field.id)
-                .find { candidate -> candidate.id == value }
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                if (option != null && option.colour.isNotBlank()) {
-                    Box(
-                        modifier = Modifier
-                            .size(10.dp)
-                            .background(parseColor(option.colour), CircleShape)
-                    )
-                    Spacer(modifier = Modifier.width(6.dp))
-                }
-                MetaText(option?.name ?: value)
-            }
-        }
-
-        "user" -> {
-            val person = people.find { candidate -> candidate.id == value }
-            val name = person?.name?.takeIf { personName -> personName.isNotBlank() } ?: value
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                // The field value is the person's entity id, which is what the
-                // people app serves an avatar under — without src the avatar
-                // could only ever be seeded initials, never the real photo.
-                EntityAvatar(
-                    name = name,
-                    src = personAvatarPath(value),
-                    seed = value,
-                    size = 22.dp,
-                )
-                Spacer(modifier = Modifier.width(6.dp))
-                MetaText(name)
-            }
-        }
-
-        "date" -> {
-            val format = LocalFormat.current
-            val seconds = dateSeconds(value)
-            val label = seconds
-                ?.let { epoch -> format.formatDate(epoch) }
-                ?.takeIf { formatted -> formatted.isNotBlank() } ?: value
-            val overdue = seconds != null &&
-                seconds > 0 &&
-                seconds < System.currentTimeMillis() / 1000
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    Icons.Default.Schedule,
-                    contentDescription = null,
-                    modifier = Modifier.size(16.dp),
-                    tint = if (overdue) {
-                        MaterialTheme.colorScheme.error
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                )
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(
-                    text = label,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = if (overdue) {
-                        MaterialTheme.colorScheme.error
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-
-        else -> {
-            Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-                MetaText(value)
-            }
-        }
-    }
-}
-
-@Composable
-private fun MetaText(text: String) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.bodyMedium,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        maxLines = 1,
-        overflow = TextOverflow.Ellipsis,
-    )
 }

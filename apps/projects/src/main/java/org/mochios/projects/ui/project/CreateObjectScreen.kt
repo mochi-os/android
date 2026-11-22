@@ -139,12 +139,11 @@ fun CreateObjectScreen(
 
     // Held rather than derived, because the type picker below writes to it. The
     // opening value can only be known once the design has loaded, so it is
-    // seeded on arrival and left alone after that.
-    var selectedClassId by remember { mutableStateOf("") }
+    // seeded on arrival and left alone after that. The view model holds it,
+    // as the rest of the form, so recreating the screen keeps it.
+    var selectedClassId by viewModel::classId
     LaunchedEffect(initialClassId) {
-        if (selectedClassId.isBlank()) {
-            selectedClassId = initialClassId
-        }
+        viewModel.seedClass(initialClassId)
     }
     var classExpanded by remember { mutableStateOf(false) }
 
@@ -161,16 +160,19 @@ fun CreateObjectScreen(
                 .sortedWith(compareBy(NaturalCompare) { obj -> objectTitle(obj, classes, prefix) })
         }
     }
-    var selectedParentId by remember { mutableStateOf<String?>(null) }
+    var selectedParentId by viewModel::parentId
     var parentExpanded by remember { mutableStateOf(false) }
 
     // The parent that opened the form, once the objects it belongs to are in.
     // Changing class clears it, since the new class may not take it.
     LaunchedEffect(initialClassId) {
-        selectedParentId = openingParent.takeIf {
-            presetParentObj != null &&
-                presetParentObj.objectClass in hierarchy[initialClassId].orEmpty()
-        }
+        viewModel.seedParent(
+            initialClassId,
+            openingParent.takeIf {
+                presetParentObj != null &&
+                    presetParentObj.objectClass in hierarchy[initialClassId].orEmpty()
+            },
+        )
     }
 
     // A class that cannot sit at the top level offers no "(none)", so until
@@ -185,7 +187,7 @@ fun CreateObjectScreen(
     // Per-field values entered on the form, keyed by field id. The title
     // field's value is sent as the object's title on create; the rest are
     // applied one per request afterwards, as the web dialog does.
-    val fieldValues = remember { mutableStateMapOf<String, String>() }
+    val fieldValues = viewModel.values
     val classFields = remember(fields, selectedClassId) {
         fields[selectedClassId].orEmpty().sortedBy { field -> field.rank }
     }
@@ -196,22 +198,18 @@ fun CreateObjectScreen(
     // named one (the tapped column header). A copy keeps the original's.
     val column = activeView?.takeIf { view -> view.viewtype == "board" && source == null }?.columns.orEmpty()
     LaunchedEffect(selectedClassId, classFields, classOptions, preset) {
-        val next = formValues(classFields, classOptions, fieldValues.toMap(), preset, column)
-        fieldValues.clear()
-        fieldValues.putAll(next)
+        viewModel.seedValues(listOf(selectedClassId, classFields, classOptions, preset, column)) { previous ->
+            formValues(classFields, classOptions, previous, preset, column)
+        }
     }
 
     // Files picked to attach, uploaded once the object exists.
-    val pendingFiles = remember { mutableStateListOf<Uri>() }
+    val pendingFiles = viewModel.files
     // The attachments a copy carries over, which Create copies; any may be
     // taken off first.
-    val copies = remember { mutableStateListOf<Attachment>() }
-    var copiesSeeded by remember { mutableStateOf(false) }
+    val copies = viewModel.copies
     LaunchedEffect(uiState.copied) {
-        if (!copiesSeeded && uiState.copied.isNotEmpty()) {
-            copies.addAll(uiState.copied)
-            copiesSeeded = true
-        }
+        viewModel.seedCopies(uiState.copied)
     }
     val defaultName = stringResource(R.string.projects_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Geen overeenkomende objecten</string>
     <string name="crm_field_yes">Ja</string>
     <string name="crm_field_no">Nee</string>
-    <string name="crm_field_type_checkbox">Selectievakje</string>
     <string name="crm_comment_empty">Nog geen reacties</string>
     <string name="crm_comment_attach">Bestanden bijvoegen</string>
     <string name="crm_property_remove">Verwijderen</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Veld toevoegen</string>
     <string name="crm_class_delete">Klasse verwijderen</string>
     <string name="crm_class_delete_title">Klasse verwijderen</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Getal</string>
-    <string name="crm_field_type_user">Gebruiker</string>
-    <string name="crm_field_type_date">Datum</string>
-    <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Naam</string>
     <string name="crm_field_type">Type</string>
     <string name="crm_field_flags">Vlaggen</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">heeft een wijziging aangebracht</string>
     <string name="crm_activity_attached">heeft bijgevoegd</string>
     <string name="crm_activity_commented">heeft gereageerd</string>
+    <string name="crm_activity_moved">heeft verplaatst</string>
+    <string name="crm_activity_linked">heeft gekoppeld</string>
+    <string name="crm_activity_class">heeft de klasse gewijzigd</string>
     <string name="crm_attachment_empty">Geen bijlagen</string>
     <string name="crm_attachment_default_name">bijlage</string>
     <string name="crm_attachment_delete_confirm_title">Bijlage verwijderen?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Standaard (leesbaar)</string>
     <string name="crm_class_parents">Bovenliggende klassen</string>
     <string name="crm_class_delete_message">Weet je zeker dat je de klasse \"%1$s\" wilt verwijderen? Alle velden en hun opties worden ook verwijderd.</string>
-    <string name="crm_field_type_enumerated">Opsomming</string>
     <string name="crm_field_label">Veld: %1$s</string>
     <string name="crm_field_readonly">Alleen-lezen</string>
     <string name="crm_field_sortable">Sorteerbaar</string>
     <string name="crm_field_filterable">Filterbaar</string>
     <string name="crm_field_show_on_card">Weergeven op kaart</string>
-    <string name="crm_field_multi">Meerkeuze</string>
     <string name="crm_field_position">Weergavepositie</string>
     <string name="crm_field_position_header">Koptekst</string>
     <string name="crm_field_validation">Validatie</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Veld voor randkleur</string>
     <string name="crm_views_filter_classes">Filteren op klassen</string>
     <string name="crm_views_by">op %1$s</string>
-    <string name="crm_views_sorted">gesorteerd %1$s</string>
     <string name="crm_design_preview_label">Voorbeeld:</string>
     <string name="crm_design_preview_no_view">Geen weergave om te tonen</string>
     <string name="crm_design_preview_no_class">Geen klasse voor deze weergave</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s bijlage kon niet worden toegevoegd: %2$s</item>
         <item quantity="other">%1$s bijlagen konden niet worden toegevoegd: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Bovenliggend</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasse</string>
 </resources>

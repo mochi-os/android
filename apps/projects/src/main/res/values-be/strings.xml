@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Дадаць поле</string>
     <string name="projects_class_delete">Выдаліць клас</string>
     <string name="projects_class_delete_title">Выдаліць клас</string>
-    <string name="projects_field_type_text">Тэкст</string>
-    <string name="projects_field_type_number">Лік</string>
-    <string name="projects_field_type_user">Карыстальнік</string>
-    <string name="projects_field_type_date">Дата</string>
-    <string name="projects_field_type_checklist">Спіс задач</string>
     <string name="projects_field_name">Назва</string>
     <string name="projects_field_type">Тып</string>
     <string name="projects_field_flags">Адзнакі</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Перамясціць уверх</string>
     <string name="projects_class_move_down">Перамясціць уніз</string>
     <string name="projects_class_delete_message">Вы ўпэўнены, што хочаце выдаліць клас \"%1$s\"? Усе палі і іх параметры таксама будуць выдалены.</string>
-    <string name="projects_field_type_enumerated">Пералічаны</string>
     <string name="projects_field_label">Поле: %1$s</string>
     <string name="projects_field_readonly">Толькі для чытання</string>
     <string name="projects_field_sortable">З сартаваннем</string>
     <string name="projects_field_filterable">З фільтраваннем</string>
     <string name="projects_field_show_on_card">Паказваць на картцы</string>
-    <string name="projects_field_multi">Множны выбар</string>
     <string name="projects_field_position">Пазіцыя адлюстравання</string>
     <string name="projects_field_position_header">Загаловак</string>
     <string name="projects_field_position_body">Асноўная частка</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Па ўбыванні</string>
     <string name="projects_views_filter_classes">Фільтр па класах</string>
     <string name="projects_views_by">па %1$s</string>
-    <string name="projects_views_sorted">сартавана %1$s</string>
     <string name="projects_design_preview_label">Папярэдні прагляд:</string>
     <string name="projects_design_preview_no_view">Няма выгляду для прагляду</string>
     <string name="projects_design_preview_no_class">Няма класа для гэтага выгляду</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Праект абноўлены</string>
     <string name="projects_activity_attached">далучыў(-ла)</string>
     <string name="projects_activity_commented">пракаментаваў(-ла)</string>
+    <string name="projects_activity_moved">перамясціў(-ла) гэты аб\'ект</string>
+    <string name="projects_activity_linked">дадаў(-ла) спасылку</string>
+    <string name="projects_activity_class">змяніў(-ла) клас</string>
     <string name="projects_attachment_delete_confirm_message">Гэта далучэнне будзе выдалена назаўсёды.</string>
     <string name="projects_attachment_delete_confirm_title">Выдаліць далучэнне?</string>
     <string name="projects_settings_unsubscribe_section">Адпісацца ад праекта</string>
@@ -343,4 +338,5 @@
         <item quantity="other">Вы ўпэўнены, што хочаце выдаліць \"%1$s\" і %2$s элемента пад ім? Гэтае дзеянне нельга адмяніць.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Не ўдалося прымацаваць: %1$s</string>
+    <string name="projects_activity_unknown">Невядома</string>
 </resources>

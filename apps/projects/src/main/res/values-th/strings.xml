@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">เพิ่มฟิลด์</string>
     <string name="projects_class_delete">ลบคลาส</string>
     <string name="projects_class_delete_title">ลบคลาส</string>
-    <string name="projects_field_type_text">ข้อความ</string>
-    <string name="projects_field_type_number">ตัวเลข</string>
-    <string name="projects_field_type_user">ผู้ใช้</string>
-    <string name="projects_field_type_date">วันที่</string>
-    <string name="projects_field_type_checklist">เช็คลิสต์</string>
     <string name="projects_field_name">ชื่อ</string>
     <string name="projects_field_type">ประเภท</string>
     <string name="projects_field_flags">แฟล็ก</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">อนุญาตคำขอผสานสำหรับวัตถุของคลาสนี้</string>
     <string name="projects_class_parents">คลาสแม่</string>
     <string name="projects_class_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบคลาส \"%1$s\"? ฟิลด์และตัวเลือกทั้งหมดจะถูกลบไปด้วย</string>
-    <string name="projects_field_type_enumerated">แบบแจกแจง</string>
     <string name="projects_field_label">ฟิลด์: %1$s</string>
     <string name="projects_field_readonly">อ่านอย่างเดียว</string>
     <string name="projects_field_sortable">เรียงลำดับได้</string>
     <string name="projects_field_filterable">กรองได้</string>
     <string name="projects_field_show_on_card">แสดงบนการ์ด</string>
-    <string name="projects_field_multi">เลือกได้หลายรายการ</string>
     <string name="projects_field_position">ตำแหน่งการแสดงผล</string>
     <string name="projects_field_position_header">ส่วนหัว</string>
     <string name="projects_field_validation">การตรวจสอบ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ฟิลด์สีเส้นขอบ</string>
     <string name="projects_views_filter_classes">กรองตามคลาส</string>
     <string name="projects_views_by">โดย %1$s</string>
-    <string name="projects_views_sorted">เรียงลำดับ %1$s</string>
     <string name="projects_design_preview_label">ตัวอย่าง:</string>
     <string name="projects_design_preview_no_view">ไม่มีมุมมองให้แสดงตัวอย่าง</string>
     <string name="projects_design_preview_no_class">ไม่มีคลาสสำหรับมุมมองนี้</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">อัปเดตโปรเจกต์แล้ว</string>
     <string name="projects_activity_attached">แนบแล้ว</string>
     <string name="projects_activity_commented">แสดงความคิดเห็นแล้ว</string>
+    <string name="projects_activity_moved">ย้ายวัตถุนี้</string>
+    <string name="projects_activity_linked">เพิ่มลิงก์</string>
+    <string name="projects_activity_class">เปลี่ยนคลาส</string>
     <string name="projects_attachment_delete_confirm_message">ไฟล์แนบนี้จะถูกลบอย่างถาวร</string>
     <string name="projects_attachment_delete_confirm_title">ลบไฟล์แนบหรือไม่?</string>
     <string name="projects_settings_unsubscribe_section">เลิกติดตามโครงการ</string>
@@ -338,4 +333,5 @@
         <item quantity="other">คุณแน่ใจหรือไม่ว่าต้องการลบ \"%1$s\" และ %2$s รายการที่อยู่ภายใต้รายการนี้? การกระทำนี้ไม่สามารถยกเลิกได้</item>
     </plurals>
     <string name="projects_create_attachments_failed">ไม่สามารถแนบได้: %1$s</string>
+    <string name="projects_activity_unknown">ไม่ทราบ</string>
 </resources>

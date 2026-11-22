@@ -370,4 +370,13 @@
     <string name="devices_username">Felhasználónév</string>
     <string name="devices_warning">Másolja ki most a jelszót: később nem jeleníthető meg újra.</string>
     <string name="devices_unused">Soha nem használt</string>
+    <string name="field_type_text">Szöveg</string>
+    <string name="field_type_number">Szám</string>
+    <string name="field_type_enumerated">Felsorolt</string>
+    <string name="field_type_user">Felhasználó</string>
+    <string name="field_type_date">Dátum</string>
+    <string name="field_type_checkbox">Jelölőnégyzet</string>
+    <string name="field_type_checklist">Ellenőrzőlista</string>
+    <string name="view_list_sorted_ascending">növekvő sorrendben</string>
+    <string name="view_list_sorted_descending">csökkenő sorrendben</string>
 </resources>

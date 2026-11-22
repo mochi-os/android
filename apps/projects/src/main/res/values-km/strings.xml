@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">បន្ថែមប្រអប់</string>
     <string name="projects_class_delete">លុបថ្នាក់</string>
     <string name="projects_class_delete_title">លុបថ្នាក់</string>
-    <string name="projects_field_type_text">អត្ថបទ</string>
-    <string name="projects_field_type_number">លេខ</string>
-    <string name="projects_field_type_user">អ្នកប្រើប្រាស់</string>
-    <string name="projects_field_type_date">កាលបរិច្ឆេទ</string>
-    <string name="projects_field_type_checklist">បញ្ជីពិនិត្យ</string>
     <string name="projects_field_name">ឈ្មោះ</string>
     <string name="projects_field_type">ប្រភេទ</string>
     <string name="projects_field_flags">ទង់</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">អនុញ្ញាតការស្នើបញ្ចូលគ្នាលើវត្ថុនៃថ្នាក់នេះ។</string>
     <string name="projects_class_parents">ថ្នាក់មេ</string>
     <string name="projects_class_delete_message">តើអ្នកប្រាកដថាចង់លុបថ្នាក់ \"%1$s\" ឬ? វាល និងជម្រើសរបស់វាទាំងអស់ក៏នឹងត្រូវលុបដែរ។</string>
-    <string name="projects_field_type_enumerated">បានរាប់បញ្ជី</string>
     <string name="projects_field_label">វាល៖ %1$s</string>
     <string name="projects_field_readonly">អានបានតែប៉ុណ្ណោះ</string>
     <string name="projects_field_sortable">អាចតម្រៀបបាន</string>
     <string name="projects_field_filterable">អាចត្រងបាន</string>
     <string name="projects_field_show_on_card">បង្ហាញលើកាត</string>
-    <string name="projects_field_multi">ជ្រើសរើសច្រើន</string>
     <string name="projects_field_position">ទីតាំងបង្ហាញ</string>
     <string name="projects_field_position_header">បឋមកថា</string>
     <string name="projects_field_validation">ការផ្ទៀងផ្ទាត់</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">វាលពណ៌ស៊ុម</string>
     <string name="projects_views_filter_classes">ត្រងតាមថ្នាក់</string>
     <string name="projects_views_by">តាម %1$s</string>
-    <string name="projects_views_sorted">បានតម្រៀប %1$s</string>
     <string name="projects_design_preview_label">មើលជាមុន៖</string>
     <string name="projects_design_preview_no_view">មិនមានទិដ្ឋភាពដើម្បីមើលជាមុនទេ</string>
     <string name="projects_design_preview_no_class">មិនមានថ្នាក់សម្រាប់ទិដ្ឋភាពនេះទេ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">បានធ្វើបច្ចុប្បន្នភាពគម្រោង</string>
     <string name="projects_activity_attached">បានភ្ជាប់</string>
     <string name="projects_activity_commented">បានបញ្ចេញមតិ</string>
+    <string name="projects_activity_moved">បានផ្លាស់ទីវត្ថុនេះ</string>
+    <string name="projects_activity_linked">បានបន្ថែមតំណ</string>
+    <string name="projects_activity_class">បានប្ដូរថ្នាក់</string>
     <string name="projects_attachment_delete_confirm_message">ឯកសារភ្ជាប់នេះនឹងត្រូវលុបជាអចិន្ត្រៃយ៍។</string>
     <string name="projects_attachment_delete_confirm_title">លុបឯកសារភ្ជាប់?</string>
     <string name="projects_settings_unsubscribe_section">ឈប់ជាវគម្រោង</string>
@@ -337,4 +332,5 @@
         <item quantity="other">តើអ្នកប្រាកដថាចង់លុប \"%1$s\" និង %2$s ធាតុ នៅក្រោមវាមែនទេ? សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។</item>
     </plurals>
     <string name="projects_create_attachments_failed">មិនអាចភ្ជាប់បានទេ៖ %1$s</string>
+    <string name="projects_activity_unknown">មិនស្គាល់</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Додај поле</string>
     <string name="projects_class_delete">Избриши класа</string>
     <string name="projects_class_delete_title">Избриши класа</string>
-    <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Број</string>
-    <string name="projects_field_type_user">Корисник</string>
-    <string name="projects_field_type_date">Датум</string>
-    <string name="projects_field_type_checklist">Список</string>
     <string name="projects_field_name">Име</string>
     <string name="projects_field_type">Тип</string>
     <string name="projects_field_flags">Знаменца</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Дозволи барања за спојување на објектите од оваа класа.</string>
     <string name="projects_class_parents">Родителски класи</string>
     <string name="projects_class_delete_message">Дали сте сигурни дека сакате да ја избришете класата \"%1$s\"? Сите полиња и нивните опции исто така ќе бидат избришани.</string>
-    <string name="projects_field_type_enumerated">Набројано</string>
     <string name="projects_field_label">Поле: %1$s</string>
     <string name="projects_field_readonly">Само за читање</string>
     <string name="projects_field_sortable">Може да се подредува</string>
     <string name="projects_field_filterable">Може да се филтрира</string>
     <string name="projects_field_show_on_card">Прикажи на картичка</string>
-    <string name="projects_field_multi">Повеќекратен избор</string>
     <string name="projects_field_position">Позиција на прикажување</string>
     <string name="projects_field_position_header">Заглавие</string>
     <string name="projects_field_validation">Валидација</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Поле за бојата на работ</string>
     <string name="projects_views_filter_classes">Филтрирај по класи</string>
     <string name="projects_views_by">по %1$s</string>
-    <string name="projects_views_sorted">подредено %1$s</string>
     <string name="projects_design_preview_label">Преглед:</string>
     <string name="projects_design_preview_no_view">Нема приказ за преглед</string>
     <string name="projects_design_preview_no_class">Нема класа за овој приказ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Проектот е ажуриран</string>
     <string name="projects_activity_attached">прикачи</string>
     <string name="projects_activity_commented">коментираше</string>
+    <string name="projects_activity_moved">го премести овој објект</string>
+    <string name="projects_activity_linked">додаде врска</string>
+    <string name="projects_activity_class">ја промени класата</string>
     <string name="projects_attachment_delete_confirm_message">Овој прилог ќе биде трајно избришан.</string>
     <string name="projects_attachment_delete_confirm_title">Да се избрише прилогот?</string>
     <string name="projects_settings_unsubscribe_section">Отпиши се од проектот</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Сигурен ли си дека сакаш да го избришеш „%1$s“ и %2$s ставки под него? Оваа акција не може да се врати.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Не можеше да се прикачи: %1$s</string>
+    <string name="projects_activity_unknown">Непознато</string>
 </resources>

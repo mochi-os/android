@@ -369,4 +369,13 @@
     <string name="devices_username">Jeneng panganggo</string>
     <string name="devices_warning">Salin tembung sandhi saiki: ora bisa ditampilake manèh.</string>
     <string name="devices_unused">Durung tau dianggo</string>
+    <string name="field_type_text">Teks</string>
+    <string name="field_type_number">Angka</string>
+    <string name="field_type_enumerated">Kacacah</string>
+    <string name="field_type_user">Panganggo</string>
+    <string name="field_type_date">Tanggal</string>
+    <string name="field_type_checkbox">Kothak centhang</string>
+    <string name="field_type_checklist">Checklist</string>
+    <string name="view_list_sorted_ascending">diurutake munggah</string>
+    <string name="view_list_sorted_descending">diurutake mudhun</string>
 </resources>

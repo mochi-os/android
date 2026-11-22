@@ -66,6 +66,9 @@ fun TreeView(
         derivedStateOf { flattenTree(roots, 0, childMap, expandedState) }
     }
 
+    // Moving, dragging and deleting rows are writes; a reader only opens them.
+    val writable = viewModel.canWrite()
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
@@ -75,21 +78,21 @@ fun TreeView(
             TreeRow(
                 node = node,
                 viewModel = viewModel,
-                dragState = dragState,
+                dragState = if (writable) dragState else null,
                 onToggleExpand = {
                     expandedState[node.obj.id] = !(expandedState[node.obj.id] ?: true)
                 },
                 onClick = { onObjectClick(node.obj.id) },
-                onDelete = { viewModel.deleteObject(node.obj.id) },
-                onReparent = { newParentId -> viewModel.reparentObject(node.obj.id, newParentId) },
-                onDragDrop = { sourceId, edge ->
+                onDelete = if (writable) ({ viewModel.deleteObject(node.obj.id) }) else null,
+                onReparent = if (writable) ({ newParentId -> viewModel.reparentObject(node.obj.id, newParentId) }) else null,
+                onDragDrop = if (writable) ({ sourceId, edge ->
                     handleTreeDrop(
                         sourceId = sourceId,
                         targetNode = node,
                         edge = edge,
                         viewModel = viewModel,
                     )
-                }
+                }) else null
             )
         }
     }

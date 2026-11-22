@@ -47,6 +47,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.model.canWrite
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -81,7 +82,7 @@ fun LinksSection(
     onNavigateToObject: (String) -> Unit = {}
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val canWrite = uiState.access == "owner" || uiState.access == "design" || uiState.access == "write"
+    val canWrite = canWrite(uiState.access)
     var showAddSheet by remember { mutableStateOf(false) }
 
     val sectionRelates = stringResource(R.string.crm_links_section_relates)

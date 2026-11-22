@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Додати поле</string>
     <string name="projects_class_delete">Видалити клас</string>
     <string name="projects_class_delete_title">Видалити клас</string>
-    <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Число</string>
-    <string name="projects_field_type_user">Користувач</string>
-    <string name="projects_field_type_date">Дата</string>
-    <string name="projects_field_type_checklist">Контрольний список</string>
     <string name="projects_field_name">Назва</string>
     <string name="projects_field_type">Тип</string>
     <string name="projects_field_flags">Прапорці</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Дозволити запити на злиття для об\'єктів цього класу.</string>
     <string name="projects_class_parents">Батьківські класи</string>
     <string name="projects_class_delete_message">Ви впевнені, що хочете видалити клас \"%1$s\"? Усі поля та їхні параметри також буде видалено.</string>
-    <string name="projects_field_type_enumerated">Перелік</string>
     <string name="projects_field_label">Поле: %1$s</string>
     <string name="projects_field_readonly">Лише для читання</string>
     <string name="projects_field_sortable">Можна сортувати</string>
     <string name="projects_field_filterable">Можна фільтрувати</string>
     <string name="projects_field_show_on_card">Показувати на картці</string>
-    <string name="projects_field_multi">Множинний вибір</string>
     <string name="projects_field_position">Позиція відображення</string>
     <string name="projects_field_position_header">Заголовок</string>
     <string name="projects_field_validation">Перевірка</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Поле кольору рамки</string>
     <string name="projects_views_filter_classes">Фільтрувати за класами</string>
     <string name="projects_views_by">за %1$s</string>
-    <string name="projects_views_sorted">відсортовано %1$s</string>
     <string name="projects_design_preview_label">Попередній перегляд:</string>
     <string name="projects_design_preview_no_view">Немає подання для перегляду</string>
     <string name="projects_design_preview_no_class">Немає класу для цього подання</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Проєкт оновлено</string>
     <string name="projects_activity_attached">прикріпив(ла)</string>
     <string name="projects_activity_commented">прокоментував(ла)</string>
+    <string name="projects_activity_moved">перемістив(ла) цей обʼєкт</string>
+    <string name="projects_activity_linked">додав(ла) посилання</string>
+    <string name="projects_activity_class">змінив(ла) клас</string>
     <string name="projects_attachment_delete_confirm_message">Це вкладення буде видалено назавжди.</string>
     <string name="projects_attachment_delete_confirm_title">Видалити вкладення?</string>
     <string name="projects_settings_unsubscribe_section">Відписатися від проєкту</string>
@@ -343,4 +338,5 @@
         <item quantity="other">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладеного елемента? Цю дію не можна скасувати.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Не вдалося прикріпити: %1$s</string>
+    <string name="projects_activity_unknown">Невідомо</string>
 </resources>

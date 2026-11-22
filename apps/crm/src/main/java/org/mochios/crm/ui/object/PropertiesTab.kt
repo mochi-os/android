@@ -59,10 +59,17 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import org.mochios.android.format.personName
+import org.mochios.android.i18n.pickerDate
+import org.mochios.android.i18n.pickerMillis
 import org.mochios.android.model.Checklist
 import org.mochios.android.model.ChecklistItem
 import org.mochios.android.model.User
+import org.mochios.android.model.canWrite
 import org.mochios.android.ui.components.ChoicePrefix
+import org.mochios.android.ui.components.NumberField
+import org.mochios.android.ui.components.fieldDisplay
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.FormField
 import org.mochios.android.ui.components.FormHeading
 import org.mochios.android.ui.components.FormRow
@@ -99,7 +106,7 @@ fun PropertiesTab(
     val uiState by viewModel.uiState.collectAsState()
     val fields = crmDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = crmDetails.options[obj.objectClass] ?: emptyMap()
-    val canWrite = canWriteAccess(uiState.access)
+    val canWrite = canWrite(uiState.access)
     val titleFieldId = crmDetails.classes.find { cls -> cls.id == obj.objectClass }?.title
         .orEmpty()
     val density = LocalDensity.current
@@ -209,18 +216,29 @@ fun PropertiesTab(
         // Attachments + Links inlined here to match web's object-detail-panel
         // layout (both fold into Properties; no separate tabs).
         if (crmId.isNotBlank()) {
-            Spacer(modifier = Modifier.height(24.dp))
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(16.dp))
             val attachmentUpload by remember(obj.id) {
                 viewModel.attachmentUpload(obj.id)
             }.collectAsState()
+            if (canWrite || uiState.attachments.isNotEmpty() || attachmentUpload != null) {
+                Spacer(modifier = Modifier.height(24.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+            // Adding and deleting files is writing; anyone else sees the files.
             AttachmentsSection(
                 attachments = uiState.attachments,
                 crmId = crmId,
                 upload = attachmentUpload,
-                onAddAttachments = { uris -> viewModel.createAttachments(uris) },
-                onDeleteAttachment = { id -> viewModel.deleteAttachment(id) },
+                onAddAttachments = if (canWrite) {
+                    { uris -> viewModel.createAttachments(uris) }
+                } else {
+                    null
+                },
+                onDeleteAttachment = if (canWrite) {
+                    { id -> viewModel.deleteAttachment(id) }
+                } else {
+                    null
+                },
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -237,9 +255,6 @@ fun PropertiesTab(
         Spacer(modifier = Modifier.height(32.dp))
     }
 }
-
-internal fun canWriteAccess(access: String): Boolean =
-    access == "owner" || access == "design" || access == "write"
 
 /** Side padding of the object-detail form. */
 private val FORM_PADDING = 16.dp
@@ -413,18 +428,16 @@ internal fun FieldEditor(
 
             "number" -> {
                 if (readOnly) {
-                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), stringValue)
+                    // In the user's number format, with the decimals stored.
+                    val shown = fieldDisplay("number", stringValue, LocalFormat.current)?.text ?: stringValue
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), shown)
                 } else {
-                    MochiTextField(
+                    // A minus, a leading point and a decimal comma can be
+                    // typed; only a number the server takes is saved.
+                    NumberField(
                         value = stringValue,
-                        onValueChange = { newVal ->
-                            if (newVal.isEmpty() || newVal.toDoubleOrNull() != null) {
-                                onValueChange(newVal)
-                            }
-                        },
+                        onValueChange = onValueChange,
                         label = fieldLabel,
-                        singleLine = true,
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                         modifier = Modifier.fillMaxWidth()
                     )
                 }
@@ -489,10 +502,12 @@ internal fun FieldEditor(
                 }
                 val resolvedName = people.find { it.id == stringValue }?.name
                 if (readOnly) {
-                    val displayName = when {
-                        stringValue.isBlank() -> "—"
-                        !resolvedName.isNullOrBlank() -> resolvedName
-                        else -> stringValue
+                    // Someone the CRM has no name for shows by fingerprint,
+                    // never by their id.
+                    val displayName = if (stringValue.isBlank()) {
+                        "—"
+                    } else {
+                        personName(resolvedName, fingerprint(stringValue))
                     }
                     Text(text = displayName, style = MaterialTheme.typography.bodyLarge)
                 } else {
@@ -518,13 +533,11 @@ internal fun FieldEditor(
 
             "date" -> {
                 var showDatePicker by remember { mutableStateOf(false) }
+                // The stored day, the same for every reader wherever they are,
+                // and before 1970 too.
                 val format = LocalFormat.current
-                val dateSeconds = dateFieldSeconds(stringValue)
-                val displayDate = when {
-                    stringValue.isBlank() -> ""
-                    dateSeconds != null -> format.formatDate(dateSeconds)
-                    else -> stringValue
-                }
+                val day = format.calendarDate(stringValue)
+                val displayDate = day?.let { date -> format.formatDate(date) } ?: stringValue
 
                 if (readOnly) {
                     ReadOnlyDisplay(labelOrNull(showLabel, field.name), displayDate)
@@ -568,7 +581,7 @@ internal fun FieldEditor(
                             androidx.compose.ui.platform.LocalConfiguration provides localizedConfig
                         ) {
                             val datePickerState = rememberDatePickerState(
-                                initialSelectedDateMillis = dateSeconds?.times(1000)
+                                initialSelectedDateMillis = day?.let(::pickerMillis)
                             )
                             DatePickerDialog(
                                 onDismissRequest = { showDatePicker = false },
@@ -576,13 +589,8 @@ internal fun FieldEditor(
                                     MochiTextButton(onClick = {
                                         val selectedMillis = datePickerState.selectedDateMillis
                                         if (selectedMillis != null) {
-                                            // The server's values endpoint expects an ISO
-                                            // date string (yyyy-MM-dd), not epoch seconds.
-                                            onValueChange(
-                                                java.time.LocalDate
-                                                    .ofEpochDay(selectedMillis / 86_400_000L)
-                                                    .toString()
-                                            )
+                                            // The server stores an ISO day (yyyy-MM-dd).
+                                            onValueChange(pickerDate(selectedMillis).toString())
                                         }
                                         showDatePicker = false
                                     }) {
@@ -661,7 +669,7 @@ internal fun FieldEditor(
             }
         }
 
-        if (field.isRequired && stringValue.isBlank() && (value as? List<*>).isNullOrEmpty()) {
+        if (field.isRequired && stringValue.isBlank()) {
             Text(
                 text = stringResource(R.string.crm_property_required, field.name),
                 style = MaterialTheme.typography.labelSmall,
@@ -694,20 +702,6 @@ private fun ReadOnlyDisplay(label: String?, value: String) {
 /** The field name when the editor draws its own label, null when it doesn't. */
 private fun labelOrNull(showLabel: Boolean, name: String): String? =
     if (showLabel) name else null
-
-/**
- * Epoch seconds from a date value: epoch seconds (the server's read format) or
- * ISO `yyyy-MM-dd` (as just written, before the next refresh). Null when
- * neither parses.
- */
-private fun dateFieldSeconds(value: String): Long? {
-    value.toLongOrNull()?.let { return it }
-    return try {
-        java.time.LocalDate.parse(value).toEpochDay() * 86_400L
-    } catch (_: Exception) {
-        null
-    }
-}
 
 /** A small colour dot shown to the left of a select option. */
 @Composable

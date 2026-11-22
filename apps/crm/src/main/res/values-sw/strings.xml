@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Hakuna vitu vinavyoendana</string>
     <string name="crm_field_yes">Ndiyo</string>
     <string name="crm_field_no">Hapana</string>
-    <string name="crm_field_type_checkbox">Kisanduku cha kuteua</string>
     <string name="crm_comment_empty">Hakuna maoni bado</string>
     <string name="crm_comment_attach">Ambatisha faili</string>
     <string name="crm_property_remove">Ondoa</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Ongeza uga</string>
     <string name="crm_class_delete">Futa darasa</string>
     <string name="crm_class_delete_title">Futa darasa</string>
-    <string name="crm_field_type_text">Maandishi</string>
-    <string name="crm_field_type_number">Nambari</string>
-    <string name="crm_field_type_user">Mtumiaji</string>
-    <string name="crm_field_type_date">Tarehe</string>
-    <string name="crm_field_type_checklist">Orodha ya ukaguzi</string>
     <string name="crm_field_name">Jina</string>
     <string name="crm_field_type">Aina</string>
     <string name="crm_field_flags">Alama</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">amefanya mabadiliko</string>
     <string name="crm_activity_attached">aliambatisha</string>
     <string name="crm_activity_commented">alitoa maoni</string>
+    <string name="crm_activity_moved">alihamisha</string>
+    <string name="crm_activity_linked">aliunganisha</string>
+    <string name="crm_activity_class">alibadilisha darasa</string>
     <string name="crm_attachment_empty">Hakuna viambatisho</string>
     <string name="crm_attachment_default_name">kiambatisho</string>
     <string name="crm_attachment_delete_confirm_title">Futa kiambatisho?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Chaguo-msingi (linaloweza kusomeka)</string>
     <string name="crm_class_parents">Madarasa ya mzazi</string>
     <string name="crm_class_delete_message">Una uhakika unataka kufuta darasa \"%1$s\"? Uga zote na chaguo zake pia zitafutwa.</string>
-    <string name="crm_field_type_enumerated">Iliyoorodheshwa</string>
     <string name="crm_field_label">Uga: %1$s</string>
     <string name="crm_field_readonly">Kusoma tu</string>
     <string name="crm_field_sortable">Inayoweza kupangwa</string>
     <string name="crm_field_filterable">Inayoweza kuchujwa</string>
     <string name="crm_field_show_on_card">Onyesha kwenye kadi</string>
-    <string name="crm_field_multi">Chagua nyingi</string>
     <string name="crm_field_position">Nafasi ya kuonyesha</string>
     <string name="crm_field_position_header">Kichwa</string>
     <string name="crm_field_validation">Uthibitishaji</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Uga wa rangi ya mpaka</string>
     <string name="crm_views_filter_classes">Chuja kwa madarasa</string>
     <string name="crm_views_by">kwa %1$s</string>
-    <string name="crm_views_sorted">imepangwa %1$s</string>
     <string name="crm_design_preview_label">Hakiki:</string>
     <string name="crm_design_preview_no_view">Hakuna mwonekano wa kuhakiki</string>
     <string name="crm_design_preview_no_class">Hakuna darasa kwa mwonekano huu</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Kiambatisho %1$s hakikuweza kuongezwa: %2$s</item>
         <item quantity="other">Viambatisho %1$s havikuweza kuongezwa: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Mzazi</string>
+    <string name="crm_export_csv_id">Kitambulisho</string>
+    <string name="crm_export_csv_class">Darasa</string>
 </resources>

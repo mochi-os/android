@@ -370,4 +370,13 @@
     <string name="devices_username">使用者名稱</string>
     <string name="devices_warning">請立即複製密碼：它無法再次顯示。</string>
     <string name="devices_unused">從未使用</string>
+    <string name="field_type_text">文字</string>
+    <string name="field_type_number">數字</string>
+    <string name="field_type_enumerated">列舉</string>
+    <string name="field_type_user">使用者</string>
+    <string name="field_type_date">日期</string>
+    <string name="field_type_checkbox">核取方塊</string>
+    <string name="field_type_checklist">檢查清單</string>
+    <string name="view_list_sorted_ascending">升冪排列</string>
+    <string name="view_list_sorted_descending">降冪排列</string>
 </resources>

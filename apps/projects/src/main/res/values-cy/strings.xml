@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ychwanegu maes</string>
     <string name="projects_class_delete">Dileu dosbarth</string>
     <string name="projects_class_delete_title">Dileu dosbarth</string>
-    <string name="projects_field_type_text">Testun</string>
-    <string name="projects_field_type_number">Rhif</string>
-    <string name="projects_field_type_user">Defnyddiwr</string>
-    <string name="projects_field_type_date">Dyddiad</string>
-    <string name="projects_field_type_checklist">Rhestr wirio</string>
     <string name="projects_field_name">Enw</string>
     <string name="projects_field_type">Math</string>
     <string name="projects_field_flags">Baneri</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Symud i fyny</string>
     <string name="projects_class_move_down">Symud i lawr</string>
     <string name="projects_class_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r dosbarth \"%1$s\"? Bydd pob maes a\'u hopsiynau hefyd yn cael eu dileu.</string>
-    <string name="projects_field_type_enumerated">Rhestrol</string>
     <string name="projects_field_label">Maes: %1$s</string>
     <string name="projects_field_readonly">Darllen yn unig</string>
     <string name="projects_field_sortable">Trefnadwy</string>
     <string name="projects_field_filterable">Hidladwy</string>
     <string name="projects_field_show_on_card">Dangos ar y cerdyn</string>
-    <string name="projects_field_multi">Aml-ddewis</string>
     <string name="projects_field_position">Safle arddangos</string>
     <string name="projects_field_position_header">Pennyn</string>
     <string name="projects_field_position_body">Corff</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Disgynnol</string>
     <string name="projects_views_filter_classes">Hidlo i ddosbarthiadau</string>
     <string name="projects_views_by">gan %1$s</string>
-    <string name="projects_views_sorted">wedi\'i drefnu %1$s</string>
     <string name="projects_design_preview_label">Rhagolwg:</string>
     <string name="projects_design_preview_no_view">Dim golwg i\'w ragweld</string>
     <string name="projects_design_preview_no_class">Dim dosbarth ar gyfer y golwg hwn</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Prosiect wedi\'i ddiweddaru</string>
     <string name="projects_activity_attached">atododd</string>
     <string name="projects_activity_commented">gwnaeth sylw</string>
+    <string name="projects_activity_moved">symudodd y gwrthrych hwn</string>
+    <string name="projects_activity_linked">ychwanegodd ddolen</string>
+    <string name="projects_activity_class">newidiodd y dosbarth</string>
     <string name="projects_attachment_delete_confirm_message">Bydd yr atodiad hwn yn cael ei ddileu am byth.</string>
     <string name="projects_attachment_delete_confirm_title">Dileu\'r atodiad?</string>
     <string name="projects_settings_unsubscribe_section">Dad-danysgrifio o\'r prosiect</string>
@@ -347,4 +342,5 @@
         <item quantity="other">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nid oedd modd atodi: %1$s</string>
+    <string name="projects_activity_unknown">Anhysbys</string>
 </resources>

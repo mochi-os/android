@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Nessun oggetto corrispondente</string>
     <string name="crm_field_yes">Sì</string>
     <string name="crm_field_no">No</string>
-    <string name="crm_field_type_checkbox">Casella di controllo</string>
     <string name="crm_comment_empty">Ancora nessun commento</string>
     <string name="crm_comment_attach">Allega file</string>
     <string name="crm_property_remove">Rimuovi</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Aggiungi campo</string>
     <string name="crm_class_delete">Elimina classe</string>
     <string name="crm_class_delete_title">Elimina classe</string>
-    <string name="crm_field_type_text">Testo</string>
-    <string name="crm_field_type_number">Numero</string>
-    <string name="crm_field_type_user">Utente</string>
-    <string name="crm_field_type_date">Data</string>
-    <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Nome</string>
     <string name="crm_field_type">Tipo</string>
     <string name="crm_field_flags">Segnalazioni</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ha apportato una modifica</string>
     <string name="crm_activity_attached">ha allegato</string>
     <string name="crm_activity_commented">ha commentato</string>
+    <string name="crm_activity_moved">ha spostato</string>
+    <string name="crm_activity_linked">ha collegato</string>
+    <string name="crm_activity_class">ha cambiato la classe</string>
     <string name="crm_attachment_empty">Nessun allegato</string>
     <string name="crm_attachment_default_name">allegato</string>
     <string name="crm_attachment_delete_confirm_title">Eliminare l\'allegato?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Predefinito (leggibile)</string>
     <string name="crm_class_parents">Classi superiori</string>
     <string name="crm_class_delete_message">Vuoi davvero eliminare la classe \"%1$s\"? Anche tutti i campi e le relative opzioni saranno eliminati.</string>
-    <string name="crm_field_type_enumerated">Enumerato</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_readonly">Sola lettura</string>
     <string name="crm_field_sortable">Ordinabile</string>
     <string name="crm_field_filterable">Filtrabile</string>
     <string name="crm_field_show_on_card">Mostra sulla scheda</string>
-    <string name="crm_field_multi">Selezione multipla</string>
     <string name="crm_field_position">Posizione di visualizzazione</string>
     <string name="crm_field_position_header">Intestazione</string>
     <string name="crm_field_validation">Convalida</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Campo colore del bordo</string>
     <string name="crm_views_filter_classes">Filtra per classi</string>
     <string name="crm_views_by">per %1$s</string>
-    <string name="crm_views_sorted">ordinato %1$s</string>
     <string name="crm_design_preview_label">Anteprima:</string>
     <string name="crm_design_preview_no_view">Nessuna vista da visualizzare</string>
     <string name="crm_design_preview_no_class">Nessuna classe per questa vista</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Impossibile aggiungere %1$s allegato: %2$s</item>
         <item quantity="other">Impossibile aggiungere %1$s allegati: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Padre</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Classe</string>
 </resources>

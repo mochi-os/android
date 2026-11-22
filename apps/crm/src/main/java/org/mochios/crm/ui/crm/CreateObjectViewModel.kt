@@ -53,6 +53,25 @@ data class CreateObjectUiState(
     val copied: List<Attachment> = emptyList(),
 )
 
+/**
+ * What the create form holds. It lives in the view model, which a rotation or
+ * a theme change keeps, so the form is not emptied by one; the screen's
+ * seeding runs again on its return and finds it already done.
+ *
+ * @property classId The class picked, "" until the design has loaded.
+ * @property parent The parent picked, null for the top level.
+ * @property values Field values typed or picked, by field id.
+ * @property files Files picked to attach once the object exists.
+ * @property copies The attachments a copy carries over, which Create copies.
+ */
+data class CreateObjectForm(
+    val classId: String = "",
+    val parent: String? = null,
+    val values: Map<String, String> = emptyMap(),
+    val files: List<Uri> = emptyList(),
+    val copies: List<Attachment> = emptyList(),
+)
+
 /** Drives the create-object screen. */
 @HiltViewModel
 class CreateObjectViewModel @Inject constructor(
@@ -85,6 +104,20 @@ class CreateObjectViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(CreateObjectUiState())
     val uiState: StateFlow<CreateObjectUiState> = _uiState.asStateFlow()
 
+    private val _form = MutableStateFlow(CreateObjectForm())
+
+    /** What the form holds. */
+    val form: StateFlow<CreateObjectForm> = _form.asStateFlow()
+
+    /** Whether a copy's parent has been put on the form, which is done once. */
+    private var parentSeeded = false
+
+    /** Whether a copy's attachments have been put on the form, which is done once. */
+    private var copiesSeeded = false
+
+    /** The class [CreateObjectForm.values] were seeded for; another class seeds them afresh. */
+    private var valuesSeeded: String? = null
+
     private val tracker = UploadTracker()
 
     /** The attachments picked on the form, while Create uploads them. */
@@ -114,6 +147,11 @@ class CreateObjectViewModel @Inject constructor(
                     copied = copied,
                     isLoading = false,
                 )
+                // Once: a later load finds them on the form, or taken off it.
+                if (!copiesSeeded) {
+                    copiesSeeded = true
+                    _form.value = _form.value.copy(copies = copied)
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -121,6 +159,73 @@ class CreateObjectViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /** Opens the form on [classId] once the design is in; a class already picked stays. */
+    fun seedClass(classId: String) {
+        if (_form.value.classId.isBlank() && classId.isNotBlank()) {
+            _form.value = _form.value.copy(classId = classId)
+        }
+    }
+
+    /** The user picked [classId]: its parent and its values are chosen afresh. */
+    fun selectClass(classId: String) {
+        _form.value = _form.value.copy(classId = classId, parent = null)
+    }
+
+    /** Opens a copy under its original's [parent], once. */
+    fun seedParent(parent: String?) {
+        if (parentSeeded || parent.isNullOrBlank()) return
+        parentSeeded = true
+        if (_form.value.parent == null) _form.value = _form.value.copy(parent = parent)
+    }
+
+    /** Puts [parent] on the form, null for the top level. */
+    fun selectParent(parent: String?) {
+        if (_form.value.parent != parent) _form.value = _form.value.copy(parent = parent)
+    }
+
+    /**
+     * Seeds the values of [classId] once: [preset] (a board column's "+", a
+     * copy's every value) where the class can take it, then the first option
+     * of each required enumerated field still blank. The grouping field is
+     * left to the preset. A return to the screen finds them seeded and keeps
+     * what was typed since.
+     */
+    fun seedValues(classId: String, preset: Map<String, String>) {
+        if (classId.isBlank() || valuesSeeded == classId) return
+        val details = _uiState.value.details ?: return
+        valuesSeeded = classId
+        val values = mutableMapOf<String, String>()
+        preset.forEach { (fieldId, value) ->
+            if (usableValue(classId, fieldId, value)) values[fieldId] = value
+        }
+        details.fields[classId].orEmpty().forEach { field ->
+            if (field.fieldtype == "enumerated" && field.isRequired && values[field.id].isNullOrBlank()) {
+                optionsForField(classId, field.id).firstOrNull()?.let { option -> values[field.id] = option.id }
+            }
+        }
+        _form.value = _form.value.copy(values = values)
+    }
+
+    /** Sets the form's value of [fieldId]. */
+    fun setValue(fieldId: String, value: String) {
+        _form.value = _form.value.copy(values = _form.value.values + (fieldId to value))
+    }
+
+    /** Adds picked files to attach. */
+    fun addFiles(uris: List<Uri>) {
+        _form.value = _form.value.copy(files = _form.value.files + uris)
+    }
+
+    /** Takes the picked file at [index] off. */
+    fun removeFile(index: Int) {
+        _form.value = _form.value.copy(files = _form.value.files.filterIndexed { at, _ -> at != index })
+    }
+
+    /** Takes the copied attachment at [index] off. */
+    fun removeCopy(index: Int) {
+        _form.value = _form.value.copy(copies = _form.value.copies.filterIndexed { at, _ -> at != index })
     }
 
     /** Clears the pending-navigation id once the screen has opened the object. */

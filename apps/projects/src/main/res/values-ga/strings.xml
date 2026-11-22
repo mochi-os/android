@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Cuir réimse leis</string>
     <string name="projects_class_delete">Scrios rang</string>
     <string name="projects_class_delete_title">Scrios rang</string>
-    <string name="projects_field_type_text">Téacs</string>
-    <string name="projects_field_type_number">Uimhir</string>
-    <string name="projects_field_type_user">Úsáideoir</string>
-    <string name="projects_field_type_date">Dáta</string>
-    <string name="projects_field_type_checklist">Seicliosta</string>
     <string name="projects_field_name">Ainm</string>
     <string name="projects_field_type">Cineál</string>
     <string name="projects_field_flags">Bratacha</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Ceadaigh iarratais chumaiscthe ar réada den aicme seo.</string>
     <string name="projects_class_parents">Aicmí tuismitheora</string>
     <string name="projects_class_delete_message">An bhfuil tú cinnte gur mian leat an aicme \"%1$s\" a scriosadh? Scriosfar gach réimse agus a rogha freisin.</string>
-    <string name="projects_field_type_enumerated">Áirithe</string>
     <string name="projects_field_label">Réimse: %1$s</string>
     <string name="projects_field_readonly">Inléite amháin</string>
     <string name="projects_field_sortable">In-shórtáilte</string>
     <string name="projects_field_filterable">In-scagtha</string>
     <string name="projects_field_show_on_card">Taispeáin ar an gcárta</string>
-    <string name="projects_field_multi">Ilroghnú</string>
     <string name="projects_field_position">Suíomh taispeána</string>
     <string name="projects_field_position_header">Ceanntásc</string>
     <string name="projects_field_validation">Bailíochtú</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Réimse dath na himlíne</string>
     <string name="projects_views_filter_classes">Scag de réir aicmí</string>
     <string name="projects_views_by">de réir %1$s</string>
-    <string name="projects_views_sorted">sórtáilte %1$s</string>
     <string name="projects_design_preview_label">Réamhamharc:</string>
     <string name="projects_design_preview_no_view">Níl aon radharc le réamhamharc</string>
     <string name="projects_design_preview_no_class">Níl aicme don radharc seo</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Tionscadal nuashonraithe</string>
     <string name="projects_activity_attached">cheangail</string>
     <string name="projects_activity_commented">rinne trácht</string>
+    <string name="projects_activity_moved">bhog an réad seo</string>
+    <string name="projects_activity_linked">chuir nasc leis</string>
+    <string name="projects_activity_class">d\'athraigh an rang</string>
     <string name="projects_attachment_delete_confirm_message">Scriosfar an ceangaltán seo go buan.</string>
     <string name="projects_attachment_delete_confirm_title">Scrios an ceangaltán?</string>
     <string name="projects_settings_unsubscribe_section">Díliostáil ón tionscadal</string>
@@ -345,4 +340,5 @@
         <item quantity="other">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Theip ar cheangal: %1$s</string>
+    <string name="projects_activity_unknown">Anaithnid</string>
 </resources>

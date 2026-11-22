@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ƙara fili</string>
     <string name="projects_class_delete">Goge class</string>
     <string name="projects_class_delete_title">Goge class</string>
-    <string name="projects_field_type_text">Rubutu</string>
-    <string name="projects_field_type_number">Lamba</string>
-    <string name="projects_field_type_user">Mai amfani</string>
-    <string name="projects_field_type_date">Kwanan wata</string>
-    <string name="projects_field_type_checklist">Jerin dubawa</string>
     <string name="projects_field_name">Suna</string>
     <string name="projects_field_type">Nau\'i</string>
     <string name="projects_field_flags">Tutoci</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Ƙyale buƙatun haɗakarwa kan abubuwan wannan aji.</string>
     <string name="projects_class_parents">Azuzuwan iyaye</string>
     <string name="projects_class_delete_message">Kana da tabbacin kana son goge aji \"%1$s\"? Za a kuma goge dukkan filaye da zaɓuɓɓukansu.</string>
-    <string name="projects_field_type_enumerated">An lissafa</string>
     <string name="projects_field_label">Fili: %1$s</string>
     <string name="projects_field_readonly">Karatu kawai</string>
     <string name="projects_field_sortable">Mai jeranawa</string>
     <string name="projects_field_filterable">Mai tacewa</string>
     <string name="projects_field_show_on_card">Nuna a kati</string>
-    <string name="projects_field_multi">Zaɓi-da-yawa</string>
     <string name="projects_field_position">Matsayin nuni</string>
     <string name="projects_field_position_header">Kanun labari</string>
     <string name="projects_field_validation">Tabbatarwa</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Filin launin gefe</string>
     <string name="projects_views_filter_classes">Tace zuwa azuzuwa</string>
     <string name="projects_views_by">ta %1$s</string>
-    <string name="projects_views_sorted">an jera %1$s</string>
     <string name="projects_design_preview_label">Bita:</string>
     <string name="projects_design_preview_no_view">Babu ra\'ayi don bita</string>
     <string name="projects_design_preview_no_class">Babu aji don wannan ra\'ayi</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">An sabunta project</string>
     <string name="projects_activity_attached">ya makala</string>
     <string name="projects_activity_commented">ya yi sharhi</string>
+    <string name="projects_activity_moved">ya matsar da wannan abun</string>
+    <string name="projects_activity_linked">ya ƙara hanyar haɗi</string>
+    <string name="projects_activity_class">ya canza aji</string>
     <string name="projects_attachment_delete_confirm_message">Za a goge wannan abin da aka makala har abada.</string>
     <string name="projects_attachment_delete_confirm_title">A goge abin da aka makala?</string>
     <string name="projects_settings_unsubscribe_section">Daina bibiyar aikin</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Ka tabbata kana son goge \"%1$s\" da abubuwa %2$s da ke ƙarƙashinsa? Ba za a iya juya wannan aiki ba.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Ba a iya haɗawa ba: %1$s</string>
+    <string name="projects_activity_unknown">Ba a sani ba</string>
 </resources>

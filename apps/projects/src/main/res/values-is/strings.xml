@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Bæta við sviði</string>
     <string name="projects_class_delete">Eyða flokki</string>
     <string name="projects_class_delete_title">Eyða flokki</string>
-    <string name="projects_field_type_text">Texti</string>
-    <string name="projects_field_type_number">Tala</string>
-    <string name="projects_field_type_user">Notandi</string>
-    <string name="projects_field_type_date">Dagsetning</string>
-    <string name="projects_field_type_checklist">Gátlisti</string>
     <string name="projects_field_name">Nafn</string>
     <string name="projects_field_type">Tegund</string>
     <string name="projects_field_flags">Flögg</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Leyfa sameiningarbeiðnir á hlutum af þessum flokki.</string>
     <string name="projects_class_parents">Yfirflokkar</string>
     <string name="projects_class_delete_message">Ertu viss um að þú viljir eyða flokknum \"%1$s\"? Öllum reitum og valkostum þeirra verður einnig eytt.</string>
-    <string name="projects_field_type_enumerated">Upptalning</string>
     <string name="projects_field_label">Reitur: %1$s</string>
     <string name="projects_field_readonly">Skrifvarið</string>
     <string name="projects_field_sortable">Hægt að raða</string>
     <string name="projects_field_filterable">Hægt að sía</string>
     <string name="projects_field_show_on_card">Sýna á spjaldi</string>
-    <string name="projects_field_multi">Margval</string>
     <string name="projects_field_position">Birtingarstaður</string>
     <string name="projects_field_position_header">Haus</string>
     <string name="projects_field_validation">Sannprófun</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Reitur fyrir rammalit</string>
     <string name="projects_views_filter_classes">Sía eftir flokkum</string>
     <string name="projects_views_by">eftir %1$s</string>
-    <string name="projects_views_sorted">raðað %1$s</string>
     <string name="projects_design_preview_label">Forskoðun:</string>
     <string name="projects_design_preview_no_view">Engin skoðun til að forskoða</string>
     <string name="projects_design_preview_no_class">Enginn flokkur fyrir þessa skoðun</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Verkefni uppfært</string>
     <string name="projects_activity_attached">hengdi við</string>
     <string name="projects_activity_commented">skrifaði athugasemd</string>
+    <string name="projects_activity_moved">færði þennan hlut</string>
+    <string name="projects_activity_linked">bætti við tengli</string>
+    <string name="projects_activity_class">breytti flokki</string>
     <string name="projects_attachment_delete_confirm_message">Þetta viðhengi verður eytt varanlega.</string>
     <string name="projects_attachment_delete_confirm_title">Eyða viðhengi?</string>
     <string name="projects_settings_unsubscribe_section">Afskrá sig af verkefninu</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Ertu viss um að þú viljir eyða „%1$s“ og %2$s atriðum undir því? Þessari aðgerð er ekki hægt að afturkalla.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Ekki tókst að hengja við: %1$s</string>
+    <string name="projects_activity_unknown">Óþekkt</string>
 </resources>

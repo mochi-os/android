@@ -6,6 +6,10 @@
 package org.mochios.projects.ui.projectlist
 
 import android.net.Uri
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.JsonObject
@@ -21,6 +25,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.slugify
 import org.mochios.projects.model.Project
 import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
@@ -40,25 +45,20 @@ data class CreateProjectUiState(
     val templatesError: MochiError? = null,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
-    val backupPrefill: BackupPrefill? = null,
     // The picked file could not be read as a backup; the screen says so once.
     val backupReadFailed: Boolean = false,
     val createdProjectId: String? = null
 )
 
-/**
- * A picked backup: [json] is restored after the project is created; [name] and
- * [prefix] prefill the form.
- */
-data class BackupPrefill(
-    val json: String,
-    val fileName: String,
-    val name: String?,
-    val prefix: String?,
-    // The picked document when it is an archive: restored whole, so the
-    // attachments it carries survive.
-    val archive: Uri?
-)
+// The two steps of the create flow.
+internal const val STEP_DETAILS = 0
+internal const val STEP_TEMPLATE = 1
+
+// The server caps a prefix at 20 characters, so a long name like
+// "Android project Testing Name" becomes "android-project-test".
+private const val PREFIX_MAX = 20
+
+internal fun prefixFromName(name: String): String = slugify(name, PREFIX_MAX)
 
 /** Drives the create-project screen: templates, backup import, and the create call. */
 @HiltViewModel
@@ -68,6 +68,30 @@ class CreateProjectViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CreateProjectUiState())
     val uiState: StateFlow<CreateProjectUiState> = _uiState.asStateFlow()
+
+    // The form, held here rather than in the screen, so a rotation or a
+    // change of theme or font size, which recreate the screen, keep it.
+
+    /** The step shown: [STEP_DETAILS] or [STEP_TEMPLATE]. */
+    var step by mutableIntStateOf(STEP_DETAILS)
+    var name by mutableStateOf("")
+    var prefix by mutableStateOf("")
+
+    /** Whether the prefix was typed, which stops it following the name. */
+    var prefixEdited by mutableStateOf(false)
+
+    /** Public: anyone may view the project and every signed-in person comment. Off at first. */
+    var allowSearch by mutableStateOf(false)
+
+    /** The template picked; none is preselected. */
+    var selectedTemplate by mutableStateOf<String?>(null)
+
+    /** The picked backup, restored after the project is created. */
+    var backupJson by mutableStateOf<String?>(null)
+    var backupName by mutableStateOf<String?>(null)
+
+    /** The picked document when it is an archive: restored whole, so the attachments it carries survive. */
+    var backupArchive by mutableStateOf<Uri?>(null)
 
     private val tracker = UploadTracker()
 
@@ -94,8 +118,8 @@ class CreateProjectViewModel @Inject constructor(
     }
 
     /**
-     * Reads the backup file the user picked and pulls the project's name and
-     * prefix out of it, so the screen can seed itself.
+     * Reads the backup file the user picked and fills the form's name and
+     * prefix from the project it holds.
      */
     fun readBackup(uri: Uri) {
         viewModelScope.launch {
@@ -106,18 +130,15 @@ class CreateProjectViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(backupReadFailed = true)
                 return@launch
             }
-            val fileName = repository.fileName(uri)
             val project = root.getAsJsonObject("project")
-            val archive = uri.takeIf { repository.isArchive(uri) }
-            _uiState.value = _uiState.value.copy(
-                backupPrefill = BackupPrefill(
-                    json = content,
-                    fileName = fileName,
-                    name = project?.jsonString("name"),
-                    prefix = project?.jsonString("prefix"),
-                    archive = archive
-                )
-            )
+            backupJson = content
+            backupName = repository.fileName(uri)
+            backupArchive = uri.takeIf { repository.isArchive(uri) }
+            project?.jsonString("name")?.let { value -> name = value }
+            project?.jsonString("prefix")?.let { value ->
+                prefix = prefixFromName(value)
+                prefixEdited = true
+            }
         }
     }
 

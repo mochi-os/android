@@ -31,6 +31,7 @@ import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
@@ -42,15 +43,29 @@ import org.mochios.projects.model.MergeCheck
 import org.mochios.projects.model.MergeRequest
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.Repository
-import org.mochios.projects.model.Watcher
 import org.mochios.projects.repository.ProjectsRepository
 import java.io.File
 import javax.inject.Inject
 
+/** Entries in a page of an object's history, the server's default and the web's. */
+internal const val ACTIVITY_PAGE = 100
+
+/**
+ * [first] then those of [second] it does not hold, by id: offset paging after
+ * an edit repeats entries a page already brought.
+ */
+internal fun mergeActivity(first: List<Activity>, second: List<Activity>): List<Activity> =
+    (first + second).distinctBy { entry -> entry.id }
+
 data class ObjectDetailUiState(
     val obj: ProjectObject? = null,
     val comments: List<Comment> = emptyList(),
+    /** The history read so far, newest first. */
     val activity: List<Activity> = emptyList(),
+    /** Where reading the history's next page stands; the first page's failure included. */
+    val activityLoad: LoadState = LoadState.Idle,
+    /** Whether the server may hold older history than [activity]. */
+    val activityMore: Boolean = true,
     val requests: List<MergeRequest> = emptyList(),
     val attachments: List<Attachment> = emptyList(),
     val outgoingLinks: List<Link> = emptyList(),
@@ -170,6 +185,8 @@ class ObjectDetailViewModel @Inject constructor(
             // the next object, which ensureRepositories will not fetch again.
             repositories = _uiState.value.repositories,
         )
+        activityPages = 0
+        activityEpoch++
         subscribeWebSocket(projectId)
         // Cancel the previous object's fetch, or its late response overwrites
         // the header of the object now shown.
@@ -451,14 +468,78 @@ class ObjectDetailViewModel @Inject constructor(
 
     // ---- Activity ----
 
+    /** Pages of the open object's history asked for and answered; the next page's offset counts them. */
+    private var activityPages = 0
+
+    /** Counts the objects opened, so a page read for one is not kept for the next. */
+    private var activityEpoch = 0
+
+    /**
+     * Reads the history's first page. Once pages are held, the page read is
+     * merged ahead of them, so a change shows at the top and the older pages
+     * the user scrolled to stay.
+     */
     private fun loadActivity() {
+        val projectId = currentProjectId
         val objectId = currentObjectId
+        val epoch = activityEpoch
+        val first = activityPages == 0
+        if (first) _uiState.value = _uiState.value.copy(activityLoad = LoadState.Loading)
         viewModelScope.launch {
             try {
-                val activity = repository.getActivity(currentProjectId, objectId)
-                if (objectId != currentObjectId) return@launch
-                _uiState.value = _uiState.value.copy(activity = activity)
-            } catch (_: Exception) { }
+                val page = repository.getActivity(projectId, objectId, ACTIVITY_PAGE, 0)
+                if (epoch != activityEpoch) return@launch
+                val state = _uiState.value
+                if (activityPages == 0) activityPages = 1
+                _uiState.value = state.copy(
+                    activity = mergeActivity(page, state.activity),
+                    activityLoad = if (first) LoadState.Idle else state.activityLoad,
+                    activityMore = if (first) page.size >= ACTIVITY_PAGE else state.activityMore,
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (epoch != activityEpoch) return@launch
+                // A failed first read is not an empty history; a failed
+                // refresh leaves what is shown.
+                if (first) _uiState.value = _uiState.value.copy(activityLoad = LoadState.Failed(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Reads the next page of the history as the list reaches its end, or the
+     * first again after it failed.
+     */
+    fun loadMoreActivity() {
+        val state = _uiState.value
+        if (state.activityLoad == LoadState.Loading) return
+        if (activityPages == 0) {
+            loadActivity()
+            return
+        }
+        if (!state.activityMore) return
+        val projectId = currentProjectId
+        val objectId = currentObjectId
+        val epoch = activityEpoch
+        val offset = activityPages * ACTIVITY_PAGE
+        _uiState.value = state.copy(activityLoad = LoadState.Loading)
+        viewModelScope.launch {
+            try {
+                val page = repository.getActivity(projectId, objectId, ACTIVITY_PAGE, offset)
+                if (epoch != activityEpoch) return@launch
+                activityPages++
+                _uiState.value = _uiState.value.copy(
+                    activity = mergeActivity(_uiState.value.activity, page),
+                    activityLoad = LoadState.Idle,
+                    activityMore = page.size >= ACTIVITY_PAGE,
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (epoch != activityEpoch) return@launch
+                _uiState.value = _uiState.value.copy(activityLoad = LoadState.Failed(e.toMochiError()))
+            }
         }
     }
 
@@ -564,6 +645,10 @@ class ObjectDetailViewModel @Inject constructor(
     private val _isCheckingMerge = MutableStateFlow(false)
     val isCheckingMerge: StateFlow<Boolean> = _isCheckingMerge.asStateFlow()
 
+    /** Why the last merge check could not compare the branches, shown in place of its answer. */
+    private val _mergeCheckError = MutableStateFlow<MochiError?>(null)
+    val mergeCheckError: StateFlow<MochiError?> = _mergeCheckError.asStateFlow()
+
     private val _mergeSuccess = MutableStateFlow(false)
     val mergeSuccess: StateFlow<Boolean> = _mergeSuccess.asStateFlow()
 
@@ -571,16 +656,24 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             _isCheckingMerge.value = true
             _mergeCheck.value = null
+            _mergeCheckError.value = null
             try {
                 _mergeCheck.value = repository.checkMerge(repo, source, target)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _actionFailed.tryEmit(e.toMochiError())
+                _mergeCheckError.value = e.toMochiError()
             } finally {
                 _isCheckingMerge.value = false
             }
         }
     }
 
+    /**
+     * Merges the request's branches, and has the server record the request
+     * merged in the same call; a server that does not record it gets the
+     * status set in a second call.
+     */
     fun performMerge(repo: String, source: String, target: String, message: String, method: String, requestId: String) {
         // Taken now: the sheet may close while the merge runs, and close()
         // forgets the open object.
@@ -588,8 +681,10 @@ class ObjectDetailViewModel @Inject constructor(
         val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                repository.merge(projectId, repo, source, target, message, method)
-                repository.updateRequest(projectId, objectId, requestId, null, null, "merged", null)
+                val recorded = repository.merge(projectId, repo, source, target, message, method, requestId)
+                if (!recorded) {
+                    repository.updateRequest(projectId, objectId, requestId, null, null, "merged", null)
+                }
                 _mergeSuccess.value = true
                 refreshSlice("requests") { loadRequests() }
             } catch (e: Exception) {
@@ -602,6 +697,7 @@ class ObjectDetailViewModel @Inject constructor(
 
     fun clearMergeState() {
         _mergeCheck.value = null
+        _mergeCheckError.value = null
         _mergeSuccess.value = false
     }
 
@@ -802,9 +898,9 @@ class ObjectDetailViewModel @Inject constructor(
         val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val result = repository.getWatchers(currentProjectId, objectId)
+                val watching = repository.isWatching(currentProjectId, objectId)
                 if (objectId != currentObjectId) return@launch
-                _uiState.value = _uiState.value.copy(isWatching = result.watching)
+                _uiState.value = _uiState.value.copy(isWatching = watching)
             } catch (_: Exception) { }
         }
     }

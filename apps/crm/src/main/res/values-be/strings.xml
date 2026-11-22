@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Адпаведных аб\'ектаў няма</string>
     <string name="crm_field_yes">Так</string>
     <string name="crm_field_no">Не</string>
-    <string name="crm_field_type_checkbox">Сцяжок</string>
     <string name="crm_comment_empty">Пакуль няма каментароў</string>
     <string name="crm_comment_attach">Прымацаваць файлы</string>
     <string name="crm_property_remove">Выдаліць</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Дадаць поле</string>
     <string name="crm_class_delete">Выдаліць клас</string>
     <string name="crm_class_delete_title">Выдаліць клас</string>
-    <string name="crm_field_type_text">Тэкст</string>
-    <string name="crm_field_type_number">Лік</string>
-    <string name="crm_field_type_user">Карыстальнік</string>
-    <string name="crm_field_type_date">Дата</string>
-    <string name="crm_field_type_checklist">Спіс задач</string>
     <string name="crm_field_name">Назва</string>
     <string name="crm_field_type">Тып</string>
     <string name="crm_field_flags">Адзнакі</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">унёс змяненне</string>
     <string name="crm_activity_attached">далучыў(-ла)</string>
     <string name="crm_activity_commented">пракаментаваў(-ла)</string>
+    <string name="crm_activity_moved">перамясціў(-ла)</string>
+    <string name="crm_activity_linked">звязаў(-ла)</string>
+    <string name="crm_activity_class">змяніў(-ла) клас</string>
     <string name="crm_attachment_empty">Няма ўкладанняў</string>
     <string name="crm_attachment_default_name">укладанне</string>
     <string name="crm_attachment_delete_confirm_title">Выдаліць далучэнне?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Перамясціць уверх</string>
     <string name="crm_class_move_down">Перамясціць уніз</string>
     <string name="crm_class_delete_message">Вы ўпэўнены, што хочаце выдаліць клас \"%1$s\"? Усе палі і іх параметры таксама будуць выдалены.</string>
-    <string name="crm_field_type_enumerated">Пералічаны</string>
     <string name="crm_field_label">Поле: %1$s</string>
     <string name="crm_field_readonly">Толькі для чытання</string>
     <string name="crm_field_sortable">З сартаваннем</string>
     <string name="crm_field_filterable">З фільтраваннем</string>
     <string name="crm_field_show_on_card">Паказваць на картцы</string>
-    <string name="crm_field_multi">Множны выбар</string>
     <string name="crm_field_position">Пазіцыя адлюстравання</string>
     <string name="crm_field_position_header">Загаловак</string>
     <string name="crm_field_position_body">Асноўная частка</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Па ўбыванні</string>
     <string name="crm_views_filter_classes">Фільтр па класах</string>
     <string name="crm_views_by">па %1$s</string>
-    <string name="crm_views_sorted">сартавана %1$s</string>
     <string name="crm_design_preview_label">Папярэдні прагляд:</string>
     <string name="crm_design_preview_no_view">Няма выгляду для папярэдняга прагляду</string>
     <string name="crm_design_preview_no_class">Няма класа для гэтага выгляду</string>
@@ -299,4 +293,7 @@
         <item quantity="many">Не ўдалося дадаць %1$s укладанняў: %2$s</item>
         <item quantity="other">Не ўдалося дадаць %1$s укладання: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Бацькоўскі</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Клас</string>
 </resources>

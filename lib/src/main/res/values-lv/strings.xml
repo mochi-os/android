@@ -372,4 +372,13 @@
     <string name="devices_username">Lietotājvārds</string>
     <string name="devices_warning">Nokopējiet paroli tagad: to vairs nevarēs parādīt.</string>
     <string name="devices_unused">Nekad nav lietots</string>
+    <string name="field_type_text">Teksts</string>
+    <string name="field_type_number">Skaitlis</string>
+    <string name="field_type_enumerated">Uzskaitījums</string>
+    <string name="field_type_user">Lietotājs</string>
+    <string name="field_type_date">Datums</string>
+    <string name="field_type_checkbox">Izvēles rūtiņa</string>
+    <string name="field_type_checklist">Kontrolsaraksts</string>
+    <string name="view_list_sorted_ascending">kārtots augošā secībā</string>
+    <string name="view_list_sorted_descending">kārtots dilstošā secībā</string>
 </resources>

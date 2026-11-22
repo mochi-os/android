@@ -376,4 +376,13 @@
     <string name="devices_username">Ainm úsáideora</string>
     <string name="devices_warning">Cóipeáil an pasfhocal anois: ní féidir é a thaispeáint arís.</string>
     <string name="devices_unused">Níor úsáideadh riamh</string>
+    <string name="field_type_text">Téacs</string>
+    <string name="field_type_number">Uimhir</string>
+    <string name="field_type_enumerated">Áirithe</string>
+    <string name="field_type_user">Úsáideoir</string>
+    <string name="field_type_date">Dáta</string>
+    <string name="field_type_checkbox">Ticbhosca</string>
+    <string name="field_type_checklist">Seicliosta</string>
+    <string name="view_list_sorted_ascending">sórtáilte go hardaitheach</string>
+    <string name="view_list_sorted_descending">sórtáilte go híslitheach</string>
 </resources>

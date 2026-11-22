@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ველის დამატება</string>
     <string name="projects_class_delete">კლასის წაშლა</string>
     <string name="projects_class_delete_title">კლასის წაშლა</string>
-    <string name="projects_field_type_text">ტექსტი</string>
-    <string name="projects_field_type_number">რიცხვი</string>
-    <string name="projects_field_type_user">მომხმარებელი</string>
-    <string name="projects_field_type_date">თარიღი</string>
-    <string name="projects_field_type_checklist">ჩამონათვალი</string>
     <string name="projects_field_name">სახელი</string>
     <string name="projects_field_type">ტიპი</string>
     <string name="projects_field_flags">დროშები</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ამ კლასის ობიექტებზე გაერთიანების მოთხოვნების დაშვება.</string>
     <string name="projects_class_parents">მშობელი კლასები</string>
     <string name="projects_class_delete_message">ნამდვილად გსურთ კლასის \"%1$s\" წაშლა? ყველა ველი და მათი ვარიანტებიც წაიშლება.</string>
-    <string name="projects_field_type_enumerated">ჩამოთვლადი</string>
     <string name="projects_field_label">ველი: %1$s</string>
     <string name="projects_field_readonly">მხოლოდ წაკითხვადი</string>
     <string name="projects_field_sortable">დახარისხებადი</string>
     <string name="projects_field_filterable">ფილტრირებადი</string>
     <string name="projects_field_show_on_card">ბარათზე ჩვენება</string>
-    <string name="projects_field_multi">მრავლობითი არჩევანი</string>
     <string name="projects_field_position">ჩვენების პოზიცია</string>
     <string name="projects_field_position_header">სათაური</string>
     <string name="projects_field_validation">ვალიდაცია</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">კიდის ფერის ველი</string>
     <string name="projects_views_filter_classes">კლასების მიხედვით ფილტრი</string>
     <string name="projects_views_by">%1$s-ის მიხედვით</string>
-    <string name="projects_views_sorted">დახარისხებული %1$s</string>
     <string name="projects_design_preview_label">გადახედვა:</string>
     <string name="projects_design_preview_no_view">გადასახედი ხედი არ არის</string>
     <string name="projects_design_preview_no_class">ამ ხედისთვის კლასი არ არის</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">პროექტი განახლდა</string>
     <string name="projects_activity_attached">დაურთო</string>
     <string name="projects_activity_commented">დააკომენტარა</string>
+    <string name="projects_activity_moved">გადაიტანა ეს ობიექტი</string>
+    <string name="projects_activity_linked">დაამატა ბმული</string>
+    <string name="projects_activity_class">შეცვალა კლასი</string>
     <string name="projects_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>
     <string name="projects_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
     <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის შეწყვეტა</string>
@@ -339,4 +334,5 @@
         <item quantity="other">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის და მის ქვეშ არსებული %2$s ერთეულის წაშლა? მოქმედება შეუქცევადია.</item>
     </plurals>
     <string name="projects_create_attachments_failed">მიმაგრება ვერ მოხერხდა: %1$s</string>
+    <string name="projects_activity_unknown">უცნობი</string>
 </resources>

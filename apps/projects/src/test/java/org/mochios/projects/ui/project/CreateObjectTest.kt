@@ -7,8 +7,11 @@ package org.mochios.projects.ui.project
 
 import android.net.Uri
 import android.os.Looper
+import androidx.compose.ui.test.junit4.StateRestorationTester
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performTextReplacement
 import androidx.lifecycle.SavedStateHandle
 import com.google.gson.JsonParser
 import okhttp3.mockwebserver.Dispatcher
@@ -98,7 +101,7 @@ class CreateObjectTest {
     @After
     fun end() = server.shutdown()
 
-    private fun model(copy: String? = null): CreateObjectViewModel {
+    private fun model(copy: String? = null, preset: Pair<String, String>? = null): CreateObjectViewModel {
         val retrofit = Retrofit.Builder()
             .baseUrl(server.url("/projects/"))
             .addConverterFactory(GsonConverterFactory.create())
@@ -107,6 +110,10 @@ class CreateObjectTest {
         val route = buildMap<String, Any?> {
             put("projectId", "p1")
             if (copy != null) put("copy", copy)
+            if (preset != null) {
+                put("field", preset.first)
+                put("value", preset.second)
+            }
         }
         val model = CreateObjectViewModel(SavedStateHandle(route), repository, ActiveViewStore(context))
         until { !model.uiState.value.isLoading }
@@ -180,6 +187,24 @@ class CreateObjectTest {
         create(model, copies = listOf("a1"))
         assertEquals(listOf("plan.png"), model.uiState.value.unattached)
         assertNull(model.uiState.value.createdObjectId)
+    }
+
+    @Test
+    fun `the form keeps what was typed when the screen is made again`() {
+        val model = model(preset = "status" to "Doing")
+        val tester = StateRestorationTester(rule)
+        tester.setContent { CreateObjectScreen(onBack = {}, onCreated = {}, viewModel = model) }
+        rule.waitForIdle()
+        rule.onNodeWithText("Title").performTextReplacement("Typed")
+        rule.onNodeWithText("Status").performTextReplacement("Done")
+        rule.waitForIdle()
+        // As a rotation, or a change of theme or font size, does.
+        tester.emulateSavedInstanceStateRestore()
+        rule.waitForIdle()
+        assertEquals("THE POINT: the title typed stays", "Typed", model.values["title"])
+        assertEquals("an edited preset is not put back", "Done", model.values["status"])
+        assertTrue(rule.onAllNodesWithText("Typed").fetchSemanticsNodes().isNotEmpty())
+        assertTrue(rule.onAllNodesWithText("Done").fetchSemanticsNodes().isNotEmpty())
     }
 
     @Test

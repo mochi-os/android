@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">कुनै मिल्दो वस्तु छैन</string>
     <string name="crm_field_yes">हो</string>
     <string name="crm_field_no">होइन</string>
-    <string name="crm_field_type_checkbox">चेकबक्स</string>
     <string name="crm_comment_empty">अहिलेसम्म कुनै टिप्पणी छैन</string>
     <string name="crm_comment_attach">फाइलहरू एट्याच गर्नुहोस्</string>
     <string name="crm_property_remove">हटाउनुहोस्</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">फिल्ड थप्नुहोस्</string>
     <string name="crm_class_delete">क्लास मेटाउनुहोस्</string>
     <string name="crm_class_delete_title">क्लास मेटाउनुहोस्</string>
-    <string name="crm_field_type_text">पाठ</string>
-    <string name="crm_field_type_number">संख्या</string>
-    <string name="crm_field_type_user">प्रयोगकर्ता</string>
-    <string name="crm_field_type_date">मिति</string>
-    <string name="crm_field_type_checklist">चेकलिस्ट</string>
     <string name="crm_field_name">नाम</string>
     <string name="crm_field_type">प्रकार</string>
     <string name="crm_field_flags">फ्ल्यागहरू</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">परिवर्तन गर्यो</string>
     <string name="crm_activity_attached">संलग्न गरे</string>
     <string name="crm_activity_commented">टिप्पणी गरे</string>
+    <string name="crm_activity_moved">सारे</string>
+    <string name="crm_activity_linked">लिङ्क गरे</string>
+    <string name="crm_activity_class">वर्ग परिवर्तन गरे</string>
     <string name="crm_attachment_empty">कुनै संलग्नक छैन</string>
     <string name="crm_attachment_default_name">संलग्नक</string>
     <string name="crm_attachment_delete_confirm_title">संलग्नक मेट्ने?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">पूर्वनिर्धारित (पठनीय)</string>
     <string name="crm_class_parents">अभिभावक क्लासहरू</string>
     <string name="crm_class_delete_message">के तपाईं \"%1$s\" क्लास मेटाउन निश्चित हुनुहुन्छ? सबै क्षेत्रहरू र तिनका विकल्पहरू पनि मेटिनेछन्।</string>
-    <string name="crm_field_type_enumerated">सूचीबद्ध</string>
     <string name="crm_field_label">क्षेत्र: %1$s</string>
     <string name="crm_field_readonly">पढ्ने मात्र</string>
     <string name="crm_field_sortable">क्रमबद्ध गर्न मिल्ने</string>
     <string name="crm_field_filterable">फिल्टर गर्न मिल्ने</string>
     <string name="crm_field_show_on_card">कार्डमा देखाउनुहोस्</string>
-    <string name="crm_field_multi">बहु-चयन</string>
     <string name="crm_field_position">प्रदर्शन स्थिति</string>
     <string name="crm_field_position_header">हेडर</string>
     <string name="crm_field_validation">प्रमाणीकरण</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">किनारा रङ क्षेत्र</string>
     <string name="crm_views_filter_classes">क्लासहरूमा फिल्टर गर्नुहोस्</string>
     <string name="crm_views_by">%1$s द्वारा</string>
-    <string name="crm_views_sorted">%1$s अनुसार क्रमबद्ध</string>
     <string name="crm_design_preview_label">पूर्वावलोकन:</string>
     <string name="crm_design_preview_no_view">पूर्वावलोकन गर्न कुनै दृश्य छैन</string>
     <string name="crm_design_preview_no_class">यस दृश्यका लागि कुनै क्लास छैन</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s एट्याचमेन्ट थप्न सकिएन: %2$s</item>
         <item quantity="other">%1$s एट्याचमेन्टहरू थप्न सकिएन: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">अभिभावक</string>
+    <string name="crm_export_csv_id">आईडी</string>
+    <string name="crm_export_csv_class">वर्ग</string>
 </resources>

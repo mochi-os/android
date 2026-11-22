@@ -370,4 +370,13 @@
     <string name="devices_username">Igama lomsebenzisi</string>
     <string name="devices_warning">Kopisha iphasiwedi manje: ngeke iphinde iboniswe.</string>
     <string name="devices_unused">Akukaze kusetshenziswe</string>
+    <string name="field_type_text">Umbhalo</string>
+    <string name="field_type_number">Inombolo</string>
+    <string name="field_type_enumerated">Okubalwe ngokulandelana</string>
+    <string name="field_type_user">Umsebenzisi</string>
+    <string name="field_type_date">Usuku</string>
+    <string name="field_type_checkbox">Ibhokisi lokumaka</string>
+    <string name="field_type_checklist">Uhlu lokuhlola</string>
+    <string name="view_list_sorted_ascending">kuhlungwe ngokukhuphuka</string>
+    <string name="view_list_sorted_descending">kuhlungwe ngokwehla</string>
 </resources>

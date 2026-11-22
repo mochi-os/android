@@ -135,10 +135,23 @@ class FieldDetailTest {
     @Test
     fun `the type is shown, not offered, and a text field has no options`() {
         show()
-        rule.onNodeWithText(context.getString(R.string.crm_field_type_text)).performClick()
+        rule.onNodeWithText(context.getString(MochiR.string.field_type_text)).performClick()
         rule.waitForIdle()
-        assertFalse(offered(context.getString(R.string.crm_field_type_number)))
+        assertFalse(offered(context.getString(MochiR.string.field_type_number)))
         assertFalse(offered(context.getString(R.string.crm_field_options)))
+    }
+
+    @Test
+    fun `the length limits the server holds open filled in, and one cleared is sent as none`() {
+        field = """{"id": "notes", "name": "Notes", "fieldtype": "text", "flags": "", "pattern": "^a", "minlength": 2, "maxlength": 40}"""
+        show()
+        assertTrue(offered("2"))
+        assertTrue(offered("40"))
+        assertTrue(offered("^a"))
+        type(R.string.crm_field_max_length, "")
+        val body = saved()
+        assertEquals(0, body.get("maxlength").asInt)
+        assertFalse("an unchanged limit is left alone", body.has("minlength"))
     }
 
     @Test

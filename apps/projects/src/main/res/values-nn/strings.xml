@@ -102,11 +102,6 @@
     <string name="projects_class_add_field">Legg til felt</string>
     <string name="projects_class_delete">Slett klasse</string>
     <string name="projects_class_delete_title">Slett klasse</string>
-    <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">Tal</string>
-    <string name="projects_field_type_user">Brukar</string>
-    <string name="projects_field_type_date">Dato</string>
-    <string name="projects_field_type_checklist">Sjekkliste</string>
     <string name="projects_field_name">Namn</string>
     <string name="projects_field_type">Type</string>
     <string name="projects_field_flags">Flagg</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Tillat samanslåingsførespurnader på objekt av denne klassen.</string>
     <string name="projects_class_parents">Foreldreklassar</string>
     <string name="projects_class_delete_message">Er du sikker på at du vil slette klassen \"%1$s\"? Alle felt og tilhøyrande val vil òg bli sletta.</string>
-    <string name="projects_field_type_enumerated">Oppramsa</string>
     <string name="projects_field_label">Felt: %1$s</string>
     <string name="projects_field_readonly">Skriveverna</string>
     <string name="projects_field_sortable">Sorterbar</string>
     <string name="projects_field_filterable">Filtrerbar</string>
     <string name="projects_field_show_on_card">Vis på kort</string>
-    <string name="projects_field_multi">Fleirval</string>
     <string name="projects_field_position">Visingsposisjon</string>
     <string name="projects_field_position_header">Topptekst</string>
     <string name="projects_field_validation">Validering</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Felt for kantfarge</string>
     <string name="projects_views_filter_classes">Filtrer til klassar</string>
     <string name="projects_views_by">etter %1$s</string>
-    <string name="projects_views_sorted">sortert %1$s</string>
     <string name="projects_design_preview_label">Førehandsvising:</string>
     <string name="projects_design_preview_no_view">Inga vising å førehandsvise</string>
     <string name="projects_design_preview_no_class">Inga klasse for denne visinga</string>
@@ -299,6 +291,9 @@
     <string name="projects_settings_updated">Prosjekt oppdatert</string>
     <string name="projects_activity_attached">la ved</string>
     <string name="projects_activity_commented">kommenterte</string>
+    <string name="projects_activity_moved">flytta dette objektet</string>
+    <string name="projects_activity_linked">la til ei lenkje</string>
+    <string name="projects_activity_class">endra klassen</string>
     <string name="projects_attachment_delete_confirm_message">Dette vedlegget vert sletta for alltid.</string>
     <string name="projects_attachment_delete_confirm_title">Slette vedlegget?</string>
     <string name="projects_settings_unsubscribe_section">Avslutt abonnement på prosjektet</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Er du sikker på at du vil slette «%1$s» og %2$s element under det? Denne handlinga kan ikkje angrast.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Kunne ikkje leggje ved: %1$s</string>
+    <string name="projects_activity_unknown">Ukjend</string>
 </resources>

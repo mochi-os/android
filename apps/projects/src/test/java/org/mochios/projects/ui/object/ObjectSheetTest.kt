@@ -203,7 +203,7 @@ class ObjectSheetTest {
 
     /** Opens o1 with the values the board had for it, and waits for its read and socket. */
     private fun open() {
-        model.loadWithInitialObject("p1", "o1", ProjectObject(id = "o1", project = "p1", values = mapOf("status" to "open", "title" to "Old")))
+        model.loadWithInitialObject("p1", "o1", ProjectObject(id = "o1", project = "p1", values = mapOf("status" to "open", "title" to "Old")), "owner")
         until { reads("/projects/p1/-/objects/o1") == 1 && live != null && socket.isLive("p1") }
         settle()
     }
@@ -287,7 +287,7 @@ class ObjectSheetTest {
     fun `the sheet's delete names the object and what goes with it`() {
         var deleted = false
         val details = ProjectDetails(
-            project = Project(id = "p1", prefix = "B"),
+            project = Project(id = "p1", prefix = "B", access = "owner"),
             classes = listOf(ProjectClass(id = "task", name = "Task", title = "title")),
         )
         rule.setContent {

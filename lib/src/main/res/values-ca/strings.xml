@@ -372,4 +372,13 @@
     <string name="devices_username">Nom d\'usuari</string>
     <string name="devices_warning">Copieu la contrasenya ara: no es podrà tornar a mostrar.</string>
     <string name="devices_unused">Mai utilitzat</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Número</string>
+    <string name="field_type_enumerated">Enumerat</string>
+    <string name="field_type_user">Usuari</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Casella de selecció</string>
+    <string name="field_type_checklist">Llista de comprovació</string>
+    <string name="view_list_sorted_ascending">ordenat ascendentment</string>
+    <string name="view_list_sorted_descending">ordenat descendentment</string>
 </resources>

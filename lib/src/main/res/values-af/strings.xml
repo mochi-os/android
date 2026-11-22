@@ -372,4 +372,13 @@
     <string name="devices_username">Gebruikersnaam</string>
     <string name="devices_warning">Kopieer die wagwoord nou: dit kan nie weer gewys word nie.</string>
     <string name="devices_unused">Nog nooit gebruik nie</string>
+    <string name="field_type_text">Teks</string>
+    <string name="field_type_number">Getal</string>
+    <string name="field_type_enumerated">Opgesom</string>
+    <string name="field_type_user">Gebruiker</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Merkblokkie</string>
+    <string name="field_type_checklist">Kontrolelys</string>
+    <string name="view_list_sorted_ascending">oplopend gesorteer</string>
+    <string name="view_list_sorted_descending">aflopend gesorteer</string>
 </resources>

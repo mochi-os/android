@@ -370,4 +370,13 @@
     <string name="devices_username">Puruhára réra</string>
     <string name="devices_warning">Ekopia ñe\'ẽñemi ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
     <string name="devices_unused">Ojepuru\'ỹva araka\'eve</string>
+    <string name="field_type_text">Jehaipyre</string>
+    <string name="field_type_number">Papapy</string>
+    <string name="field_type_enumerated">Ojepapapyréva</string>
+    <string name="field_type_user">Puruhára</string>
+    <string name="field_type_date">Ára</string>
+    <string name="field_type_checkbox">Casilla</string>
+    <string name="field_type_checklist">Lista jehechajey</string>
+    <string name="view_list_sorted_ascending">ojupíva oñemohenda</string>
+    <string name="view_list_sorted_descending">oguejýva oñemohenda</string>
 </resources>

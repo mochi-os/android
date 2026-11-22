@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Fi pápá kún</string>
     <string name="projects_class_delete">Pa kíláàsì rẹ́</string>
     <string name="projects_class_delete_title">Pa kíláàsì rẹ́</string>
-    <string name="projects_field_type_text">Ọ̀rọ̀</string>
-    <string name="projects_field_type_number">Nọ́mbà</string>
-    <string name="projects_field_type_user">Olùmúlò</string>
-    <string name="projects_field_type_date">Ọjọ́</string>
-    <string name="projects_field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
     <string name="projects_field_name">Orúkọ</string>
     <string name="projects_field_type">Irú</string>
     <string name="projects_field_flags">Àwọn àsíá</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Gba àwọn ìbéèrè ìdàpọ̀ láàyè lórí àwọn nǹkan kíláàsì yìí.</string>
     <string name="projects_class_parents">Àwọn kíláàsì òbí</string>
     <string name="projects_class_delete_message">Ṣé ó dá ọ lójú pé o fẹ́ pa kíláàsì \"%1$s\" rẹ́? A ó tún pa gbogbo pápá àti àwọn àṣàyàn wọn rẹ́.</string>
-    <string name="projects_field_type_enumerated">Tí a kà</string>
     <string name="projects_field_label">Pápá: %1$s</string>
     <string name="projects_field_readonly">Kíkà nìkan</string>
     <string name="projects_field_sortable">Lè tò</string>
     <string name="projects_field_filterable">Lè yọ́</string>
     <string name="projects_field_show_on_card">Fihàn lórí káàdì</string>
-    <string name="projects_field_multi">Yíyàn púpọ̀</string>
     <string name="projects_field_position">Ipò ìfihàn</string>
     <string name="projects_field_position_header">Orí</string>
     <string name="projects_field_validation">Ìfọwọ́sí</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Pápá àwọ̀ etí</string>
     <string name="projects_views_filter_classes">Yan sí àwọn kíláàsì</string>
     <string name="projects_views_by">láti ọwọ́ %1$s</string>
-    <string name="projects_views_sorted">ṣètò %1$s</string>
     <string name="projects_design_preview_label">Àkíyèsí ṣáájú:</string>
     <string name="projects_design_preview_no_view">Kò sí wíwò láti wò</string>
     <string name="projects_design_preview_no_class">Kò sí kíláàsì fún wíwò yìí</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">A ti ṣe imudojúìwọ̀n iṣẹ́ àkànṣe</string>
     <string name="projects_activity_attached">so mọ́</string>
     <string name="projects_activity_commented">sọ àsọyé</string>
+    <string name="projects_activity_moved">gbé nǹkan yìí lọ</string>
+    <string name="projects_activity_linked">fi ọ̀nà asopọ kan kún</string>
+    <string name="projects_activity_class">yí kilaasi padà</string>
     <string name="projects_attachment_delete_confirm_message">A ó pa àfikún yìí rẹ́ pátápátá.</string>
     <string name="projects_attachment_delete_confirm_title">Pa àfikún rẹ́?</string>
     <string name="projects_settings_unsubscribe_section">Dá ìforúkọsílẹ̀ iṣẹ́ àkanṣe dúró</string>
@@ -338,4 +333,5 @@
         <item quantity="other">Ṣé o dájú pé o fẹ́ pa \"%1$s\" àti %2$s nkan tí ó wà lábẹ́ rẹ̀ rẹ́? A kò lè yí ìṣe yìí padà.</item>
     </plurals>
     <string name="projects_create_attachments_failed">A kò lè so pọ̀: %1$s</string>
+    <string name="projects_activity_unknown">Aláìmọ̀</string>
 </resources>

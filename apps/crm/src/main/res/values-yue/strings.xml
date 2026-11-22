@@ -25,12 +25,10 @@
     <string name="crm_settings_unsubscribe">退訂</string>
     <string name="crm_settings_unsubscribe_title">退訂</string>
     <string name="crm_board_new">新增</string>
-    <string name="crm_field_type_user">用戶</string>
     <string name="crm_access_level_owner">擁有者</string>
     <string name="crm_loading">載入中…</string>
     <string name="crm_field_position_default">預設</string>
     <string name="crm_settings_tab_people">用戶</string>
-    <string name="crm_field_type_number">編號</string>
     <string name="crm_settings_tab_general">一般</string>
     <string name="crm_field_position_body">內容</string>
     <string name="crm_sort_field">排序方式</string>
@@ -43,7 +41,6 @@
     <string name="crm_board_unset">[未設定]</string>
     <string name="crm_board_rename">重新命名</string>
     <string name="crm_move_current">目前</string>
-    <string name="crm_field_type_date">日期</string>
     <string name="crm_field_required">必須</string>
     <string name="crm_views_sort_by">排序方式</string>
     <string name="crm_find_recommended">推薦</string>
@@ -53,6 +50,8 @@
     <string name="crm_class_move_down">下移</string>
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">類別</string>
     <string name="crm_design_title">設計</string>
     <string name="crm_views_direction">方向</string>
     <string name="crm_sort_direction_asc">升序</string>
@@ -116,7 +115,6 @@
     <string name="crm_links_remove">移除連結</string>
     <string name="crm_field_yes">係</string>
     <string name="crm_field_no">唔係</string>
-    <string name="crm_field_type_checkbox">勾選框</string>
     <string name="crm_comment_replying_to">回覆緊 %1$s</string>
     <string name="crm_comment_clear_reply">清除回覆</string>
     <string name="crm_comment_placeholder">新增留言</string>
@@ -131,6 +129,9 @@
     <string name="crm_activity_made_change">作出變更</string>
     <string name="crm_activity_attached">加入了附件</string>
     <string name="crm_activity_commented">發表了留言</string>
+    <string name="crm_activity_moved">移動咗</string>
+    <string name="crm_activity_linked">連結咗</string>
+    <string name="crm_activity_class">改咗類別</string>
     <string name="crm_attachment_empty">冇附件</string>
     <string name="crm_attachment_add">新增附件</string>
     <string name="crm_attachment_default_name">附件</string>
@@ -180,16 +181,12 @@
     <string name="crm_class_delete">刪除類別</string>
     <string name="crm_class_delete_title">刪除類別</string>
     <string name="crm_class_delete_message">你確定要刪除類別「%1$s」嗎？所有欄位及其選項都會一併刪除。</string>
-    <string name="crm_field_type_text">文字</string>
-    <string name="crm_field_type_enumerated">列舉</string>
-    <string name="crm_field_type_checklist">檢查清單</string>
     <string name="crm_field_label">欄位：%1$s</string>
     <string name="crm_field_flags">標記</string>
     <string name="crm_field_readonly">唯讀</string>
     <string name="crm_field_sortable">可排序</string>
     <string name="crm_field_filterable">可篩選</string>
     <string name="crm_field_show_on_card">喺卡片顯示</string>
-    <string name="crm_field_multi">多選</string>
     <string name="crm_field_position">顯示位置</string>
     <string name="crm_field_position_header">頁首</string>
     <string name="crm_field_position_sidebar">側欄</string>
@@ -225,7 +222,6 @@
     <string name="crm_views_filter_classes">篩選類別</string>
     <string name="crm_views_sort_rank">排名</string>
     <string name="crm_views_by">按 %1$s</string>
-    <string name="crm_views_sorted">排序方式：%1$s</string>
     <string name="crm_design_preview_label">預覽：</string>
     <string name="crm_design_preview_no_view">冇檢視可以預覽</string>
     <string name="crm_design_preview_no_class">呢個檢視冇對應嘅類別</string>
@@ -295,4 +291,5 @@
     <plurals name="crm_object_delete_children">
         <item quantity="other">你確定要刪除「%1$s」同佢下面嘅 %2$s 個物件？呢個動作冇得還原。</item>
     </plurals>
+    <string name="crm_export_csv_parent">父項</string>
 </resources>

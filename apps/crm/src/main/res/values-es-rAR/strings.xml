@@ -49,12 +49,10 @@
     <string name="crm_field_type">Tipo</string>
     <string name="crm_views_type">Tipo</string>
     <string name="crm_board_new">Nuevo</string>
-    <string name="crm_field_type_user">Usuario</string>
     <string name="crm_access_level_owner">Propietario</string>
     <string name="crm_loading">Cargando…</string>
     <string name="crm_field_position_default">Predeterminado</string>
     <string name="crm_settings_tab_people">Personas</string>
-    <string name="crm_field_type_number">Número</string>
     <string name="crm_settings_tab_general">General</string>
     <string name="crm_field_position_body">Cuerpo</string>
     <string name="crm_find_recommended">Recomendados</string>
@@ -78,8 +76,6 @@
     <string name="crm_move_position_top">Mejores</string>
     <string name="crm_class_move_up">Mover hacia arriba</string>
     <string name="crm_class_move_down">Mover hacia abajo</string>
-    <string name="crm_field_type_text">Texto</string>
-    <string name="crm_field_type_date">Fecha</string>
     <string name="crm_field_required">Requerido</string>
     <string name="crm_views_sort_by">Ordenar por</string>
     <string name="crm_design">Diseño</string>
@@ -130,7 +126,6 @@
     <string name="crm_links_type_duplicates">Duplica</string>
     <string name="crm_links_no_matches">No hay objetos coincidentes</string>
     <string name="crm_links_remove">Quitar vínculo</string>
-    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_placeholder">Agregar un comentario</string>
     <string name="crm_property_pick_date">Elegir fecha</string>
     <string name="crm_property_add_item">Agregar elemento</string>
@@ -180,15 +175,12 @@
     <string name="crm_class_parents">Clases padre</string>
     <string name="crm_class_fields">Campos</string>
     <string name="crm_class_delete_message">¿Estás seguro de que querés eliminar la clase \"%1$s\"? También se eliminarán todos los campos y sus opciones.</string>
-    <string name="crm_field_type_enumerated">Enumerado</string>
-    <string name="crm_field_type_checklist">Lista de verificación</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_flags">Indicadores</string>
     <string name="crm_field_readonly">Solo lectura</string>
     <string name="crm_field_sortable">Ordenable</string>
     <string name="crm_field_filterable">Filtrable</string>
     <string name="crm_field_show_on_card">Mostrar en la tarjeta</string>
-    <string name="crm_field_multi">Selección múltiple</string>
     <string name="crm_field_position">Posición de visualización</string>
     <string name="crm_field_position_header">Encabezado</string>
     <string name="crm_field_position_sidebar">Barra lateral</string>
@@ -212,7 +204,6 @@
     <string name="crm_views_filter_classes">Filtrar por clases</string>
     <string name="crm_views_sort_rank">Orden</string>
     <string name="crm_views_by">por %1$s</string>
-    <string name="crm_views_sorted">ordenado %1$s</string>
     <string name="crm_design_preview_label">Vista previa:</string>
     <string name="crm_design_preview_no_view">No hay vista para previsualizar</string>
     <string name="crm_design_preview_no_class">No hay clase para esta vista</string>
@@ -241,4 +232,5 @@
         <item quantity="one">No se pudo agregar %1$s adjunto: %2$s</item>
         <item quantity="other">No se pudieron agregar %1$s adjuntos: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Categoría superior</string>
 </resources>

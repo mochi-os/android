@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Mos obyektlar yoʻq</string>
     <string name="crm_field_yes">Ha</string>
     <string name="crm_field_no">Yoʻq</string>
-    <string name="crm_field_type_checkbox">Belgilash katakchasi</string>
     <string name="crm_comment_empty">Hozircha izohlar yoʻq</string>
     <string name="crm_comment_attach">Fayl biriktirish</string>
     <string name="crm_property_remove">Olib tashlash</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Maydon qoʻshish</string>
     <string name="crm_class_delete">Sinfni oʻchirish</string>
     <string name="crm_class_delete_title">Sinfni oʻchirish</string>
-    <string name="crm_field_type_text">Matn</string>
-    <string name="crm_field_type_number">Raqam</string>
-    <string name="crm_field_type_user">Foydalanuvchi</string>
-    <string name="crm_field_type_date">Sana</string>
-    <string name="crm_field_type_checklist">Roʻyxat</string>
     <string name="crm_field_name">Nomi</string>
     <string name="crm_field_type">Tur</string>
     <string name="crm_field_flags">Bayroqlar</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">o\'zgartirish kiritdi</string>
     <string name="crm_activity_attached">biriktirdi</string>
     <string name="crm_activity_commented">izoh qoldirdi</string>
+    <string name="crm_activity_moved">koʻchirdi</string>
+    <string name="crm_activity_linked">bogʻladi</string>
+    <string name="crm_activity_class">sinfni oʻzgartirdi</string>
     <string name="crm_attachment_empty">Ilovalar yo\'q</string>
     <string name="crm_attachment_default_name">ilova</string>
     <string name="crm_attachment_delete_confirm_title">Biriktirma o\'chirilsinmi?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Standart (oʻqiladigan)</string>
     <string name="crm_class_parents">Ota sinflar</string>
     <string name="crm_class_delete_message">\"%1$s\" sinfini o\'chirishga ishonchingiz komilmi? Barcha maydonlar va ularning variantlari ham o\'chiriladi.</string>
-    <string name="crm_field_type_enumerated">Sanab o\'tilgan</string>
     <string name="crm_field_label">Maydon: %1$s</string>
     <string name="crm_field_readonly">Faqat oʻqish uchun</string>
     <string name="crm_field_sortable">Saralanadigan</string>
     <string name="crm_field_filterable">Filtrlanadigan</string>
     <string name="crm_field_show_on_card">Kartada ko\'rsatish</string>
-    <string name="crm_field_multi">Bir nechta tanlov</string>
     <string name="crm_field_position">Koʻrsatish joyi</string>
     <string name="crm_field_position_header">Sarlavha</string>
     <string name="crm_field_validation">Tekshirish</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Chegara rangi maydoni</string>
     <string name="crm_views_filter_classes">Sinflar bo\'yicha filtrlash</string>
     <string name="crm_views_by">%1$s bo\'yicha</string>
-    <string name="crm_views_sorted">%1$s tartiblangan</string>
     <string name="crm_design_preview_label">Oldindan ko\'rish:</string>
     <string name="crm_design_preview_no_view">Oldindan ko\'rish uchun ko\'rinish yo\'q</string>
     <string name="crm_design_preview_no_class">Ushbu ko\'rinish uchun sinf yo\'q</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s ta biriktirmani qoʻshib boʻlmadi: %2$s</item>
         <item quantity="other">%1$s ta biriktirmani qoʻshib boʻlmadi: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Ota</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Sinf</string>
 </resources>

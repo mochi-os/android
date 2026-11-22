@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Wantoonni walsiman hin jiran</string>
     <string name="crm_field_yes">Eeyyee</string>
     <string name="crm_field_no">Lakki</string>
-    <string name="crm_field_type_checkbox">Saanduqa filannoo</string>
     <string name="crm_comment_empty">Hanga ammaatti yaadni hin jiru</string>
     <string name="crm_comment_attach">Faayilii hidhi</string>
     <string name="crm_property_remove">Haqi</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Dirree dabali</string>
     <string name="crm_class_delete">Kilaasii haqi</string>
     <string name="crm_class_delete_title">Kilaasii haqi</string>
-    <string name="crm_field_type_text">Barreeffama</string>
-    <string name="crm_field_type_number">Lakkoofsa</string>
-    <string name="crm_field_type_user">Fayyadamaa</string>
-    <string name="crm_field_type_date">Guyyaa</string>
-    <string name="crm_field_type_checklist">Tarree sakatta\'iinsaa</string>
     <string name="crm_field_name">Maqaa</string>
     <string name="crm_field_type">Akaakuu</string>
     <string name="crm_field_flags">Mallattoolee</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">jijjiirama godhe</string>
     <string name="crm_activity_attached">maxxanse</string>
     <string name="crm_activity_commented">yaada kenne</string>
+    <string name="crm_activity_moved">sochoose</string>
+    <string name="crm_activity_linked">walqabsiise</string>
+    <string name="crm_activity_class">kilaasii jijjiire</string>
     <string name="crm_attachment_empty">Maxxansaawwan hin jiran</string>
     <string name="crm_attachment_default_name">maxxansa</string>
     <string name="crm_attachment_delete_confirm_title">Maxxansaa haquu?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Durtii (dubbifamaa)</string>
     <string name="crm_class_parents">Kilaasota maatii</string>
     <string name="crm_class_delete_message">Dhugumatti kilaasii \"%1$s\" haquu barbaaddaa? Dirreewwan hundi fi filannoowwan isaaniis ni haqamu.</string>
-    <string name="crm_field_type_enumerated">Lakkaa\'ame</string>
     <string name="crm_field_label">Dirree: %1$s</string>
     <string name="crm_field_readonly">Dubbisuu qofa</string>
     <string name="crm_field_sortable">Tartiibessuu danda\'amu</string>
     <string name="crm_field_filterable">Calaluu danda\'amu</string>
     <string name="crm_field_show_on_card">Kaardii irratti agarsiisi</string>
-    <string name="crm_field_multi">Filannoo hedduu</string>
     <string name="crm_field_position">Iddoo agarsiisaa</string>
     <string name="crm_field_position_header">Mata-duree</string>
     <string name="crm_field_validation">Mirkaneessa</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Dirree halluu daangaa</string>
     <string name="crm_views_filter_classes">Gara kilaasotaatti calali</string>
     <string name="crm_views_by">%1$s tiin</string>
-    <string name="crm_views_sorted">%1$s tartiibsiifame</string>
     <string name="crm_design_preview_label">Durmul\'isa:</string>
     <string name="crm_design_preview_no_view">Muudannoon durmul\'isuun hin jiru</string>
     <string name="crm_design_preview_no_class">Muudannoo kanaaf kilaasiin hin jiru</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Maxxansa %1$s dabaluu hin danda\'amne: %2$s</item>
         <item quantity="other">Maxxansaalee %1$s dabaluu hin danda\'amne: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Maatii</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Kilaasii</string>
 </resources>

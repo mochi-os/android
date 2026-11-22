@@ -17,7 +17,6 @@ import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
 import org.mochios.android.ui.components.FieldForm
 import org.mochios.android.ui.components.FieldFormLabels
-import org.mochios.android.ui.components.FieldTypeOption
 import org.mochios.android.ui.components.rememberFieldFormState
 import org.mochios.crm.R
 
@@ -54,37 +53,23 @@ fun CreateFieldScreen(
             viewModel.createField(
                 formState.name,
                 formState.fieldtype,
-                formState.flags(),
-                formState.multi()
+                formState.flags()
             )
         }
     ) { padding ->
         CreateEntityForm(padding) {
             FieldForm(
                 state = formState,
-                types = fieldTypeOptions(),
                 labels = FieldFormLabels(
                     name = stringResource(R.string.crm_field_name),
                     type = stringResource(R.string.crm_field_type),
                     required = stringResource(R.string.crm_field_required),
                     readonly = stringResource(R.string.crm_field_readonly),
                     sortable = stringResource(R.string.crm_field_sortable),
-                    filterable = stringResource(R.string.crm_field_filterable),
-                    multi = stringResource(R.string.crm_field_multi)
+                    filterable = stringResource(R.string.crm_field_filterable)
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
         }
     }
 }
-
-@Composable
-private fun fieldTypeOptions() = listOf(
-    FieldTypeOption("text", stringResource(R.string.crm_field_type_text)),
-    FieldTypeOption("number", stringResource(R.string.crm_field_type_number)),
-    FieldTypeOption("enumerated", stringResource(R.string.crm_field_type_enumerated)),
-    FieldTypeOption("user", stringResource(R.string.crm_field_type_user)),
-    FieldTypeOption("date", stringResource(R.string.crm_field_type_date)),
-    FieldTypeOption("checkbox", stringResource(R.string.crm_field_type_checkbox)),
-    FieldTypeOption("checklist", stringResource(R.string.crm_field_type_checklist))
-)

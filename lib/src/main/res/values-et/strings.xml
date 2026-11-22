@@ -370,4 +370,13 @@
     <string name="devices_username">Kasutajanimi</string>
     <string name="devices_warning">Kopeeri parool kohe: seda ei saa uuesti kuvada.</string>
     <string name="devices_unused">Pole kunagi kasutatud</string>
+    <string name="field_type_text">Tekst</string>
+    <string name="field_type_number">Number</string>
+    <string name="field_type_enumerated">Loetletud</string>
+    <string name="field_type_user">Kasutaja</string>
+    <string name="field_type_date">Kuupäev</string>
+    <string name="field_type_checkbox">Märkeruut</string>
+    <string name="field_type_checklist">Kontrollnimekiri</string>
+    <string name="view_list_sorted_ascending">sorditud kasvavalt</string>
+    <string name="view_list_sorted_descending">sorditud kahanevalt</string>
 </resources>

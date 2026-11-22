@@ -370,4 +370,13 @@
     <string name="devices_username">பயனர்பெயர்</string>
     <string name="devices_warning">கடவுச்சொல்லை இப்போதே நகலெடுங்கள்: இது மீண்டும் காட்டப்படாது.</string>
     <string name="devices_unused">ஒருபோதும் பயன்படுத்தப்படவில்லை</string>
+    <string name="field_type_text">உரை</string>
+    <string name="field_type_number">எண்</string>
+    <string name="field_type_enumerated">எண்ணப்பட்டது</string>
+    <string name="field_type_user">பயனர்</string>
+    <string name="field_type_date">தேதி</string>
+    <string name="field_type_checkbox">தேர்வுப் பெட்டி</string>
+    <string name="field_type_checklist">சரிபார்ப்பு பட்டியல்</string>
+    <string name="view_list_sorted_ascending">ஏறுவரிசையில் வரிசைப்படுத்தப்பட்டது</string>
+    <string name="view_list_sorted_descending">இறங்குவரிசையில் வரிசைப்படுத்தப்பட்டது</string>
 </resources>

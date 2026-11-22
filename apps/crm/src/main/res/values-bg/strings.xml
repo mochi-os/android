@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Няма съвпадащи обекти</string>
     <string name="crm_field_yes">Да</string>
     <string name="crm_field_no">Не</string>
-    <string name="crm_field_type_checkbox">Чекбокс</string>
     <string name="crm_comment_empty">Все още няма коментари</string>
     <string name="crm_comment_attach">Прикачи файлове</string>
     <string name="crm_property_remove">Премахни</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Добави поле</string>
     <string name="crm_class_delete">Изтрий класа</string>
     <string name="crm_class_delete_title">Изтрий класа</string>
-    <string name="crm_field_type_text">Текст</string>
-    <string name="crm_field_type_number">Число</string>
-    <string name="crm_field_type_user">Потребител</string>
-    <string name="crm_field_type_date">Дата</string>
-    <string name="crm_field_type_checklist">Чек-лист</string>
     <string name="crm_field_name">Име</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Флагове</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">направи промяна</string>
     <string name="crm_activity_attached">прикачи</string>
     <string name="crm_activity_commented">коментира</string>
+    <string name="crm_activity_moved">премести</string>
+    <string name="crm_activity_linked">свърза</string>
+    <string name="crm_activity_class">промени класа</string>
     <string name="crm_attachment_empty">Няма прикачени файлове</string>
     <string name="crm_attachment_default_name">прикачен файл</string>
     <string name="crm_attachment_delete_confirm_title">Изтриване на прикачения файл?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Преместване нагоре</string>
     <string name="crm_class_move_down">Преместване надолу</string>
     <string name="crm_class_delete_message">Сигурни ли сте, че искате да изтриете класа \"%1$s\"? Всички полета и техните опции също ще бъдат изтрити.</string>
-    <string name="crm_field_type_enumerated">Изброен</string>
     <string name="crm_field_label">Поле: %1$s</string>
     <string name="crm_field_readonly">Само за четене</string>
     <string name="crm_field_sortable">Сортируемо</string>
     <string name="crm_field_filterable">Филтрируемо</string>
     <string name="crm_field_show_on_card">Показване на картата</string>
-    <string name="crm_field_multi">Множествен избор</string>
     <string name="crm_field_position">Позиция на показване</string>
     <string name="crm_field_position_header">Заглавна част</string>
     <string name="crm_field_position_body">Съдържание</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Низходящ</string>
     <string name="crm_views_filter_classes">Филтриране по класове</string>
     <string name="crm_views_by">по %1$s</string>
-    <string name="crm_views_sorted">сортирано %1$s</string>
     <string name="crm_design_preview_label">Преглед:</string>
     <string name="crm_design_preview_no_view">Няма изглед за преглед</string>
     <string name="crm_design_preview_no_class">Няма клас за този изглед</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s прикачен файл не можа да бъде добавен: %2$s</item>
         <item quantity="other">%1$s прикачени файла не можаха да бъдат добавени: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Родител</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Клас</string>
 </resources>

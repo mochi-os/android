@@ -370,4 +370,13 @@
     <string name="devices_username">사용자 이름</string>
     <string name="devices_warning">비밀번호를 지금 복사하세요. 다시 표시할 수 없어요.</string>
     <string name="devices_unused">사용한 적 없음</string>
+    <string name="field_type_text">텍스트</string>
+    <string name="field_type_number">숫자</string>
+    <string name="field_type_enumerated">열거형</string>
+    <string name="field_type_user">사용자</string>
+    <string name="field_type_date">날짜</string>
+    <string name="field_type_checkbox">체크박스</string>
+    <string name="field_type_checklist">체크리스트</string>
+    <string name="view_list_sorted_ascending">오름차순 정렬</string>
+    <string name="view_list_sorted_descending">내림차순 정렬</string>
 </resources>

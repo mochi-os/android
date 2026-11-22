@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The spelling the regional English overlays change, as the base spells it.
+    Android gives an English locale with no catalogue of its own (en-GB, en-AU,
+    en) its language's nearest region before the base, so without this every
+    English reader would be given a regional spelling.
+-->
+<resources>
+    <string name="feeds_travelling">Travelling</string>
+</resources>

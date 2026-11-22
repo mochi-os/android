@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Tidak ada objek yang cocok</string>
     <string name="crm_field_yes">Ya</string>
     <string name="crm_field_no">Tidak</string>
-    <string name="crm_field_type_checkbox">Kotak centang</string>
     <string name="crm_comment_empty">Belum ada komentar</string>
     <string name="crm_comment_attach">Lampirkan file</string>
     <string name="crm_property_remove">Hapus</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Tambah field</string>
     <string name="crm_class_delete">Hapus kelas</string>
     <string name="crm_class_delete_title">Hapus kelas</string>
-    <string name="crm_field_type_text">Teks</string>
-    <string name="crm_field_type_number">Angka</string>
-    <string name="crm_field_type_user">Pengguna</string>
-    <string name="crm_field_type_date">Tanggal</string>
-    <string name="crm_field_type_checklist">Daftar periksa</string>
     <string name="crm_field_name">Nama</string>
     <string name="crm_field_type">Tipe</string>
     <string name="crm_field_flags">Bendera</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">membuat perubahan</string>
     <string name="crm_activity_attached">melampirkan</string>
     <string name="crm_activity_commented">mengomentari</string>
+    <string name="crm_activity_moved">memindahkan</string>
+    <string name="crm_activity_linked">menautkan</string>
+    <string name="crm_activity_class">mengubah kelas</string>
     <string name="crm_attachment_empty">Tidak ada lampiran</string>
     <string name="crm_attachment_default_name">lampiran</string>
     <string name="crm_attachment_delete_confirm_title">Hapus lampiran?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Default (dapat dibaca)</string>
     <string name="crm_class_parents">Kelas induk</string>
     <string name="crm_class_delete_message">Apakah Anda yakin ingin menghapus kelas \"%1$s\"? Semua bidang dan opsinya juga akan dihapus.</string>
-    <string name="crm_field_type_enumerated">Terenumerasi</string>
     <string name="crm_field_label">Bidang: %1$s</string>
     <string name="crm_field_readonly">Hanya baca</string>
     <string name="crm_field_sortable">Dapat diurutkan</string>
     <string name="crm_field_filterable">Dapat difilter</string>
     <string name="crm_field_show_on_card">Tampilkan di kartu</string>
-    <string name="crm_field_multi">Pilihan ganda</string>
     <string name="crm_field_position">Posisi tampilan</string>
     <string name="crm_field_position_header">Header</string>
     <string name="crm_field_validation">Validasi</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Bidang warna batas</string>
     <string name="crm_views_filter_classes">Filter ke kelas</string>
     <string name="crm_views_by">oleh %1$s</string>
-    <string name="crm_views_sorted">diurutkan %1$s</string>
     <string name="crm_design_preview_label">Pratinjau:</string>
     <string name="crm_design_preview_no_view">Tidak ada tampilan untuk dipratinjau</string>
     <string name="crm_design_preview_no_class">Tidak ada kelas untuk tampilan ini</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s lampiran tidak dapat ditambahkan: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Induk</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Kelas</string>
 </resources>

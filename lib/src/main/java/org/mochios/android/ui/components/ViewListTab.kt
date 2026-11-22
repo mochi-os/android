@@ -150,7 +150,6 @@ data class ViewFieldOption(
  * @property deleteTitle Title of the delete confirmation.
  * @property deleteMessage Body of the delete confirmation, given the view name.
  * @property byField Row detail naming the grouping field, given the field name.
- * @property sortedBy Row detail naming the sort order, given the direction.
  * @property typeBoard Label of the board view type.
  * @property typeList Label of the list view type.
  * @property dragRow Content description of the drag handle.
@@ -176,7 +175,6 @@ data class ViewListLabels(
     val deleteTitle: String,
     val deleteMessage: (viewName: String) -> String,
     val byField: (fieldName: String) -> String,
-    val sortedBy: (direction: String) -> String,
     val typeBoard: String,
     val typeList: String,
     val dragRow: String,
@@ -384,6 +382,10 @@ private fun ViewRow(
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium
             )
+            // The whole phrase per direction, so a language words each its own way.
+            val sorted = stringResource(
+                if (view.direction == "desc") R.string.view_list_sorted_descending else R.string.view_list_sorted_ascending
+            )
             val details = buildList {
                 add(if (view.viewtype == "board") labels.typeBoard else labels.typeList)
                 if (view.columns.isNotBlank()) {
@@ -391,7 +393,7 @@ private fun ViewRow(
                     if (field != null) add(labels.byField(field.name))
                 }
                 if (view.sort.isNotBlank()) {
-                    add(labels.sortedBy(view.direction))
+                    add(sorted)
                 }
             }.joinToString(" · ")
             Text(

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Không có đối tượng khớp</string>
     <string name="crm_field_yes">Có</string>
     <string name="crm_field_no">Không</string>
-    <string name="crm_field_type_checkbox">Hộp kiểm</string>
     <string name="crm_comment_empty">Chưa có bình luận</string>
     <string name="crm_comment_attach">Đính kèm tệp</string>
     <string name="crm_property_remove">Xoá</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Thêm trường</string>
     <string name="crm_class_delete">Xóa class</string>
     <string name="crm_class_delete_title">Xóa class</string>
-    <string name="crm_field_type_text">Văn bản</string>
-    <string name="crm_field_type_number">Số</string>
-    <string name="crm_field_type_user">Người dùng</string>
-    <string name="crm_field_type_date">Ngày</string>
-    <string name="crm_field_type_checklist">Danh sách kiểm tra</string>
     <string name="crm_field_name">Tên</string>
     <string name="crm_field_type">Loại</string>
     <string name="crm_field_flags">Cờ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">đã thực hiện thay đổi</string>
     <string name="crm_activity_attached">đã đính kèm</string>
     <string name="crm_activity_commented">đã bình luận</string>
+    <string name="crm_activity_moved">đã di chuyển</string>
+    <string name="crm_activity_linked">đã liên kết</string>
+    <string name="crm_activity_class">đã thay đổi lớp</string>
     <string name="crm_attachment_empty">Không có tệp đính kèm</string>
     <string name="crm_attachment_default_name">tệp đính kèm</string>
     <string name="crm_attachment_delete_confirm_title">Xóa tệp đính kèm?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Mặc định (dễ đọc)</string>
     <string name="crm_class_parents">Lớp cha</string>
     <string name="crm_class_delete_message">Bạn có chắc chắn muốn xóa lớp \"%1$s\" không? Tất cả các trường và tùy chọn của chúng cũng sẽ bị xóa.</string>
-    <string name="crm_field_type_enumerated">Liệt kê</string>
     <string name="crm_field_label">Trường: %1$s</string>
     <string name="crm_field_readonly">Chỉ đọc</string>
     <string name="crm_field_sortable">Có thể sắp xếp</string>
     <string name="crm_field_filterable">Có thể lọc</string>
     <string name="crm_field_show_on_card">Hiển thị trên thẻ</string>
-    <string name="crm_field_multi">Chọn nhiều</string>
     <string name="crm_field_position">Vị trí hiển thị</string>
     <string name="crm_field_position_header">Tiêu đề</string>
     <string name="crm_field_validation">Xác thực</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Trường màu viền</string>
     <string name="crm_views_filter_classes">Lọc theo lớp</string>
     <string name="crm_views_by">theo %1$s</string>
-    <string name="crm_views_sorted">sắp xếp %1$s</string>
     <string name="crm_design_preview_label">Xem trước:</string>
     <string name="crm_design_preview_no_view">Không có chế độ xem để xem trước</string>
     <string name="crm_design_preview_no_class">Không có lớp nào cho chế độ xem này</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">Không thể thêm %1$s tệp đính kèm: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Cha</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Lớp</string>
 </resources>

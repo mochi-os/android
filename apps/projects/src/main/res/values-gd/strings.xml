@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Cuir raon ris</string>
     <string name="projects_class_delete">Sguab às clas</string>
     <string name="projects_class_delete_title">Sguab às clas</string>
-    <string name="projects_field_type_text">Teacsa</string>
-    <string name="projects_field_type_number">Àireamh</string>
-    <string name="projects_field_type_user">Cleachdaiche</string>
-    <string name="projects_field_type_date">Ceann-là</string>
-    <string name="projects_field_type_checklist">Liosta-dearbhaidh</string>
     <string name="projects_field_name">Ainm</string>
     <string name="projects_field_type">Seòrsa</string>
     <string name="projects_field_flags">Brataichean</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Ceadaich iarrtasan co-aonaidh air nithean dhen chlas seo.</string>
     <string name="projects_class_parents">Clasaichean pàrant</string>
     <string name="projects_class_delete_message">A bheil thu cinnteach gu bheil thu airson an clas \"%1$s\" a sguabadh às? Thèid a h-uile raon agus na roghainnean aca a sguabadh às cuideachd.</string>
-    <string name="projects_field_type_enumerated">Àireamhaichte</string>
     <string name="projects_field_label">Raon: %1$s</string>
     <string name="projects_field_readonly">Leughadh a-mhàin</string>
     <string name="projects_field_sortable">So-sheòrsachaidh</string>
     <string name="projects_field_filterable">So-chriathraidh</string>
     <string name="projects_field_show_on_card">Seall air a\' chairt</string>
-    <string name="projects_field_multi">Ioma-thaghadh</string>
     <string name="projects_field_position">Suidheachadh taisbeanaidh</string>
     <string name="projects_field_position_header">Bann-cinn</string>
     <string name="projects_field_validation">Dearbhadh</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Raon dath an iomaill</string>
     <string name="projects_views_filter_classes">Criathraich gu clasaichean</string>
     <string name="projects_views_by">le %1$s</string>
-    <string name="projects_views_sorted">air a sheòrsachadh %1$s</string>
     <string name="projects_design_preview_label">Ro-shealladh:</string>
     <string name="projects_design_preview_no_view">Chan eil sealladh ann ri ro-shealltainn</string>
     <string name="projects_design_preview_no_class">Chan eil clas ann airson an t-seallaidh seo</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Chaidh am pròiseact ùrachadh</string>
     <string name="projects_activity_attached">cheangail</string>
     <string name="projects_activity_commented">thug seachad beachd</string>
+    <string name="projects_activity_moved">ghluais an nì seo</string>
+    <string name="projects_activity_linked">chuir ceangal ris</string>
+    <string name="projects_activity_class">dh\'atharraich an clas</string>
     <string name="projects_attachment_delete_confirm_message">Thèid an ceanglachan seo a sguabadh às gu buan.</string>
     <string name="projects_attachment_delete_confirm_title">Sguab às an ceanglachan?</string>
     <string name="projects_settings_unsubscribe_section">Dì-chlàraich on phròiseact</string>
@@ -343,4 +338,5 @@
         <item quantity="other">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Cha b\' urrainn a cheangal ris: %1$s</string>
+    <string name="projects_activity_unknown">Neo-aithnichte</string>
 </resources>

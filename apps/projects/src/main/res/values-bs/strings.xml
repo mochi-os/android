@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Dodaj polje</string>
     <string name="projects_class_delete">Obriši klasu</string>
     <string name="projects_class_delete_title">Obriši klasu</string>
-    <string name="projects_field_type_text">Tekst</string>
-    <string name="projects_field_type_number">Broj</string>
-    <string name="projects_field_type_user">Korisnik</string>
-    <string name="projects_field_type_date">Datum</string>
-    <string name="projects_field_type_checklist">Lista</string>
     <string name="projects_field_name">Naziv</string>
     <string name="projects_field_type">Tip</string>
     <string name="projects_field_flags">Zastave</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Pomjeri gore</string>
     <string name="projects_class_move_down">Pomjeri dolje</string>
     <string name="projects_class_delete_message">Jeste li sigurni da želite obrisati klasu \"%1$s\"? Sva polja i njihove opcije također će biti obrisani.</string>
-    <string name="projects_field_type_enumerated">Nabrojano</string>
     <string name="projects_field_label">Polje: %1$s</string>
     <string name="projects_field_readonly">Samo za čitanje</string>
     <string name="projects_field_sortable">Može se sortirati</string>
     <string name="projects_field_filterable">Može se filtrirati</string>
     <string name="projects_field_show_on_card">Prikaži na kartici</string>
-    <string name="projects_field_multi">Višestruki odabir</string>
     <string name="projects_field_position">Pozicija prikaza</string>
     <string name="projects_field_position_header">Zaglavlje</string>
     <string name="projects_field_position_body">Glavni dio</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Opadajuće</string>
     <string name="projects_views_filter_classes">Filtriraj na klase</string>
     <string name="projects_views_by">po %1$s</string>
-    <string name="projects_views_sorted">sortirano %1$s</string>
     <string name="projects_design_preview_label">Pregled:</string>
     <string name="projects_design_preview_no_view">Nema prikaza za pregled</string>
     <string name="projects_design_preview_no_class">Nema klase za ovaj prikaz</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekat ažuriran</string>
     <string name="projects_activity_attached">priložio/la</string>
     <string name="projects_activity_commented">komentarisao/la</string>
+    <string name="projects_activity_moved">premjestio/la ovaj objekat</string>
+    <string name="projects_activity_linked">dodao/la vezu</string>
+    <string name="projects_activity_class">promijenio/la klasu</string>
     <string name="projects_attachment_delete_confirm_message">Ovaj prilog će biti trajno izbrisan.</string>
     <string name="projects_attachment_delete_confirm_title">Izbrisati prilog?</string>
     <string name="projects_settings_unsubscribe_section">Prekini pretplatu na projekat</string>
@@ -341,4 +336,5 @@
         <item quantity="other">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavki ispod nje? Ova radnja se ne može poništiti.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nije moguće priložiti: %1$s</string>
+    <string name="projects_activity_unknown">Nepoznato</string>
 </resources>

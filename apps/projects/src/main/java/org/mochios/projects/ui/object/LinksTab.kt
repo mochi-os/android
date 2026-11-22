@@ -54,13 +54,13 @@ import org.mochios.projects.R
 import org.mochios.projects.model.Link
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectObject
+import org.mochios.projects.util.objectTitle
+import org.mochios.projects.util.readableId
+import org.mochios.android.model.canWrite
 
 private data class DisplayLink(
-    val sectionKey: String,
     val targetId: String, // the "other" object id
     val displayTitle: String,
-    val readable: String,
-    val className: String,
     // Originating direction:
     val isOutgoing: Boolean,
     val linktype: String
@@ -79,7 +79,7 @@ fun LinksSection(
     onNavigateToObject: (String) -> Unit = {}
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val canWrite = uiState.access == "owner" || uiState.access == "design" || uiState.access == "write"
+    val writable = canWrite(uiState.access)
     var showAddSheet by remember { mutableStateOf(false) }
 
     val sectionRelates = stringResource(R.string.projects_links_section_relates)
@@ -88,52 +88,27 @@ fun LinksSection(
     val sectionDuplicates = stringResource(R.string.projects_links_section_duplicates)
     val sectionDuplicatedBy = stringResource(R.string.projects_links_section_duplicated_by)
 
-    // Resolve display titles using siblingObjects + values; fall back to the
-    // partial info the API returned with the link itself.
-    fun resolveTitle(otherId: String, fallback: Link): Pair<String, String> {
-        val sibling = uiState.siblingObjects.find { it.id == otherId }
-        val prefix = projectDetails.project.prefix
-        val number = if (sibling != null && sibling.number != 0) sibling.number else fallback.number
-        val readable = if (prefix.isNotBlank()) "$prefix-$number" else "#$number"
-        if (sibling != null) {
-            val cls = projectDetails.classes.find { it.id == sibling.objectClass }
-            val titleField = cls?.title.orEmpty()
-            val titleVal = if (titleField.isNotBlank()) sibling.values[titleField]?.toString().orEmpty() else ""
-            val title = if (titleVal.isNotBlank()) titleVal else readable
-            return title to readable
-        }
-        // Fallback to the link's own title field (returned by /links endpoint)
-        val title = if (fallback.title.isNotBlank()) fallback.title else readable
-        return title to readable
-    }
-
-    fun classNameFor(otherId: String, fallback: Link): String {
-        val sibling = uiState.siblingObjects.find { it.id == otherId }
-        val classId = sibling?.objectClass ?: fallback.objectClass
-        return projectDetails.classes.find { it.id == classId }?.name.orEmpty()
-    }
+    // The other object by its title as the board holds it, else by what the
+    // link itself carries.
+    val prefix = projectDetails.project.prefix
+    fun titleOf(otherId: String, link: Link): String =
+        uiState.siblingObjects.find { sibling -> sibling.id == otherId }
+            ?.let { sibling -> objectTitle(sibling, projectDetails.classes, prefix) }
+            ?: objectTitle(link, prefix)
 
     val display = mutableListOf<DisplayLink>()
     for (l in uiState.outgoingLinks) {
-        val (title, readable) = resolveTitle(l.target, l)
         display.add(DisplayLink(
-            sectionKey = l.linktype,
             targetId = l.target,
-            displayTitle = title,
-            readable = readable,
-            className = classNameFor(l.target, l),
+            displayTitle = titleOf(l.target, l),
             isOutgoing = true,
             linktype = l.linktype
         ))
     }
     for (l in uiState.incomingLinks) {
-        val (title, readable) = resolveTitle(l.source, l)
         display.add(DisplayLink(
-            sectionKey = "incoming-${l.linktype}",
             targetId = l.source,
-            displayTitle = title,
-            readable = readable,
-            className = classNameFor(l.source, l),
+            displayTitle = titleOf(l.source, l),
             isOutgoing = false,
             linktype = l.linktype
         ))
@@ -157,7 +132,7 @@ fun LinksSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            if (canWrite) {
+            if (writable) {
                 MochiIconButton(onClick = { showAddSheet = true }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_links_add))
                 }
@@ -176,7 +151,7 @@ fun LinksSection(
                 LinkRow(
                     link = item,
                     typeLabel = typeLabel(item),
-                    canWrite = canWrite,
+                    canWrite = writable,
                     onClick = { onNavigateToObject(item.targetId) },
                     onDelete = {
                         if (item.isOutgoing) {
@@ -292,7 +267,11 @@ private fun AddLinkSheet(
     val filtered = remember(uiState.siblingObjects, linkedIds, q, projectDetails) {
         uiState.siblingObjects
             .filter { sibling -> sibling.id !in linkedIds }
-            .map { sibling -> sibling to objectDisplayLabel(sibling, projectDetails) }
+            .map { sibling ->
+                val prefix = projectDetails.project.prefix
+                // Searched by title and by readable id, which shows beneath it.
+                sibling to (objectTitle(sibling, projectDetails.classes, prefix) to readableId(sibling, prefix))
+            }
             .filter { (_, labels) ->
                 q.isEmpty() ||
                     labels.first.lowercase().contains(q) ||
@@ -403,14 +382,4 @@ private fun AddLinkSheet(
             }
         }
     }
-}
-
-private fun objectDisplayLabel(obj: ProjectObject, projectDetails: ProjectDetails): Pair<String, String> {
-    val cls = projectDetails.classes.find { it.id == obj.objectClass }
-    val titleField = cls?.title.orEmpty()
-    val titleVal = if (titleField.isNotBlank()) obj.values[titleField]?.toString().orEmpty() else ""
-    val prefix = projectDetails.project.prefix
-    val readable = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}"
-    val title = if (titleVal.isNotBlank()) titleVal else readable
-    return title to readable
 }

@@ -370,4 +370,13 @@
     <string name="devices_username">Igama lomsebenzisi</string>
     <string name="devices_warning">Khuphela iphasiwedi ngoku: ayinakuboniswa kwakhona.</string>
     <string name="devices_unused">Ayikaze isetyenziswe</string>
+    <string name="field_type_text">Umbhalo</string>
+    <string name="field_type_number">Inani</string>
+    <string name="field_type_enumerated">Edweliswayo</string>
+    <string name="field_type_user">Umsebenzisi</string>
+    <string name="field_type_date">Umhla</string>
+    <string name="field_type_checkbox">Ibhokisi yokuhlola</string>
+    <string name="field_type_checklist">Uluhlu lokuhlola</string>
+    <string name="view_list_sorted_ascending">kulungelelaniswe ngokunyuka</string>
+    <string name="view_list_sorted_descending">kulungelelaniswe ngokwehla</string>
 </resources>

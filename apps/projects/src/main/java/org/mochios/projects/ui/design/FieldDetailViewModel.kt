@@ -89,7 +89,6 @@ class FieldDetailViewModel @Inject constructor(
     fun updateField(
         name: String?,
         flags: String?,
-        multi: Boolean?,
         card: Boolean?,
         position: String?,
         rows: String?,
@@ -105,7 +104,6 @@ class FieldDetailViewModel @Inject constructor(
                     fieldId,
                     name,
                     flags,
-                    multi,
                     card,
                     position,
                     rows,

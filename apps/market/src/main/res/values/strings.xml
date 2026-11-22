@@ -138,7 +138,7 @@
     <string name="market_carousel_thumbnail">Thumbnail %1$s</string>
     <string name="market_channel_name">Market</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank could not process</string>
-    <string name="market_chargeback_reason_check_returned">Check returned</string>
+    <string name="market_chargeback_reason_check_returned">Cheque returned</string>
     <string name="market_chargeback_reason_credit_not_processed">Credit not processed</string>
     <string name="market_chargeback_reason_customer_initiated">Customer initiated</string>
     <string name="market_chargeback_reason_debit_not_authorized">Debit not authorised</string>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">一致するオブジェクトがありません</string>
     <string name="crm_field_yes">はい</string>
     <string name="crm_field_no">いいえ</string>
-    <string name="crm_field_type_checkbox">チェックボックス</string>
     <string name="crm_comment_empty">まだコメントがありません</string>
     <string name="crm_comment_attach">ファイルを添付</string>
     <string name="crm_property_remove">削除</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">フィールドを追加</string>
     <string name="crm_class_delete">クラスを削除</string>
     <string name="crm_class_delete_title">クラスを削除</string>
-    <string name="crm_field_type_text">テキスト</string>
-    <string name="crm_field_type_number">数値</string>
-    <string name="crm_field_type_user">ユーザー</string>
-    <string name="crm_field_type_date">日付</string>
-    <string name="crm_field_type_checklist">チェックリスト</string>
     <string name="crm_field_name">名前</string>
     <string name="crm_field_type">タイプ</string>
     <string name="crm_field_flags">フラグ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">変更しました</string>
     <string name="crm_activity_attached">添付しました</string>
     <string name="crm_activity_commented">コメントしました</string>
+    <string name="crm_activity_moved">移動しました</string>
+    <string name="crm_activity_linked">リンクしました</string>
+    <string name="crm_activity_class">クラスを変更しました</string>
     <string name="crm_attachment_empty">添付ファイルはありません</string>
     <string name="crm_attachment_default_name">添付ファイル</string>
     <string name="crm_attachment_delete_confirm_title">添付ファイルを削除しますか?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">デフォルト (可読)</string>
     <string name="crm_class_parents">親クラス</string>
     <string name="crm_class_delete_message">クラス \"%1$s\" を削除してもよろしいですか?すべてのフィールドとそのオプションも削除されます。</string>
-    <string name="crm_field_type_enumerated">列挙型</string>
     <string name="crm_field_label">フィールド: %1$s</string>
     <string name="crm_field_readonly">読み取り専用</string>
     <string name="crm_field_sortable">並べ替え可能</string>
     <string name="crm_field_filterable">フィルター可能</string>
     <string name="crm_field_show_on_card">カードに表示</string>
-    <string name="crm_field_multi">複数選択</string>
     <string name="crm_field_position">表示位置</string>
     <string name="crm_field_position_header">ヘッダー</string>
     <string name="crm_field_validation">検証</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">枠線の色フィールド</string>
     <string name="crm_views_filter_classes">クラスで絞り込み</string>
     <string name="crm_views_by">%1$s 別</string>
-    <string name="crm_views_sorted">並び順: %1$s</string>
     <string name="crm_design_preview_label">プレビュー:</string>
     <string name="crm_design_preview_no_view">プレビューするビューがありません</string>
     <string name="crm_design_preview_no_class">このビューのクラスがありません</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s 件の添付ファイルを追加できませんでした：%2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">親</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">クラス</string>
 </resources>

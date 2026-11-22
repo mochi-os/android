@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">ಯಾವುದೇ ಹೊಂದಾಣಿಕೆಯ ಆಬ್ಜೆಕ್ಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="crm_field_yes">ಹೌದು</string>
     <string name="crm_field_no">ಇಲ್ಲ</string>
-    <string name="crm_field_type_checkbox">ಚೆಕ್‌ಬಾಕ್ಸ್</string>
     <string name="crm_comment_empty">ಇನ್ನೂ ಯಾವುದೇ ಕಾಮೆಂಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="crm_comment_attach">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
     <string name="crm_property_remove">ತೆಗೆದುಹಾಕಿ</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ಫೀಲ್ಡ್ ಸೇರಿಸಿ</string>
     <string name="crm_class_delete">ಕ್ಲಾಸ್ ಅಳಿಸಿ</string>
     <string name="crm_class_delete_title">ಕ್ಲಾಸ್ ಅಳಿಸಿ</string>
-    <string name="crm_field_type_text">ಪಠ್ಯ</string>
-    <string name="crm_field_type_number">ಸಂಖ್ಯೆ</string>
-    <string name="crm_field_type_user">ಬಳಕೆದಾರ</string>
-    <string name="crm_field_type_date">ದಿನಾಂಕ</string>
-    <string name="crm_field_type_checklist">ಚೆಕ್‌ಲಿಸ್ಟ್</string>
     <string name="crm_field_name">ಹೆಸರು</string>
     <string name="crm_field_type">ಪ್ರಕಾರ</string>
     <string name="crm_field_flags">ಫ್ಲ್ಯಾಗ್‌ಗಳು</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ಬದಲಾವಣೆ ಮಾಡಿದರು</string>
     <string name="crm_activity_attached">ಲಗತ್ತಿಸಿದರು</string>
     <string name="crm_activity_commented">ಕಾಮೆಂಟ್ ಮಾಡಿದರು</string>
+    <string name="crm_activity_moved">ಸರಿಸಿದರು</string>
+    <string name="crm_activity_linked">ಲಿಂಕ್ ಮಾಡಿದರು</string>
+    <string name="crm_activity_class">ವರ್ಗವನ್ನು ಬದಲಾಯಿಸಿದರು</string>
     <string name="crm_attachment_empty">ಯಾವುದೇ ಲಗತ್ತುಗಳಿಲ್ಲ</string>
     <string name="crm_attachment_default_name">ಲಗತ್ತು</string>
     <string name="crm_attachment_delete_confirm_title">ಲಗತ್ತನ್ನು ಅಳಿಸುವುದೇ?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ಡೀಫಾಲ್ಟ್ (ಓದಬಲ್ಲ)</string>
     <string name="crm_class_parents">ಮೂಲ ಕ್ಲಾಸ್‌ಗಳು</string>
     <string name="crm_class_delete_message">ನೀವು \"%1$s\" ಕ್ಲಾಸ್ ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ? ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳು ಮತ್ತು ಅವುಗಳ ಆಯ್ಕೆಗಳನ್ನು ಸಹ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
-    <string name="crm_field_type_enumerated">ಎಣಿಕೆಯ</string>
     <string name="crm_field_label">ಕ್ಷೇತ್ರ: %1$s</string>
     <string name="crm_field_readonly">ಓದಲು-ಮಾತ್ರ</string>
     <string name="crm_field_sortable">ವಿಂಗಡಿಸಬಹುದಾದ</string>
     <string name="crm_field_filterable">ಫಿಲ್ಟರ್ ಮಾಡಬಹುದಾದ</string>
     <string name="crm_field_show_on_card">ಕಾರ್ಡ್‌ನಲ್ಲಿ ತೋರಿಸಿ</string>
-    <string name="crm_field_multi">ಬಹು-ಆಯ್ಕೆ</string>
     <string name="crm_field_position">ಪ್ರದರ್ಶನ ಸ್ಥಾನ</string>
     <string name="crm_field_position_header">ಶಿರೋಲೇಖ</string>
     <string name="crm_field_validation">ಮೌಲ್ಯಮಾಪನ</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">ಗಡಿ ಬಣ್ಣದ ಕ್ಷೇತ್ರ</string>
     <string name="crm_views_filter_classes">ಕ್ಲಾಸ್‌ಗಳಿಗೆ ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="crm_views_by">%1$s ಮೂಲಕ</string>
-    <string name="crm_views_sorted">%1$s ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
     <string name="crm_design_preview_label">ಪೂರ್ವವೀಕ್ಷಣೆ:</string>
     <string name="crm_design_preview_no_view">ಪೂರ್ವವೀಕ್ಷಿಸಲು ಯಾವುದೇ ವೀಕ್ಷಣೆ ಇಲ್ಲ</string>
     <string name="crm_design_preview_no_class">ಈ ವೀಕ್ಷಣೆಗೆ ಯಾವುದೇ ಕ್ಲಾಸ್ ಇಲ್ಲ</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s ಲಗತ್ತನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %2$s</item>
         <item quantity="other">%1$s ಲಗತ್ತುಗಳನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">ಪೋಷಕ</string>
+    <string name="crm_export_csv_id">ಐಡಿ</string>
+    <string name="crm_export_csv_class">ವರ್ಗ</string>
 </resources>

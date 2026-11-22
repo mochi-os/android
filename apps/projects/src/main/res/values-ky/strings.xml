@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Талаа кошуу</string>
     <string name="projects_class_delete">Классты жок кылуу</string>
     <string name="projects_class_delete_title">Классты жок кылуу</string>
-    <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Сан</string>
-    <string name="projects_field_type_user">Колдонуучу</string>
-    <string name="projects_field_type_date">Күн</string>
-    <string name="projects_field_type_checklist">Текшерүү тизмеси</string>
     <string name="projects_field_name">Аты</string>
     <string name="projects_field_type">Тип</string>
     <string name="projects_field_flags">Желектер</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Бул класстын объектилеринде бириктирүү сурамдарына уруксат берүү.</string>
     <string name="projects_class_parents">Башкы класстар</string>
     <string name="projects_class_delete_message">\"%1$s\" классын чындап жок кылгыңыз келеби? Бардык талаалар жана алардын параметрлери да жок кылынат.</string>
-    <string name="projects_field_type_enumerated">Тизмеленген</string>
     <string name="projects_field_label">Талаа: %1$s</string>
     <string name="projects_field_readonly">Окуу үчүн гана</string>
     <string name="projects_field_sortable">Сорттолуучу</string>
     <string name="projects_field_filterable">Чыпкалануучу</string>
     <string name="projects_field_show_on_card">Картада көрсөтүү</string>
-    <string name="projects_field_multi">Бир нече тандоо</string>
     <string name="projects_field_position">Көрсөтүү орду</string>
     <string name="projects_field_position_header">Аталыш</string>
     <string name="projects_field_validation">Текшерүү</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Чек ара түсүнүн талаасы</string>
     <string name="projects_views_filter_classes">Класстарга чыпкалоо</string>
     <string name="projects_views_by">%1$s боюнча</string>
-    <string name="projects_views_sorted">%1$s иргелди</string>
     <string name="projects_design_preview_label">Алдын ала көрүү:</string>
     <string name="projects_design_preview_no_view">Алдын ала көрсөтүү үчүн көрүнүш жок</string>
     <string name="projects_design_preview_no_class">Бул көрүнүш үчүн класс жок</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Долбоор жаңыртылды</string>
     <string name="projects_activity_attached">тиркеди</string>
     <string name="projects_activity_commented">пикир калтырды</string>
+    <string name="projects_activity_moved">бул объектти жылдырды</string>
+    <string name="projects_activity_linked">шилтеме кошту</string>
+    <string name="projects_activity_class">классты өзгөрттү</string>
     <string name="projects_attachment_delete_confirm_message">Бул тиркеме биротоло өчүрүлөт.</string>
     <string name="projects_attachment_delete_confirm_title">Тиркеме өчүрүлсүнбү?</string>
     <string name="projects_settings_unsubscribe_section">Долбоор жазылуусунан баш тартуу</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" жана анын астындагы %2$s элементти жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Тиркөө мүмкүн болгон жок: %1$s</string>
+    <string name="projects_activity_unknown">Белгисиз</string>
 </resources>

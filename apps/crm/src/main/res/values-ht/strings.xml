@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Pa gen objè ki koresponn</string>
     <string name="crm_field_yes">Wi</string>
     <string name="crm_field_no">Non</string>
-    <string name="crm_field_type_checkbox">Kaz</string>
     <string name="crm_comment_empty">Poko gen kòmantè</string>
     <string name="crm_comment_attach">Tache fichye</string>
     <string name="crm_property_remove">Retire</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Ajoute chan</string>
     <string name="crm_class_delete">Efase klas</string>
     <string name="crm_class_delete_title">Efase klas</string>
-    <string name="crm_field_type_text">Tèks</string>
-    <string name="crm_field_type_number">Nimewo</string>
-    <string name="crm_field_type_user">Itilizatè</string>
-    <string name="crm_field_type_date">Dat</string>
-    <string name="crm_field_type_checklist">Lis verifikasyon</string>
     <string name="crm_field_name">Non</string>
     <string name="crm_field_type">Tip</string>
     <string name="crm_field_flags">Drapo</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">fè yon chanjman</string>
     <string name="crm_activity_attached">tache</string>
     <string name="crm_activity_commented">kòmante</string>
+    <string name="crm_activity_moved">deplase</string>
+    <string name="crm_activity_linked">lye</string>
+    <string name="crm_activity_class">chanje klas la</string>
     <string name="crm_attachment_empty">Pa gen atachman</string>
     <string name="crm_attachment_default_name">atachman</string>
     <string name="crm_attachment_delete_confirm_title">Efase fichye atache a?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Default (lizib)</string>
     <string name="crm_class_parents">Klas paran</string>
     <string name="crm_class_delete_message">Èske ou sèten ou vle efase klas \"%1$s\"? Tout chan ak opsyon yo pral efase tou.</string>
-    <string name="crm_field_type_enumerated">Enimere</string>
     <string name="crm_field_label">Chan: %1$s</string>
     <string name="crm_field_readonly">Lekti sèlman</string>
     <string name="crm_field_sortable">Kapab triye</string>
     <string name="crm_field_filterable">Kapab filtre</string>
     <string name="crm_field_show_on_card">Montre sou kat la</string>
-    <string name="crm_field_multi">Plizyè chwa</string>
     <string name="crm_field_position">Pozisyon afichaj</string>
     <string name="crm_field_position_header">Antèt</string>
     <string name="crm_field_validation">Validasyon</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Chan koulè bòdi</string>
     <string name="crm_views_filter_classes">Filtre selon klas</string>
     <string name="crm_views_by">pa %1$s</string>
-    <string name="crm_views_sorted">triye %1$s</string>
     <string name="crm_design_preview_label">Apèsi:</string>
     <string name="crm_design_preview_no_view">Pa gen vi pou apèsi</string>
     <string name="crm_design_preview_no_class">Pa gen klas pou vi sa a</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">Pa t kapab ajoute %1$s atachman: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Paran</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klas</string>
 </resources>

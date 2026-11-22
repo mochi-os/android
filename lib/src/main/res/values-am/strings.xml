@@ -370,4 +370,13 @@
     <string name="devices_username">የተጠቃሚ ስም</string>
     <string name="devices_warning">የይለፍ ቃሉን አሁን ቅዳ፦ እንደገና ሊታይ አይችልም።</string>
     <string name="devices_unused">ጥቅም ላይ ውሎ አያውቅም</string>
+    <string name="field_type_text">ጽሁፍ</string>
+    <string name="field_type_number">ቁጥር</string>
+    <string name="field_type_enumerated">የተዘረዘረ</string>
+    <string name="field_type_user">ተጠቃሚ</string>
+    <string name="field_type_date">ቀን</string>
+    <string name="field_type_checkbox">ቼክቦክስ</string>
+    <string name="field_type_checklist">ዝርዝር</string>
+    <string name="view_list_sorted_ascending">ከታች ወደ ላይ ተደርድሯል</string>
+    <string name="view_list_sorted_descending">ከላይ ወደ ታች ተደርድሯል</string>
 </resources>

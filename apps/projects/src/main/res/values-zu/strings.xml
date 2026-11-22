@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Engeza inkambu</string>
     <string name="projects_class_delete">Susa iklasi</string>
     <string name="projects_class_delete_title">Susa iklasi</string>
-    <string name="projects_field_type_text">Umbhalo</string>
-    <string name="projects_field_type_number">Inombolo</string>
-    <string name="projects_field_type_user">Umsebenzisi</string>
-    <string name="projects_field_type_date">Usuku</string>
-    <string name="projects_field_type_checklist">Uhlu lokuhlola</string>
     <string name="projects_field_name">Igama</string>
     <string name="projects_field_type">Uhlobo</string>
     <string name="projects_field_flags">Amafulegi</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Vumela izicelo zokuhlanganisa ezintweni zalesi kilasi.</string>
     <string name="projects_class_parents">Amakilasi omzali</string>
     <string name="projects_class_delete_message">Ingabe uqinisekile ufuna ukususa ikilasi elithi \"%1$s\"? Zonke izinkambu kanye namathuba azo nazo zizosulwa.</string>
-    <string name="projects_field_type_enumerated">Okubalwe ngokulandelana</string>
     <string name="projects_field_label">Inkambu: %1$s</string>
     <string name="projects_field_readonly">Okufundekayo kuphela</string>
     <string name="projects_field_sortable">Kungahlelwa</string>
     <string name="projects_field_filterable">Kungahlungwa</string>
     <string name="projects_field_show_on_card">Bonisa ekhadini</string>
-    <string name="projects_field_multi">Ukukhetha okuningi</string>
     <string name="projects_field_position">Indawo yokubonisa</string>
     <string name="projects_field_position_header">Isihloko</string>
     <string name="projects_field_validation">Ukuqinisekiswa</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Inkambu yombala womncele</string>
     <string name="projects_views_filter_classes">Hluza ngamakilasi</string>
     <string name="projects_views_by">ngo-%1$s</string>
-    <string name="projects_views_sorted">kuhlelwe ngo-%1$s</string>
     <string name="projects_design_preview_label">Ukubuka kuqala:</string>
     <string name="projects_design_preview_no_view">Awukho umbono ongabukwa kuqala</string>
     <string name="projects_design_preview_no_class">Alikho ikilasi lalo mbono</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Iphrojekthi ibuyekeziwe</string>
     <string name="projects_activity_attached">unamathisele</string>
     <string name="projects_activity_commented">uphawulile</string>
+    <string name="projects_activity_moved">uyihambisile le nto</string>
+    <string name="projects_activity_linked">wengeze isixhumanisi</string>
+    <string name="projects_activity_class">ushintshe iklasi</string>
     <string name="projects_attachment_delete_confirm_message">Lesi sinamathiselo sizosuswa unomphela.</string>
     <string name="projects_attachment_delete_confirm_title">Susa isinamathiselo?</string>
     <string name="projects_settings_unsubscribe_section">Yeka ukubhalisela iphrojekthi</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Uqinisekile ufuna ukususa okuthi \"%1$s\" kanye nezinto ezingu-%2$s ezingaphansi kwakho? Lesi senzo asikwazi ukuhlehliswa.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Akukwazekanga ukunamathisela: %1$s</string>
+    <string name="projects_activity_unknown">Akwaziwa</string>
 </resources>

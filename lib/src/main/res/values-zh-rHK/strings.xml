@@ -295,4 +295,10 @@
     <string name="devices_done">完成</string>
     <string name="devices_used">上次使用 %1$s</string>
     <string name="devices_username">使用者名稱</string>
+    <string name="field_type_text">文字</string>
+    <string name="field_type_number">編號</string>
+    <string name="field_type_enumerated">列舉</string>
+    <string name="field_type_user">用戶</string>
+    <string name="field_type_checkbox">勾選方塊</string>
+    <string name="field_type_checklist">核取清單</string>
 </resources>

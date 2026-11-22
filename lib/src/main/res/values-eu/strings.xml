@@ -370,4 +370,13 @@
     <string name="devices_username">Erabiltzaile-izena</string>
     <string name="devices_warning">Kopiatu pasahitza orain: ezin izango da berriro erakutsi.</string>
     <string name="devices_unused">Inoiz erabili gabea</string>
+    <string name="field_type_text">Testua</string>
+    <string name="field_type_number">Zenbakia</string>
+    <string name="field_type_enumerated">Zerrendatua</string>
+    <string name="field_type_user">Erabiltzailea</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Kontrol-laukia</string>
+    <string name="field_type_checklist">Egiaztapen-zerrenda</string>
+    <string name="view_list_sorted_ascending">goranzko ordenan</string>
+    <string name="view_list_sorted_descending">beheranzko ordenan</string>
 </resources>

@@ -168,6 +168,19 @@
     <string name="access_level_view">View</string>
     <string name="access_level_none">None</string>
 
+    <!-- The types a project or CRM field can have -->
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Number</string>
+    <string name="field_type_enumerated">Enumerated</string>
+    <string name="field_type_user">User</string>
+    <string name="field_type_date">Date</string>
+    <string name="field_type_checkbox">Checkbox</string>
+    <string name="field_type_checklist">Checklist</string>
+
+    <!-- A saved view's sort order, in its row's summary: "Board · by Status · sorted ascending" -->
+    <string name="view_list_sorted_ascending">sorted ascending</string>
+    <string name="view_list_sorted_descending">sorted descending</string>
+
     <!-- Notifications -->
     <string name="notifications_clear">Clear notifications</string>
     <string name="notifications_permission_reason">Mochi needs permission to show notifications, so you hear about new messages, replies and reminders.</string>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Ndaipóri mba\'e ojuajúva</string>
     <string name="crm_field_yes">Heẽ</string>
     <string name="crm_field_no">Nahániri</string>
-    <string name="crm_field_type_checkbox">Casilla</string>
     <string name="crm_comment_empty">Ndaipóri comentario gueteri</string>
     <string name="crm_comment_attach">Embojuaju archivokuéra</string>
     <string name="crm_property_remove">Embogue</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Embojuaju campo</string>
     <string name="crm_class_delete">Hundi clase</string>
     <string name="crm_class_delete_title">Hundi clase</string>
-    <string name="crm_field_type_text">Jehaipyre</string>
-    <string name="crm_field_type_number">Papapy</string>
-    <string name="crm_field_type_user">Puruhára</string>
-    <string name="crm_field_type_date">Ára</string>
-    <string name="crm_field_type_checklist">Lista jehechajey</string>
     <string name="crm_field_name">Téra</string>
     <string name="crm_field_type">Mba\'éichagua</string>
     <string name="crm_field_flags">Banderakuéra</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ojapo peteĩ ñemoambue</string>
     <string name="crm_activity_attached">oñembojuaju</string>
     <string name="crm_activity_commented">okomenta</string>
+    <string name="crm_activity_moved">omongu\'e</string>
+    <string name="crm_activity_linked">ombojoaju</string>
+    <string name="crm_activity_class">omoambue clase</string>
     <string name="crm_attachment_empty">Ndaipóri adjunto</string>
     <string name="crm_attachment_default_name">adjunto</string>
     <string name="crm_attachment_delete_confirm_title">¿Emboguéta adjunto?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Ijypyguáva (oñemoñe\'ẽkuaáva)</string>
     <string name="crm_class_parents">Clase sykuéra</string>
     <string name="crm_class_delete_message">¿Añetehápe reipota embogue clase \"%1$s\"? Opaite campo ha ijeporavorã oñemboguepáta avei.</string>
-    <string name="crm_field_type_enumerated">Ojepapapyréva</string>
     <string name="crm_field_label">Campo: %1$s</string>
     <string name="crm_field_readonly">Moñe\'ẽrã añoite</string>
     <string name="crm_field_sortable">Ikatu oñemoĩporã</string>
     <string name="crm_field_filterable">Ikatu oñembogua</string>
     <string name="crm_field_show_on_card">Ehechauka kuatia\'ípe</string>
-    <string name="crm_field_multi">Heta-poravo</string>
     <string name="crm_field_position">Tenda ojehechaukáva</string>
     <string name="crm_field_position_header">Akãha</string>
     <string name="crm_field_validation">Jehechajey</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Borde sa\'y campo</string>
     <string name="crm_views_filter_classes">Mbogua clasekuérape</string>
     <string name="crm_views_by">%1$s rupive</string>
-    <string name="crm_views_sorted">oñemoĩporã %1$s</string>
     <string name="crm_design_preview_label">Jehecha raẽ:</string>
     <string name="crm_design_preview_no_view">Ndaipóri jehecha ojehecha raẽ hag̃ua</string>
     <string name="crm_design_preview_no_class">Ndaipóri clase ko jehechápe g̃uarã</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">%1$s adjuntokuéra ndaikatúi oñembojuaju: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Sy/ru</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Clase</string>
 </resources>

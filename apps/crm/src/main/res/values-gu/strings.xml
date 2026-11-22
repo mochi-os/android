@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">કોઈ મેળ ખાતી ઑબ્જેક્ટ્સ નથી</string>
     <string name="crm_field_yes">હા</string>
     <string name="crm_field_no">ના</string>
-    <string name="crm_field_type_checkbox">ચેકબૉક્સ</string>
     <string name="crm_comment_empty">હજુ સુધી કોઈ કૉમેન્ટ્સ નથી</string>
     <string name="crm_comment_attach">ફાઇલો જોડો</string>
     <string name="crm_property_remove">દૂર કરો</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ફીલ્ડ ઉમેરો</string>
     <string name="crm_class_delete">ક્લાસ કાઢી નાખો</string>
     <string name="crm_class_delete_title">ક્લાસ કાઢી નાખો</string>
-    <string name="crm_field_type_text">ટેક્સ્ટ</string>
-    <string name="crm_field_type_number">સંખ્યા</string>
-    <string name="crm_field_type_user">વપરાશકર્તા</string>
-    <string name="crm_field_type_date">તારીખ</string>
-    <string name="crm_field_type_checklist">ચેકલિસ્ટ</string>
     <string name="crm_field_name">નામ</string>
     <string name="crm_field_type">પ્રકાર</string>
     <string name="crm_field_flags">ફ્લેગ્સ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ફેરફાર કર્યો</string>
     <string name="crm_activity_attached">જોડ્યું</string>
     <string name="crm_activity_commented">ટિપ્પણી કરી</string>
+    <string name="crm_activity_moved">ખસેડ્યું</string>
+    <string name="crm_activity_linked">લિંક કર્યું</string>
+    <string name="crm_activity_class">વર્ગ બદલ્યો</string>
     <string name="crm_attachment_empty">કોઈ જોડાણ નથી</string>
     <string name="crm_attachment_default_name">જોડાણ</string>
     <string name="crm_attachment_delete_confirm_title">જોડાણ કાઢી નાખવું?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">મૂળભૂત (વાંચી શકાય તેવું)</string>
     <string name="crm_class_parents">પેરન્ટ વર્ગો</string>
     <string name="crm_class_delete_message">શું તમે ખરેખર \"%1$s\" વર્ગને કાઢી નાખવા માગો છો? તમામ ક્ષેત્રો અને તેમના વિકલ્પો પણ કાઢી નાખવામાં આવશે.</string>
-    <string name="crm_field_type_enumerated">ગણતરી કરેલ</string>
     <string name="crm_field_label">ક્ષેત્ર: %1$s</string>
     <string name="crm_field_readonly">ફક્ત-વાંચન</string>
     <string name="crm_field_sortable">ક્રમબદ્ધ કરી શકાય તેવું</string>
     <string name="crm_field_filterable">ફિલ્ટર કરી શકાય તેવું</string>
     <string name="crm_field_show_on_card">કાર્ડ પર બતાવો</string>
-    <string name="crm_field_multi">બહુ-પસંદગી</string>
     <string name="crm_field_position">પ્રદર્શન સ્થાન</string>
     <string name="crm_field_position_header">હેડર</string>
     <string name="crm_field_validation">માન્યતા</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">બોર્ડર રંગ ક્ષેત્ર</string>
     <string name="crm_views_filter_classes">વર્ગો માટે ગાળો</string>
     <string name="crm_views_by">%1$s દ્વારા</string>
-    <string name="crm_views_sorted">%1$s ક્રમમાં</string>
     <string name="crm_design_preview_label">પૂર્વાવલોકન:</string>
     <string name="crm_design_preview_no_view">પૂર્વાવલોકન કરવા માટે કોઈ દૃશ્ય નથી</string>
     <string name="crm_design_preview_no_class">આ દૃશ્ય માટે કોઈ વર્ગ નથી</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s જોડાણ ઉમેરી શકાયું નથી: %2$s</item>
         <item quantity="other">%1$s જોડાણો ઉમેરી શકાયા નથી: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">પેરન્ટ</string>
+    <string name="crm_export_csv_id">આઈડી</string>
+    <string name="crm_export_csv_class">વર્ગ</string>
 </resources>

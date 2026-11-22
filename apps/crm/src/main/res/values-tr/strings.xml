@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Eşleşen nesne yok</string>
     <string name="crm_field_yes">Evet</string>
     <string name="crm_field_no">Hayır</string>
-    <string name="crm_field_type_checkbox">Onay kutusu</string>
     <string name="crm_comment_empty">Henüz yorum yok</string>
     <string name="crm_comment_attach">Dosya ekle</string>
     <string name="crm_property_remove">Kaldır</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Alan ekle</string>
     <string name="crm_class_delete">Sınıfı sil</string>
     <string name="crm_class_delete_title">Sınıfı sil</string>
-    <string name="crm_field_type_text">Metin</string>
-    <string name="crm_field_type_number">Sayı</string>
-    <string name="crm_field_type_user">Kullanıcı</string>
-    <string name="crm_field_type_date">Tarih</string>
-    <string name="crm_field_type_checklist">Kontrol listesi</string>
     <string name="crm_field_name">Ad</string>
     <string name="crm_field_type">Tür</string>
     <string name="crm_field_flags">Bayraklar</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">bir değişiklik yaptı</string>
     <string name="crm_activity_attached">ekledi</string>
     <string name="crm_activity_commented">yorum yaptı</string>
+    <string name="crm_activity_moved">taşıdı</string>
+    <string name="crm_activity_linked">bağladı</string>
+    <string name="crm_activity_class">sınıfı değiştirdi</string>
     <string name="crm_attachment_empty">Ek yok</string>
     <string name="crm_attachment_default_name">ek</string>
     <string name="crm_attachment_delete_confirm_title">Ek silinsin mi?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Varsayılan (okunabilir)</string>
     <string name="crm_class_parents">Üst sınıflar</string>
     <string name="crm_class_delete_message">\"%1$s\" sınıfını silmek istediğinizden emin misiniz? Tüm alanlar ve seçenekleri de silinecek.</string>
-    <string name="crm_field_type_enumerated">Numaralandırılmış</string>
     <string name="crm_field_label">Alan: %1$s</string>
     <string name="crm_field_readonly">Salt okunur</string>
     <string name="crm_field_sortable">Sıralanabilir</string>
     <string name="crm_field_filterable">Filtrelenebilir</string>
     <string name="crm_field_show_on_card">Kartta göster</string>
-    <string name="crm_field_multi">Çoklu seçim</string>
     <string name="crm_field_position">Görüntüleme konumu</string>
     <string name="crm_field_position_header">Başlık</string>
     <string name="crm_field_validation">Doğrulama</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Kenarlık rengi alanı</string>
     <string name="crm_views_filter_classes">Sınıflara göre filtrele</string>
     <string name="crm_views_by">%1$s ile</string>
-    <string name="crm_views_sorted">%1$s sıralanmış</string>
     <string name="crm_design_preview_label">Önizleme:</string>
     <string name="crm_design_preview_no_view">Önizlenecek görünüm yok</string>
     <string name="crm_design_preview_no_class">Bu görünüm için sınıf yok</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s ek eklenemedi: %2$s</item>
         <item quantity="other">%1$s ek eklenemedi: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Üst</string>
+    <string name="crm_export_csv_id">Kimlik</string>
+    <string name="crm_export_csv_class">Sınıf</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Ingen samsvarande objekt</string>
     <string name="crm_field_yes">Ja</string>
     <string name="crm_field_no">Nei</string>
-    <string name="crm_field_type_checkbox">Avkryssingsboks</string>
     <string name="crm_comment_empty">Ingen kommentarar enno</string>
     <string name="crm_comment_attach">Legg ved filer</string>
     <string name="crm_property_remove">Fjern</string>
@@ -89,11 +88,6 @@
     <string name="crm_class_add_field">Legg til felt</string>
     <string name="crm_class_delete">Slett klasse</string>
     <string name="crm_class_delete_title">Slett klasse</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Tal</string>
-    <string name="crm_field_type_user">Brukar</string>
-    <string name="crm_field_type_date">Dato</string>
-    <string name="crm_field_type_checklist">Sjekkliste</string>
     <string name="crm_field_name">Namn</string>
     <string name="crm_field_type">Type</string>
     <string name="crm_field_flags">Flagg</string>
@@ -169,6 +163,9 @@
     <string name="crm_activity_made_change">gjorde ei endring</string>
     <string name="crm_activity_attached">la ved</string>
     <string name="crm_activity_commented">kommenterte</string>
+    <string name="crm_activity_moved">flytta</string>
+    <string name="crm_activity_linked">lenkja</string>
+    <string name="crm_activity_class">endra klassen</string>
     <string name="crm_attachment_empty">Ingen vedlegg</string>
     <string name="crm_attachment_default_name">vedlegg</string>
     <string name="crm_attachment_delete_confirm_title">Slette vedlegget?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Standard (leseleg)</string>
     <string name="crm_class_parents">Foreldreklassar</string>
     <string name="crm_class_delete_message">Er du sikker på at du vil slette klassen \"%1$s\"? Alle felt og alternativa deira vil òg bli sletta.</string>
-    <string name="crm_field_type_enumerated">Oppramsa</string>
     <string name="crm_field_label">Felt: %1$s</string>
     <string name="crm_field_readonly">Skriveverna</string>
     <string name="crm_field_sortable">Sorterbar</string>
     <string name="crm_field_filterable">Filtrerbar</string>
     <string name="crm_field_show_on_card">Vis på kort</string>
-    <string name="crm_field_multi">Fleirval</string>
     <string name="crm_field_position">Visingsposisjon</string>
     <string name="crm_field_position_header">Topptekst</string>
     <string name="crm_field_validation">Validering</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Felt for kantfarge</string>
     <string name="crm_views_filter_classes">Filtrer til klassar</string>
     <string name="crm_views_by">etter %1$s</string>
-    <string name="crm_views_sorted">sortert %1$s</string>
     <string name="crm_design_preview_label">Førehandsvising:</string>
     <string name="crm_design_preview_no_view">Inga vising å førehandsvise</string>
     <string name="crm_design_preview_no_class">Inga klasse for denne visinga</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s vedlegg kunne ikkje leggjast til: %2$s</item>
         <item quantity="other">%1$s vedlegg kunne ikkje leggjast til: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Forelder</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasse</string>
 </resources>

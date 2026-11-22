@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">ਖੇਤਰ ਜੋੜੋ</string>
     <string name="projects_class_delete">ਕਲਾਸ ਮਿਟਾਓ</string>
     <string name="projects_class_delete_title">ਕਲਾਸ ਮਿਟਾਓ</string>
-    <string name="projects_field_type_text">ਟੈਕਸਟ</string>
-    <string name="projects_field_type_number">ਨੰਬਰ</string>
-    <string name="projects_field_type_user">ਉਪਭੋਗਤਾ</string>
-    <string name="projects_field_type_date">ਮਿਤੀ</string>
-    <string name="projects_field_type_checklist">ਚੈੱਕਲਿਸਟ</string>
     <string name="projects_field_name">ਨਾਮ</string>
     <string name="projects_field_type">ਕਿਸਮ</string>
     <string name="projects_field_flags">ਫਲੈਗ</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">ਇਸ ਕਲਾਸ ਦੇ ਆਬਜੈਕਟਾਂ ਉੱਤੇ ਮਰਜ ਬੇਨਤੀਆਂ ਦੀ ਆਗਿਆ ਦਿਓ।</string>
     <string name="projects_class_parents">ਮੂਲ ਕਲਾਸਾਂ</string>
     <string name="projects_class_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਕਲਾਸ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੀਆਂ ਫੀਲਡਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਵਿਕਲਪ ਵੀ ਮਿਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।</string>
-    <string name="projects_field_type_enumerated">ਗਿਣਿਆ ਹੋਇਆ</string>
     <string name="projects_field_label">ਫੀਲਡ: %1$s</string>
     <string name="projects_field_readonly">ਸਿਰਫ਼-ਪੜ੍ਹਨਯੋਗ</string>
     <string name="projects_field_sortable">ਛਾਂਟਣਯੋਗ</string>
     <string name="projects_field_filterable">ਫਿਲਟਰਯੋਗ</string>
     <string name="projects_field_show_on_card">ਕਾਰਡ ਉੱਤੇ ਦਿਖਾਓ</string>
-    <string name="projects_field_multi">ਬਹੁ-ਚੋਣ</string>
     <string name="projects_field_position">ਡਿਸਪਲੇ ਸਥਿਤੀ</string>
     <string name="projects_field_position_header">ਸਿਰਲੇਖ</string>
     <string name="projects_field_validation">ਪ੍ਰਮਾਣਿਕਤਾ</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ਬਾਰਡਰ ਰੰਗ ਫੀਲਡ</string>
     <string name="projects_views_filter_classes">ਕਲਾਸਾਂ ਅਨੁਸਾਰ ਫਿਲਟਰ</string>
     <string name="projects_views_by">%1$s ਅਨੁਸਾਰ</string>
-    <string name="projects_views_sorted">%1$s ਛਾਂਟੀ ਗਈ</string>
     <string name="projects_design_preview_label">ਝਲਕ:</string>
     <string name="projects_design_preview_no_view">ਝਲਕ ਲਈ ਕੋਈ ਦ੍ਰਿਸ਼ ਨਹੀਂ</string>
     <string name="projects_design_preview_no_class">ਇਸ ਦ੍ਰਿਸ਼ ਲਈ ਕੋਈ ਕਲਾਸ ਨਹੀਂ</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">ਪ੍ਰੋਜੈਕਟ ਅੱਪਡੇਟ ਹੋਇਆ</string>
     <string name="projects_activity_attached">ਨੱਥੀ ਕੀਤਾ</string>
     <string name="projects_activity_commented">ਟਿੱਪਣੀ ਕੀਤੀ</string>
+    <string name="projects_activity_moved">ਇਹ ਆਬਜੈਕਟ ਮੂਵ ਕੀਤਾ</string>
+    <string name="projects_activity_linked">ਇੱਕ ਲਿੰਕ ਜੋੜਿਆ</string>
+    <string name="projects_activity_class">ਕਲਾਸ ਬਦਲੀ</string>
     <string name="projects_attachment_delete_confirm_message">ਇਹ ਨੱਥੀ ਹਮੇਸ਼ਾ ਲਈ ਮਿਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</string>
     <string name="projects_attachment_delete_confirm_title">ਨੱਥੀ ਮਿਟਾਉਣੀ ਹੈ?</string>
     <string name="projects_settings_unsubscribe_section">ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
@@ -339,4 +334,5 @@
         <item quantity="other">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਅਤੇ ਇਸਦੇ ਹੇਠਾਂ ਮੌਜੂਦ %2$s ਆਈਟਮਾਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</item>
     </plurals>
     <string name="projects_create_attachments_failed">ਨੱਥੀ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ: %1$s</string>
+    <string name="projects_activity_unknown">ਅਣਜਾਣ</string>
 </resources>

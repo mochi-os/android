@@ -58,6 +58,9 @@ import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.Activity
 import org.mochios.projects.util.objectTitle
+import org.mochios.projects.util.readableId
+import org.mochios.android.model.canComment
+import org.mochios.android.model.canWrite
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.util.segment
 import org.mochios.android.R as MochiR
@@ -159,11 +162,7 @@ fun ObjectDetailSheet(
 
                 Column(modifier = Modifier.fillMaxSize()) {
                     MochiSheetHeader(
-                        title = if (prefix.isNotBlank()) {
-                            "$prefix-${obj.number}"
-                        } else {
-                            "#${obj.number}"
-                        },
+                        title = readableId(obj, prefix),
                         subtitle = objClass?.name,
                         actions = {
                             MochiIconButton(onClick = { viewModel.toggleWatch() }) {
@@ -181,7 +180,8 @@ fun ObjectDetailSheet(
                                 )
                             }
 
-                            Box {
+                            // Copy and delete are writes; a reader is not offered them.
+                            if (canWrite(projectDetails.project.access)) Box {
                                 MochiIconButton(onClick = { showOverflow = true }) {
                                     Icon(
                                         Icons.Default.MoreVert,
@@ -279,6 +279,7 @@ fun ObjectDetailSheet(
                             projectId = projectId,
                             drafts = viewModel.drafts,
                             target = obj.id,
+                            canComment = canComment(projectDetails.project.access),
                             upload = remember(obj.id) {
                                 viewModel.commentUpload(obj.id)
                             }.collectAsState().value,
@@ -299,7 +300,10 @@ fun ObjectDetailSheet(
                         )
                         TAB_ACTIVITY -> ActivityTab(
                             activity = uiState.activity,
-                            projectDetails = projectDetails,
+                            load = uiState.activityLoad,
+                            more = uiState.activityMore,
+                            onLoadMore = viewModel::loadMoreActivity,
+                            fields = projectDetails.fields[obj.objectClass].orEmpty(),
                             avatarUrlBuilder = { entry ->
                                 activityAvatars[entry.user] ?: activityAvatar(projectId, entry.id)
                             }

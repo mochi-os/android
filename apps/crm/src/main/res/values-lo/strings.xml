@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">ບໍ່ມີວັດຖຸທີ່ກົງກັນ</string>
     <string name="crm_field_yes">ແມ່ນ</string>
     <string name="crm_field_no">ບໍ່</string>
-    <string name="crm_field_type_checkbox">ກ່ອງໝາຍ</string>
     <string name="crm_comment_empty">ຍັງບໍ່ມີຄຳເຫັນ</string>
     <string name="crm_comment_attach">ແນບໄຟລ໌</string>
     <string name="crm_property_remove">ລຶບອອກ</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">ເພີ່ມຊ່ອງຂໍ້ມູນ</string>
     <string name="crm_class_delete">ລົບຄລາສ</string>
     <string name="crm_class_delete_title">ລົບຄລາສ</string>
-    <string name="crm_field_type_text">ຂໍ້ຄວາມ</string>
-    <string name="crm_field_type_number">ຕົວເລກ</string>
-    <string name="crm_field_type_user">ຜູ້ໃຊ້</string>
-    <string name="crm_field_type_date">ວັນທີ</string>
-    <string name="crm_field_type_checklist">ລາຍການກວດສອບ</string>
     <string name="crm_field_name">ຊື່</string>
     <string name="crm_field_type">ປະເພດ</string>
     <string name="crm_field_flags">ທຸງ</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ໄດ້ປ່ຽນແປງ</string>
     <string name="crm_activity_attached">ໄດ້ແນບ</string>
     <string name="crm_activity_commented">ໄດ້ສະແດງຄຳເຫັນ</string>
+    <string name="crm_activity_moved">ໄດ້ຍ້າຍ</string>
+    <string name="crm_activity_linked">ໄດ້ເຊື່ອມໂຍງ</string>
+    <string name="crm_activity_class">ໄດ້ປ່ຽນຄລາສ</string>
     <string name="crm_attachment_empty">ບໍ່ມີໄຟລ໌ແນບ</string>
     <string name="crm_attachment_default_name">ໄຟລ໌ແນບ</string>
     <string name="crm_attachment_delete_confirm_title">ລຶບໄຟລ໌ແນບບໍ?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">ຄ່າເລີ່ມຕົ້ນ (ອ່ານໄດ້)</string>
     <string name="crm_class_parents">ຄລາສແມ່</string>
     <string name="crm_class_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຄລາສ \"%1$s\"? ຊ່ອງຂໍ້ມູນ ແລະ ຕົວເລືອກທັງໝົດຈະຖືກລຶບເຊັ່ນກັນ.</string>
-    <string name="crm_field_type_enumerated">ມີລາຍການກຳນົດ</string>
     <string name="crm_field_label">ຊ່ອງຂໍ້ມູນ: %1$s</string>
     <string name="crm_field_readonly">ອ່ານຢ່າງດຽວ</string>
     <string name="crm_field_sortable">ຈັດລຽງໄດ້</string>
     <string name="crm_field_filterable">ກັ່ນຕອງໄດ້</string>
     <string name="crm_field_show_on_card">ສະແດງເທິງບັດ</string>
-    <string name="crm_field_multi">ເລືອກໄດ້ຫຼາຍລາຍການ</string>
     <string name="crm_field_position">ຕຳແໜ່ງສະແດງ</string>
     <string name="crm_field_position_header">ສ່ວນຫົວ</string>
     <string name="crm_field_validation">ການກວດສອບ</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">ຊ່ອງສຳລັບສີຂອບ</string>
     <string name="crm_views_filter_classes">ກັ່ນຕອງຕາມຄລາສ</string>
     <string name="crm_views_by">ໂດຍ %1$s</string>
-    <string name="crm_views_sorted">ຈັດລຽງ %1$s</string>
     <string name="crm_design_preview_label">ຕົວຢ່າງ:</string>
     <string name="crm_design_preview_no_view">ບໍ່ມີມຸມມອງໃຫ້ສະແດງຕົວຢ່າງ</string>
     <string name="crm_design_preview_no_class">ບໍ່ມີຄລາສສຳລັບມຸມມອງນີ້</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">ບໍ່ສາມາດເພີ່ມໄຟລ໌ແນບ %1$s ລາຍການ: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">ແມ່</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">ຄລາສ</string>
 </resources>

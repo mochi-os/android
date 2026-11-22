@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The spelling the regional English overlays change, as the base spells it.
+    Android gives an English locale with no catalogue of its own (en-GB, en-AU,
+    en) its language's nearest region before the base, so without this every
+    English reader would be given a regional spelling.
+-->
+<resources>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_audit_action_order_cancelled">Cancelled</string>
+    <string name="staff_audit_action_subscription_cancelled">Cancelled</string>
+    <string name="staff_disputes_reason_unauthorised">Unauthorised</string>
+    <string name="staff_disputes_stripe_check_returned">cheque returned</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debit not authorised</string>
+    <string name="staff_disputes_stripe_subscription_canceled">subscription cancelled</string>
+    <string name="staff_disputes_stripe_unrecognized">unrecognised charge</string>
+</resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Mező hozzáadása</string>
     <string name="projects_class_delete">Osztály törlése</string>
     <string name="projects_class_delete_title">Osztály törlése</string>
-    <string name="projects_field_type_text">Szöveg</string>
-    <string name="projects_field_type_number">Szám</string>
-    <string name="projects_field_type_user">Felhasználó</string>
-    <string name="projects_field_type_date">Dátum</string>
-    <string name="projects_field_type_checklist">Ellenőrzőlista</string>
     <string name="projects_field_name">Név</string>
     <string name="projects_field_type">Típus</string>
     <string name="projects_field_flags">Jelzések</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Egyesítési kérelmek engedélyezése az ezen osztályba tartozó objektumokon.</string>
     <string name="projects_class_parents">Szülőosztályok</string>
     <string name="projects_class_delete_message">Biztosan törli a(z) \"%1$s\" osztályt? Az összes mező és azok beállításai is törlésre kerülnek.</string>
-    <string name="projects_field_type_enumerated">Felsorolt</string>
     <string name="projects_field_label">Mező: %1$s</string>
     <string name="projects_field_readonly">Csak olvasható</string>
     <string name="projects_field_sortable">Rendezhető</string>
     <string name="projects_field_filterable">Szűrhető</string>
     <string name="projects_field_show_on_card">Megjelenítés a kártyán</string>
-    <string name="projects_field_multi">Többszörös választás</string>
     <string name="projects_field_position">Megjelenítési pozíció</string>
     <string name="projects_field_position_header">Fejléc</string>
     <string name="projects_field_validation">Érvényesítés</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Keretszín mező</string>
     <string name="projects_views_filter_classes">Szűrés osztályokra</string>
     <string name="projects_views_by">%1$s szerint</string>
-    <string name="projects_views_sorted">rendezve: %1$s</string>
     <string name="projects_design_preview_label">Előnézet:</string>
     <string name="projects_design_preview_no_view">Nincs megjeleníthető nézet</string>
     <string name="projects_design_preview_no_class">Nincs osztály ehhez a nézethez</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekt frissítve</string>
     <string name="projects_activity_attached">csatolta</string>
     <string name="projects_activity_commented">hozzászólt</string>
+    <string name="projects_activity_moved">áthelyezte ezt az objektumot</string>
+    <string name="projects_activity_linked">hivatkozást adott hozzá</string>
+    <string name="projects_activity_class">módosította az osztályt</string>
     <string name="projects_attachment_delete_confirm_message">Ez a melléklet véglegesen törlődik.</string>
     <string name="projects_attachment_delete_confirm_title">Törli a mellékletet?</string>
     <string name="projects_settings_unsubscribe_section">Leiratkozás a projektről</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Biztosan törli a következőt: „%1$s”, és az alatta lévő %2$s elemet? Ez a művelet nem vonható vissza.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nem sikerült csatolni: %1$s</string>
+    <string name="projects_activity_unknown">Ismeretlen</string>
 </resources>

@@ -370,4 +370,13 @@
     <string name="devices_username">Kullanıcı adı</string>
     <string name="devices_warning">Parolayı şimdi kopyalayın: bir daha gösterilemez.</string>
     <string name="devices_unused">Hiç kullanılmadı</string>
+    <string name="field_type_text">Metin</string>
+    <string name="field_type_number">Sayı</string>
+    <string name="field_type_enumerated">Numaralandırılmış</string>
+    <string name="field_type_user">Kullanıcı</string>
+    <string name="field_type_date">Tarih</string>
+    <string name="field_type_checkbox">Onay kutusu</string>
+    <string name="field_type_checklist">Kontrol listesi</string>
+    <string name="view_list_sorted_ascending">artan sırada</string>
+    <string name="view_list_sorted_descending">azalan sırada</string>
 </resources>

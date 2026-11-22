@@ -82,18 +82,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
-
-@Composable
-private fun fieldTypeLabel(type: String): String = when (type) {
-    "text" -> stringResource(R.string.crm_field_type_text)
-    "number" -> stringResource(R.string.crm_field_type_number)
-    "enumerated" -> stringResource(R.string.crm_field_type_enumerated)
-    "user" -> stringResource(R.string.crm_field_type_user)
-    "date" -> stringResource(R.string.crm_field_type_date)
-    "checkbox" -> stringResource(R.string.crm_field_type_checkbox)
-    "checklist" -> stringResource(R.string.crm_field_type_checklist)
-    else -> type
-}
+import org.mochios.android.ui.components.fieldTypeLabel
 
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)

@@ -50,7 +50,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.format.formatFingerprint
 import org.mochios.android.model.AccessRule
+import org.mochios.android.util.fingerprint
 
 /**
  * One access rule as the settings tabs show it: who holds the grant, and what
@@ -291,12 +293,15 @@ private fun subjectRank(rule: AccessSubjectRule): Int = when {
 
 /**
  * Display label for a subject, mapping the wildcard subjects to friendly names
- * and otherwise preferring the resolved name.
+ * and otherwise preferring the resolved name. A person the server did not name
+ * is shown by the fingerprint of their id, never the id.
  */
-private fun subjectLabel(rule: AccessSubjectRule, labels: AccessLabels): String = when (rule.subject) {
-    "*" -> labels.subjectAnyone
-    "+" -> labels.subjectAuthenticated
-    else -> rule.name?.takeIf { name -> name.isNotBlank() } ?: rule.subject
+internal fun subjectLabel(rule: AccessSubjectRule, labels: AccessLabels): String = when {
+    rule.subject == "*" -> labels.subjectAnyone
+    rule.subject == "+" -> labels.subjectAuthenticated
+    !rule.name.isNullOrBlank() -> rule.name
+    rule.subject.startsWith("@") || rule.subject.startsWith("#") -> rule.subject
+    else -> formatFingerprint(fingerprint(rule.subject))
 }
 
 /**

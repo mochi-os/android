@@ -56,6 +56,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -165,10 +167,7 @@ fun BoardView(
 
     // Group objects by column value
     val objectsByColumn = columnOptions.associate { option ->
-        option.id to filteredObjects.filter { obj ->
-            obj.stringValue(columnFieldId) == option.id ||
-                obj.listValue(columnFieldId).contains(option.id)
-        }
+        option.id to filteredObjects.filter { obj -> obj.stringValue(columnFieldId) == option.id }
     }
 
     // Add unassigned column
@@ -267,9 +266,11 @@ fun BoardView(
                     }
                 }
             },
-            columnReorderEnabled = !isUnassigned,
+            // Columns are the design's options: reordering and renaming them
+            // is for those who may change the design, as on the web.
+            columnReorderEnabled = !isUnassigned && viewModel.canDesign(),
             onObjectClick = onObjectClick,
-            onRename = if (isUnassigned) null else {
+            onRename = if (isUnassigned || !viewModel.canDesign()) null else {
                 { newName -> viewModel.renameColumnOption(columnFieldId, columnOption.id, newName) }
             },
             // Only an empty column, counted over every object of the CRM, and
@@ -284,10 +285,10 @@ fun BoardView(
             onCollapse = if (isUnassigned) null else {
                 { viewModel.toggleColumnCollapsed(columnFieldId, columnOption.id) }
             },
-            // With no class to create into, offer no "+" rather than a handler
-            // that swallows the tap.
+            // With no class to create into, or no right to create, offer no
+            // "+" rather than a handler that swallows the tap.
             onCreateInColumn = if (onStartCreate != null && !isUnassigned &&
-                createClassId != null
+                createClassId != null && viewModel.canCreate()
             ) {
                 { onStartCreate(mapOf(columnFieldId to columnOption.id)) }
             } else {
@@ -302,11 +303,11 @@ fun BoardView(
  * A column's card count, as its header and its strip show it. While a filter is
  * on it reads "shown/total", so the column still tells you how much it holds.
  */
-private fun columnCount(objects: List<CrmObject>, visibleIds: Set<String>?): String =
+internal fun columnCount(objects: List<CrmObject>, visibleIds: Set<String>?, format: Format): String =
     if (visibleIds == null) {
-        objects.size.toString()
+        format.formatNumber(objects.size)
     } else {
-        "${objects.count { obj -> obj.id in visibleIds }}/${objects.size}"
+        "${format.formatNumber(objects.count { obj -> obj.id in visibleIds })}/${format.formatNumber(objects.size)}"
     }
 
 /**
@@ -326,7 +327,7 @@ private fun CollapsedColumn(
     val itemId = "column:${option.id}"
     CollapsedBoardColumn(
         name = option.name,
-        count = columnCount(objects, visibleIds),
+        count = columnCount(objects, visibleIds, LocalFormat.current),
         colour = option.colour.takeIf { it.isNotBlank() }?.let { parseColor(it) },
         highlighted = cardDragState.draggingItemId != null && cardDragState.targetItemId == itemId,
         onExpand = { viewModel.toggleColumnCollapsed(columnFieldId, option.id) },
@@ -416,8 +417,7 @@ private fun BoardColumn(
         } else {
             rowOptions.map { rowOption ->
                 rowOption to viewModel.sortObjects(objects.filter { obj ->
-                    obj.stringValue(rowFieldId) == rowOption.id ||
-                        obj.listValue(rowFieldId).contains(rowOption.id)
+                    obj.stringValue(rowFieldId) == rowOption.id
                 })
             }
         }
@@ -510,7 +510,7 @@ private fun BoardColumn(
                     .padding(horizontal = 8.dp, vertical = 2.dp)
             ) {
                 Text(
-                    text = columnCount(objects, visibleIds),
+                    text = columnCount(objects, visibleIds, LocalFormat.current),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

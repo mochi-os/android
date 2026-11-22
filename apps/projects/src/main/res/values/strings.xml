@@ -189,6 +189,10 @@
     <string name="projects_activity_made_change">made a change</string>
     <string name="projects_activity_attached">attached</string>
     <string name="projects_activity_commented">commented</string>
+    <string name="projects_activity_moved">moved this object</string>
+    <string name="projects_activity_linked">added a link</string>
+    <string name="projects_activity_class">changed class</string>
+    <string name="projects_activity_unknown">Unknown</string>
 
     <!-- Attachments -->
     <string name="projects_attachments">Attachments</string>
@@ -319,14 +323,6 @@
     <string name="projects_class_delete_title">Delete class</string>
     <string name="projects_class_delete_message">Are you sure you want to delete the class \"%1$s\"? All fields and their options will also be deleted.</string>
 
-    <!-- Field types -->
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Number</string>
-    <string name="projects_field_type_enumerated">Enumerated</string>
-    <string name="projects_field_type_user">User</string>
-    <string name="projects_field_type_date">Date</string>
-    <string name="projects_field_type_checklist">Checklist</string>
-
     <!-- Field detail -->
     <string name="projects_field_label">Field: %1$s</string>
     <string name="projects_field_name">Name</string>
@@ -337,7 +333,6 @@
     <string name="projects_field_sortable">Sortable</string>
     <string name="projects_field_filterable">Filterable</string>
     <string name="projects_field_show_on_card">Show on card</string>
-    <string name="projects_field_multi">Multi-select</string>
     <string name="projects_field_position">Display position</string>
     <string name="projects_field_position_default">Default</string>
     <string name="projects_field_position_header">Header</string>
@@ -359,7 +354,7 @@
     <!-- Options -->
     <string name="projects_option_add">Add option</string>
     <string name="projects_option_edit">Edit option</string>
-    <string name="projects_option_color">Color</string>
+    <string name="projects_option_color">Colour</string>
     <string name="projects_option_delete_title">Delete option</string>
     <string name="projects_option_delete_message">Are you sure you want to delete the option \"%1$s\"?</string>
 
@@ -376,7 +371,7 @@
     <string name="projects_views_type_list">List</string>
     <string name="projects_views_columns_field">Columns field</string>
     <string name="projects_views_rows_field">Rows field (swimlanes)</string>
-    <string name="projects_views_border_field">Border color field</string>
+    <string name="projects_views_border_field">Border colour field</string>
     <string name="projects_views_sort_by">Sort by</string>
     <string name="projects_views_direction">Direction</string>
     <string name="projects_views_direction_asc">Ascending</string>
@@ -387,7 +382,6 @@
     <string name="projects_views_sort_updated">Updated</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_views_by">by %1$s</string>
-    <string name="projects_views_sorted">sorted %1$s</string>
 
     <!-- Design preview -->
     <string name="projects_design_preview_label">Preview:</string>

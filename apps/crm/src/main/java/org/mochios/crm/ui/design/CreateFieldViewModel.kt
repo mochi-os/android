@@ -55,13 +55,12 @@ class CreateFieldViewModel @Inject constructor(
      * @param name Field name.
      * @param fieldtype Server key of the field type.
      * @param flags Comma-separated flags, or null for none.
-     * @param multi Whether an enumerated field takes several values; null otherwise.
      */
-    fun createField(name: String, fieldtype: String, flags: String?, multi: Boolean?) {
+    fun createField(name: String, fieldtype: String, flags: String?) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true, error = null)
             try {
-                repository.createField(crmId, classId, name.trim(), fieldtype, flags, multi)
+                repository.createField(crmId, classId, name.trim(), fieldtype, flags)
                 _uiState.value = _uiState.value.copy(isCreating = false, created = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(

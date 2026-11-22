@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Afegeix un camp</string>
     <string name="projects_class_delete">Suprimeix la classe</string>
     <string name="projects_class_delete_title">Suprimeix la classe</string>
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Número</string>
-    <string name="projects_field_type_user">Usuari</string>
-    <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Llista de comprovació</string>
     <string name="projects_field_name">Nom</string>
     <string name="projects_field_type">Tipus</string>
     <string name="projects_field_flags">Banderes</string>
@@ -224,13 +219,11 @@
     <string name="projects_class_move_up">Mou amunt</string>
     <string name="projects_class_move_down">Mou avall</string>
     <string name="projects_class_delete_message">Esteu segur que voleu suprimir la classe \"%1$s\"? Tots els camps i les seves opcions també seran suprimits.</string>
-    <string name="projects_field_type_enumerated">Enumerat</string>
     <string name="projects_field_label">Camp: %1$s</string>
     <string name="projects_field_readonly">Només lectura</string>
     <string name="projects_field_sortable">Ordenable</string>
     <string name="projects_field_filterable">Filtrable</string>
     <string name="projects_field_show_on_card">Mostra a la targeta</string>
-    <string name="projects_field_multi">Selecció múltiple</string>
     <string name="projects_field_position">Posició de visualització</string>
     <string name="projects_field_position_header">Capçalera</string>
     <string name="projects_field_position_body">Cos</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_direction_desc">Descendent</string>
     <string name="projects_views_filter_classes">Filtra per classes</string>
     <string name="projects_views_by">per %1$s</string>
-    <string name="projects_views_sorted">ordenat %1$s</string>
     <string name="projects_design_preview_label">Previsualització:</string>
     <string name="projects_design_preview_no_view">Cap vista per previsualitzar</string>
     <string name="projects_design_preview_no_class">Cap classe per a aquesta vista</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projecte actualitzat</string>
     <string name="projects_activity_attached">ha adjuntat</string>
     <string name="projects_activity_commented">ha comentat</string>
+    <string name="projects_activity_moved">ha mogut aquest objecte</string>
+    <string name="projects_activity_linked">ha afegit un enllaç</string>
+    <string name="projects_activity_class">ha canviat la classe</string>
     <string name="projects_attachment_delete_confirm_message">Aquest fitxer adjunt se suprimirà permanentment.</string>
     <string name="projects_attachment_delete_confirm_title">Voleu suprimir l\'adjunt?</string>
     <string name="projects_settings_unsubscribe_section">Dona\'t de baixa del projecte</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Segur que vols suprimir «%1$s» i %2$s elements que té a sota? Aquesta acció no es pot desfer.</item>
     </plurals>
     <string name="projects_create_attachments_failed">No s\'ha pogut adjuntar: %1$s</string>
+    <string name="projects_activity_unknown">Desconegut</string>
 </resources>

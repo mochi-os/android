@@ -58,6 +58,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.fieldTypeLabel
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
@@ -81,18 +82,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
-
-@Composable
-private fun fieldTypeLabel(type: String): String = when (type) {
-    "text" -> stringResource(R.string.crm_field_type_text)
-    "number" -> stringResource(R.string.crm_field_type_number)
-    "enumerated" -> stringResource(R.string.crm_field_type_enumerated)
-    "user" -> stringResource(R.string.crm_field_type_user)
-    "date" -> stringResource(R.string.crm_field_type_date)
-    "checkbox" -> stringResource(R.string.crm_field_type_checkbox)
-    "checklist" -> stringResource(R.string.crm_field_type_checklist)
-    else -> type
-}
 
 private val POSITION_KEYS = listOf("", "header", "body", "sidebar")
 
@@ -216,7 +205,6 @@ fun FieldDetailScreen(
             var isSortable by remember(field) { mutableStateOf(field.isSortable) }
             var isFilterable by remember(field) { mutableStateOf(field.isFilterable) }
             var showOnCard by remember(field) { mutableStateOf(field.showOnCard) }
-            var isMulti by remember(field) { mutableStateOf(field.isMulti) }
             var editRows by remember(field) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
             var editPosition by remember(field) { mutableStateOf(field.position) }
             var editPattern by remember(field) { mutableStateOf(field.pattern) }
@@ -270,10 +258,6 @@ fun FieldDetailScreen(
                 FlagRow(stringResource(R.string.crm_field_sortable), isSortable) { isSortable = it }
                 FlagRow(stringResource(R.string.crm_field_filterable), isFilterable) { isFilterable = it }
                 FlagRow(stringResource(R.string.crm_field_show_on_card), showOnCard) { showOnCard = it }
-
-                if (field.fieldtype == "enumerated") {
-                    FlagRow(stringResource(R.string.crm_field_multi), isMulti) { isMulti = it }
-                }
 
                 Spacer(modifier = Modifier.height(12.dp))
 
@@ -368,7 +352,6 @@ fun FieldDetailScreen(
                 val rowsValue = rowsOrDefault(editRows.toIntOrNull())
                 val hasChanges = editName != field.name
                         || flagSet(flagsString) != flagSet(field.flags)
-                        || isMulti != field.isMulti
                         || showOnCard != field.showOnCard
                         || editPosition != field.position
                         || rowsValue != rowsOrDefault(field.rows)
@@ -383,8 +366,7 @@ fun FieldDetailScreen(
                                 UpdateFieldRequest(
                                     name = editName.takeIf { it != field.name },
                                     flags = flagsString,
-                                    multi = isMulti.takeIf { it != field.isMulti },
-                                    card = showOnCard.takeIf { it != field.showOnCard },
+                                    card =showOnCard.takeIf { it != field.showOnCard },
                                     position = editPosition.takeIf { it != field.position },
                                     rows = rowsValue.takeIf { it != rowsOrDefault(field.rows) },
                                     pattern = editPattern.takeIf { it != field.pattern },

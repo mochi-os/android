@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">फिल्ड थप्नुहोस्</string>
     <string name="projects_class_delete">क्लास मेटाउनुहोस्</string>
     <string name="projects_class_delete_title">क्लास मेटाउनुहोस्</string>
-    <string name="projects_field_type_text">पाठ</string>
-    <string name="projects_field_type_number">संख्या</string>
-    <string name="projects_field_type_user">प्रयोगकर्ता</string>
-    <string name="projects_field_type_date">मिति</string>
-    <string name="projects_field_type_checklist">चेकलिस्ट</string>
     <string name="projects_field_name">नाम</string>
     <string name="projects_field_type">प्रकार</string>
     <string name="projects_field_flags">फ्ल्यागहरू</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">यस कक्षाका वस्तुहरूमा मर्ज अनुरोधहरूलाई अनुमति दिनुहोस्।</string>
     <string name="projects_class_parents">अभिभावक क्लासहरू</string>
     <string name="projects_class_delete_message">के तपाईं \"%1$s\" कक्षा मेटाउन निश्चित हुनुहुन्छ? सबै फिल्ड र तिनका विकल्पहरू पनि मेटाइनेछन्।</string>
-    <string name="projects_field_type_enumerated">सूचीबद्ध</string>
     <string name="projects_field_label">फिल्ड: %1$s</string>
     <string name="projects_field_readonly">पढ्ने मात्र</string>
     <string name="projects_field_sortable">क्रमबद्ध गर्न मिल्ने</string>
     <string name="projects_field_filterable">फिल्टर गर्न मिल्ने</string>
     <string name="projects_field_show_on_card">कार्डमा देखाउनुहोस्</string>
-    <string name="projects_field_multi">बहु-चयन</string>
     <string name="projects_field_position">प्रदर्शन स्थिति</string>
     <string name="projects_field_position_header">हेडर</string>
     <string name="projects_field_validation">प्रमाणीकरण</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">किनारा रङ फिल्ड</string>
     <string name="projects_views_filter_classes">कक्षाहरूमा फिल्टर गर्नुहोस्</string>
     <string name="projects_views_by">%1$s द्वारा</string>
-    <string name="projects_views_sorted">%1$s क्रमबद्ध</string>
     <string name="projects_design_preview_label">पूर्वावलोकन:</string>
     <string name="projects_design_preview_no_view">पूर्वावलोकन गर्न कुनै दृश्य छैन</string>
     <string name="projects_design_preview_no_class">यस दृश्यका लागि कुनै कक्षा छैन</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">प्रोजेक्ट अद्यावधिक गरियो</string>
     <string name="projects_activity_attached">संलग्न गरे</string>
     <string name="projects_activity_commented">टिप्पणी गरे</string>
+    <string name="projects_activity_moved">यो वस्तु सारे</string>
+    <string name="projects_activity_linked">एउटा लिङ्क थपे</string>
+    <string name="projects_activity_class">वर्ग परिवर्तन गरे</string>
     <string name="projects_attachment_delete_confirm_message">यो संलग्नक स्थायी रूपमा मेटाइनेछ।</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक मेट्ने?</string>
     <string name="projects_settings_unsubscribe_section">परियोजनाको सदस्यता छोड्नुहोस्</string>
@@ -339,4 +334,5 @@
         <item quantity="other">के तपाईं \"%1$s\" र यसको मुनिका %2$s वस्तु मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</item>
     </plurals>
     <string name="projects_create_attachments_failed">एट्याच गर्न सकिएन: %1$s</string>
+    <string name="projects_activity_unknown">अज्ञात</string>
 </resources>

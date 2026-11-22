@@ -335,4 +335,10 @@
     <string name="devices_used">Último uso em %1$s</string>
     <string name="devices_username">Nome de usuário</string>
     <string name="devices_unused">Nunca usado</string>
+    <string name="field_type_text">Texto</string>
+    <string name="field_type_number">Número</string>
+    <string name="field_type_enumerated">Enumerado</string>
+    <string name="field_type_user">Usuário</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Caixa de seleção</string>
 </resources>

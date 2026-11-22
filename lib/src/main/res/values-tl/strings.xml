@@ -370,4 +370,13 @@
     <string name="devices_username">Username</string>
     <string name="devices_warning">Kopyahin ang password ngayon: hindi na ito maipapakita ulit.</string>
     <string name="devices_unused">Hindi pa nagamit</string>
+    <string name="field_type_text">Teksto</string>
+    <string name="field_type_number">Numero</string>
+    <string name="field_type_enumerated">Enumerated</string>
+    <string name="field_type_user">User</string>
+    <string name="field_type_date">Petsa</string>
+    <string name="field_type_checkbox">Checkbox</string>
+    <string name="field_type_checklist">Checklist</string>
+    <string name="view_list_sorted_ascending">nakaayos nang pataas</string>
+    <string name="view_list_sorted_descending">nakaayos nang pababa</string>
 </resources>

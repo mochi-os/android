@@ -370,4 +370,13 @@
     <string name="devices_username">Корисничко име</string>
     <string name="devices_warning">Копирајте ја лозинката сега: не може повторно да се прикаже.</string>
     <string name="devices_unused">Никогаш не е користен</string>
+    <string name="field_type_text">Текст</string>
+    <string name="field_type_number">Број</string>
+    <string name="field_type_enumerated">Набројано</string>
+    <string name="field_type_user">Корисник</string>
+    <string name="field_type_date">Датум</string>
+    <string name="field_type_checkbox">Поле за избор</string>
+    <string name="field_type_checklist">Список</string>
+    <string name="view_list_sorted_ascending">подредено растечки</string>
+    <string name="view_list_sorted_descending">подредено опаѓачки</string>
 </resources>

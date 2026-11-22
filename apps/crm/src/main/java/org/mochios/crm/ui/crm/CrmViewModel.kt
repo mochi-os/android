@@ -30,6 +30,9 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.model.canCreate
+import org.mochios.android.model.canDesign
+import org.mochios.android.model.canWrite
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
@@ -93,7 +96,7 @@ data class CrmUiState(
 
 @HiltViewModel
 class CrmViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
+    private val savedStateHandle: SavedStateHandle,
     private val repository: CrmsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
@@ -573,6 +576,18 @@ class CrmViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Opens [objectId], the object a link or a notification named, the first
+     * time the screen asks: a return from another screen, or the activity
+     * being made again, leaves the sheet as the user left it. Kept in the
+     * saved state, so a recreated process does not open it again either.
+     */
+    fun openLinked(objectId: String?) {
+        if (objectId == null || savedStateHandle.get<String>(OPENED) == objectId) return
+        savedStateHandle[OPENED] = objectId
+        selectObject(objectId)
+    }
+
     fun deleteObject(objectId: String) {
         viewModelScope.launch {
             try {
@@ -595,11 +610,10 @@ class CrmViewModel @Inject constructor(
         rowField: String? = null,
         rowValue: String? = null,
         scopeParent: String? = null,
-        promote: Boolean = false
     ) {
         viewModelScope.launch {
             try {
-                repository.moveObject(crmId, objectId, field, value, rank, rowField, rowValue, scopeParent, promote)
+                repository.moveObject(crmId, objectId, field, value, rank, rowField, rowValue, scopeParent)
                 refreshObjects()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
@@ -802,15 +816,16 @@ class CrmViewModel @Inject constructor(
      * this is none, since its objects would keep an option that no longer is.
      */
     fun columnHolds(fieldId: String, optionId: String): Int =
-        _uiState.value.objects.count { obj ->
-            obj.stringValue(fieldId) == optionId || obj.listValue(fieldId).contains(optionId)
-        }
+        _uiState.value.objects.count { obj -> obj.stringValue(fieldId) == optionId }
 
     /** Whether the signed-in person may change the CRM's design, columns included. */
-    fun canDesign(): Boolean {
-        val access = _uiState.value.crmDetails?.crm?.access
-        return access == "owner" || access == "design"
-    }
+    fun canDesign(): Boolean = canDesign(_uiState.value.crmDetails?.crm?.access)
+
+    /** Whether the signed-in person may change, move and delete the CRM's objects. */
+    fun canWrite(): Boolean = canWrite(_uiState.value.crmDetails?.crm?.access)
+
+    /** Whether the signed-in person may create objects in the CRM. */
+    fun canCreate(): Boolean = canCreate(_uiState.value.crmDetails?.crm?.access)
 
     /** Deletes an empty column; one that has gained objects since is left alone. */
     fun deleteColumnOption(fieldId: String, optionId: String) {
@@ -937,10 +952,7 @@ class CrmViewModel @Inject constructor(
         // Field-value filters: OR within one field, AND across fields
         for ((fieldId, selected) in state.fieldFilters) {
             if (selected.isEmpty()) continue
-            objects = objects.filter { obj ->
-                obj.stringValue(fieldId) in selected ||
-                    obj.listValue(fieldId).any { value -> value in selected }
-            }
+            objects = objects.filter { obj -> obj.stringValue(fieldId) in selected }
         }
 
         // A view's stored filter is not applied: the view editor says so, and
@@ -1128,10 +1140,11 @@ class CrmViewModel @Inject constructor(
 
     /**
      * Builds a CSV of the active view's objects as shown and parks it for the
-     * save dialog; local only, no server call.
+     * save dialog; local only, no server call. [headings] name the ID, Class
+     * and Parent columns in the user's language.
      */
-    fun exportCsv() {
-        val csv = buildCsv()
+    fun exportCsv(headings: List<String>) {
+        val csv = buildCsv(headings)
         val name = _uiState.value.crmDetails?.crm?.name
         _uiState.value = _uiState.value.copy(
             pendingExport = PendingExport(
@@ -1143,12 +1156,12 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * CSV in the web export's shape: `ID`, `Class`, `Parent`, then one column
-     * per field name across the CRM's classes. No title column - a class titles
-     * itself with one of its fields. Rows are the active view's filtered
-     * objects, values as displayed.
+     * CSV in the web export's shape: [headings] (ID, Class, Parent), then one
+     * column per field name across the CRM's classes. No title column - a
+     * class titles itself with one of its fields. Rows are the active view's
+     * filtered objects, values as displayed.
      */
-    private fun buildCsv(): String {
+    private fun buildCsv(headings: List<String>): String {
         val details = _uiState.value.crmDetails
         val objects = getFilteredObjects()
         // Columns are field names, not ids: classes define their own fields and
@@ -1165,7 +1178,7 @@ class CrmViewModel @Inject constructor(
             }
         }
         val rows = mutableListOf<List<String>>()
-        rows += listOf("ID", "Class", "Parent") + columns
+        rows += headings + columns
         for (obj in objects) {
             // Resolve each column against this object's own class, so a shared
             // label still reads that class's field. A class without the field
@@ -1186,22 +1199,20 @@ class CrmViewModel @Inject constructor(
         }
     }
 
-    /** One cell's text: option and person ids resolved to their names. */
+    /**
+     * One cell's text: an option's or a person's id resolved to its name. A
+     * person the CRM has no name for keeps the id, which the file's ID and
+     * Parent columns are made of too, rather than losing who it was.
+     */
     private fun csvValue(obj: CrmObject, field: CrmField): String {
-        val values = obj.listValue(field.id).ifEmpty {
-            obj.stringValue(field.id).takeIf { value -> value.isNotBlank() }?.let { value ->
-                listOf(value)
-            }.orEmpty()
-        }
-        if (values.isEmpty()) return ""
-        return values.joinToString(", ") { value ->
-            when (field.fieldtype) {
-                "enumerated" -> getOptionsForObject(obj.objectClass, field.id)
-                    .find { option -> option.id == value }?.name ?: value
-                "user" -> _uiState.value.people
-                    .find { person -> person.id == value }?.name ?: value
-                else -> value
-            }
+        val value = obj.stringValue(field.id)
+        if (value.isBlank()) return ""
+        return when (field.fieldtype) {
+            "enumerated" -> getOptionsForObject(obj.objectClass, field.id)
+                .find { option -> option.id == value }?.name ?: value
+            "user" -> _uiState.value.people
+                .find { person -> person.id == value }?.name?.takeIf { name -> name.isNotBlank() } ?: value
+            else -> value
         }
     }
 
@@ -1257,6 +1268,9 @@ class CrmViewModel @Inject constructor(
     private companion object {
         /** Cap on export warm-up rounds, so a stuck stage can't spin forever. */
         const val MAX_WARM_ROUNDS = 60
+
+        /** The saved-state key of the linked object already opened. */
+        const val OPENED = "opened"
 
         /** Frames that change the items alone. */
         val OBJECT_FRAMES = setOf(

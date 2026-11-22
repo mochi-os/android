@@ -370,4 +370,13 @@
     <string name="devices_username">Benutzername</string>
     <string name="devices_warning">Kopiere das Passwort jetzt: es kann nicht erneut angezeigt werden.</string>
     <string name="devices_unused">Nie verwendet</string>
+    <string name="field_type_text">Text</string>
+    <string name="field_type_number">Zahl</string>
+    <string name="field_type_enumerated">Aufzählung</string>
+    <string name="field_type_user">Benutzer</string>
+    <string name="field_type_date">Datum</string>
+    <string name="field_type_checkbox">Kontrollkästchen</string>
+    <string name="field_type_checklist">Checkliste</string>
+    <string name="view_list_sorted_ascending">aufsteigend sortiert</string>
+    <string name="view_list_sorted_descending">absteigend sortiert</string>
 </resources>

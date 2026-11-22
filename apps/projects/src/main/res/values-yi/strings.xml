@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">צולייגן פֿעלד</string>
     <string name="projects_class_delete">אויסמעקן קלאַס</string>
     <string name="projects_class_delete_title">אויסמעקן קלאַס</string>
-    <string name="projects_field_type_text">טעקסט</string>
-    <string name="projects_field_type_number">נומער</string>
-    <string name="projects_field_type_user">באַניצער</string>
-    <string name="projects_field_type_date">דאַטע</string>
-    <string name="projects_field_type_checklist">טשעקליסטע</string>
     <string name="projects_field_name">נאָמען</string>
     <string name="projects_field_type">טיפּ</string>
     <string name="projects_field_flags">פֿאָנען</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">דערלויבן צונויפֿגיס פֿאָדערונגען אויף אָביעקטן פֿון דעם קלאַס.</string>
     <string name="projects_class_parents">עלטערן־קלאַסן</string>
     <string name="projects_class_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם קלאַס \"%1$s\"? אַלע פֿעלדער און זייערע אָפּציעס וועלן אויך זײַן אויסגעמעקט.</string>
-    <string name="projects_field_type_enumerated">אויסגערעכנט</string>
     <string name="projects_field_label">פֿעלד: %1$s</string>
     <string name="projects_field_readonly">נאָר־לײענען</string>
     <string name="projects_field_sortable">סאָרטירעוודיק</string>
     <string name="projects_field_filterable">פֿילטרירעוודיק</string>
     <string name="projects_field_show_on_card">ווײַזן אויף קאַרטל</string>
-    <string name="projects_field_multi">פֿילפֿאַכיקע אױסקלײַב</string>
     <string name="projects_field_position">אױסשטעל־פּאָזיציע</string>
     <string name="projects_field_position_header">קעפּל</string>
     <string name="projects_field_validation">באַשטעטיקונג</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">ראַם קאָליר פֿעלד</string>
     <string name="projects_views_filter_classes">פֿילטרירן צו קלאַסן</string>
     <string name="projects_views_by">פֿון %1$s</string>
-    <string name="projects_views_sorted">סאָרטירט %1$s</string>
     <string name="projects_design_preview_label">פֿאָרױסבליק:</string>
     <string name="projects_design_preview_no_view">קיין קוק צו פֿאָרויסקוקן</string>
     <string name="projects_design_preview_no_class">קיין קלאַס פֿאַר דעם קוק</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">פּראָיעקט דערפֿרישט</string>
     <string name="projects_activity_attached">צוגעטשעפּעט</string>
     <string name="projects_activity_commented">באַמערקט</string>
+    <string name="projects_activity_moved">אַריבערגעפֿירט דעם אָביעקט</string>
+    <string name="projects_activity_linked">צוגעלייגט אַ לינק</string>
+    <string name="projects_activity_class">געביטן דעם קלאַס</string>
     <string name="projects_attachment_delete_confirm_message">דער צוגאָב וועט אויף אייביק אויסגעמעקט ווערן.</string>
     <string name="projects_attachment_delete_confirm_title">אויסמעקן דעם צוגאָב?</string>
     <string name="projects_settings_unsubscribe_section">אָפּזאָגן זיך פֿונעם פּראָיעקט</string>
@@ -339,4 +334,5 @@
         <item quantity="other">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\" און %2$s זאַכן אונטער דעם? די אַקציע קען נישט ווערן אומגעקערט.</item>
     </plurals>
     <string name="projects_create_attachments_failed">מען האָט נישט געקענט צוהענקען: %1$s</string>
+    <string name="projects_activity_unknown">אומבאַקאַנט</string>
 </resources>

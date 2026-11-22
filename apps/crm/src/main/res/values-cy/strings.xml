@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Dim gwrthrychau cyfatebol</string>
     <string name="crm_field_yes">Iawn</string>
     <string name="crm_field_no">Na</string>
-    <string name="crm_field_type_checkbox">Blwch ticio</string>
     <string name="crm_comment_empty">Dim sylwadau eto</string>
     <string name="crm_comment_attach">Atodi ffeiliau</string>
     <string name="crm_property_remove">Tynnu</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Ychwanegu maes</string>
     <string name="crm_class_delete">Dileu dosbarth</string>
     <string name="crm_class_delete_title">Dileu dosbarth</string>
-    <string name="crm_field_type_text">Testun</string>
-    <string name="crm_field_type_number">Rhif</string>
-    <string name="crm_field_type_user">Defnyddiwr</string>
-    <string name="crm_field_type_date">Dyddiad</string>
-    <string name="crm_field_type_checklist">Rhestr wirio</string>
     <string name="crm_field_name">Enw</string>
     <string name="crm_field_type">Math</string>
     <string name="crm_field_flags">Baneri</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">wedi gwneud newid</string>
     <string name="crm_activity_attached">atododd</string>
     <string name="crm_activity_commented">gwnaeth sylw</string>
+    <string name="crm_activity_moved">symudodd</string>
+    <string name="crm_activity_linked">cysylltodd</string>
+    <string name="crm_activity_class">newidiodd y dosbarth</string>
     <string name="crm_attachment_empty">Dim atodiadau</string>
     <string name="crm_attachment_default_name">atodiad</string>
     <string name="crm_attachment_delete_confirm_title">Dileu\'r atodiad?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Symud i fyny</string>
     <string name="crm_class_move_down">Symud i lawr</string>
     <string name="crm_class_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r dosbarth \"%1$s\"? Bydd yr holl feysydd a\'u hopsiynau hefyd yn cael eu dileu.</string>
-    <string name="crm_field_type_enumerated">Rhestrol</string>
     <string name="crm_field_label">Maes: %1$s</string>
     <string name="crm_field_readonly">Darllen yn unig</string>
     <string name="crm_field_sortable">Trefnadwy</string>
     <string name="crm_field_filterable">Hidladwy</string>
     <string name="crm_field_show_on_card">Dangos ar gerdyn</string>
-    <string name="crm_field_multi">Aml-ddewis</string>
     <string name="crm_field_position">Safle arddangos</string>
     <string name="crm_field_position_header">Pennyn</string>
     <string name="crm_field_position_body">Corff</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Disgynnol</string>
     <string name="crm_views_filter_classes">Hidlo i ddosbarthiadau</string>
     <string name="crm_views_by">yn ôl %1$s</string>
-    <string name="crm_views_sorted">wedi trefnu %1$s</string>
     <string name="crm_design_preview_label">Rhagolwg:</string>
     <string name="crm_design_preview_no_view">Dim golwg i\'w rhagweld</string>
     <string name="crm_design_preview_no_class">Dim dosbarth ar gyfer yr olwg hon</string>
@@ -303,4 +297,7 @@
         <item quantity="many">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
         <item quantity="other">Nid oedd modd ychwanegu %1$s o atodiadau: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Rhiant</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Dosbarth</string>
 </resources>

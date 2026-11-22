@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">هیچ تەنێکی هاوسەنگ نییە</string>
     <string name="crm_field_yes">بەڵێ</string>
     <string name="crm_field_no">نەخێر</string>
-    <string name="crm_field_type_checkbox">بۆکسی پشکنین</string>
     <string name="crm_comment_empty">هێشتا هیچ بۆچوونێک نییە</string>
     <string name="crm_comment_attach">هاوپێچکردنی پەڕگە</string>
     <string name="crm_property_remove">لابردن</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">زیادکردنی خانە</string>
     <string name="crm_class_delete">سڕینەوەی پۆل</string>
     <string name="crm_class_delete_title">سڕینەوەی پۆل</string>
-    <string name="crm_field_type_text">دەق</string>
-    <string name="crm_field_type_number">ژمارە</string>
-    <string name="crm_field_type_user">بەکارهێنەر</string>
-    <string name="crm_field_type_date">بەروار</string>
-    <string name="crm_field_type_checklist">لیستی پشکنین</string>
     <string name="crm_field_name">ناو</string>
     <string name="crm_field_type">جۆر</string>
     <string name="crm_field_flags">ئاڵاکان</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">گۆڕانکارییەکی کرد</string>
     <string name="crm_activity_attached">هاوپێچی کرد</string>
     <string name="crm_activity_commented">لێدوانی دا</string>
+    <string name="crm_activity_moved">گواستییەوە</string>
+    <string name="crm_activity_linked">بەستییەوە</string>
+    <string name="crm_activity_class">پۆلەکەی گۆڕی</string>
     <string name="crm_attachment_empty">هیچ هاوپێچێک نییە</string>
     <string name="crm_attachment_default_name">هاوپێچ</string>
     <string name="crm_attachment_delete_confirm_title">هاوپێچ بسڕدرێتەوە؟</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">گواستنەوە بۆ سەرەوە</string>
     <string name="crm_class_move_down">گواستنەوە بۆ خوارەوە</string>
     <string name="crm_class_delete_message">دڵنیایت دەتەوێت پۆلی \"%1$s\" بسڕیتەوە؟ هەموو خانە و هەڵبژاردەکانیشیان دەسڕێنەوە.</string>
-    <string name="crm_field_type_enumerated">ژمێردراو</string>
     <string name="crm_field_label">خانە: %1$s</string>
     <string name="crm_field_readonly">تەنیا بۆ خوێندنەوە</string>
     <string name="crm_field_sortable">ڕیزکردن دەکرێت</string>
     <string name="crm_field_filterable">پاڵاوتن دەکرێت</string>
     <string name="crm_field_show_on_card">پیشاندان لەسەر کارت</string>
-    <string name="crm_field_multi">هەڵبژاردنی فرە</string>
     <string name="crm_field_position">شوێنی پیشاندان</string>
     <string name="crm_field_position_header">سەردێڕ</string>
     <string name="crm_field_position_body">ناوەڕۆک</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">داکەوتوو</string>
     <string name="crm_views_filter_classes">پاڵاوتن بۆ پۆلەکان</string>
     <string name="crm_views_by">بەپێی %1$s</string>
-    <string name="crm_views_sorted">ڕیزکراو %1$s</string>
     <string name="crm_design_preview_label">پێشبینین:</string>
     <string name="crm_design_preview_no_view">هیچ پیشاندانێک بۆ پێشبینین نییە</string>
     <string name="crm_design_preview_no_class">هیچ پۆلێک بۆ ئەم پیشاندانە نییە</string>
@@ -295,4 +289,7 @@
         <item quantity="one">نەتوانرا %1$s هاوپێچ زیاد بکرێت: %2$s</item>
         <item quantity="other">نەتوانرا %1$s هاوپێچ زیاد بکرێن: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">باوان</string>
+    <string name="crm_export_csv_id">ناسنامە</string>
+    <string name="crm_export_csv_class">پۆل</string>
 </resources>

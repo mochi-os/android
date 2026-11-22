@@ -370,4 +370,13 @@
     <string name="devices_username">Nama pengguna</string>
     <string name="devices_warning">Salin kata laluan sekarang: ia tidak boleh dipaparkan lagi.</string>
     <string name="devices_unused">Tidak pernah digunakan</string>
+    <string name="field_type_text">Teks</string>
+    <string name="field_type_number">Nombor</string>
+    <string name="field_type_enumerated">Tersenarai</string>
+    <string name="field_type_user">Pengguna</string>
+    <string name="field_type_date">Tarikh</string>
+    <string name="field_type_checkbox">Kotak semak</string>
+    <string name="field_type_checklist">Senarai semak</string>
+    <string name="view_list_sorted_ascending">disusun menaik</string>
+    <string name="view_list_sorted_descending">disusun menurun</string>
 </resources>

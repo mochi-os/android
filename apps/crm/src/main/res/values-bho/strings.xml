@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">कौनो मेल खाए वाला ऑब्जेक्ट नइखे</string>
     <string name="crm_field_yes">हाँ</string>
     <string name="crm_field_no">नाहीं</string>
-    <string name="crm_field_type_checkbox">चेकबॉक्स</string>
     <string name="crm_comment_empty">अबहीं तक कौनो टिप्पणी नइखे</string>
     <string name="crm_comment_attach">फाइल संलग्न करीं</string>
     <string name="crm_property_remove">हटाईं</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">फील्ड जोड़ीं</string>
     <string name="crm_class_delete">वर्ग मेटाईं</string>
     <string name="crm_class_delete_title">वर्ग मेटाईं</string>
-    <string name="crm_field_type_text">टेक्स्ट</string>
-    <string name="crm_field_type_number">संख्या</string>
-    <string name="crm_field_type_user">उपयोगकर्ता</string>
-    <string name="crm_field_type_date">तारीख</string>
-    <string name="crm_field_type_checklist">चेकलिस्ट</string>
     <string name="crm_field_name">नाम</string>
     <string name="crm_field_type">प्रकार</string>
     <string name="crm_field_flags">झंडा</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">एगो बदलाव कइलें</string>
     <string name="crm_activity_attached">जोड़लस</string>
     <string name="crm_activity_commented">टिप्पणी कइलस</string>
+    <string name="crm_activity_moved">खिसकवलस</string>
+    <string name="crm_activity_linked">लिंक कइलस</string>
+    <string name="crm_activity_class">वर्ग बदललस</string>
     <string name="crm_attachment_empty">कवनो संलग्नक नइखे</string>
     <string name="crm_attachment_default_name">संलग्नक</string>
     <string name="crm_attachment_delete_confirm_title">संलग्नक मिटावल जाव?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">ऊपर ले जाईं</string>
     <string name="crm_class_move_down">नीचे ले जाईं</string>
     <string name="crm_class_delete_message">का रउआ सचमुच क्लास \"%1$s\" के मिटावे के चाहत बानी? सभ फील्ड आ ओकर विकल्प भी मिटा दिहल जइहें।</string>
-    <string name="crm_field_type_enumerated">गणनात्मक</string>
     <string name="crm_field_label">फील्ड: %1$s</string>
     <string name="crm_field_readonly">केवल पठन</string>
     <string name="crm_field_sortable">क्रमबद्ध करे लायक</string>
     <string name="crm_field_filterable">छानल जा सके वाला</string>
     <string name="crm_field_show_on_card">कार्ड पर देखाईं</string>
-    <string name="crm_field_multi">बहु-चयन</string>
     <string name="crm_field_position">प्रदर्शन स्थिति</string>
     <string name="crm_field_position_header">शीर्षक</string>
     <string name="crm_field_position_body">मुख्य भाग</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">घटत क्रम</string>
     <string name="crm_views_filter_classes">क्लास में छानीं</string>
     <string name="crm_views_by">%1$s से</string>
-    <string name="crm_views_sorted">%1$s क्रमबद्ध</string>
     <string name="crm_design_preview_label">पूर्वावलोकन:</string>
     <string name="crm_design_preview_no_view">पूर्वावलोकन खातिर कौनो दृश्य नइखे</string>
     <string name="crm_design_preview_no_class">एह दृश्य खातिर कौनो क्लास नइखे</string>
@@ -295,4 +289,7 @@
         <item quantity="one">%1$s संलग्नक जोड़ल ना जा सकल: %2$s</item>
         <item quantity="other">%1$s संलग्नक जोड़ल ना जा सकल: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">मूल</string>
+    <string name="crm_export_csv_id">आईडी</string>
+    <string name="crm_export_csv_class">वर्ग</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Lägg till fält</string>
     <string name="projects_class_delete">Ta bort klass</string>
     <string name="projects_class_delete_title">Ta bort klass</string>
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Tal</string>
-    <string name="projects_field_type_user">Användare</string>
-    <string name="projects_field_type_date">Datum</string>
-    <string name="projects_field_type_checklist">Checklista</string>
     <string name="projects_field_name">Namn</string>
     <string name="projects_field_type">Typ</string>
     <string name="projects_field_flags">Flaggor</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Tillåt sammanslagningsförfrågningar på objekt av den här klassen.</string>
     <string name="projects_class_parents">Föräldraklasser</string>
     <string name="projects_class_delete_message">Är du säker på att du vill radera klassen \"%1$s\"? Alla fält och deras alternativ kommer också att raderas.</string>
-    <string name="projects_field_type_enumerated">Uppräknad</string>
     <string name="projects_field_label">Fält: %1$s</string>
     <string name="projects_field_readonly">Skrivskyddad</string>
     <string name="projects_field_sortable">Sorterbar</string>
     <string name="projects_field_filterable">Filtrerbar</string>
     <string name="projects_field_show_on_card">Visa på kort</string>
-    <string name="projects_field_multi">Flerval</string>
     <string name="projects_field_position">Visningsposition</string>
     <string name="projects_field_position_header">Sidhuvud</string>
     <string name="projects_field_validation">Validering</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Fält för ramfärg</string>
     <string name="projects_views_filter_classes">Filtrera till klasser</string>
     <string name="projects_views_by">efter %1$s</string>
-    <string name="projects_views_sorted">sorterat %1$s</string>
     <string name="projects_design_preview_label">Förhandsvisning:</string>
     <string name="projects_design_preview_no_view">Ingen vy att förhandsvisa</string>
     <string name="projects_design_preview_no_class">Ingen klass för den här vyn</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekt uppdaterat</string>
     <string name="projects_activity_attached">bifogade</string>
     <string name="projects_activity_commented">kommenterade</string>
+    <string name="projects_activity_moved">flyttade det här objektet</string>
+    <string name="projects_activity_linked">lade till en länk</string>
+    <string name="projects_activity_class">ändrade klassen</string>
     <string name="projects_attachment_delete_confirm_message">Den här bilagan tas bort permanent.</string>
     <string name="projects_attachment_delete_confirm_title">Ta bort bilagan?</string>
     <string name="projects_settings_unsubscribe_section">Avsluta prenumerationen på projektet</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Är du säker på att du vill ta bort \"%1$s\" och %2$s objekt under det? Denna åtgärd kan inte ångras.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Kunde inte bifoga: %1$s</string>
+    <string name="projects_activity_unknown">Okänd</string>
 </resources>

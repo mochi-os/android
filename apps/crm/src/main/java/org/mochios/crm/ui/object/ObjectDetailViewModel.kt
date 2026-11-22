@@ -31,6 +31,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
@@ -38,19 +39,34 @@ import org.mochios.android.websocket.REOPEN
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.Link
 import org.mochios.crm.model.CrmObject
-import org.mochios.crm.model.Watcher
 import org.mochios.crm.repository.CrmsRepository
 import java.io.File
 import javax.inject.Inject
 
+/**
+ * An object's activity as far as it has been read, newest first.
+ *
+ * @property entries The entries read, each once.
+ * @property load Where the next page stands; a failed first page is shown in
+ *   place of the list, with a retry.
+ * @property more Whether the server may hold entries older than the last read.
+ * @property pages How many pages have been read, which the next one's offset
+ *   counts from.
+ */
+data class ActivityPages(
+    val entries: List<Activity> = emptyList(),
+    val load: LoadState = LoadState.Idle,
+    val more: Boolean = false,
+    val pages: Int = 0,
+)
+
 data class ObjectDetailUiState(
     val obj: CrmObject? = null,
     val comments: List<Comment> = emptyList(),
-    val activity: List<Activity> = emptyList(),
+    val activity: ActivityPages = ActivityPages(),
     val attachments: List<Attachment> = emptyList(),
     val outgoingLinks: List<Link> = emptyList(),
     val incomingLinks: List<Link> = emptyList(),
-    val watchers: List<Watcher> = emptyList(),
     val isWatching: Boolean = false,
     val isLoading: Boolean = false,
     val error: MochiError? = null,
@@ -444,15 +460,81 @@ class ObjectDetailViewModel @Inject constructor(
 
     // ---- Activity ----
 
+    /**
+     * Reads the newest page of the activity: the first, or again after a
+     * frame. Pages already read stay, so a change while the user reads older
+     * entries does not take them away; an entry in both is kept once. A failed
+     * read again leaves the list as it was; a failed first read is said.
+     */
     private fun loadActivity() {
+        val crmId = currentCrmId
         val objectId = currentObjectId
+        if (_uiState.value.activity.pages == 0) {
+            setActivity { it.copy(load = LoadState.Loading) }
+        }
         viewModelScope.launch {
             try {
-                val activity = repository.getActivity(currentCrmId, objectId)
+                val page = repository.getActivity(crmId, objectId, ACTIVITY_PAGE, 0)
                 if (objectId != currentObjectId) return@launch
-                _uiState.value = _uiState.value.copy(activity = activity)
-            } catch (_: Exception) { }
+                setActivity { shown ->
+                    shown.copy(
+                        entries = (page + shown.entries).distinctBy { entry -> entry.id },
+                        load = if (shown.pages == 0) LoadState.Idle else shown.load,
+                        more = if (shown.pages <= 1) page.size >= ACTIVITY_PAGE else shown.more,
+                        pages = maxOf(shown.pages, 1),
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (objectId != currentObjectId) return@launch
+                setActivity { shown ->
+                    if (shown.pages == 0) shown.copy(load = LoadState.Failed(e.toMochiError())) else shown
+                }
+            }
         }
+    }
+
+    /**
+     * Reads the next, older page of the activity, as the list's end comes
+     * into view, or the first page again when that read failed. The offset
+     * counts the pages read, so an entry logged since is read twice rather
+     * than one skipped, and kept once.
+     */
+    fun loadOlderActivity() {
+        val shown = _uiState.value.activity
+        if (shown.load == LoadState.Loading) return
+        if (shown.pages == 0) {
+            loadActivity()
+            return
+        }
+        if (!shown.more) return
+        val crmId = currentCrmId
+        val objectId = currentObjectId
+        setActivity { it.copy(load = LoadState.Loading) }
+        viewModelScope.launch {
+            try {
+                val page = repository.getActivity(crmId, objectId, ACTIVITY_PAGE, shown.pages * ACTIVITY_PAGE)
+                if (objectId != currentObjectId) return@launch
+                setActivity { now ->
+                    now.copy(
+                        entries = (now.entries + page).distinctBy { entry -> entry.id },
+                        load = LoadState.Idle,
+                        more = page.size >= ACTIVITY_PAGE,
+                        pages = shown.pages + 1,
+                    )
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (objectId != currentObjectId) return@launch
+                setActivity { now -> now.copy(load = LoadState.Failed(e.toMochiError())) }
+            }
+        }
+    }
+
+    private fun setActivity(change: (ActivityPages) -> ActivityPages) {
+        _uiState.value = _uiState.value.copy(activity = change(_uiState.value.activity))
     }
 
     suspend fun searchUsers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
@@ -652,12 +734,9 @@ class ObjectDetailViewModel @Inject constructor(
         val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val result = repository.getWatchers(currentCrmId, objectId)
+                val watching = repository.getWatching(currentCrmId, objectId)
                 if (objectId != currentObjectId) return@launch
-                _uiState.value = _uiState.value.copy(
-                    watchers = result.watchers,
-                    isWatching = result.watching
-                )
+                _uiState.value = _uiState.value.copy(isWatching = watching)
             } catch (_: Exception) { }
         }
     }
@@ -746,3 +825,6 @@ class ObjectDetailViewModel @Inject constructor(
  * as typed, as on the web.
  */
 private val PICKED_FIELD_TYPES = setOf("enumerated", "date", "user", "checkbox")
+
+/** Activity entries read at a time: the server's default page, and the web's. */
+internal const val ACTIVITY_PAGE = 100

@@ -62,7 +62,7 @@ class DesignFormsTest {
 
     /** The summary field as the server holds it. */
     @Volatile private var summary = """{"id": "summary", "name": "Summary", "fieldtype": "text", "flags": "required",
-        "position": "header", "pattern": "^x", "rows": 3, "rank": 1}"""
+        "position": "header", "pattern": "^x", "rows": 3, "rank": 1, "minlength": 5, "maxlength": 40}"""
 
     /** Whether the server fails the design's read. */
     @Volatile private var unreadable = false
@@ -89,7 +89,8 @@ class DesignFormsTest {
                 val data = when (path) {
                     "p1/-/information" -> """{"project": {"id": "p1", "name": "Board", "access": "owner"},
                         "classes": [{"id": "task", "name": "Task", "title": "summary", "rank": 1}],
-                        "fields": {"task": [$summary, {"id": "status", "name": "Status", "fieldtype": "enumerated", "rank": 2}]},
+                        "fields": {"task": [$summary, {"id": "status", "name": "Status", "fieldtype": "enumerated", "rank": 2},
+                            {"id": "signed", "name": "Signed", "fieldtype": "checkbox", "rank": 3}]},
                         "options": {"task": {"status": [{"id": "open", "name": "Open", "colour": "#ff0000", "icon": "star", "rank": 1}]}},
                         "views": [{"id": "v1", "name": "Board", "viewtype": "board", "columns": "status", "rows": "status",
                             "sort": "summary", "border": "status", "filter": "status:open", "classes": ["task"]}],
@@ -217,6 +218,43 @@ class DesignFormsTest {
         field("summary")
         rule.onNodeWithText("3").performTextClearance()
         assertEquals("", save()["rows"]?.asString)
+    }
+
+    @Test
+    fun `a field opens with the length limits it has, and a limit cleared is sent as none`() {
+        field("summary")
+        assertTrue("THE POINT: the minimum as stored", rule.onAllNodesWithText("5").fetchSemanticsNodes().isNotEmpty())
+        assertTrue("the maximum as stored", rule.onAllNodesWithText("40").fetchSemanticsNodes().isNotEmpty())
+        rule.onNodeWithText("5").performScrollTo().performTextClearance()
+        assertEquals(0, save()["minlength"]?.asInt)
+    }
+
+    // ---- Field types ----
+
+    @Test
+    fun `a checkbox field can be made`() {
+        val model = CreateFieldViewModel(handle("projectId" to "p1", "classId" to "task"), repository)
+        rule.setContent { CreateFieldScreen(onBack = {}, onCreated = {}, viewModel = model) }
+        rule.waitForIdle()
+        rule.onNodeWithText(context.getString(R.string.projects_field_type)).performClick()
+        rule.waitForIdle()
+        assertTrue(
+            "THE POINT: Checkbox is offered with the other six",
+            rule.onAllNodesWithText(context.getString(MochiR.string.field_type_checkbox)).fetchSemanticsNodes().isNotEmpty(),
+        )
+    }
+
+    @Test
+    fun `a class names a checkbox field's type`() {
+        val model = ClassDetailViewModel(handle("projectId" to "p1", "classId" to "task"), repository)
+        rule.setContent { ClassDetailScreen(onBack = {}, onAddField = {}, onFieldClick = {}, viewModel = model) }
+        until { model.uiState.value.projectDetails != null }
+        rule.waitForIdle()
+        assertTrue(
+            "THE POINT: by its name, not its key",
+            rule.onAllNodesWithText(context.getString(MochiR.string.field_type_checkbox)).fetchSemanticsNodes().isNotEmpty(),
+        )
+        assertTrue(rule.onAllNodesWithText("checkbox").fetchSemanticsNodes().isEmpty())
     }
 
     @Test

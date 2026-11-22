@@ -20,8 +20,6 @@ data class CrmObject(
     val updated: Long = 0,
     val values: Map<String, Any?> = emptyMap()
 ) {
+    // Every value arrives as a string; a field holds one.
     fun stringValue(fieldId: String): String = values[fieldId]?.toString() ?: ""
-
-    fun listValue(fieldId: String): List<String> =
-        (values[fieldId] as? List<*>)?.mapNotNull { it?.toString() } ?: emptyList()
 }

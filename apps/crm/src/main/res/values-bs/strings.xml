@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Nema odgovarajućih objekata</string>
     <string name="crm_field_yes">Da</string>
     <string name="crm_field_no">Ne</string>
-    <string name="crm_field_type_checkbox">Potvrdni okvir</string>
     <string name="crm_comment_empty">Još nema komentara</string>
     <string name="crm_comment_attach">Priloži fajlove</string>
     <string name="crm_property_remove">Ukloni</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Dodaj polje</string>
     <string name="crm_class_delete">Obriši klasu</string>
     <string name="crm_class_delete_title">Obriši klasu</string>
-    <string name="crm_field_type_text">Tekst</string>
-    <string name="crm_field_type_number">Broj</string>
-    <string name="crm_field_type_user">Korisnik</string>
-    <string name="crm_field_type_date">Datum</string>
-    <string name="crm_field_type_checklist">Lista</string>
     <string name="crm_field_name">Naziv</string>
     <string name="crm_field_type">Tip</string>
     <string name="crm_field_flags">Zastave</string>
@@ -164,6 +158,9 @@
     <string name="crm_activity_made_change">izvršio/la izmjenu</string>
     <string name="crm_activity_attached">priložio/la</string>
     <string name="crm_activity_commented">komentarisao/la</string>
+    <string name="crm_activity_moved">premjestio/la</string>
+    <string name="crm_activity_linked">povezao/la</string>
+    <string name="crm_activity_class">promijenio/la klasu</string>
     <string name="crm_attachment_empty">Nema priloga</string>
     <string name="crm_attachment_default_name">prilog</string>
     <string name="crm_attachment_delete_confirm_title">Izbrisati prilog?</string>
@@ -193,13 +190,11 @@
     <string name="crm_class_move_up">Pomjeri gore</string>
     <string name="crm_class_move_down">Pomjeri dolje</string>
     <string name="crm_class_delete_message">Jeste li sigurni da želite obrisati klasu \"%1$s\"? Sva polja i njihove opcije će također biti obrisane.</string>
-    <string name="crm_field_type_enumerated">Nabrojano</string>
     <string name="crm_field_label">Polje: %1$s</string>
     <string name="crm_field_readonly">Samo za čitanje</string>
     <string name="crm_field_sortable">Može se sortirati</string>
     <string name="crm_field_filterable">Može se filtrirati</string>
     <string name="crm_field_show_on_card">Prikaži na kartici</string>
-    <string name="crm_field_multi">Višestruki odabir</string>
     <string name="crm_field_position">Pozicija prikaza</string>
     <string name="crm_field_position_header">Zaglavlje</string>
     <string name="crm_field_position_body">Glavni dio</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_direction_desc">Opadajuće</string>
     <string name="crm_views_filter_classes">Filtriraj po klasama</string>
     <string name="crm_views_by">po %1$s</string>
-    <string name="crm_views_sorted">sortirano %1$s</string>
     <string name="crm_design_preview_label">Pregled:</string>
     <string name="crm_design_preview_no_view">Nema prikaza za pregled</string>
     <string name="crm_design_preview_no_class">Nema klase za ovaj prikaz</string>
@@ -297,4 +291,7 @@
         <item quantity="few">%1$s priloga nije moguće dodati: %2$s</item>
         <item quantity="other">%1$s priloga nije moguće dodati: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Nadređeni</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klasa</string>
 </resources>

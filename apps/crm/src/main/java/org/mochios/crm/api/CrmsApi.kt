@@ -22,7 +22,6 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.Template
-import org.mochios.crm.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
@@ -83,13 +82,23 @@ data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
 data class ActivityListResponse(val activities: List<Activity> = emptyList())
 data class LinkListResponse(val incoming: List<Link> = emptyList(), val outgoing: List<Link> = emptyList())
-data class WatcherListResponse(val watchers: List<Watcher> = emptyList(), val watching: Boolean = false)
+// The watchers themselves ride along too; the phone shows only its own watch.
+data class WatcherListResponse(val watching: Boolean = false)
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
 data class SuccessResponse(val success: Boolean = false)
 data class UserSearchResponse(@SerializedName("results") val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
-data class PreferenceResponse(val preference: String = "")
+
+/** `-/recommendations`: each CRM with the directory's blurb for it. */
+data class RecommendationListResponse(val crms: List<RecommendedCrm> = emptyList())
+data class RecommendedCrm(
+    val id: String = "",
+    val name: String = "",
+    val blurb: String = "",
+    val fingerprint: String = "",
+    val server: String? = null,
+)
 
 // JSON body of `-/objects/create`. `class` is a Kotlin keyword, so the field is
 // named classId and mapped back on the wire. `parent` is omitted from the
@@ -125,8 +134,7 @@ data class MoveObjectRequest(
     val value: String? = null,
     val rank: Int? = null,
     val row: String? = null,
-    val scope: String? = null,
-    val promote: String? = null
+    val scope: String? = null
 )
 
 // JSON body of `views/{view}/update`; "" clears a setting.
@@ -150,7 +158,6 @@ data class HierarchyRequest(val parents: String)
 data class UpdateFieldRequest(
     val name: String? = null,
     val flags: String? = null,
-    val multi: Boolean? = null,
     val card: Boolean? = null,
     val position: String? = null,
     val rows: Int? = null,
@@ -220,7 +227,7 @@ interface CrmsApi {
     suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<List<Crm>>>
 
     @GET("-/recommendations")
-    suspend fun getRecommendations(): Response<ApiResponse<CrmListResponse>>
+    suspend fun getRecommendations(): Response<ApiResponse<RecommendationListResponse>>
 
     @FormUrlEncoded
     @POST("-/probe")
@@ -424,10 +431,13 @@ interface CrmsApi {
 
     // ---- Activity ----
 
+    // Newest first, [limit] at a time from [offset].
     @GET("{crmId}/-/objects/{objectId}/activity")
     suspend fun getActivity(
         @Path("crmId") crmId: String,
-        @Path("objectId") objectId: String
+        @Path("objectId") objectId: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int
     ): Response<ApiResponse<ActivityListResponse>>
 
     // ---- Watchers ----
@@ -569,8 +579,7 @@ interface CrmsApi {
         @Path("classId") classId: String,
         @Field("name") name: String,
         @Field("fieldtype") fieldtype: String,
-        @Field("flags") flags: String?,
-        @Field("multi") multi: Boolean?
+        @Field("flags") flags: String?
     ): Response<ApiResponse<CrmField>>
 
     @FormUrlEncoded

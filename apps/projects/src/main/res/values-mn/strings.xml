@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Талбар нэмэх</string>
     <string name="projects_class_delete">Анги устгах</string>
     <string name="projects_class_delete_title">Анги устгах</string>
-    <string name="projects_field_type_text">Текст</string>
-    <string name="projects_field_type_number">Тоо</string>
-    <string name="projects_field_type_user">Хэрэглэгч</string>
-    <string name="projects_field_type_date">Огноо</string>
-    <string name="projects_field_type_checklist">Жагсаалт</string>
     <string name="projects_field_name">Нэр</string>
     <string name="projects_field_type">Төрөл</string>
     <string name="projects_field_flags">Тэмдэгт</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Энэ ангийн объектуудад нэгтгэх хүсэлт зөвшөөрнө.</string>
     <string name="projects_class_parents">Эх ангиуд</string>
     <string name="projects_class_delete_message">Та \"%1$s\" ангийг устгахдаа итгэлтэй байна уу? Бүх талбар болон тэдгээрийн сонголтууд мөн устах болно.</string>
-    <string name="projects_field_type_enumerated">Тоологдсон</string>
     <string name="projects_field_label">Талбар: %1$s</string>
     <string name="projects_field_readonly">Зөвхөн уншигдах</string>
     <string name="projects_field_sortable">Эрэмбэлэх боломжтой</string>
     <string name="projects_field_filterable">Шүүх боломжтой</string>
     <string name="projects_field_show_on_card">Карт дээр харуулах</string>
-    <string name="projects_field_multi">Олон сонголттой</string>
     <string name="projects_field_position">Харагдах байрлал</string>
     <string name="projects_field_position_header">Толгой хэсэг</string>
     <string name="projects_field_validation">Баталгаажуулалт</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Хүрээний өнгөний талбар</string>
     <string name="projects_views_filter_classes">Ангиудаар шүүх</string>
     <string name="projects_views_by">%1$s-ээр</string>
-    <string name="projects_views_sorted">%1$s эрэмбэлсэн</string>
     <string name="projects_design_preview_label">Урьдчилан үзэх:</string>
     <string name="projects_design_preview_no_view">Урьдчилан харах харагдац алга</string>
     <string name="projects_design_preview_no_class">Энэ харагдацад анги алга</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Төсөл шинэчлэгдсэн</string>
     <string name="projects_activity_attached">хавсаргасан</string>
     <string name="projects_activity_commented">сэтгэгдэл үлдээсэн</string>
+    <string name="projects_activity_moved">энэ объектыг зөөсөн</string>
+    <string name="projects_activity_linked">холбоос нэмсэн</string>
+    <string name="projects_activity_class">ангийг өөрчилсөн</string>
     <string name="projects_attachment_delete_confirm_message">Энэ хавсралт бүрмөсөн устгагдана.</string>
     <string name="projects_attachment_delete_confirm_title">Хавсралтыг устгах уу?</string>
     <string name="projects_settings_unsubscribe_section">Төслийн захиалгаас гарах</string>
@@ -339,4 +334,5 @@
         <item quantity="other">\"%1$s\" болон түүний доорх %2$s зүйлийг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Хавсаргаж чадсангүй: %1$s</string>
+    <string name="projects_activity_unknown">Үл мэдэгдэх</string>
 </resources>

@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Añadir campo</string>
     <string name="projects_class_delete">Eliminar clase</string>
     <string name="projects_class_delete_title">Eliminar clase</string>
-    <string name="projects_field_type_text">Texto</string>
-    <string name="projects_field_type_number">Número</string>
-    <string name="projects_field_type_user">Usuario</string>
-    <string name="projects_field_type_date">Fecha</string>
-    <string name="projects_field_type_checklist">Lista de comprobación</string>
     <string name="projects_field_name">Nombre</string>
     <string name="projects_field_type">Tipo</string>
     <string name="projects_field_flags">Indicadores</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Permitir solicitudes de fusión en los objetos de esta clase.</string>
     <string name="projects_class_parents">Clases superiores</string>
     <string name="projects_class_delete_message">¿Seguro que quieres eliminar la clase \"%1$s\"? También se eliminarán todos los campos y sus opciones.</string>
-    <string name="projects_field_type_enumerated">Enumerado</string>
     <string name="projects_field_label">Campo: %1$s</string>
     <string name="projects_field_readonly">Solo lectura</string>
     <string name="projects_field_sortable">Ordenable</string>
     <string name="projects_field_filterable">Filtrable</string>
     <string name="projects_field_show_on_card">Mostrar en la tarjeta</string>
-    <string name="projects_field_multi">Selección múltiple</string>
     <string name="projects_field_position">Posición de visualización</string>
     <string name="projects_field_position_header">Encabezado</string>
     <string name="projects_field_validation">Validación</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Campo del color del borde</string>
     <string name="projects_views_filter_classes">Filtrar por clases</string>
     <string name="projects_views_by">por %1$s</string>
-    <string name="projects_views_sorted">ordenado %1$s</string>
     <string name="projects_design_preview_label">Vista previa:</string>
     <string name="projects_design_preview_no_view">No hay vista para previsualizar</string>
     <string name="projects_design_preview_no_class">No hay clase para esta vista</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Proyecto actualizado</string>
     <string name="projects_activity_attached">adjuntó</string>
     <string name="projects_activity_commented">comentó</string>
+    <string name="projects_activity_moved">movió este objeto</string>
+    <string name="projects_activity_linked">añadió un enlace</string>
+    <string name="projects_activity_class">cambió la clase</string>
     <string name="projects_attachment_delete_confirm_message">Este adjunto se eliminará permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">¿Eliminar adjunto?</string>
     <string name="projects_settings_unsubscribe_section">Anular la suscripción al proyecto</string>
@@ -339,4 +334,5 @@
         <item quantity="other">¿Seguro que quieres eliminar \"%1$s\" y %2$s elementos que tiene debajo? Esta acción no se puede deshacer.</item>
     </plurals>
     <string name="projects_create_attachments_failed">No se ha podido adjuntar: %1$s</string>
+    <string name="projects_activity_unknown">Desconocido</string>
 </resources>

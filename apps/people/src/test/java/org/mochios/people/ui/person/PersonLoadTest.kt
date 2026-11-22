@@ -197,11 +197,4 @@ class PersonLoadTest {
         assertNull(other.info)
         assertEquals(MochiError.Local(R.string.people_person_unavailable), other.error)
     }
-
-    @Test
-    fun `a fingerprint is derived as core derives it`() {
-        assertEquals(PRINT, fingerprintOf(ADA))
-        assertTrue(isFingerprint(PRINT))
-        assertTrue(!isFingerprint(ADA))
-    }
 }

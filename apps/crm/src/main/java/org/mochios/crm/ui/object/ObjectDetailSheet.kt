@@ -41,6 +41,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.model.canComment
+import org.mochios.android.model.canCreate
+import org.mochios.android.model.canWrite
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiEditorSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -171,7 +174,9 @@ fun ObjectDetailSheet(
                                 )
                             }
 
-                            Box {
+                            // A copy is a new object and a delete changes
+                            // one: both are writing, as on the web.
+                            if (canWrite(crmDetails.crm.access)) Box {
                                 MochiIconButton(onClick = { showOverflow = true }) {
                                     Icon(
                                         Icons.Default.MoreVert,
@@ -184,16 +189,18 @@ fun ObjectDetailSheet(
                                     expanded = showOverflow,
                                     onDismissRequest = { showOverflow = false }
                                 ) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(MochiR.string.common_copy)) },
-                                        onClick = {
-                                            showOverflow = false
-                                            onCopy()
-                                        },
-                                        leadingIcon = {
-                                            Icon(Icons.Outlined.ContentCopy, contentDescription = null)
-                                        },
-                                    )
+                                    if (canCreate(crmDetails.crm.access)) {
+                                        MochiDropdownMenuItem(
+                                            text = { Text(stringResource(MochiR.string.common_copy)) },
+                                            onClick = {
+                                                showOverflow = false
+                                                onCopy()
+                                            },
+                                            leadingIcon = {
+                                                Icon(Icons.Outlined.ContentCopy, contentDescription = null)
+                                            },
+                                        )
+                                    }
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(MochiR.string.common_delete)) },
                                         onClick = {
@@ -237,8 +244,8 @@ fun ObjectDetailSheet(
                     val commentAvatars = remember(uiState.comments, crmId) {
                         commentAvatars(uiState.comments, crmId)
                     }
-                    val activityAvatars = remember(uiState.activity, crmId) {
-                        activityAvatars(uiState.activity, crmId)
+                    val activityAvatars = remember(uiState.activity.entries, crmId) {
+                        activityAvatars(uiState.activity.entries, crmId)
                     }
                     when (uiState.selectedTab) {
                         0 -> PropertiesTab(
@@ -254,6 +261,7 @@ fun ObjectDetailSheet(
                             crmId = crmId,
                             drafts = viewModel.drafts,
                             target = obj.id,
+                            canComment = canComment(crmDetails.crm.access),
                             upload = remember(obj.id) {
                                 viewModel.commentUpload(obj.id)
                             }.collectAsState().value,
@@ -275,6 +283,8 @@ fun ObjectDetailSheet(
                         2 -> ActivityTab(
                             activity = uiState.activity,
                             crmDetails = crmDetails,
+                            objectClass = obj.objectClass,
+                            onLoadMore = { viewModel.loadOlderActivity() },
                             avatarUrlBuilder = { entry ->
                                 activityAvatars[entry.user] ?: activityAvatar(crmId, entry.id)
                             }

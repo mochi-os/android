@@ -370,4 +370,13 @@
     <string name="devices_username">Օգտանուն</string>
     <string name="devices_warning">Պատճենեք գաղտնաբառը հիմա։ Այն այլևս հնարավոր չի լինի ցուցադրել։</string>
     <string name="devices_unused">Երբեք չի օգտագործվել</string>
+    <string name="field_type_text">Տեքստ</string>
+    <string name="field_type_number">Թիվ</string>
+    <string name="field_type_enumerated">Թվարկված</string>
+    <string name="field_type_user">Օգտատեր</string>
+    <string name="field_type_date">Ամսաթիվ</string>
+    <string name="field_type_checkbox">Նշավանդակ</string>
+    <string name="field_type_checklist">Ստուգաթերթիկ</string>
+    <string name="view_list_sorted_ascending">դասավորված աճման կարգով</string>
+    <string name="view_list_sorted_descending">դասավորված նվազման կարգով</string>
 </resources>

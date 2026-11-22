@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Kò sí object tó bámu</string>
     <string name="crm_field_yes">Bẹ́ẹ̀ ni</string>
     <string name="crm_field_no">Bẹ́ẹ̀ kọ́</string>
-    <string name="crm_field_type_checkbox">Àpótí àyẹ̀wò</string>
     <string name="crm_comment_empty">Kò sí àlàyé síbẹ̀</string>
     <string name="crm_comment_attach">So àwọn fáìlì pọ̀</string>
     <string name="crm_property_remove">Yọ kúrò</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Fi pápá kún</string>
     <string name="crm_class_delete">Pa kíláàsì rẹ́</string>
     <string name="crm_class_delete_title">Pa kíláàsì rẹ́</string>
-    <string name="crm_field_type_text">Ọ̀rọ̀</string>
-    <string name="crm_field_type_number">Nọ́mbà</string>
-    <string name="crm_field_type_user">Olùmúlò</string>
-    <string name="crm_field_type_date">Ọjọ́</string>
-    <string name="crm_field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
     <string name="crm_field_name">Orúkọ</string>
     <string name="crm_field_type">Irú</string>
     <string name="crm_field_flags">Àwọn àsíá</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">ṣe àyípadà</string>
     <string name="crm_activity_attached">so mọ́</string>
     <string name="crm_activity_commented">sọ àsọyé</string>
+    <string name="crm_activity_moved">gbé e lọ</string>
+    <string name="crm_activity_linked">so pọ̀</string>
+    <string name="crm_activity_class">yí kilaasi padà</string>
     <string name="crm_attachment_empty">Kò sí àfikún</string>
     <string name="crm_attachment_default_name">àfikún</string>
     <string name="crm_attachment_delete_confirm_title">Pa àfikún rẹ́?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Àìyípadà (tí a lè kà)</string>
     <string name="crm_class_parents">Àwọn kíláàsì òbí</string>
     <string name="crm_class_delete_message">Ṣé o dájú pé o fẹ́ pa kíláàsì \"%1$s\" run? Gbogbo àwọn pápá àti àwọn àṣàyàn wọn yóò tún pa run.</string>
-    <string name="crm_field_type_enumerated">Tí a kà</string>
     <string name="crm_field_label">Pápá: %1$s</string>
     <string name="crm_field_readonly">Kíkà nìkan</string>
     <string name="crm_field_sortable">Lè tò</string>
     <string name="crm_field_filterable">Lè yọ́</string>
     <string name="crm_field_show_on_card">Fihàn lórí káàdì</string>
-    <string name="crm_field_multi">Yíyàn púpọ̀</string>
     <string name="crm_field_position">Ipò ìfihàn</string>
     <string name="crm_field_position_header">Orí</string>
     <string name="crm_field_validation">Ìfọwọ́sí</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Pápá àwọ̀ ààlà</string>
     <string name="crm_views_filter_classes">Ṣàyẹ̀wò sí àwọn kíláàsì</string>
     <string name="crm_views_by">nípa %1$s</string>
-    <string name="crm_views_sorted">tí a tò %1$s</string>
     <string name="crm_design_preview_label">Àkíyèsí ṣáájú:</string>
     <string name="crm_design_preview_no_view">Kò sí ìwòye láti ṣàyẹ̀wò</string>
     <string name="crm_design_preview_no_class">Kò sí kíláàsì fún ìwòye yìí</string>
@@ -293,4 +287,7 @@
     <plurals name="crm_create_attachments_failed">
         <item quantity="other">A kò lè fi ìsomọ́ %1$s kún: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Òbí</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Kilaasi</string>
 </resources>

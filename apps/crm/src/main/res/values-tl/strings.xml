@@ -54,7 +54,6 @@
     <string name="crm_links_no_matches">Walang tugmang object</string>
     <string name="crm_field_yes">Oo</string>
     <string name="crm_field_no">Hindi</string>
-    <string name="crm_field_type_checkbox">Checkbox</string>
     <string name="crm_comment_empty">Wala pang komento</string>
     <string name="crm_comment_attach">Mag-attach ng file</string>
     <string name="crm_property_remove">Alisin</string>
@@ -90,11 +89,6 @@
     <string name="crm_class_add_field">Magdagdag ng field</string>
     <string name="crm_class_delete">I-delete ang class</string>
     <string name="crm_class_delete_title">I-delete ang class</string>
-    <string name="crm_field_type_text">Teksto</string>
-    <string name="crm_field_type_number">Numero</string>
-    <string name="crm_field_type_user">User</string>
-    <string name="crm_field_type_date">Petsa</string>
-    <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Pangalan</string>
     <string name="crm_field_type">Uri</string>
     <string name="crm_field_flags">Mga flag</string>
@@ -170,6 +164,9 @@
     <string name="crm_activity_made_change">gumawa ng pagbabago</string>
     <string name="crm_activity_attached">nag-attach</string>
     <string name="crm_activity_commented">nagkomento</string>
+    <string name="crm_activity_moved">naglipat</string>
+    <string name="crm_activity_linked">nag-link</string>
+    <string name="crm_activity_class">binago ang klase</string>
     <string name="crm_attachment_empty">Walang attachment</string>
     <string name="crm_attachment_default_name">attachment</string>
     <string name="crm_attachment_delete_confirm_title">Burahin ang attachment?</string>
@@ -197,13 +194,11 @@
     <string name="crm_class_title_field_default">Default (nababasa)</string>
     <string name="crm_class_parents">Mga magulang na klase</string>
     <string name="crm_class_delete_message">Sigurado ka bang gusto mong tanggalin ang klaseng \"%1$s\"? Lahat ng field at ang kanilang mga opsyon ay tatanggalin din.</string>
-    <string name="crm_field_type_enumerated">Enumerated</string>
     <string name="crm_field_label">Field: %1$s</string>
     <string name="crm_field_readonly">Read-only</string>
     <string name="crm_field_sortable">Pwedeng i-sort</string>
     <string name="crm_field_filterable">Pwedeng i-filter</string>
     <string name="crm_field_show_on_card">Ipakita sa card</string>
-    <string name="crm_field_multi">Multi-select</string>
     <string name="crm_field_position">Posisyon ng display</string>
     <string name="crm_field_position_header">Header</string>
     <string name="crm_field_validation">Validation</string>
@@ -222,7 +217,6 @@
     <string name="crm_views_border_field">Field ng kulay ng border</string>
     <string name="crm_views_filter_classes">I-filter ayon sa klase</string>
     <string name="crm_views_by">ayon kay %1$s</string>
-    <string name="crm_views_sorted">naka-sort %1$s</string>
     <string name="crm_design_preview_label">Preview:</string>
     <string name="crm_design_preview_no_view">Walang view na i-preview</string>
     <string name="crm_design_preview_no_class">Walang klase para sa view na ito</string>
@@ -295,4 +289,7 @@
         <item quantity="one">Hindi maidagdag ang %1$s attachment: %2$s</item>
         <item quantity="other">Hindi maidagdag ang %1$s attachment: %2$s</item>
     </plurals>
+    <string name="crm_export_csv_parent">Magulang</string>
+    <string name="crm_export_csv_id">ID</string>
+    <string name="crm_export_csv_class">Klase</string>
 </resources>

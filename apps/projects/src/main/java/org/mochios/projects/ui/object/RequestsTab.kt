@@ -56,6 +56,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.model.canWrite
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -93,6 +97,9 @@ fun RequestsTab(
     // refetch instead of showing the request as it was when tapped.
     var selectedRequestId by remember { mutableStateOf<String?>(null) }
     val selectedRequest = requests.firstOrNull { request -> request.id == selectedRequestId }
+    // Opening, changing, merging and deleting requests are writes.
+    val uiState by viewModel.uiState.collectAsState()
+    val writable = canWrite(uiState.access)
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (requests.isEmpty() && selectedRequest == null) {
@@ -111,6 +118,7 @@ fun RequestsTab(
                 request = selectedRequest,
                 projectId = projectId,
                 viewModel = viewModel,
+                writable = writable,
                 onBack = { selectedRequestId = null },
                 onViewDiff = onViewDiff
             )
@@ -120,20 +128,22 @@ fun RequestsTab(
                     RequestItem(
                         request = request,
                         onClick = { selectedRequestId = request.id },
-                        onDelete = { deleting = request }
+                        onDelete = if (writable) ({ deleting = request }) else null
                     )
                     HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
                 }
             }
         }
 
-        MochiFab(
-            onClick = { showCreateDialog = true },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(16.dp)
-        ) {
-            Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_request_new))
+        if (writable) {
+            MochiFab(
+                onClick = { showCreateDialog = true },
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(16.dp)
+            ) {
+                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_request_new))
+            }
         }
     }
 
@@ -173,7 +183,7 @@ fun RequestsTab(
 private fun RequestItem(
     request: MergeRequest,
     onClick: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: (() -> Unit)?
 ) {
     var showOverflow by remember { mutableStateOf(false) }
 
@@ -202,7 +212,7 @@ private fun RequestItem(
                 )
             }
         }
-        Box {
+        if (onDelete != null) Box {
             MochiIconButton(onClick = { showOverflow = true }) {
                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
             }
@@ -250,23 +260,26 @@ private fun RequestDetailView(
     request: MergeRequest,
     projectId: String,
     viewModel: ObjectDetailViewModel,
+    writable: Boolean,
     onBack: () -> Unit,
     onViewDiff: (String, String, String, String) -> Unit
 ) {
     val mergeCheck by viewModel.mergeCheck.collectAsState()
+    val mergeCheckError by viewModel.mergeCheckError.collectAsState()
     val isCheckingMerge by viewModel.isCheckingMerge.collectAsState()
     val mergeSuccess by viewModel.mergeSuccess.collectAsState()
     val uiState by viewModel.uiState.collectAsState()
     var showMergeDialog by remember { mutableStateOf(false) }
+    // Until the repositories are read, the repository by its fingerprint, never its id.
     val repositoryName = uiState.repositories
         .firstOrNull { repo -> repo.id == request.repository }?.name
-        ?: request.repository
+        ?: formatFingerprint(fingerprint(request.repository))
+    val check = { viewModel.checkMerge(request.repository, request.source, request.target) }
 
-    LaunchedEffect(request.id) {
+    // Again when the request changes: a draft marked ready keeps its id.
+    LaunchedEffect(request.id, request.status, request.draft) {
         viewModel.clearMergeState()
-        if (request.status == "open" && !request.draft) {
-            viewModel.checkMerge(request.repository, request.source, request.target)
-        }
+        if (request.status == "open" && !request.draft) check()
     }
 
     LaunchedEffect(mergeSuccess) {
@@ -333,6 +346,9 @@ private fun RequestDetailView(
                         Text(stringResource(R.string.projects_request_checking_merge), style = MaterialTheme.typography.bodySmall)
                     }
                 }
+                // The check could not compare the branches: why, and a retry,
+                // in place of an answer it does not have.
+                mergeCheckError != null -> InlineErrorState(error = mergeCheckError!!, onRetry = check)
                 mergeCheck != null -> {
                     val check = mergeCheck!!
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -395,13 +411,13 @@ private fun RequestDetailView(
                 Text(stringResource(R.string.projects_request_view_diff))
             }
 
-            if (request.status == "open" && !request.draft && mergeCheck?.canMerge == true) {
+            if (writable && request.status == "open" && !request.draft && mergeCheck?.canMerge == true) {
                 MochiTextButton(onClick = { showMergeDialog = true }) {
                     Text(stringResource(R.string.projects_request_merge), color = Color(0xFF4CAF50))
                 }
             }
 
-            if (request.status == "open" && request.draft) {
+            if (writable && request.status == "open" && request.draft) {
                 MochiTextButton(onClick = {
                     viewModel.updateRequest(request.id, null, null, null, false)
                 }) {

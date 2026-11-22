@@ -23,7 +23,4 @@ data class ProjectObject(
     val values: Map<String, Any?> = emptyMap()
 ) {
     fun stringValue(fieldId: String): String = values[fieldId]?.toString() ?: ""
-
-    fun listValue(fieldId: String): List<String> =
-        (values[fieldId] as? List<*>)?.mapNotNull { it?.toString() } ?: emptyList()
 }

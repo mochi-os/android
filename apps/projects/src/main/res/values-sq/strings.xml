@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Shto fushë</string>
     <string name="projects_class_delete">Fshi klasën</string>
     <string name="projects_class_delete_title">Fshi klasën</string>
-    <string name="projects_field_type_text">Teksti</string>
-    <string name="projects_field_type_number">Numri</string>
-    <string name="projects_field_type_user">Përdoruesi</string>
-    <string name="projects_field_type_date">Data</string>
-    <string name="projects_field_type_checklist">Listë kontrolli</string>
     <string name="projects_field_name">Emri</string>
     <string name="projects_field_type">Lloji</string>
     <string name="projects_field_flags">Flamujt</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Lejo kërkesat e bashkimit për objektet e kësaj klase.</string>
     <string name="projects_class_parents">Klasat prind</string>
     <string name="projects_class_delete_message">Jeni i sigurt që dëshironi të fshini klasën \"%1$s\"? Të gjitha fushat dhe opsionet e tyre gjithashtu do të fshihen.</string>
-    <string name="projects_field_type_enumerated">E numëruar</string>
     <string name="projects_field_label">Fusha: %1$s</string>
     <string name="projects_field_readonly">Vetëm për lexim</string>
     <string name="projects_field_sortable">E renditshme</string>
     <string name="projects_field_filterable">E filtrueshme</string>
     <string name="projects_field_show_on_card">Shfaq në kartë</string>
-    <string name="projects_field_multi">Përzgjedhje e shumëfishtë</string>
     <string name="projects_field_position">Pozicioni i shfaqjes</string>
     <string name="projects_field_position_header">Kreu</string>
     <string name="projects_field_validation">Validimi</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Fusha e ngjyrës së kornizës</string>
     <string name="projects_views_filter_classes">Filtro sipas klasave</string>
     <string name="projects_views_by">sipas %1$s</string>
-    <string name="projects_views_sorted">renditur %1$s</string>
     <string name="projects_design_preview_label">Pamja paraprake:</string>
     <string name="projects_design_preview_no_view">Asnjë pamje për t\'u parashikuar</string>
     <string name="projects_design_preview_no_class">Asnjë klasë për këtë pamje</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekti u përditësua</string>
     <string name="projects_activity_attached">bashkëngjiti</string>
     <string name="projects_activity_commented">komentoi</string>
+    <string name="projects_activity_moved">zhvendosi këtë objekt</string>
+    <string name="projects_activity_linked">shtoi një lidhje</string>
+    <string name="projects_activity_class">ndryshoi klasën</string>
     <string name="projects_attachment_delete_confirm_message">Kjo bashkëngjitje do të fshihet përgjithmonë.</string>
     <string name="projects_attachment_delete_confirm_title">Të fshihet bashkëngjitja?</string>
     <string name="projects_settings_unsubscribe_section">Çregjistrohu nga projekti</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Je i sigurt që do të fshish \"%1$s\" dhe %2$s artikuj që ndodhen nën të? Ky veprim nuk mund të zhbëhet.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nuk mund të bashkëngjiteshin: %1$s</string>
+    <string name="projects_activity_unknown">I panjohur</string>
 </resources>

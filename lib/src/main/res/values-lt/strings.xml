@@ -374,4 +374,13 @@
     <string name="devices_username">Vartotojo vardas</string>
     <string name="devices_warning">Nukopijuokite slaptažodį dabar: jo nebus galima parodyti dar kartą.</string>
     <string name="devices_unused">Niekada nenaudota</string>
+    <string name="field_type_text">Tekstas</string>
+    <string name="field_type_number">Skaičius</string>
+    <string name="field_type_enumerated">Išvardytas</string>
+    <string name="field_type_user">Vartotojas</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Žymimasis langelis</string>
+    <string name="field_type_checklist">Užduočių sąrašas</string>
+    <string name="view_list_sorted_ascending">surikiuota didėjančiai</string>
+    <string name="view_list_sorted_descending">surikiuota mažėjančiai</string>
 </resources>

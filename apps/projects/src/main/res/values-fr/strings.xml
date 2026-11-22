@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Ajouter un champ</string>
     <string name="projects_class_delete">Supprimer la classe</string>
     <string name="projects_class_delete_title">Supprimer la classe</string>
-    <string name="projects_field_type_text">Texte</string>
-    <string name="projects_field_type_number">Nombre</string>
-    <string name="projects_field_type_user">Utilisateur</string>
-    <string name="projects_field_type_date">Date</string>
-    <string name="projects_field_type_checklist">Liste de contrôle</string>
     <string name="projects_field_name">Nom</string>
     <string name="projects_field_type">Type</string>
     <string name="projects_field_flags">Indicateurs</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Autoriser les demandes de fusion sur les objets de cette classe.</string>
     <string name="projects_class_parents">Classes parentes</string>
     <string name="projects_class_delete_message">Voulez-vous vraiment supprimer la classe \"%1$s\" ? Tous les champs et leurs options seront également supprimés.</string>
-    <string name="projects_field_type_enumerated">Énuméré</string>
     <string name="projects_field_label">Champ : %1$s</string>
     <string name="projects_field_readonly">Lecture seule</string>
     <string name="projects_field_sortable">Triable</string>
     <string name="projects_field_filterable">Filtrable</string>
     <string name="projects_field_show_on_card">Afficher sur la carte</string>
-    <string name="projects_field_multi">Sélection multiple</string>
     <string name="projects_field_position">Position d\'affichage</string>
     <string name="projects_field_position_header">En-tête</string>
     <string name="projects_field_validation">Validation</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Champ de couleur de bordure</string>
     <string name="projects_views_filter_classes">Filtrer par classes</string>
     <string name="projects_views_by">par %1$s</string>
-    <string name="projects_views_sorted">trié %1$s</string>
     <string name="projects_design_preview_label">Aperçu :</string>
     <string name="projects_design_preview_no_view">Aucune vue à prévisualiser</string>
     <string name="projects_design_preview_no_class">Aucune classe pour cette vue</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projet mis à jour</string>
     <string name="projects_activity_attached">a joint</string>
     <string name="projects_activity_commented">a commenté</string>
+    <string name="projects_activity_moved">a déplacé cet objet</string>
+    <string name="projects_activity_linked">a ajouté un lien</string>
+    <string name="projects_activity_class">a changé la classe</string>
     <string name="projects_attachment_delete_confirm_message">Cette pièce jointe sera définitivement supprimée.</string>
     <string name="projects_attachment_delete_confirm_title">Supprimer la pièce jointe ?</string>
     <string name="projects_settings_unsubscribe_section">Se désabonner du projet</string>
@@ -339,4 +334,5 @@
         <item quantity="other">Voulez-vous vraiment supprimer « %1$s » et %2$s éléments situés en dessous ? Cette action est irréversible.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Impossible de joindre : %1$s</string>
+    <string name="projects_activity_unknown">Inconnu</string>
 </resources>

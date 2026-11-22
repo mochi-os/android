@@ -103,11 +103,6 @@
     <string name="projects_class_add_field">Pridať pole</string>
     <string name="projects_class_delete">Odstrániť triedu</string>
     <string name="projects_class_delete_title">Odstrániť triedu</string>
-    <string name="projects_field_type_text">Text</string>
-    <string name="projects_field_type_number">Číslo</string>
-    <string name="projects_field_type_user">Používateľ</string>
-    <string name="projects_field_type_date">Dátum</string>
-    <string name="projects_field_type_checklist">Zoznam úloh</string>
     <string name="projects_field_name">Názov</string>
     <string name="projects_field_type">Typ</string>
     <string name="projects_field_flags">Príznaky</string>
@@ -228,13 +223,11 @@
     <string name="projects_class_merge_requests_description">Povoliť žiadosti o zlúčenie na objektoch tejto triedy.</string>
     <string name="projects_class_parents">Nadradené triedy</string>
     <string name="projects_class_delete_message">Naozaj chcete odstrániť triedu \"%1$s\"? Všetky polia a ich možnosti budú tiež odstránené.</string>
-    <string name="projects_field_type_enumerated">Vymenovaný</string>
     <string name="projects_field_label">Pole: %1$s</string>
     <string name="projects_field_readonly">Iba na čítanie</string>
     <string name="projects_field_sortable">Zoraditeľné</string>
     <string name="projects_field_filterable">Filtrovateľné</string>
     <string name="projects_field_show_on_card">Zobraziť na karte</string>
-    <string name="projects_field_multi">Viacnásobný výber</string>
     <string name="projects_field_position">Pozícia zobrazenia</string>
     <string name="projects_field_position_header">Hlavička</string>
     <string name="projects_field_validation">Overenie</string>
@@ -253,7 +246,6 @@
     <string name="projects_views_border_field">Pole farby okraja</string>
     <string name="projects_views_filter_classes">Filtrovať podľa tried</string>
     <string name="projects_views_by">podľa %1$s</string>
-    <string name="projects_views_sorted">zoradené %1$s</string>
     <string name="projects_design_preview_label">Náhľad:</string>
     <string name="projects_design_preview_no_view">Žiadne zobrazenie na náhľad</string>
     <string name="projects_design_preview_no_class">Pre toto zobrazenie nie je žiadna trieda</string>
@@ -302,6 +294,9 @@
     <string name="projects_settings_updated">Projekt aktualizovaný</string>
     <string name="projects_activity_attached">priložil(a)</string>
     <string name="projects_activity_commented">komentoval(a)</string>
+    <string name="projects_activity_moved">presunul(a) tento objekt</string>
+    <string name="projects_activity_linked">pridal(a) odkaz</string>
+    <string name="projects_activity_class">zmenil(a) triedu</string>
     <string name="projects_attachment_delete_confirm_message">Táto príloha bude natrvalo odstránená.</string>
     <string name="projects_attachment_delete_confirm_title">Odstrániť prílohu?</string>
     <string name="projects_settings_unsubscribe_section">Zrušiť odber projektu</string>
@@ -342,4 +337,5 @@
         <item quantity="other">Naozaj chcete odstrániť „%1$s“ a %2$s položiek pod ňou? Túto akciu nemožno vrátiť späť.</item>
     </plurals>
     <string name="projects_create_attachments_failed">Nepodarilo sa pripojiť: %1$s</string>
+    <string name="projects_activity_unknown">Neznáme</string>
 </resources>

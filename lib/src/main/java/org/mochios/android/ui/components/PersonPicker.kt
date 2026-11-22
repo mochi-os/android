@@ -62,8 +62,10 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.format.personName
 import org.mochios.android.model.User
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.android.util.fingerprint
 
 /**
  * Single-select person field. Tapping it opens a search popup over the project
@@ -81,14 +83,15 @@ fun PersonPicker(
     modifier: Modifier = Modifier
 ) {
     // Prefer the just-picked user's name so the box updates immediately, before
-    // the parent's resolver catches up; fall back to the resolved name, then id.
+    // the parent's resolver catches up; fall back to the resolved name, then
+    // the fingerprint of the id, never the id itself.
     var lastSelected by remember { mutableStateOf<User?>(null) }
     val hasSelection = !selectedId.isNullOrBlank()
-    val displayName = when {
-        !hasSelection -> null
-        lastSelected != null && lastSelected?.fingerprint == selectedId -> lastSelected?.name
-        !selectedName.isNullOrBlank() -> selectedName
-        else -> selectedId
+    val picked = lastSelected?.takeIf { user -> user.fingerprint == selectedId }?.name
+    val displayName = if (hasSelection) {
+        personName(picked?.takeIf { name -> name.isNotBlank() } ?: selectedName, fingerprint(selectedId.orEmpty()))
+    } else {
+        null
     }
 
     PersonPickerField(

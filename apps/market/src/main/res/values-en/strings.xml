@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The spelling the regional English overlays change, as the base spells it.
+    Android gives an English locale with no catalogue of its own (en-GB, en-AU,
+    en) its language's nearest region before the base, so without this every
+    English reader would be given a regional spelling.
+-->
+<resources>
+    <string name="market_audit_auction_cancelled">Auction cancelled</string>
+    <string name="market_audit_order_cancelled">Cancelled</string>
+    <string name="market_audit_subscription_cancelled">Cancelled</string>
+    <string name="market_chargeback_reason_check_returned">Cheque returned</string>
+    <string name="market_chargeback_reason_debit_not_authorized">Debit not authorised</string>
+    <string name="market_chargeback_reason_subscription_canceled">Subscription cancelled</string>
+    <string name="market_chargeback_reason_unrecognized">Unrecognised charge</string>
+    <string name="market_checkout_address_postcode">Postcode</string>
+    <string name="market_checkout_address_region">Region</string>
+    <string name="market_editor_zone_days_placeholder">e.g. 3-5 working days</string>
+    <string name="market_editor_zone_region">Region</string>
+    <string name="market_refund_reason_unauthorised">Unauthorised</string>
+    <string name="market_status_cancelled">Cancelled</string>
+</resources>

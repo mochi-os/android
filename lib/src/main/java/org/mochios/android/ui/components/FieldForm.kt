@@ -26,7 +26,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.R
 
 /**
  * A field type offered by [FieldForm].
@@ -40,6 +42,33 @@ data class FieldTypeOption(
 )
 
 /**
+ * The field types a project or CRM class can be given, in the order a picker
+ * offers them, as the type keys the server stores.
+ */
+val FIELD_TYPES = listOf("text", "number", "enumerated", "user", "date", "checkbox", "checklist")
+
+/**
+ * The translated name of the field type [type]; the key itself for a type
+ * this client does not know.
+ */
+@Composable
+fun fieldTypeLabel(type: String): String = when (type) {
+    "text" -> stringResource(R.string.field_type_text)
+    "number" -> stringResource(R.string.field_type_number)
+    "enumerated" -> stringResource(R.string.field_type_enumerated)
+    "user" -> stringResource(R.string.field_type_user)
+    "date" -> stringResource(R.string.field_type_date)
+    "checkbox" -> stringResource(R.string.field_type_checkbox)
+    "checklist" -> stringResource(R.string.field_type_checklist)
+    else -> type
+}
+
+/** Every one of [FIELD_TYPES] with its translated name, in picker order. */
+@Composable
+fun fieldTypeOptions(): List<FieldTypeOption> =
+    FIELD_TYPES.map { type -> FieldTypeOption(type, fieldTypeLabel(type)) }
+
+/**
  * Wording for [FieldForm], resolved by the feature from its own strings.
  *
  * @property name Label of the name field.
@@ -48,7 +77,6 @@ data class FieldTypeOption(
  * @property readonly Label of the read-only flag.
  * @property sortable Label of the sortable flag.
  * @property filterable Label of the filterable flag.
- * @property multi Label of the multi-select flag, shown for enumerated fields.
  */
 data class FieldFormLabels(
     val name: String,
@@ -56,8 +84,7 @@ data class FieldFormLabels(
     val required: String,
     val readonly: String,
     val sortable: String,
-    val filterable: String,
-    val multi: String
+    val filterable: String
 )
 
 /**
@@ -85,9 +112,6 @@ class FieldFormState {
     /** Whether views may filter on the field. */
     var isFilterable by mutableStateOf(false)
 
-    /** Whether an enumerated field takes several values. */
-    var isMulti by mutableStateOf(false)
-
     /** Whether the form holds enough to save. */
     val canSave: Boolean
         get() = name.isNotBlank()
@@ -108,9 +132,6 @@ class FieldFormState {
         }
     }.joinToString(",").ifEmpty { null }
 
-    /** True for a multi-select enumerated field, null for anything else. */
-    fun multi(): Boolean? = if (fieldtype == "enumerated" && isMulti) true else null
-
     companion object {
 
         /** Keeps the form's values across configuration changes. */
@@ -122,8 +143,7 @@ class FieldFormState {
                     state.isRequired,
                     state.isReadonly,
                     state.isSortable,
-                    state.isFilterable,
-                    state.isMulti
+                    state.isFilterable
                 )
             },
             restore = { values ->
@@ -134,7 +154,6 @@ class FieldFormState {
                     isReadonly = values[3] as Boolean
                     isSortable = values[4] as Boolean
                     isFilterable = values[5] as Boolean
-                    isMulti = values[6] as Boolean
                 }
             }
         )
@@ -151,21 +170,21 @@ fun rememberFieldFormState(): FieldFormState =
     rememberSaveable(saver = FieldFormState.Saver) { FieldFormState() }
 
 /**
- * The fields of a new class field: name, a type picker and the flags, with
- * multi-select offered once the type is enumerated. Does not scroll.
+ * The fields of a new class field: name, a type picker and the flags. Does
+ * not scroll.
  *
  * @param state Values the form edits.
- * @param types Types to offer, in picker order.
  * @param labels Feature-specific wording.
  * @param modifier Modifier applied to the form's column.
+ * @param types Types to offer, in picker order: every field type by default.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FieldForm(
     state: FieldFormState,
-    types: List<FieldTypeOption>,
     labels: FieldFormLabels,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    types: List<FieldTypeOption> = fieldTypeOptions()
 ) {
     var typeExpanded by remember { mutableStateOf(false) }
     val typeLabel = types.find { type -> type.key == state.fieldtype }?.label ?: state.fieldtype
@@ -231,13 +250,6 @@ fun FieldForm(
             checked = state.isFilterable,
             onCheckedChange = { checked -> state.isFilterable = checked }
         )
-        if (state.fieldtype == "enumerated") {
-            CheckboxRow(
-                label = labels.multi,
-                checked = state.isMulti,
-                onCheckedChange = { checked -> state.isMulti = checked }
-            )
-        }
     }
 }
 

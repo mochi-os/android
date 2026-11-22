@@ -370,4 +370,13 @@
     <string name="devices_username">Jina la mtumiaji</string>
     <string name="devices_warning">Nakili nenosiri sasa: haliwezi kuonyeshwa tena.</string>
     <string name="devices_unused">Haijawahi kutumika</string>
+    <string name="field_type_text">Maandishi</string>
+    <string name="field_type_number">Nambari</string>
+    <string name="field_type_enumerated">Iliyoorodheshwa</string>
+    <string name="field_type_user">Mtumiaji</string>
+    <string name="field_type_date">Tarehe</string>
+    <string name="field_type_checkbox">Kisanduku cha kuteua</string>
+    <string name="field_type_checklist">Orodha ya ukaguzi</string>
+    <string name="view_list_sorted_ascending">imepangwa kwa kupanda</string>
+    <string name="view_list_sorted_descending">imepangwa kwa kushuka</string>
 </resources>

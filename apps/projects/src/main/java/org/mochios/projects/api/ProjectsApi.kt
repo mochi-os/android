@@ -26,14 +26,12 @@ import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 import org.mochios.projects.model.Repository
 import org.mochios.projects.model.Template
-import org.mochios.projects.model.Watcher
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
-import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Multipart
@@ -86,7 +84,8 @@ data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
 data class ActivityListResponse(val activities: List<Activity> = emptyList())
 data class LinkListResponse(val incoming: List<Link> = emptyList(), val outgoing: List<Link> = emptyList())
-data class WatcherListResponse(val watchers: List<Watcher> = emptyList(), val watching: Boolean = false)
+// The watchers list beside it is not read: the sheet shows only whether the user watches.
+data class WatcherListResponse(val watching: Boolean = false)
 data class MergeRequestListResponse(val requests: List<MergeRequest> = emptyList())
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
@@ -114,7 +113,6 @@ data class MoveObjectRequest(
     val rank: Int?,
     val row: String?,
     val scope: String?,
-    val promote: String?,
 )
 
 // Body of `classes/{class}/hierarchy/set`: the parents comma-separated, as the
@@ -138,7 +136,6 @@ data class UpdateViewRequest(
 data class UpdateFieldRequest(
     val name: String?,
     val flags: String?,
-    val multi: Boolean?,
     val card: Boolean?,
     val position: String?,
     val rows: String?,
@@ -187,24 +184,29 @@ data class UpdateClassRequest(val name: String? = null, val title: String? = nul
 data class ShareResponse(val link: String = "")
 
 data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
-data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
-data class OptionListResponse(val options: List<FieldOption> = emptyList())
-data class ViewListResponse(val views: List<ProjectView> = emptyList())
 data class RepositoryListResponse(val repositories: List<Repository> = emptyList())
 data class BranchListResponse(val branches: List<Branch> = emptyList())
-data class MergeCheckResponse(
-    @SerializedName("mergeable") val canMerge: Boolean = false,
-    val conflicts: List<String> = emptyList(),
-    val base: String = "",
-    val ahead: Int = 0,
-    val behind: Int = 0
-)
 data class SuccessResponse(val success: Boolean = false)
+
+// `-/repositories/{repository}/merge`: [recorded] when the server also marked
+// the merge request it was given merged; absent from a server that does not
+// take one, or when recording it failed after the merge.
+data class MergeResponse(val success: Boolean = false, val recorded: Boolean? = null)
 data class UserSearchResponse(val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
-data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(@SerializedName("style") val preference: String = "unified")
+
+// `-/recommendations`: a project the directory recommends, with its [blurb]
+// where a project otherwise carries a description.
+data class Recommendation(
+    val id: String = "",
+    val name: String = "",
+    val blurb: String = "",
+    val fingerprint: String = "",
+    val server: String? = null,
+)
+data class RecommendationListResponse(val projects: List<Recommendation> = emptyList())
 
 interface ProjectsApi {
 
@@ -230,7 +232,7 @@ interface ProjectsApi {
     suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<List<Project>>>
 
     @GET("-/recommendations")
-    suspend fun getRecommendations(): Response<ApiResponse<ProjectListResponse>>
+    suspend fun getRecommendations(): Response<ApiResponse<RecommendationListResponse>>
 
     @FormUrlEncoded
     @POST("-/probe")
@@ -267,7 +269,7 @@ interface ProjectsApi {
         @Path("repository") repository: String,
         @Field("source") source: String,
         @Field("target") target: String
-    ): Response<ApiResponse<MergeCheckResponse>>
+    ): Response<ApiResponse<MergeCheck>>
 
     @FormUrlEncoded
     @POST("-/repositories/{repository}/diff")
@@ -279,6 +281,8 @@ interface ProjectsApi {
 
     // Class-level, so the project is named in the form: the server resolves
     // it before it decides whether the merge runs locally or at the owner.
+    // [request] is the merge request the merge completes, which the server
+    // then records merged in the same call.
     @FormUrlEncoded
     @POST("-/repositories/{repository}/merge")
     suspend fun merge(
@@ -287,8 +291,9 @@ interface ProjectsApi {
         @Field("source") source: String,
         @Field("target") target: String,
         @Field("message") message: String,
-        @Field("method") method: String? = null
-    ): Response<ApiResponse<SuccessResponse>>
+        @Field("method") method: String? = null,
+        @Field("request") request: String? = null
+    ): Response<ApiResponse<MergeResponse>>
 
     @GET("-/diff/preference")
     suspend fun getDiffPreference(): Response<ApiResponse<PreferenceResponse>>
@@ -372,14 +377,6 @@ interface ProjectsApi {
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Body body: MoveObjectRequest
-    ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
-    @POST("{projectId}/-/objects/{objectId}/values")
-    suspend fun setValues(
-        @Path("projectId") projectId: String,
-        @Path("objectId") objectId: String,
-        @FieldMap values: Map<String, String>
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/objects/{objectId}/values/{fieldId}")
@@ -525,10 +522,13 @@ interface ProjectsApi {
 
     // ---- Activity ----
 
+    // Newest first, a page of [limit] entries from [offset].
     @GET("{projectId}/-/objects/{objectId}/activity")
     suspend fun getActivity(
         @Path("projectId") projectId: String,
-        @Path("objectId") objectId: String
+        @Path("objectId") objectId: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int,
     ): Response<ApiResponse<ActivityListResponse>>
 
     // ---- Watchers ----
@@ -593,9 +593,6 @@ interface ProjectsApi {
 
     // ---- Views ----
 
-    @GET("{projectId}/-/views")
-    suspend fun getViews(@Path("projectId") projectId: String): Response<ApiResponse<ViewListResponse>>
-
     @FormUrlEncoded
     @POST("{projectId}/-/views/create")
     suspend fun createView(
@@ -633,9 +630,6 @@ interface ProjectsApi {
 
     // ---- Classes ----
 
-    @GET("{projectId}/-/classes")
-    suspend fun getClasses(@Path("projectId") projectId: String): Response<ApiResponse<ClassListResponse>>
-
     @FormUrlEncoded
     @POST("{projectId}/-/classes/create")
     suspend fun createClass(
@@ -660,12 +654,6 @@ interface ProjectsApi {
 
     // ---- Hierarchy ----
 
-    @GET("{projectId}/-/classes/{classId}/hierarchy")
-    suspend fun getHierarchy(
-        @Path("projectId") projectId: String,
-        @Path("classId") classId: String
-    ): Response<ApiResponse<HierarchyResponse>>
-
     @POST("{projectId}/-/classes/{classId}/hierarchy/set")
     suspend fun setHierarchy(
         @Path("projectId") projectId: String,
@@ -688,8 +676,7 @@ interface ProjectsApi {
         @Path("classId") classId: String,
         @Field("name") name: String,
         @Field("fieldtype") fieldtype: String,
-        @Field("flags") flags: String?,
-        @Field("multi") multi: Boolean?
+        @Field("flags") flags: String?
     ): Response<ApiResponse<ProjectField>>
 
     @FormUrlEncoded
@@ -716,13 +703,6 @@ interface ProjectsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Options ----
-
-    @GET("{projectId}/-/classes/{classId}/fields/{fieldId}/options")
-    suspend fun getOptions(
-        @Path("projectId") projectId: String,
-        @Path("classId") classId: String,
-        @Path("fieldId") fieldId: String
-    ): Response<ApiResponse<OptionListResponse>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/options/create")

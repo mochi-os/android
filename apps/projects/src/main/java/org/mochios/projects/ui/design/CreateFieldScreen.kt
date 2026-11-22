@@ -17,7 +17,6 @@ import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
 import org.mochios.android.ui.components.FieldForm
 import org.mochios.android.ui.components.FieldFormLabels
-import org.mochios.android.ui.components.FieldTypeOption
 import org.mochios.android.ui.components.rememberFieldFormState
 import org.mochios.projects.R
 
@@ -55,14 +54,12 @@ fun CreateFieldScreen(
                 formState.name,
                 formState.fieldtype,
                 formState.flags(),
-                formState.multi()
             )
         }
     ) { padding ->
         CreateEntityForm(padding) {
             FieldForm(
                 state = formState,
-                types = fieldTypeOptions(),
                 labels = FieldFormLabels(
                     name = stringResource(R.string.projects_field_name),
                     type = stringResource(R.string.projects_field_type),
@@ -70,20 +67,9 @@ fun CreateFieldScreen(
                     readonly = stringResource(R.string.projects_field_readonly),
                     sortable = stringResource(R.string.projects_field_sortable),
                     filterable = stringResource(R.string.projects_field_filterable),
-                    multi = stringResource(R.string.projects_field_multi)
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
         }
     }
 }
-
-@Composable
-private fun fieldTypeOptions() = listOf(
-    FieldTypeOption("text", stringResource(R.string.projects_field_type_text)),
-    FieldTypeOption("number", stringResource(R.string.projects_field_type_number)),
-    FieldTypeOption("enumerated", stringResource(R.string.projects_field_type_enumerated)),
-    FieldTypeOption("user", stringResource(R.string.projects_field_type_user)),
-    FieldTypeOption("date", stringResource(R.string.projects_field_type_date)),
-    FieldTypeOption("checklist", stringResource(R.string.projects_field_type_checklist))
-)

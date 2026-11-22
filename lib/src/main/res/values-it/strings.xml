@@ -371,4 +371,13 @@
     <string name="devices_username">Nome utente</string>
     <string name="devices_warning">Copia la password adesso: non potrà essere mostrata di nuovo.</string>
     <string name="devices_unused">Mai usato</string>
+    <string name="field_type_text">Testo</string>
+    <string name="field_type_number">Numero</string>
+    <string name="field_type_enumerated">Enumerato</string>
+    <string name="field_type_user">Utente</string>
+    <string name="field_type_date">Data</string>
+    <string name="field_type_checkbox">Casella di controllo</string>
+    <string name="field_type_checklist">Checklist</string>
+    <string name="view_list_sorted_ascending">ordine crescente</string>
+    <string name="view_list_sorted_descending">ordine decrescente</string>
 </resources>
