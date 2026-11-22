@@ -25,7 +25,7 @@ packages = ../../packages/android
 generated := $(shell date +%s)
 key = ../../core/local/update-signing.key
 
-.PHONY: all apk clean locales release
+.PHONY: all apk clean locales release release-publish
 
 all: apk
 
@@ -77,8 +77,23 @@ release: apk
 	# package host did not get from a release. The script checks each signature
 	# against the key the server pins before it replaces the old one.
 	../../core/build/scripts/sign-manifest $(key) $(packages)/versions.json
-	# Two passes: rsync creates a symlink up front but transfers its target minutes
-	# later, so a single pass leaves the download URL pointing at nothing for the
-	# whole upload; the second repoints the link.
-	rsync -av --exclude=/mochi.apk --exclude=/mochi.apk.gz $(packages)/ root@yuzu:/srv/packages/android/
-	rsync -av $(packages)/ root@yuzu:/srv/packages/android/
+	$(MAKE) --no-print-directory release-publish
+
+# The package host's copy of the tree. A variable so the tests can point the
+# upload at a local directory.
+remote = root@yuzu:/srv/packages/android
+
+# Publish the staged tree, which is this release's alone: core's release leaves
+# android/ out of its upload. Two passes: rsync creates a symlink up front but
+# transfers its target minutes later, so a single pass leaves the download URL
+# pointing at nothing for the whole upload; the second repoints the link. The
+# third, once the links name the new APK, removes from the host the APKs the
+# staging above deleted here, and nothing else in its directory. A tree without
+# this release's APK is refused first: the third pass would delete every APK on
+# the host.
+release-publish:
+	@test -f $(packages)/mochi-$(version).apk && test -f $(packages)/mochi-$(version).apk.gz || \
+	    { echo ">>> $(packages) holds no mochi-$(version).apk and .apk.gz: not publishing"; exit 1; }
+	rsync -av --exclude=/mochi.apk --exclude=/mochi.apk.gz $(packages)/ $(remote)/
+	rsync -av $(packages)/ $(remote)/
+	rsync -av --delete-after --include='mochi-*.apk' --include='mochi-*.apk.gz' --exclude='*' $(packages)/ $(remote)/
