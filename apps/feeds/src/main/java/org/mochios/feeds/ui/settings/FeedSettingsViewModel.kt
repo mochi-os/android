@@ -450,10 +450,16 @@ class FeedSettingsViewModel @Inject constructor(
         type: String,
         account: String?,
     ) {
+        // Ask only for a permission the server can name: a failed lookup is
+        // reported in the add dialog as the lookup's failure, never shown as
+        // the code.
         val name = try {
             repository.permissionName(error.permission)
-        } catch (_: Exception) {
-            error.permission
+        } catch (lookup: CancellationException) {
+            throw lookup
+        } catch (lookup: Exception) {
+            _addSourceError.value = lookup.toMochiError()
+            return
         }
         _pendingPermission.value = PendingPermission(
             app = error.app,

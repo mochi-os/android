@@ -288,12 +288,17 @@ class FindFeedsViewModel @Inject constructor(
                 _people.value = _people.value.map { if (it.id == query || it.handle == query) it.copy(followed = true) else it }
                 _followed.emit(result.ingested)
             } catch (e: PermissionRequiredException) {
-                val name = try {
-                    repository.permissionName(e.permission)
-                } catch (_: Exception) {
-                    e.permission
+                // Ask only for a permission the server can name: a failed
+                // lookup is reported as the lookup's failure, never shown as
+                // the code.
+                try {
+                    val name = repository.permissionName(e.permission)
+                    _pendingPermission.value = PendingFollow(e.app, e.permission, name, feed, query)
+                } catch (lookup: CancellationException) {
+                    throw lookup
+                } catch (lookup: Exception) {
+                    _error.value = lookup.toMochiError()
                 }
-                _pendingPermission.value = PendingFollow(e.app, e.permission, name, feed, query)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {

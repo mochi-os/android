@@ -4,6 +4,7 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 package org.mochios.feeds.ui.settings
 
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -79,10 +80,16 @@ internal class WaitingAsker(
             next()
         } catch (e: PermissionRequiredException) {
             _working.value = false
+            // Ask only for a permission the server can name: a failed lookup
+            // is reported as the lookup's failure, never shown as the code.
             val name = try {
                 repository.permissionName(e.permission)
-            } catch (_: Exception) {
-                e.permission
+            } catch (lookup: CancellationException) {
+                throw lookup
+            } catch (lookup: Exception) {
+                failed(lookup)
+                next()
+                return
             }
             _pending.value = PendingPermission(app = e.app, permission = e.permission, name = name, retryUrl = "", retryType = "", retryServer = server)
         } catch (e: Exception) {

@@ -436,13 +436,17 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    /** Resolve a permission key to its human label. */
+    /**
+     * Resolve a permission key to its human label. A key the server names
+     * with nothing is refused, so no consent dialog opens on a raw code.
+     */
     suspend fun permissionName(permission: String): String {
-        return try {
+        val name = try {
             menuApi.permissionName(permission).unwrap().name
         } catch (e: Exception) {
             throw e.toMochiError()
         }
+        return name.ifBlank { throw MochiError.Unknown() }
     }
 
     /** Grant [app] the given [permission], returning the resulting status. */

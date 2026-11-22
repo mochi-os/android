@@ -231,6 +231,7 @@ class NetworksViewModelsTest {
                     "/feeds/-/permissions/grant" -> if (grantRefused) {
                         MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed to grant that"}""")
                     } else ok("""{"status": "granted"}""")
+                    "/feeds/-/permissions/name" -> ok("""{"name": "Fetch from the server"}""")
                     "/feeds/f1/-/sources/add" -> addAnswers.poll() ?: ok("""{"source": {"id": "s1"}, "ingested": 2}""")
                     "/feeds/f1/-/sources/import" -> ok("""{"imported": 5, "more": false, "total": 5, "waiting": [{"server": "wasabi.example", "count": 1}]}""")
                     "/feeds/-/lookup" -> raw("""{"kind": "person", "network": "fediverse", "id": "https://there.example/u/a", "name": "Alice"}""")

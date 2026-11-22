@@ -27,6 +27,7 @@ import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.TokenApi
 import org.mochios.android.files.FileStore
+import org.mochios.android.i18n.AppContext
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.repository.CalendarsRepository
@@ -64,8 +65,12 @@ class SubscribeScreenTest {
 
     private val enabled = mutableListOf<Unit>()
 
+    /** What `-/permissions/name` answers. */
+    @Volatile private var naming: () -> MockResponse = { ok("""{"name": "Fetch from example.org"}""") }
+
     @Before
     fun begin() {
+        AppContext.set(context)
         server = MockWebServer()
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
@@ -79,7 +84,7 @@ class SubscribeScreenTest {
                     "-/calendars/subscribe" -> MockResponse().setResponseCode(403).setBody(
                         """{"error": "permission_required", "app": "$ENTITY", "permission": "url:example.org"}""",
                     )
-                    "-/permissions/name" -> ok("""{"name": "Fetch from example.org"}""")
+                    "-/permissions/name" -> naming()
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -194,6 +199,37 @@ class SubscribeScreenTest {
         assertEquals(1, count("Fetch from example.org"))
         assertEquals(0, rule.onAllNodes(hasText(ENTITY, substring = true)).fetchSemanticsNodes().size)
         assertEquals(ENTITY, model.uiState.value.permission?.app)
+    }
+
+    /** Subscribes to an address whose fetch needs a permission, and waits for the answer. */
+    private fun refused(): SubscribeCalendarViewModel {
+        val model = model()
+        settle(model)
+        rule.setContent {
+            SubscribeCalendarScreen(onBack = {}, onSubscribed = {}, onEnableGoogle = {}, viewModel = model)
+        }
+        model.choose(SubscribeKind.ADDRESS)
+        model.setUrl("https://example.org/holidays.ics")
+        model.subscribe()
+        until { model.uiState.value.permission != null || model.uiState.value.error != null }
+        return model
+    }
+
+    @Test
+    fun `a permission the server will not name is reported, never asked for by its code`() {
+        naming = { MockResponse().setResponseCode(404).setBody("""{"error": "not_found", "message": "Not found"}""") }
+        val model = refused()
+        assertEquals("THE POINT: no consent opens on a permission the server cannot name", null, model.uiState.value.permission)
+        assertEquals(true, model.uiState.value.error != null)
+        assertEquals(0, rule.onAllNodes(hasText("url:example.org", substring = true)).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `a permission the server names with nothing is reported, never asked for empty`() {
+        naming = { ok("""{"name": ""}""") }
+        val model = refused()
+        assertEquals("THE POINT: no consent opens on an empty name", null, model.uiState.value.permission)
+        assertEquals(true, model.uiState.value.error != null)
     }
 
     @Test

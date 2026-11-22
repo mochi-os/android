@@ -55,6 +55,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -487,11 +488,20 @@ class SubscribeCalendarViewModel @Inject constructor(
             } catch (e: PermissionRequiredException) {
                 // Not a failure: the subscribe succeeds once the app may fetch
                 // from that host, so ask and replay it.
-                val label = runCatching { repository.permissionName(e.permission) }.getOrDefault(e.permission)
-                _uiState.value = _uiState.value.copy(
-                    isBusy = false,
-                    permission = PendingPermission(e.app, e.permission, label, url, name, colour),
-                )
+                // Ask only for a permission the server can name: a failed
+                // lookup is reported as the lookup's failure, never shown as
+                // the code.
+                try {
+                    val label = repository.permissionName(e.permission)
+                    _uiState.value = _uiState.value.copy(
+                        isBusy = false,
+                        permission = PendingPermission(e.app, e.permission, label, url, name, colour),
+                    )
+                } catch (lookup: CancellationException) {
+                    throw lookup
+                } catch (lookup: Exception) {
+                    _uiState.value = _uiState.value.copy(isBusy = false, error = lookup.toMochiError())
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isBusy = false, error = e.toMochiError())
             }

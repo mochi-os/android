@@ -258,10 +258,13 @@ class CalendarsRepository @Inject constructor(
         api.exportCalendar(calendar).unwrapRaw().string()
     }
 
-    /** Resolve a permission key to its human label. */
+    /**
+     * Resolve a permission key to its human label. A key the server names
+     * with nothing is refused, so no consent dialog opens on a raw code.
+     */
     suspend fun permissionName(permission: String): String = call {
         menuApi.permissionName(permission).unwrap().name
-    }
+    }.ifBlank { throw MochiError.Unknown() }
 
     /** Grant [app] the given [permission], returning the resulting status. */
     suspend fun grantPermission(app: String, permission: String): String = call {
