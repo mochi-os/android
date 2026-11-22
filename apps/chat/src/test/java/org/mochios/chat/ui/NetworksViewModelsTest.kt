@@ -115,6 +115,10 @@ class NetworksViewModelsTest {
     /** The status the directory search answers with. */
     @Volatile private var searchStatus = 200
 
+    /** The fingerprint the person's device presents, and whether a word on it is refused as its identity changed. */
+    @Volatile private var fingerprint = "f"
+    @Volatile private var trustRefused = false
+
     /** Held, the next read of the encryption overview waits for it. */
     @Volatile private var encryptionGate: java.util.concurrent.CountDownLatch? = null
 
@@ -178,8 +182,10 @@ class NetworksViewModelsTest {
                         gate?.await(5, java.util.concurrent.TimeUnit.SECONDS)
                         ok("""{"account": "m1", "status": {"network": "matrix", "address": "@me:m.example", "device": "D", "fingerprint": "abc", "signing": false}, "people": [{"id": "@carol:m.example", "name": "Carol"}]}""")
                     }
-                    "/chat/c1/-/encryption/devices" -> ok("""{"devices": [{"id": "7", "fingerprint": "f", "verified": false, "own": false}, {"id": "D", "fingerprint": "g", "own": true}]}""")
-                    "/chat/c1/-/encryption/trust" -> ok("""{}""")
+                    "/chat/c1/-/encryption/devices" -> ok("""{"devices": [{"id": "7", "fingerprint": "$fingerprint", "verified": false, "own": false}, {"id": "D", "fingerprint": "g", "own": true}]}""")
+                    "/chat/c1/-/encryption/trust" -> if (trustRefused) {
+                        MockResponse().setResponseCode(409).setBody("""{"error": "The device's key has changed since you compared it"}""")
+                    } else ok("""{}""")
                     "/chat/c1/-/encryption/setup" -> {
                         setups++
                         if (setups == 1) ok("""{"password": true}""") else ok("""{"recovery": "KEY one"}""")
@@ -585,11 +591,48 @@ class NetworksViewModelsTest {
         model.toggle("@carol:m.example")
         until("the devices") { model.uiState.value.devices["@carol:m.example"]?.isLoading == false }
         assertEquals("person=%40carol%3Am.example", requests.last { it.path == "/chat/c1/-/encryption/devices" }.query)
-        model.trust("@carol:m.example", "7", "verified")
+        model.trust("@carol:m.example", device(model, "7"), "verified")
         until("the trust") { sent("/chat/c1/-/encryption/trust") != null }
-        assertEquals("person=%40carol%3Am.example&device=7&trust=verified", sent("/chat/c1/-/encryption/trust"))
+        assertEquals(
+            "the word goes with the fingerprint compared",
+            "person=%40carol%3Am.example&device=7&trust=verified&fingerprint=f",
+            sent("/chat/c1/-/encryption/trust"),
+        )
         model.toggle("@carol:m.example")
         assertFalse("@carol:m.example" in model.uiState.value.open)
+    }
+
+    private fun device(model: EncryptionViewModel, id: String) =
+        model.uiState.value.devices.values.flatMap { it.devices }.first { it.id == id }
+
+    @Test
+    fun `a word on a device whose identity changed since it was shown is refused, said, and the devices read again`() {
+        val model = encryption()
+        val events = mutableListOf<EncryptionEvent>()
+        val listen = CoroutineScope(Dispatchers.Main).launch { model.events.collect { events += it } }
+        try {
+            model.toggle("@carol:m.example")
+            until("the devices") { model.uiState.value.devices["@carol:m.example"]?.isLoading == false }
+            val shown = device(model, "7")
+            // The device presents a new identity before the user's word arrives.
+            fingerprint = "new"
+            trustRefused = true
+            val reads = count("/chat/c1/-/encryption/devices")
+            model.trust("@carol:m.example", shown, "verified")
+            until("the refusal") { events.isNotEmpty() }
+            until("the devices again") {
+                count("/chat/c1/-/encryption/devices") > reads && model.uiState.value.devices["@carol:m.example"]?.isLoading == false
+            }
+        } finally {
+            listen.cancel()
+        }
+        assertEquals("fingerprint=f", sent("/chat/c1/-/encryption/trust")!!.substringAfterLast("&"))
+        assertEquals(
+            "THE POINT: the server's words",
+            EncryptionEvent.Said("The device's key has changed since you compared it"),
+            events.single(),
+        )
+        assertEquals("the new identity is shown", "new", device(model, "7").fingerprint)
     }
 
     @Test

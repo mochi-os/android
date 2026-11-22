@@ -16,7 +16,6 @@
     <string name="crm_create_object">ສ້າງວັດຖຸ</string>
     <string name="crm_search">ຄົ້ນຫາ</string>
     <string name="crm_settings">ການຕັ້ງຄ່າ</string>
-    <string name="crm_link">ລິ້ງ</string>
     <string name="crm_design">ການອອກແບບ</string>
     <string name="crm_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
     <string name="crm_sort_rank">ດ້ວຍຕົນເອງ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ບໍ່ພົບ CRM</string>
     <string name="crm_create_blocked_no_parents">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
     <string name="crm_export_csv">ສົ່ງອອກ CSV</string>
-    <string name="crm_share_link_title">ແບ່ງປັນ CRM</string>
     <string name="crm_export_saved">ບັນທຶກຂໍ້ມູນ CRM ແລ້ວ</string>
     <string name="crm_create_upload_json">ອັບໂຫຼດໄຟລ໌ .zip ຫຼື .json</string>
     <string name="crm_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>

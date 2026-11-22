@@ -16,7 +16,6 @@
     <string name="crm_create_object">ઘટક બનાવો</string>
     <string name="crm_search">શોધો</string>
     <string name="crm_settings">સેટિંગ્સ</string>
-    <string name="crm_link">લિંક</string>
     <string name="crm_design">ડિઝાઇન</string>
     <string name="crm_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
     <string name="crm_sort_rank">મેન્યુઅલ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">કોઈ CRM મળ્યા નથી</string>
     <string name="crm_create_blocked_no_parents">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
     <string name="crm_export_csv">CSV એક્સપોર્ટ કરો</string>
-    <string name="crm_share_link_title">CRM શેર કરો</string>
     <string name="crm_export_saved">CRM ડેટા સાચવ્યો</string>
     <string name="crm_create_upload_json">.zip અથવા .json ફાઇલ અપલોડ કરો</string>
     <string name="crm_create_blocked_no_options">બનાવી શકાતું નથી: %1$s જરૂરી છે પણ પસંદ કરવા માટે કોઈ વિકલ્પ નથી. ડિઝાઇનમાં વિકલ્પો ઉમેરો.</string>

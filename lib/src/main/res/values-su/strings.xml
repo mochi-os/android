@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s neruskeun kaulinan</string>
     <string name="game_not_found">Kaulinan teu kapendak</string>
     <string name="game_chat_move_played_you">Anjeun maén %1$s</string>
+    <string name="share_title">Bagikeun</string>
+    <string name="share_feed">Kirim ka feed</string>
+    <string name="share_chat">Kirim dina obrolan</string>
     <string name="devices_add">Tambah pakakas</string>
     <string name="devices_copy">Salin %1$s</string>
     <string name="devices_create">Jieun</string>

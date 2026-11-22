@@ -127,6 +127,31 @@
         </activity>
 
         <!--
+          Mochi as a destination in the system share sheet: a page from a
+          browser, text, photos, or an item one of Mochi's own apps shares.
+          Its chooser opens Feeds' new post or Chat's choice of chat through
+          the app's own nonce-gated link, so this activity, exported for any
+          app to send to, carries words and images and nothing that routes.
+        -->
+        <activity
+            android:name="org.mochios.android.share.ShareActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Mochi.Share">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <!--
           adjustResize is the other half of MainActivity's enableEdgeToEdge():
           with it the window reports the keyboard as an inset and the content
           pads itself (ComposeBar's windowInsets do exactly that). Left

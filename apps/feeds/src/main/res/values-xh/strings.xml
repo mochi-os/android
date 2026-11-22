@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Eyoqobo</string>
     <string name="feeds_ai_prompt_custom">Yezifiso</string>
     <string name="feeds_ai_prompt_variables">Iiguquguquko: %1$s</string>
-    <string name="feeds_link">Ikhonkco</string>
-    <string name="feeds_share_link_title">Ikhonkco lefidi</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">ilizwi elinye</item>
         <item quantity="other">amazwi ayi-%1$s</item>

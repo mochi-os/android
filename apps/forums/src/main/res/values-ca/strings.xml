@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Indicació de puntuació</string>
     <string name="forums_ai_prompt_tag_label">Indicació d\'etiqueta</string>
     <string name="forums_ai_prompt_variables">Variables: %1$s</string>
-    <string name="forums_link">Enllaç</string>
     <string name="forums_moderation_ban_message">Perd l\'accés al fòrum fins que no elimineu la restricció.</string>
     <string name="forums_moderation_ban_title">Voleu bandejar %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Encara no s\'ha registrat cap acció de moderació</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">S\'ha canviat el nom del fòrum</string>
     <string name="forums_settings_name_clear_cd">Esborra el nom</string>
     <string name="forums_settings_unsubscribe_section">Dona\'t de baixa del fòrum</string>
-    <string name="forums_share_link_title">Enllaç del fòrum</string>
     <string name="forums_find_found_by_url">Trobat per URL</string>
     <string name="forums_moderation_pending_posts">Publicacions pendents (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentaris pendents (%1$s)</string>

@@ -360,6 +360,9 @@
     <string name="game_system_score_resume">%1$s kompla jilgħab</string>
     <string name="game_not_found">Il-logħba ma nstabitx</string>
     <string name="game_chat_move_played_you">Int lgħabt %1$s</string>
+    <string name="share_title">Aqsam</string>
+    <string name="share_feed">Ippubblika f\'feed</string>
+    <string name="share_chat">Ibgħat f\'chat</string>
     <string name="devices_add">Żid apparat</string>
     <string name="devices_copy">Ikkupja %1$s</string>
     <string name="devices_create">Oħloq</string>

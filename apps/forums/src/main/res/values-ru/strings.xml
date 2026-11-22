@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Промпт оценки</string>
     <string name="forums_ai_prompt_tag_label">Промпт тегов</string>
     <string name="forums_ai_prompt_variables">Переменные: %1$s</string>
-    <string name="forums_link">Ссылка</string>
     <string name="forums_moderation_ban_message">Пользователь теряет доступ к форуму, пока вы не снимете ограничение.</string>
     <string name="forums_moderation_ban_title">Забанить %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Действий модерации пока не записано</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Форум переименован</string>
     <string name="forums_settings_name_clear_cd">Очистить название</string>
     <string name="forums_settings_unsubscribe_section">Отписаться от форума</string>
-    <string name="forums_share_link_title">Ссылка на форум</string>
     <string name="forums_find_found_by_url">Найдено по URL</string>
     <string name="forums_moderation_pending_posts">Ожидающие публикации (%1$s)</string>
     <string name="forums_moderation_pending_comments">Ожидающие комментарии (%1$s)</string>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Zgjidh një shabllon</string>
     <string name="projects_create_next">Tjetri</string>
     <string name="projects_filter">Filtro</string>
-    <string name="projects_link">Lidhje</string>
     <string name="projects_filter_clear_all">Pastro të gjitha</string>
     <string name="projects_filter_all">Të gjitha</string>
     <string name="projects_filter_other">Tjetër</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Kjo bashkëngjitje do të fshihet përgjithmonë.</string>
     <string name="projects_attachment_delete_confirm_title">Të fshihet bashkëngjitja?</string>
     <string name="projects_settings_unsubscribe_section">Çregjistrohu nga projekti</string>
-    <string name="projects_share_link_title">Ndaj projektin</string>
     <string name="projects_sort_filter_title">Rendit dhe filtro</string>
     <string name="projects_create_prefix_hint">Përdoret për ID të lexueshme si %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

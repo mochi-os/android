@@ -177,7 +177,7 @@
     <string name="chat_refused_friends_only">%1$s přijímá chaty pouze od přátel.</string>
     <string name="chat_message_earlier">Zprávy z doby před přidáním tohoto účtu do Mochi jsou šifrované a nelze je zde přečíst</string>
     <string name="chat_message_excluded">Šifrováno pouze pro jiná zařízení</string>
-    <string name="chat_setup">Nastavit</string>
+    <string name="chat_message_changed">Šifrovací klíč odesílatele se změnil</string>    <string name="chat_setup">Nastavit</string>
     <string name="chat_jump_bottom">Přejít dolů</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Přejít na %1$s novou zprávu</item>
@@ -188,6 +188,7 @@
     <string name="chat_message_mismatched">Odesláno ze zařízení, jehož klíče nesouhlasí</string>
     <string name="chat_list_select">Vyberte chat</string>
     <string name="chat_message_discard">Zahodit</string>
+    <string name="chat_message_unencrypted">Odeslat nešifrovaně</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Zpráva je o %1$s znak příliš dlouhá</item>
         <item quantity="few">Zpráva je o %1$s znaky příliš dlouhá</item>

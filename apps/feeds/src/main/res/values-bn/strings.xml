@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">ডিফল্ট</string>
     <string name="feeds_ai_prompt_custom">কাস্টম</string>
     <string name="feeds_ai_prompt_variables">ভেরিয়েবল: %1$s</string>
-    <string name="feeds_link">লিঙ্ক</string>
-    <string name="feeds_share_link_title">ফিড লিঙ্ক</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$sটি মন্তব্য</item>
         <item quantity="other">%1$sটি মন্তব্য</item>

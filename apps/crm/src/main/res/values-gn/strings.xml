@@ -16,7 +16,6 @@
     <string name="crm_create_object">Emoheñói mba\'e</string>
     <string name="crm_search">Eheka</string>
     <string name="crm_settings">Ñemboheko</string>
-    <string name="crm_link">Juajuha</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Ndaikatúi oñeñongatu ñemosẽ</string>
     <string name="crm_sort_rank">Manual</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Ndojejuhúi CRM</string>
     <string name="crm_create_blocked_no_parents">Ndaikatúi oñemoheñói gueteri item peteĩchagua. Emoheñói raẽ umi item ru/sy oñeikotevẽva.</string>
     <string name="crm_export_csv">Emosẽ CSV</string>
-    <string name="crm_share_link_title">Emboja\'o CRM</string>
     <string name="crm_export_saved">CRM datos oñeñongatúma</string>
     <string name="crm_create_upload_json">Ehupi .zip térã .json archivo</string>
     <string name="crm_create_blocked_no_options">Ndaikatúi oñemoheñói: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>

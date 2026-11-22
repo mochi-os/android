@@ -354,6 +354,9 @@
     <string name="game_system_score_resume">%1$s ойынды жалғастырды</string>
     <string name="game_not_found">Ойын табылмады</string>
     <string name="game_chat_move_played_you">Сіз %1$s ойнадыңыз</string>
+    <string name="share_title">Бөлісу</string>
+    <string name="share_feed">Таспада жариялау</string>
+    <string name="share_chat">Чатта жіберу</string>
     <string name="devices_add">Құрылғы қосу</string>
     <string name="devices_copy">%1$s көшіру</string>
     <string name="devices_create">Құру</string>

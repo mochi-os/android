@@ -5,9 +5,14 @@
 
 package org.mochios.feeds.ui
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Looper
+import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -33,6 +38,10 @@ import org.mochios.android.i18n.AppContext
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.feeds.R
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.android.share.ShareSheet
+import org.mochios.android.share.SharedImages
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.repository.FeedsRepository
@@ -182,6 +191,7 @@ class NetworksViewModelsTest {
                     "/feeds/-/read-all" -> ok("""{"ok": true, "read": 1, "feeds": 2}""")
                     "/feeds/f1/-/post/create" -> ok(createAnswer)
                     "/feeds/f1/-/privacy" -> ok("""{"privacy": "private"}""")
+                    "/feeds/f1/-/share" -> ok("""{"link": "mochi://12D3KooWPeer/f1"}""")
                     "/feeds/f1/-/publish" -> if (publishFailed) {
                         MockResponse().setResponseCode(502).setBody("""{"error": "No networks here"}""")
                     } else if (feedPrivate) {
@@ -419,6 +429,75 @@ class NetworksViewModelsTest {
         val body = sent("/feeds/f1/-/post/create")!!
         assertNull(part(body, "accounts"))
         assertNull(part(body, "poll"))
+    }
+
+    @Test
+    fun `a post another app shares opens filled with its words and address, for the feed the user picks`() {
+        val model = CreatePostViewModel(
+            SavedStateHandle(mapOf("text" to "Stand-up, 2 October", "url" to "https://here.example/calendars/e1")),
+            repository,
+            context,
+        )
+        // The user picks the feed: their own, the first of which is chosen.
+        assertFalse(model.feedPreselected)
+        until("the publish list") { model.publish.value != null }
+        assertEquals("f1", model.selectedFeed.value)
+        assertEquals("Stand-up, 2 October\n\nhttps://here.example/calendars/e1", model.body.value)
+        assertEquals(emptyList<Uri>(), model.attachments.value)
+        model.createPost()
+        until("the post") { model.postSuccess.value }
+        assertEquals("Stand-up, 2 October\n\nhttps://here.example/calendars/e1", part(sent("/feeds/f1/-/post/create")!!, "body"))
+    }
+
+    @Test
+    fun `a post another app shares takes the images shared with it, once, and lets them go with the screen`() {
+        val image = Uri.parse("content://photos.example/1")
+        shadowOf(context.contentResolver).registerInputStream(image, java.io.ByteArrayInputStream("pixels".toByteArray()))
+        val token = SharedImages.hold(context, listOf(image))
+        val store = ViewModelStore()
+        val model = ViewModelProvider(store, object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T =
+                CreatePostViewModel(SavedStateHandle(mapOf("text" to "The garden", "images" to token)), repository, context) as T
+        })[CreatePostViewModel::class.java]
+        assertEquals("The garden", model.body.value)
+        val attached = model.attachments.value.single()
+        assertEquals("pixels", context.contentResolver.openInputStream(attached)!!.use { it.readBytes().decodeToString() })
+        // A second screen opened from the same link finds them taken.
+        val again = CreatePostViewModel(SavedStateHandle(mapOf("text" to "The garden", "images" to token)), repository, context)
+        assertEquals(emptyList<Uri>(), again.attachments.value)
+        store.clear()
+        assertEquals(emptyList<String>(), SharedImages.folder(context).list().orEmpty().filter { it.startsWith(token) })
+    }
+
+    /**
+     * What the system share sheet opened for, once it opens; the launch of
+     * the test's own host activity is passed over.
+     */
+    private fun sheet(): Intent {
+        val deadline = System.currentTimeMillis() + 5_000
+        while (System.currentTimeMillis() < deadline) {
+            shadowOf(Looper.getMainLooper()).idleFor(20, TimeUnit.MILLISECONDS)
+            val started = shadowOf(context).nextStartedActivity
+            if (started == null) {
+                Thread.sleep(10)
+            } else if (started.action == Intent.ACTION_CHOOSER) {
+                return IntentCompat.getParcelableExtra(started, Intent.EXTRA_INTENT, Intent::class.java)!!
+            }
+        }
+        throw AssertionError("the share sheet did not open")
+    }
+
+    @Test
+    fun `a feed's Share hands other apps the link it is joined by, and Mochi the feed by name and address`() {
+        val model = FeedViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, SavedRepository(retrofitApi(), Gson(), session), socket, session, context)
+        until("the feed") { model.feedInfo.value != null }
+        rule.setContent { ShareSheet(model.shares) }
+        rule.runOnIdle { model.share() }
+        val send = sheet()
+        assertEquals("mochi://12D3KooWPeer/f1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Mine", send.getStringExtra(EXTRA_WORDS))
+        assertEquals(server.url("/").toString().trimEnd('/') + "/feeds/f1", send.getStringExtra(EXTRA_ADDRESS))
     }
 
     @Test

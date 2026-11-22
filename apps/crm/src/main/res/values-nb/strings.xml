@@ -16,7 +16,6 @@
     <string name="crm_create_object">Opprett objekt</string>
     <string name="crm_search">Søk</string>
     <string name="crm_settings">Innstillinger</string>
-    <string name="crm_link">Lenke</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Kunne ikke lagre eksporten</string>
     <string name="crm_sort_rank">Manuell</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Ingen CRM-er funnet</string>
     <string name="crm_create_blocked_no_parents">Ingen elementtyper kan opprettes ennå. Opprett de nødvendige overordnede elementene først.</string>
     <string name="crm_export_csv">Eksporter CSV</string>
-    <string name="crm_share_link_title">Del CRM</string>
     <string name="crm_export_saved">CRM-data lagret</string>
     <string name="crm_create_upload_json">Last opp en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikke opprette: %1$s er påkrevd, men har ingen alternativer å velge mellom. Legg til alternativer i Design.</string>

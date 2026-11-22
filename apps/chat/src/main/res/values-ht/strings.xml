@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s aksepte chat sèlman nan men zanmi l.</string>
     <string name="chat_message_earlier">Mesaj ki te la anvan yo te ajoute kont sa a nan Mochi chifre epi yo pa ka li isit la</string>
     <string name="chat_message_excluded">Chifre pou lòt aparèy sèlman</string>
-    <string name="chat_setup">Konfigire</string>
+    <string name="chat_message_changed">Kle chifreman moun ki voye a chanje</string>    <string name="chat_setup">Konfigire</string>
     <string name="chat_jump_bottom">Ale anba</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">Ale nan %1$s nouvo mesaj</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">Voye soti nan yon aparèy ki gen kle ki pa koresponn</string>
     <string name="chat_list_select">Chwazi yon chat</string>
     <string name="chat_message_discard">Jete</string>
+    <string name="chat_message_unencrypted">Voye san chifreman</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Mesaj la gen %1$s karaktè twòp</item>
     </plurals>

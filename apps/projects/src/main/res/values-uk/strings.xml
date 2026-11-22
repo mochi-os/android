@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Виберіть шаблон</string>
     <string name="projects_create_next">Далі</string>
     <string name="projects_filter">Фільтр</string>
-    <string name="projects_link">Посилання</string>
     <string name="projects_filter_clear_all">Очистити все</string>
     <string name="projects_filter_all">Усі</string>
     <string name="projects_filter_other">Інше</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Це вкладення буде видалено назавжди.</string>
     <string name="projects_attachment_delete_confirm_title">Видалити вкладення?</string>
     <string name="projects_settings_unsubscribe_section">Відписатися від проєкту</string>
-    <string name="projects_share_link_title">Поділитися проєктом</string>
     <string name="projects_sort_filter_title">Сортування та фільтр</string>
     <string name="projects_create_prefix_hint">Використовується для читабельних ідентифікаторів, як-от %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

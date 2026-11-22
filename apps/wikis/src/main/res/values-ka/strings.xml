@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">განახლდა %1$s</string>
     <string name="wikis_pageview_not_found_description">გვერდი „%1$s“ ჯერ არ არსებობს.</string>
-    <string name="wikis_pageview_share_chooser">ვიკის ბმული</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">ბმული</string>
     <string name="wikis_open_sidebar">გვერდითი პანელის გახსნა</string>
     <string name="wikis_search_placeholder">wiki-ს ძებნა</string>
     <string name="wikis_unsubscribe_confirm_message">დარწმუნებული ხართ, რომ გსურთ %1$s-ის გამოწერის შეწყვეტა?</string>

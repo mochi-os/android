@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s anatx wasitat qalltäna</string>
     <string name="game_not_found">Anata janiw jikxatatäkiti</string>
     <string name="game_chat_move_played_you">Jumax %1$s anatawayta</string>
+    <string name="share_title">Compartiña</string>
+    <string name="share_feed">Mä feed ukar qillqaña</string>
+    <string name="share_chat">Mä chat ukar apayaña</string>
     <string name="devices_add">Mä dispositivo yapxataña</string>
     <string name="devices_copy">%1$s copiaña</string>
     <string name="devices_create">Luraña</string>

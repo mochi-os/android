@@ -173,6 +173,7 @@
     <string name="chat_refused_friends_only">%1$s gba ìfọ̀rọ̀wérọ̀ láti ọ̀dọ̀ àwọn ọ̀rẹ́ nìkan.</string>
     <string name="chat_message_earlier">Àwọn ìránṣẹ́ láti ìgbà kí a tó fi àkọọ́lẹ̀ yìí kún Mochi ni a ti fi kóòdù pa mọ́, a kò sì lè kà wọ́n níbí</string>
     <string name="chat_message_excluded">A fi kóòdù pa mọ́ fún àwọn ẹ̀rọ mìíràn nìkan</string>
+    <string name="chat_message_changed">Kọ́kọ́rọ́ ìfi kóòdù pa mọ́ ti olùfiránṣẹ́ ti yípadà</string>
     <string name="chat_setup">Ṣètò</string>
     <string name="chat_jump_bottom">Fò lọ sí ìsàlẹ̀</string>
     <plurals name="chat_jump_newer">
@@ -182,6 +183,7 @@
     <string name="chat_message_mismatched">A fi ránṣẹ́ láti ẹ̀rọ tí àwọn kọ́kọ́rọ́ rẹ̀ kò bára mu</string>
     <string name="chat_list_select">Yan chat kan</string>
     <string name="chat_message_discard">Sọnu</string>
+    <string name="chat_message_unencrypted">Firánṣẹ́ láìsí ìfipamọ́</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Ìfiránṣẹ́ náà gùn jù lọ pẹ̀lú àmì %1$s</item>
     </plurals>

@@ -16,7 +16,6 @@
     <string name="crm_create_object">Ստեղծել օբյեկտ</string>
     <string name="crm_search">Որոնել</string>
     <string name="crm_settings">Կարգավորումներ</string>
-    <string name="crm_link">Հղում</string>
     <string name="crm_design">Դիզայն</string>
     <string name="crm_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
     <string name="crm_sort_rank">Ձեռքով</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM-ներ չեն գտնվել</string>
     <string name="crm_create_blocked_no_parents">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
     <string name="crm_export_csv">Արտահանել CSV</string>
-    <string name="crm_share_link_title">Կիսվել CRM-ով</string>
     <string name="crm_export_saved">CRM-ի տվյալները պահպանվեցին</string>
     <string name="crm_create_upload_json">Վերբեռնեք .zip կամ .json ֆայլ</string>
     <string name="crm_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>

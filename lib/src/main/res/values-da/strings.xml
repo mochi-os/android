@@ -355,6 +355,9 @@
     <string name="game_system_score_resume">%1$s genoptog spillet</string>
     <string name="game_not_found">Spillet blev ikke fundet</string>
     <string name="game_chat_move_played_you">Du spillede %1$s</string>
+    <string name="share_title">Del</string>
+    <string name="share_feed">Slå op i et feed</string>
+    <string name="share_chat">Send i en chat</string>
     <string name="devices_add">Tilføj en enhed</string>
     <string name="devices_copy">Kopier %1$s</string>
     <string name="devices_create">Opret</string>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">選擇範本</string>
     <string name="projects_create_next">下一個</string>
     <string name="projects_filter">篩選</string>
-    <string name="projects_link">連結</string>
     <string name="projects_filter_clear_all">全部清除</string>
     <string name="projects_filter_all">全部</string>
     <string name="projects_filter_other">其他</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">此附件將被永久刪除。</string>
     <string name="projects_attachment_delete_confirm_title">刪除附件?</string>
     <string name="projects_settings_unsubscribe_section">退訂專案</string>
-    <string name="projects_share_link_title">分享專案</string>
     <string name="projects_sort_filter_title">排序與篩選</string>
     <string name="projects_create_prefix_hint">用於可讀的 ID，例如 %1$s-1、%1$s-2</string>
     <plurals name="projects_request_conflicts">

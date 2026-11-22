@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Skor istemi</string>
     <string name="forums_ai_prompt_tag_label">Etiket istemi</string>
     <string name="forums_ai_prompt_variables">Değişkenler: %1$s</string>
-    <string name="forums_link">Bağlantı</string>
     <string name="forums_moderation_ban_message">Kısıtlamayı kaldırana kadar foruma erişimini kaybeder.</string>
     <string name="forums_moderation_ban_title">%1$s yasaklansın mı?</string>
     <string name="forums_moderation_log_empty_subtitle">Henüz kaydedilmiş moderasyon işlemi yok</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forum yeniden adlandırıldı</string>
     <string name="forums_settings_name_clear_cd">Adı temizle</string>
     <string name="forums_settings_unsubscribe_section">Forum aboneliğinden çık</string>
-    <string name="forums_share_link_title">Forum bağlantısı</string>
     <string name="forums_find_found_by_url">URL ile bulundu</string>
     <string name="forums_moderation_pending_posts">Bekleyen gönderiler (%1$s)</string>
     <string name="forums_moderation_pending_comments">Bekleyen yorumlar (%1$s)</string>

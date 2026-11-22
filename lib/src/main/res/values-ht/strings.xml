@@ -352,6 +352,9 @@
     <string name="game_system_score_resume">%1$s rekòmanse jwe</string>
     <string name="game_not_found">Nou pa jwenn jwèt la</string>
     <string name="game_chat_move_played_you">Ou jwe %1$s</string>
+    <string name="share_title">Pataje</string>
+    <string name="share_feed">Pibliye nan yon fil</string>
+    <string name="share_chat">Voye nan yon chat</string>
     <string name="devices_add">Ajoute yon aparèy</string>
     <string name="devices_copy">Kopye %1$s</string>
     <string name="devices_create">Kreye</string>

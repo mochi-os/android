@@ -249,7 +249,6 @@
     <string name="projects_create_choose_template">Vorlage auswählen</string>
     <string name="projects_create_next">Weiter</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Alle löschen</string>
     <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Andere</string>
@@ -277,7 +276,6 @@
     <string name="projects_attachment_delete_confirm_message">Dieser Anhang wird dauerhaft gelöscht.</string>
     <string name="projects_attachment_delete_confirm_title">Anhang löschen?</string>
     <string name="projects_settings_unsubscribe_section">Projekt abbestellen</string>
-    <string name="projects_share_link_title">Projekt teilen</string>
     <string name="projects_sort_filter_title">Sortieren &amp; filtern</string>
     <string name="projects_create_prefix_hint">Für lesbare IDs wie %1$s-1, %1$s-2 verwendet</string>
     <string name="projects_access_role_comment">Kommentieren und ansehen</string>

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s menyambung permainan</string>
     <string name="game_not_found">Permainan tidak ditemui</string>
     <string name="game_chat_move_played_you">Anda bermain %1$s</string>
+    <string name="share_title">Kongsi</string>
+    <string name="share_feed">Hantar ke suapan</string>
+    <string name="share_chat">Hantar dalam sembang</string>
     <string name="devices_add">Tambah peranti</string>
     <string name="devices_copy">Salin %1$s</string>
     <string name="devices_create">Cipta</string>

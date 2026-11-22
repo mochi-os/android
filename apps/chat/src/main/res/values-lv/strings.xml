@@ -177,7 +177,7 @@
     <string name="chat_refused_friends_only">%1$s pieņem čatus tikai no draugiem.</string>
     <string name="chat_message_earlier">Ziņojumi no laika pirms šī konta pievienošanas Mochi ir šifrēti, un tos šeit nevar izlasīt</string>
     <string name="chat_message_excluded">Šifrēts tikai citām ierīcēm</string>
-    <string name="chat_setup">Iestatīt</string>
+    <string name="chat_message_changed">Sūtītāja šifrēšanas atslēga ir mainījusies</string>    <string name="chat_setup">Iestatīt</string>
     <string name="chat_jump_bottom">Pāriet uz apakšu</string>
     <plurals name="chat_jump_newer">
         <item quantity="zero">Pāriet uz %1$s jaunām ziņām</item>
@@ -188,6 +188,7 @@
     <string name="chat_message_mismatched">Nosūtīts no ierīces, kuras atslēgas nesakrīt</string>
     <string name="chat_list_select">Atlasīt čatu</string>
     <string name="chat_message_discard">Atmest</string>
+    <string name="chat_message_unencrypted">Sūtīt nešifrētu</string>
     <plurals name="chat_message_too_long">
         <item quantity="zero">Ziņa ir par %1$s rakstzīmēm par garu</item>
         <item quantity="one">Ziņa ir par %1$s rakstzīmi par garu</item>

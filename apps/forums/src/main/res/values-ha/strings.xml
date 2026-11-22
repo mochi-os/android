@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Umarnin ƙididdiga</string>
     <string name="forums_ai_prompt_tag_label">Umarnin alama</string>
     <string name="forums_ai_prompt_variables">Masu canji: %1$s</string>
-    <string name="forums_link">Hanyar haɗi</string>
     <string name="forums_moderation_ban_message">Za su rasa damar shiga dandalin har sai ka cire takunkumin.</string>
     <string name="forums_moderation_ban_title">A hana %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Har yanzu ba a rubuta ayyukan sarrafawa ba</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">An sauya sunan dandalin</string>
     <string name="forums_settings_name_clear_cd">Share suna</string>
     <string name="forums_settings_unsubscribe_section">Dakatar da biyan kuɗin dandalin</string>
-    <string name="forums_share_link_title">Hanyar haɗin dandali</string>
     <string name="forums_find_found_by_url">An samu ta URL</string>
     <string name="forums_moderation_pending_posts">Sakonnin da ke jira (%1$s)</string>
     <string name="forums_moderation_pending_comments">Sharhin da ke jira (%1$s)</string>

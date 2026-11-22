@@ -179,6 +179,7 @@
     <string name="chat_refused_friends_only">%1$s приймає чати лише від друзів.</string>
     <string name="chat_message_earlier">Повідомлення з часу до додавання цього облікового запису в Mochi зашифровані, і їх не можна прочитати тут</string>
     <string name="chat_message_excluded">Зашифровано лише для інших пристроїв</string>
+    <string name="chat_message_changed">Ключ шифрування відправника змінився</string>
     <string name="chat_setup">Налаштувати</string>
     <string name="chat_jump_bottom">Перейти вниз</string>
     <plurals name="chat_jump_newer">
@@ -191,6 +192,7 @@
     <string name="chat_message_mismatched">Надіслано з пристрою, ключі якого не збігаються</string>
     <string name="chat_list_select">Виберіть чат</string>
     <string name="chat_message_discard">Відхилити</string>
+    <string name="chat_message_unencrypted">Надіслати без шифрування</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Повідомлення довше допустимого на %1$s символ</item>
         <item quantity="few">Повідомлення довше допустимого на %1$s символи</item>

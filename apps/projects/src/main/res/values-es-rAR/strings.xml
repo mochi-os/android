@@ -249,7 +249,6 @@
 
     <string name="projects_create_choose_template">Elegí una plantilla</string>
     <string name="projects_create_next">Siguiente</string>
-    <string name="projects_link">Enlace</string>
     <string name="projects_filter_clear_all">Borrar todo</string>
     <string name="projects_filter_all">Todas</string>
     <string name="projects_filter_other">Otro</string>
@@ -277,7 +276,6 @@
     <string name="projects_activity_commented">comentó</string>
     <string name="projects_attachment_delete_confirm_message">Este adjunto se eliminará permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">¿Eliminar adjunto?</string>
-    <string name="projects_share_link_title">Compartir proyecto</string>
     <string name="projects_sort_filter_title">Ordenar y filtrar</string>
     <string name="projects_create_prefix_hint">Se usa para identificadores legibles como %1$s-1, %1$s-2</string>
     <string name="projects_access_role_comment">Comentar y ver</string>

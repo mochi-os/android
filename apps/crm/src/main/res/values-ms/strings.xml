@@ -16,7 +16,6 @@
     <string name="crm_create_object">Cipta objek</string>
     <string name="crm_search">Cari</string>
     <string name="crm_settings">Tetapan</string>
-    <string name="crm_link">Pautan</string>
     <string name="crm_design">Reka bentuk</string>
     <string name="crm_export_failed">Eksport tidak dapat disimpan</string>
     <string name="crm_sort_rank">Manual</string>
@@ -272,7 +271,6 @@
     <string name="crm_no_crms_found">Tiada CRM dijumpai</string>
     <string name="crm_create_blocked_no_parents">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
     <string name="crm_export_csv">Eksport CSV</string>
-    <string name="crm_share_link_title">Kongsi CRM</string>
     <string name="crm_export_saved">Data CRM disimpan</string>
     <string name="crm_create_upload_json">Muat naik fail .zip atau .json</string>
     <string name="crm_create_blocked_no_options">Tidak boleh dicipta: %1$s diperlukan tetapi tiada pilihan. Tambah pilihan dalam Reka bentuk.</string>

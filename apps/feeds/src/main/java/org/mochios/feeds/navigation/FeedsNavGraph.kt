@@ -39,7 +39,9 @@ object FeedsApp {
     // link to that comment does.
     const val POST = "feeds/post/{feedId}/{postId}?comment={comment}"
     const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}&expand={expand}"
-    const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
+    // [text], [url] and [images] fill a new post with what another app
+    // shares, from a `feeds/share` link.
+    const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}&text={text}&url={url}&images={images}"
     // [link] is an optional mochi:// share link to resolve on arrival, which is
     // how a notification about a feed the user does not hold reaches it.
     const val FIND_FEEDS = "feeds/findFeeds?link={link}"
@@ -58,12 +60,25 @@ object FeedsApp {
 
     /**
      * The screen a `/feeds/...` notification link opens: discovery for
-     * `/feeds/find?link=<share link>` (a feed the user does not hold yet), the
-     * post for `/feeds/<feed>/<post>`, opened on one comment when the link
-     * names it with `?comment=`, else the feed. Null for the bare app.
+     * `/feeds/find?link=<share link>` (a feed the user does not hold yet), a
+     * new post filled in with what another app shares for
+     * `/feeds/share?text=&url=&images=`, the post for `/feeds/<feed>/<post>`,
+     * opened on one comment when the link names it with `?comment=`, else the
+     * feed. Null for the bare app. [query] reads the link's query.
      */
-    fun linkRoute(feedId: String?, postId: String?, link: String?, comment: String? = null): String? = when {
+    fun linkRoute(
+        feedId: String?,
+        postId: String?,
+        link: String?,
+        comment: String? = null,
+        query: (String) -> String? = { null },
+    ): String? = when {
         feedId == "find" -> findFeeds(link)
+        feedId == "share" -> share(
+            text = query("text").orEmpty(),
+            url = query("url").orEmpty(),
+            images = query("images").orEmpty(),
+        )
         feedId.isNullOrEmpty() -> null
         !postId.isNullOrEmpty() -> post(feedId, postId, comment)
         else -> feed(feedId)
@@ -78,6 +93,20 @@ object FeedsApp {
         val params = listOfNotNull(
             feedId?.let { "feedId=${Uri.encode(it)}" },
             postId?.let { "postId=${Uri.encode(it)}" }
+        )
+        return if (params.isEmpty()) "feeds/createPost" else "feeds/createPost?${params.joinToString("&")}"
+    }
+
+    /**
+     * A new post filled in with what another app shares: [text], then [url]
+     * beneath it, and the images SharedImages holds under [images]. The user
+     * picks the feed.
+     */
+    fun share(text: String, url: String, images: String = ""): String {
+        val params = listOfNotNull(
+            text.takeIf { it.isNotEmpty() }?.let { "text=${Uri.encode(it)}" },
+            url.takeIf { it.isNotEmpty() }?.let { "url=${Uri.encode(it)}" },
+            images.takeIf { it.isNotEmpty() }?.let { "images=${Uri.encode(it)}" },
         )
         return if (params.isEmpty()) "feeds/createPost" else "feeds/createPost?${params.joinToString("&")}"
     }
@@ -213,21 +242,28 @@ fun NavGraphBuilder.feedsNavGraph(
 
     composable(
         route = FeedsApp.CREATE_POST,
-        arguments = listOf(
-            navArgument("feedId") {
-                type = NavType.StringType
-                nullable = true
-                defaultValue = null
-            },
-            navArgument("postId") {
+        arguments = listOf("feedId", "postId", "text", "url", "images").map { name ->
+            navArgument(name) {
                 type = NavType.StringType
                 nullable = true
                 defaultValue = null
             }
-        )
-    ) {
+        }
+    ) { entry ->
+        // A post another app shares goes on to its feed once posted, as the
+        // web's does; Back without posting returns to the app.
+        val shared = listOf("text", "url", "images").any { name -> entry.arguments?.getString(name) != null }
         CreatePostScreen(
             onNavigateBack = { navController.popBackStack() },
+            onPosted = { feedId ->
+                if (shared && feedId.isNotEmpty()) {
+                    navController.navigate(FeedsApp.feed(feedId)) {
+                        popUpTo(FeedsApp.CREATE_POST) { inclusive = true }
+                    }
+                } else {
+                    navController.popBackStack()
+                }
+            },
         )
     }
 

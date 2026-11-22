@@ -225,7 +225,7 @@ class EditorFlowsTest {
         server.data("-/assets/reorder", """[{"id": "a2", "position": 0}, {"id": "a1", "position": 1}]""")
         server.on("-/photos/reorder") {
             okhttp3.mockwebserver.MockResponse().setBody(
-                """{"data": [{"id": "p2", "rank": 0}, {"id": "p1", "rank": 1}], "unsent": []}""",
+                """{"data": [{"id": "p2", "rank": 0}, {"id": "p1", "rank": 1}]}""",
             )
         }
         val model = editor()

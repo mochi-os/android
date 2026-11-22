@@ -204,8 +204,6 @@
     <string name="feeds_ai_prompt_default">မူရင်း</string>
     <string name="feeds_ai_prompt_custom">စိတ်ကြိုက်</string>
     <string name="feeds_ai_prompt_variables">ကိန်းရှင်များ: %1$s</string>
-    <string name="feeds_link">လင့်ခ်</string>
-    <string name="feeds_share_link_title">ဖိဒ်လင့်ခ်</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">မှတ်ချက် %1$s</item>
     </plurals>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s шинэчлэгдсэн</string>
     <string name="wikis_pageview_not_found_description">“%1$s” хуудас хараахан байхгүй байна.</string>
-    <string name="wikis_pageview_share_chooser">Викигийн холбоос</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Холбоос</string>
     <string name="wikis_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="wikis_search_placeholder">wiki хайх</string>
     <string name="wikis_unsubscribe_confirm_message">Та %1$s-ийн захиалгыг цуцлахдаа итгэлтэй байна уу?</string>

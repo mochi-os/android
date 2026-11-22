@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">점수 프롬프트</string>
     <string name="forums_ai_prompt_tag_label">태그 프롬프트</string>
     <string name="forums_ai_prompt_variables">변수: %1$s</string>
-    <string name="forums_link">링크</string>
     <string name="forums_moderation_ban_message">제한을 해제할 때까지 포럼에 접근할 수 없습니다.</string>
     <string name="forums_moderation_ban_title">%1$s님을 차단할까요?</string>
     <string name="forums_moderation_log_empty_subtitle">기록된 모더레이션 작업이 아직 없습니다</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">포럼 이름이 변경되었어요</string>
     <string name="forums_settings_name_clear_cd">이름 지우기</string>
     <string name="forums_settings_unsubscribe_section">포럼 구독 해지</string>
-    <string name="forums_share_link_title">포럼 링크</string>
     <string name="forums_find_found_by_url">URL로 찾음</string>
     <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$s)</string>
     <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$s)</string>

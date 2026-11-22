@@ -174,6 +174,7 @@
     <string name="chat_refused_friends_only">%1$s chỉ nhận trò chuyện từ bạn bè.</string>
     <string name="chat_message_earlier">Các tin nhắn từ trước khi tài khoản này được thêm vào Mochi đã được mã hóa và không thể đọc tại đây</string>
     <string name="chat_message_excluded">Chỉ được mã hóa cho các thiết bị khác</string>
+    <string name="chat_message_changed">Khoá mã hóa của người gửi đã thay đổi</string>
     <string name="chat_setup">Thiết lập</string>
     <string name="chat_jump_bottom">Xuống cuối</string>
     <plurals name="chat_jump_newer">
@@ -183,6 +184,7 @@
     <string name="chat_message_mismatched">Được gửi từ một thiết bị có khoá không khớp</string>
     <string name="chat_list_select">Chọn một cuộc trò chuyện</string>
     <string name="chat_message_discard">Loại bỏ</string>
+    <string name="chat_message_unencrypted">Gửi không mã hóa</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Tin nhắn dài quá %1$s ký tự</item>
     </plurals>

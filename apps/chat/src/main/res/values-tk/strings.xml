@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s diňe dostlardan söhbet kabul edýär.</string>
     <string name="chat_message_earlier">Bu hasap Mochi-de goşulmazdan öňki habarlar şifrlenen we olary şu ýerde okap bolmaýar</string>
     <string name="chat_message_excluded">Diňe beýleki enjamlar üçin şifrlenen</string>
+    <string name="chat_message_changed">Iberijiniň şifrleme açary üýtgedi</string>
     <string name="chat_setup">Düzmek</string>
     <string name="chat_jump_bottom">Aşaga geç</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Açarlary gabat gelmeýän enjamdan iberildi</string>
     <string name="chat_list_select">Söhbet saýla</string>
     <string name="chat_message_discard">Taşla</string>
+    <string name="chat_message_unencrypted">Şifrlemezden iber</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Habar %1$s nyşan artyk uzyn</item>
         <item quantity="other">Habar %1$s nyşan artyk uzyn</item>

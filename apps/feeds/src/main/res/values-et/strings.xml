@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Vaikimisi</string>
     <string name="feeds_ai_prompt_custom">Kohandatud</string>
     <string name="feeds_ai_prompt_variables">Muutujad: %1$s</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Voo link</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s kommentaar</item>
         <item quantity="other">%1$s kommentaari</item>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">अपडेट केले: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” हे पृष्ठ अद्याप अस्तित्वात नाही.</string>
-    <string name="wikis_pageview_share_chooser">विकी दुवा</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">दुवा</string>
     <string name="wikis_open_sidebar">साइडबार उघडा</string>
     <string name="wikis_search_placeholder">wiki शोधा</string>
     <string name="wikis_unsubscribe_confirm_message">तुम्हाला खात्री आहे की %1$s ची सदस्यता रद्द करायची आहे?</string>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Hate nûkirin %1$s</string>
     <string name="wikis_pageview_not_found_description">Rûpela “%1$s” hîn tune ye.</string>
-    <string name="wikis_pageview_share_chooser">Girêdana wîkiyê</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Girêdan</string>
     <string name="wikis_open_sidebar">Refê kêlekê veke</string>
     <string name="wikis_search_placeholder">Li wiki bigere</string>
     <string name="wikis_unsubscribe_confirm_message">Tu bawer î ku dixwazî abonetiya %1$s betal bikî?</string>

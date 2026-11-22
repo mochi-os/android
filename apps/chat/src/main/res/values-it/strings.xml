@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s accetta chat solo dagli amici.</string>
     <string name="chat_message_earlier">I messaggi precedenti all\'aggiunta di questo account a Mochi sono crittografati e non possono essere letti qui</string>
     <string name="chat_message_excluded">Crittografato solo per altri dispositivi</string>
-    <string name="chat_setup">Configura</string>
+    <string name="chat_message_changed">La chiave di crittografia del mittente è cambiata</string>    <string name="chat_setup">Configura</string>
     <string name="chat_jump_bottom">Vai in fondo</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Vai a %1$s nuovo messaggio</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Inviato da un dispositivo le cui chiavi non corrispondono</string>
     <string name="chat_list_select">Seleziona una chat</string>
     <string name="chat_message_discard">Scarta</string>
+    <string name="chat_message_unencrypted">Invia senza crittografia</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Il messaggio supera il limite di %1$s carattere</item>
         <item quantity="other">Il messaggio supera il limite di %1$s caratteri</item>

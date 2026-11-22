@@ -16,7 +16,6 @@
     <string name="crm_create_object">ነገር ፍጠር</string>
     <string name="crm_search">ይፈልጉ</string>
     <string name="crm_settings">ቅንብሮች</string>
-    <string name="crm_link">አገናኝ</string>
     <string name="crm_design">ንድፍ</string>
     <string name="crm_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
     <string name="crm_sort_rank">በእጅ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ምንም CRMዎች አልተገኙም</string>
     <string name="crm_create_blocked_no_parents">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
     <string name="crm_export_csv">CSV ላክ</string>
-    <string name="crm_share_link_title">CRM አጋራ</string>
     <string name="crm_export_saved">የCRM ውሂብ ተቀምጧል</string>
     <string name="crm_create_upload_json">.zip ወይም .json ፋይል ይጫኑ</string>
     <string name="crm_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>

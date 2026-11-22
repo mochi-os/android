@@ -216,8 +216,6 @@
     <string name="feeds_ai_prompt_default">Réamhshocrú</string>
     <string name="feeds_ai_prompt_custom">Saincheaptha</string>
     <string name="feeds_ai_prompt_variables">Athróga: %1$s</string>
-    <string name="feeds_link">Nasc</string>
-    <string name="feeds_share_link_title">Nasc fotha</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s nóta tráchta</item>
         <item quantity="two">%1$s nóta tráchta</item>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Şablon saýlaň</string>
     <string name="projects_create_next">Indiki</string>
     <string name="projects_filter">Süzgüç</string>
-    <string name="projects_link">Salgy</string>
     <string name="projects_filter_clear_all">Hemmesini arassalamak</string>
     <string name="projects_filter_all">Hemmesi</string>
     <string name="projects_filter_other">Beýleki</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Bu goşundy hemişelik pozular.</string>
     <string name="projects_attachment_delete_confirm_title">Goşundyny pozmalymy?</string>
     <string name="projects_settings_unsubscribe_section">Taslama abunalygyny bes et</string>
-    <string name="projects_share_link_title">Taslamany paýlaş</string>
     <string name="projects_sort_filter_title">Tertiple we süz</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ýaly okalýan ID-ler üçin ulanylýar</string>
     <plurals name="projects_request_conflicts">

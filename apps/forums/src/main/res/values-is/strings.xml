@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Einkunnakvaðning</string>
     <string name="forums_ai_prompt_tag_label">Merkjakvaðning</string>
     <string name="forums_ai_prompt_variables">Breytur: %1$s</string>
-    <string name="forums_link">Tengill</string>
     <string name="forums_moderation_ban_message">Viðkomandi missir aðgang að spjallborðinu þar til þú fjarlægir takmörkunina.</string>
     <string name="forums_moderation_ban_title">Banna %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Engar umsjónaraðgerðir hafa verið skráðar enn</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Spjallborð endurnefnt</string>
     <string name="forums_settings_name_clear_cd">Hreinsa nafn</string>
     <string name="forums_settings_unsubscribe_section">Segja upp áskrift að spjallborði</string>
-    <string name="forums_share_link_title">Tengill á spjallborð</string>
     <string name="forums_find_found_by_url">Fannst með veffangi</string>
     <string name="forums_moderation_pending_posts">Færslur í bið (%1$s)</string>
     <string name="forums_moderation_pending_comments">Athugasemdir í bið (%1$s)</string>

@@ -16,7 +16,6 @@
     <string name="crm_create_object">Búa til hlut</string>
     <string name="crm_search">Leita</string>
     <string name="crm_settings">Stillingar</string>
-    <string name="crm_link">Tengill</string>
     <string name="crm_design">Hönnun</string>
     <string name="crm_export_failed">Ekki tókst að vista útflutninginn</string>
     <string name="crm_sort_rank">Handvirkt</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Engin CRM fundust</string>
     <string name="crm_create_blocked_no_parents">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
     <string name="crm_export_csv">Flytja út CSV</string>
-    <string name="crm_share_link_title">Deila CRM</string>
     <string name="crm_export_saved">CRM-gögn vistuð</string>
     <string name="crm_create_upload_json">Hlaðið upp .zip- eða .json-skrá</string>
     <string name="crm_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>

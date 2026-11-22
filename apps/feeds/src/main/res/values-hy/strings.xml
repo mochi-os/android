@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Լռելյայն</string>
     <string name="feeds_ai_prompt_custom">Հատուկ</string>
     <string name="feeds_ai_prompt_variables">Փոփոխականներ՝ %1$s</string>
-    <string name="feeds_link">Հղում</string>
-    <string name="feeds_share_link_title">Հոսքի հղում</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s մեկնաբանություն</item>
         <item quantity="other">%1$s մեկնաբանություն</item>

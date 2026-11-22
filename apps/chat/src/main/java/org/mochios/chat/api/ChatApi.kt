@@ -174,6 +174,8 @@ interface ChatApi {
         @Query("thread") thread: String? = null,
     ): Response<ApiResponse<MessageListResponse>>
 
+    // unencrypted is "true" only where the user chose to send the message so,
+    // after the send refused it for want of encryption; left out otherwise.
     @FormUrlEncoded
     @POST("{chatId}/-/send")
     suspend fun sendMessage(
@@ -181,6 +183,7 @@ interface ChatApi {
         @Field("body") body: String,
         @Field("reply") reply: String? = null,
         @Field("thread") thread: String? = null,
+        @Field("unencrypted") unencrypted: String? = null,
     ): Response<ApiResponse<SendMessageResponse>>
 
     @Multipart
@@ -190,6 +193,7 @@ interface ChatApi {
         @Part("body") body: RequestBody,
         @Part("reply") reply: RequestBody? = null,
         @Part("thread") thread: RequestBody? = null,
+        @Part("unencrypted") unencrypted: RequestBody? = null,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<SendMessageResponse>>
 
@@ -318,6 +322,8 @@ interface ChatApi {
         @Query("person") person: String,
     ): Response<ApiResponse<DevicesResponse>>
 
+    // fingerprint is the one the user compared: an XMPP device whose identity
+    // has changed since is refused, 409, rather than decided on unseen.
     @FormUrlEncoded
     @POST("{chatId}/-/encryption/trust")
     suspend fun trust(
@@ -325,6 +331,7 @@ interface ChatApi {
         @Field("person") person: String,
         @Field("device") device: String,
         @Field("trust") trust: String,
+        @Field("fingerprint") fingerprint: String? = null,
     ): Response<ApiResponse<Map<String, Any>>>
 
     @FormUrlEncoded

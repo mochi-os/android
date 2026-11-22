@@ -16,7 +16,6 @@
     <string name="crm_create_object">Создать объект</string>
     <string name="crm_search">Поиск</string>
     <string name="crm_settings">Настройки</string>
-    <string name="crm_link">Ссылка</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Не удалось сохранить экспорт</string>
     <string name="crm_sort_rank">Вручную</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM не найдены</string>
     <string name="crm_create_blocked_no_parents">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
     <string name="crm_export_csv">Экспорт в CSV</string>
-    <string name="crm_share_link_title">Поделиться CRM</string>
     <string name="crm_export_saved">Данные CRM сохранены</string>
     <string name="crm_create_upload_json">Загрузите файл .zip или .json</string>
     <string name="crm_create_blocked_no_options">Не удалось создать: %1$s обязателен, но не имеет вариантов для выбора. Добавьте варианты в Дизайне.</string>

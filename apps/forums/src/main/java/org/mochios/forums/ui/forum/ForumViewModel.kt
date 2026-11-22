@@ -29,6 +29,7 @@ import org.mochios.android.util.appendDistinct
 import org.mochios.android.util.mergeReload
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.share.Shared
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.api.NotificationSettings
@@ -77,9 +78,6 @@ sealed class ForumEvent {
 
     /** Copy this URL to the clipboard and confirm with a snackbar. */
     data class CopyRssUrl(val url: String) : ForumEvent()
-
-    /** Hand this link to the system share sheet. */
-    data class ShareLink(val link: String) : ForumEvent()
 
     /** The user is no longer subscribed; the screen navigates away. */
     data object Unsubscribed : ForumEvent()
@@ -135,6 +133,11 @@ class ForumViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ForumUiState())
     val uiState: StateFlow<ForumUiState> = _uiState.asStateFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The forum, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
 
     /** Set of post ids the user has saved, mirrored from [SavedRepository] so
      *  each post card can show its bookmark filled/empty without awaiting. */
@@ -741,14 +744,19 @@ class ForumViewModel @Inject constructor(
     }
 
     /**
-     * Fetch the forum's `mochi://<peer>/<forum>` share link; the server
-     * assembles it.
+     * Share the forum: by its name and address, and to other apps by its
+     * `mochi://<peer>/<forum>` link, which the server assembles.
      */
-    fun shareLink() {
+    fun share() {
         if (forumId.isBlank()) return
         viewModelScope.launch {
             try {
-                _events.emit(ForumEvent.ShareLink(repository.shareForum(forumId)))
+                val link = repository.shareForum(forumId)
+                val shown = _uiState.value.forum
+                val address = sessionManager.getServerUrlBlocking().trimEnd('/') + "/forums/" + shown.fingerprint.ifEmpty { forumId }
+                _shares.emit(Shared(text = shown.name, url = address, link = link))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }

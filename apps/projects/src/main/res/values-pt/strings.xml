@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Escolha um modelo</string>
     <string name="projects_create_next">Seguinte</string>
     <string name="projects_filter">Filtrar</string>
-    <string name="projects_link">Ligação</string>
     <string name="projects_filter_clear_all">Limpar tudo</string>
     <string name="projects_filter_all">Todas</string>
     <string name="projects_filter_other">Outro</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Este anexo será eliminado permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">Eliminar o anexo?</string>
     <string name="projects_settings_unsubscribe_section">Anular a subscrição do projeto</string>
-    <string name="projects_share_link_title">Partilhar projeto</string>
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

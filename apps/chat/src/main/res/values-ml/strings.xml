@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s സുഹൃത്തുക്കളിൽ നിന്നുള്ള ചാറ്റുകൾ മാത്രമേ സ്വീകരിക്കൂ.</string>
     <string name="chat_message_earlier">ഈ അക്കൗണ്ട് Mochi-യിൽ ചേർക്കുന്നതിന് മുമ്പുള്ള സന്ദേശങ്ങൾ എൻക്രിപ്റ്റ് ചെയ്തതാണ്, അവ ഇവിടെ വായിക്കാൻ കഴിയില്ല</string>
     <string name="chat_message_excluded">മറ്റ് ഉപകരണങ്ങൾക്ക് മാത്രം എൻക്രിപ്റ്റ് ചെയ്തത്</string>
-    <string name="chat_setup">സജ്ജമാക്കുക</string>
+    <string name="chat_message_changed">അയച്ചയാളുടെ എൻക്രിപ്ഷൻ കീ മാറി</string>    <string name="chat_setup">സജ്ജമാക്കുക</string>
     <string name="chat_jump_bottom">താഴേക്ക് പോകുക</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s പുതിയ സന്ദേശത്തിലേക്ക് പോകുക</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">കീകൾ പൊരുത്തപ്പെടാത്ത ഒരു ഉപകരണത്തിൽ നിന്ന് അയച്ചത്</string>
     <string name="chat_list_select">ഒരു ചാറ്റ് തിരഞ്ഞെടുക്കുക</string>
     <string name="chat_message_discard">ഉപേക്ഷിക്കുക</string>
+    <string name="chat_message_unencrypted">എൻക്രിപ്ഷനില്ലാതെ അയയ്ക്കുക</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">സന്ദേശം %1$s പ്രതീകം അധികമാണ്</item>
         <item quantity="other">സന്ദേശം %1$s പ്രതീകങ്ങൾ അധികമാണ്</item>

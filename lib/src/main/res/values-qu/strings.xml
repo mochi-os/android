@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s pukllayta kutimanta qallarirqan</string>
     <string name="game_not_found">Pukllayqa manam tarisqachu</string>
     <string name="game_chat_move_played_you">Qam %1$sta pukllarqanki</string>
+    <string name="share_title">Rakiy</string>
+    <string name="share_feed">Huk feed-man qillqay</string>
+    <string name="share_chat">Huk rimanakuypi kachay</string>
     <string name="devices_add">Dispositivo yapay</string>
     <string name="devices_copy">%1$s copiay</string>
     <string name="devices_create">Kamariy</string>

@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.page
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,6 +24,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.share.Shared
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
@@ -46,9 +48,6 @@ sealed class PageViewEvent {
      * the old URL resolving, so it is the user's call, not ours.
      */
     data class RssExists(val mode: String) : PageViewEvent()
-
-    /** Hand this server-built link to the system share sheet. */
-    data class ShareLink(val link: String) : PageViewEvent()
 
     /** The wiki's RSS token was cleared; confirm with a snackbar. */
     data object RssRevoked : PageViewEvent()
@@ -94,6 +93,11 @@ class PageViewModel @Inject constructor(
 
     private val _events = MutableSharedFlow<PageViewEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<PageViewEvent> = _events.asSharedFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The page, or the wiki, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
 
     private var subscription: String? = null
 
@@ -325,13 +329,32 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    /** Fetch the wiki's share link from the server, then offer it to the share sheet. */
-    fun shareLink() {
+    /** The wiki's page here, by its fingerprint where it has one. */
+    private fun wikiAddress(): String =
+        "$serverUrl/wikis/${_uiState.value.wiki?.fingerprint?.takeIf { it.isNotEmpty() } ?: wikiId}"
+
+    /**
+     * Share the page shown: its title and the start of its text, and its
+     * address here. Anyone who can read it may share it.
+     */
+    fun sharePage() {
+        val page = _uiState.value.page ?: return
+        val slug = page.slug.ifBlank { slug }
+        _shares.tryEmit(Shared(text = page.title, url = wikiAddress() + "/" + Uri.encode(slug, "/")))
+    }
+
+    /**
+     * Share the wiki: by its name and address, and to other apps by the
+     * `mochi://` link another server joins it by, which the server assembles.
+     */
+    fun shareWiki() {
         if (wikiId.isBlank()) return
         viewModelScope.launch {
             try {
                 val link = repository.shareWiki(wikiId)
-                _events.emit(PageViewEvent.ShareLink(link))
+                _shares.emit(Shared(text = _uiState.value.wiki?.name.orEmpty(), url = wikiAddress(), link = link))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _events.emit(PageViewEvent.ShowError(e.toMochiError()))
             }

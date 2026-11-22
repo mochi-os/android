@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Standaard</string>
     <string name="feeds_ai_prompt_custom">Aangepast</string>
     <string name="feeds_ai_prompt_variables">Variabelen: %1$s</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Feedlink</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s reactie</item>
         <item quantity="other">%1$s reacties</item>

@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">پرامپت امتیاز</string>
     <string name="forums_ai_prompt_tag_label">پرامپت برچسب</string>
     <string name="forums_ai_prompt_variables">متغیرها: %1$s</string>
-    <string name="forums_link">پیوند</string>
     <string name="forums_moderation_ban_message">تا زمانی که محدودیت را برندارید، دسترسی به انجمن را از دست می‌دهد.</string>
     <string name="forums_moderation_ban_title">%1$s مسدود شود؟</string>
     <string name="forums_moderation_log_empty_subtitle">هنوز هیچ اقدام مدیریتی ثبت نشده است</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">نام انجمن تغییر کرد</string>
     <string name="forums_settings_name_clear_cd">پاک کردن نام</string>
     <string name="forums_settings_unsubscribe_section">قطع اشتراک از انجمن</string>
-    <string name="forums_share_link_title">پیوند انجمن</string>
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
     <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$s)</string>
     <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$s)</string>

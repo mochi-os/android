@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Vertinimo užklausa</string>
     <string name="forums_ai_prompt_tag_label">Žymų užklausa</string>
     <string name="forums_ai_prompt_variables">Kintamieji: %1$s</string>
-    <string name="forums_link">Nuoroda</string>
     <string name="forums_moderation_ban_message">Praranda prieigą prie forumo, kol nepanaikinsite apribojimo.</string>
     <string name="forums_moderation_ban_title">Užblokuoti %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Moderavimo veiksmų dar neužfiksuota</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Forumas pervadintas</string>
     <string name="forums_settings_name_clear_cd">Išvalyti pavadinimą</string>
     <string name="forums_settings_unsubscribe_section">Atsisakyti forumo prenumeratos</string>
-    <string name="forums_share_link_title">Forumo nuoroda</string>
     <string name="forums_find_found_by_url">Rasta pagal URL</string>
     <string name="forums_moderation_pending_posts">Laukiantys įrašai (%1$s)</string>
     <string name="forums_moderation_pending_comments">Laukiantys komentarai (%1$s)</string>

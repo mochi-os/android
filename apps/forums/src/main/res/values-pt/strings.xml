@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Prompt de pontuação</string>
     <string name="forums_ai_prompt_tag_label">Prompt de etiqueta</string>
     <string name="forums_ai_prompt_variables">Variáveis: %1$s</string>
-    <string name="forums_link">Ligação</string>
     <string name="forums_moderation_ban_message">Perde o acesso ao fórum até que remova a restrição.</string>
     <string name="forums_moderation_ban_title">Banir %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ainda não há ações de moderação registadas</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Nome do fórum alterado</string>
     <string name="forums_settings_name_clear_cd">Limpar nome</string>
     <string name="forums_settings_unsubscribe_section">Anular a subscrição do fórum</string>
-    <string name="forums_share_link_title">Ligação do fórum</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
     <string name="forums_moderation_pending_posts">Publicações pendentes (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentários pendentes (%1$s)</string>

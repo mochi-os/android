@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Үлгіні таңдаңыз</string>
     <string name="projects_create_next">Келесі</string>
     <string name="projects_filter">Сүзгі</string>
-    <string name="projects_link">Сілтеме</string>
     <string name="projects_filter_clear_all">Барлығын тазалау</string>
     <string name="projects_filter_all">Барлығы</string>
     <string name="projects_filter_other">Басқа</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Бұл тіркеме біржола жойылады.</string>
     <string name="projects_attachment_delete_confirm_title">Тіркеме жойылсын ба?</string>
     <string name="projects_settings_unsubscribe_section">Жоба жазылымынан бас тарту</string>
-    <string name="projects_share_link_title">Жобамен бөлісу</string>
     <string name="projects_sort_filter_title">Сұрыптау және сүзгі</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 сияқты оқылатын идентификаторлар үшін қолданылады</string>
     <plurals name="projects_request_conflicts">

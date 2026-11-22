@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s tekur aðeins við spjalli frá vinum.</string>
     <string name="chat_message_earlier">Skilaboð frá því áður en þessum aðgangi var bætt við Mochi eru dulkóðuð og ekki er hægt að lesa þau hér</string>
     <string name="chat_message_excluded">Aðeins dulkóðuð fyrir önnur tæki</string>
-    <string name="chat_setup">Setja upp</string>
+    <string name="chat_message_changed">Dulkóðunarlykill sendandans breyttist</string>    <string name="chat_setup">Setja upp</string>
     <string name="chat_jump_bottom">Fara neðst</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Fara í %1$s ný skilaboð</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Sent úr tæki þar sem lyklarnir passa ekki</string>
     <string name="chat_list_select">Veldu spjall</string>
     <string name="chat_message_discard">Henda</string>
+    <string name="chat_message_unencrypted">Senda ódulkóðað</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Skilaboðin eru %1$s staf of löng</item>
         <item quantity="other">Skilaboðin eru %1$s stöfum of löng</item>

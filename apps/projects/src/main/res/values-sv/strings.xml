@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Välj en mall</string>
     <string name="projects_create_next">Nästa</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Länk</string>
     <string name="projects_filter_clear_all">Rensa allt</string>
     <string name="projects_filter_all">Alla</string>
     <string name="projects_filter_other">Övrigt</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Den här bilagan tas bort permanent.</string>
     <string name="projects_attachment_delete_confirm_title">Ta bort bilagan?</string>
     <string name="projects_settings_unsubscribe_section">Avsluta prenumerationen på projektet</string>
-    <string name="projects_share_link_title">Dela projekt</string>
     <string name="projects_sort_filter_title">Sortera och filtrera</string>
     <string name="projects_create_prefix_hint">Används för läsbara ID:n som %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

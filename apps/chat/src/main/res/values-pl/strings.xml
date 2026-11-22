@@ -179,6 +179,7 @@
     <string name="chat_refused_friends_only">%1$s przyjmuje czaty tylko od znajomych.</string>
     <string name="chat_message_earlier">Wiadomości sprzed dodania tego konta do Mochi są zaszyfrowane i nie można ich tu odczytać</string>
     <string name="chat_message_excluded">Zaszyfrowana tylko dla innych urządzeń</string>
+    <string name="chat_message_changed">Klucz szyfrowania nadawcy się zmienił</string>
     <string name="chat_setup">Skonfiguruj</string>
     <string name="chat_jump_bottom">Przejdź na dół</string>
     <plurals name="chat_jump_newer">
@@ -191,6 +192,7 @@
     <string name="chat_message_mismatched">Wysłano z urządzenia, którego klucze się nie zgadzają</string>
     <string name="chat_list_select">Wybierz czat</string>
     <string name="chat_message_discard">Odrzuć</string>
+    <string name="chat_message_unencrypted">Wyślij bez szyfrowania</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Wiadomość jest za długa o %1$s znak</item>
         <item quantity="few">Wiadomość jest za długa o %1$s znaki</item>

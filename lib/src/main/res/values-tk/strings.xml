@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s oýny dowam etdirdi</string>
     <string name="game_not_found">Oýun tapylmady</string>
     <string name="game_chat_move_played_you">Sen %1$s oýnadyň</string>
+    <string name="share_title">Paýlaşmak</string>
+    <string name="share_feed">Akyma çap et</string>
+    <string name="share_chat">Söhbetde iber</string>
     <string name="devices_add">Enjam goş</string>
     <string name="devices_copy">%1$s nusgala</string>
     <string name="devices_create">Döretmek</string>

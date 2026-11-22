@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_score_label">Prompt de punctare</string>
     <string name="forums_ai_prompt_tag_label">Prompt pentru etichete</string>
     <string name="forums_ai_prompt_variables">Variabile: %1$s</string>
-    <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Pierde accesul la forum până când elimini restricția.</string>
     <string name="forums_moderation_ban_title">Interzici accesul lui %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Nu au fost înregistrate încă acțiuni de moderare</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Forum redenumit</string>
     <string name="forums_settings_name_clear_cd">Șterge numele</string>
     <string name="forums_settings_unsubscribe_section">Dezabonare de la forum</string>
-    <string name="forums_share_link_title">Link către forum</string>
     <string name="forums_find_found_by_url">Găsit după URL</string>
     <string name="forums_moderation_pending_posts">Postări în așteptare (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentarii în așteptare (%1$s)</string>

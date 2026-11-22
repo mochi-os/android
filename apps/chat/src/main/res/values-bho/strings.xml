@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s खाली दोस्तन से चैट स्वीकार करेलन।</string>
     <string name="chat_message_earlier">ई खाता के Mochi में जोड़ल जाए से पहिले के संदेश एन्क्रिप्टेड बाड़न आ इहाँ पढ़ल ना जा सकेला</string>
     <string name="chat_message_excluded">सिरिफ दोसर डिवाइस खातिर एन्क्रिप्टेड</string>
-    <string name="chat_setup">सेट अप</string>
+    <string name="chat_message_changed">भेजे वाला के एन्क्रिप्शन कुंजी बदल गइल</string>    <string name="chat_setup">सेट अप</string>
     <string name="chat_jump_bottom">सबसे नीचे जाईं</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s नया मैसेज पर जाईं</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">ओह डिवाइस से भेजल गइल जेकर कुंजी मेल ना खाले</string>
     <string name="chat_list_select">चैट चुनीं</string>
     <string name="chat_message_discard">छोड़ीं</string>
+    <string name="chat_message_unencrypted">बिना एन्क्रिप्शन के भेजीं</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">संदेस सीमा से %1$s अक्षर लंबा बा</item>
         <item quantity="other">संदेस सीमा से %1$s अक्षर लंबा बा</item>

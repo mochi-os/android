@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ya ci gaba da wasa</string>
     <string name="game_not_found">Ba a sami wasan ba</string>
     <string name="game_chat_move_played_you">Ka yi %1$s</string>
+    <string name="share_title">Raba</string>
+    <string name="share_feed">Wallafa zuwa jerin labarai</string>
+    <string name="share_chat">Aika a cikin chat</string>
     <string name="devices_add">Ƙara na\'ura</string>
     <string name="devices_copy">Kwafi %1$s</string>
     <string name="devices_create">Ƙirƙira</string>

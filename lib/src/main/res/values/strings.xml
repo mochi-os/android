@@ -460,4 +460,9 @@
     <string name="upload_sent">%1$s of %2$s</string>
     <string name="drawer_mochi_home" translatable="false">Mochi</string>
     <string name="drawer_unread">Unread</string>
+
+    <!-- Share: an item handed to the system share sheet; Mochi, one of its destinations, posts it to a feed or sends it in a chat -->
+    <string name="share_title">Share</string>
+    <string name="share_feed">Post to a feed</string>
+    <string name="share_chat">Send in a chat</string>
 </resources>

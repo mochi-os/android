@@ -16,7 +16,6 @@
     <string name="crm_create_object">آبجيڪٽ ٺاهيو</string>
     <string name="crm_search">ڳوليو</string>
     <string name="crm_settings">سيٽنگون</string>
-    <string name="crm_link">لنڪ</string>
     <string name="crm_design">ڊزائن</string>
     <string name="crm_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
     <string name="crm_sort_rank">دستي</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ڪا به CRM نه ملي</string>
     <string name="crm_create_blocked_no_parents">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
     <string name="crm_export_csv">CSV ايڪسپورٽ ڪريو</string>
-    <string name="crm_share_link_title">CRM شيئر ڪريو</string>
     <string name="crm_export_saved">CRM ڊيٽا محفوظ ٿي</string>
     <string name="crm_create_upload_json">.zip يا .json فائل اپلوڊ ڪريو</string>
     <string name="crm_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>

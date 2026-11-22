@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ameendelea kucheza</string>
     <string name="game_not_found">Mchezo haukupatikana</string>
     <string name="game_chat_move_played_you">Umecheza %1$s</string>
+    <string name="share_title">Shiriki</string>
+    <string name="share_feed">Chapisha kwenye mlisho</string>
+    <string name="share_chat">Tuma kwenye mazungumzo</string>
     <string name="devices_add">Ongeza kifaa</string>
     <string name="devices_copy">Nakili %1$s</string>
     <string name="devices_create">Unda</string>

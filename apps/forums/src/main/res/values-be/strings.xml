@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Промпт ацэнкі</string>
     <string name="forums_ai_prompt_tag_label">Промпт тэгаў</string>
     <string name="forums_ai_prompt_variables">Зменныя: %1$s</string>
-    <string name="forums_link">Спасылка</string>
     <string name="forums_moderation_ban_message">Страціць доступ да форуму, пакуль вы не здымеце абмежаванне.</string>
     <string name="forums_moderation_ban_title">Заблакіраваць %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Пакуль няма зафіксаваных дзеянняў мадэрацыі</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Форум перайменаваны</string>
     <string name="forums_settings_name_clear_cd">Ачысціць назву</string>
     <string name="forums_settings_unsubscribe_section">Адпісацца ад форуму</string>
-    <string name="forums_share_link_title">Спасылка на форум</string>
     <string name="forums_find_found_by_url">Знойдзена па URL</string>
     <string name="forums_moderation_pending_posts">Публікацыі ў чаканні (%1$s)</string>
     <string name="forums_moderation_pending_comments">Каментарыі ў чаканні (%1$s)</string>

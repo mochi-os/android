@@ -778,13 +778,15 @@ open class MainActivity : ComponentActivity() {
             "feeds" -> {
                 val route = FeedsApp.linkRoute(
                     id, parts.getOrNull(2), parseQueryParam(query, "link"), parseQueryParam(query, "comment"),
-                )
+                ) { key -> parseQueryParam(query, key) }
                 if (route == null || id == null) {
                     navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
                     return
                 }
                 if (navController.isAt(route)) return
-                if (id == "find") {
+                // Discovery, and a new post another app shares, open over the
+                // screen that sent them, so Back returns there.
+                if (id == "find" || id == "share") {
                     navController.navigate(route) { launchSingleTop = true }
                     return
                 }
@@ -811,6 +813,18 @@ open class MainActivity : ComponentActivity() {
                     navController.navigate(route) {
                         launchSingleTop = true
                     }
+                    return
+                }
+                // What another app shares, for the user to choose the chat
+                // whose message box it fills.
+                if (id == "share") {
+                    navController.returnToRouter(ChatApp.ROUTER)
+                    val route = ChatApp.share(
+                        parseQueryParam(query, "text").orEmpty(),
+                        parseQueryParam(query, "url").orEmpty(),
+                        parseQueryParam(query, "images").orEmpty(),
+                    )
+                    if (!navController.isAt(route)) navController.navigate(route) { launchSingleTop = true }
                     return
                 }
                 if (id == null) {

@@ -16,7 +16,6 @@
     <string name="crm_create_object">Создај објект</string>
     <string name="crm_search">Барај</string>
     <string name="crm_settings">Поставки</string>
-    <string name="crm_link">Врска</string>
     <string name="crm_design">Дизајн</string>
     <string name="crm_export_failed">Извозот не можеше да се зачува</string>
     <string name="crm_sort_rank">Рачно</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Не се пронајдени CRM-и</string>
     <string name="crm_create_blocked_no_parents">Сè уште не може да се креираат типови ставки. Прво креирајте ги потребните родителски ставки.</string>
     <string name="crm_export_csv">Извези CSV</string>
-    <string name="crm_share_link_title">Сподели CRM</string>
     <string name="crm_export_saved">Податоците за CRM се зачувани</string>
     <string name="crm_create_upload_json">Прикачете .zip или .json датотека</string>
     <string name="crm_create_blocked_no_options">Не може да се создаде: %1$s е задолжително, но нема опции за избор. Додајте опции во Дизајн.</string>

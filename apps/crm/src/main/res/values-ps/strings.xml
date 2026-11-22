@@ -16,7 +16,6 @@
     <string name="crm_create_object">شی جوړ کړئ</string>
     <string name="crm_search">لټون</string>
     <string name="crm_settings">تنظیمات</string>
-    <string name="crm_link">لینک</string>
     <string name="crm_design">ډیزاین</string>
     <string name="crm_export_failed">صادرول خوندي نه شو</string>
     <string name="crm_sort_rank">لاسي</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">هیڅ CRM ونه موندل شو</string>
     <string name="crm_create_blocked_no_parents">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
     <string name="crm_export_csv">CSV صادر کړئ</string>
-    <string name="crm_share_link_title">CRM شریک کړئ</string>
     <string name="crm_export_saved">د CRM ډاټا خوندي شوه</string>
     <string name="crm_create_upload_json">د .zip یا .json فایل پورته کړئ</string>
     <string name="crm_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>

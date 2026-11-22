@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">An sabunta %1$s</string>
     <string name="wikis_pageview_not_found_description">Shafin “%1$s” bai wanzu ba tukuna.</string>
-    <string name="wikis_pageview_share_chooser">Hanyar haɗin wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Hanyar haɗi</string>
     <string name="wikis_open_sidebar">Bude gefe</string>
     <string name="wikis_search_placeholder">Nemi wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Ka tabbata kana son dakatar da biyan kuɗin %1$s?</string>

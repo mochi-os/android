@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_tag_label">Gaaffii mallattoo</string>
     <string name="forums_ai_prompt_variables">Jijjiiramoo: %1$s</string>
     <string name="forums_find_found_by_url">URL\'n argame</string>
-    <string name="forums_link">Geessituu</string>
     <string name="forums_moderation_ban_message">Hanga ati daangaa hin kaafnetti, foramii irratti seensa hin argatan.</string>
     <string name="forums_moderation_ban_title">%1$s dhorkuu?</string>
     <string name="forums_moderation_log_empty_subtitle">Hanga ammaatti gochi to\'annaa galmaa\'e hin jiru</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Maqaan foramii jijjiirame</string>
     <string name="forums_settings_name_clear_cd">Maqaa cilliisi</string>
     <string name="forums_settings_unsubscribe_section">Foramii irraa bahi</string>
-    <string name="forums_share_link_title">Hidhaa waltajjii</string>
     <string name="forums_moderation_pending_posts">Maxxansaalee eegamaa jiran (%1$s)</string>
     <string name="forums_moderation_pending_comments">Yaadota eegamaa jiran (%1$s)</string>
     <string name="forums_moderation_on_image">Suuraa irratti: %1$s</string>

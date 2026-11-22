@@ -176,6 +176,7 @@
     <string name="chat_refused_friends_only">%1$s faqat do\'stlardan suhbat qabul qiladi.</string>
     <string name="chat_message_earlier">Bu hisob Mochi\'ga qo\'shilishidan oldingi xabarlar shifrlangan va ularni bu yerda o\'qib bo\'lmaydi</string>
     <string name="chat_message_excluded">Faqat boshqa qurilmalar uchun shifrlangan</string>
+    <string name="chat_message_changed">Yuboruvchining shifrlash kaliti oʻzgardi</string>
     <string name="chat_setup">Sozlash</string>
     <string name="chat_jump_bottom">Pastga oʻtish</string>
     <plurals name="chat_jump_newer">
@@ -186,6 +187,7 @@
     <string name="chat_message_mismatched">Kalitlari mos kelmaydigan qurilmadan yuborilgan</string>
     <string name="chat_list_select">Suhbat tanlang</string>
     <string name="chat_message_discard">Tashlab yuborish</string>
+    <string name="chat_message_unencrypted">Shifrlamasdan yuborish</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Xabar %1$s belgiga uzun</item>
         <item quantity="other">Xabar %1$s belgiga uzun</item>

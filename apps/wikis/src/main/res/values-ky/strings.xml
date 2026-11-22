@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Жаңыланды: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” барагы азырынча жок.</string>
-    <string name="wikis_pageview_share_chooser">Вики шилтемеси</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Шилтеме</string>
     <string name="wikis_open_sidebar">Каптал тилкесин ачуу</string>
     <string name="wikis_search_placeholder">Wiki издөө</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s\'тен жазылууну жокко чыгаргыңыз келгенине ишенесизби?</string>

@@ -215,8 +215,6 @@
     <string name="feeds_ai_prompt_default">Bunaiteach</string>
     <string name="feeds_ai_prompt_custom">Gnàthaichte</string>
     <string name="feeds_ai_prompt_variables">Caochladairean: %1$s</string>
-    <string name="feeds_link">Ceangal</string>
-    <string name="feeds_share_link_title">Ceangal inbhir</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s bheachd</item>
         <item quantity="two">%1$s bheachd</item>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Навсозӣ шуд: %1$s</string>
     <string name="wikis_pageview_not_found_description">Саҳифаи “%1$s” ҳанӯз вуҷуд надорад.</string>
-    <string name="wikis_pageview_share_chooser">Пайванди вики</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Пайванд</string>
     <string name="wikis_open_sidebar">Панели канориро кушодан</string>
     <string name="wikis_search_placeholder">Ҷустуҷӯи wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед обунаи %1$s-ро бекор кунед?</string>

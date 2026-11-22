@@ -219,8 +219,6 @@
     <string name="feeds_ai_prompt_default">Diofyn</string>
     <string name="feeds_ai_prompt_custom">Wedi\'i addasu</string>
     <string name="feeds_ai_prompt_variables">Newidynnau: %1$s</string>
-    <string name="feeds_link">Dolen</string>
-    <string name="feeds_share_link_title">Dolen ffrwd</string>
     <plurals name="feeds_comment_count">
         <item quantity="zero">%1$s sylw</item>
         <item quantity="one">%1$s sylw</item>

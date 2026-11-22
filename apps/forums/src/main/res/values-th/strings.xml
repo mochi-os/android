@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">พรอมต์คะแนน</string>
     <string name="forums_ai_prompt_tag_label">พรอมต์แท็ก</string>
     <string name="forums_ai_prompt_variables">ตัวแปร: %1$s</string>
-    <string name="forums_link">ลิงก์</string>
     <string name="forums_moderation_ban_message">ผู้ใช้จะเข้าถึงฟอรัมไม่ได้จนกว่าคุณจะยกเลิกการจำกัด</string>
     <string name="forums_moderation_ban_title">แบน %1$s ไหม</string>
     <string name="forums_moderation_log_empty_subtitle">ยังไม่มีการบันทึกการดำเนินการดูแล</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">เปลี่ยนชื่อฟอรัมแล้ว</string>
     <string name="forums_settings_name_clear_cd">ล้างชื่อ</string>
     <string name="forums_settings_unsubscribe_section">เลิกติดตามฟอรัม</string>
-    <string name="forums_share_link_title">ลิงก์ฟอรัม</string>
     <string name="forums_find_found_by_url">พบผ่าน URL</string>
     <string name="forums_moderation_pending_posts">โพสต์ที่รอดำเนินการ (%1$s)</string>
     <string name="forums_moderation_pending_comments">ความคิดเห็นที่รอดำเนินการ (%1$s)</string>

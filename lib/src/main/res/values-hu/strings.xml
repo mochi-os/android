@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s folytatta a játékot</string>
     <string name="game_not_found">A játék nem található</string>
     <string name="game_chat_move_played_you">Ön lépett: %1$s</string>
+    <string name="share_title">Megosztás</string>
+    <string name="share_feed">Közzététel hírcsatornában</string>
+    <string name="share_chat">Küldés csevegésben</string>
     <string name="devices_add">Eszköz hozzáadása</string>
     <string name="devices_copy">%1$s másolása</string>
     <string name="devices_create">Létrehozás</string>

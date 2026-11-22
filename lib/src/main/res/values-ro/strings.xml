@@ -355,6 +355,9 @@
     <string name="game_system_score_resume">%1$s a reluat jocul</string>
     <string name="game_not_found">Jocul nu a fost găsit</string>
     <string name="game_chat_move_played_you">Ai jucat %1$s</string>
+    <string name="share_title">Partajează</string>
+    <string name="share_feed">Publică într-un flux</string>
+    <string name="share_chat">Trimite într-o conversație</string>
     <string name="devices_add">Adaugă un dispozitiv</string>
     <string name="devices_copy">Copiază %1$s</string>
     <string name="devices_create">Creează</string>

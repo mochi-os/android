@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s masinkunamantalla rimanakuykunata chaskin.</string>
     <string name="chat_message_earlier">Kay cuenta Mochi-man yapakunanmanta ñawpaq willakuykuna pakasqam kanku, kaypi mana ñawinchakuyta atikunchu</string>
     <string name="chat_message_excluded">Huk kaqkunallapaq pakasqa</string>
+    <string name="chat_message_changed">Kachaqpa pakanapaq llaven hukmanyarqan</string>
     <string name="chat_setup">Wakichiy</string>
     <string name="chat_jump_bottom">Uraman riy</string>
     <plurals name="chat_jump_newer">
@@ -184,6 +185,7 @@
     <string name="chat_message_mismatched">Llavenkuna mana tupanchu chay aparatomanta kachamusqa</string>
     <string name="chat_list_select">Huk rimanakuyta akllay</string>
     <string name="chat_message_discard">Wikch\'uy</string>
+    <string name="chat_message_unencrypted">Mana pakasqata apachiy</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Willakuyqa %1$s qillqawan nisyu sunim</item>
     </plurals>

@@ -253,7 +253,6 @@
     <string name="projects_create_choose_template">Choisir un modèle</string>
     <string name="projects_create_next">Suivant</string>
     <string name="projects_filter">Filtrer</string>
-    <string name="projects_link">Lien</string>
     <string name="projects_filter_clear_all">Tout effacer</string>
     <string name="projects_filter_all">Toutes</string>
     <string name="projects_filter_other">Autre</string>
@@ -286,7 +285,6 @@
     <string name="projects_attachment_delete_confirm_message">Cette pièce jointe sera définitivement supprimée.</string>
     <string name="projects_attachment_delete_confirm_title">Supprimer la pièce jointe ?</string>
     <string name="projects_settings_unsubscribe_section">Se désabonner du projet</string>
-    <string name="projects_share_link_title">Partager le projet</string>
     <string name="projects_sort_filter_title">Trier et filtrer</string>
     <string name="projects_create_prefix_hint">Utilisé pour des identifiants lisibles comme %1$s-1, %1$s-2</string>
     <string name="projects_access_role_comment">Commenter et voir</string>

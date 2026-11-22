@@ -12,11 +12,15 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.share.SharedImages
+import org.mochios.android.share.shareMessage
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
+import org.mochios.android.util.openInPlace
 import org.mochios.chat.ui.chat.ChatScreen
 import org.mochios.chat.ui.newchat.NewChatScreen
+import org.mochios.chat.ui.share.ChatShareScreen
 import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.chat.ui.router.ChatRouter
 import org.mochios.chat.ui.settings.ChatSettingsScreen
@@ -32,15 +36,41 @@ object ChatApp {
     // they can't shadow the literal HOME / NEW_CHAT routes — `chat/list`
     // would otherwise match `chat/{chatId}` with chatId='list' and route to
     // the detail screen rendering NotFoundState.
-    const val CHAT = "chat/chat/{chatId}"
-    const val NEW_CHAT = "chat/new?friend={friend}&account={account}&address={address}&name={name}"
+    // [message] and [images] fill the chat's message box with what another
+    // app shares, from a `chat/share` link; nothing is sent until the user
+    // sends it. A new chat started from that choice carries them on.
+    const val CHAT = "chat/chat/{chatId}?message={message}&images={images}"
+    const val NEW_CHAT = "chat/new?friend={friend}&account={account}&address={address}&name={name}&message={message}&images={images}"
     const val CHAT_SETTINGS = "chat/chat/{chatId}/settings"
+    const val SHARE = "chat/share?text={text}&url={url}&images={images}"
 
     // Every value a builder puts in a route is escaped with Uri.encode, which
     // Navigation undoes once as it fills the destination's arguments, so a
     // value holding `&`, `#` or `%` cannot add arguments of its own.
     fun chat(chatId: String) = "chat/chat/${Uri.encode(chatId)}"
+
+    /**
+     * The chat, its message box filled with [message] and the images
+     * [SharedImages] holds under [images].
+     */
+    fun chat(chatId: String, message: String, images: String): String =
+        "chat/chat/${Uri.encode(chatId)}" + query("message" to message, "images" to images)
     fun newChat(friendId: String = "") = if (friendId.isEmpty()) "chat/new" else "chat/new?friend=${Uri.encode(friendId)}"
+
+    /** A new chat, whose message box opens filled with [message] and [images], as [chat]'s does. */
+    fun newChat(message: String, images: String): String = "chat/new" + query("message" to message, "images" to images)
+
+    /**
+     * The choice of chat for what another app shares: [text], then [url] on
+     * a line of its own, and the images [SharedImages] holds under [images].
+     */
+    fun share(text: String, url: String, images: String): String =
+        "chat/share" + query("text" to text, "url" to url, "images" to images)
+
+    private fun query(vararg values: Pair<String, String>): String {
+        val filled = values.filter { (_, value) -> value.isNotEmpty() }
+        return if (filled.isEmpty()) "" else "?" + filled.joinToString("&") { (key, value) -> "$key=${Uri.encode(value)}" }
+    }
 
     /** New chat on [account] with the person at [address] there, as people hands a messaging address over. */
     fun newChat(account: String, address: String, name: String) =
@@ -61,11 +91,13 @@ fun NavGraphBuilder.chatNavGraph(
 
     composable(
         route = ChatApp.CHAT,
-        arguments = listOf(navArgument("chatId") {
-            type = NavType.StringType
-            defaultValue = ""
-            nullable = false
-        }),
+        arguments = listOf("chatId", "message", "images").map { name ->
+            navArgument(name) {
+                type = NavType.StringType
+                defaultValue = ""
+                nullable = false
+            }
+        },
         deepLinks = listOf(
             navDeepLink { uriPattern = "https://{host}/chat/{chatId}" }
         )
@@ -93,24 +125,52 @@ fun NavGraphBuilder.chatNavGraph(
     // network with the account to reach it through, as people hands it over.
     composable(
         route = ChatApp.NEW_CHAT,
-        arguments = listOf("friend", "account", "address", "name").map { name ->
+        arguments = listOf("friend", "account", "address", "name", "message", "images").map { name ->
             navArgument(name) {
                 type = NavType.StringType
                 defaultValue = ""
                 nullable = false
             }
         },
-    ) {
+    ) { entry ->
+        val message = entry.arguments?.getString("message").orEmpty()
+        val images = entry.arguments?.getString("images").orEmpty()
         NewChatScreen(
             onBack = { navController.popBackStack() },
             onChatCreated = { chatId ->
-                navController.popBackStack()
-                navController.navigate(ChatApp.chat(chatId)) {
-                    popUpTo(ChatApp.CHAT) { inclusive = true }
-                    launchSingleTop = true
+                if (message.isNotEmpty() || images.isNotEmpty()) {
+                    // Started from a share: the chat opens with it in its message box.
+                    navController.openShared(chatId, message, images)
+                } else {
+                    navController.popBackStack()
+                    navController.navigate(ChatApp.chat(chatId)) {
+                        popUpTo(ChatApp.CHAT) { inclusive = true }
+                        launchSingleTop = true
+                    }
                 }
             },
             onOpenLink = onOpenLink,
+        )
+    }
+
+    // What another app shares, for the user to choose the chat whose message
+    // box it fills, or to start one.
+    composable(
+        route = ChatApp.SHARE,
+        arguments = listOf("text", "url", "images").map { name ->
+            navArgument(name) {
+                type = NavType.StringType
+                defaultValue = ""
+                nullable = false
+            }
+        },
+    ) { entry ->
+        val message = shareMessage(entry.arguments?.getString("text").orEmpty(), entry.arguments?.getString("url").orEmpty())
+        val images = entry.arguments?.getString("images").orEmpty()
+        ChatShareScreen(
+            onBack = { navController.popBackStack() },
+            onChoose = { chatId -> navController.openShared(chatId, message, images) },
+            onNewChat = { navController.navigate(ChatApp.newChat(message, images)) },
         )
     }
 
@@ -133,4 +193,14 @@ fun NavGraphBuilder.chatNavGraph(
             },
         )
     }
+}
+
+/**
+ * Open [chatId] with [message] and [images] in its message box, in place of
+ * the choice of chat, and of a new chat started from it: Back leaves the
+ * chat as a drawer pick's does. Nothing is sent until the user sends it.
+ */
+internal fun NavController.openShared(chatId: String, message: String, images: String) {
+    popBackStack(ChatApp.SHARE, inclusive = true)
+    openInPlace(ChatApp.ROUTER, ChatApp.CHAT, ChatApp.chat(chatId, message, images))
 }

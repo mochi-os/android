@@ -219,8 +219,6 @@
     <string name="feeds_ai_prompt_default">افتراضي</string>
     <string name="feeds_ai_prompt_custom">مخصص</string>
     <string name="feeds_ai_prompt_variables">المتغيرات: %1$s</string>
-    <string name="feeds_link">رابط</string>
-    <string name="feeds_share_link_title">رابط الموجز</string>
     <plurals name="feeds_comment_count">
         <item quantity="zero">%1$s تعليق</item>
         <item quantity="one">تعليق واحد</item>

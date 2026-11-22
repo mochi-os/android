@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Kies een sjabloon</string>
     <string name="projects_create_next">Volgende</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Alles wissen</string>
     <string name="projects_filter_all">Alles</string>
     <string name="projects_filter_other">Overig</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Deze bijlage wordt permanent verwijderd.</string>
     <string name="projects_attachment_delete_confirm_title">Bijlage verwijderen?</string>
     <string name="projects_settings_unsubscribe_section">Abonnement op project opzeggen</string>
-    <string name="projects_share_link_title">Project delen</string>
     <string name="projects_sort_filter_title">Sorteren en filteren</string>
     <string name="projects_create_prefix_hint">Gebruikt voor leesbare ID\'s zoals %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

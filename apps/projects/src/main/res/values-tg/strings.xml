@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Шаблон интихоб кунед</string>
     <string name="projects_create_next">Баъдӣ</string>
     <string name="projects_filter">Филтр</string>
-    <string name="projects_link">Пайванд</string>
     <string name="projects_filter_clear_all">Ҳамаро тоза кардан</string>
     <string name="projects_filter_all">Ҳама</string>
     <string name="projects_filter_other">Дигар</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Ин замима абадан нест карда мешавад.</string>
     <string name="projects_attachment_delete_confirm_title">Замима нест карда шавад?</string>
     <string name="projects_settings_unsubscribe_section">Бекор кардани обунаи лоиҳа</string>
-    <string name="projects_share_link_title">Мубодилаи лоиҳа</string>
     <string name="projects_sort_filter_title">Мураттабсозӣ ва филтр</string>
     <string name="projects_create_prefix_hint">Барои ID-ҳои хондашаванда ба мисли %1$s-1, %1$s-2 истифода мешавад</string>
     <plurals name="projects_request_conflicts">

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Air ùrachadh %1$s</string>
     <string name="wikis_pageview_not_found_description">Chan eil an duilleag “%1$s” ann fhathast.</string>
-    <string name="wikis_pageview_share_chooser">Ceangal na h-uicipeid</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Ceangal</string>
     <string name="wikis_open_sidebar">Fosgail bàr-taoibh</string>
     <string name="wikis_search_placeholder">Lorg wiki</string>
     <string name="wikis_unsubscribe_confirm_message">A bheil thu cinnteach gu bheil thu airson sgur de %1$s?</string>

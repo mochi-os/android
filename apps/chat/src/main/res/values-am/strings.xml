@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s ውይይቶችን የሚቀበለው ከጓደኞች ብቻ ነው።</string>
     <string name="chat_message_earlier">ይህ መለያ ወደ Mochi ከመታከሉ በፊት የነበሩ መልዕክቶች የተመሰጠሩ ናቸው እና እዚህ ሊነበቡ አይችሉም</string>
     <string name="chat_message_excluded">ለሌሎች መሣሪያዎች ብቻ የተመሰጠረ</string>
-    <string name="chat_setup">ያዘጋጁ</string>
+    <string name="chat_message_changed">የላኪው የምስጠራ ቁልፍ ተቀይሯል</string>    <string name="chat_setup">ያዘጋጁ</string>
     <string name="chat_jump_bottom">ወደ ታች ዝለል</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">ወደ %1$s አዲስ መልዕክት ዝለል</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">ቁልፎቹ ከማይዛመዱ መሣሪያ የተላከ</string>
     <string name="chat_list_select">ውይይት ይምረጡ</string>
     <string name="chat_message_discard">ጣል</string>
+    <string name="chat_message_unencrypted">ሳይመሰጠር ላክ</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">መልዕክቱ ከገደቡ በ%1$s ቁምፊ ይረዝማል</item>
         <item quantity="other">መልዕክቱ ከገደቡ በ%1$s ቁምፊዎች ይረዝማል</item>

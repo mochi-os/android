@@ -13,11 +13,11 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileRenameOutline
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.History
-import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.ModeComment
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -93,6 +93,8 @@ fun PageOverflowMenu(
     onRssCopy: (mode: String) -> Unit,
     onRssRevoke: () -> Unit,
     modifier: Modifier = Modifier,
+    // Share for the page itself; null while there is no page to share.
+    onSharePage: (() -> Unit)? = null,
 ) {
     // [wikiId] and [slug] are accepted on the contract so callers can pass
     // the same set as web's overflow, but every callback is already pre-bound
@@ -139,6 +141,13 @@ fun PageOverflowMenu(
             ),
             onClick = onComments,
         )
+        onSharePage?.let { share ->
+            MenuRow(
+                icon = Icons.Outlined.Share,
+                label = stringResource(MochiR.string.share_title),
+                onClick = share,
+            )
+        }
         if (permissions.delete) {
             MenuRow(
                 icon = Icons.Outlined.Delete,
@@ -193,11 +202,15 @@ fun PageOverflowMenu(
             )
         }
 
-        MenuRow(
-            icon = Icons.Outlined.Link,
-            label = stringResource(R.string.wikis_page_action_share),
-            onClick = onShare,
-        )
+        // Sharing the wiki is a manager's call, as on the web; a replica's
+        // manager shares its own address, which others can replicate from.
+        if (permissions.manage) {
+            MenuRow(
+                icon = Icons.Outlined.Share,
+                label = stringResource(MochiR.string.share_title),
+                onClick = onShare,
+            )
+        }
         shortcut?.let { target -> AddToHomeItem("wikis", target.path, target.label, onDismiss) }
 
         if (canUnsubscribe) {

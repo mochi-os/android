@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s yana karɓar chat daga abokai kawai.</string>
     <string name="chat_message_earlier">Saƙonnin kafin a ƙara wannan asusun zuwa Mochi an ɓoye su kuma ba za a iya karanta su a nan ba</string>
     <string name="chat_message_excluded">An ɓoye shi don wasu na\'urori kawai</string>
-    <string name="chat_setup">Saitawa</string>
+    <string name="chat_message_changed">Maɓallin ɓoyewa na mai aikawa ya canza</string>    <string name="chat_setup">Saitawa</string>
     <string name="chat_jump_bottom">Tsallaka zuwa ƙasa</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Tsallaka zuwa sabon saƙo %1$s</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">An aiko daga na\'urar da maɓallanta ba su dace ba</string>
     <string name="chat_list_select">Zaɓi chat</string>
     <string name="chat_message_discard">Watsar</string>
+    <string name="chat_message_unencrypted">Aika ba tare da ɓoyewa ba</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Saƙon ya wuce iyaka da harafi %1$s</item>
         <item quantity="other">Saƙon ya wuce iyaka da haruffa %1$s</item>

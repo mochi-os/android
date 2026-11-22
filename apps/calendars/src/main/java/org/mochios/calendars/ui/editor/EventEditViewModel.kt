@@ -14,8 +14,11 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
@@ -34,6 +37,9 @@ import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.di.Viewer
 import org.mochios.calendars.model.defaultCalendar
+import org.mochios.calendars.R
+import org.mochios.android.i18n.Format
+import org.mochios.android.share.Shared
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.Memory
@@ -133,6 +139,9 @@ data class EditorUiState(
 ) {
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
 
+    /** An event in one of the user's own calendars, which Share offers: calendars are private. */
+    val shareable: Boolean get() = event != null && calendars.firstOrNull { it.id == calendar }?.kind == Calendar.KIND_OWN
+
     /**
      * Whether the end follows the start as instants, which Save waits for.
      * A timed event may end as it starts; an all-day one holds the day after
@@ -164,6 +173,18 @@ class EventEditViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(EditorUiState())
     val uiState: StateFlow<EditorUiState> = _uiState.asStateFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The event, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
+
+    /** Share the event as the form holds it, its times written in [format]. */
+    fun share(format: Format) {
+        val state = _uiState.value
+        if (!state.shareable) return
+        _shares.tryEmit(eventShare(state, zone, context.resources, context.resources.configuration.locales[0], format))
+    }
 
     /** The tree the server last sent, whose unmanaged properties are kept. */
     private var carried: Event? = null

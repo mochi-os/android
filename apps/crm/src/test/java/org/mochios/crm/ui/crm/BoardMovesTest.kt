@@ -5,6 +5,8 @@
 
 package org.mochios.crm.ui.crm
 
+import android.content.Intent
+import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +21,10 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.api.MochiError
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.android.share.Shared
+import org.mochios.android.share.share
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.crm.CrmServer
 import org.mochios.crm.lib.ActiveViewStore
@@ -30,6 +36,7 @@ import org.mochios.crm.until
 import org.mochios.android.websocket.MochiWebSocket
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 
 /**
@@ -70,6 +77,7 @@ class BoardMovesTest {
             "hierarchy": {"company": [""], "contact": ["", "company"]}}""")
         server.data("c1/-/objects", """{"objects": $objects, "watched": []}""")
         server.data("c1/-/people", """{"people": []}""")
+        server.data("c1/-/share", """{"link": "mochi://12D3KooWPeer/c1"}""")
         socket = server.socket()
     }
 
@@ -170,6 +178,24 @@ class BoardMovesTest {
         val csv = model.uiState.value.pendingExport?.content.orEmpty()
         assertTrue(csv, csv.lines().any { line -> line.startsWith("b,") })
         assertTrue(csv, csv.lines().any { line -> line.startsWith("d,") })
+    }
+
+    @Test
+    fun `the CRM's Share hands other apps the link it is joined by, and Mochi the CRM by name and address`() {
+        val model = board()
+        var shared: Shared? = null
+        jobs += CoroutineScope(Dispatchers.Main).launch { model.shares.collect { shared = it } }
+        model.share()
+        until("the share") { shared != null }
+        assertTrue(server.of("c1/-/share").isNotEmpty())
+        // The sheet the screen's ShareSheet opens with it.
+        share(context, shared!!)
+        val chooser = shadowOf(context).nextStartedActivity
+        assertEquals(Intent.ACTION_CHOOSER, chooser.action)
+        val send = IntentCompat.getParcelableExtra(chooser, Intent.EXTRA_INTENT, Intent::class.java)!!
+        assertEquals("mochi://12D3KooWPeer/c1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Sales", send.getStringExtra(EXTRA_WORDS))
+        assertEquals(server.session.getServerUrlBlocking().trimEnd('/') + "/crm/c1", send.getStringExtra(EXTRA_ADDRESS))
     }
 
     @Test

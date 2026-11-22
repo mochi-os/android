@@ -16,7 +16,6 @@
     <string name="crm_create_object">Opret objekt</string>
     <string name="crm_search">Søg</string>
     <string name="crm_settings">Indstillinger</string>
-    <string name="crm_link">Link</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Eksporten kunne ikke gemmes</string>
     <string name="crm_sort_rank">Manuel</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Ingen CRM\'er fundet</string>
     <string name="crm_create_blocked_no_parents">Ingen emnetyper kan oprettes endnu. Opret først de nødvendige overordnede emner.</string>
     <string name="crm_export_csv">Eksportér CSV</string>
-    <string name="crm_share_link_title">Del CRM</string>
     <string name="crm_export_saved">CRM-data gemt</string>
     <string name="crm_create_upload_json">Upload en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>

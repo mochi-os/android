@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Ұпай сұрауы</string>
     <string name="forums_ai_prompt_tag_label">Тег сұрауы</string>
     <string name="forums_ai_prompt_variables">Айнымалылар: %1$s</string>
-    <string name="forums_link">Сілтеме</string>
     <string name="forums_moderation_ban_message">Шектеуді алып тастағанша форумға кіру мүмкіндігін жоғалтады.</string>
     <string name="forums_moderation_ban_title">%1$s бұғатталсын ба?</string>
     <string name="forums_moderation_log_empty_subtitle">Әзірге модерация әрекеттері тіркелмеген</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Форум атауы өзгертілді</string>
     <string name="forums_settings_name_clear_cd">Атауды тазалау</string>
     <string name="forums_settings_unsubscribe_section">Форумнан бас тарту</string>
-    <string name="forums_share_link_title">Форум сілтемесі</string>
     <string name="forums_find_found_by_url">URL арқылы табылды</string>
     <string name="forums_moderation_pending_posts">Күтудегі жазбалар (%1$s)</string>
     <string name="forums_moderation_pending_comments">Күтудегі пікірлер (%1$s)</string>

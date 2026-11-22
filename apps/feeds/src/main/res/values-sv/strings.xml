@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Standard</string>
     <string name="feeds_ai_prompt_custom">Anpassad</string>
     <string name="feeds_ai_prompt_variables">Variabler: %1$s</string>
-    <string name="feeds_link">Länk</string>
-    <string name="feeds_share_link_title">Flödeslänk</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s kommentar</item>
         <item quantity="other">%1$s kommentarer</item>

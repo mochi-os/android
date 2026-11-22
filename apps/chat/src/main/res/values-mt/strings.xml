@@ -182,7 +182,7 @@
     <string name="chat_refused_friends_only">%1$s jaċċetta chats biss mill-ħbieb.</string>
     <string name="chat_message_earlier">Il-messaġġi minn qabel ma dan il-kont ġie miżjud ma\' Mochi huma kriptati u ma jistgħux jinqraw hawn</string>
     <string name="chat_message_excluded">Kriptat għal apparati oħra biss</string>
-    <string name="chat_setup">Issettja</string>
+    <string name="chat_message_changed">Iċ-ċavetta tal-kriptaġġ tal-mittent inbidlet</string>    <string name="chat_setup">Issettja</string>
     <string name="chat_jump_bottom">Aqbeż għall-qiegħ</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Aqbeż għal %1$s messaġġ ġdid</item>
@@ -195,6 +195,7 @@
     <string name="chat_message_mismatched">Mibgħut minn apparat li ċ-ċwievet tiegħu ma jaqblux</string>
     <string name="chat_list_select">Agħżel chat</string>
     <string name="chat_message_discard">Armi</string>
+    <string name="chat_message_unencrypted">Ibgħat mhux kriptat</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Il-messaġġ għandu %1$s karattru żejjed</item>
         <item quantity="two">Il-messaġġ għandu %1$s karattri żejda</item>

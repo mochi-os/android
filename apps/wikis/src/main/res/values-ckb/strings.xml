@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">نوێکرایەوە %1$s</string>
     <string name="wikis_pageview_not_found_description">لاپەڕەی “%1$s” هێشتا بوونی نییە.</string>
-    <string name="wikis_pageview_share_chooser">بەستەری ویکی</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">بەستەر</string>
     <string name="wikis_open_sidebar">کردنەوەی لاتەنیشت</string>
     <string name="wikis_search_placeholder">گەڕان بۆ wiki</string>
     <string name="wikis_unsubscribe_confirm_message">دڵنیایت دەتەوێت بەشداری %1$s لابەیت؟</string>

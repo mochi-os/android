@@ -179,7 +179,7 @@
     <string name="chat_refused_friends_only">Cha ghabh %1$s ri cabadaich ach o charaidean.</string>
     <string name="chat_message_earlier">Tha teachdaireachdan o mus deach an cunntas seo a chur ri Mochi crioptaichte agus cha ghabh an leughadh an-seo</string>
     <string name="chat_message_excluded">Crioptaichte airson uidheaman eile a-mhàin</string>
-    <string name="chat_setup">Suidhich</string>
+    <string name="chat_message_changed">Tha iuchair crioptachaidh an t-seòladair air atharrachadh</string>    <string name="chat_setup">Suidhich</string>
     <string name="chat_jump_bottom">Leum gun bhonn</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Leum gu %1$s teachdaireachd ùr</item>
@@ -191,6 +191,7 @@
     <string name="chat_message_mismatched">Air a chur o uidheam nach eil na h-iuchraichean aige a\' freagairt</string>
     <string name="chat_list_select">Tagh cabadaich</string>
     <string name="chat_message_discard">Tilg air falbh</string>
+    <string name="chat_message_unencrypted">Cuir gun chrioptachadh</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Tha an teachdaireachd %1$s charactar ro fhada</item>
         <item quantity="two">Tha an teachdaireachd %1$s charactar ro fhada</item>

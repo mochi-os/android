@@ -322,6 +322,9 @@
     <string name="game_system_score_agreed">Pontuação acordada</string>
     <string name="game_system_score_accept">%1$s aceitou a pontuação</string>
     <string name="game_system_score_resume">%1$s retomou o jogo</string>
+    <string name="share_title">Compartilhar</string>
+    <string name="share_feed">Publicar em um feed</string>
+    <string name="share_chat">Enviar em uma conversa</string>
     <string name="devices_copy">Copiar %1$s</string>
     <string name="devices_create">Criar</string>
     <string name="devices_created">Criado %1$s</string>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">अद्यावधिक गरियो %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” पृष्ठ अहिलेसम्म अवस्थित छैन।</string>
-    <string name="wikis_pageview_share_chooser">विकी लिङ्क</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">लिङ्क</string>
     <string name="wikis_open_sidebar">साइडबार खोल्नुहोस्</string>
     <string name="wikis_search_placeholder">wiki खोज्नुहोस्</string>
     <string name="wikis_unsubscribe_confirm_message">के तपाईं %1$s बाट सदस्यता रद्द गर्न निश्चित हुनुहुन्छ?</string>

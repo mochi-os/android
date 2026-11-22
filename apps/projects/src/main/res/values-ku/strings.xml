@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Şabloneke hilbijêre</string>
     <string name="projects_create_next">Pêştir</string>
     <string name="projects_filter">Parzûna</string>
-    <string name="projects_link">Girêdan</string>
     <string name="projects_filter_clear_all">Hemûyan paqij bike</string>
     <string name="projects_filter_all">Hemû</string>
     <string name="projects_filter_other">Yên din</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Ev pêvek dê her û her were jêbirin.</string>
     <string name="projects_attachment_delete_confirm_title">Pêvekê jê bibe?</string>
     <string name="projects_settings_unsubscribe_section">Aboneytiya projeyê betal bike</string>
-    <string name="projects_share_link_title">Projeyê parve bike</string>
     <string name="projects_sort_filter_title">Rêz bike û parzûn bike</string>
     <string name="projects_create_prefix_hint">Ji bo ID-yên xwendinbar ên wek %1$s-1, %1$s-2 tê bikaranîn</string>
     <plurals name="projects_request_conflicts">

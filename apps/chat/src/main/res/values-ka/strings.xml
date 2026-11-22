@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s ჩატებს მხოლოდ მეგობრებისგან იღებს.</string>
     <string name="chat_message_earlier">შეტყობინებები ამ ანგარიშის Mochi-ში დამატებამდე დაშიფრულია და აქ ვერ წაიკითხება</string>
     <string name="chat_message_excluded">დაშიფრულია მხოლოდ სხვა მოწყობილობებისთვის</string>
-    <string name="chat_setup">დაყენება</string>
+    <string name="chat_message_changed">გამგზავნის დაშიფვრის გასაღები შეიცვალა</string>    <string name="chat_setup">დაყენება</string>
     <string name="chat_jump_bottom">ბოლოში გადასვლა</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s ახალ შეტყობინებაზე გადასვლა</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">გაგზავნილია მოწყობილობიდან, რომლის გასაღებები არ ემთხვევა</string>
     <string name="chat_list_select">ჩატის არჩევა</string>
     <string name="chat_message_discard">გადაგდება</string>
+    <string name="chat_message_unencrypted">გაგზავნა დაშიფვრის გარეშე</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">შეტყობინება ლიმიტს %1$s სიმბოლოთი აღემატება</item>
         <item quantity="other">შეტყობინება ლიმიტს %1$s სიმბოლოთი აღემატება</item>

@@ -16,7 +16,6 @@
     <string name="crm_create_object">Crea un objecte</string>
     <string name="crm_search">Cerca</string>
     <string name="crm_settings">Configuració</string>
-    <string name="crm_link">Enllaç</string>
     <string name="crm_design">Disseny</string>
     <string name="crm_export_failed">No s\'ha pogut desar l\'exportació</string>
     <string name="crm_sort_rank">Manual</string>
@@ -272,7 +271,6 @@
     <string name="crm_no_crms_found">No s\'ha trobat cap CRM</string>
     <string name="crm_create_blocked_no_parents">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
     <string name="crm_export_csv">Exporta CSV</string>
-    <string name="crm_share_link_title">Comparteix el CRM</string>
     <string name="crm_export_saved">Dades del CRM desades</string>
     <string name="crm_create_upload_json">Carrega un fitxer .zip o .json</string>
     <string name="crm_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>

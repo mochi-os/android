@@ -16,7 +16,6 @@
     <string name="crm_create_object">Създай обект</string>
     <string name="crm_search">Търсене</string>
     <string name="crm_settings">Настройки</string>
-    <string name="crm_link">Връзка</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Експортът не можа да се запази</string>
     <string name="crm_sort_rank">Ръчно</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Не са намерени CRM системи</string>
     <string name="crm_create_blocked_no_parents">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
     <string name="crm_export_csv">Експорт CSV</string>
-    <string name="crm_share_link_title">Споделяне на CRM</string>
     <string name="crm_export_saved">Данните за CRM са запазени</string>
     <string name="crm_create_upload_json">Качете файл .zip или .json</string>
     <string name="crm_create_blocked_no_options">Не може да се създаде: %1$s е задължително, но няма опции за избор. Добавете опции в Дизайн.</string>

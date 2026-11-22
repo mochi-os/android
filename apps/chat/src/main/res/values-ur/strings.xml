@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s صرف دوستوں سے چیٹ قبول کرتے ہیں۔</string>
     <string name="chat_message_earlier">اس اکاؤنٹ کو Mochi میں شامل کرنے سے پہلے کے پیغامات خفیہ کردہ ہیں اور یہاں پڑھے نہیں جا سکتے</string>
     <string name="chat_message_excluded">صرف دوسرے آلات کے لیے خفیہ کردہ</string>
+    <string name="chat_message_changed">بھیجنے والے کی خفیہ کاری کی کلید بدل گئی ہے</string>
     <string name="chat_setup">سیٹ اپ کریں</string>
     <string name="chat_jump_bottom">نیچے جائیں</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">ایسے آلے سے بھیجا گیا جس کی کلیدیں مماثل نہیں ہیں</string>
     <string name="chat_list_select">چیٹ منتخب کریں</string>
     <string name="chat_message_discard">رد کریں</string>
+    <string name="chat_message_unencrypted">خفیہ کاری کے بغیر بھیجیں</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">پیغام %1$s حرف زیادہ لمبا ہے</item>
         <item quantity="other">پیغام %1$s حروف زیادہ لمبا ہے</item>

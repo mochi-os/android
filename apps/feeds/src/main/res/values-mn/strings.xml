@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Үндсэн</string>
     <string name="feeds_ai_prompt_custom">Захиалгат</string>
     <string name="feeds_ai_prompt_variables">Хувьсагчид: %1$s</string>
-    <string name="feeds_link">Холбоос</string>
-    <string name="feeds_share_link_title">Хангамжийн холбоос</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s сэтгэгдэл</item>
         <item quantity="other">%1$s сэтгэгдэл</item>

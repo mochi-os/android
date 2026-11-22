@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s بازی را از سر گرفت</string>
     <string name="game_not_found">بازی پیدا نشد</string>
     <string name="game_chat_move_played_you">شما %1$s را بازی کردید</string>
+    <string name="share_title">اشتراک‌گذاری</string>
+    <string name="share_feed">ارسال در یک فید</string>
+    <string name="share_chat">ارسال در یک گفت‌وگو</string>
     <string name="devices_add">افزودن دستگاه</string>
     <string name="devices_copy">کپی %1$s</string>
     <string name="devices_create">ساختن</string>

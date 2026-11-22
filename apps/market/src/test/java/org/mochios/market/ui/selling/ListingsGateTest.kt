@@ -20,6 +20,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.LoadState
@@ -82,7 +83,7 @@ class ListingsGateTest {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(MarketApi::class.java)
-        return MyListingsViewModel(MarketRepository(api, FileStore(context)))
+        return MyListingsViewModel(MarketRepository(api, FileStore(context)), SessionManager(context))
     }
 
     private fun until(done: () -> Boolean) {

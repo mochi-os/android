@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Uppfært %1$s</string>
     <string name="wikis_pageview_not_found_description">Síðan „%1$s“ er ekki til enn.</string>
-    <string name="wikis_pageview_share_chooser">Wiki-tengill</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Tengill</string>
     <string name="wikis_open_sidebar">Opna hliðarstiku</string>
     <string name="wikis_search_placeholder">Leita að wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Ertu viss um að þú viljir segja upp áskrift að %1$s?</string>

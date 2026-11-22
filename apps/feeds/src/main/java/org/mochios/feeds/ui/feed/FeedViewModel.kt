@@ -35,6 +35,7 @@ import org.mochios.android.util.mergeReload
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.share.Shared
 import org.mochios.feeds.R
 import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.model.Feed
@@ -76,9 +77,6 @@ sealed interface FeedActionEvent {
     /** An RSS feed URL is ready for the screen to copy to the clipboard. */
     data class RssUrlReady(val url: String) : FeedActionEvent
 
-    /** A share link is ready for the screen to hand to the system share sheet. */
-    data class ShareLinkReady(val link: String) : FeedActionEvent
-
     /** Unsubscribe succeeded; the screen should leave this feed. */
     data object Unsubscribed : FeedActionEvent
 
@@ -119,6 +117,11 @@ class FeedViewModel @Inject constructor(
 
     private val _feedInfo = MutableStateFlow<Feed?>(null)
     val feedInfo: StateFlow<Feed?> = _feedInfo.asStateFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The feed, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
 
     /** The user's notification switches for this feed; null until loaded, for
      *  the aggregate, and for a feed they do not hold. */
@@ -334,13 +337,18 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Fetch the feed's `mochi://<peer>/<feed>` share link; the server assembles
-     * it.
+     * Share the feed: by its name and address, and to other apps by its
+     * `mochi://<peer>/<feed>` link, which the server assembles.
      */
-    fun shareLink() {
+    fun share() {
         viewModelScope.launch {
             try {
-                _actionEvents.emit(FeedActionEvent.ShareLinkReady(repository.shareFeed(feedId)))
+                val link = repository.shareFeed(feedId)
+                val info = _feedInfo.value
+                val address = "$serverUrl/feeds/${info?.fingerprint?.takeIf { it.isNotEmpty() } ?: feedId}"
+                _shares.emit(Shared(text = info?.name.orEmpty(), url = address, link = link))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }

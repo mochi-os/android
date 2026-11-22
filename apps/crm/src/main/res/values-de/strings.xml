@@ -16,7 +16,6 @@
     <string name="crm_create_object">Objekt erstellen</string>
     <string name="crm_search">Suchen</string>
     <string name="crm_settings">Einstellungen</string>
-    <string name="crm_link">Link</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Der Export konnte nicht gespeichert werden</string>
     <string name="crm_sort_rank">Manuell</string>
@@ -272,7 +271,6 @@
     <string name="crm_no_crms_found">Keine CRMs gefunden</string>
     <string name="crm_create_blocked_no_parents">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
     <string name="crm_export_csv">CSV exportieren</string>
-    <string name="crm_share_link_title">CRM teilen</string>
     <string name="crm_export_saved">CRM-Daten gespeichert</string>
     <string name="crm_create_upload_json">.zip- oder .json-Datei hochladen</string>
     <string name="crm_create_blocked_no_options">Erstellen nicht möglich: %1$s ist erforderlich, hat aber keine Optionen zur Auswahl. Fügen Sie Optionen im Design hinzu.</string>

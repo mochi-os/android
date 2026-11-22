@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s တွင် အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="wikis_pageview_not_found_description">“%1$s” စာမျက်နှာ မရှိသေးပါ။</string>
-    <string name="wikis_pageview_share_chooser">ဝီကီလင့်ခ်</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">လင့်ခ်</string>
     <string name="wikis_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
     <string name="wikis_search_placeholder">wiki ရှာရန်</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s မှ စာရင်းသွင်းမှု ရပ်တန့်လိုသည်မှာ သေချာပါသလား။</string>

@@ -86,32 +86,48 @@ class ChatRepository @Inject constructor(
     ): MessageListResponse =
         api.getMessages(chatId, cursor, limit, thread?.ifEmpty { null }).unwrap()
 
-    /** Send a message without files, into the thread under [thread] where one is named. */
+    /**
+     * Send a message without files, into the thread under [thread] where one
+     * is named; [unencrypted] where the user chose to send it so after the
+     * send refused it for want of encryption.
+     */
     suspend fun sendMessage(
         chatId: String,
         body: String,
         reply: String? = null,
         thread: String? = null,
+        unencrypted: Boolean = false,
     ): SendMessageResponse =
-        api.sendMessage(chatId, body, reply, thread?.ifEmpty { null }).unwrap()
+        api.sendMessage(chatId, body, reply, thread?.ifEmpty { null }, if (unencrypted) "true" else null).unwrap()
 
-    /** Send a message with the files picked as [uris], the upload's progress told to [tracker]. */
+    /**
+     * Send a message with the files picked as [uris], the upload's progress
+     * told to [tracker]; [unencrypted], its files go unencrypted too.
+     */
     suspend fun sendMessageFromUris(
         chatId: String,
         body: String,
         uris: List<android.net.Uri>,
         reply: String? = null,
         tracker: UploadTracker? = null,
+        unencrypted: Boolean = false,
     ): SendMessageResponse {
         if (uris.isEmpty()) {
-            return api.sendMessage(chatId, body, reply).unwrap()
+            return sendMessage(chatId, body, reply, unencrypted = unencrypted)
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
+        val unencryptedPart = if (unencrypted) "true".toRequestBody("text/plain".toMediaTypeOrNull()) else null
         val files = fileStore.cacheFiles(uris)
         try {
             val parts = fileStore.fileParts("files", files, tracker)
-            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, null, parts).unwrap()
+            return api.sendMessageWithFiles(
+                chatId = chatId,
+                body = bodyPart,
+                reply = replyPart,
+                unencrypted = unencryptedPart,
+                files = parts,
+            ).unwrap()
         } finally {
             fileStore.deleteAll(files)
         }
@@ -196,8 +212,12 @@ class ChatRepository @Inject constructor(
     suspend fun devices(chatId: String, person: String): List<EncryptionDevice> =
         api.devices(chatId, person).unwrap().devices
 
-    suspend fun trust(chatId: String, person: String, device: String, trust: String) {
-        api.trust(chatId, person, device, trust).unwrap()
+    /**
+     * The user's word on a device, having compared [fingerprint]: an XMPP
+     * device whose identity has changed since is refused.
+     */
+    suspend fun trust(chatId: String, person: String, device: String, trust: String, fingerprint: String = "") {
+        api.trust(chatId, person, device, trust, fingerprint.ifEmpty { null }).unwrap()
     }
 
     suspend fun verify(chatId: String, person: String): Verification =

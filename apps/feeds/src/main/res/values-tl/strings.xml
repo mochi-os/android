@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Default</string>
     <string name="feeds_ai_prompt_custom">Pasadya</string>
     <string name="feeds_ai_prompt_variables">Mga variable: %1$s</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Link ng feed</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s komento</item>
         <item quantity="other">%1$s na komento</item>

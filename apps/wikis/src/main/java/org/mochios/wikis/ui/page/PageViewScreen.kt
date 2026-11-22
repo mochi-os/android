@@ -5,8 +5,6 @@
 
 package org.mochios.wikis.ui.page
 
-import android.content.Context
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -53,7 +51,6 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -84,6 +81,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.rememberCopier
+import org.mochios.android.share.ShareSheet
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -122,9 +120,6 @@ fun PageViewScreen(
     val rssReplaceLabel = stringResource(R.string.wikis_rss_replace)
     val deletedMsg = stringResource(R.string.wikis_delete_page_success)
     val rssRevokedMsg = stringResource(MochiR.string.rss_revoked)
-    val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
-    val shareChooserTitle = stringResource(R.string.wikis_pageview_share_chooser)
-    val currentShareSubject by rememberUpdatedState(shareSubject)
 
     // Declared ahead of the event collector below, which closes the dialog when
     // the delete it confirmed comes back.
@@ -185,15 +180,6 @@ fun PageViewScreen(
                         viewModel.copyRssUrl(event.mode, regenerate = true)
                     }
                 }
-                is PageViewEvent.ShareLink -> {
-                    sharePageLink(
-                        context = context,
-                        subject = currentShareSubject,
-                        url = event.link,
-                        chooserTitle = shareChooserTitle,
-                    )
-                }
-
                 is PageViewEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMsg)
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
@@ -368,7 +354,16 @@ fun PageViewScreen(
                                 },
                                 onShare = {
                                     menuExpanded = false
-                                    viewModel.shareLink()
+                                    viewModel.shareWiki()
+                                },
+                                // Anyone reading the page may share it.
+                                onSharePage = if (state.page != null) {
+                                    {
+                                        menuExpanded = false
+                                        viewModel.sharePage()
+                                    }
+                                } else {
+                                    null
                                 },
                                 onUnsubscribe = {
                                     menuExpanded = false
@@ -510,6 +505,8 @@ fun PageViewScreen(
             dismissEnabled = !isUnsubscribing,
         )
     }
+
+    ShareSheet(viewModel.shares)
 
     if (showDeleteDialog) {
         // A confirmation is a question, not a place: it asks over the page the
@@ -794,23 +791,6 @@ private fun SkeletonBar(widthFraction: Float) {
             .fillMaxWidth(widthFraction)
             .height(14.dp),
     ) { /* no content — just the tinted surface as a placeholder */ }
-}
-
-private fun sharePageLink(
-    context: Context,
-    subject: String,
-    url: String,
-    chooserTitle: String,
-) {
-    val send = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_SUBJECT, subject)
-        putExtra(Intent.EXTRA_TEXT, url)
-        putExtra(Intent.EXTRA_TITLE, subject.ifBlank { chooserTitle })
-    }
-    val chooser = Intent.createChooser(send, chooserTitle)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
 }
 
 /**

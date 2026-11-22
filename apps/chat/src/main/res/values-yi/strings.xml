@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s נעמט אָן שמועסן נאָר פֿון פֿרײַנד.</string>
     <string name="chat_message_earlier">בריוו פֿון איידער דער חשבון איז צוגעגעבן געוואָרן צו Mochi זענען פֿאַרשיפֿרירט און מע קען זיי דאָ נישט לייענען</string>
     <string name="chat_message_excluded">פֿאַרשיפֿרירט נאָר פֿאַר אַנדערע מכשירים</string>
+    <string name="chat_message_changed">דער שיפֿרירונג־שליסל פֿונעם שיקער האָט זיך געביטן</string>
     <string name="chat_setup">שטעל אויף</string>
     <string name="chat_jump_bottom">שפּרינגען אַראָפּ</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">געשיקט פֿון אַ מכשיר וועמענס שליסלען שטימען ניט</string>
     <string name="chat_list_select">קלײַב אַ שמועס</string>
     <string name="chat_message_discard">אַװעקװאַרפֿן</string>
+    <string name="chat_message_unencrypted">שיקן אומפֿאַרשליסלט</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">די מעלדונג איז %1$s אות צו לאַנג</item>
         <item quantity="other">די מעלדונג איז %1$s אותיות צו לאַנג</item>

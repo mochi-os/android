@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Na-update %1$s</string>
     <string name="wikis_pageview_not_found_description">Wala pa ang pahinang “%1$s”.</string>
-    <string name="wikis_pageview_share_chooser">Link ng wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Buksan ang sidebar</string>
     <string name="wikis_search_placeholder">Maghanap ng wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurado ka bang gusto mong mag-unsubscribe sa %1$s?</string>

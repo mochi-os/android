@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s només accepta xats d\'amics.</string>
     <string name="chat_message_earlier">Els missatges d\'abans que aquest compte s\'afegís a Mochi estan xifrats i no es poden llegir aquí</string>
     <string name="chat_message_excluded">Xifrat només per a altres dispositius</string>
-    <string name="chat_setup">Configura</string>
+    <string name="chat_message_changed">La clau de xifratge del remitent ha canviat</string>    <string name="chat_setup">Configura</string>
     <string name="chat_jump_bottom">Vés al final</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Vés a %1$s missatge nou</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Enviat des d\'un dispositiu les claus del qual no coincideixen</string>
     <string name="chat_list_select">Selecciona un xat</string>
     <string name="chat_message_discard">Descarta</string>
+    <string name="chat_message_unencrypted">Envia sense xifrar</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">El missatge té %1$s caràcter de més</item>
         <item quantity="other">El missatge té %1$s caràcters de més</item>

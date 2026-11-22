@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s راند ٻيهر شروع ڪئي</string>
     <string name="game_not_found">راند نه ملي</string>
     <string name="game_chat_move_played_you">توهان %1$s کيڏيو</string>
+    <string name="share_title">شيئر ڪريو</string>
+    <string name="share_feed">فيڊ تي پوسٽ ڪريو</string>
+    <string name="share_chat">چيٽ ۾ موڪليو</string>
     <string name="devices_add">ڊوائيس شامل ڪريو</string>
     <string name="devices_copy">%1$s ڪاپي ڪريو</string>
     <string name="devices_create">ٺاهيو</string>

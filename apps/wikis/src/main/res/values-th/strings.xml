@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">อัปเดต %1$s</string>
     <string name="wikis_pageview_not_found_description">หน้า \"%1$s\" ยังไม่มี</string>
-    <string name="wikis_pageview_share_chooser">ลิงก์วิกิ</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ของวิกิ</string>
-    <string name="wikis_page_action_share">ลิงก์</string>
     <string name="wikis_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="wikis_search_placeholder">ค้นหาวิกิ</string>
     <string name="wikis_unsubscribe_confirm_message">คุณแน่ใจหรือไม่ที่จะเลิกติดตาม %1$s?</string>

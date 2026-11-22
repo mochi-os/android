@@ -352,6 +352,9 @@
     <string name="game_system_score_resume">%1$s ຫຼິ້ນຕໍ່</string>
     <string name="game_not_found">ບໍ່ພົບເກມ</string>
     <string name="game_chat_move_played_you">ທ່ານຫຼິ້ນ %1$s</string>
+    <string name="share_title">ແບ່ງປັນ</string>
+    <string name="share_feed">ໂພສໄປທີ່ຟີດ</string>
+    <string name="share_chat">ສົ່ງໃນການສົນທະນາ</string>
     <string name="devices_add">ເພີ່ມອຸປະກອນ</string>
     <string name="devices_copy">ສຳເນົາ %1$s</string>
     <string name="devices_create">ສ້າງ</string>

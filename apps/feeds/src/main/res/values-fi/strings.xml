@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Oletus</string>
     <string name="feeds_ai_prompt_custom">Mukautettu</string>
     <string name="feeds_ai_prompt_variables">Muuttujat: %1$s</string>
-    <string name="feeds_link">Linkki</string>
-    <string name="feeds_share_link_title">Syötteen linkki</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s kommentti</item>
         <item quantity="other">%1$s kommenttia</item>

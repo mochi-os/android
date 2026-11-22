@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Запит на оцінку</string>
     <string name="forums_ai_prompt_tag_label">Запит на тег</string>
     <string name="forums_ai_prompt_variables">Змінні: %1$s</string>
-    <string name="forums_link">Посилання</string>
     <string name="forums_moderation_ban_message">Користувач втрачає доступ до форуму, доки ви не знімете обмеження.</string>
     <string name="forums_moderation_ban_title">Заблокувати %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Дій модерації ще не зафіксовано</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Форум перейменовано</string>
     <string name="forums_settings_name_clear_cd">Очистити назву</string>
     <string name="forums_settings_unsubscribe_section">Відписатися від форуму</string>
-    <string name="forums_share_link_title">Посилання на форум</string>
     <string name="forums_find_found_by_url">Знайдено за URL</string>
     <string name="forums_moderation_pending_posts">Дописи в очікуванні (%1$s)</string>
     <string name="forums_moderation_pending_comments">Коментарі в очікуванні (%1$s)</string>

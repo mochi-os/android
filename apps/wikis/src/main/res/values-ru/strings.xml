@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Обновлено %1$s</string>
     <string name="wikis_pageview_not_found_description">Страница «%1$s» ещё не существует.</string>
-    <string name="wikis_pageview_share_chooser">Ссылка на вики</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS вики</string>
-    <string name="wikis_page_action_share">Ссылка</string>
     <string name="wikis_open_sidebar">Открыть боковую панель</string>
     <string name="wikis_search_placeholder">Поиск вики</string>
     <string name="wikis_unsubscribe_confirm_message">Вы уверены, что хотите отписаться от %1$s?</string>

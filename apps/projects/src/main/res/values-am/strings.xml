@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">አብነት ይምረጡ</string>
     <string name="projects_create_next">ቀጣይ</string>
     <string name="projects_filter">ማጣሪያ</string>
-    <string name="projects_link">አገናኝ</string>
     <string name="projects_filter_clear_all">ሁሉንም አጽዳ</string>
     <string name="projects_filter_all">ሁሉም</string>
     <string name="projects_filter_other">ሌላ</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ይህ አባሪ እስከመጨረሻው ይሰረዛል።</string>
     <string name="projects_attachment_delete_confirm_title">አባሪ ይሰረዝ?</string>
     <string name="projects_settings_unsubscribe_section">ከፕሮጀክት ደንበኝነት ውጣ</string>
-    <string name="projects_share_link_title">ፕሮጀክት አጋራ</string>
     <string name="projects_sort_filter_title">ደርድር እና አጣራ</string>
     <string name="projects_create_prefix_hint">እንደ %1$s-1፣ %1$s-2 ላሉ ተነባቢ መለያዎች ይውላል</string>
     <plurals name="projects_request_conflicts">

@@ -213,8 +213,6 @@
     <string name="feeds_ai_prompt_default">Numatytasis</string>
     <string name="feeds_ai_prompt_custom">Pasirinktinis</string>
     <string name="feeds_ai_prompt_variables">Kintamieji: %1$s</string>
-    <string name="feeds_link">Nuoroda</string>
-    <string name="feeds_share_link_title">Srauto nuoroda</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s komentaras</item>
         <item quantity="few">%1$s komentarai</item>

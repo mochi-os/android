@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Okuzenzakalelayo</string>
     <string name="feeds_ai_prompt_custom">Okuzenzelwe</string>
     <string name="feeds_ai_prompt_variables">Okuguqukayo: %1$s</string>
-    <string name="feeds_link">Isixhumanisi</string>
-    <string name="feeds_share_link_title">Isixhumanisi sefidi</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s amazwana</item>
         <item quantity="other">%1$s amazwana</item>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">టెంప్లేట్‌ను ఎంచుకోండి</string>
     <string name="projects_create_next">తదుపరి</string>
     <string name="projects_filter">ఫిల్టర్</string>
-    <string name="projects_link">లింక్</string>
     <string name="projects_filter_clear_all">అన్నీ క్లియర్ చేయండి</string>
     <string name="projects_filter_all">అన్నీ</string>
     <string name="projects_filter_other">ఇతర</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ఈ జోడింపు శాశ్వతంగా తొలగించబడుతుంది.</string>
     <string name="projects_attachment_delete_confirm_title">జోడింపును తొలగించాలా?</string>
     <string name="projects_settings_unsubscribe_section">ప్రాజెక్ట్ సభ్యత్వాన్ని రద్దు చేయండి</string>
-    <string name="projects_share_link_title">ప్రాజెక్ట్‌ను పంచుకోండి</string>
     <string name="projects_sort_filter_title">క్రమబద్ధీకరించి ఫిల్టర్ చేయండి</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 వంటి చదవగలిగే IDల కోసం ఉపయోగించబడుతుంది</string>
     <plurals name="projects_request_conflicts">

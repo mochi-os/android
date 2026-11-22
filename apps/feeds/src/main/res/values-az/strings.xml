@@ -209,8 +209,6 @@
     <string name="feeds_ai_prompt_default">Standart</string>
     <string name="feeds_ai_prompt_custom">Xüsusi</string>
     <string name="feeds_ai_prompt_variables">Dəyişənlər: %1$s</string>
-    <string name="feeds_link">Keçid</string>
-    <string name="feeds_share_link_title">Lent keçidi</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s şərh</item>
         <item quantity="other">%1$s şərh</item>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Izvēlies veidni</string>
     <string name="projects_create_next">Tālāk</string>
     <string name="projects_filter">Filtrēt</string>
-    <string name="projects_link">Saite</string>
     <string name="projects_filter_clear_all">Notīrīt visu</string>
     <string name="projects_filter_all">Visi</string>
     <string name="projects_filter_other">Cits</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Šis pielikums tiks neatgriezeniski izdzēsts.</string>
     <string name="projects_attachment_delete_confirm_title">Izdzēst pielikumu?</string>
     <string name="projects_settings_unsubscribe_section">Atcelt projekta abonementu</string>
-    <string name="projects_share_link_title">Kopīgot projektu</string>
     <string name="projects_sort_filter_title">Kārtot un filtrēt</string>
     <string name="projects_create_prefix_hint">Izmanto lasāmiem ID, piemēram, %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Шаблонду тандоо</string>
     <string name="projects_create_next">Кийинки</string>
     <string name="projects_filter">Чыпка</string>
-    <string name="projects_link">Шилтеме</string>
     <string name="projects_filter_clear_all">Баарын тазалоо</string>
     <string name="projects_filter_all">Баары</string>
     <string name="projects_filter_other">Башка</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Бул тиркеме биротоло өчүрүлөт.</string>
     <string name="projects_attachment_delete_confirm_title">Тиркеме өчүрүлсүнбү?</string>
     <string name="projects_settings_unsubscribe_section">Долбоор жазылуусунан баш тартуу</string>
-    <string name="projects_share_link_title">Долбоорду бөлүшүү</string>
     <string name="projects_sort_filter_title">Иргөө жана чыпкалоо</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 сыяктуу окула турган ID\'лер үчүн колдонулат</string>
     <plurals name="projects_request_conflicts">

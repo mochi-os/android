@@ -26,8 +26,6 @@
     <string name="forums_notifications_comment">All replies</string>
     <string name="forums_follow_thread">Follow thread</string>
     <string name="forums_unfollow_thread">Unfollow thread</string>
-    <string name="forums_link">Link</string>
-    <string name="forums_share_link_title">Forum link</string>
 
     <!-- Create forum -->
     <string name="forums_create_title">Create forum</string>

@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Puntuazio-galdera</string>
     <string name="forums_ai_prompt_tag_label">Etiketa-galdera</string>
     <string name="forums_ai_prompt_variables">Aldagaiak: %1$s</string>
-    <string name="forums_link">Esteka</string>
     <string name="forums_moderation_ban_message">Forora sartzeko aukera galtzen du murrizketa kendu arte.</string>
     <string name="forums_moderation_ban_title">%1$s debekatu?</string>
     <string name="forums_moderation_log_empty_subtitle">Oraindik ez da moderazio-ekintzarik erregistratu</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Foroa berrizendatuta</string>
     <string name="forums_settings_name_clear_cd">Garbitu izena</string>
     <string name="forums_settings_unsubscribe_section">Utzi foroaren harpidetza</string>
-    <string name="forums_share_link_title">Foroaren esteka</string>
     <string name="forums_find_found_by_url">URL bidez aurkituta</string>
     <string name="forums_moderation_pending_posts">Zain dauden argitalpenak (%1$s)</string>
     <string name="forums_moderation_pending_comments">Zain dauden iruzkinak (%1$s)</string>

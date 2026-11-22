@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Ìtọ́ni ìdíwọ̀n</string>
     <string name="forums_ai_prompt_tag_label">Ìtọ́ni àmì</string>
     <string name="forums_ai_prompt_variables">Àwọn ìyípadà: %1$s</string>
-    <string name="forums_link">Ọ̀nà àsopọ̀</string>
     <string name="forums_moderation_ban_message">Wọn yóò pàdánù ìwọlé sí àpéjọ títí tí o fi yọ ìdínà kúrò.</string>
     <string name="forums_moderation_ban_title">Ṣé kí a fi ọ̀dá bo %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Kò tíì sí àwọn ìṣe ìṣàkóso tí a kọ sílẹ̀</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">A ti tún forum sọ lórúkọ</string>
     <string name="forums_settings_name_clear_cd">Pa orúkọ rẹ́</string>
     <string name="forums_settings_unsubscribe_section">Yọ ara rẹ kúrò nínú àpéjọ</string>
-    <string name="forums_share_link_title">Ọ̀nà àsopọ̀ forum</string>
     <string name="forums_find_found_by_url">A rí i nípasẹ̀ URL</string>
     <string name="forums_moderation_pending_posts">Àwọn ìfìwéránṣẹ́ tí ń dúró (%1$s)</string>
     <string name="forums_moderation_pending_comments">Àwọn àsọyé tí ń dúró (%1$s)</string>

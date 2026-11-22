@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">צאָל פּראָמפּט</string>
     <string name="forums_ai_prompt_tag_label">טאַג־בעט</string>
     <string name="forums_ai_prompt_variables">וואַריאַבלען: %1$s</string>
-    <string name="forums_link">לינק</string>
     <string name="forums_moderation_ban_message">זיי פֿאַרלירן צוטריט צום פֿאָרום ביז איר נעמט אַראָפּ די באַגרענעצונג.</string>
     <string name="forums_moderation_ban_title">פֿאַרווערן %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">עס זײַנען נאָך נישט פֿאַרשריבן קיין מאָדערירונג אַקציעס</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">פֿאָרום איבערגעטויפֿט</string>
     <string name="forums_settings_name_clear_cd">רייניקט דעם נאָמען</string>
     <string name="forums_settings_unsubscribe_section">אַבאָנירט זיך אָפּ פֿון פֿאָרום</string>
-    <string name="forums_share_link_title">פֿאָרום לינק</string>
     <string name="forums_find_found_by_url">געפֿונען דורך URL</string>
     <string name="forums_moderation_pending_posts">ווארטנדיקע פּאָסטן (%1$s)</string>
     <string name="forums_moderation_pending_comments">ווארטנדיקע באַמערקונגען (%1$s)</string>

@@ -199,8 +199,6 @@
     <string name="feeds_banner_dismiss">Descartar banner</string>
     <string name="feeds_members_search">Filtrar miembros</string>
     <string name="feeds_ai_prompt_default">Predeterminado</string>
-    <string name="feeds_link">Enlace</string>
-    <string name="feeds_share_link_title">Enlace del feed</string>
     <string name="feeds_ai_prompt_custom">Personalizado</string>
     <string name="feeds_ai_prompt_variables">Variables: %1$s</string>
     <plurals name="feeds_comment_count">

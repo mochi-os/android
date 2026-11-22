@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">একটি টেমপ্লেট বেছে নিন</string>
     <string name="projects_create_next">পরবর্তী</string>
     <string name="projects_filter">ফিল্টার</string>
-    <string name="projects_link">লিঙ্ক</string>
     <string name="projects_filter_clear_all">সব পরিষ্কার করুন</string>
     <string name="projects_filter_all">সব</string>
     <string name="projects_filter_other">অন্যান্য</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">এই সংযুক্তি স্থায়ীভাবে মুছে ফেলা হবে।</string>
     <string name="projects_attachment_delete_confirm_title">সংযুক্তি মুছবেন?</string>
     <string name="projects_settings_unsubscribe_section">প্রকল্প থেকে সদস্যতা ত্যাগ করুন</string>
-    <string name="projects_share_link_title">প্রকল্প শেয়ার করুন</string>
     <string name="projects_sort_filter_title">সাজান ও ফিল্টার</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 এর মতো পাঠযোগ্য আইডির জন্য ব্যবহৃত হয়</string>
     <plurals name="projects_request_conflicts">

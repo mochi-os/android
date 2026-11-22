@@ -16,7 +16,6 @@
     <string name="crm_create_object">Loo objekt</string>
     <string name="crm_search">Otsi</string>
     <string name="crm_settings">Seaded</string>
-    <string name="crm_link">Link</string>
     <string name="crm_design">Disain</string>
     <string name="crm_export_failed">Eksporti salvestamine ebaõnnestus</string>
     <string name="crm_sort_rank">Käsitsi</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM-e ei leitud</string>
     <string name="crm_create_blocked_no_parents">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
     <string name="crm_export_csv">Ekspordi CSV</string>
-    <string name="crm_share_link_title">Jaga CRM</string>
     <string name="crm_export_saved">CRM-i andmed salvestatud</string>
     <string name="crm_create_upload_json">Laadige üles .zip- või .json-fail</string>
     <string name="crm_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ಆಟವನ್ನು ಮುಂದುವರಿಸಿದರು</string>
     <string name="game_not_found">ಆಟ ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="game_chat_move_played_you">ನೀವು %1$s ಆಡಿದಿರಿ</string>
+    <string name="share_title">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="share_feed">ಫೀಡ್‌ಗೆ ಪೋಸ್ಟ್ ಮಾಡಿ</string>
+    <string name="share_chat">ಚಾಟ್‌ನಲ್ಲಿ ಕಳುಹಿಸಿ</string>
     <string name="devices_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
     <string name="devices_copy">%1$s ನಕಲಿಸಿ</string>
     <string name="devices_create">ರಚಿಸಿ</string>

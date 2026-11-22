@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s jupax masinakaparukiw chat katuqi.</string>
     <string name="chat_message_earlier">Aka cuenta Mochi ukar yapxatañkama mensajenakax imantatawa, akanx janiw ullañjamäkiti</string>
     <string name="chat_message_excluded">Yaqha dispositivonakatakikiw imantata</string>
-    <string name="chat_setup">Wakichaña</string>
+    <string name="chat_message_changed">Apayirin imantañ llavepax mayjt\'awayi</string>    <string name="chat_setup">Wakichaña</string>
     <string name="chat_jump_bottom">Aynacharu saraña</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">%1$s machaq mensajenakaru saraña</item>
@@ -184,6 +184,7 @@
     <string name="chat_message_mismatched">Llavenakapax jan kikpakiti uka aparatut apayata</string>
     <string name="chat_list_select">Mä chat ajllim</string>
     <string name="chat_message_discard">Jaqsuña</string>
+    <string name="chat_message_unencrypted">Jan imantata apayaña</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Yatiyawix %1$s qillqanakampi sinti jach\'awa</item>
     </plurals>

@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Προτροπή βαθμολογίας</string>
     <string name="forums_ai_prompt_tag_label">Προτροπή ετικέτας</string>
     <string name="forums_ai_prompt_variables">Μεταβλητές: %1$s</string>
-    <string name="forums_link">Σύνδεσμος</string>
     <string name="forums_moderation_ban_message">Χάνει την πρόσβαση στο φόρουμ μέχρι να αφαιρέσετε τον περιορισμό.</string>
     <string name="forums_moderation_ban_title">Αποκλεισμός του %1$s;</string>
     <string name="forums_moderation_log_empty_subtitle">Δεν έχουν καταγραφεί ακόμη ενέργειες συντονισμού</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Το φόρουμ μετονομάστηκε</string>
     <string name="forums_settings_name_clear_cd">Εκκαθάριση ονόματος</string>
     <string name="forums_settings_unsubscribe_section">Κατάργηση εγγραφής από το φόρουμ</string>
-    <string name="forums_share_link_title">Σύνδεσμος φόρουμ</string>
     <string name="forums_find_found_by_url">Βρέθηκε μέσω URL</string>
     <string name="forums_moderation_pending_posts">Εκκρεμείς δημοσιεύσεις (%1$s)</string>
     <string name="forums_moderation_pending_comments">Εκκρεμή σχόλια (%1$s)</string>

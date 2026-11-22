@@ -16,7 +16,6 @@
     <string name="crm_create_object">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="crm_search">ਖੋਜ</string>
     <string name="crm_settings">ਸੈਟਿੰਗਾਂ</string>
-    <string name="crm_link">ਲਿੰਕ</string>
     <string name="crm_design">ਡਿਜ਼ਾਈਨ</string>
     <string name="crm_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
     <string name="crm_sort_rank">ਮੈਨੁਅਲ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ਕੋਈ CRM ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="crm_create_blocked_no_parents">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
     <string name="crm_export_csv">CSV ਨਿਰਯਾਤ ਕਰੋ</string>
-    <string name="crm_share_link_title">CRM ਸਾਂਝਾ ਕਰੋ</string>
     <string name="crm_export_saved">CRM ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="crm_create_upload_json">.zip ਜਾਂ .json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="crm_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>

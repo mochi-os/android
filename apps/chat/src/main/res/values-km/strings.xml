@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s ទទួលការសន្ទនាតែពីមិត្តភ័ក្តិប៉ុណ្ណោះ។</string>
     <string name="chat_message_earlier">សារពីមុនពេលគណនីនេះត្រូវបានបញ្ចូលទៅក្នុង Mochi ត្រូវបានអ៊ិនគ្រីប ហើយមិនអាចអាននៅទីនេះបានទេ</string>
     <string name="chat_message_excluded">បានអ៊ិនគ្រីបសម្រាប់ឧបករណ៍ផ្សេងទៀតតែប៉ុណ្ណោះ</string>
-    <string name="chat_setup">រៀបចំ</string>
+    <string name="chat_message_changed">កូនសោអ៊ិនគ្រីបរបស់អ្នកផ្ញើបានផ្លាស់ប្តូរ</string>    <string name="chat_setup">រៀបចំ</string>
     <string name="chat_jump_bottom">ទៅក្រោមបំផុត</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">ទៅកាន់សារថ្មីចំនួន %1$s</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">បានផ្ញើពីឧបករណ៍ដែលកូនសោមិនត្រូវគ្នា</string>
     <string name="chat_list_select">ជ្រើសរើសការសន្ទនា</string>
     <string name="chat_message_discard">បោះចោល</string>
+    <string name="chat_message_unencrypted">ផ្ញើដោយមិនអ៊ិនគ្រីប</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">សារវែងលើស %1$s តួអក្សរ</item>
     </plurals>

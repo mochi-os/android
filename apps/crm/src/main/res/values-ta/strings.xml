@@ -16,7 +16,6 @@
     <string name="crm_create_object">பொருள் உருவாக்கு</string>
     <string name="crm_search">தேடு</string>
     <string name="crm_settings">அமைப்புகள்</string>
-    <string name="crm_link">இணைப்பு</string>
     <string name="crm_design">வடிவமைப்பு</string>
     <string name="crm_export_failed">ஏற்றுமதியைச் சேமிக்க முடியவில்லை</string>
     <string name="crm_sort_rank">கைமுறை</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRMகள் எதுவும் கிடைக்கவில்லை</string>
     <string name="crm_create_blocked_no_parents">உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்.</string>
     <string name="crm_export_csv">CSV ஏற்றுமதி</string>
-    <string name="crm_share_link_title">CRM ஐப் பகிர்</string>
     <string name="crm_export_saved">CRM தரவு சேமிக்கப்பட்டது</string>
     <string name="crm_create_upload_json">.zip அல்லது .json கோப்பைப் பதிவேற்றவும்</string>
     <string name="crm_create_blocked_no_options">உருவாக்க முடியாது: %1$s தேவை ஆனால் தேர்ந்தெடுக்க விருப்பங்கள் இல்லை. வடிவமைப்பில் விருப்பங்களைச் சேர்க்கவும்.</string>

@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$sさんは友達からのチャットのみ受け付けています。</string>
     <string name="chat_message_earlier">このアカウントを Mochi に追加する前のメッセージは暗号化されているため、ここでは読めません</string>
     <string name="chat_message_excluded">他のデバイス専用に暗号化されています</string>
-    <string name="chat_setup">設定</string>
+    <string name="chat_message_changed">送信者の暗号鍵が変更されました</string>    <string name="chat_setup">設定</string>
     <string name="chat_jump_bottom">一番下へ移動</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">%1$s件の新着メッセージへ移動</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">鍵が一致しないデバイスから送信されました</string>
     <string name="chat_list_select">チャットを選択</string>
     <string name="chat_message_discard">破棄</string>
+    <string name="chat_message_unencrypted">暗号化せずに送信</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">メッセージが%1$s文字超過しています</item>
     </plurals>

@@ -32,6 +32,7 @@ import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.RepeatField
 import org.mochios.calendars.ui.editor.recurrence
 import org.mochios.calendars.ui.editor.ruleSummary
+import org.mochios.calendars.ui.editor.ruleWords
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -93,6 +94,21 @@ class RepeatFieldTest {
         assertEquals("Every year, in March and September", summary("FREQ=YEARLY;BYMONTH=3,9"))
         assertEquals("Every day, once", summary("FREQ=DAILY;COUNT=1"))
     }
+
+    @Test
+    fun `a rule ends on the series' last day in its own zone, not the day its UTC end falls on`() {
+        // The last second of 31 December in Los Angeles is 07:59:59 on 1 January in UTC.
+        val words = ruleWords(recurrence("FREQ=MONTHLY;BYMONTHDAY=15;UNTIL=20270101T075959Z", "America/Los_Angeles"), context.resources, format, Locale.UK)
+        assertEquals("Every month, on day 15, until " + day(2026, 12, 31), words)
+        // A series starting at 18:00 cut at 17:59:59 lets in no occurrence that day.
+        val start = java.time.ZonedDateTime.of(2026, 1, 15, 18, 0, 0, 0, java.time.ZoneOffset.UTC).toEpochSecond()
+        val cut = ruleWords(recurrence("FREQ=MONTHLY;BYMONTHDAY=15;UNTIL=20260615T175959Z", "UTC", start), context.resources, format, Locale.UK)
+        assertEquals("Every month, on day 15, until " + day(2026, 6, 14), cut)
+    }
+
+    /** A day as a summary writes it. */
+    private fun day(year: Int, month: Int, date: Int): String =
+        format.formatDate(java.time.LocalDate.of(year, month, date).atTime(12, 0).toEpochSecond(java.time.ZoneOffset.UTC), "UTC")
 
     @Test
     fun `a rule with parts no summary can say is not described`() {

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Выберыце шаблон</string>
     <string name="projects_create_next">Далей</string>
     <string name="projects_filter">Фільтр</string>
-    <string name="projects_link">Спасылка</string>
     <string name="projects_filter_clear_all">Ачысціць усё</string>
     <string name="projects_filter_all">Усе</string>
     <string name="projects_filter_other">Іншае</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Гэта далучэнне будзе выдалена назаўсёды.</string>
     <string name="projects_attachment_delete_confirm_title">Выдаліць далучэнне?</string>
     <string name="projects_settings_unsubscribe_section">Адпісацца ад праекта</string>
-    <string name="projects_share_link_title">Падзяліцца праектам</string>
     <string name="projects_sort_filter_title">Сартаванне і фільтр</string>
     <string name="projects_create_prefix_hint">Выкарыстоўваецца для чытэльных ID, напрыклад %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

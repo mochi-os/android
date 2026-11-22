@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Ypygua</string>
     <string name="feeds_ai_prompt_custom">Ñemomba\'e</string>
     <string name="feeds_ai_prompt_variables">Variable-kuéra: %1$s</string>
-    <string name="feeds_link">Juajuha</string>
-    <string name="feeds_share_link_title">Feed juajuha</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s comentario</item>
         <item quantity="other">%1$s comentariokuéra</item>

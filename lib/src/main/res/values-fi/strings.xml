@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s jatkoi peliä</string>
     <string name="game_not_found">Peliä ei löytynyt</string>
     <string name="game_chat_move_played_you">Pelasit %1$s</string>
+    <string name="share_title">Jaa</string>
+    <string name="share_feed">Julkaise syötteeseen</string>
+    <string name="share_chat">Lähetä keskusteluun</string>
     <string name="devices_add">Lisää laite</string>
     <string name="devices_copy">Kopioi %1$s</string>
     <string name="devices_create">Luo</string>

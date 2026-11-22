@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_score_label">Упит за оцењивање</string>
     <string name="forums_ai_prompt_tag_label">Упит за ознаку</string>
     <string name="forums_ai_prompt_variables">Променљиве: %1$s</string>
-    <string name="forums_link">Веза</string>
     <string name="forums_moderation_ban_message">Губи приступ форуму док не уклоните ограничење.</string>
     <string name="forums_moderation_ban_title">Забранити кориснику %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Још нема забележених радњи модерирања</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Форум преименован</string>
     <string name="forums_settings_name_clear_cd">Обриши назив</string>
     <string name="forums_settings_unsubscribe_section">Прекини претплату на форум</string>
-    <string name="forums_share_link_title">Веза форума</string>
     <string name="forums_find_found_by_url">Пронађено преко URL-а</string>
     <string name="forums_moderation_pending_posts">Објаве на чекању (%1$s)</string>
     <string name="forums_moderation_pending_comments">Коментари на чекању (%1$s)</string>

@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_tag_label">Chimpu prompt</string>
     <string name="forums_ai_prompt_variables">Variablenaka: %1$s</string>
     <string name="forums_find_found_by_url">URL tuqi jikxatata</string>
-    <string name="forums_link">Enlace</string>
     <string name="forums_moderation_ban_message">Jark\'awi jan apsutakama, jupanakax foror mantañ jan atipkaniti.</string>
     <string name="forums_moderation_ban_title">%1$s jark\'aña?</string>
     <string name="forums_moderation_log_empty_subtitle">Janïraw kuna moderación luräwis qillqatäkiti</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Foro suti turkatawa</string>
     <string name="forums_settings_name_clear_cd">Suti q\'umachaña</string>
     <string name="forums_settings_unsubscribe_section">Forot suscripción apaqaña</string>
-    <string name="forums_share_link_title">Foro enlace</string>
     <string name="forums_moderation_pending_posts">Suyaskir qillqatanaka (%1$s)</string>
     <string name="forums_moderation_pending_comments">Suyaskir comentarionaka (%1$s)</string>
     <string name="forums_moderation_on_image">Jamuqan: %1$s</string>

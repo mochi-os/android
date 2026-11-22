@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Баалоо промпту</string>
     <string name="forums_ai_prompt_tag_label">Тег промпту</string>
     <string name="forums_ai_prompt_variables">Өзгөрмөлөр: %1$s</string>
-    <string name="forums_link">Шилтеме</string>
     <string name="forums_moderation_ban_message">Сиз чектөөнү алып салмайынча форумга кирүү мүмкүнчүлүгүн жоготот.</string>
     <string name="forums_moderation_ban_title">%1$s бөгөттөлсүнбү?</string>
     <string name="forums_moderation_log_empty_subtitle">Азырынча модерация аракеттери катталган эмес</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Форумдун аты өзгөртүлдү</string>
     <string name="forums_settings_name_clear_cd">Атын тазалоо</string>
     <string name="forums_settings_unsubscribe_section">Форумдан баш тартуу</string>
-    <string name="forums_share_link_title">Форум шилтемеси</string>
     <string name="forums_find_found_by_url">URL аркылуу табылды</string>
     <string name="forums_moderation_pending_posts">Күтүүдөгү жазуулар (%1$s)</string>
     <string name="forums_moderation_pending_comments">Күтүүдөгү пикирлер (%1$s)</string>

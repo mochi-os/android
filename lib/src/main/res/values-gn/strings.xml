@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s oñepyrũ jey ñembosarái</string>
     <string name="game_not_found">Ñembosarái ndojejuhúi</string>
     <string name="game_chat_move_played_you">Nde rembosarái %1$s</string>
+    <string name="share_title">Emboja\'o</string>
+    <string name="share_feed">Emoherakuã peteĩ marandu syry-pe</string>
+    <string name="share_chat">Emondo peteĩ chat-pe</string>
     <string name="devices_add">Embojuaju peteĩ mba\'e\'oka</string>
     <string name="devices_copy">Kopia %1$s</string>
     <string name="devices_create">Emoheñói</string>

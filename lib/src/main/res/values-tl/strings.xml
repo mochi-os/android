@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">Ipinagpatuloy ni %1$s ang laro</string>
     <string name="game_not_found">Hindi nahanap ang laro</string>
     <string name="game_chat_move_played_you">Naglaro ka ng %1$s</string>
+    <string name="share_title">Ibahagi</string>
+    <string name="share_feed">I-post sa isang feed</string>
+    <string name="share_chat">Ipadala sa isang chat</string>
     <string name="devices_add">Magdagdag ng device</string>
     <string name="devices_copy">Kopyahin ang %1$s</string>
     <string name="devices_create">Gumawa</string>

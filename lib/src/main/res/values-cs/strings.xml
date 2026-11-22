@@ -356,6 +356,9 @@
     <string name="game_system_score_resume">%1$s pokračoval ve hře</string>
     <string name="game_not_found">Hra nebyla nalezena</string>
     <string name="game_chat_move_played_you">Zahráli jste %1$s</string>
+    <string name="share_title">Sdílet</string>
+    <string name="share_feed">Zveřejnit v kanálu</string>
+    <string name="share_chat">Odeslat v chatu</string>
     <string name="devices_add">Přidat zařízení</string>
     <string name="devices_copy">Kopírovat %1$s</string>
     <string name="devices_create">Vytvořit</string>

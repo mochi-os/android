@@ -32,6 +32,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.share.SharedImages
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
@@ -81,6 +82,12 @@ data class ChatUiState(
     /** The composer text, held here so a failed send can put it back. */
     val draft: String = "",
     val pendingAttachments: List<Uri> = emptyList(),
+    /**
+     * Why the composer's message came back into it, where the send refused it
+     * for want of encryption: said under the composer, which offers to send it
+     * unencrypted until the next send.
+     */
+    val refusal: MochiError? = null,
     /** Messages whose send failed while the composer held the next one, each to retry or copy. */
     val unsent: List<Unsent> = emptyList(),
     val searchOpen: Boolean = false,
@@ -132,12 +139,15 @@ data class ThreadState(
     val error: MochiError? = null,
     /** Replies whose send failed while the box held the next one. */
     val unsent: List<Unsent> = emptyList(),
+    /** Why the box's reply came back into it, where it was refused for want of encryption, as [ChatUiState.refusal]. */
+    val refusal: MochiError? = null,
 )
 
 /**
  * A message whose send failed after the composer was given the next one: its
  * text, files, the message it replied to and the thread it was a reply in,
- * with why, to retry or copy.
+ * with why, to retry or copy, and whether it went [unencrypted] by the user's
+ * choice, which a retry keeps.
  */
 data class Unsent(
     val key: Long,
@@ -146,7 +156,23 @@ data class Unsent(
     val reply: ChatMessage? = null,
     val thread: String = "",
     val error: MochiError,
-)
+    val unencrypted: Boolean = false,
+) {
+    /** Refused for want of encryption: the user may send it unencrypted. */
+    val refused: Boolean get() = refusesEncryption(error)
+}
+
+/**
+ * The send's refusal of a message that would go unencrypted in a linked
+ * conversation that was encrypted, which the user may then send unencrypted
+ * on purpose. Told apart by its status, as the web tells it: the server's
+ * labelled refusal carries its message alone.
+ */
+internal const val ENCRYPTION_REFUSED = 409
+
+/** Whether [error] is the send's refusal for want of encryption. */
+internal fun refusesEncryption(error: MochiError?): Boolean =
+    error is MochiError.Unknown && error.code == ENCRYPTION_REFUSED
 
 /** A search match: the message, and the thread it is a reply in, empty on the main timeline. */
 data class SearchMatch(val id: String, val thread: String = "")
@@ -167,7 +193,17 @@ class ChatViewModel @Inject constructor(
 
     private val chatId: String = savedStateHandle["chatId"] ?: ""
 
-    private val _uiState = MutableStateFlow(ChatUiState())
+    /** The share whose images the message box opened with, let go when the screen goes. */
+    private val shared: String? = savedStateHandle.get<String>("images")
+
+    // What another app shares opens in the message box, its images with it,
+    // for the user to send or not.
+    private val _uiState = MutableStateFlow(
+        ChatUiState(
+            draft = savedStateHandle.get<String>("message").orEmpty(),
+            pendingAttachments = SharedImages.take(application, shared),
+        ),
+    )
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
 
     private val tracker = UploadTracker()
@@ -778,9 +814,10 @@ class ChatViewModel @Inject constructor(
      * the next message; a send that fails puts them back if the composer is
      * still empty, and lists the message as unsent otherwise. A text past
      * [MESSAGE_MAXIMUM] is not sent, its files not uploaded: the composer
-     * says by how much it is over.
+     * says by how much it is over. [unencrypted] sends it so, where the user
+     * chose to after the send refused it for want of encryption.
      */
-    fun sendMessage() {
+    fun sendMessage(unencrypted: Boolean = false) {
         val state = _uiState.value
         if (state.isSending) return
         val text = state.draft.trim()
@@ -788,21 +825,26 @@ class ChatViewModel @Inject constructor(
         if (overLimit(text)) return
         // The message leaves the composer, which the user may then write the next one in.
         _uiState.update { current -> current.sending() }
-        send(text, state.pendingAttachments, state.replyingTo)
+        send(text, state.pendingAttachments, state.replyingTo, unencrypted)
     }
 
-    /** Send again a message whose send failed; it leaves the unsent list while it goes. */
-    fun retry(key: Long) {
+    /**
+     * Send again a message whose send failed; it leaves the unsent list while
+     * it goes. [unencrypted] sends it so, where it was refused for want of
+     * encryption; one already sent so goes so again.
+     */
+    fun retry(key: Long, unencrypted: Boolean = false) {
         val state = _uiState.value
         if (state.isSending) return
         val message = state.unsent.find { unsent -> unsent.key == key } ?: return
+        val clear = unencrypted || message.unencrypted
         _uiState.update { current -> current.copy(unsent = current.unsent.filterNot { unsent -> unsent.key == key }) }
         if (message.thread.isNotEmpty()) {
-            sendReply(message.thread, message.text)
+            sendReply(message.thread, message.text, clear)
         } else {
             // From its row, not the composer, which keeps the next message.
             _uiState.update { current -> current.copy(isSending = true) }
-            send(message.text, message.attachments, message.reply)
+            send(message.text, message.attachments, message.reply, clear)
         }
     }
 
@@ -811,17 +853,17 @@ class ChatViewModel @Inject constructor(
         _uiState.update { state -> state.copy(unsent = state.unsent.filterNot { unsent -> unsent.key == key }) }
     }
 
-    private fun send(text: String, attachments: List<Uri>, reply: ChatMessage?) {
+    private fun send(text: String, attachments: List<Uri>, reply: ChatMessage?, unencrypted: Boolean) {
         viewModelScope.launch {
             try {
                 if (attachments.isEmpty()) {
-                    val sent = repository.sendMessage(chatId, text, reply = reply?.id)
+                    val sent = repository.sendMessage(chatId, text, reply = reply?.id, unencrypted = unencrypted)
                     sent.unsent.orEmpty().forEach { _events.emit(it) }
                     refresh()
                 } else {
                     tracker.track {
                         val sent = repository.sendMessageFromUris(
-                            chatId, text, attachments, reply = reply?.id, tracker = tracker,
+                            chatId, text, attachments, reply = reply?.id, tracker = tracker, unencrypted = unencrypted,
                         )
                         // What the message went without on another network.
                         sent.unsent.orEmpty().forEach { _events.emit(it) }
@@ -833,7 +875,7 @@ class ChatViewModel @Inject constructor(
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                val failed = Unsent(unsentKey++, text, attachments, reply, error = e.toMochiError())
+                val failed = Unsent(unsentKey++, text, attachments, reply, error = e.toMochiError(), unencrypted = unencrypted)
                 _uiState.update { state -> state.unsent(failed) }
             } finally {
                 _uiState.update { state -> state.copy(isSending = false) }
@@ -1033,25 +1075,26 @@ class ChatViewModel @Inject constructor(
      * Reply in the open thread. As in the main composer, the text leaves the
      * box as the send starts; a send that fails puts it back if the box is
      * still empty, and lists the reply as unsent in the thread otherwise.
+     * [unencrypted] sends it so, as [sendMessage] does.
      */
-    fun sendThreadReply() {
+    fun sendThreadReply(unencrypted: Boolean = false) {
         val thread = _uiState.value.thread ?: return
         val text = thread.draft.trim()
         if (text.isEmpty() || thread.isSending || overLimit(text)) return
         // The reply leaves the box, which the user may then write the next one in.
-        _uiState.update { state -> state.copy(thread = state.thread?.copy(draft = "")) }
-        sendReply(thread.root.id, text)
+        _uiState.update { state -> state.copy(thread = state.thread?.copy(draft = "", refusal = null)) }
+        sendReply(thread.root.id, text, unencrypted)
     }
 
-    /** Send again a reply whose send failed. */
-    fun retryReply(key: Long) {
+    /** Send again a reply whose send failed; [unencrypted] as [retry]. */
+    fun retryReply(key: Long, unencrypted: Boolean = false) {
         val thread = _uiState.value.thread ?: return
         if (thread.isSending) return
         val reply = thread.unsent.find { unsent -> unsent.key == key } ?: return
         _uiState.update { state ->
             state.copy(thread = state.thread?.copy(unsent = thread.unsent.filterNot { unsent -> unsent.key == key }))
         }
-        sendReply(thread.root.id, reply.text)
+        sendReply(thread.root.id, reply.text, unencrypted || reply.unencrypted)
     }
 
     /** Give up on a reply whose send failed. */
@@ -1062,25 +1105,30 @@ class ChatViewModel @Inject constructor(
     }
 
     /** [text] sent into [root]'s thread; a box holding the next reply keeps it. */
-    private fun sendReply(root: String, text: String) {
+    private fun sendReply(root: String, text: String, unencrypted: Boolean) {
         _uiState.update { state -> state.copy(thread = state.thread?.copy(isSending = true)) }
         viewModelScope.launch {
             try {
-                repository.sendMessage(chatId, text, thread = root)
+                repository.sendMessage(chatId, text, thread = root, unencrypted = unencrypted)
                 _uiState.update { state -> state.copy(thread = state.thread?.copy(isSending = false)) }
                 loadThread()
                 refresh()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                val failed = Unsent(unsentKey++, text, thread = root, error = e.toMochiError())
+                val failed = Unsent(unsentKey++, text, thread = root, error = e.toMochiError(), unencrypted = unencrypted)
                 _uiState.update { state ->
                     val thread = state.thread?.takeIf { thread -> thread.root.id == root }
                     when {
                         // The thread closed meanwhile: the reply waits with the
                         // conversation's unsent messages, to go into it again.
                         thread == null -> state.copy(unsent = state.unsent + failed)
-                        thread.draft.isBlank() -> state.copy(thread = thread.copy(isSending = false, draft = text)).failed(failed.error)
+                        // Back into the empty box, the refusal said under it
+                        // with the offer to send it unencrypted.
+                        thread.draft.isBlank() && failed.refused ->
+                            state.copy(thread = thread.copy(isSending = false, draft = text, refusal = failed.error))
+                        thread.draft.isBlank() ->
+                            state.copy(thread = thread.copy(isSending = false, draft = text, refusal = null)).failed(failed.error)
                         else -> state.copy(thread = thread.copy(isSending = false, unsent = thread.unsent + failed))
                     }
                 }
@@ -1419,6 +1467,7 @@ class ChatViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }
+        SharedImages.release(application, shared)
     }
 
     private companion object {
@@ -1444,17 +1493,19 @@ internal fun ChatUiState.failed(error: MochiError): ChatUiState =
  * user may then write the next one in.
  */
 internal fun ChatUiState.sending(): ChatUiState =
-    copy(draft = "", pendingAttachments = emptyList(), replyingTo = null, isSending = true)
+    copy(draft = "", pendingAttachments = emptyList(), replyingTo = null, isSending = true, refusal = null)
 
 /**
  * The state after [message]'s send failed. Into a composer still empty it
- * goes back, text, files and reply target, with the failure said once; a
- * composer holding the next message keeps it, and [message] is listed as
- * unsent, saying why itself.
+ * goes back, text, files and reply target, with the failure said once, or,
+ * refused for want of encryption, said under the composer with the offer to
+ * send it unencrypted; a composer holding the next message keeps it, and
+ * [message] is listed as unsent, saying why itself.
  */
 internal fun ChatUiState.unsent(message: Unsent): ChatUiState =
     if (message.thread.isEmpty() && draft.isBlank() && pendingAttachments.isEmpty() && replyingTo == null) {
-        copy(draft = message.text, pendingAttachments = message.attachments, replyingTo = message.reply).failed(message.error)
+        val back = copy(draft = message.text, pendingAttachments = message.attachments, replyingTo = message.reply)
+        if (message.refused) back.copy(refusal = message.error) else back.copy(refusal = null).failed(message.error)
     } else {
         copy(unsent = unsent + message)
     }

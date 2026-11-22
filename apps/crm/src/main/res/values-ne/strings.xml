@@ -16,7 +16,6 @@
     <string name="crm_create_object">वस्तु सिर्जना गर्नुहोस्</string>
     <string name="crm_search">खोज्नुहोस्</string>
     <string name="crm_settings">सेटिङहरू</string>
-    <string name="crm_link">लिङ्क</string>
     <string name="crm_design">डिजाइन</string>
     <string name="crm_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
     <string name="crm_sort_rank">म्यानुअल</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">कुनै CRM भेटिएन</string>
     <string name="crm_create_blocked_no_parents">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
     <string name="crm_export_csv">CSV निर्यात गर्नुहोस्</string>
-    <string name="crm_share_link_title">CRM साझेदारी गर्नुहोस्</string>
     <string name="crm_export_saved">CRM डेटा सुरक्षित गरियो</string>
     <string name="crm_create_upload_json">.zip वा .json फाइल अपलोड गर्नुहोस्</string>
     <string name="crm_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>

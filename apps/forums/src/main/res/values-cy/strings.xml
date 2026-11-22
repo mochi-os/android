@@ -215,7 +215,6 @@
     <string name="forums_ai_prompt_score_label">Anogwr sgorio</string>
     <string name="forums_ai_prompt_tag_label">Anogwr tag</string>
     <string name="forums_ai_prompt_variables">Newidynnau: %1$s</string>
-    <string name="forums_link">Dolen</string>
     <string name="forums_moderation_ban_message">Byddant yn colli mynediad i\'r fforwm nes i chi dynnu\'r cyfyngiad.</string>
     <string name="forums_moderation_ban_title">Gwahardd %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Nid oes unrhyw weithredoedd cymedroli wedi\'u cofnodi eto</string>
@@ -244,7 +243,6 @@
     <string name="forums_settings_forum_renamed">Fforwm wedi\'i ailenwi</string>
     <string name="forums_settings_name_clear_cd">Clirio\'r enw</string>
     <string name="forums_settings_unsubscribe_section">Dad-danysgrifio o\'r fforwm</string>
-    <string name="forums_share_link_title">Dolen fforwm</string>
     <string name="forums_find_found_by_url">Wedi\'i ganfod drwy URL</string>
     <string name="forums_moderation_pending_posts">Postiadau\'n aros (%1$s)</string>
     <string name="forums_moderation_pending_comments">Sylwadau\'n aros (%1$s)</string>

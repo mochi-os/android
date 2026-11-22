@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Standard</string>
     <string name="feeds_ai_prompt_custom">Benutzerdefiniert</string>
     <string name="feeds_ai_prompt_variables">Variablen: %1$s</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Feed-Link</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s Kommentar</item>
         <item quantity="other">%1$s Kommentare</item>

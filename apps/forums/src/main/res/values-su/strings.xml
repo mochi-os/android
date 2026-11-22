@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Prompt skor</string>
     <string name="forums_ai_prompt_tag_label">Prompt tag</string>
     <string name="forums_ai_prompt_variables">Variabel: %1$s</string>
-    <string name="forums_link">Tumbu</string>
     <string name="forums_moderation_ban_message">Manéhna leungit aksés ka forum nepi ka anjeun ngahapus watesan.</string>
     <string name="forums_moderation_ban_title">Blokir %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Can aya tindakan moderasi anu kacatet</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Ngaran forum diganti</string>
     <string name="forums_settings_name_clear_cd">Kosongkeun ngaran</string>
     <string name="forums_settings_unsubscribe_section">Eureun langganan forum</string>
-    <string name="forums_share_link_title">Tumbu forum</string>
     <string name="forums_find_found_by_url">Kapanggih ngaliwatan URL</string>
     <string name="forums_moderation_pending_posts">Kiriman nungguan (%1$s)</string>
     <string name="forums_moderation_pending_comments">Koméntar nungguan (%1$s)</string>

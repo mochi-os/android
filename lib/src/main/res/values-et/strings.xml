@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s jätkas mängu</string>
     <string name="game_not_found">Mängu ei leitud</string>
     <string name="game_chat_move_played_you">Sa mängisid %1$s</string>
+    <string name="share_title">Jaga</string>
+    <string name="share_feed">Postita voogu</string>
+    <string name="share_chat">Saada vestlusesse</string>
     <string name="devices_add">Lisa seade</string>
     <string name="devices_copy">Kopeeri %1$s</string>
     <string name="devices_create">Loo</string>

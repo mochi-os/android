@@ -215,8 +215,6 @@
     <string name="feeds_ai_prompt_default">Па змаўчанні</string>
     <string name="feeds_ai_prompt_custom">Карыстальніцкі</string>
     <string name="feeds_ai_prompt_variables">Зменныя: %1$s</string>
-    <string name="feeds_link">Спасылка</string>
-    <string name="feeds_share_link_title">Спасылка на стужку</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s каментарый</item>
         <item quantity="few">%1$s каментарыі</item>

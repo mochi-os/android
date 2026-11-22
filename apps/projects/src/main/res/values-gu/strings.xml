@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ટેમ્પલેટ પસંદ કરો</string>
     <string name="projects_create_next">આગળ</string>
     <string name="projects_filter">ફિલ્ટર</string>
-    <string name="projects_link">લિંક</string>
     <string name="projects_filter_clear_all">બધું સાફ કરો</string>
     <string name="projects_filter_all">બધી</string>
     <string name="projects_filter_other">અન્ય</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">આ જોડાણ કાયમ માટે કાઢી નાખવામાં આવશે.</string>
     <string name="projects_attachment_delete_confirm_title">જોડાણ કાઢી નાખવું?</string>
     <string name="projects_settings_unsubscribe_section">પ્રોજેક્ટમાંથી સબ્સ્ક્રિપ્શન રદ કરો</string>
-    <string name="projects_share_link_title">પ્રોજેક્ટ શેર કરો</string>
     <string name="projects_sort_filter_title">ગોઠવો અને ફિલ્ટર કરો</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 જેવા વાંચી શકાય તેવા ID માટે વપરાય છે</string>
     <plurals name="projects_request_conflicts">

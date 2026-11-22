@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s یوازې د ملګرو چټونه مني.</string>
     <string name="chat_message_earlier">د دې حساب Mochi ته له ورزیاتېدو مخکې پیغامونه کوډ شوي دي او دلته نشي لوستل کېدای</string>
     <string name="chat_message_excluded">یوازې د نورو وسیلو لپاره کوډ شوی</string>
+    <string name="chat_message_changed">د لیږونکي د کوډ کولو کیلي بدله شوې</string>
     <string name="chat_setup">تنظیم</string>
     <string name="chat_jump_bottom">پای ته لاړ شئ</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">له هغې وسیلې لیږل شوی چې کیلي یې سره سمې نه دي</string>
     <string name="chat_list_select">یوه چټ وټاکئ</string>
     <string name="chat_message_discard">ړنګول</string>
+    <string name="chat_message_unencrypted">پرته له کوډ کولو لیږل</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">پیغام %1$s توری ډېر اوږد دی</item>
         <item quantity="other">پیغام %1$s توري ډېر اوږد دی</item>

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s已繼續對局</string>
     <string name="game_not_found">找不到對局</string>
     <string name="game_chat_move_played_you">您走了 %1$s</string>
+    <string name="share_title">分享</string>
+    <string name="share_feed">發布到資訊流</string>
+    <string name="share_chat">傳送到聊天</string>
     <string name="devices_add">新增裝置</string>
     <string name="devices_copy">複製%1$s</string>
     <string name="devices_create">建立</string>

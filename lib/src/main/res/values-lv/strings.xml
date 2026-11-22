@@ -355,6 +355,9 @@
     <string name="game_system_score_resume">%1$s atsāka spēli</string>
     <string name="game_not_found">Spēle nav atrasta</string>
     <string name="game_chat_move_played_you">Jūs spēlējāt %1$s</string>
+    <string name="share_title">Kopīgot</string>
+    <string name="share_feed">Publicēt plūsmā</string>
+    <string name="share_chat">Sūtīt čatā</string>
     <string name="devices_add">Pievienot jaunu ierīci</string>
     <string name="devices_copy">Kopēt %1$s</string>
     <string name="devices_create">Izveidot</string>

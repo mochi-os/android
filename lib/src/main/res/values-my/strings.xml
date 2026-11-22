@@ -352,6 +352,9 @@
     <string name="game_system_score_resume">%1$s က ကစားပွဲကို ပြန်စသည်</string>
     <string name="game_not_found">ဂိမ်းကို ရှာမတွေ့ပါ</string>
     <string name="game_chat_move_played_you">သင် %1$s ကို ကစားခဲ့သည်</string>
+    <string name="share_title">မျှဝေရန်</string>
+    <string name="share_feed">ဖိဒ်သို့ ပို့စ်တင်ရန်</string>
+    <string name="share_chat">ချတ်တွင် ပို့ရန်</string>
     <string name="devices_add">ကိရိယာ ထည့်မည်</string>
     <string name="devices_copy">%1$s ကူးမည်</string>
     <string name="devices_create">ဖန်တီးမည်</string>

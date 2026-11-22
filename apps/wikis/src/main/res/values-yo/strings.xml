@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">A ṣe àtúnṣe ní %1$s</string>
     <string name="wikis_pageview_not_found_description">Ojú-ìwé “%1$s” kò tíì sí.</string>
-    <string name="wikis_pageview_share_chooser">Ọ̀nà àsopọ̀ wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Ọ̀nà àsopọ̀</string>
     <string name="wikis_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="wikis_search_placeholder">Wá wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Ṣé ó dá ọ lójú pé o fẹ́ fagilé ìforúkọsílẹ̀ sí %1$s?</string>

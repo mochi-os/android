@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">இயல்புநிலை</string>
     <string name="feeds_ai_prompt_custom">தனிப்பயன்</string>
     <string name="feeds_ai_prompt_variables">மாறிகள்: %1$s</string>
-    <string name="feeds_link">இணைப்பு</string>
-    <string name="feeds_share_link_title">ஊட்ட இணைப்பு</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s கருத்து</item>
         <item quantity="other">%1$s கருத்துகள்</item>

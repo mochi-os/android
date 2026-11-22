@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Şablon seçin</string>
     <string name="projects_create_next">Növbəti</string>
     <string name="projects_filter">Filtr</string>
-    <string name="projects_link">Keçid</string>
     <string name="projects_filter_clear_all">Hamısını təmizlə</string>
     <string name="projects_filter_all">Hamısı</string>
     <string name="projects_filter_other">Digər</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Bu qoşma həmişəlik silinəcək.</string>
     <string name="projects_attachment_delete_confirm_title">Qoşma silinsin?</string>
     <string name="projects_settings_unsubscribe_section">Layihə abunəliyindən çıx</string>
-    <string name="projects_share_link_title">Layihəni paylaş</string>
     <string name="projects_sort_filter_title">Sırala və filtrlə</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 kimi oxunaqlı ID-lər üçün istifadə olunur</string>
     <plurals name="projects_request_conflicts">

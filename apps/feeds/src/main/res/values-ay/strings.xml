@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Nayrïri</string>
     <string name="feeds_ai_prompt_custom">Personalizado</string>
     <string name="feeds_ai_prompt_variables">Variablenaka: %1$s</string>
-    <string name="feeds_link">Enlace</string>
-    <string name="feeds_share_link_title">Feed enlace</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s comentario</item>
         <item quantity="other">%1$s comentarionaka</item>

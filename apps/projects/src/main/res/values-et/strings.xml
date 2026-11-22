@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Vali mall</string>
     <string name="projects_create_next">Edasi</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Tühjenda kõik</string>
     <string name="projects_filter_all">Kõik</string>
     <string name="projects_filter_other">Muu</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">See manus kustutatakse jäädavalt.</string>
     <string name="projects_attachment_delete_confirm_title">Kas kustutada manus?</string>
     <string name="projects_settings_unsubscribe_section">Loobu projekti tellimusest</string>
-    <string name="projects_share_link_title">Jaga projekti</string>
     <string name="projects_sort_filter_title">Sortimine ja filter</string>
     <string name="projects_create_prefix_hint">Kasutatakse loetavate ID-de jaoks, nagu %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

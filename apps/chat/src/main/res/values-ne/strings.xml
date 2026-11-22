@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s साथीहरूबाट मात्र च्याट स्वीकार गर्नुहुन्छ।</string>
     <string name="chat_message_earlier">यो खाता Mochi मा थपिनुअघिका सन्देशहरू इन्क्रिप्ट गरिएका छन् र यहाँ पढ्न सकिँदैन</string>
     <string name="chat_message_excluded">अन्य उपकरणहरूका लागि मात्र इन्क्रिप्ट गरिएको</string>
+    <string name="chat_message_changed">पठाउनेको इन्क्रिप्सन कुञ्जी परिवर्तन भयो</string>
     <string name="chat_setup">सेटअप गर्नुहोस्</string>
     <string name="chat_jump_bottom">तल जानुहोस्</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">कुञ्जीहरू मेल नखाने यन्त्रबाट पठाइएको</string>
     <string name="chat_list_select">च्याट छान्नुहोस्</string>
     <string name="chat_message_discard">हटाउनुहोस्</string>
+    <string name="chat_message_unencrypted">इन्क्रिप्सनबिना पठाउनुहोस्</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">सन्देश %1$s वर्णले बढी लामो छ</item>
         <item quantity="other">सन्देश %1$s वर्णले बढी लामो छ</item>

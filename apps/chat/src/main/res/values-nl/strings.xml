@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s accepteert alleen chats van vrienden.</string>
     <string name="chat_message_earlier">Berichten van voordat dit account aan Mochi werd toegevoegd zijn versleuteld en kunnen hier niet worden gelezen</string>
     <string name="chat_message_excluded">Alleen versleuteld voor andere apparaten</string>
+    <string name="chat_message_changed">De versleutelingssleutel van de afzender is gewijzigd</string>
     <string name="chat_setup">Instellen</string>
     <string name="chat_jump_bottom">Naar beneden</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Verzonden vanaf een apparaat waarvan de sleutels niet overeenkomen</string>
     <string name="chat_list_select">Kies een chat</string>
     <string name="chat_message_discard">Verwerpen</string>
+    <string name="chat_message_unencrypted">Onversleuteld verzenden</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Bericht is %1$s teken te lang</item>
         <item quantity="other">Bericht is %1$s tekens te lang</item>

@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">اسڪور پرامپٽ</string>
     <string name="forums_ai_prompt_tag_label">ٽيگ پرامپٽ</string>
     <string name="forums_ai_prompt_variables">متغير: %1$s</string>
-    <string name="forums_link">لنڪ</string>
     <string name="forums_moderation_ban_message">جيستائين توهان پابندي نه هٽايو، فورم تائين رسائي وڃائي ڇڏيندا.</string>
     <string name="forums_moderation_ban_title">%1$s تي پابندي وجهجي؟</string>
     <string name="forums_moderation_log_empty_subtitle">اڃا تائين ڪا به نگراني ڪارروائي رڪارڊ نه ٿي آهي</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">فورم جو نالو تبديل ٿيو</string>
     <string name="forums_settings_name_clear_cd">نالو صاف ڪريو</string>
     <string name="forums_settings_unsubscribe_section">فورم مان رڪنيت ختم ڪريو</string>
-    <string name="forums_share_link_title">فورم لنڪ</string>
     <string name="forums_find_found_by_url">URL ذريعي مليو</string>
     <string name="forums_moderation_pending_posts">رهيل پوسٽون (%1$s)</string>
     <string name="forums_moderation_pending_comments">رهيل تبصرا (%1$s)</string>

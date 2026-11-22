@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Pilih témplat</string>
     <string name="projects_create_next">Salajengna</string>
     <string name="projects_filter">Saring</string>
-    <string name="projects_link">Tumbu</string>
     <string name="projects_filter_clear_all">Bersihkeun sadaya</string>
     <string name="projects_filter_all">Sadaya</string>
     <string name="projects_filter_other">Séjén</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Lampiran ieu bakal dihapus permanén.</string>
     <string name="projects_attachment_delete_confirm_title">Hapus lampiran?</string>
     <string name="projects_settings_unsubscribe_section">Eureun langganan proyék</string>
-    <string name="projects_share_link_title">Bagikeun proyék</string>
     <string name="projects_sort_filter_title">Susun jeung saring</string>
     <string name="projects_create_prefix_hint">Dipaké pikeun ID nu gampang dibaca saperti %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

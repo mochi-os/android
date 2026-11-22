@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">ಸ್ಕೋರ್ ಪ್ರಾಂಪ್ಟ್</string>
     <string name="forums_ai_prompt_tag_label">ಟ್ಯಾಗ್ ಪ್ರಾಂಪ್ಟ್</string>
     <string name="forums_ai_prompt_variables">ವೇರಿಯೇಬಲ್‌ಗಳು: %1$s</string>
-    <string name="forums_link">ಲಿಂಕ್</string>
     <string name="forums_moderation_ban_message">ನೀವು ನಿರ್ಬಂಧವನ್ನು ತೆಗೆದುಹಾಕುವವರೆಗೆ ವೇದಿಕೆಗೆ ಪ್ರವೇಶ ಕಳೆದುಕೊಳ್ಳುತ್ತಾರೆ.</string>
     <string name="forums_moderation_ban_title">%1$s ಅವರನ್ನು ನಿಷೇಧಿಸಬೇಕೇ?</string>
     <string name="forums_moderation_log_empty_subtitle">ಇನ್ನೂ ಯಾವುದೇ ಮಾಡರೇಶನ್ ಕ್ರಿಯೆಗಳು ದಾಖಲಾಗಿಲ್ಲ</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">ಫೋರಮ್ ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
     <string name="forums_settings_name_clear_cd">ಹೆಸರನ್ನು ಅಳಿಸಿ</string>
     <string name="forums_settings_unsubscribe_section">ವೇದಿಕೆಯಿಂದ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡಿ</string>
-    <string name="forums_share_link_title">ಫೋರಂ ಲಿಂಕ್</string>
     <string name="forums_find_found_by_url">URL ಮೂಲಕ ಕಂಡುಬಂದಿದೆ</string>
     <string name="forums_moderation_pending_posts">ಬಾಕಿ ಪೋಸ್ಟ್‌ಗಳು (%1$s)</string>
     <string name="forums_moderation_pending_comments">ಬಾಕಿ ಕಾಮೆಂಟ್‌ಗಳು (%1$s)</string>

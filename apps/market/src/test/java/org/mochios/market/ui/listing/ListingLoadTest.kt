@@ -5,7 +5,12 @@
 
 package org.mochios.market.ui.listing
 
+import android.content.Intent
 import android.os.Looper
+import androidx.core.content.IntentCompat
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
@@ -20,7 +25,15 @@ import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.UserPreferences
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.android.share.Shared
+import org.mochios.android.share.share
 import org.mochios.market.api.MarketApi
+import org.mochios.market.lib.formatPrice
+import org.mochios.market.model.Currency
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
 import org.mochios.market.repository.MarketRepository
@@ -169,6 +182,28 @@ class ListingLoadTest {
         assertEquals(listOf("ph1", "ph2"), model.state.value.photos.map { it.id })
         held.countDown()
         until { model.state.value.sellerReviews.isNotEmpty() }
+    }
+
+    @Test
+    fun `the listing shown is shared by its title and price, and its page`() {
+        val model = open("s1")
+        until { model.state.value.listing != null && !model.state.value.isLoading }
+        var shared: Shared? = null
+        val job = CoroutineScope(Dispatchers.Main).launch { model.shares.collect { shared = it } }
+        settle()
+        val format = Format(UserPreferences())
+        model.share(format)
+        until { shared != null }
+        job.cancel()
+        assertEquals(Shared(text = "Teapot\n" + formatPrice(100, Currency.JPY, format), url = "$base/market/listings/l1"), shared)
+        // The sheet the screen's ShareSheet opens with it.
+        share(context, shared!!)
+        val chooser = shadowOf(context).nextStartedActivity
+        assertEquals(Intent.ACTION_CHOOSER, chooser.action)
+        val send = IntentCompat.getParcelableExtra(chooser, Intent.EXTRA_INTENT, Intent::class.java)!!
+        assertEquals("Teapot\n" + formatPrice(100, Currency.JPY, format) + "\n$base/market/listings/l1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals(shared!!.text, send.getStringExtra(EXTRA_WORDS))
+        assertEquals("$base/market/listings/l1", send.getStringExtra(EXTRA_ADDRESS))
     }
 
     @Test

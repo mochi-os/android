@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Pilih templat</string>
     <string name="projects_create_next">Seterusnya</string>
     <string name="projects_filter">Tapis</string>
-    <string name="projects_link">Pautan</string>
     <string name="projects_filter_clear_all">Kosongkan semua</string>
     <string name="projects_filter_all">Semua</string>
     <string name="projects_filter_other">Lain-lain</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Lampiran ini akan dipadamkan secara kekal.</string>
     <string name="projects_attachment_delete_confirm_title">Padamkan lampiran?</string>
     <string name="projects_settings_unsubscribe_section">Berhenti melanggan projek</string>
-    <string name="projects_share_link_title">Kongsi projek</string>
     <string name="projects_sort_filter_title">Isih &amp; tapis</string>
     <string name="projects_create_prefix_hint">Digunakan untuk ID boleh baca seperti %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

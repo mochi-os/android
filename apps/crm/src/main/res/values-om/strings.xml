@@ -16,7 +16,6 @@
     <string name="crm_create_object">Galmee uumi</string>
     <string name="crm_search">Barbaadi</string>
     <string name="crm_settings">Qindaa\'inoota</string>
-    <string name="crm_link">Geessituu</string>
     <string name="crm_design">Boci</string>
     <string name="crm_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
     <string name="crm_sort_rank">Harkaan</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRMn hin argamne</string>
     <string name="crm_create_blocked_no_parents">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
     <string name="crm_export_csv">CSV ergi</string>
-    <string name="crm_share_link_title">CRM qooddu</string>
     <string name="crm_export_saved">Daataan CRM olkaa\'ameera</string>
     <string name="crm_create_upload_json">Faayilii .zip yookaan .json ol kaa\'i</string>
     <string name="crm_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>

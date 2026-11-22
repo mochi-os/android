@@ -201,7 +201,6 @@
     <string name="forums_ai_prompt_score_label">Poeng-leietekst</string>
     <string name="forums_ai_prompt_tag_label">Etikett-leietekst</string>
     <string name="forums_ai_prompt_variables">Variablar: %1$s</string>
-    <string name="forums_link">Lenkje</string>
     <string name="forums_moderation_ban_message">Personen mistar tilgang til forumet til du fjernar avgrensinga.</string>
     <string name="forums_moderation_ban_title">Vil du utestengje %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ingen modereringshandlingar er registrerte enno</string>
@@ -230,7 +229,6 @@
     <string name="forums_settings_forum_renamed">Forumet fekk nytt namn</string>
     <string name="forums_settings_name_clear_cd">Tøm namn</string>
     <string name="forums_settings_unsubscribe_section">Meld deg av forumet</string>
-    <string name="forums_share_link_title">Forumlenkje</string>
     <string name="forums_find_found_by_url">Funne via URL</string>
     <string name="forums_saved_clear_confirm_body">Dette fjernar alle innlegg frå lista di over lagra. Dette kan ikkje angrast.</string>
     <string name="forums_saved_clear_confirm_title">Tømme alle lagra innlegg?</string>

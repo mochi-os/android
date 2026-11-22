@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s फक्त मित्रांकडूनच चॅट स्वीकारतात.</string>
     <string name="chat_message_earlier">हे खाते Mochi मध्ये जोडण्यापूर्वीचे मेसेज एन्क्रिप्ट केलेले आहेत आणि ते येथे वाचता येत नाहीत</string>
     <string name="chat_message_excluded">फक्त इतर डिव्हाइससाठी एन्क्रिप्ट केलेला</string>
-    <string name="chat_setup">सेट अप करा</string>
+    <string name="chat_message_changed">पाठवणाऱ्याची एन्क्रिप्शन की बदलली आहे</string>    <string name="chat_setup">सेट अप करा</string>
     <string name="chat_jump_bottom">तळाशी जा</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s नवीन संदेशावर जा</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">की जुळत नसलेल्या डिव्हाइसवरून पाठवले</string>
     <string name="chat_list_select">चॅट निवडा</string>
     <string name="chat_message_discard">टाकून द्या</string>
+    <string name="chat_message_unencrypted">एन्क्रिप्शनशिवाय पाठवा</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">संदेश %1$s वर्णाने जास्त लांब आहे</item>
         <item quantity="other">संदेश %1$s वर्णांनी जास्त लांब आहे</item>

@@ -173,6 +173,7 @@
     <string name="chat_refused_friends_only">%1$s ngan nampi obrolan ti babaturan.</string>
     <string name="chat_message_earlier">Pesen ti saméméh akun ieu ditambahkeun ka Mochi dienkripsi sareng teu tiasa dibaca di dieu</string>
     <string name="chat_message_excluded">Ngan dienkripsi pikeun alat séjén</string>
+    <string name="chat_message_changed">Konci énkripsi pangirim robah</string>
     <string name="chat_setup">Pasang</string>
     <string name="chat_jump_bottom">Luncat ka handap</string>
     <plurals name="chat_jump_newer">
@@ -182,6 +183,7 @@
     <string name="chat_message_mismatched">Dikirim ti alat anu koncina teu cocog</string>
     <string name="chat_list_select">Pilih obrolan</string>
     <string name="chat_message_discard">Piceun</string>
+    <string name="chat_message_unencrypted">Kirim tanpa énkripsi</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Pesen kapanjangan %1$s karakter</item>
     </plurals>

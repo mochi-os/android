@@ -16,7 +16,6 @@
     <string name="crm_create_object">Nesne oluştur</string>
     <string name="crm_search">Ara</string>
     <string name="crm_settings">Ayarlar</string>
-    <string name="crm_link">Bağlantı</string>
     <string name="crm_design">Tasarım</string>
     <string name="crm_export_failed">Dışa aktarma kaydedilemedi</string>
     <string name="crm_sort_rank">Elle</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM bulunamadı</string>
     <string name="crm_create_blocked_no_parents">Henüz oluşturulabilecek öge türü yok. Önce gerekli üst ögeleri oluşturun.</string>
     <string name="crm_export_csv">CSV olarak dışa aktar</string>
-    <string name="crm_share_link_title">CRM\'yi paylaş</string>
     <string name="crm_export_saved">CRM verileri kaydedildi</string>
     <string name="crm_create_upload_json">.zip veya .json dosyası yükleyin</string>
     <string name="crm_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>

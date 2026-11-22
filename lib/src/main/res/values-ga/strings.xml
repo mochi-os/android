@@ -359,6 +359,9 @@
     <string name="game_system_score_resume">D\'athchromaigh %1$s ar an imirt</string>
     <string name="game_not_found">Níor aimsíodh an cluiche</string>
     <string name="game_chat_move_played_you">D\'imir tú %1$s</string>
+    <string name="share_title">Comhroinn</string>
+    <string name="share_feed">Postáil chuig fotha</string>
+    <string name="share_chat">Seol i gcomhrá</string>
     <string name="devices_add">Cuir gléas leis</string>
     <string name="devices_copy">Cóipeáil %1$s</string>
     <string name="devices_create">Cruthaigh</string>

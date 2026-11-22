@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Isikhuthazi samaphuzu</string>
     <string name="forums_ai_prompt_tag_label">Isikhuthazi sethegi</string>
     <string name="forums_ai_prompt_variables">Okuguqukayo: %1$s</string>
-    <string name="forums_link">Isixhumanisi</string>
     <string name="forums_moderation_ban_message">Balahlekelwa ukufinyelela kule nkundla kuze kube yilapho ususa umkhawulo.</string>
     <string name="forums_moderation_ban_title">Vimbela u-%1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Azikho izenzo zokulawula ezirekhodiwe okwamanje</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Inkundla iqanjwe kabusha</string>
     <string name="forums_settings_name_clear_cd">Sula igama</string>
     <string name="forums_settings_unsubscribe_section">Yekisa ukubhalisa kule nkundla</string>
-    <string name="forums_share_link_title">Isixhumanisi seforamu</string>
     <string name="forums_find_found_by_url">Itholwe nge-URL</string>
     <string name="forums_moderation_pending_posts">Okuthunyelwe okulindile (%1$s)</string>
     <string name="forums_moderation_pending_comments">Amazwana alindile (%1$s)</string>

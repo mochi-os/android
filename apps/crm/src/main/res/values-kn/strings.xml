@@ -16,7 +16,6 @@
     <string name="crm_create_object">ಆಬ್ಜೆಕ್ಟ್ ರಚಿಸಿ</string>
     <string name="crm_search">ಹುಡುಕಿ</string>
     <string name="crm_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="crm_link">ಲಿಂಕ್</string>
     <string name="crm_design">ವಿನ್ಯಾಸ</string>
     <string name="crm_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
     <string name="crm_sort_rank">ಮ್ಯಾನುಯಲ್</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ಯಾವುದೇ CRM ಗಳು ಸಿಗಲಿಲ್ಲ</string>
     <string name="crm_create_blocked_no_parents">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
     <string name="crm_export_csv">CSV ಎಕ್ಸ್‌ಪೋರ್ಟ್</string>
-    <string name="crm_share_link_title">CRM ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="crm_export_saved">CRM ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="crm_create_upload_json">.zip ಅಥವಾ .json ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="crm_create_blocked_no_options">ರಚಿಸಲಾಗುವುದಿಲ್ಲ: %1$s ಅಗತ್ಯವಿದೆ ಆದರೆ ಆಯ್ಕೆ ಮಾಡಲು ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ. ವಿನ್ಯಾಸದಲ್ಲಿ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ.</string>

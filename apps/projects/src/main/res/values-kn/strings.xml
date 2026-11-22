@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ಟೆಂಪ್ಲೇಟ್ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="projects_create_next">ಮುಂದೆ</string>
     <string name="projects_filter">ಫಿಲ್ಟರ್</string>
-    <string name="projects_link">ಲಿಂಕ್</string>
     <string name="projects_filter_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="projects_filter_all">ಎಲ್ಲಾ</string>
     <string name="projects_filter_other">ಇತರ</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ಈ ಲಗತ್ತನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="projects_attachment_delete_confirm_title">ಲಗತ್ತನ್ನು ಅಳಿಸುವುದೇ?</string>
     <string name="projects_settings_unsubscribe_section">ಯೋಜನೆಯ ಚಂದಾದಾರಿಕೆ ರದ್ದುಮಾಡಿ</string>
-    <string name="projects_share_link_title">ಯೋಜನೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="projects_sort_filter_title">ವಿಂಗಡಿಸಿ ಮತ್ತು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ನಂತಹ ಓದಬಹುದಾದ ID ಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ</string>
     <plurals name="projects_request_conflicts">

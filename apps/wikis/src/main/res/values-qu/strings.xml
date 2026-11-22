@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Musuqchasqa %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” páginaqa manaraqmi kanchu.</string>
-    <string name="wikis_pageview_share_chooser">Wiki t\'inki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">T\'inki</string>
     <string name="wikis_open_sidebar">Waqta barrata kichay</string>
     <string name="wikis_search_placeholder">Wiki maskay</string>
     <string name="wikis_unsubscribe_confirm_message">¿Cheqaqchu %1$s-manta suscripcionta qichuyta munanki?</string>

@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Defo</string>
     <string name="feeds_ai_prompt_custom">Pèsonalize</string>
     <string name="feeds_ai_prompt_variables">Varyab: %1$s</string>
-    <string name="feeds_link">Lyen</string>
-    <string name="feeds_share_link_title">Lyen fil</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s kòmantè</item>
     </plurals>

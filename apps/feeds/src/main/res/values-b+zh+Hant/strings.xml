@@ -204,8 +204,6 @@
     <string name="feeds_ai_prompt_default">預設</string>
     <string name="feeds_ai_prompt_custom">自訂</string>
     <string name="feeds_ai_prompt_variables">變數：%1$s</string>
-    <string name="feeds_link">連結</string>
-    <string name="feeds_share_link_title">資訊流連結</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s 則留言</item>
     </plurals>

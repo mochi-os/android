@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s-ը զրույցներ է ընդունում միայն ընկերներից։</string>
     <string name="chat_message_earlier">Այս հաշիվը Mochi-ին ավելացնելուց առաջվա հաղորդագրությունները գաղտնագրված են և այստեղ չեն կարող կարդացվել</string>
     <string name="chat_message_excluded">Գաղտնագրված է միայն այլ սարքերի համար</string>
-    <string name="chat_setup">Կարգավորել</string>
+    <string name="chat_message_changed">Ուղարկողի գաղտնագրման բանալին փոխվել է</string>    <string name="chat_setup">Կարգավորել</string>
     <string name="chat_jump_bottom">Անցնել ներքև</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Անցնել %1$s նոր հաղորդագրությանը</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Ուղարկվել է սարքից, որի բանալիները չեն համընկնում</string>
     <string name="chat_list_select">Ընտրել զրույց</string>
     <string name="chat_message_discard">Հրաժարվել</string>
+    <string name="chat_message_unencrypted">Ուղարկել առանց գաղտնագրման</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Հաղորդագրությունը թույլատրվածից %1$s նիշով երկար է</item>
         <item quantity="other">Հաղորդագրությունը թույլատրվածից %1$s նիշով երկար է</item>

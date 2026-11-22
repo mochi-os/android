@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Predeterminado</string>
     <string name="feeds_ai_prompt_custom">Sapankuq</string>
     <string name="feeds_ai_prompt_variables">Variablekuna: %1$s</string>
-    <string name="feeds_link">T\'inki</string>
-    <string name="feeds_share_link_title">Feed t\'inki</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s comentario</item>
         <item quantity="other">%1$s comentariokuna</item>

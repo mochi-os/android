@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s เล่นต่อแล้ว</string>
     <string name="game_not_found">ไม่พบเกม</string>
     <string name="game_chat_move_played_you">คุณเดิน %1$s</string>
+    <string name="share_title">แชร์</string>
+    <string name="share_feed">โพสต์ไปยังฟีด</string>
+    <string name="share_chat">ส่งในแชต</string>
     <string name="devices_add">เพิ่มอุปกรณ์</string>
     <string name="devices_copy">คัดลอก %1$s</string>
     <string name="devices_create">สร้าง</string>

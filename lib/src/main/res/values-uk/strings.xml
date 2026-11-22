@@ -357,6 +357,9 @@
     <string name="game_system_score_resume">%1$s відновив гру</string>
     <string name="game_not_found">Гру не знайдено</string>
     <string name="game_chat_move_played_you">Ви зіграли %1$s</string>
+    <string name="share_title">Поділитися</string>
+    <string name="share_feed">Опублікувати у стрічці</string>
+    <string name="share_chat">Надіслати в чаті</string>
     <string name="devices_add">Додати пристрій</string>
     <string name="devices_copy">Копіювати %1$s</string>
     <string name="devices_create">Створити</string>

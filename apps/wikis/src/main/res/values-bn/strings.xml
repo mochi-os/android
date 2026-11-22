@@ -222,9 +222,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">আপডেট হয়েছে %1$s</string>
     <string name="wikis_pageview_not_found_description">পৃষ্ঠা „%1$s\" এখনো নেই।</string>
-    <string name="wikis_pageview_share_chooser">উইকি লিঙ্ক</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">লিঙ্ক</string>
     <string name="wikis_open_sidebar">সাইডবার খুলুন</string>
     <string name="wikis_search_placeholder">একটি wiki খুঁজুন</string>
     <string name="wikis_unsubscribe_confirm_message">আপনি কি নিশ্চিত যে %1$s থেকে সাবস্ক্রিপশন বাতিল করতে চান?</string>

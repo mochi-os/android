@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Vyberte šablónu</string>
     <string name="projects_create_next">Ďalej</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Odkaz</string>
     <string name="projects_filter_clear_all">Vymazať všetko</string>
     <string name="projects_filter_all">Všetko</string>
     <string name="projects_filter_other">Iné</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Táto príloha bude natrvalo odstránená.</string>
     <string name="projects_attachment_delete_confirm_title">Odstrániť prílohu?</string>
     <string name="projects_settings_unsubscribe_section">Zrušiť odber projektu</string>
-    <string name="projects_share_link_title">Zdieľať projekt</string>
     <string name="projects_sort_filter_title">Zoradenie a filter</string>
     <string name="projects_create_prefix_hint">Používa sa pre čitateľné ID ako %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

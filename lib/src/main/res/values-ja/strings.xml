@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$sが対局を再開しました</string>
     <string name="game_not_found">ゲームが見つかりません</string>
     <string name="game_chat_move_played_you">あなたが%1$sを指しました</string>
+    <string name="share_title">共有</string>
+    <string name="share_feed">フィードに投稿</string>
+    <string name="share_chat">チャットで送信</string>
     <string name="devices_add">デバイスを追加</string>
     <string name="devices_copy">%1$sをコピー</string>
     <string name="devices_create">作成</string>

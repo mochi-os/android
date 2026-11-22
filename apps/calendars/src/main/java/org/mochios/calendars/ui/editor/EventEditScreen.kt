@@ -107,6 +107,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.share.ShareSheet
 import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.Zones
 import org.mochios.android.util.flightNumber
@@ -125,6 +126,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.automirrored.outlined.Notes
 import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Map
 import androidx.compose.material3.HorizontalDivider
@@ -146,7 +148,8 @@ import org.mochios.android.R as MochiR
  * save, a delete or a copy is for the one occurrence or the whole series.
  * [onOpen] goes on as another event's editor: the one a save left the
  * occurrence in. [onCreated] leaves once a new event is made, for the
- * calendar to say so.
+ * calendar to say so. Share hands an event in one of the user's own
+ * calendars to the system share sheet.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -203,6 +206,7 @@ fun EventEditScreen(
     // Nothing more can be asked of the event while it saves or deletes, or
     // when it never loaded.
     val busy = uiState.isLoading || uiState.isSaving || uiState.isDeleting || uiState.failure != null
+    val format = LocalFormat.current
 
     Scaffold(
         topBar = {
@@ -225,6 +229,14 @@ fun EventEditScreen(
                     }
                 },
                 actions = {
+                    if (uiState.failure == null && uiState.shareable) {
+                        MochiIconButton(onClick = { viewModel.share(format) }, enabled = !busy) {
+                            Icon(
+                                Icons.Outlined.Share,
+                                contentDescription = stringResource(MochiR.string.share_title),
+                            )
+                        }
+                    }
                     if (uiState.event != null && uiState.failure == null) {
                         MochiIconButton(onClick = viewModel::copy, enabled = !busy) {
                             Icon(
@@ -420,6 +432,7 @@ fun EventEditScreen(
             onAll = { viewModel.scope(Scope.ALL) },
         )
     }
+    ShareSheet(viewModel.shares)
     if (uiState.confirming) {
         DeleteEventDialog(
             deleting = uiState.isDeleting,
@@ -1085,8 +1098,8 @@ internal fun RepeatField(
             val format = LocalFormat.current
             val resources = LocalContext.current.resources
             val locale = LocalConfiguration.current.locales[0]
-            val summary = remember(recurrence.rule, format, locale) {
-                ruleSummary(recurrence.rule.orEmpty(), resources, format, locale)
+            val summary = remember(recurrence, format, locale) {
+                ruleWords(recurrence, resources, format, locale)
             }
             if (summary != null) {
                 EditorRow(icon = null) {

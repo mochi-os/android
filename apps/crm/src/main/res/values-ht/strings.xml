@@ -16,7 +16,6 @@
     <string name="crm_create_object">Kreye objè</string>
     <string name="crm_search">Chèche</string>
     <string name="crm_settings">Paramèt</string>
-    <string name="crm_link">Lyen</string>
     <string name="crm_design">Konsepsyon</string>
     <string name="crm_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
     <string name="crm_sort_rank">Manyèl</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Pa gen CRM ki jwenn</string>
     <string name="crm_create_blocked_no_parents">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
     <string name="crm_export_csv">Ekspòte CSV</string>
-    <string name="crm_share_link_title">Pataje CRM</string>
     <string name="crm_export_saved">Done CRM anrejistre</string>
     <string name="crm_create_upload_json">Telechaje yon fichye .zip oswa .json</string>
     <string name="crm_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>

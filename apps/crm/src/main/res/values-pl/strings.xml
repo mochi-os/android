@@ -16,7 +16,6 @@
     <string name="crm_create_object">Utwórz obiekt</string>
     <string name="crm_search">Szukaj</string>
     <string name="crm_settings">Ustawienia</string>
-    <string name="crm_link">Link</string>
     <string name="crm_design">Projekt</string>
     <string name="crm_export_failed">Nie udało się zapisać eksportu</string>
     <string name="crm_sort_rank">Ręczny</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Nie znaleziono żadnych CRM</string>
     <string name="crm_create_blocked_no_parents">Nie można jeszcze utworzyć żadnych typów elementów. Najpierw utwórz wymagane elementy nadrzędne.</string>
     <string name="crm_export_csv">Eksportuj CSV</string>
-    <string name="crm_share_link_title">Udostępnij CRM</string>
     <string name="crm_export_saved">Dane CRM zapisane</string>
     <string name="crm_create_upload_json">Prześlij plik .zip lub .json</string>
     <string name="crm_create_blocked_no_options">Nie można utworzyć: %1$s jest wymagane, ale nie ma opcji do wyboru. Dodaj opcje w Projekcie.</string>

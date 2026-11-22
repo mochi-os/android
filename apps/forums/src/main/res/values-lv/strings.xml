@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_score_label">Vērtēšanas uzvedne</string>
     <string name="forums_ai_prompt_tag_label">Tagu uzvedne</string>
     <string name="forums_ai_prompt_variables">Mainīgie: %1$s</string>
-    <string name="forums_link">Saite</string>
     <string name="forums_moderation_ban_message">Zaudē piekļuvi forumam, līdz noņemsiet ierobežojumu.</string>
     <string name="forums_moderation_ban_title">Bloķēt lietotāju %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Moderēšanas darbības vēl nav reģistrētas</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Forums pārdēvēts</string>
     <string name="forums_settings_name_clear_cd">Notīrīt nosaukumu</string>
     <string name="forums_settings_unsubscribe_section">Atteikties no foruma abonementa</string>
-    <string name="forums_share_link_title">Foruma saite</string>
     <string name="forums_find_found_by_url">Atrasts pēc URL</string>
     <string name="forums_moderation_pending_posts">Gaidošie ieraksti (%1$s)</string>
     <string name="forums_moderation_pending_comments">Gaidošie komentāri (%1$s)</string>

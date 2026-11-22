@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_tag_label">Prompta etîketê</string>
     <string name="forums_ai_prompt_variables">Guhêrbar: %1$s</string>
     <string name="forums_find_found_by_url">Bi URLê hate dîtin</string>
-    <string name="forums_link">Girêdan</string>
     <string name="forums_moderation_ban_message">Heta ku tu astengiyê ranekî, ew nikarin bigihîjin forumê.</string>
     <string name="forums_moderation_ban_title">%1$s asteng bike?</string>
     <string name="forums_moderation_log_empty_subtitle">Hê tu kirinên rêvebirinê nehatine tomarkirin</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Forum ji nû ve hat navlêkirin</string>
     <string name="forums_settings_name_clear_cd">Navî paqij bike</string>
     <string name="forums_settings_unsubscribe_section">Ji forumê derkeve</string>
-    <string name="forums_share_link_title">Girêdana forumê</string>
     <string name="forums_moderation_pending_posts">Şandiyên li bendê (%1$s)</string>
     <string name="forums_moderation_pending_comments">Şîroveyên li bendê (%1$s)</string>
     <string name="forums_moderation_on_image">Li ser wêneyê: %1$s</string>

@@ -362,6 +362,9 @@
     <string name="game_system_score_resume">Ailddechreuodd %1$s chwarae</string>
     <string name="game_not_found">Heb ddod o hyd i\'r gêm</string>
     <string name="game_chat_move_played_you">Chwaraeoch %1$s</string>
+    <string name="share_title">Rhannu</string>
+    <string name="share_feed">Postio i ffrwd</string>
+    <string name="share_chat">Anfon mewn sgwrs</string>
     <string name="devices_add">Ychwanegu dyfais</string>
     <string name="devices_copy">Copïo %1$s</string>
     <string name="devices_create">Creu</string>

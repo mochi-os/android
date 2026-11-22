@@ -16,7 +16,6 @@
     <string name="crm_create_object">Cruthaich nì</string>
     <string name="crm_search">Lorg</string>
     <string name="crm_settings">Roghainnean</string>
-    <string name="crm_link">Ceangal</string>
     <string name="crm_design">Dealbhadh</string>
     <string name="crm_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
     <string name="crm_sort_rank">Le làimh</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Cha deach CRM a lorg</string>
     <string name="crm_create_blocked_no_parents">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
     <string name="crm_export_csv">Às-phortaich CSV</string>
-    <string name="crm_share_link_title">Co-roinn CRM</string>
     <string name="crm_export_saved">Chaidh dàta CRM a shàbhaladh</string>
     <string name="crm_create_upload_json">Luchdaich suas faidhle .zip no .json</string>
     <string name="crm_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>

@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Isikhokelo samanqaku</string>
     <string name="forums_ai_prompt_tag_label">Isikhokelo sethegi</string>
     <string name="forums_ai_prompt_variables">Iiguquguquko: %1$s</string>
-    <string name="forums_link">Ikhonkco</string>
     <string name="forums_moderation_ban_message">Baphulukana nofikelelo kweli qonga de ususe isithintelo.</string>
     <string name="forums_moderation_ban_title">Vimbela u-%1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Akukho zenzo zolawulo zirekhodiweyo okwangoku</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Iforamu inikwe igama elitsha</string>
     <string name="forums_settings_name_clear_cd">Cima igama</string>
     <string name="forums_settings_unsubscribe_section">Rhoxisa ukubhalisa kweli qonga</string>
-    <string name="forums_share_link_title">Ikhonkco leforamu</string>
     <string name="forums_find_found_by_url">Ifunyenwe nge-URL</string>
     <string name="forums_moderation_pending_posts">Izithuba ezilindileyo (%1$s)</string>
     <string name="forums_moderation_pending_comments">Izimvo ezilindileyo (%1$s)</string>

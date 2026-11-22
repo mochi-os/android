@@ -183,6 +183,56 @@ class NetworksScreenTest {
     }
 
     @Test
+    fun `a message from a device whose key changed says so, not just that it is encrypted`() {
+        bubble(ChatMessage(id = "m1", body = "", member = "you", encrypted = 4), own = false)
+        rule.onNodeWithText("The sender's encryption key changed").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted message").assertDoesNotExist()
+    }
+
+    @Test
+    fun `a message from a device the user distrusted says so, not just that it is encrypted`() {
+        bubble(ChatMessage(id = "m1", body = "", member = "you", encrypted = 5), own = false)
+        rule.onNodeWithText("Sent from a device you distrusted").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted message").assertDoesNotExist()
+    }
+
+    /** Replies that cannot be read: a changed key, a distrusted device, and for other devices only. */
+    private val sealedReplies = listOf(
+        ChatMessage(id = "r1", body = "", name = "Ann", member = "a1", thread = "m1", encrypted = 4),
+        ChatMessage(id = "r2", body = "", name = "Bea", member = "b1", thread = "m1", encrypted = 5),
+        ChatMessage(id = "r3", body = "", name = "Cai", member = "c1", thread = "m1", encrypted = 3),
+    )
+
+    @Test
+    fun `thread replies in a bubble that cannot be read say why`() {
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 3, answers = sealedReplies), own = false, onThread = {})
+        rule.onNodeWithText("The sender's encryption key changed").assertIsDisplayed()
+        rule.onNodeWithText("Sent from a device you distrusted").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted for other devices only").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted message").assertDoesNotExist()
+    }
+
+    @Test
+    fun `replies in the open thread that cannot be read say why`() {
+        rule.setContent {
+            Column {
+                ThreadContent(
+                    thread = ThreadState(root = ChatMessage(id = "m1", body = "Root"), replies = sealedReplies, isLoading = false),
+                    chatId = "c1",
+                    canWrite = false,
+                    onDraft = {},
+                    onSend = {},
+                    onEarlier = {},
+                )
+            }
+        }
+        rule.onNodeWithText("The sender's encryption key changed").assertIsDisplayed()
+        rule.onNodeWithText("Sent from a device you distrusted").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted for other devices only").assertIsDisplayed()
+        rule.onNodeWithText("Encrypted message").assertDoesNotExist()
+    }
+
+    @Test
     fun `a message quoting a post elsewhere shows the post, without naming its network`() {
         bubble(
             ChatMessage(
@@ -554,7 +604,7 @@ class NetworksScreenTest {
                     state = state,
                     onRetry = {},
                     onToggle = { toggled += it },
-                    onTrust = { person, device, trust -> trusted += "$person/$device/$trust" },
+                    onTrust = { person, device, trust -> trusted += "$person/${device.id}/${device.fingerprint}/$trust" },
                     onVerify = {},
                     onSetup = {},
                     onRecover = {},
@@ -621,7 +671,7 @@ class NetworksScreenTest {
         rule.onNodeWithText("This phone").assertDoesNotExist()
         rule.onNodeWithContentDescription("Device options").performClick()
         rule.onNodeWithText("The fingerprint matches").performClick()
-        assertEquals(listOf("xmpp:dave@xmpp.example/7/verified"), trusted)
+        assertEquals("the word goes with the fingerprint shown", listOf("xmpp:dave@xmpp.example/7/aaaabbbb/verified"), trusted)
     }
 
     @Test

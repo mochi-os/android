@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">업데이트 %1$s</string>
     <string name="wikis_pageview_not_found_description">「%1$s」 페이지가 아직 존재하지 않습니다.</string>
-    <string name="wikis_pageview_share_chooser">위키 링크</string>
     <string name="wikis_pageview_clipboard_label_rss">위키 RSS URL</string>
-    <string name="wikis_page_action_share">링크</string>
     <string name="wikis_open_sidebar">사이드바 열기</string>
     <string name="wikis_search_placeholder">위키 검색</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s 구독을 정말 해지하시겠습니까?</string>

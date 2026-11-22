@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">टेम्प्लेट छान्नुहोस्</string>
     <string name="projects_create_next">अर्को</string>
     <string name="projects_filter">फिल्टर</string>
-    <string name="projects_link">लिङ्क</string>
     <string name="projects_filter_clear_all">सबै खाली गर्नुहोस्</string>
     <string name="projects_filter_all">सबै</string>
     <string name="projects_filter_other">अन्य</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">यो संलग्नक स्थायी रूपमा मेटाइनेछ।</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक मेट्ने?</string>
     <string name="projects_settings_unsubscribe_section">परियोजनाको सदस्यता छोड्नुहोस्</string>
-    <string name="projects_share_link_title">परियोजना साझा गर्नुहोस्</string>
     <string name="projects_sort_filter_title">क्रमबद्ध र फिल्टर</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 जस्ता पढ्न सकिने आईडीका लागि प्रयोग हुन्छ</string>
     <plurals name="projects_request_conflicts">

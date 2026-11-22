@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s só aceita conversas de amigos.</string>
     <string name="chat_message_earlier">As mensagens anteriores à adição desta conta ao Mochi estão encriptadas e não podem ser lidas aqui</string>
     <string name="chat_message_excluded">Encriptada apenas para outros dispositivos</string>
+    <string name="chat_message_changed">A chave de encriptação do remetente mudou</string>
     <string name="chat_setup">Configurar</string>
     <string name="chat_jump_bottom">Ir para o fim</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Enviado a partir de um dispositivo cujas chaves não correspondem</string>
     <string name="chat_list_select">Selecione uma conversa</string>
     <string name="chat_message_discard">Descartar</string>
+    <string name="chat_message_unencrypted">Enviar sem encriptação</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">A mensagem tem %1$s carácter a mais</item>
         <item quantity="other">A mensagem tem %1$s caracteres a mais</item>

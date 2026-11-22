@@ -215,7 +215,6 @@
     <string name="forums_ai_prompt_score_label">موجّه التقييم</string>
     <string name="forums_ai_prompt_tag_label">موجّه الوسوم</string>
     <string name="forums_ai_prompt_variables">المتغيرات: %1$s</string>
-    <string name="forums_link">رابط</string>
     <string name="forums_moderation_ban_message">يفقد الوصول إلى المنتدى حتى تزيل القيد.</string>
     <string name="forums_moderation_ban_title">حظر %1$s؟</string>
     <string name="forums_moderation_log_empty_subtitle">لم يتم تسجيل أي إجراءات إشراف بعد</string>
@@ -244,7 +243,6 @@
     <string name="forums_settings_forum_renamed">تمت إعادة تسمية المنتدى</string>
     <string name="forums_settings_name_clear_cd">مسح الاسم</string>
     <string name="forums_settings_unsubscribe_section">إنهاء الاشتراك في المنتدى</string>
-    <string name="forums_share_link_title">رابط المنتدى</string>
     <string name="forums_find_found_by_url">تم العثور عليه عبر الرابط</string>
     <string name="forums_moderation_pending_posts">منشورات معلقة (%1$s)</string>
     <string name="forums_moderation_pending_comments">تعليقات معلقة (%1$s)</string>

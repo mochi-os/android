@@ -9,4 +9,14 @@
     <style name="Theme.Mochi.Trampoline">
         <item name="android:windowNoDisplay">true</item>
     </style>
+
+    <!--
+      Mochi in the system share sheet draws only its chooser, a sheet over
+      the app that shared, which shows through the window around it.
+    -->
+    <style name="Theme.Mochi.Share">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
 </resources>

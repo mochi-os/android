@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">ڊفالٽ</string>
     <string name="feeds_ai_prompt_custom">ڪسٽم</string>
     <string name="feeds_ai_prompt_variables">متغير: %1$s</string>
-    <string name="feeds_link">لنڪ</string>
-    <string name="feeds_share_link_title">فيڊ لنڪ</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s تبصرو</item>
         <item quantity="other">%1$s تبصرا</item>

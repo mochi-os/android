@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Pilih cithakan</string>
     <string name="projects_create_next">Sabanjure</string>
     <string name="projects_filter">Saring</string>
-    <string name="projects_link">Tautan</string>
     <string name="projects_filter_clear_all">Resiki kabèh</string>
     <string name="projects_filter_all">Kabèh</string>
     <string name="projects_filter_other">Liyané</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Lampiran iki bakal dibusak sacara permanen.</string>
     <string name="projects_attachment_delete_confirm_title">Busak lampiran?</string>
     <string name="projects_settings_unsubscribe_section">Mandheg langganan proyek</string>
-    <string name="projects_share_link_title">Bagekake proyek</string>
     <string name="projects_sort_filter_title">Urutake lan saring</string>
     <string name="projects_create_prefix_hint">Digunakake kanggo ID sing gampang diwaca kaya %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

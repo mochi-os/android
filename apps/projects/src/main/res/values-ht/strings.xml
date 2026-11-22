@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Chwazi yon modèl</string>
     <string name="projects_create_next">Pwochen</string>
     <string name="projects_filter">Filtre</string>
-    <string name="projects_link">Lyen</string>
     <string name="projects_filter_clear_all">Efase tout</string>
     <string name="projects_filter_all">Tout</string>
     <string name="projects_filter_other">Lòt</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Fichye atache sa a pral efase pou tout tan.</string>
     <string name="projects_attachment_delete_confirm_title">Efase fichye atache a?</string>
     <string name="projects_settings_unsubscribe_section">Sispann abònman ak pwojè a</string>
-    <string name="projects_share_link_title">Pataje pwojè a</string>
     <string name="projects_sort_filter_title">Triye ak filtre</string>
     <string name="projects_create_prefix_hint">Itilize pou ID moun ka li tankou %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

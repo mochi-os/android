@@ -204,8 +204,6 @@
     <string name="feeds_ai_prompt_default">ค่าเริ่มต้น</string>
     <string name="feeds_ai_prompt_custom">กำหนดเอง</string>
     <string name="feeds_ai_prompt_variables">ตัวแปร: %1$s</string>
-    <string name="feeds_link">ลิงก์</string>
-    <string name="feeds_share_link_title">ลิงก์ฟีด</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s ความคิดเห็น</item>
     </plurals>

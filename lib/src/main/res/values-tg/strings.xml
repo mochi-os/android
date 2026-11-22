@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s бозиро идома дод</string>
     <string name="game_not_found">Бозӣ ёфт нашуд</string>
     <string name="game_chat_move_played_you">Шумо %1$s бозӣ кардед</string>
+    <string name="share_title">Мубодила</string>
+    <string name="share_feed">Дар фид нашр кардан</string>
+    <string name="share_chat">Дар чат фиристодан</string>
     <string name="devices_add">Иловаи дастгоҳ</string>
     <string name="devices_copy">Нусхабардории %1$s</string>
     <string name="devices_create">Эҷод кардан</string>

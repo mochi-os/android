@@ -121,6 +121,7 @@
     <string name="chat_message_encrypted">加密訊息</string>
     <string name="chat_message_earlier">呢個帳戶加入 Mochi 之前嘅訊息已經加密，喺度睇唔到</string>
     <string name="chat_message_excluded">只係為其他裝置加密</string>
+    <string name="chat_message_changed">發送者嘅加密密鑰改咗</string>
     <string name="chat_thread_title">討論串</string>
     <string name="chat_thread_reply">喺討論串回覆</string>
     <string name="chat_thread_earlier">顯示之前嘅回覆</string>
@@ -178,6 +179,7 @@
     <string name="chat_message_distrusted">由你唔信任嘅裝置發出</string>
     <string name="chat_message_mismatched">由密鑰唔吻合嘅裝置發出</string>
     <string name="chat_message_discard">捨棄</string>
+    <string name="chat_message_unencrypted">唔加密噉傳送</string>
     <string name="chat_jump_bottom">跳到最底</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">訊息超出 %1$s 個字元</item>

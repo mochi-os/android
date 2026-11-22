@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Diropéa %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” can aya.</string>
-    <string name="wikis_pageview_share_chooser">Tautan wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Tumbu</string>
     <string name="wikis_open_sidebar">Buka sidebar</string>
     <string name="wikis_search_placeholder">Sungsi wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Yakin hoyong ngeureunkeun langganan ti %1$s?</string>

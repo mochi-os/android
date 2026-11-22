@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Միավորի հուշում</string>
     <string name="forums_ai_prompt_tag_label">Թեգի հուշում</string>
     <string name="forums_ai_prompt_variables">Փոփոխականներ՝ %1$s</string>
-    <string name="forums_link">Հղում</string>
     <string name="forums_moderation_ban_message">Կկորցնի ֆորում մուտքը, մինչև չհեռացնեք սահմանափակումը։</string>
     <string name="forums_moderation_ban_title">Արգելափակե՞լ %1$s-ին</string>
     <string name="forums_moderation_log_empty_subtitle">Մոդերացիայի գործողություններ դեռ չեն արձանագրվել</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Ֆորումը վերանվանվեց</string>
     <string name="forums_settings_name_clear_cd">Մաքրել անունը</string>
     <string name="forums_settings_unsubscribe_section">Հրաժարվել ֆորումի բաժանորդագրությունից</string>
-    <string name="forums_share_link_title">Ֆորումի հղում</string>
     <string name="forums_find_found_by_url">Գտնվել է URL-ով</string>
     <string name="forums_moderation_pending_posts">Սպասող հրապարակումներ (%1$s)</string>
     <string name="forums_moderation_pending_comments">Սպասող մեկնաբանություններ (%1$s)</string>

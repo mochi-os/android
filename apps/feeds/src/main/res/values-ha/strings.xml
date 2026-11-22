@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Tsoho</string>
     <string name="feeds_ai_prompt_custom">Na musamman</string>
     <string name="feeds_ai_prompt_variables">Masu canji: %1$s</string>
-    <string name="feeds_link">Hanyar haɗi</string>
-    <string name="feeds_share_link_title">Hanyar haɗin jerin labarai</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">sharhi %1$s</item>
         <item quantity="other">sharhi %1$s</item>

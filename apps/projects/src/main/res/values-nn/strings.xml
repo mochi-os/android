@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Vel ein mal</string>
     <string name="projects_create_next">Neste</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Lenkje</string>
     <string name="projects_filter_clear_all">Tøm alle</string>
     <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Anna</string>
@@ -297,7 +296,6 @@
     <string name="projects_attachment_delete_confirm_message">Dette vedlegget vert sletta for alltid.</string>
     <string name="projects_attachment_delete_confirm_title">Slette vedlegget?</string>
     <string name="projects_settings_unsubscribe_section">Avslutt abonnement på prosjektet</string>
-    <string name="projects_share_link_title">Del prosjekt</string>
     <string name="projects_sort_filter_title">Sorter og filtrer</string>
     <string name="projects_create_prefix_hint">Vert brukt til lesbare ID-ar som %1$s-1, %1$s-2</string>
     <string name="projects_access_role_design">Utform, opprett, rediger, kommenter og vis</string>

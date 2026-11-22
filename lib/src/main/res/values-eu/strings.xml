@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s(e)k partidari berrekin dio</string>
     <string name="game_not_found">Ez da partida aurkitu</string>
     <string name="game_chat_move_played_you">%1$s jokatu duzu</string>
+    <string name="share_title">Partekatu</string>
+    <string name="share_feed">Argitaratu jario batean</string>
+    <string name="share_chat">Bidali txat batean</string>
     <string name="devices_add">Gehitu gailu bat</string>
     <string name="devices_copy">Kopiatu %1$s</string>
     <string name="devices_create">Sortu</string>

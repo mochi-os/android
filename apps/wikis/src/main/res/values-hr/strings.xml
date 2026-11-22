@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ažurirano %1$s</string>
     <string name="wikis_pageview_not_found_description">Stranica „%1$s\" još ne postoji.</string>
-    <string name="wikis_pageview_share_chooser">Poveznica wikija</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Poveznica</string>
     <string name="wikis_open_sidebar">Otvori bočnu traku</string>
     <string name="wikis_search_placeholder">Pretraži wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurno želite otkazati pretplatu na %1$s?</string>

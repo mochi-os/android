@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">टेम्पलेट निवडा</string>
     <string name="projects_create_next">पुढे</string>
     <string name="projects_filter">फिल्टर</string>
-    <string name="projects_link">दुवा</string>
     <string name="projects_filter_clear_all">सर्व साफ करा</string>
     <string name="projects_filter_all">सर्व</string>
     <string name="projects_filter_other">इतर</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">हे संलग्नक कायमचे हटवले जाईल.</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक हटवायचे?</string>
     <string name="projects_settings_unsubscribe_section">प्रकल्पाची सदस्यता रद्द करा</string>
-    <string name="projects_share_link_title">प्रकल्प शेअर करा</string>
     <string name="projects_sort_filter_title">क्रमवारी आणि फिल्टर</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 सारख्या वाचनीय आयडींसाठी वापरले जाते</string>
     <plurals name="projects_request_conflicts">

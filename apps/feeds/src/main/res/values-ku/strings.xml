@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Standard</string>
     <string name="feeds_ai_prompt_custom">Taybet</string>
     <string name="feeds_ai_prompt_variables">Guhêrbar: %1$s</string>
-    <string name="feeds_link">Girêdan</string>
-    <string name="feeds_share_link_title">Girêdana feedê</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s şîrove</item>
         <item quantity="other">%1$s şîrove</item>

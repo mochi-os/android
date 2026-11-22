@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Prompt na hodnotenie</string>
     <string name="forums_ai_prompt_tag_label">Prompt na štítky</string>
     <string name="forums_ai_prompt_variables">Premenné: %1$s</string>
-    <string name="forums_link">Odkaz</string>
     <string name="forums_moderation_ban_message">Stratí prístup k fóru, kým obmedzenie neodstránite.</string>
     <string name="forums_moderation_ban_title">Zablokovať používateľa %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Zatiaľ neboli zaznamenané žiadne moderátorské akcie</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Fórum premenované</string>
     <string name="forums_settings_name_clear_cd">Vymazať názov</string>
     <string name="forums_settings_unsubscribe_section">Odhlásiť odber fóra</string>
-    <string name="forums_share_link_title">Odkaz na fórum</string>
     <string name="forums_find_found_by_url">Nájdené podľa URL</string>
     <string name="forums_moderation_pending_posts">Čakajúce príspevky (%1$s)</string>
     <string name="forums_moderation_pending_comments">Čakajúce komentáre (%1$s)</string>

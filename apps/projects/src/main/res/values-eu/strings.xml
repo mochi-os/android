@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Aukeratu txantiloi bat</string>
     <string name="projects_create_next">Hurrengoa</string>
     <string name="projects_filter">Iragazi</string>
-    <string name="projects_link">Esteka</string>
     <string name="projects_filter_clear_all">Garbitu dena</string>
     <string name="projects_filter_all">Guztiak</string>
     <string name="projects_filter_other">Bestelakoa</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Eranskin hau betiko ezabatuko da.</string>
     <string name="projects_attachment_delete_confirm_title">Eranskina ezabatu?</string>
     <string name="projects_settings_unsubscribe_section">Utzi proiektuaren harpidetza</string>
-    <string name="projects_share_link_title">Partekatu proiektua</string>
     <string name="projects_sort_filter_title">Ordenatu eta iragazi</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 bezalako ID irakurgarrietarako erabiltzen da</string>
     <plurals name="projects_request_conflicts">

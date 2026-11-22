@@ -16,7 +16,6 @@
     <string name="crm_create_object">Cruthaigh oibiacht</string>
     <string name="crm_search">Cuardach</string>
     <string name="crm_settings">Socruithe</string>
-    <string name="crm_link">Nasc</string>
     <string name="crm_design">Dearadh</string>
     <string name="crm_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
     <string name="crm_sort_rank">Láimhe</string>
@@ -272,7 +271,6 @@
     <string name="crm_no_crms_found">Níor aimsíodh aon CRM</string>
     <string name="crm_create_blocked_no_parents">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
     <string name="crm_export_csv">Easpórtáil CSV</string>
-    <string name="crm_share_link_title">Comhroinn CRM</string>
     <string name="crm_export_saved">Sábháladh sonraí CRM</string>
     <string name="crm_create_upload_json">Uaslódáil comhad .zip nó .json</string>
     <string name="crm_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>

@@ -190,8 +190,6 @@
     <string name="feeds_banner_dismiss">關閉橫額</string>
     <string name="feeds_members_search">篩選成員</string>
     <string name="feeds_ai_prompt_default">預設</string>
-    <string name="feeds_link">連結</string>
-    <string name="feeds_share_link_title">資訊串連結</string>
     <string name="feeds_ai_prompt_custom">自訂</string>
     <string name="feeds_ai_prompt_variables">變數：%1$s</string>
     <string name="feeds_interest_boosted">興趣已提高</string>

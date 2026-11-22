@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Prompti i vlerësimit</string>
     <string name="forums_ai_prompt_tag_label">Prompti i etiketave</string>
     <string name="forums_ai_prompt_variables">Variablat: %1$s</string>
-    <string name="forums_link">Lidhje</string>
     <string name="forums_moderation_ban_message">Humbet aksesin në forum derisa ta hiqni kufizimin.</string>
     <string name="forums_moderation_ban_title">Të bllokohet %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ende nuk ka veprime moderimi të regjistruara</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forumi u riemërtua</string>
     <string name="forums_settings_name_clear_cd">Pastro emrin</string>
     <string name="forums_settings_unsubscribe_section">Çabonohu nga forumi</string>
-    <string name="forums_share_link_title">Lidhja e forumit</string>
     <string name="forums_find_found_by_url">Gjetur me URL</string>
     <string name="forums_moderation_pending_posts">Postime në pritje (%1$s)</string>
     <string name="forums_moderation_pending_comments">Komente në pritje (%1$s)</string>

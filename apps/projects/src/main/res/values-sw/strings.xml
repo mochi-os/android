@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Chagua kiolezo</string>
     <string name="projects_create_next">Inayofuata</string>
     <string name="projects_filter">Chuja</string>
-    <string name="projects_link">Kiungo</string>
     <string name="projects_filter_clear_all">Futa vyote</string>
     <string name="projects_filter_all">Vyote</string>
     <string name="projects_filter_other">Nyingine</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Kiambatisho hiki kitafutwa kabisa.</string>
     <string name="projects_attachment_delete_confirm_title">Futa kiambatisho?</string>
     <string name="projects_settings_unsubscribe_section">Acha kufuatilia mradi</string>
-    <string name="projects_share_link_title">Shiriki mradi</string>
     <string name="projects_sort_filter_title">Panga na chuja</string>
     <string name="projects_create_prefix_hint">Hutumika kwa vitambulisho vinavyosomeka kama %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

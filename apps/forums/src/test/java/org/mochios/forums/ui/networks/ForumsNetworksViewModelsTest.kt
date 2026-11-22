@@ -5,7 +5,9 @@
 
 package org.mochios.forums.ui.networks
 
+import android.content.Intent
 import android.os.Looper
+import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
@@ -29,6 +31,10 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.android.share.Shared
+import org.mochios.android.share.share
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.forums.R
@@ -108,6 +114,7 @@ class ForumsNetworksViewModelsTest {
                         "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "permissions": {}}""")
                     "/forums/c2/-/p2" -> ok("""{"forum": {"id": "https://lemmy.example/c/books", "account": "l1",
                         "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "post": {"id": "p2", "forum": "c2", "title": "Linked", "body": "Text"}, "comments": []}""")
+                    "/forums/f1/-/share" -> ok("""{"link": "mochi://12D3KooWPeer/f1"}""")
                     "/forums/f1/-/info" -> ok("""{"forum": {"id": "f1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "permissions": {}}""")
                     "/forums/f1/-/posts" -> ok("""{"forum": {"id": "f1", "fingerprint": "fp1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "posts": []}""")
                     "/forums/-/accounts/list" -> raw("""[{"id": "h2", "type": "fediverse", "identifier": "zed@here.example", "hosted": true},
@@ -280,6 +287,26 @@ class ForumsNetworksViewModelsTest {
         until("the block") { events.any { it is ForumEvent.Unsubscribed } }
         assertEquals("target=%21books%40lemmy.example", sent("/forums/-/blocks/add"))
         job.cancel()
+    }
+
+    @Test
+    fun `a forum's Share hands other apps the link it is joined by, and Mochi the forum by name and address`() {
+        val model = ForumViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository, SavedRepository(api, Gson(), session), socket, session)
+        until("the forum") { model.uiState.value.forum.fingerprint == "fp1" }
+        var shared: Shared? = null
+        val job = CoroutineScope(Dispatchers.Main).launch { model.shares.collect { shared = it } }
+        model.share()
+        until("the share") { shared != null }
+        job.cancel()
+        assertTrue(requests.any { it.first == "/forums/f1/-/share" })
+        // The sheet the screen's ShareSheet opens with it.
+        share(context, shared!!)
+        val chooser = shadowOf(context).nextStartedActivity
+        assertEquals(Intent.ACTION_CHOOSER, chooser.action)
+        val send = IntentCompat.getParcelableExtra(chooser, Intent.EXTRA_INTENT, Intent::class.java)!!
+        assertEquals("mochi://12D3KooWPeer/f1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Books", send.getStringExtra(EXTRA_WORDS))
+        assertEquals(server.url("/").toString().trimEnd('/') + "/forums/fp1", send.getStringExtra(EXTRA_ADDRESS))
     }
 
     @Test

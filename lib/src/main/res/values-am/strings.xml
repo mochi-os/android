@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ጨዋታውን ቀጥሏል</string>
     <string name="game_not_found">ጨዋታው አልተገኘም</string>
     <string name="game_chat_move_played_you">እርስዎ %1$s ተጫውተዋል</string>
+    <string name="share_title">አጋራ</string>
+    <string name="share_feed">ወደ ፊድ ለጥፍ</string>
+    <string name="share_chat">በውይይት ውስጥ ላክ</string>
     <string name="devices_add">መሳሪያ ያክሉ</string>
     <string name="devices_copy">%1$s ቅዳ</string>
     <string name="devices_create">ፍጠር</string>

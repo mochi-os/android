@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Zaɓi samfuri</string>
     <string name="projects_create_next">Na gaba</string>
     <string name="projects_filter">Tacewa</string>
-    <string name="projects_link">Hanyar haɗi</string>
     <string name="projects_filter_clear_all">Share duka</string>
     <string name="projects_filter_all">Duk</string>
     <string name="projects_filter_other">Sauran</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Za a goge wannan abin da aka makala har abada.</string>
     <string name="projects_attachment_delete_confirm_title">A goge abin da aka makala?</string>
     <string name="projects_settings_unsubscribe_section">Daina bibiyar aikin</string>
-    <string name="projects_share_link_title">Raba aikin</string>
     <string name="projects_sort_filter_title">Jera da tacewa</string>
     <string name="projects_create_prefix_hint">Ana amfani da shi don ID masu iya karantawa kamar %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

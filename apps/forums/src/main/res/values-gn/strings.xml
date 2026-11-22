@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_tag_label">Teramoĩ prompt</string>
     <string name="forums_ai_prompt_variables">Variable-kuéra: %1$s</string>
     <string name="forums_find_found_by_url">Ojejuhu URL rupive</string>
-    <string name="forums_link">Juajuha</string>
     <string name="forums_moderation_ban_message">Ndaikatumo\'ãi oike forope reipe\'a peve jejoko.</string>
     <string name="forums_moderation_ban_title">Emboyke %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ndaipóri gueteri moderación tembiapo oñembokuatiáva</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Foro réra oñemoambue</string>
     <string name="forums_settings_name_clear_cd">Embopotĩ téra</string>
     <string name="forums_settings_unsubscribe_section">Edesuscribi forogui</string>
-    <string name="forums_share_link_title">Foro juajuha</string>
     <string name="forums_moderation_pending_posts">Marandu oha\'arõva (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentario oha\'arõva (%1$s)</string>
     <string name="forums_moderation_on_image">Ta\'angáre: %1$s</string>

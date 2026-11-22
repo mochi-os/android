@@ -177,7 +177,7 @@
     <string name="chat_refused_friends_only">%1$s priima pokalbius tik iš draugų.</string>
     <string name="chat_message_earlier">Žinutės iš laiko prieš pridedant šią paskyrą prie Mochi yra užšifruotos ir jų čia perskaityti negalima</string>
     <string name="chat_message_excluded">Užšifruota tik kitiems įrenginiams</string>
-    <string name="chat_setup">Nustatyti</string>
+    <string name="chat_message_changed">Siuntėjo šifravimo raktas pasikeitė</string>    <string name="chat_setup">Nustatyti</string>
     <string name="chat_jump_bottom">Pereiti į apačią</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Pereiti prie %1$s naujos žinutės</item>
@@ -188,6 +188,7 @@
     <string name="chat_message_mismatched">Išsiųsta iš įrenginio, kurio raktai nesutampa</string>
     <string name="chat_list_select">Pasirinkite pokalbį</string>
     <string name="chat_message_discard">Atmesti</string>
+    <string name="chat_message_unencrypted">Siųsti nešifruotą</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Žinutė %1$s simboliu per ilga</item>
         <item quantity="few">Žinutė %1$s simboliais per ilga</item>

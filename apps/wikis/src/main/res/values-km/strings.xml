@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">បានធ្វើបច្ចុប្បន្នភាព %1$s</string>
     <string name="wikis_pageview_not_found_description">ទំព័រ “%1$s” មិនទាន់មានទេ។</string>
-    <string name="wikis_pageview_share_chooser">តំណវិគី</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">តំណ</string>
     <string name="wikis_open_sidebar">បើករបារចំហៀង</string>
     <string name="wikis_search_placeholder">ស្វែងរក wiki</string>
     <string name="wikis_unsubscribe_confirm_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវ %1$s មែនទេ?</string>

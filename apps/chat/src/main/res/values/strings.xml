@@ -41,6 +41,7 @@
     <string name="chat_message_distrusted">Sent from a device you distrusted</string>
     <string name="chat_message_mismatched">Sent from a device whose keys do not match</string>
     <string name="chat_message_discard">Discard</string>
+    <string name="chat_message_unencrypted">Send unencrypted</string>
     <string name="chat_message_length" translatable="false">%1$s/%2$s</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Message is %1$s character too long</item>
@@ -157,6 +158,7 @@
     <string name="chat_message_encrypted">Encrypted message</string>
     <string name="chat_message_earlier">Messages from before this account was added to Mochi are encrypted and can\'t be read here</string>
     <string name="chat_message_excluded">Encrypted for other devices only</string>
+    <string name="chat_message_changed">The sender\'s encryption key changed</string>
 
     <!-- Threads -->
     <string name="chat_thread_title">Thread</string>

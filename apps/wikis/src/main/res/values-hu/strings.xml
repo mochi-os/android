@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Frissítve %1$s</string>
     <string name="wikis_pageview_not_found_description">A „%1$s\" oldal még nem létezik.</string>
-    <string name="wikis_pageview_share_chooser">Wiki-hivatkozás</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Hivatkozás</string>
     <string name="wikis_open_sidebar">Oldalsáv megnyitása</string>
     <string name="wikis_search_placeholder">Wiki keresése</string>
     <string name="wikis_unsubscribe_confirm_message">Biztosan le szeretne iratkozni a következőről: %1$s?</string>

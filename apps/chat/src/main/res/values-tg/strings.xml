@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s чатҳоро танҳо аз дӯстон қабул мекунад.</string>
     <string name="chat_message_earlier">Паёмҳои пеш аз илова шудани ин ҳисоб ба Mochi рамзгузорӣ шудаанд ва онҳоро дар ин ҷо хондан мумкин нест</string>
     <string name="chat_message_excluded">Танҳо барои дастгоҳҳои дигар рамзгузорӣ шудааст</string>
+    <string name="chat_message_changed">Калиди рамзгузории фиристанда тағйир ёфт</string>
     <string name="chat_setup">Танзим кардан</string>
     <string name="chat_jump_bottom">Ба поён гузаштан</string>
     <plurals name="chat_jump_newer">
@@ -184,6 +185,7 @@
     <string name="chat_message_mismatched">Аз дастгоҳе фиристода шудааст, ки калидҳояш мувофиқ нестанд</string>
     <string name="chat_list_select">Як чатро интихоб кунед</string>
     <string name="chat_message_discard">Партофтан</string>
+    <string name="chat_message_unencrypted">Бе рамзгузорӣ фиристодан</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Паём %1$s аломат аз ҳад дароз аст</item>
     </plurals>

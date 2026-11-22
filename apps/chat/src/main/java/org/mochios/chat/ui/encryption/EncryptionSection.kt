@@ -123,7 +123,7 @@ internal fun EncryptionContent(
     state: EncryptionUiState,
     onRetry: () -> Unit,
     onToggle: (String) -> Unit,
-    onTrust: (String, String, String) -> Unit,
+    onTrust: (String, EncryptionDevice, String) -> Unit,
     onVerify: (String) -> Unit,
     onSetup: () -> Unit,
     onRecover: () -> Unit,
@@ -255,7 +255,7 @@ private fun PersonRow(
     own: Boolean,
     state: EncryptionUiState,
     onToggle: (String) -> Unit,
-    onTrust: (String, String, String) -> Unit,
+    onTrust: (String, EncryptionDevice, String) -> Unit,
     onVerify: (String) -> Unit,
 ) {
     val open = person in state.open
@@ -307,7 +307,8 @@ private fun PersonRow(
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
-                    else -> devices.forEach { device -> DeviceRow(device) { trust -> onTrust(person, device.id, trust) } }
+                    // The device as shown: its word goes with the fingerprint the user compared.
+                    else -> devices.forEach { device -> DeviceRow(device) { trust -> onTrust(person, device, trust) } }
                 }
             }
         }

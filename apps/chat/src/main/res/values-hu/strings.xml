@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s csak barátoktól fogad csevegést.</string>
     <string name="chat_message_earlier">A fiók Mochihoz adása előtti üzenetek titkosítottak, és itt nem olvashatók</string>
     <string name="chat_message_excluded">Csak más eszközökre titkosítva</string>
-    <string name="chat_setup">Beállítás</string>
+    <string name="chat_message_changed">A feladó titkosítási kulcsa megváltozott</string>    <string name="chat_setup">Beállítás</string>
     <string name="chat_jump_bottom">Ugrás az aljára</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Ugrás %1$s új üzenethez</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Olyan eszközről küldve, amelynek kulcsai nem egyeznek</string>
     <string name="chat_list_select">Csevegés kiválasztása</string>
     <string name="chat_message_discard">Elvetés</string>
+    <string name="chat_message_unencrypted">Küldés titkosítás nélkül</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Az üzenet %1$s karakterrel hosszabb a megengedettnél</item>
         <item quantity="other">Az üzenet %1$s karakterrel hosszabb a megengedettnél</item>

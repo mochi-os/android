@@ -16,7 +16,6 @@
     <string name="crm_create_object">สร้างวัตถุ</string>
     <string name="crm_search">ค้นหา</string>
     <string name="crm_settings">การตั้งค่า</string>
-    <string name="crm_link">ลิงก์</string>
     <string name="crm_design">ออกแบบ</string>
     <string name="crm_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
     <string name="crm_sort_rank">ด้วยตนเอง</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">ไม่พบ CRM</string>
     <string name="crm_create_blocked_no_parents">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
     <string name="crm_export_csv">ส่งออก CSV</string>
-    <string name="crm_share_link_title">แชร์ CRM</string>
     <string name="crm_export_saved">บันทึกข้อมูล CRM แล้ว</string>
     <string name="crm_create_upload_json">อัปโหลดไฟล์ .zip หรือ .json</string>
     <string name="crm_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>

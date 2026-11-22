@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s මිතුරන්ගෙන් පමණක් චැට් පිළිගනී.</string>
     <string name="chat_message_earlier">මෙම ගිණුම Mochi වෙත එක් කිරීමට පෙර පණිවිඩ සංකේතනය කර ඇති අතර ඒවා මෙහි කියවිය නොහැක</string>
     <string name="chat_message_excluded">වෙනත් උපාංග සඳහා පමණක් සංකේතනය කර ඇත</string>
+    <string name="chat_message_changed">යවන්නාගේ සංකේතන යතුර වෙනස් වී ඇත</string>
     <string name="chat_setup">සකසන්න</string>
     <string name="chat_jump_bottom">පහළටම යන්න</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">යතුරු නොගැළපෙන උපාංගයකින් යවන ලදී</string>
     <string name="chat_list_select">කතාබහක් තෝරන්න</string>
     <string name="chat_message_discard">ඉවත ලන්න</string>
+    <string name="chat_message_unencrypted">සංකේතනයකින් තොරව යවන්න</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">පණිවිඩය අකුරු %1$s කින් දිග වැඩියි</item>
         <item quantity="other">පණිවිඩය අකුරු %1$s කින් දිග වැඩියි</item>

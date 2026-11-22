@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">یک قالب انتخاب کنید</string>
     <string name="projects_create_next">بعدی</string>
     <string name="projects_filter">فیلتر</string>
-    <string name="projects_link">پیوند</string>
     <string name="projects_filter_clear_all">پاک کردن همه</string>
     <string name="projects_filter_all">همه</string>
     <string name="projects_filter_other">سایر</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">این پیوست برای همیشه حذف خواهد شد.</string>
     <string name="projects_attachment_delete_confirm_title">پیوست حذف شود؟</string>
     <string name="projects_settings_unsubscribe_section">قطع اشتراک از پروژه</string>
-    <string name="projects_share_link_title">اشتراک‌گذاری پروژه</string>
     <string name="projects_sort_filter_title">مرتب‌سازی و پالایش</string>
     <string name="projects_create_prefix_hint">برای شناسه‌های خوانا مانند %1$s-1 و %1$s-2 استفاده می‌شود</string>
     <plurals name="projects_request_conflicts">

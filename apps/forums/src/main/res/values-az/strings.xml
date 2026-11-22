@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Qiymətləndirmə promptu</string>
     <string name="forums_ai_prompt_tag_label">Etiket promptu</string>
     <string name="forums_ai_prompt_variables">Dəyişənlər: %1$s</string>
-    <string name="forums_link">Keçid</string>
     <string name="forums_moderation_ban_message">Siz məhdudiyyəti götürənə qədər foruma girişi itirəcək.</string>
     <string name="forums_moderation_ban_title">%1$s bloklansın?</string>
     <string name="forums_moderation_log_empty_subtitle">Hələ heç bir moderasiya əməliyyatı qeydə alınmayıb</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forumun adı dəyişdirildi</string>
     <string name="forums_settings_name_clear_cd">Adı təmizlə</string>
     <string name="forums_settings_unsubscribe_section">Forumdan abunəlikdən çıx</string>
-    <string name="forums_share_link_title">Forum keçidi</string>
     <string name="forums_find_found_by_url">URL ilə tapıldı</string>
     <string name="forums_moderation_pending_posts">Gözləyən paylaşımlar (%1$s)</string>
     <string name="forums_moderation_pending_comments">Gözləyən şərhlər (%1$s)</string>

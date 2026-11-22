@@ -15,6 +15,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.util.holds
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -68,6 +69,38 @@ class RoutesTest {
         open(ChatApp.newChat(AWKWARD)).let { (_, awkward) ->
             assertEquals(AWKWARD, awkward.getString("friend"))
         }
+    }
+
+    @Test
+    fun `a share reaches the choice of chat with its words, address and images unchanged`() {
+        val (route, arguments) = open(ChatApp.share(AWKWARD, "https://here.example/e?a=1&b=2", "t1"))
+        assertEquals(ChatApp.SHARE, route)
+        assertEquals(AWKWARD, arguments.getString("text"))
+        assertEquals("https://here.example/e?a=1&b=2", arguments.getString("url"))
+        assertEquals("t1", arguments.getString("images"))
+    }
+
+    @Test
+    fun `the chat chosen for a share opens with it in its message box, in place of the choice`() {
+        open(ChatApp.share("Books", "https://here.example/forums/fp1", "t1"))
+        navigation.openShared(AWKWARD, "Books\nhttps://here.example/forums/fp1", "t1")
+        val entry = navigation.currentBackStackEntry!!
+        assertEquals(ChatApp.CHAT, entry.destination.route)
+        assertEquals(AWKWARD, entry.arguments?.getString("chatId"))
+        assertEquals("Books\nhttps://here.example/forums/fp1", entry.arguments?.getString("message"))
+        assertEquals("t1", entry.arguments?.getString("images"))
+        assertFalse("Back does not return to the choice", navigation.holds(ChatApp.SHARE))
+        // A chat opened otherwise has nothing in its message box.
+        open(ChatApp.chat("c2")).let { (_, arguments) -> assertEquals("", arguments.getString("message")) }
+    }
+
+    @Test
+    fun `a new chat started from a share carries it on`() {
+        val (route, arguments) = open(ChatApp.newChat(AWKWARD, "t1"))
+        assertEquals(ChatApp.NEW_CHAT, route)
+        assertEquals(AWKWARD, arguments.getString("message"))
+        assertEquals("t1", arguments.getString("images"))
+        assertEquals("", arguments.getString("friend"))
     }
 
     @Test

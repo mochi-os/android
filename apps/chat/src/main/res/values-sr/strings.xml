@@ -177,6 +177,7 @@
     <string name="chat_refused_friends_only">%1$s прихвата четове само од пријатеља.</string>
     <string name="chat_message_earlier">Поруке из времена пре додавања овог налога у Mochi су шифроване и не могу се овде прочитати</string>
     <string name="chat_message_excluded">Шифровано само за друге уређаје</string>
+    <string name="chat_message_changed">Кључ за шифровање пошиљаоца се променио</string>
     <string name="chat_setup">Подеси</string>
     <string name="chat_jump_bottom">Иди на дно</string>
     <plurals name="chat_jump_newer">
@@ -188,6 +189,7 @@
     <string name="chat_message_mismatched">Послато са уређаја чији се кључеви не подударају</string>
     <string name="chat_list_select">Изабери чет</string>
     <string name="chat_message_discard">Одбаци</string>
+    <string name="chat_message_unencrypted">Пошаљи нешифровано</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Порука је предугачка за %1$s знак</item>
         <item quantity="few">Порука је предугачка за %1$s знака</item>

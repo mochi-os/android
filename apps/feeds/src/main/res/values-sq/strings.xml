@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">I parazgjedhur</string>
     <string name="feeds_ai_prompt_custom">Personalizuar</string>
     <string name="feeds_ai_prompt_variables">Variablat: %1$s</string>
-    <string name="feeds_link">Lidhje</string>
-    <string name="feeds_share_link_title">Lidhja e feed-it</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s koment</item>
         <item quantity="other">%1$s komente</item>

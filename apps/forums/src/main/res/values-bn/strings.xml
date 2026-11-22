@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">স্কোর প্রম্পট</string>
     <string name="forums_ai_prompt_tag_label">ট্যাগ প্রম্পট</string>
     <string name="forums_ai_prompt_variables">ভেরিয়েবল: %1$s</string>
-    <string name="forums_link">লিঙ্ক</string>
     <string name="forums_moderation_ban_message">আপনি বিধিনিষেধ না সরানো পর্যন্ত ফোরামে প্রবেশাধিকার হারাবে।</string>
     <string name="forums_moderation_ban_title">%1$s-কে নিষিদ্ধ করবেন?</string>
     <string name="forums_moderation_log_empty_subtitle">এখনও কোনো মডারেশন কার্যক্রম নথিভুক্ত হয়নি</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">ফোরামের নাম পরিবর্তন করা হয়েছে</string>
     <string name="forums_settings_name_clear_cd">নাম মুছুন</string>
     <string name="forums_settings_unsubscribe_section">ফোরামের সদস্যতা বাতিল করুন</string>
-    <string name="forums_share_link_title">ফোরাম লিঙ্ক</string>
     <string name="forums_find_found_by_url">URL দিয়ে পাওয়া গেছে</string>
     <string name="forums_moderation_pending_posts">অপেক্ষমাণ পোস্ট (%1$s)</string>
     <string name="forums_moderation_pending_comments">অপেক্ষমাণ মন্তব্য (%1$s)</string>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Shablon tanlang</string>
     <string name="projects_create_next">Keyingi</string>
     <string name="projects_filter">Filtr</string>
-    <string name="projects_link">Havola</string>
     <string name="projects_filter_clear_all">Hammasini tozalash</string>
     <string name="projects_filter_all">Hammasi</string>
     <string name="projects_filter_other">Boshqa</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Bu biriktirma butunlay o\'chiriladi.</string>
     <string name="projects_attachment_delete_confirm_title">Biriktirma o\'chirilsinmi?</string>
     <string name="projects_settings_unsubscribe_section">Loyiha obunasini bekor qilish</string>
-    <string name="projects_share_link_title">Loyihani ulashish</string>
     <string name="projects_sort_filter_title">Saralash va filtrlash</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 kabi o\'qiladigan IDlar uchun ishlatiladi</string>
     <plurals name="projects_request_conflicts">

@@ -16,7 +16,6 @@
     <string name="crm_create_object">ობიექტის შექმნა</string>
     <string name="crm_search">ძიება</string>
     <string name="crm_settings">პარამეტრები</string>
-    <string name="crm_link">ბმული</string>
     <string name="crm_design">დიზაინი</string>
     <string name="crm_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
     <string name="crm_sort_rank">ხელით</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM-ები ვერ მოიძებნა</string>
     <string name="crm_create_blocked_no_parents">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
     <string name="crm_export_csv">CSV-ის ექსპორტი</string>
-    <string name="crm_share_link_title">CRM-ის გაზიარება</string>
     <string name="crm_export_saved">CRM-ის მონაცემები შენახულია</string>
     <string name="crm_create_upload_json">ატვირთეთ .zip ან .json ფაილი</string>
     <string name="crm_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>

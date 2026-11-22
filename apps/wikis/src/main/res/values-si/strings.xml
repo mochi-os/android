@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">යාවත්කාලීන කළේ: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” පිටුව තවම නොපවතී.</string>
-    <string name="wikis_pageview_share_chooser">විකි සබැඳිය</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">සබැඳිය</string>
     <string name="wikis_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="wikis_search_placeholder">wiki සොයන්න</string>
     <string name="wikis_unsubscribe_confirm_message">ඔබට %1$s වෙතින් දායකත්වය අවලංගු කිරීමට අවශ්‍ය බව විශ්වාසද?</string>

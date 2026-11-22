@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Sjálfgefið</string>
     <string name="feeds_ai_prompt_custom">Sérsniðið</string>
     <string name="feeds_ai_prompt_variables">Breytur: %1$s</string>
-    <string name="feeds_link">Tengill</string>
-    <string name="feeds_share_link_title">Streymistengill</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s athugasemd</item>
         <item quantity="other">%1$s athugasemdir</item>

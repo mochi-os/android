@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">ලකුණු විමසීම</string>
     <string name="forums_ai_prompt_tag_label">ටැග විමසීම</string>
     <string name="forums_ai_prompt_variables">විචල්‍ය: %1$s</string>
-    <string name="forums_link">සබැඳිය</string>
     <string name="forums_moderation_ban_message">ඔබ සීමාව ඉවත් කරන තුරු සංසදයට ප්‍රවේශය අහිමි වේ.</string>
     <string name="forums_moderation_ban_title">%1$s තහනම් කරන්නද?</string>
     <string name="forums_moderation_log_empty_subtitle">තවම මධ්‍යස්ථ කිරීමේ ක්‍රියා වාර්තා වී නැත</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">සංසදය නැවත නම් කරන ලදී</string>
     <string name="forums_settings_name_clear_cd">නම හිස් කරන්න</string>
     <string name="forums_settings_unsubscribe_section">සංසදයෙන් දායකත්වය ඉවත් කරන්න</string>
-    <string name="forums_share_link_title">සංසද සබැඳිය</string>
     <string name="forums_find_found_by_url">URL මගින් සොයාගන්නා ලදී</string>
     <string name="forums_moderation_pending_posts">පොරොත්තු පළ කිරීම් (%1$s)</string>
     <string name="forums_moderation_pending_comments">පොරොත්තු අදහස් (%1$s)</string>

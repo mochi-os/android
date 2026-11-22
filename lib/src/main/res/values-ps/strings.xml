@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s لوبه بیا پیل کړه</string>
     <string name="game_not_found">لوبه ونه موندل شوه</string>
     <string name="game_chat_move_played_you">تاسو %1$s ولوباوه</string>
+    <string name="share_title">شریکه کړئ</string>
+    <string name="share_feed">په فیډ کې خپور کړئ</string>
+    <string name="share_chat">په چټ کې ولېږئ</string>
     <string name="devices_add">وسیله اضافه کړئ</string>
     <string name="devices_copy">%1$s کاپي کړئ</string>
     <string name="devices_create">جوړ کړئ</string>

@@ -16,7 +16,6 @@
     <string name="crm_create_object">创建对象</string>
     <string name="crm_search">搜索</string>
     <string name="crm_settings">设置</string>
-    <string name="crm_link">链接</string>
     <string name="crm_design">设计</string>
     <string name="crm_export_failed">无法保存导出内容</string>
     <string name="crm_sort_rank">手动</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">未找到 CRM</string>
     <string name="crm_create_blocked_no_parents">尚无可创建的条目类型。请先创建所需的父级条目。</string>
     <string name="crm_export_csv">导出 CSV</string>
-    <string name="crm_share_link_title">分享 CRM</string>
     <string name="crm_export_saved">CRM 数据已保存</string>
     <string name="crm_create_upload_json">上传 .zip 或 .json 文件</string>
     <string name="crm_create_blocked_no_options">无法创建：%1$s 为必填项，但没有可选选项。请在设计中添加选项。</string>

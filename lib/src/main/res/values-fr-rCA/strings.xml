@@ -294,4 +294,5 @@
     <string name="field_type_date">Date</string>
     <string name="field_type_checkbox">Case à cocher</string>
     <string name="field_type_checklist">Liste de vérification</string>
+    <string name="share_chat">Envoyer dans un clavardage</string>
 </resources>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Atnaujinta %1$s</string>
     <string name="wikis_pageview_not_found_description">Puslapis „%1$s\" dar neegzistuoja.</string>
-    <string name="wikis_pageview_share_chooser">Wiki nuoroda</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Nuoroda</string>
     <string name="wikis_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="wikis_search_placeholder">Ieškoti wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Ar tikrai norite atsisakyti prenumeratos %1$s?</string>

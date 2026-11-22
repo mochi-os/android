@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Oñembohekopyahu %1$s</string>
     <string name="wikis_pageview_not_found_description">Kuatiarogue “%1$s” ndaipóri gueteri.</string>
-    <string name="wikis_pageview_share_chooser">Wiki juajuha</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Juajuha</string>
     <string name="wikis_open_sidebar">Eipe\'a yke panel</string>
     <string name="wikis_search_placeholder">Eheka peteĩ wiki</string>
     <string name="wikis_unsubscribe_confirm_message">¿Añetehápe reipota resẽ %1$s-gui?</string>

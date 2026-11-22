@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">टेम्पलेट चुनें</string>
     <string name="projects_create_next">अगला</string>
     <string name="projects_filter">फ़िल्टर</string>
-    <string name="projects_link">लिंक</string>
     <string name="projects_filter_clear_all">सब साफ़ करें</string>
     <string name="projects_filter_all">सभी</string>
     <string name="projects_filter_other">अन्य</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">यह अनुलग्नक स्थायी रूप से हटा दिया जाएगा।</string>
     <string name="projects_attachment_delete_confirm_title">अनुलग्नक हटाएँ?</string>
     <string name="projects_settings_unsubscribe_section">परियोजना की सदस्यता छोड़ें</string>
-    <string name="projects_share_link_title">परियोजना साझा करें</string>
     <string name="projects_sort_filter_title">क्रमबद्ध करें और फ़िल्टर करें</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 जैसी पठनीय आईडी के लिए उपयोग होता है</string>
     <plurals name="projects_request_conflicts">

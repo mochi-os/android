@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Haaromfame %1$s</string>
     <string name="wikis_pageview_not_found_description">Fuulli “%1$s” amma hin jiru.</string>
-    <string name="wikis_pageview_share_chooser">Hidhaa wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Geessituu</string>
     <string name="wikis_open_sidebar">Saaree banuu</string>
     <string name="wikis_search_placeholder">Wiki barbaadi</string>
     <string name="wikis_unsubscribe_confirm_message">Dhugumaan %1$s irraa galmee haquu barbaadduu?</string>

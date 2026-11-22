@@ -357,6 +357,9 @@
     <string name="game_system_score_resume">Thòisich %1$s a\' cluich a-rithist</string>
     <string name="game_not_found">Cha deach an geama a lorg</string>
     <string name="game_chat_move_played_you">Chluich thu %1$s</string>
+    <string name="share_title">Co-roinn</string>
+    <string name="share_feed">Postaich gu inbhir</string>
+    <string name="share_chat">Cuir ann an cabadaich</string>
     <string name="devices_add">Cuir inneal ris</string>
     <string name="devices_copy">Dèan lethbhreac de %1$s</string>
     <string name="devices_create">Cruthaich</string>

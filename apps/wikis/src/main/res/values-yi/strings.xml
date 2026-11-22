@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">באַנײַט %1$s</string>
     <string name="wikis_pageview_not_found_description">דער בלאַט „%1$s“ עקזיסטירט נאָך נישט.</string>
-    <string name="wikis_pageview_share_chooser">וויקי לינק</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">לינק</string>
     <string name="wikis_open_sidebar">עפֿן זייַטל</string>
     <string name="wikis_search_placeholder">זוכט אַ wiki</string>
     <string name="wikis_unsubscribe_confirm_message">זענט איר זיכער אַז איר ווילט אָפּזאָגן דעם אַבאָנעמענט פֿון %1$s?</string>

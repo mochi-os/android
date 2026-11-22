@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">အမှတ်ပေး ပရွန့်</string>
     <string name="forums_ai_prompt_tag_label">တက်ဂ် ညွှန်ကြားချက်</string>
     <string name="forums_ai_prompt_variables">ကိန်းရှင်များ: %1$s</string>
-    <string name="forums_link">လင့်ခ်</string>
     <string name="forums_moderation_ban_message">သင် ကန့်သတ်ချက်ကို မဖယ်ရှားမချင်း ဖိုရမ်သို့ ဝင်ရောက်ခွင့် ဆုံးရှုံးမည်။</string>
     <string name="forums_moderation_ban_title">%1$s ကို ပိတ်ပင်မလား။</string>
     <string name="forums_moderation_log_empty_subtitle">စိစစ်မှု လုပ်ဆောင်ချက်များ မှတ်တမ်းမတင်ရသေးပါ</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">ဖိုရမ် အမည်ပြောင်းပြီးပါပြီ</string>
     <string name="forums_settings_name_clear_cd">အမည်ကို ရှင်းလင်းပါ</string>
     <string name="forums_settings_unsubscribe_section">ဖိုရမ်မှ စာရင်းသွင်းမှု ရပ်ဆိုင်းပါ</string>
-    <string name="forums_share_link_title">ဖိုရမ်လင့်ခ်</string>
     <string name="forums_find_found_by_url">URL ဖြင့် တွေ့ရှိသည်</string>
     <string name="forums_moderation_pending_posts">စောင့်ဆိုင်းနေသော ပို့စ်များ (%1$s)</string>
     <string name="forums_moderation_pending_comments">စောင့်ဆိုင်းနေသော မှတ်ချက်များ (%1$s)</string>

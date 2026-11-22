@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Khetha isifanekiso</string>
     <string name="projects_create_next">Okulandelayo</string>
     <string name="projects_filter">Hlunga</string>
-    <string name="projects_link">Isixhumanisi</string>
     <string name="projects_filter_clear_all">Sula konke</string>
     <string name="projects_filter_all">Konke</string>
     <string name="projects_filter_other">Okunye</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Lesi sinamathiselo sizosuswa unomphela.</string>
     <string name="projects_attachment_delete_confirm_title">Susa isinamathiselo?</string>
     <string name="projects_settings_unsubscribe_section">Yeka ukubhalisela iphrojekthi</string>
-    <string name="projects_share_link_title">Yabelana ngephrojekthi</string>
     <string name="projects_sort_filter_title">Hlunga futhi uhlele</string>
     <string name="projects_create_prefix_hint">Isetshenziselwa ama-ID afundekayo njenge-%1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

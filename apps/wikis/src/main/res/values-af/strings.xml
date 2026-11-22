@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Opgedateer %1$s</string>
     <string name="wikis_pageview_not_found_description">Die bladsy “%1$s” bestaan nog nie.</string>
-    <string name="wikis_pageview_share_chooser">Wiki-skakel</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Skakel</string>
     <string name="wikis_open_sidebar">Open sybalk</string>
     <string name="wikis_search_placeholder">Soek ’n wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Is jy seker jy wil van %1$s uitteken?</string>

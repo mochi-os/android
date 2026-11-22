@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">پیش‌فرض</string>
     <string name="feeds_ai_prompt_custom">سفارشی</string>
     <string name="feeds_ai_prompt_variables">متغیرها: %1$s</string>
-    <string name="feeds_link">پیوند</string>
-    <string name="feeds_share_link_title">پیوند خوراک</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s نظر</item>
         <item quantity="other">%1$s نظر</item>

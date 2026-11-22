@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Dianyari %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” durung ana.</string>
-    <string name="wikis_pageview_share_chooser">Tautan wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Tautan</string>
     <string name="wikis_open_sidebar">Mbukak sidebar</string>
     <string name="wikis_search_placeholder">Golek wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Sampeyan yakin arep mandheg langganan %1$s?</string>

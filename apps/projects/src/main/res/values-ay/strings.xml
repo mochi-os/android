@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Mä plantilla ajllim</string>
     <string name="projects_create_next">Arkiri</string>
     <string name="projects_filter">Filtro</string>
-    <string name="projects_link">Enlace</string>
     <string name="projects_filter_clear_all">Taqpach q\'umachaña</string>
     <string name="projects_filter_all">Taqpach</string>
     <string name="projects_filter_other">Yaqha</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Aka adjuntox wiñayatak chhaqtayatäniwa.</string>
     <string name="projects_attachment_delete_confirm_title">¿Adjunto chhaqtayañati?</string>
     <string name="projects_settings_unsubscribe_section">Proyectot suscripción apaqaña</string>
-    <string name="projects_share_link_title">Proyecto compartiña</string>
     <string name="projects_sort_filter_title">Siqichaña &amp; filtro</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ukham ullañjam ID-nakatakiw apnaqasi</string>
     <plurals name="projects_request_conflicts">

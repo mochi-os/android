@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Standar</string>
     <string name="feeds_ai_prompt_custom">Kustom</string>
     <string name="feeds_ai_prompt_variables">Variabel: %1$s</string>
-    <string name="feeds_link">Tumbu</string>
-    <string name="feeds_share_link_title">Tumbu feed</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s koméntar</item>
         <item quantity="other">%1$s koméntar</item>

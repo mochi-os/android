@@ -16,7 +16,6 @@
     <string name="crm_create_object">Objeto kamariy</string>
     <string name="crm_search">Maskay</string>
     <string name="crm_settings">Wakichiykuna</string>
-    <string name="crm_link">T\'inki</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Exportasqata mana waqaychayta atikurqanchu</string>
     <string name="crm_sort_rank">Makiwan</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Mana CRM-kuna tarisqachu</string>
     <string name="crm_create_blocked_no_parents">Manaraq ima item layatapas kamariyta atikunchu. Ñawpaqta necesitasqa tayta itemkunata kamariy.</string>
     <string name="crm_export_csv">CSV exportay</string>
-    <string name="crm_share_link_title">CRM rakiy</string>
     <string name="crm_export_saved">CRM datokuna waqaychasqa</string>
     <string name="crm_create_upload_json">.zip utaq .json archivota wichachiy</string>
     <string name="crm_create_blocked_no_options">Manam kamariyta atinchu: %1$s necesitakun ichaqa manam akllanan kanchu. Diseño nisqapi akllanakunata yapay.</string>

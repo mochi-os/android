@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s приема чатове само от приятели.</string>
     <string name="chat_message_earlier">Съобщенията отпреди добавянето на този профил в Mochi са шифровани и не могат да бъдат прочетени тук</string>
     <string name="chat_message_excluded">Шифровано само за други устройства</string>
-    <string name="chat_setup">Настройка</string>
+    <string name="chat_message_changed">Ключът за шифроване на подателя е променен</string>    <string name="chat_setup">Настройка</string>
     <string name="chat_jump_bottom">Към края</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Към %1$s ново съобщение</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Изпратено от устройство, чиито ключове не съвпадат</string>
     <string name="chat_list_select">Изберете чат</string>
     <string name="chat_message_discard">Отхвърли</string>
+    <string name="chat_message_unencrypted">Изпрати некриптирано</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Съобщението е с %1$s знак по-дълго от позволеното</item>
         <item quantity="other">Съобщението е с %1$s знака по-дълго от позволеното</item>

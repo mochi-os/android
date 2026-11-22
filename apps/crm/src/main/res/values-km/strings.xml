@@ -16,7 +16,6 @@
     <string name="crm_create_object">បង្កើតវត្ថុ</string>
     <string name="crm_search">ស្វែងរក</string>
     <string name="crm_settings">ការកំណត់</string>
-    <string name="crm_link">តំណ</string>
     <string name="crm_design">រចនា</string>
     <string name="crm_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
     <string name="crm_sort_rank">ដោយដៃ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">រកមិនឃើញ CRM</string>
     <string name="crm_create_blocked_no_parents">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
     <string name="crm_export_csv">នាំចេញ CSV</string>
-    <string name="crm_share_link_title">ចែករំលែក CRM</string>
     <string name="crm_export_saved">បានរក្សាទុកទិន្នន័យ CRM</string>
     <string name="crm_create_upload_json">បញ្ចូលឯកសារ .zip ឬ .json</string>
     <string name="crm_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>

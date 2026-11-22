@@ -181,7 +181,7 @@
     <string name="chat_refused_friends_only">Ní ghlacann %1$s le comhráite ach ó chairde.</string>
     <string name="chat_message_earlier">Tá teachtaireachtaí ó roimh an gcuntas seo a chur le Mochi criptithe agus ní féidir iad a léamh anseo</string>
     <string name="chat_message_excluded">Criptithe do ghléasanna eile amháin</string>
-    <string name="chat_setup">Socraigh</string>
+    <string name="chat_message_changed">Tá eochair chriptithe an tseoltóra athraithe</string>    <string name="chat_setup">Socraigh</string>
     <string name="chat_jump_bottom">Léim go bun</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Léim go %1$s teachtaireacht nua</item>
@@ -194,6 +194,7 @@
     <string name="chat_message_mismatched">Seolta ó ghléas nach dtagann a eochracha le chéile</string>
     <string name="chat_list_select">Roghnaigh comhrá</string>
     <string name="chat_message_discard">Cuir i leataobh</string>
+    <string name="chat_message_unencrypted">Seol gan chriptiú</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Tá an teachtaireacht %1$s carachtar rófhada</item>
         <item quantity="two">Tá an teachtaireacht %1$s carachtar rófhada</item>

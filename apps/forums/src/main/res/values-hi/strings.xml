@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">स्कोर प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_tag_label">टैग प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_variables">वेरिएबल: %1$s</string>
-    <string name="forums_link">लिंक</string>
     <string name="forums_moderation_ban_message">जब तक आप प्रतिबंध नहीं हटाते, फ़ोरम तक पहुँच खो देंगे।</string>
     <string name="forums_moderation_ban_title">%1$s को प्रतिबंधित करें?</string>
     <string name="forums_moderation_log_empty_subtitle">अभी तक कोई मॉडरेशन कार्रवाई दर्ज नहीं हुई</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">फ़ोरम का नाम बदला गया</string>
     <string name="forums_settings_name_clear_cd">नाम साफ़ करें</string>
     <string name="forums_settings_unsubscribe_section">फ़ोरम की सदस्यता छोड़ें</string>
-    <string name="forums_share_link_title">फ़ोरम लिंक</string>
     <string name="forums_find_found_by_url">URL से मिला</string>
     <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$s)</string>
     <string name="forums_moderation_pending_comments">लंबित टिप्पणियाँ (%1$s)</string>

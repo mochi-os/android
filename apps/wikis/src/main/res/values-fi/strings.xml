@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Päivitetty %1$s</string>
     <string name="wikis_pageview_not_found_description">Sivua \"%1$s\" ei vielä ole olemassa.</string>
-    <string name="wikis_pageview_share_chooser">Wikin linkki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wikin RSS-URL</string>
-    <string name="wikis_page_action_share">Linkki</string>
     <string name="wikis_open_sidebar">Avaa sivupalkki</string>
     <string name="wikis_search_placeholder">Etsi wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Haluatko varmasti peruuttaa tilauksen %1$s?</string>

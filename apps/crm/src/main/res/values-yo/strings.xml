@@ -16,7 +16,6 @@
     <string name="crm_create_object">Dá ohun</string>
     <string name="crm_search">Wá</string>
     <string name="crm_settings">Àwọn ìṣètò</string>
-    <string name="crm_link">Ọ̀nà àsopọ̀</string>
     <string name="crm_design">Àpẹẹrẹ</string>
     <string name="crm_export_failed">A kò lè fi ìkójáde pamọ́</string>
     <string name="crm_sort_rank">Pẹ̀lú ọwọ́</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">A kò rí CRM kankan</string>
     <string name="crm_create_blocked_no_parents">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
     <string name="crm_export_csv">Mú CSV jáde</string>
-    <string name="crm_share_link_title">Pín CRM</string>
     <string name="crm_export_saved">A ti fi dátà CRM pamọ́</string>
     <string name="crm_create_upload_json">Gbé fáìlì .zip tàbí .json sókè</string>
     <string name="crm_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>

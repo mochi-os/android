@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">පෙරනිමි</string>
     <string name="feeds_ai_prompt_custom">අභිරුචි</string>
     <string name="feeds_ai_prompt_variables">විචල්‍ය: %1$s</string>
-    <string name="feeds_link">සබැඳිය</string>
-    <string name="feeds_share_link_title">පෝෂක සබැඳිය</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">අදහස් %1$sක්</item>
         <item quantity="other">අදහස් %1$sක්</item>

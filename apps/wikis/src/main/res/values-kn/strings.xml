@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">ನವೀಕರಿಸಲಾಗಿದೆ %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” ಪುಟ ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ.</string>
-    <string name="wikis_pageview_share_chooser">ವಿಕಿ ಲಿಂಕ್</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">ಲಿಂಕ್</string>
     <string name="wikis_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
     <string name="wikis_search_placeholder">wiki ಹುಡುಕಿ</string>
     <string name="wikis_unsubscribe_confirm_message">ನೀವು %1$s ನಿಂದ ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಲು ಖಚಿತವೇ?</string>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Eiporavo peteĩ plantilla</string>
     <string name="projects_create_next">Tenondeve</string>
     <string name="projects_filter">Mbogua</string>
-    <string name="projects_link">Juajuha</string>
     <string name="projects_filter_clear_all">Embopotĩ opaite</string>
     <string name="projects_filter_all">Opaite</string>
     <string name="projects_filter_other">Ambue</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Ko adjunto oñembogue tapiaitéta.</string>
     <string name="projects_attachment_delete_confirm_title">¿Emboguéta adjunto?</string>
     <string name="projects_settings_unsubscribe_section">Edesuscribi proyecto-gui</string>
-    <string name="projects_share_link_title">Emboja\'o proyecto</string>
     <string name="projects_sort_filter_title">Emoĩporã ha mbogua</string>
     <string name="projects_create_prefix_hint">Ojepuru ID ojelee porãva %1$s-1, %1$s-2 peguarã</string>
     <plurals name="projects_request_conflicts">

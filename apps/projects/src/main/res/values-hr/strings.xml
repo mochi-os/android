@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Odaberite predložak</string>
     <string name="projects_create_next">Sljedeće</string>
     <string name="projects_filter">Filtar</string>
-    <string name="projects_link">Poveznica</string>
     <string name="projects_filter_clear_all">Očisti sve</string>
     <string name="projects_filter_all">Sve</string>
     <string name="projects_filter_other">Ostalo</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Ovaj će privitak biti trajno izbrisan.</string>
     <string name="projects_attachment_delete_confirm_title">Izbrisati privitak?</string>
     <string name="projects_settings_unsubscribe_section">Otkaži pretplatu na projekt</string>
-    <string name="projects_share_link_title">Podijeli projekt</string>
     <string name="projects_sort_filter_title">Sortiranje i filtar</string>
     <string name="projects_create_prefix_hint">Koristi se za čitljive ID-ove poput %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s taphicha itti fufe</string>
     <string name="game_not_found">Taphni hin argamne</string>
     <string name="game_chat_move_played_you">Ati %1$s taphatte</string>
+    <string name="share_title">Qoodi</string>
+    <string name="share_feed">Feed tokkotti maxxansi</string>
+    <string name="share_chat">Haasawa keessatti ergi</string>
     <string name="devices_add">Meeshaa dabali</string>
     <string name="devices_copy">%1$s garagalchi</string>
     <string name="devices_create">Uumi</string>

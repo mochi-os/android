@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">સ્કોર પ્રોમ્પ્ટ</string>
     <string name="forums_ai_prompt_tag_label">ટૅગ પ્રોમ્પ્ટ</string>
     <string name="forums_ai_prompt_variables">ચલો: %1$s</string>
-    <string name="forums_link">લિંક</string>
     <string name="forums_moderation_ban_message">તમે પ્રતિબંધ દૂર ન કરો ત્યાં સુધી ફોરમમાં પ્રવેશ ગુમાવશે.</string>
     <string name="forums_moderation_ban_title">%1$s પર પ્રતિબંધ મૂકવો?</string>
     <string name="forums_moderation_log_empty_subtitle">હજી સુધી કોઈ સંચાલન ક્રિયા નોંધાઈ નથી</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">ફોરમનું નામ બદલ્યું</string>
     <string name="forums_settings_name_clear_cd">નામ સાફ કરો</string>
     <string name="forums_settings_unsubscribe_section">ફોરમમાંથી અનસબસ્ક્રાઇબ કરો</string>
-    <string name="forums_share_link_title">ફોરમ લિંક</string>
     <string name="forums_find_found_by_url">URL દ્વારા મળ્યું</string>
     <string name="forums_moderation_pending_posts">બાકી પોસ્ટ્સ (%1$s)</string>
     <string name="forums_moderation_pending_comments">બાકી ટિપ્પણીઓ (%1$s)</string>

@@ -33,6 +33,9 @@ internal fun Listing.shownStatus(): ListingStatus? = when {
     else -> status
 }
 
+/** Whether the seller may share the listing: live for sale, so anyone may see it. */
+internal fun Listing.shareable(): Boolean = shownStatus() == ListingStatus.ACTIVE
+
 /** The status's translated name, as the listings' status filter shows it. */
 @StringRes
 internal fun ListingStatus.labelRes(): Int = when (this) {

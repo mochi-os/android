@@ -16,7 +16,6 @@
     <string name="crm_create_object">Sukurti objektą</string>
     <string name="crm_search">Ieškoti</string>
     <string name="crm_settings">Nustatymai</string>
-    <string name="crm_link">Nuoroda</string>
     <string name="crm_design">Dizainas</string>
     <string name="crm_export_failed">Nepavyko išsaugoti eksporto</string>
     <string name="crm_sort_rank">Rankinis</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM nerasta</string>
     <string name="crm_create_blocked_no_parents">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
     <string name="crm_export_csv">Eksportuoti CSV</string>
-    <string name="crm_share_link_title">Bendrinti CRM</string>
     <string name="crm_export_saved">CRM duomenys išsaugoti</string>
     <string name="crm_create_upload_json">Įkelkite .zip arba .json failą</string>
     <string name="crm_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>

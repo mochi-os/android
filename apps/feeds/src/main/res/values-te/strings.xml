@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">డిఫాల్ట్</string>
     <string name="feeds_ai_prompt_custom">అనుకూల</string>
     <string name="feeds_ai_prompt_variables">వేరియబుల్స్: %1$s</string>
-    <string name="feeds_link">లింక్</string>
-    <string name="feeds_share_link_title">ఫీడ్ లింక్</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s వ్యాఖ్య</item>
         <item quantity="other">%1$s వ్యాఖ్యలు</item>

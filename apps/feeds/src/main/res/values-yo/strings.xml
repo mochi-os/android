@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Àìyípadà</string>
     <string name="feeds_ai_prompt_custom">Àdáni</string>
     <string name="feeds_ai_prompt_variables">Àwọn ìyípadà: %1$s</string>
-    <string name="feeds_link">Ọ̀nà àsopọ̀</string>
-    <string name="feeds_share_link_title">Ọ̀nà àsopọ̀ fíìdì</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">àsọyé %1$s</item>
         <item quantity="other">àsọyé %1$s</item>

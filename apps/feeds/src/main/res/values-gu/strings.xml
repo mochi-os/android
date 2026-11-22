@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">ડિફૉલ્ટ</string>
     <string name="feeds_ai_prompt_custom">કસ્ટમ</string>
     <string name="feeds_ai_prompt_variables">ચલો: %1$s</string>
-    <string name="feeds_link">લિંક</string>
-    <string name="feeds_share_link_title">ફીડ લિંક</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s ટિપ્પણી</item>
         <item quantity="other">%1$s ટિપ્પણીઓ</item>

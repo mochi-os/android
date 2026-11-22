@@ -56,6 +56,16 @@ class LinkRouteTest {
     }
 
     @Test
+    fun `a share link opens a new post with what another app shares`() {
+        val query = mapOf("text" to "Tea & cake", "url" to "https://here.example/e?a=1&b=2", "images" to "t1")
+        assertEquals(
+            FeedsApp.share("Tea & cake", "https://here.example/e?a=1&b=2", "t1"),
+            FeedsApp.linkRoute("share", null, null) { key -> query[key] },
+        )
+        assertEquals("feeds/createPost?text=Hello", FeedsApp.linkRoute("share", null, null) { key -> mapOf("text" to "Hello")[key] })
+    }
+
+    @Test
     fun `the bare app link names no screen`() {
         assertNull(FeedsApp.linkRoute(null, null, null))
         assertNull(FeedsApp.linkRoute("", null, null))
@@ -101,6 +111,17 @@ class LinkRouteTest {
             assertEquals(FeedsApp.FIND_FEEDS, route)
             assertEquals(AWKWARD, arguments.getString("link"))
         }
+    }
+
+    @Test
+    fun `a share reaches the new post screen with its words, address and images unchanged, and no feed chosen`() {
+        val (route, arguments) = open(FeedsApp.share(AWKWARD, ARTICLE, "t1"))
+        assertEquals(FeedsApp.CREATE_POST, route)
+        assertEquals(AWKWARD, arguments.getString("text"))
+        assertEquals(ARTICLE, arguments.getString("url"))
+        assertEquals("t1", arguments.getString("images"))
+        assertNull(arguments.getString("feedId"))
+        assertNull(arguments.getString("postId"))
     }
 
     @Test

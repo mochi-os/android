@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s återupptog spelet</string>
     <string name="game_not_found">Spelet hittades inte</string>
     <string name="game_chat_move_played_you">Du spelade %1$s</string>
+    <string name="share_title">Dela</string>
+    <string name="share_feed">Publicera i ett flöde</string>
+    <string name="share_chat">Skicka i en chatt</string>
     <string name="devices_add">Lägg till en enhet</string>
     <string name="devices_copy">Kopiera %1$s</string>
     <string name="devices_create">Skapa</string>

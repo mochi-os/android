@@ -354,6 +354,9 @@
     <string name="game_system_score_resume">%1$s oʻyinni davom ettirdi</string>
     <string name="game_not_found">Oʻyin topilmadi</string>
     <string name="game_chat_move_played_you">Siz %1$s oʻynadingiz</string>
+    <string name="share_title">Ulashish</string>
+    <string name="share_feed">Tasmaga joylash</string>
+    <string name="share_chat">Suhbatda yuborish</string>
     <string name="devices_add">Qurilma qoʻshish</string>
     <string name="devices_copy">%1$s nusxalash</string>
     <string name="devices_create">Yaratish</string>

@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s pranon biseda vetëm nga miqtë.</string>
     <string name="chat_message_earlier">Mesazhet nga para se kjo llogari të shtohej në Mochi janë të enkriptuara dhe nuk mund të lexohen këtu</string>
     <string name="chat_message_excluded">I enkriptuar vetëm për pajisje të tjera</string>
+    <string name="chat_message_changed">Çelësi i enkriptimit të dërguesit ka ndryshuar</string>
     <string name="chat_setup">Konfiguro</string>
     <string name="chat_jump_bottom">Shko në fund</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Dërguar nga një pajisje çelësat e së cilës nuk përputhen</string>
     <string name="chat_list_select">Zgjidh një bisedë</string>
     <string name="chat_message_discard">Hidh</string>
+    <string name="chat_message_unencrypted">Dërgo pa enkriptim</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Mesazhi është %1$s karakter më i gjatë</item>
         <item quantity="other">Mesazhi është %1$s karaktere më i gjatë</item>

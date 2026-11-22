@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">डीफॉल्ट</string>
     <string name="feeds_ai_prompt_custom">सानुकूल</string>
     <string name="feeds_ai_prompt_variables">चल: %1$s</string>
-    <string name="feeds_link">दुवा</string>
-    <string name="feeds_share_link_title">फीड दुवा</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s टिप्पणी</item>
         <item quantity="other">%1$s टिप्पण्या</item>

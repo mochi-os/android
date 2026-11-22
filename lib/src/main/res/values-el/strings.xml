@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">Ο/Η %1$s συνέχισε το παιχνίδι</string>
     <string name="game_not_found">Το παιχνίδι δεν βρέθηκε</string>
     <string name="game_chat_move_played_you">Παίξατε %1$s</string>
+    <string name="share_title">Κοινοποίηση</string>
+    <string name="share_feed">Ανάρτηση σε ροή</string>
+    <string name="share_chat">Αποστολή σε συνομιλία</string>
     <string name="devices_add">Προσθήκη συσκευής</string>
     <string name="devices_copy">Αντιγραφή %1$s</string>
     <string name="devices_create">Δημιουργία</string>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">s%1$s</string>
     <string name="wikis_pageview_updated">Güncellendi %1$s</string>
     <string name="wikis_pageview_not_found_description">\"%1$s\" sayfası henüz mevcut değil.</string>
-    <string name="wikis_pageview_share_chooser">Wiki bağlantısı</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL\'si</string>
-    <string name="wikis_page_action_share">Bağlantı</string>
     <string name="wikis_open_sidebar">Kenar çubuğunu aç</string>
     <string name="wikis_search_placeholder">Bir wiki ara</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s aboneliğinden çıkmak istediğinize emin misiniz?</string>

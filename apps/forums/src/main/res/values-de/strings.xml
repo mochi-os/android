@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Bewertungs-Prompt</string>
     <string name="forums_ai_prompt_tag_label">Tag-Prompt</string>
     <string name="forums_ai_prompt_variables">Variablen: %1$s</string>
-    <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Die Person verliert den Zugang zum Forum, bis du die Beschränkung aufhebst.</string>
     <string name="forums_moderation_ban_title">%1$s sperren?</string>
     <string name="forums_moderation_log_empty_subtitle">Es wurden noch keine Moderationsaktionen aufgezeichnet</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forum umbenannt</string>
     <string name="forums_settings_name_clear_cd">Namen löschen</string>
     <string name="forums_settings_unsubscribe_section">Forum abbestellen</string>
-    <string name="forums_share_link_title">Forum-Link</string>
     <string name="forums_find_found_by_url">Über URL gefunden</string>
     <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$s)</string>
     <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$s)</string>

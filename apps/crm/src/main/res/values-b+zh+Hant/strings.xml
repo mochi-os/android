@@ -16,7 +16,6 @@
     <string name="crm_create_object">建立物件</string>
     <string name="crm_search">搜尋</string>
     <string name="crm_settings">設定</string>
-    <string name="crm_link">連結</string>
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
     <string name="crm_sort_rank">手動</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">找不到 CRM</string>
     <string name="crm_create_blocked_no_parents">尚無法建立任何項目類型。請先建立所需的父項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
-    <string name="crm_share_link_title">分享 CRM</string>
     <string name="crm_export_saved">CRM 資料已儲存</string>
     <string name="crm_create_upload_json">上傳 .zip 或 .json 檔案</string>
     <string name="crm_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>

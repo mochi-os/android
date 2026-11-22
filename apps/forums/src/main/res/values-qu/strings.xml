@@ -212,7 +212,6 @@
     <string name="forums_ai_prompt_tag_label">Unancha prompt</string>
     <string name="forums_ai_prompt_variables">Variablekuna: %1$s</string>
     <string name="forums_find_found_by_url">URL-wan tarisqa</string>
-    <string name="forums_link">T\'inki</string>
     <string name="forums_moderation_ban_message">Hark\'ayta mana qichunaykikama, foroman mana yaykuyta atinqakuchu.</string>
     <string name="forums_moderation_ban_title">¿%1$s-ta hark\'ay?</string>
     <string name="forums_moderation_log_empty_subtitle">Manaraq moderación ruwaykuna registrasqachu</string>
@@ -241,7 +240,6 @@
     <string name="forums_settings_forum_renamed">Foropa sutin hukchasqa</string>
     <string name="forums_settings_name_clear_cd">Sutita pichay</string>
     <string name="forums_settings_unsubscribe_section">Foromanta suscripcionta qichuy</string>
-    <string name="forums_share_link_title">Foro t\'inki</string>
     <string name="forums_moderation_pending_posts">Suyakuq qillqakuna (%1$s)</string>
     <string name="forums_moderation_pending_comments">Suyakuq comentariokuna (%1$s)</string>
     <string name="forums_moderation_on_image">Imagenpi: %1$s</string>

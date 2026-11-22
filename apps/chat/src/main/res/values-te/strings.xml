@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s స్నేహితుల నుండి మాత్రమే చాట్‌లను అంగీకరిస్తారు.</string>
     <string name="chat_message_earlier">ఈ ఖాతాను Mochiలో జోడించడానికి ముందు వచ్చిన సందేశాలు ఎన్‌క్రిప్ట్ చేయబడ్డాయి, వాటిని ఇక్కడ చదవలేరు</string>
     <string name="chat_message_excluded">ఇతర పరికరాల కోసం మాత్రమే ఎన్‌క్రిప్ట్ చేయబడింది</string>
+    <string name="chat_message_changed">పంపినవారి ఎన్‌క్రిప్షన్ కీ మారింది</string>
     <string name="chat_setup">సెటప్ చేయండి</string>
     <string name="chat_jump_bottom">కిందికి వెళ్లండి</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">కీలు సరిపోలని పరికరం నుండి పంపబడింది</string>
     <string name="chat_list_select">ఒక చాట్‌ను ఎంచుకోండి</string>
     <string name="chat_message_discard">విస్మరించు</string>
+    <string name="chat_message_unencrypted">ఎన్‌క్రిప్షన్ లేకుండా పంపండి</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">సందేశం %1$s అక్షరం ఎక్కువగా ఉంది</item>
         <item quantity="other">సందేశం %1$s అక్షరాలు ఎక్కువగా ఉంది</item>

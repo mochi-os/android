@@ -16,7 +16,6 @@
     <string name="crm_create_object">အရာဝတ္ထု ဖန်တီးမည်</string>
     <string name="crm_search">ရှာဖွေ</string>
     <string name="crm_settings">ဆက်တင်များ</string>
-    <string name="crm_link">လင့်ခ်</string>
     <string name="crm_design">ဒီဇိုင်း</string>
     <string name="crm_export_failed">တင်ပို့မှုကို သိမ်းဆည်း၍မရပါ</string>
     <string name="crm_sort_rank">ကိုယ်တိုင်</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM များ မတွေ့ပါ</string>
     <string name="crm_create_blocked_no_parents">အရာ အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော မိဘ အရာ များကို ဦးစွာဖန်တီးပါ။</string>
     <string name="crm_export_csv">CSV ထုတ်ယူ</string>
-    <string name="crm_share_link_title">CRM မျှဝေရန်</string>
     <string name="crm_export_saved">CRM ဒေတာ သိမ်းဆည်းပြီး</string>
     <string name="crm_create_upload_json">.zip သို့မဟုတ် .json ဖိုင် အပ်လုဒ်လုပ်ပါ</string>
     <string name="crm_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>

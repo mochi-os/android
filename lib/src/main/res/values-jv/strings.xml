@@ -352,6 +352,9 @@
     <string name="game_system_score_resume">%1$s nerusake dolanan</string>
     <string name="game_not_found">Game ora ditemokaké</string>
     <string name="game_chat_move_played_you">Sampéyan main %1$s</string>
+    <string name="share_title">Bagekake</string>
+    <string name="share_feed">Kirim menyang feed</string>
+    <string name="share_chat">Kirim ing chat</string>
     <string name="devices_add">Tambah piranti</string>
     <string name="devices_copy">Salin %1$s</string>
     <string name="devices_create">Gawé</string>

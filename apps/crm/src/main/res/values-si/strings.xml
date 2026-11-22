@@ -16,7 +16,6 @@
     <string name="crm_create_object">වස්තුවක් නිර්මාණය කරන්න</string>
     <string name="crm_search">සොයන්න</string>
     <string name="crm_settings">සැකසුම්</string>
-    <string name="crm_link">සබැඳිය</string>
     <string name="crm_design">සැලසුම</string>
     <string name="crm_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
     <string name="crm_sort_rank">අතින්</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM කිසිවක් හමු නොවීය</string>
     <string name="crm_create_blocked_no_parents">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
     <string name="crm_export_csv">CSV අපනයනය කරන්න</string>
-    <string name="crm_share_link_title">CRM බෙදාගන්න</string>
     <string name="crm_export_saved">CRM දත්ත සුරකින ලදී</string>
     <string name="crm_create_upload_json">.zip හෝ .json ගොනුවක් උඩුගත කරන්න</string>
     <string name="crm_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>

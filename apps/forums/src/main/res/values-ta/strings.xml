@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">மதிப்பெண் வினவல்</string>
     <string name="forums_ai_prompt_tag_label">குறிச்சொல் வினவல்</string>
     <string name="forums_ai_prompt_variables">மாறிகள்: %1$s</string>
-    <string name="forums_link">இணைப்பு</string>
     <string name="forums_moderation_ban_message">நீங்கள் கட்டுப்பாட்டை நீக்கும் வரை மன்றத்திற்கான அணுகலை இழப்பார்.</string>
     <string name="forums_moderation_ban_title">%1$s-ஐத் தடை செய்யவா?</string>
     <string name="forums_moderation_log_empty_subtitle">இதுவரை மேற்பார்வை நடவடிக்கைகள் எதுவும் பதிவாகவில்லை</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">மன்றத்தின் பெயர் மாற்றப்பட்டது</string>
     <string name="forums_settings_name_clear_cd">பெயரை அழிக்கவும்</string>
     <string name="forums_settings_unsubscribe_section">மன்றத்திலிருந்து விலகு</string>
-    <string name="forums_share_link_title">மன்ற இணைப்பு</string>
     <string name="forums_find_found_by_url">URL மூலம் கண்டறியப்பட்டது</string>
     <string name="forums_moderation_pending_posts">நிலுவை இடுகைகள் (%1$s)</string>
     <string name="forums_moderation_pending_comments">நிலுவை கருத்துகள் (%1$s)</string>

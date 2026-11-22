@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Chaguo-msingi</string>
     <string name="feeds_ai_prompt_custom">Maalum</string>
     <string name="feeds_ai_prompt_variables">Vigezo: %1$s</string>
-    <string name="feeds_link">Kiungo</string>
-    <string name="feeds_share_link_title">Kiungo cha mlisho</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">maoni %1$s</item>
         <item quantity="other">maoni %1$s</item>

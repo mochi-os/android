@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s hanya menerima obrolan dari teman.</string>
     <string name="chat_message_earlier">Pesan dari sebelum akun ini ditambahkan ke Mochi terenkripsi dan tidak dapat dibaca di sini</string>
     <string name="chat_message_excluded">Hanya terenkripsi untuk perangkat lain</string>
-    <string name="chat_setup">Siapkan</string>
+    <string name="chat_message_changed">Kunci enkripsi pengirim berubah</string>    <string name="chat_setup">Siapkan</string>
     <string name="chat_jump_bottom">Lompat ke bawah</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">Lompat ke %1$s pesan baru</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">Dikirim dari perangkat yang kuncinya tidak cocok</string>
     <string name="chat_list_select">Pilih obrolan</string>
     <string name="chat_message_discard">Buang</string>
+    <string name="chat_message_unencrypted">Kirim tanpa enkripsi</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Pesan kelebihan %1$s karakter</item>
     </plurals>

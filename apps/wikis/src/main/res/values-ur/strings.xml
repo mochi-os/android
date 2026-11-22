@@ -222,9 +222,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">اپ ڈیٹ %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحہ „%1$s\" ابھی موجود نہیں ہے۔</string>
-    <string name="wikis_pageview_share_chooser">ویکی لنک</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">لنک</string>
     <string name="wikis_open_sidebar">سائیڈبار کھولیں</string>
     <string name="wikis_search_placeholder">وکی تلاش کریں</string>
     <string name="wikis_unsubscribe_confirm_message">کیا آپ یقیناً %1$s سے سبسکرپشن منسوخ کرنا چاہتے ہیں؟</string>

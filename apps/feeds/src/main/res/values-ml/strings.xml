@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">ഡിഫോൾട്ട്</string>
     <string name="feeds_ai_prompt_custom">ഇഷ്ടാനുസൃതം</string>
     <string name="feeds_ai_prompt_variables">വേരിയബിളുകൾ: %1$s</string>
-    <string name="feeds_link">ലിങ്ക്</string>
-    <string name="feeds_share_link_title">ഫീഡ് ലിങ്ക്</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s കമന്റ്</item>
         <item quantity="other">%1$s കമന്റുകൾ</item>

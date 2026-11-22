@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Actualitzat %1$s</string>
     <string name="wikis_pageview_not_found_description">La pàgina «%1$s» encara no existeix.</string>
-    <string name="wikis_pageview_share_chooser">Enllaç del wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_page_action_share">Enllaç</string>
     <string name="wikis_open_sidebar">Obre la barra lateral</string>
     <string name="wikis_search_placeholder">Cerca un wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Segur que vols donar-te de baixa de %1$s?</string>

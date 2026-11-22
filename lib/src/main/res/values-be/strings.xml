@@ -357,6 +357,9 @@
     <string name="game_system_score_resume">%1$s узнавіў гульню</string>
     <string name="game_not_found">Гульня не знойдзена</string>
     <string name="game_chat_move_played_you">Вы зрабілі ход %1$s</string>
+    <string name="share_title">Падзяліцца</string>
+    <string name="share_feed">Апублікаваць у стужцы</string>
+    <string name="share_chat">Адправіць у чаце</string>
     <string name="devices_add">Дадаць прыладу</string>
     <string name="devices_copy">Капіраваць %1$s</string>
     <string name="devices_create">Стварыць</string>

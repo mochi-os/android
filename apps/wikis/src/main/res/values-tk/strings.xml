@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s täzelendi</string>
     <string name="wikis_pageview_not_found_description">“%1$s” sahypasy entek ýok.</string>
-    <string name="wikis_pageview_share_chooser">Wiki salgysy</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Salgy</string>
     <string name="wikis_open_sidebar">Gapdal paneli aç</string>
     <string name="wikis_search_placeholder">Wiki gözle</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunasyny ýatyrmak isleýändigiňize ynamlymy?</string>

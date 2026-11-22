@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Velg en mal</string>
     <string name="projects_create_next">Neste</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Lenke</string>
     <string name="projects_filter_clear_all">Tøm alt</string>
     <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Annet</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Dette vedlegget slettes permanent.</string>
     <string name="projects_attachment_delete_confirm_title">Slette vedlegget?</string>
     <string name="projects_settings_unsubscribe_section">Avslutt abonnement på prosjektet</string>
-    <string name="projects_share_link_title">Del prosjekt</string>
     <string name="projects_sort_filter_title">Sorter og filtrer</string>
     <string name="projects_create_prefix_hint">Brukes til lesbare ID-er som %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

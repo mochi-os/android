@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">ພຣອມທ໌ໃຫ້ຄະແນນ</string>
     <string name="forums_ai_prompt_tag_label">ພຣອມທ໌ແທັກ</string>
     <string name="forums_ai_prompt_variables">ຕົວແປ: %1$s</string>
-    <string name="forums_link">ລິ້ງ</string>
     <string name="forums_moderation_ban_message">ຈະສູນເສຍການເຂົ້າເຖິງກະດານສົນທະນາຈົນກວ່າທ່ານຈະຍົກເລີກຂໍ້ຈຳກັດ.</string>
     <string name="forums_moderation_ban_title">ຫ້າມ %1$s ບໍ?</string>
     <string name="forums_moderation_log_empty_subtitle">ຍັງບໍ່ມີການບັນທຶກການດຳເນີນການຄວບຄຸມ</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">ປ່ຽນຊື່ກະດານສົນທະນາແລ້ວ</string>
     <string name="forums_settings_name_clear_cd">ລ້າງຊື່</string>
     <string name="forums_settings_unsubscribe_section">ເຊົາຕິດຕາມກະດານສົນທະນາ</string>
-    <string name="forums_share_link_title">ລິ້ງກະດານສົນທະນາ</string>
     <string name="forums_find_found_by_url">ພົບຜ່ານ URL</string>
     <string name="forums_moderation_pending_posts">ໂພສທີ່ລໍຖ້າ (%1$s)</string>
     <string name="forums_moderation_pending_comments">ຄຳເຫັນທີ່ລໍຖ້າ (%1$s)</string>

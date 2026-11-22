@@ -16,7 +16,6 @@
     <string name="crm_create_object">Ustvari objekt</string>
     <string name="crm_search">Iskanje</string>
     <string name="crm_settings">Nastavitve</string>
-    <string name="crm_link">Povezava</string>
     <string name="crm_design">Oblikovanje</string>
     <string name="crm_export_failed">Izvoza ni bilo mogoče shraniti</string>
     <string name="crm_sort_rank">Ročno</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Najdenih ni nobenih CRM-jev</string>
     <string name="crm_create_blocked_no_parents">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
     <string name="crm_export_csv">Izvozi CSV</string>
-    <string name="crm_share_link_title">Deli CRM</string>
     <string name="crm_export_saved">Podatki CRM shranjeni</string>
     <string name="crm_create_upload_json">Naložite datoteko .zip ali .json</string>
     <string name="crm_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>

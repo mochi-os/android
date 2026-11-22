@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.share.SharedImages
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
@@ -52,6 +53,13 @@ import javax.inject.Inject
 internal fun editOrder(loaded: Boolean, existing: List<String>, removed: Set<String>, added: Int): List<String>? =
     if (loaded) existing.filter { it !in removed } + List(added) { "new:$it" } else null
 
+/** A new post's words for what another app shares: its [text], then its [url] beneath. */
+internal fun shared(text: String, url: String): String = when {
+    url.isEmpty() -> text
+    text.isEmpty() -> url
+    else -> text + "\n\n" + url
+}
+
 /** The post an edit opens on: on its way, loaded, or failed to load. */
 sealed interface EditState {
     data object Loading : EditState
@@ -84,6 +92,15 @@ class CreatePostViewModel @Inject constructor(
     private val editingPostId: String? = savedStateHandle.get<String>("postId")
     val isEditing: Boolean = editingPostId != null
 
+    /**
+     * What another app shares, from a `feeds/share` link: the post's text,
+     * the address of what was shared, put beneath it, and its images.
+     */
+    private val sharedText: String = savedStateHandle.get<String>("text").orEmpty()
+    private val sharedUrl: String = savedStateHandle.get<String>("url").orEmpty()
+    private val sharedToken: String? = savedStateHandle.get<String>("images")
+    private val sharedImages: List<Uri> = SharedImages.take(application, sharedToken)
+
     // True when we arrived from a specific feed (via its FAB / empty state), so
     // the destination is already known and no feed picker should be shown.
     val feedPreselected: Boolean = !preSelectedFeedId.isNullOrEmpty()
@@ -94,10 +111,10 @@ class CreatePostViewModel @Inject constructor(
     private val _selectedFeed = MutableStateFlow(preSelectedFeedId ?: "")
     val selectedFeed: StateFlow<String> = _selectedFeed.asStateFlow()
 
-    private val _body = MutableStateFlow("")
+    private val _body = MutableStateFlow(if (editingPostId == null) shared(sharedText, sharedUrl) else "")
     val body: StateFlow<String> = _body.asStateFlow()
 
-    private val _attachments = MutableStateFlow<List<Uri>>(emptyList())
+    private val _attachments = MutableStateFlow(if (editingPostId == null) sharedImages else emptyList())
     val attachments: StateFlow<List<Uri>> = _attachments.asStateFlow()
 
     private val _existingAttachments = MutableStateFlow<List<Attachment>>(emptyList())
@@ -504,6 +521,12 @@ class CreatePostViewModel @Inject constructor(
 
     private fun writerLanguage(): String =
         (LanguageStore.get(application) ?: Locale.getDefault().toLanguageTag()).substringBefore('-').lowercase()
+
+    // The shared images are let go with the screen: by then the post is made or dropped.
+    override fun onCleared() {
+        super.onCleared()
+        SharedImages.release(application, sharedToken)
+    }
 
     suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
         val feedId = _selectedFeed.value

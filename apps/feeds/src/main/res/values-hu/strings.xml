@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Alapértelmezett</string>
     <string name="feeds_ai_prompt_custom">Egyéni</string>
     <string name="feeds_ai_prompt_variables">Változók: %1$s</string>
-    <string name="feeds_link">Hivatkozás</string>
-    <string name="feeds_share_link_title">Hírfolyam-hivatkozás</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s hozzászólás</item>
         <item quantity="other">%1$s hozzászólás</item>

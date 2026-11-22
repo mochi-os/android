@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s yeniləndi</string>
     <string name="wikis_pageview_not_found_description">“%1$s” səhifəsi hələ mövcud deyil.</string>
-    <string name="wikis_pageview_share_chooser">Viki keçidi</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Keçid</string>
     <string name="wikis_open_sidebar">Yan paneli aç</string>
     <string name="wikis_search_placeholder">Wiki axtar</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunəliyindən çıxmaq istədiyinizə əminsiniz?</string>

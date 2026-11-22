@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Mete ajou %1$s</string>
     <string name="wikis_pageview_not_found_description">Paj “%1$s” la poko egziste.</string>
-    <string name="wikis_pageview_share_chooser">Lyen wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Lyen</string>
     <string name="wikis_open_sidebar">Louvri ba bò a</string>
     <string name="wikis_search_placeholder">Chèche yon wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Èske ou sèten ou vle dezabòne nan %1$s?</string>

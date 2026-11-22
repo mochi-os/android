@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="projects_create_next">Հաջորդ</string>
     <string name="projects_filter">Զտել</string>
-    <string name="projects_link">Հղում</string>
     <string name="projects_filter_clear_all">Մաքրել ամենը</string>
     <string name="projects_filter_all">Բոլորը</string>
     <string name="projects_filter_other">Այլ</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Այս կցորդը ընդմիշտ կջնջվի։</string>
     <string name="projects_attachment_delete_confirm_title">Ջնջե՞լ կցորդը։</string>
     <string name="projects_settings_unsubscribe_section">Չեղարկել նախագծի բաժանորդագրությունը</string>
-    <string name="projects_share_link_title">Կիսվել նախագծով</string>
     <string name="projects_sort_filter_title">Դասավորել և զտել</string>
     <string name="projects_create_prefix_hint">Օգտագործվում է ընթեռնելի ID-ների համար, ինչպես %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

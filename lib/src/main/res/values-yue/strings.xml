@@ -352,6 +352,9 @@
     <string name="game_system_score_accept">%1$s 接受咗分數</string>
     <string name="game_system_score_agreed">雙方同意分數</string>
     <string name="game_system_score_resume">%1$s 恢復咗對局</string>
+    <string name="share_title">分享</string>
+    <string name="share_feed">發佈到資訊流</string>
+    <string name="share_chat">傳送到對話</string>
     <string name="devices_add">加入裝置</string>
     <string name="devices_copy">複製%1$s</string>
     <string name="devices_create">建立</string>

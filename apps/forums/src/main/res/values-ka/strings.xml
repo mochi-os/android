@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">ქულის მოთხოვნა</string>
     <string name="forums_ai_prompt_tag_label">ტეგის მოთხოვნა</string>
     <string name="forums_ai_prompt_variables">ცვლადები: %1$s</string>
-    <string name="forums_link">ბმული</string>
     <string name="forums_moderation_ban_message">დაკარგავს ფორუმზე წვდომას, სანამ შეზღუდvას არ მოხსნით.</string>
     <string name="forums_moderation_ban_title">დაიბლოკოს %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">მოდერაციის მოქმედებები ჯერ არ დაფიქსირებულა</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">ფორუმს გადაერქვა სახელი</string>
     <string name="forums_settings_name_clear_cd">სახელის გასუფთავება</string>
     <string name="forums_settings_unsubscribe_section">ფორუმის გამოწერის შეწყვეტა</string>
-    <string name="forums_share_link_title">ფორუმის ბმული</string>
     <string name="forums_find_found_by_url">ნაპოვნია URL-ით</string>
     <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$s)</string>
     <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები (%1$s)</string>

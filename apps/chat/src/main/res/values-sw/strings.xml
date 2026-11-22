@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s hupokea gumzo kutoka kwa marafiki pekee.</string>
     <string name="chat_message_earlier">Ujumbe wa kabla akaunti hii kuongezwa kwenye Mochi umesimbwa kwa njia fiche na hauwezi kusomwa hapa</string>
     <string name="chat_message_excluded">Imesimbwa kwa njia fiche kwa vifaa vingine pekee</string>
+    <string name="chat_message_changed">Ufunguo wa usimbaji fiche wa mtumaji umebadilika</string>
     <string name="chat_setup">Sanidi</string>
     <string name="chat_jump_bottom">Nenda chini</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Imetumwa kutoka kwa kifaa ambacho funguo zake hazilingani</string>
     <string name="chat_list_select">Chagua mazungumzo</string>
     <string name="chat_message_discard">Tupa</string>
+    <string name="chat_message_unencrypted">Tuma bila usimbaji fiche</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Ujumbe umezidi kwa herufi %1$s</item>
         <item quantity="other">Ujumbe umezidi kwa herufi %1$s</item>

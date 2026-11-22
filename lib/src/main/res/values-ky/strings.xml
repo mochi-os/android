@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s оюнду улантты</string>
     <string name="game_not_found">Оюн табылган жок</string>
     <string name="game_chat_move_played_you">Сиз %1$s ойнодуңуз</string>
+    <string name="share_title">Бөлүшүү</string>
+    <string name="share_feed">Лентага жарыялоо</string>
+    <string name="share_chat">Чатта жөнөтүү</string>
     <string name="devices_add">Түзмөк кошуу</string>
     <string name="devices_copy">%1$s көчүрүү</string>
     <string name="devices_create">Түзүү</string>

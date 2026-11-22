@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ஒரு வார்ப்புருவை தேர்வு செய்க</string>
     <string name="projects_create_next">அடுத்து</string>
     <string name="projects_filter">வடிகட்டி</string>
-    <string name="projects_link">இணைப்பு</string>
     <string name="projects_filter_clear_all">அனைத்தையும் அழி</string>
     <string name="projects_filter_all">அனைத்தும்</string>
     <string name="projects_filter_other">மற்றவை</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">இந்த இணைப்பு நிரந்தரமாக நீக்கப்படும்.</string>
     <string name="projects_attachment_delete_confirm_title">இணைப்பை நீக்கவா?</string>
     <string name="projects_settings_unsubscribe_section">திட்டச் சந்தாவை நிறுத்து</string>
-    <string name="projects_share_link_title">திட்டத்தைப் பகிர்</string>
     <string name="projects_sort_filter_title">வரிசைப்படுத்தி வடிகட்டு</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 போன்ற படிக்கக்கூடிய ஐடிகளுக்குப் பயன்படுகிறது</string>
     <plurals name="projects_request_conflicts">

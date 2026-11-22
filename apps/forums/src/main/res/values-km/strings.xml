@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">ការសួរពិន្ទុ</string>
     <string name="forums_ai_prompt_tag_label">ការសួរស្លាក</string>
     <string name="forums_ai_prompt_variables">អថេរ៖ %1$s</string>
-    <string name="forums_link">តំណ</string>
     <string name="forums_moderation_ban_message">នឹងបាត់បង់សិទ្ធិចូលវេទិកា រហូតដល់អ្នកដកការរឹតបន្តឹង។</string>
     <string name="forums_moderation_ban_title">ហាមឃាត់ %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">មិនទាន់មានសកម្មភាពសម្របសម្រួលត្រូវបានកត់ត្រា</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">បានប្ដូរឈ្មោះវេទិកា</string>
     <string name="forums_settings_name_clear_cd">សម្អាតឈ្មោះ</string>
     <string name="forums_settings_unsubscribe_section">ឈប់ជាវវេទិកា</string>
-    <string name="forums_share_link_title">តំណវេទិកា</string>
     <string name="forums_find_found_by_url">រកឃើញតាម URL</string>
     <string name="forums_moderation_pending_posts">ការប្រកាសដែលរង់ចាំ (%1$s)</string>
     <string name="forums_moderation_pending_comments">មតិដែលរង់ចាំ (%1$s)</string>

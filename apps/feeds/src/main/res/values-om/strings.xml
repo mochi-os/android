@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Idilee</string>
     <string name="feeds_ai_prompt_custom">Mataa keetiin</string>
     <string name="feeds_ai_prompt_variables">Jijjiiramoo: %1$s</string>
-    <string name="feeds_link">Geessituu</string>
-    <string name="feeds_share_link_title">Hidhaa feed</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">yaada %1$s</item>
         <item quantity="other">yaadota %1$s</item>

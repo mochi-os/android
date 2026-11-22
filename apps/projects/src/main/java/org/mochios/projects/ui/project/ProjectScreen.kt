@@ -5,8 +5,6 @@
 
 package org.mochios.projects.ui.project
 
-import android.content.Context
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
@@ -44,11 +42,11 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
-import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -116,6 +114,7 @@ import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.share.ShareSheet
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.Project
@@ -498,12 +497,6 @@ private fun ProjectContent(
     }
 
     val context = LocalContext.current
-    val shareTitle = stringResource(R.string.projects_share_link_title)
-    LaunchedEffect(viewModel) {
-        viewModel.shareLink.collect { link ->
-            shareProjectLink(context, link, shareTitle)
-        }
-    }
 
     // A share, move, delete, column edit, export or refresh the server
     // refused: say why instead of doing nothing.
@@ -713,12 +706,12 @@ private fun ProjectContent(
                                 // user owns; it's hidden on subscribed ones.
                                 if (details?.project?.owner?.local == true) {
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.projects_link)) },
+                                        text = { Text(stringResource(MochiR.string.share_title)) },
                                         onClick = {
                                             showOverflow = false
-                                            viewModel.shareProject()
+                                            viewModel.share()
                                         },
-                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                        leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
                                     )
                                 }
                                 MochiDropdownMenuItem(
@@ -880,6 +873,8 @@ private fun ProjectContent(
         )
     }
 
+    ShareSheet(viewModel.shares)
+
     if (uiState.isExporting) {
         ExportProgressDialog()
     }
@@ -914,20 +909,6 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "created" to stringResource(R.string.projects_sort_created),
     "updated" to stringResource(R.string.projects_sort_updated)
 )
-
-/** Opens the system share sheet with the project's [link]. */
-private fun shareProjectLink(context: Context, link: String, title: String) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, link)
-        // Names the sheet's content preview. Android 10+ ignores the
-        // createChooser title, so without this the sheet reads "Sharing text".
-        putExtra(Intent.EXTRA_TITLE, title)
-    }
-    val chooser = Intent.createChooser(intent, title)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
-}
 
 @Composable
 private fun ExportProgressDialog() {

@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s ફક્ત મિત્રો પાસેથી જ ચેટ સ્વીકારે છે.</string>
     <string name="chat_message_earlier">આ એકાઉન્ટ Mochi માં ઉમેરાયું તે પહેલાંના સંદેશા એન્ક્રિપ્ટ કરેલા છે અને અહીં વાંચી શકાતા નથી</string>
     <string name="chat_message_excluded">ફક્ત અન્ય ઉપકરણો માટે એન્ક્રિપ્ટ કરેલો</string>
-    <string name="chat_setup">સેટ અપ</string>
+    <string name="chat_message_changed">મોકલનારની એન્ક્રિપ્શન કી બદલાઈ ગઈ છે</string>    <string name="chat_setup">સેટ અપ</string>
     <string name="chat_jump_bottom">નીચે જાઓ</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s નવા સંદેશ પર જાઓ</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">જેની કી મેળ ખાતી નથી તેવા ઉપકરણથી મોકલાયેલ</string>
     <string name="chat_list_select">ચેટ પસંદ કરો</string>
     <string name="chat_message_discard">છોડી દો</string>
+    <string name="chat_message_unencrypted">એન્ક્રિપ્શન વિના મોકલો</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">સંદેશ મર્યાદા કરતાં %1$s અક્ષર લાંબો છે</item>
         <item quantity="other">સંદેશ મર્યાદા કરતાં %1$s અક્ષરો લાંબો છે</item>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Valitse malli</string>
     <string name="projects_create_next">Seuraava</string>
     <string name="projects_filter">Suodata</string>
-    <string name="projects_link">Linkki</string>
     <string name="projects_filter_clear_all">Tyhjennä kaikki</string>
     <string name="projects_filter_all">Kaikki</string>
     <string name="projects_filter_other">Muu</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Tämä liite poistetaan pysyvästi.</string>
     <string name="projects_attachment_delete_confirm_title">Poistetaanko liite?</string>
     <string name="projects_settings_unsubscribe_section">Peruuta projektin tilaus</string>
-    <string name="projects_share_link_title">Jaa projekti</string>
     <string name="projects_sort_filter_title">Lajittele ja suodata</string>
     <string name="projects_create_prefix_hint">Käytetään luettaviin tunnisteisiin, kuten %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

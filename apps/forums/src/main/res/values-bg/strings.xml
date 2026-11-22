@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Промпт за оценяване</string>
     <string name="forums_ai_prompt_tag_label">Промпт за етикети</string>
     <string name="forums_ai_prompt_variables">Променливи: %1$s</string>
-    <string name="forums_link">Връзка</string>
     <string name="forums_moderation_ban_message">Губи достъп до форума, докато не премахнете ограничението.</string>
     <string name="forums_moderation_ban_title">Да се блокира ли %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Все още няма записани модераторски действия</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Форумът е преименуван</string>
     <string name="forums_settings_name_clear_cd">Изчистване на името</string>
     <string name="forums_settings_unsubscribe_section">Отписване от форума</string>
-    <string name="forums_share_link_title">Връзка към форума</string>
     <string name="forums_find_found_by_url">Намерено по URL</string>
     <string name="forums_moderation_pending_posts">Чакащи публикации (%1$s)</string>
     <string name="forums_moderation_pending_comments">Чакащи коментари (%1$s)</string>

@@ -354,6 +354,9 @@
     <string name="game_system_score_resume">%1$s retomou o jogo</string>
     <string name="game_not_found">Jogo não encontrado</string>
     <string name="game_chat_move_played_you">Você jogou %1$s</string>
+    <string name="share_title">Partilhar</string>
+    <string name="share_feed">Publicar num feed</string>
+    <string name="share_chat">Enviar numa conversa</string>
     <string name="devices_add">Adicionar um dispositivo</string>
     <string name="devices_copy">Copiar %1$s</string>
     <string name="devices_create">Criar</string>

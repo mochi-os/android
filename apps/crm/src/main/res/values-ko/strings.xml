@@ -16,7 +16,6 @@
     <string name="crm_create_object">오브젝트 생성</string>
     <string name="crm_search">검색</string>
     <string name="crm_settings">설정</string>
-    <string name="crm_link">링크</string>
     <string name="crm_design">디자인</string>
     <string name="crm_export_failed">내보내기를 저장하지 못했습니다</string>
     <string name="crm_sort_rank">수동</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM을 찾을 수 없어요</string>
     <string name="crm_create_blocked_no_parents">아직 항목 유형을 만들 수 없어요. 먼저 필요한 상위 항목을 만들어 주세요.</string>
     <string name="crm_export_csv">CSV 내보내기</string>
-    <string name="crm_share_link_title">CRM 공유</string>
     <string name="crm_export_saved">CRM 데이터가 저장됨</string>
     <string name="crm_create_upload_json">.zip 또는 .json 파일 업로드</string>
     <string name="crm_create_blocked_no_options">만들 수 없음: %1$s은(는) 필수이지만 선택할 옵션이 없습니다. 디자인에서 옵션을 추가하세요.</string>

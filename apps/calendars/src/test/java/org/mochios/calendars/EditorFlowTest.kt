@@ -16,12 +16,15 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isRoot
 import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextReplacement
+import android.content.Intent
+import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
@@ -37,6 +40,17 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.UserPreferences
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.calendars.ui.editor.EditorUiState
+import org.mochios.calendars.ui.editor.Ending
+import org.mochios.calendars.ui.editor.Frequency
+import org.mochios.calendars.ui.editor.Recurrence
+import org.mochios.calendars.ui.editor.eventShare
+import org.mochios.calendars.ui.editor.eventWhen
+import org.mochios.calendars.ui.editor.recurrence
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.di.Viewer
@@ -700,6 +714,109 @@ class EditorFlowTest {
         rule.waitForIdle()
         copy.assertIsNotEnabled()
         delete.assertIsNotEnabled()
+    }
+
+    /**
+     * What the system share sheet opened for, once it opens; the launch of
+     * the test's own host activity is passed over.
+     */
+    private fun sheet(): Intent {
+        val deadline = System.currentTimeMillis() + 5_000
+        while (System.currentTimeMillis() < deadline) {
+            shadowOf(Looper.getMainLooper()).idleFor(20, TimeUnit.MILLISECONDS)
+            val started = shadowOf(context).nextStartedActivity
+            if (started == null) {
+                Thread.sleep(10)
+            } else if (started.action == Intent.ACTION_CHOOSER) {
+                return IntentCompat.getParcelableExtra(started, Intent.EXTRA_INTENT, Intent::class.java)!!
+            }
+        }
+        throw AssertionError("the share sheet did not open")
+    }
+
+    @Test
+    fun `an event in a calendar of the user's own is shared by its name, time, place and description, and its address`() {
+        respond(
+            "-/events/get",
+            ok(
+                """{"event": {"id": "e1", "calendar": "c1", "etag": "a", "recurring": false, "components": [
+                    {"name": "VEVENT", "properties": [
+                        {"name": "UID", "params": {}, "value": "uid-1"},
+                        {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+                        {"name": "LOCATION", "params": {}, "value": "Room 4"},
+                        {"name": "DESCRIPTION", "params": {}, "value": "Bring notes."},
+                        {"name": "URL", "params": {}, "value": "https://meet.example/s"},
+                        {"name": "DTSTART", "params": {}, "value": "20261002T100000Z"},
+                        {"name": "DTEND", "params": {}, "value": "20261002T110000Z"}
+                    ], "components": []}
+                ]}}""",
+            ),
+        )
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        rule.onNodeWithContentDescription(string(MochiR.string.share_title)).performClick()
+        val send = sheet()
+        val time = eventWhen(model.uiState.value, London.zone(), Format(UserPreferences()))
+        // Each field a paragraph of its own: a feed's post joins lines a single newline parts.
+        val words = "Stand-up\n\n$time\n\nRoom 4\n\nBring notes."
+        assertEquals("$words\n\nhttps://meet.example/s", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Stand-up", send.getStringExtra(Intent.EXTRA_TITLE))
+        assertEquals(words, send.getStringExtra(EXTRA_WORDS))
+        assertEquals("https://meet.example/s", send.getStringExtra(EXTRA_ADDRESS))
+    }
+
+    /** A weekly stand-up on Fridays at 10:00 in London, to 18 December. */
+    private val weekly = EditorUiState(
+        title = "Stand-up",
+        start = java.time.ZonedDateTime.of(2026, 10, 2, 10, 0, 0, 0, java.time.ZoneId.of("Europe/London")).toEpochSecond(),
+        finish = java.time.ZonedDateTime.of(2026, 10, 2, 11, 0, 0, 0, java.time.ZoneId.of("Europe/London")).toEpochSecond(),
+        recurrence = Recurrence(Frequency.WEEKLY, days = setOf(5), ending = Ending.UNTIL, until = java.time.LocalDate.of(2026, 12, 18)),
+    )
+
+    private fun shared(state: EditorUiState): String =
+        eventShare(state, "Europe/London", RuntimeEnvironment.getApplication().resources, java.util.Locale.UK, Format(UserPreferences())).text
+
+    @Test
+    fun `a series is shared with how it repeats, after when the occurrence shared is`() {
+        val format = Format(UserPreferences())
+        val time = eventWhen(weekly, "Europe/London", format)
+        val until = format.formatDate(java.time.LocalDate.of(2026, 12, 18).atTime(12, 0).toEpochSecond(java.time.ZoneOffset.UTC), "UTC")
+        assertEquals("Stand-up\n\n$time\n\nEvery week, on Friday, until $until", shared(weekly))
+        assertEquals("Stand-up\n\n$time", shared(weekly.copy(recurrence = Recurrence())))
+    }
+
+    @Test
+    fun `a series whose rule no summary can say is shared as one that repeats`() {
+        val time = eventWhen(weekly, "Europe/London", Format(UserPreferences()))
+        val unsaid = weekly.copy(recurrence = recurrence("FREQ=MONTHLY;BYDAY=MO,TU,WE,TH,FR;BYSETPOS=-1", "Europe/London"))
+        assertEquals("Stand-up\n\n$time\n\n" + string(R.string.calendars_event_recurring), shared(unsaid))
+    }
+
+    @Test
+    fun `an event is said by its day, or its days, and for a timed one its clock and zone`() {
+        val format = Format(UserPreferences())
+        val start = java.time.ZonedDateTime.of(2026, 10, 2, 10, 0, 0, 0, java.time.ZoneId.of("Europe/London")).toEpochSecond()
+        val timed = EditorUiState(start = start, finish = start + 3_600)
+        assertEquals(format.formatTimeRange(start, start + 3_600, "Europe/London", "Europe/London") + " (Europe/London)", eventWhen(timed, "Europe/London", format))
+        // A flight across zones names both.
+        val flight = timed.copy(zone = org.mochios.calendars.model.Zone(start = "Europe/London", finish = "America/New_York"))
+        assertTrue(eventWhen(flight, "Europe/Paris", format).endsWith("(" + format.formatRange("Europe/London", "America/New York") + ")"))
+        val day = java.time.LocalDate.of(2026, 10, 2)
+        val midnight = day.atStartOfDay(java.time.ZoneOffset.UTC).toEpochSecond()
+        val one = EditorUiState(allday = true, start = midnight, finish = midnight + 86_400)
+        assertEquals(format.formatLongDate(midnight, "UTC"), eventWhen(one, "Europe/London", format))
+        val three = one.copy(finish = midnight + 3 * 86_400)
+        assertEquals(format.formatDayRange(day, day.plusDays(2)), eventWhen(three, "Europe/London", format))
+    }
+
+    @Test
+    fun `an event in a subscribed calendar is not shared`() {
+        respond("-/calendars", ok("""{"calendars": [{"id": "c1", "name": "Holidays", "kind": "subscription", "readonly": true}]}"""))
+        respond("-/events/get", event("a", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        rule.onNodeWithContentDescription(string(R.string.calendars_event_copy)).assertExists()
+        assertEquals(0, rule.onAllNodesWithContentDescription(string(MochiR.string.share_title)).fetchSemanticsNodes().size)
     }
 }
 

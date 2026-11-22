@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Оноолтын промпт</string>
     <string name="forums_ai_prompt_tag_label">Шошгын промпт</string>
     <string name="forums_ai_prompt_variables">Хувьсагчид: %1$s</string>
-    <string name="forums_link">Холбоос</string>
     <string name="forums_moderation_ban_message">Та хязгаарлалтыг арилгах хүртэл форум руу нэвтрэх эрхээ алдана.</string>
     <string name="forums_moderation_ban_title">%1$s-г хориглох уу?</string>
     <string name="forums_moderation_log_empty_subtitle">Одоогоор хяналтын үйлдэл бүртгэгдээгүй байна</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Форумын нэр өөрчлөгдсөн</string>
     <string name="forums_settings_name_clear_cd">Нэрийг цэвэрлэх</string>
     <string name="forums_settings_unsubscribe_section">Форумаас гарах</string>
-    <string name="forums_share_link_title">Форумын холбоос</string>
     <string name="forums_find_found_by_url">URL-аар олдсон</string>
     <string name="forums_moderation_pending_posts">Хүлээгдэж буй нийтлэлүүд (%1$s)</string>
     <string name="forums_moderation_pending_comments">Хүлээгдэж буй сэтгэгдлүүд (%1$s)</string>

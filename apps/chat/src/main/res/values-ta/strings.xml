@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s நண்பர்களிடமிருந்து மட்டுமே அரட்டைகளை ஏற்கிறார்.</string>
     <string name="chat_message_earlier">இந்தக் கணக்கு Mochi-இல் சேர்க்கப்படுவதற்கு முந்தைய செய்திகள் மறையாக்கப்பட்டுள்ளன, அவற்றை இங்கே படிக்க முடியாது</string>
     <string name="chat_message_excluded">பிற சாதனங்களுக்கு மட்டும் மறையாக்கப்பட்டது</string>
+    <string name="chat_message_changed">அனுப்புநரின் மறையாக்க விசை மாறியுள்ளது</string>
     <string name="chat_setup">அமைக்க</string>
     <string name="chat_jump_bottom">கீழே செல்</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">விசைகள் பொருந்தாத சாதனத்திலிருந்து அனுப்பப்பட்டது</string>
     <string name="chat_list_select">ஒரு அரட்டையை தேர்ந்தெடு</string>
     <string name="chat_message_discard">நிராகரி</string>
+    <string name="chat_message_unencrypted">மறையாக்கம் இல்லாமல் அனுப்பு</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">செய்தி %1$s எழுத்து அதிகமாக உள்ளது</item>
         <item quantity="other">செய்தி %1$s எழுத்துகள் அதிகமாக உள்ளன</item>

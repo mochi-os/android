@@ -16,7 +16,6 @@
     <string name="crm_create_object">Jieun obyék</string>
     <string name="crm_search">Paluruh</string>
     <string name="crm_settings">Setélan</string>
-    <string name="crm_link">Tumbu</string>
     <string name="crm_design">Désain</string>
     <string name="crm_export_failed">Ékspor teu bisa disimpen</string>
     <string name="crm_sort_rank">Manual</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Teu manggih CRM</string>
     <string name="crm_create_blocked_no_parents">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>
     <string name="crm_export_csv">Ékspor CSV</string>
-    <string name="crm_share_link_title">Bagikeun CRM</string>
     <string name="crm_export_saved">Data CRM disimpen</string>
     <string name="crm_create_upload_json">Unggah berkas .zip atawa .json</string>
     <string name="crm_create_blocked_no_options">Teu bisa nyieun: %1$s diperlukeun tapi teu boga pilihan. Tambahkeun pilihan dina Desain.</string>

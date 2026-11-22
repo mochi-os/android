@@ -153,18 +153,55 @@ class ThreadBubbleTest {
         val taps = mutableListOf<String>()
         rule.setContent {
             UnsentRow(
-                message = Unsent(key = 1, text = "Did not go", error = org.mochios.android.api.MochiError.Unknown("The server could not take it")),
+                message = Unsent(key = 1, text = "Did not go", error = org.mochios.android.api.MochiError.Unknown("The server could not take it", 400)),
                 onRetry = { taps += "retry" },
+                onUnencrypted = { taps += "unencrypted" },
                 onCopy = { taps += "copy" },
                 onDiscard = { taps += "discard" },
             )
         }
         rule.onNodeWithText("Did not go").assertIsDisplayed()
         rule.onNodeWithText("The server could not take it").assertIsDisplayed()
+        rule.onNodeWithText("Send unencrypted").assertDoesNotExist()
         rule.onNodeWithText("Retry").performClick()
         rule.onNodeWithText("Copy").performClick()
         rule.onNodeWithText("Discard").performClick()
         assertEquals(listOf("retry", "copy", "discard"), taps)
+    }
+
+    @Test
+    fun `a message refused for want of encryption offers to send it unencrypted`() {
+        val taps = mutableListOf<String>()
+        rule.setContent {
+            UnsentRow(
+                message = Unsent(
+                    key = 1,
+                    text = "Secret",
+                    error = org.mochios.android.api.MochiError.Unknown("The message can no longer be encrypted for everyone in this conversation", 409),
+                ),
+                onRetry = { taps += "retry" },
+                onUnencrypted = { taps += "unencrypted" },
+                onCopy = {},
+                onDiscard = {},
+            )
+        }
+        rule.onNodeWithText("The message can no longer be encrypted for everyone in this conversation").assertIsDisplayed()
+        rule.onNodeWithText("Send unencrypted").performClick()
+        assertEquals(listOf("unencrypted"), taps)
+    }
+
+    @Test
+    fun `the composer's refused message says why and offers to send it unencrypted`() {
+        var sent = 0
+        rule.setContent {
+            RefusalLine(
+                refusal = org.mochios.android.api.MochiError.Unknown("The message can no longer be encrypted for everyone in this conversation", 409),
+                onUnencrypted = { sent++ },
+            )
+        }
+        rule.onNodeWithText("The message can no longer be encrypted for everyone in this conversation").assertIsDisplayed()
+        rule.onNodeWithText("Send unencrypted").performClick()
+        assertEquals(1, sent)
     }
 
     @Test

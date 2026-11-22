@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">ອັບເດດແລ້ວ %1$s</string>
     <string name="wikis_pageview_not_found_description">ໜ້າ “%1$s” ຍັງບໍ່ມີ.</string>
-    <string name="wikis_pageview_share_chooser">ລິ້ງວິກິ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">ລິ້ງ</string>
     <string name="wikis_open_sidebar">ເປີດແຖບຂ້າງ</string>
     <string name="wikis_search_placeholder">ຄົ້ນຫາ wiki</string>
     <string name="wikis_unsubscribe_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການເຊົາຕິດຕາມ %1$s?</string>

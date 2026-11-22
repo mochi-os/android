@@ -258,7 +258,6 @@
     <string name="projects_create_choose_template">قاڵبێک هەڵبژێرە</string>
     <string name="projects_create_next">دواتر</string>
     <string name="projects_filter">فلتەر</string>
-    <string name="projects_link">بەستەر</string>
     <string name="projects_filter_clear_all">پاککردنەوەی هەموو</string>
     <string name="projects_filter_all">هەموو</string>
     <string name="projects_filter_other">هیتر</string>
@@ -302,7 +301,6 @@
     <string name="projects_attachment_delete_confirm_message">ئەم هاوپێچە بە هەمیشەیی دەسڕدرێتەوە.</string>
     <string name="projects_attachment_delete_confirm_title">هاوپێچ بسڕدرێتەوە؟</string>
     <string name="projects_settings_unsubscribe_section">لابردنی بەشداری لە پڕۆژە</string>
-    <string name="projects_share_link_title">پڕۆژە هاوبەش بکە</string>
     <string name="projects_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
     <string name="projects_create_prefix_hint">بۆ ناسنامەی خوێندنەوەیی وەک %1$s-1، %1$s-2 بەکاردێت</string>
     <plurals name="projects_request_conflicts">

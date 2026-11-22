@@ -204,8 +204,6 @@
     <string name="feeds_ai_prompt_default">デフォルト</string>
     <string name="feeds_ai_prompt_custom">カスタム</string>
     <string name="feeds_ai_prompt_variables">変数: %1$s</string>
-    <string name="feeds_link">リンク</string>
-    <string name="feeds_share_link_title">フィードのリンク</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s件のコメント</item>
     </plurals>

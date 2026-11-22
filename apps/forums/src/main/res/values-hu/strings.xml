@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Pontozási prompt</string>
     <string name="forums_ai_prompt_tag_label">Címkézési prompt</string>
     <string name="forums_ai_prompt_variables">Változók: %1$s</string>
-    <string name="forums_link">Hivatkozás</string>
     <string name="forums_moderation_ban_message">Elveszíti a hozzáférést a fórumhoz, amíg fel nem oldja a korlátozást.</string>
     <string name="forums_moderation_ban_title">Kitiltja őt: %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Még nincs rögzített moderálási művelet</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Fórum átnevezve</string>
     <string name="forums_settings_name_clear_cd">Név törlése</string>
     <string name="forums_settings_unsubscribe_section">Leiratkozás a fórumról</string>
-    <string name="forums_share_link_title">Fórum-hivatkozás</string>
     <string name="forums_find_found_by_url">URL alapján megtalálva</string>
     <string name="forums_moderation_pending_posts">Függőben lévő bejegyzések (%1$s)</string>
     <string name="forums_moderation_pending_comments">Függőben lévő hozzászólások (%1$s)</string>

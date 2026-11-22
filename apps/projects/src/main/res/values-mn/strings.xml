@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Загвар сонгох</string>
     <string name="projects_create_next">Дараах</string>
     <string name="projects_filter">Шүүлтүүр</string>
-    <string name="projects_link">Холбоос</string>
     <string name="projects_filter_clear_all">Бүгдийг цэвэрлэх</string>
     <string name="projects_filter_all">Бүгд</string>
     <string name="projects_filter_other">Бусад</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Энэ хавсралт бүрмөсөн устгагдана.</string>
     <string name="projects_attachment_delete_confirm_title">Хавсралтыг устгах уу?</string>
     <string name="projects_settings_unsubscribe_section">Төслийн захиалгаас гарах</string>
-    <string name="projects_share_link_title">Төслийг хуваалцах</string>
     <string name="projects_sort_filter_title">Эрэмбэлэх ба шүүх</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 гэх мэт уншигдахуйц ID-д ашиглагдана</string>
     <plurals name="projects_request_conflicts">

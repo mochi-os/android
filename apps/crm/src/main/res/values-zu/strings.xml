@@ -16,7 +16,6 @@
     <string name="crm_create_object">Dala into</string>
     <string name="crm_search">Sesha</string>
     <string name="crm_settings">Izilungiselelo</string>
-    <string name="crm_link">Isixhumanisi</string>
     <string name="crm_design">Idizayini</string>
     <string name="crm_export_failed">Ayikwazanga ukulondolozwa okuthunyelwe</string>
     <string name="crm_sort_rank">Mathupha</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Awekho ama-CRM atholakele</string>
     <string name="crm_create_blocked_no_parents">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
     <string name="crm_export_csv">Thumela ngaphandle i-CSV</string>
-    <string name="crm_share_link_title">Yabelana nge-CRM</string>
     <string name="crm_export_saved">Idatha ye-CRM ilondoloziwe</string>
     <string name="crm_create_upload_json">Layisha ifayela le-.zip noma le-.json</string>
     <string name="crm_create_blocked_no_options">Ayikwazi ukudala: %1$s iyadingeka kodwa ayinazo izinketho. Engeza izinketho kuMklamo.</string>

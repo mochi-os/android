@@ -177,7 +177,7 @@
     <string name="chat_refused_friends_only">רק חברים יכולים לפתוח צ\'אט עם %1$s.</string>
     <string name="chat_message_earlier">הודעות מלפני שהחשבון הזה נוסף ל-Mochi מוצפנות ואי אפשר לקרוא אותן כאן</string>
     <string name="chat_message_excluded">מוצפנת למכשירים אחרים בלבד</string>
-    <string name="chat_setup">הגדר</string>
+    <string name="chat_message_changed">מפתח ההצפנה של השולח השתנה</string>    <string name="chat_setup">הגדר</string>
     <string name="chat_jump_bottom">דילוג לתחתית</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">דילוג להודעה חדשה אחת</item>
@@ -188,6 +188,7 @@
     <string name="chat_message_mismatched">נשלח ממכשיר שהמפתחות שלו אינם תואמים</string>
     <string name="chat_list_select">בחר שיחה</string>
     <string name="chat_message_discard">מחיקה</string>
+    <string name="chat_message_unencrypted">שלח ללא הצפנה</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">ההודעה חורגת מהמגבלה ב-%1$s תו</item>
         <item quantity="two">ההודעה חורגת מהמגבלה ב-%1$s תווים</item>

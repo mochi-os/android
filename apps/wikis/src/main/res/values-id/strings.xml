@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Diperbarui %1$s</string>
     <string name="wikis_pageview_not_found_description">Halaman \"%1$s\" belum ada.</string>
-    <string name="wikis_pageview_share_chooser">Tautan wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_page_action_share">Tautan</string>
     <string name="wikis_open_sidebar">Buka bilah samping</string>
     <string name="wikis_search_placeholder">Cari wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Yakin ingin berhenti berlangganan dari %1$s?</string>

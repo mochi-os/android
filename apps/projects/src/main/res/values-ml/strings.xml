@@ -258,7 +258,6 @@
     <string name="projects_create_choose_template">ഒരു ടെംപ്ലേറ്റ് തിരഞ്ഞെടുക്കുക</string>
     <string name="projects_create_next">അടുത്തത്</string>
     <string name="projects_filter">ഫിൽട്ടർ</string>
-    <string name="projects_link">ലിങ്ക്</string>
     <string name="projects_filter_clear_all">എല്ലാം മായ്ക്കുക</string>
     <string name="projects_filter_all">എല്ലാം</string>
     <string name="projects_filter_other">മറ്റുള്ളവ</string>
@@ -302,7 +301,6 @@
     <string name="projects_attachment_delete_confirm_message">ഈ അറ്റാച്ച്മെന്റ് ശാശ്വതമായി ഇല്ലാതാക്കും.</string>
     <string name="projects_attachment_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കണോ?</string>
     <string name="projects_settings_unsubscribe_section">പ്രോജക്റ്റ് സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കുക</string>
-    <string name="projects_share_link_title">പ്രോജക്റ്റ് പങ്കിടുക</string>
     <string name="projects_sort_filter_title">ക്രമീകരിച്ച് ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 പോലുള്ള വായിക്കാവുന്ന ഐഡികൾക്ക് ഉപയോഗിക്കുന്നു</string>
     <plurals name="projects_request_conflicts">

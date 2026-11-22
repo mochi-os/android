@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Пешфарз</string>
     <string name="feeds_ai_prompt_custom">Танзимшаванда</string>
     <string name="feeds_ai_prompt_variables">Тағйирёбандаҳо: %1$s</string>
-    <string name="feeds_link">Пайванд</string>
-    <string name="feeds_share_link_title">Пайванди навор</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s шарҳ</item>
         <item quantity="other">%1$s шарҳ</item>

@@ -16,7 +16,6 @@
     <string name="crm_create_object">Эҷоди объект</string>
     <string name="crm_search">Ҷустуҷӯ</string>
     <string name="crm_settings">Танзимот</string>
-    <string name="crm_link">Пайванд</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Содиротро нигоҳ доштан нашуд</string>
     <string name="crm_sort_rank">Дастӣ</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Ягон CRM ёфт нашуд</string>
     <string name="crm_create_blocked_no_parents">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
     <string name="crm_export_csv">Содироти CSV</string>
-    <string name="crm_share_link_title">Мубодилаи CRM</string>
     <string name="crm_export_saved">Маълумоти CRM нигоҳ дошта шуд</string>
     <string name="crm_create_upload_json">Файли .zip ё .json бор кунед</string>
     <string name="crm_create_blocked_no_options">Эҷод кардан ғайриимкон: %1$s ҳатмист, аммо имконоти интихоб надорад. Дар Тарҳ имконот илова кунед.</string>

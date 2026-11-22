@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Bal soragy</string>
     <string name="forums_ai_prompt_tag_label">Bellik soragy</string>
     <string name="forums_ai_prompt_variables">Üýtgeýänler: %1$s</string>
-    <string name="forums_link">Salgy</string>
     <string name="forums_moderation_ban_message">Siz çäklendirmäni aýyrýançaňyz foruma girip bilmez.</string>
     <string name="forums_moderation_ban_title">%1$s gadagan edilsinmi?</string>
     <string name="forums_moderation_log_empty_subtitle">Heniz moderasiýa hereketleri bellige alynmady</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forumyň ady üýtgedildi</string>
     <string name="forums_settings_name_clear_cd">Ady arassala</string>
     <string name="forums_settings_unsubscribe_section">Forumdan ýazylyşy ýatyr</string>
-    <string name="forums_share_link_title">Forum salgysy</string>
     <string name="forums_find_found_by_url">URL arkaly tapyldy</string>
     <string name="forums_moderation_pending_posts">Garaşylýan ýazgylar (%1$s)</string>
     <string name="forums_moderation_pending_comments">Garaşylýan teswirler (%1$s)</string>

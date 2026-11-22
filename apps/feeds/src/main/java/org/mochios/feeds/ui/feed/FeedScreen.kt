@@ -55,6 +55,7 @@ import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Repeat
@@ -166,9 +167,9 @@ import org.mochios.android.ui.components.videoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.mediumAddress
 import org.mochios.android.ui.components.rememberCopier
+import org.mochios.android.share.ShareSheet
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
-import org.mochios.android.util.shareLink
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Post
@@ -234,7 +235,6 @@ fun FeedScreen(
     val rssCopiedMessage = stringResource(R.string.feeds_rss_url_copied)
     val rssClipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
     val unsubscribedMessage = stringResource(R.string.feeds_unsubscribed)
-    val shareLinkTitle = stringResource(R.string.feeds_share_link_title)
     // True while the unsubscribe confirmation dialog is open. It stays open,
     // its button spinning, until the unsubscribe answers; only success closes it.
     var pendingUnsubscribe by remember { mutableStateOf(false) }
@@ -247,10 +247,6 @@ fun FeedScreen(
             when (event) {
                 is FeedActionEvent.RssUrlReady -> {
                     copier.copy(event.url, label = rssClipboardLabel, message = rssCopiedMessage)
-                }
-
-                is FeedActionEvent.ShareLinkReady -> {
-                    shareLink(context, event.link, shareLinkTitle)
                 }
 
                 is FeedActionEvent.Unsubscribed -> {
@@ -702,12 +698,12 @@ fun FeedScreen(
                                 // aggregate has no single feed to share.
                                 if (!viewModel.isAllFeeds && permissions.manage) {
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_link)) },
+                                        text = { Text(stringResource(MochiR.string.share_title)) },
                                         onClick = {
-                                            viewModel.shareLink()
+                                            viewModel.share()
                                             showOverflowMenu = false
                                         },
-                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                        leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
                                     )
                                 }
                                 // The aggregate is the app's own icon.
@@ -1016,6 +1012,8 @@ fun FeedScreen(
                 dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
+
+        ShareSheet(viewModel.shares)
 
         if (revokeRssOpen) {
             RssRevokeDialog(

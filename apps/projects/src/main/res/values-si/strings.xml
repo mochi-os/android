@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">අච්චුවක් තෝරන්න</string>
     <string name="projects_create_next">ඊළඟ</string>
     <string name="projects_filter">පෙරහන</string>
-    <string name="projects_link">සබැඳිය</string>
     <string name="projects_filter_clear_all">සියල්ල හිස් කරන්න</string>
     <string name="projects_filter_all">සියල්ල</string>
     <string name="projects_filter_other">වෙනත්</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">මෙම ඇමුණුම ස්ථිරවම මකා දැමෙනු ඇත.</string>
     <string name="projects_attachment_delete_confirm_title">ඇමුණුම මකන්නද?</string>
     <string name="projects_settings_unsubscribe_section">ව්‍යාපෘති දායකත්වය අවලංගු කරන්න</string>
-    <string name="projects_share_link_title">ව්‍යාපෘතිය බෙදාගන්න</string>
     <string name="projects_sort_filter_title">තෝරා පෙරන්න</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 වැනි කියවිය හැකි ID සඳහා භාවිතා වේ</string>
     <plurals name="projects_request_conflicts">

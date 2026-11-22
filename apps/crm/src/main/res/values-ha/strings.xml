@@ -16,7 +16,6 @@
     <string name="crm_create_object">Ƙirƙira abu</string>
     <string name="crm_search">Bincika</string>
     <string name="crm_settings">Saitunan</string>
-    <string name="crm_link">Hanyar haɗi</string>
     <string name="crm_design">Zane</string>
     <string name="crm_export_failed">An kasa ajiye fitarwar</string>
     <string name="crm_sort_rank">Hannu</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Babu CRMs da aka samu</string>
     <string name="crm_create_blocked_no_parents">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
     <string name="crm_export_csv">Fitar da CSV</string>
-    <string name="crm_share_link_title">Raba CRM</string>
     <string name="crm_export_saved">An adana bayanan CRM</string>
     <string name="crm_create_upload_json">Loda fayil ɗin .zip ko .json</string>
     <string name="crm_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>

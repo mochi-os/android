@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Prompt oceny</string>
     <string name="forums_ai_prompt_tag_label">Prompt tagów</string>
     <string name="forums_ai_prompt_variables">Zmienne: %1$s</string>
-    <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Ta osoba traci dostęp do forum, dopóki nie usuniesz ograniczenia.</string>
     <string name="forums_moderation_ban_title">Zbanować %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Nie zarejestrowano jeszcze żadnych działań moderacyjnych</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Zmieniono nazwę forum</string>
     <string name="forums_settings_name_clear_cd">Wyczyść nazwę</string>
     <string name="forums_settings_unsubscribe_section">Zrezygnuj z subskrypcji forum</string>
-    <string name="forums_share_link_title">Link do forum</string>
     <string name="forums_find_found_by_url">Znaleziono po adresie URL</string>
     <string name="forums_moderation_pending_posts">Oczekujące wpisy (%1$s)</string>
     <string name="forums_moderation_pending_comments">Oczekujące komentarze (%1$s)</string>

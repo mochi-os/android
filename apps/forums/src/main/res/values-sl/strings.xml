@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Poziv za ocenjevanje</string>
     <string name="forums_ai_prompt_tag_label">Poziv za oznake</string>
     <string name="forums_ai_prompt_variables">Spremenljivke: %1$s</string>
-    <string name="forums_link">Povezava</string>
     <string name="forums_moderation_ban_message">Izgubi dostop do foruma, dokler ne odstranite omejitve.</string>
     <string name="forums_moderation_ban_title">Ali želite prepovedati uporabnika %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Zabeleženih dejanj moderiranja še ni</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Forum preimenovan</string>
     <string name="forums_settings_name_clear_cd">Počisti ime</string>
     <string name="forums_settings_unsubscribe_section">Odjava s foruma</string>
-    <string name="forums_share_link_title">Povezava foruma</string>
     <string name="forums_find_found_by_url">Najdeno prek URL-ja</string>
     <string name="forums_moderation_pending_posts">Čakajoče objave (%1$s)</string>
     <string name="forums_moderation_pending_comments">Čakajoči komentarji (%1$s)</string>

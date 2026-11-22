@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">בחר תבנית</string>
     <string name="projects_create_next">הבא</string>
     <string name="projects_filter">סינון</string>
-    <string name="projects_link">קישור</string>
     <string name="projects_filter_clear_all">נקה הכול</string>
     <string name="projects_filter_all">הכול</string>
     <string name="projects_filter_other">אחר</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">הקובץ המצורף הזה יימחק לצמיתות.</string>
     <string name="projects_attachment_delete_confirm_title">למחוק את הקובץ המצורף?</string>
     <string name="projects_settings_unsubscribe_section">ביטול הרשמה לפרויקט</string>
-    <string name="projects_share_link_title">שיתוף הפרויקט</string>
     <string name="projects_sort_filter_title">מיון וסינון</string>
     <string name="projects_create_prefix_hint">משמש למזהים קריאים כמו %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

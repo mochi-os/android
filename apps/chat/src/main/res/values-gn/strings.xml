@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s omoneĩ chat iñangirũ kuéra guive añoite.</string>
     <string name="chat_message_earlier">Ñe\'ẽmondo ko cuenta oñembojoapy mboyve Mochi-pe ñemiguáva ha ndaikatúi oñemoñe\'ẽ ko\'ápe</string>
     <string name="chat_message_excluded">Ñemiguáva ambue dispositivo-pe ĝuarãnte</string>
-    <string name="chat_setup">Emboheko</string>
+    <string name="chat_message_changed">Omondóva ilave ñemiguarã oñemoambue</string>    <string name="chat_setup">Emboheko</string>
     <string name="chat_jump_bottom">Eho guýpe</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">Eho %1$s ñe\'ẽmondo pyahúpe</item>
@@ -184,6 +184,7 @@
     <string name="chat_message_mismatched">Oñemondo peteĩ dispositivo ilave ndojojoguáiva guive</string>
     <string name="chat_list_select">Eiporavo peteĩ chat</string>
     <string name="chat_message_discard">Mboyke</string>
+    <string name="chat_message_unencrypted">Emondo ñemigua\'ỹre</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Marandu ipukueterei %1$s tai rupi</item>
     </plurals>

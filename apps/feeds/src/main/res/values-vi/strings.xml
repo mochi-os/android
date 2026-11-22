@@ -204,8 +204,6 @@
     <string name="feeds_ai_prompt_default">Mặc định</string>
     <string name="feeds_ai_prompt_custom">Tùy chỉnh</string>
     <string name="feeds_ai_prompt_variables">Biến: %1$s</string>
-    <string name="feeds_link">Liên kết</string>
-    <string name="feeds_share_link_title">Liên kết nguồn cấp</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s bình luận</item>
     </plurals>

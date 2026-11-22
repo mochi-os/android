@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Ledetekst for poeng</string>
     <string name="forums_ai_prompt_tag_label">Ledetekst for tagger</string>
     <string name="forums_ai_prompt_variables">Variabler: %1$s</string>
-    <string name="forums_link">Lenke</string>
     <string name="forums_moderation_ban_message">Personen mister tilgang til forumet til du fjerner begrensningen.</string>
     <string name="forums_moderation_ban_title">Vil du utestenge %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Ingen modereringshandlinger er registrert ennå</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forumet har fått nytt navn</string>
     <string name="forums_settings_name_clear_cd">Tøm navn</string>
     <string name="forums_settings_unsubscribe_section">Meld deg av forumet</string>
-    <string name="forums_share_link_title">Forumlenke</string>
     <string name="forums_find_found_by_url">Funnet via URL</string>
     <string name="forums_moderation_pending_posts">Ventende innlegg (%1$s)</string>
     <string name="forums_moderation_pending_comments">Ventende kommentarer (%1$s)</string>

@@ -37,6 +37,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
+import org.mochios.android.share.Shared
 import org.mochios.projects.ui.board.allOptions
 import org.mochios.projects.ui.board.boardClass
 import org.mochios.projects.ui.board.boardOptions
@@ -174,9 +175,10 @@ class ProjectViewModel @Inject constructor(
     private val _collapsedColumns = MutableStateFlow(collapsedColumnsStore.get(projectId))
     val collapsedColumns: StateFlow<Map<String, Set<String>>> = _collapsedColumns.asStateFlow()
 
-    /** Emits the project's share link once fetched, for the screen to share. */
-    private val _shareLink = MutableSharedFlow<String>()
-    val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The project, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
 
     // A failure after the project has loaded - a mutation, an export, a pulled
     // refresh: uiState.error only renders while nothing is loaded, so these
@@ -388,15 +390,21 @@ class ProjectViewModel @Inject constructor(
         activeViewStore.set(projectId, viewId)
     }
 
-    /** Fetch the project's share link and emit it for the screen to share. */
-    fun shareProject() {
+    /**
+     * Share the project: by its name and address, and to other apps by the
+     * link another server joins it by, which the server assembles.
+     */
+    fun share() {
         viewModelScope.launch {
             try {
                 // share refuses a fingerprint; the route id may be one.
                 val link = repository.getShareLink(entityId())
-                if (link.isNotBlank()) {
-                    _shareLink.emit(link)
-                }
+                val project = _uiState.value.projectDetails?.project
+                val address = sessionManager.getServerUrlBlocking().trimEnd('/') + "/projects/" +
+                    (project?.fingerprint?.takeIf { it.isNotEmpty() } ?: projectId)
+                _shares.emit(Shared(text = project?.name.orEmpty(), url = address, link = link))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }

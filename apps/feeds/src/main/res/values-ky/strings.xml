@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Демейки</string>
     <string name="feeds_ai_prompt_custom">Ыңгайлаштырылган</string>
     <string name="feeds_ai_prompt_variables">Өзгөрмөлөр: %1$s</string>
-    <string name="feeds_link">Шилтеме</string>
-    <string name="feeds_share_link_title">Тасма шилтемеси</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s комментарий</item>
         <item quantity="other">%1$s комментарий</item>

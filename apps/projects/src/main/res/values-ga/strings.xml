@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Roghnaigh teimpléad</string>
     <string name="projects_create_next">Ar aghaidh</string>
     <string name="projects_filter">Scag</string>
-    <string name="projects_link">Nasc</string>
     <string name="projects_filter_clear_all">Glan an t-iomlán</string>
     <string name="projects_filter_all">Uile</string>
     <string name="projects_filter_other">Eile</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Scriosfar an ceangaltán seo go buan.</string>
     <string name="projects_attachment_delete_confirm_title">Scrios an ceangaltán?</string>
     <string name="projects_settings_unsubscribe_section">Díliostáil ón tionscadal</string>
-    <string name="projects_share_link_title">Comhroinn an tionscadal</string>
     <string name="projects_sort_filter_title">Sórtáil agus scag</string>
     <string name="projects_create_prefix_hint">Úsáidtear le haghaidh IDanna inléite mar %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

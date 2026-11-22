@@ -361,6 +361,9 @@
     <string name="game_system_score_resume">استأنف %1$s اللعب</string>
     <string name="game_not_found">لم يتم العثور على اللعبة</string>
     <string name="game_chat_move_played_you">لعبت %1$s</string>
+    <string name="share_title">مشاركة</string>
+    <string name="share_feed">النشر في تغذية</string>
+    <string name="share_chat">الإرسال في محادثة</string>
     <string name="devices_add">إضافة جهاز</string>
     <string name="devices_copy">نسخ %1$s</string>
     <string name="devices_create">إنشاء</string>

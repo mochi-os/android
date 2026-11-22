@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Թարմացվեց %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” էջը դեռ գոյություն չունի։</string>
-    <string name="wikis_pageview_share_chooser">Վիքիի հղում</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Հղում</string>
     <string name="wikis_open_sidebar">Բացել կողագոտին</string>
     <string name="wikis_search_placeholder">Որոնել wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Վստա՞հ եք, որ ուզում եք չեղարկել %1$s-ի բաժանորդագրությունը։</string>

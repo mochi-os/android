@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s ຮັບການສົນທະນາຈາກໝູ່ເທົ່ານັ້ນ.</string>
     <string name="chat_message_earlier">ຂໍ້ຄວາມກ່ອນທີ່ບັນຊີນີ້ຖືກເພີ່ມໃສ່ Mochi ຖືກເຂົ້າລະຫັດ ແລະ ບໍ່ສາມາດອ່ານໄດ້ຢູ່ບ່ອນນີ້</string>
     <string name="chat_message_excluded">ເຂົ້າລະຫັດສຳລັບອຸປະກອນອື່ນເທົ່ານັ້ນ</string>
-    <string name="chat_setup">ຕັ້ງຄ່າ</string>
+    <string name="chat_message_changed">ກະແຈເຂົ້າລະຫັດຂອງຜູ້ສົ່ງປ່ຽນແລ້ວ</string>    <string name="chat_setup">ຕັ້ງຄ່າ</string>
     <string name="chat_jump_bottom">ໄປຫາລຸ່ມສຸດ</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">ໄປຫາ %1$s ຂໍ້ຄວາມໃໝ່</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">ສົ່ງມາຈາກອຸປະກອນທີ່ກະແຈບໍ່ກົງກັນ</string>
     <string name="chat_list_select">ເລືອກສົນທະນາ</string>
     <string name="chat_message_discard">ຖິ້ມ</string>
+    <string name="chat_message_unencrypted">ສົ່ງໂດຍບໍ່ເຂົ້າລະຫັດ</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">ຂໍ້ຄວາມຍາວເກີນ %1$s ຕົວອັກສອນ</item>
     </plurals>

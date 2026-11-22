@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">स्कोअर प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_tag_label">टॅग प्रॉम्प्ट</string>
     <string name="forums_ai_prompt_variables">चल: %1$s</string>
-    <string name="forums_link">दुवा</string>
     <string name="forums_moderation_ban_message">तुम्ही निर्बंध काढेपर्यंत फोरमवरील प्रवेश गमावतील.</string>
     <string name="forums_moderation_ban_title">%1$s वर बंदी घालायची?</string>
     <string name="forums_moderation_log_empty_subtitle">अद्याप कोणतीही नियंत्रण कृती नोंदवली गेली नाही</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">फोरमचे नाव बदलले</string>
     <string name="forums_settings_name_clear_cd">नाव साफ करा</string>
     <string name="forums_settings_unsubscribe_section">फोरमची सदस्यता रद्द करा</string>
-    <string name="forums_share_link_title">फोरम दुवा</string>
     <string name="forums_find_found_by_url">URL द्वारे सापडले</string>
     <string name="forums_moderation_pending_posts">प्रलंबित पोस्ट (%1$s)</string>
     <string name="forums_moderation_pending_comments">प्रलंबित टिप्पण्या (%1$s)</string>

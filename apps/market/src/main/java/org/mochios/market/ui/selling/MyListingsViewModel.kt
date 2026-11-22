@@ -22,6 +22,10 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.LoadState
 import org.mochios.android.util.Paging
 import org.mochios.android.util.append
+import org.mochios.android.auth.SessionManager
+import org.mochios.android.i18n.Format
+import org.mochios.android.share.Shared
+import org.mochios.market.ui.components.listingShare
 import org.mochios.market.model.Account
 import org.mochios.market.model.Listing
 import org.mochios.market.repository.MarketRepository
@@ -81,10 +85,21 @@ sealed class MyListingsEvent {
 @HiltViewModel
 class MyListingsViewModel @Inject constructor(
     private val repo: MarketRepository,
+    private val session: SessionManager,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(MyListingsUiState())
     val state: StateFlow<MyListingsUiState> = _state.asStateFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** A listing, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
+
+    /** Share [listing], its price in [format]. */
+    fun share(listing: Listing, format: Format) {
+        _shares.tryEmit(listingShare(listing, session.getServerUrlBlocking(), format))
+    }
 
     private val _events = MutableSharedFlow<MyListingsEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<MyListingsEvent> = _events.asSharedFlow()

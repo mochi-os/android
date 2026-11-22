@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Khetha iteyimpleyithi</string>
     <string name="projects_create_next">Okulandelayo</string>
     <string name="projects_filter">Hluza</string>
-    <string name="projects_link">Ikhonkco</string>
     <string name="projects_filter_clear_all">Cima konke</string>
     <string name="projects_filter_all">Zonke</string>
     <string name="projects_filter_other">Okunye</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Esi siqhoboshelo siza kucinywa ngonaphakade.</string>
     <string name="projects_attachment_delete_confirm_title">Cima isiqhoboshelo?</string>
     <string name="projects_settings_unsubscribe_section">Rhoxisa umrhumo weprojekthi</string>
-    <string name="projects_share_link_title">Yabelana ngeprojekthi</string>
     <string name="projects_sort_filter_title">Hlela uze uhluze</string>
     <string name="projects_create_prefix_hint">Isetyenziselwa ii-ID ezifundekayo ezifana ne-%1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

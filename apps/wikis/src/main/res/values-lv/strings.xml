@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Atjaunināts %1$s</string>
     <string name="wikis_pageview_not_found_description">Lapa „%1$s\" vēl neeksistē.</string>
-    <string name="wikis_pageview_share_chooser">Wiki saite</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Saite</string>
     <string name="wikis_open_sidebar">Atvērt sānu joslu</string>
     <string name="wikis_search_placeholder">Meklēt wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Vai tiešām vēlaties atteikties no %1$s?</string>

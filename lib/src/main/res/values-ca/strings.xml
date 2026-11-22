@@ -355,6 +355,9 @@
     <string name="game_system_score_resume">%1$s ha reprès la partida</string>
     <string name="game_not_found">No s\'ha trobat la partida</string>
     <string name="game_chat_move_played_you">Has jugat %1$s</string>
+    <string name="share_title">Comparteix</string>
+    <string name="share_feed">Publica en un canal</string>
+    <string name="share_chat">Envia en un xat</string>
     <string name="devices_add">Afegeix un dispositiu</string>
     <string name="devices_copy">Copia %1$s</string>
     <string name="devices_create">Crea</string>

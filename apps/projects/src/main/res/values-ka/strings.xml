@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">აირჩიეთ შაბლონი</string>
     <string name="projects_create_next">შემდეგი</string>
     <string name="projects_filter">ფილტრი</string>
-    <string name="projects_link">ბმული</string>
     <string name="projects_filter_clear_all">ყველაფრის გასუფთავება</string>
     <string name="projects_filter_all">ყველა</string>
     <string name="projects_filter_other">სხვა</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>
     <string name="projects_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
     <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის შეწყვეტა</string>
-    <string name="projects_share_link_title">პროექტის გაზიარება</string>
     <string name="projects_sort_filter_title">დალაგება და გაფილტვრა</string>
     <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგორიცაა %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

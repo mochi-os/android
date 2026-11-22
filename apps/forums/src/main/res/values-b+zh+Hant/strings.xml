@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">評分提示</string>
     <string name="forums_ai_prompt_tag_label">標籤提示</string>
     <string name="forums_ai_prompt_variables">變數：%1$s</string>
-    <string name="forums_link">連結</string>
     <string name="forums_moderation_ban_message">在你解除限制之前，對方將無法存取該論壇。</string>
     <string name="forums_moderation_ban_title">封鎖 %1$s？</string>
     <string name="forums_moderation_log_empty_subtitle">尚未記錄任何管理操作</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">論壇已重新命名</string>
     <string name="forums_settings_name_clear_cd">清除名稱</string>
     <string name="forums_settings_unsubscribe_section">退訂論壇</string>
-    <string name="forums_share_link_title">論壇連結</string>
     <string name="forums_find_found_by_url">透過網址找到</string>
     <string name="forums_moderation_pending_posts">待處理貼文 (%1$s)</string>
     <string name="forums_moderation_pending_comments">待處理留言 (%1$s)</string>

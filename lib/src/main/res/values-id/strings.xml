@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s melanjutkan permainan</string>
     <string name="game_not_found">Permainan tidak ditemukan</string>
     <string name="game_chat_move_played_you">Anda memainkan %1$s</string>
+    <string name="share_title">Bagikan</string>
+    <string name="share_feed">Kirim ke umpan</string>
+    <string name="share_chat">Kirim di chat</string>
     <string name="devices_add">Tambah perangkat</string>
     <string name="devices_copy">Salin %1$s</string>
     <string name="devices_create">Buat</string>

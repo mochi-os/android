@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Vyberte šablonu</string>
     <string name="projects_create_next">Další</string>
     <string name="projects_filter">Filtr</string>
-    <string name="projects_link">Odkaz</string>
     <string name="projects_filter_clear_all">Vymazat vše</string>
     <string name="projects_filter_all">Vše</string>
     <string name="projects_filter_other">Ostatní</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Tato příloha bude trvale smazána.</string>
     <string name="projects_attachment_delete_confirm_title">Smazat přílohu?</string>
     <string name="projects_settings_unsubscribe_section">Odhlásit odběr projektu</string>
-    <string name="projects_share_link_title">Sdílet projekt</string>
     <string name="projects_sort_filter_title">Řazení a filtr</string>
     <string name="projects_create_prefix_hint">Používá se pro čitelná ID jako %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

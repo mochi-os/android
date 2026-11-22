@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s erabiltzaileak lagunen txatak soilik onartzen ditu.</string>
     <string name="chat_message_earlier">Kontu hau Mochira gehitu aurreko mezuak enkriptatuta daude eta ezin dira hemen irakurri</string>
     <string name="chat_message_excluded">Beste gailuetarako soilik enkriptatua</string>
-    <string name="chat_setup">Konfiguratu</string>
+    <string name="chat_message_changed">Igorlearen enkriptatze-gakoa aldatu da</string>    <string name="chat_setup">Konfiguratu</string>
     <string name="chat_jump_bottom">Joan behera</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Joan mezu berri batera</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Gakoak bat ez datozen gailu batetik bidalia</string>
     <string name="chat_list_select">Hautatu txat bat</string>
     <string name="chat_message_discard">Baztertu</string>
+    <string name="chat_message_unencrypted">Bidali zifratu gabe</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Mezuak %1$s karaktere gehiegi ditu</item>
         <item quantity="other">Mezuak %1$s karaktere gehiegi ditu</item>

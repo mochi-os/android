@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Válassz egy sablont</string>
     <string name="projects_create_next">Következő</string>
     <string name="projects_filter">Szűrő</string>
-    <string name="projects_link">Hivatkozás</string>
     <string name="projects_filter_clear_all">Összes törlése</string>
     <string name="projects_filter_all">Összes</string>
     <string name="projects_filter_other">Egyéb</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Ez a melléklet véglegesen törlődik.</string>
     <string name="projects_attachment_delete_confirm_title">Törli a mellékletet?</string>
     <string name="projects_settings_unsubscribe_section">Leiratkozás a projektről</string>
-    <string name="projects_share_link_title">Projekt megosztása</string>
     <string name="projects_sort_filter_title">Rendezés és szűrés</string>
     <string name="projects_create_prefix_hint">Olvasható azonosítókhoz használatos, például %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

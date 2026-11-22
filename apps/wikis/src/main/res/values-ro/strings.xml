@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Actualizat %1$s</string>
     <string name="wikis_pageview_not_found_description">Pagina „%1$s\" încă nu există.</string>
-    <string name="wikis_pageview_share_chooser">Link către wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Deschide bara laterală</string>
     <string name="wikis_search_placeholder">Caută un wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Sigur doriți să dezabonați de la %1$s?</string>

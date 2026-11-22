@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">הנחיית ציון</string>
     <string name="forums_ai_prompt_tag_label">הנחיית תגית</string>
     <string name="forums_ai_prompt_variables">משתנים: %1$s</string>
-    <string name="forums_link">קישור</string>
     <string name="forums_moderation_ban_message">המשתמש מאבד גישה לפורום עד שתסיר את ההגבלה.</string>
     <string name="forums_moderation_ban_title">לחסום את %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">עדיין לא נרשמו פעולות ניהול</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">שם הפורום שונה</string>
     <string name="forums_settings_name_clear_cd">נקה שם</string>
     <string name="forums_settings_unsubscribe_section">בטל מנוי לפורום</string>
-    <string name="forums_share_link_title">קישור לפורום</string>
     <string name="forums_find_found_by_url">נמצא לפי כתובת URL</string>
     <string name="forums_moderation_pending_posts">פוסטים ממתינים (%1$s)</string>
     <string name="forums_moderation_pending_comments">תגובות ממתינות (%1$s)</string>

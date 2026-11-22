@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s 只接受好友发起的聊天。</string>
     <string name="chat_message_earlier">此账户添加到 Mochi 之前的消息已加密，无法在此阅读</string>
     <string name="chat_message_excluded">仅为其他设备加密</string>
-    <string name="chat_setup">设置</string>
+    <string name="chat_message_changed">发送者的加密密钥已更改</string>    <string name="chat_setup">设置</string>
     <string name="chat_jump_bottom">跳至底部</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">跳至 %1$s 条新消息</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">发自密钥不匹配的设备</string>
     <string name="chat_list_select">选择对话</string>
     <string name="chat_message_discard">放弃</string>
+    <string name="chat_message_unencrypted">不加密发送</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">消息超出 %1$s 个字符</item>
     </plurals>

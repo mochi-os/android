@@ -173,6 +173,7 @@
     <string name="chat_refused_friends_only">%1$s รับแชตจากเพื่อนเท่านั้น</string>
     <string name="chat_message_earlier">ข้อความจากก่อนที่จะเพิ่มบัญชีนี้ใน Mochi ถูกเข้ารหัสไว้และไม่สามารถอ่านได้ที่นี่</string>
     <string name="chat_message_excluded">เข้ารหัสสำหรับอุปกรณ์อื่นเท่านั้น</string>
+    <string name="chat_message_changed">คีย์เข้ารหัสของผู้ส่งเปลี่ยนไป</string>
     <string name="chat_setup">ตั้งค่า</string>
     <string name="chat_jump_bottom">ไปที่ล่างสุด</string>
     <plurals name="chat_jump_newer">
@@ -182,6 +183,7 @@
     <string name="chat_message_mismatched">ส่งจากอุปกรณ์ที่คีย์ไม่ตรงกัน</string>
     <string name="chat_list_select">เลือกแชต</string>
     <string name="chat_message_discard">ละทิ้ง</string>
+    <string name="chat_message_unencrypted">ส่งโดยไม่เข้ารหัส</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">ข้อความยาวเกิน %1$s ตัวอักษร</item>
     </plurals>

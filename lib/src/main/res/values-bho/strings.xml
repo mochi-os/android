@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s खेल फेर से शुरू कइलें</string>
     <string name="game_not_found">खेल ना मिलल</string>
     <string name="game_chat_move_played_you">रउरा %1$s खेलनीं</string>
+    <string name="share_title">साझा करीं</string>
+    <string name="share_feed">फीड पर पोस्ट करीं</string>
+    <string name="share_chat">चैट में भेजीं</string>
     <string name="devices_add">उपकरण शामिल करीं</string>
     <string name="devices_copy">%1$s कॉपी करीं</string>
     <string name="devices_create">बनाईं</string>

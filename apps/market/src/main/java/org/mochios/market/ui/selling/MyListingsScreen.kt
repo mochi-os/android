@@ -29,6 +29,7 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
@@ -68,6 +69,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.share.ShareSheet
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -83,6 +85,7 @@ import org.mochios.market.ui.components.MarketListPrice
 import org.mochios.market.ui.components.MarketListRow
 import org.mochios.market.ui.components.MarketListSpacing
 import org.mochios.market.ui.components.StripeOnboardingBanner
+import org.mochios.market.ui.components.shareable
 import org.mochios.market.ui.components.shownStatus
 import org.mochios.market.ui.dialog.AppealRemovalDialog
 import org.mochios.market.ui.dialog.RemoveListingDialog
@@ -97,6 +100,7 @@ fun MyListingsScreen(
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val visible = remember(state.listings, state.searchQuery) { viewModel.visibleListings() }
+    val format = LocalFormat.current
     val marketRepo = remember(context) {
         EntryPointAccessors
             .fromApplication(context.applicationContext, MyListingsEntryPoint::class.java)
@@ -220,6 +224,7 @@ fun MyListingsScreen(
                             onRelist = { viewModel.relistListing(listing, relistFailedFallback) },
                             onClear = { viewModel.deleteListing(listing, deleteFailedFallback) },
                             onAppeal = { appealCandidate = listing },
+                            onShare = { viewModel.share(listing, format) },
                         )
                     }
                     when (load) {
@@ -268,6 +273,8 @@ fun MyListingsScreen(
             )
         }
     }
+
+    ShareSheet(viewModel.shares)
 
     // Appeal removal dialog.
     appealCandidate?.let { candidate ->
@@ -356,6 +363,7 @@ private fun ListingRow(
     onRelist: () -> Unit,
     onClear: () -> Unit,
     onAppeal: () -> Unit,
+    onShare: () -> Unit,
 ) {
     val format = LocalFormat.current
     MarketListRow(
@@ -397,6 +405,7 @@ private fun ListingRow(
             onDelete = onDelete,
             onRelist = onRelist,
             onClear = onClear,
+            onShare = onShare,
         )
     }
 }
@@ -404,7 +413,7 @@ private fun ListingRow(
 /**
  * The web's menu for a listing: a draft is edited or deleted; one moderation
  * rejected or otherwise removed is cleared from the seller's list; anything
- * else is relisted as a new draft or removed.
+ * else is relisted as a new draft or removed, and one live for sale shared.
  */
 @Composable
 private fun ListingMenu(
@@ -413,6 +422,7 @@ private fun ListingMenu(
     onDelete: () -> Unit,
     onRelist: () -> Unit,
     onClear: () -> Unit,
+    onShare: () -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box {
@@ -456,6 +466,16 @@ private fun ListingMenu(
                     leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
             } else {
+                if (listing.shareable()) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(MochiR.string.share_title)) },
+                        onClick = {
+                            expanded = false
+                            onShare()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
+                    )
+                }
                 MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_action_relist)) },
                     onClick = {

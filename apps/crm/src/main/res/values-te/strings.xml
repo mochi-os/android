@@ -16,7 +16,6 @@
     <string name="crm_create_object">ఆబ్జెక్ట్‌ను సృష్టించండి</string>
     <string name="crm_search">శోధన</string>
     <string name="crm_settings">సెట్టింగ్‌లు</string>
-    <string name="crm_link">లింక్</string>
     <string name="crm_design">డిజైన్</string>
     <string name="crm_export_failed">ఎగుమతిని సేవ్ చేయలేకపోయాము</string>
     <string name="crm_sort_rank">మాన్యువల్</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRMలు ఏవీ కనుగొనబడలేదు</string>
     <string name="crm_create_blocked_no_parents">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
     <string name="crm_export_csv">CSVని ఎగుమతి చేయండి</string>
-    <string name="crm_share_link_title">CRM భాగస్వామ్యం</string>
     <string name="crm_export_saved">CRM డేటా సేవ్ చేయబడింది</string>
     <string name="crm_create_upload_json">.zip లేదా .json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="crm_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>

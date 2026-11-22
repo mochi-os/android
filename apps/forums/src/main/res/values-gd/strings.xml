@@ -213,7 +213,6 @@
     <string name="forums_ai_prompt_score_label">Brodadh sgòraidh</string>
     <string name="forums_ai_prompt_tag_label">Brodadh taga</string>
     <string name="forums_ai_prompt_variables">Caochladairean: %1$s</string>
-    <string name="forums_link">Ceangal</string>
     <string name="forums_moderation_ban_message">Caillidh iad inntrigeadh don fhòram gus an toir thu air falbh an cuingealachadh.</string>
     <string name="forums_moderation_ban_title">Toirmisg %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Cha deach gnìomhan modaireachd a chlàradh fhathast</string>
@@ -242,7 +241,6 @@
     <string name="forums_settings_forum_renamed">Chaidh am fòram ath-ainmeachadh</string>
     <string name="forums_settings_name_clear_cd">Falamhaich an t-ainm</string>
     <string name="forums_settings_unsubscribe_section">Dì-chlàraich bhon fhòram</string>
-    <string name="forums_share_link_title">Ceangal an fhòraim</string>
     <string name="forums_find_found_by_url">Air a lorg le URL</string>
     <string name="forums_moderation_pending_posts">Puist rin dèiligeadh (%1$s)</string>
     <string name="forums_moderation_pending_comments">Beachdan rin dèiligeadh (%1$s)</string>

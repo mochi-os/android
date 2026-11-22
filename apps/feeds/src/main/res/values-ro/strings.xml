@@ -210,8 +210,6 @@
     <string name="feeds_ai_prompt_default">Implicit</string>
     <string name="feeds_ai_prompt_custom">Personalizat</string>
     <string name="feeds_ai_prompt_variables">Variabile: %1$s</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Link către flux</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s comentariu</item>
         <item quantity="few">%1$s comentarii</item>

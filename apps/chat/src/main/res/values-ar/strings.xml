@@ -183,7 +183,7 @@
     <string name="chat_refused_friends_only">يقبل %1$s المحادثات من الأصدقاء فقط.</string>
     <string name="chat_message_earlier">الرسائل السابقة لإضافة هذا الحساب إلى Mochi مشفرة ولا يمكن قراءتها هنا</string>
     <string name="chat_message_excluded">مشفرة لأجهزة أخرى فقط</string>
-    <string name="chat_setup">إعداد</string>
+    <string name="chat_message_changed">تغيّر مفتاح التشفير لدى المرسل</string>    <string name="chat_setup">إعداد</string>
     <string name="chat_jump_bottom">الانتقال إلى الأسفل</string>
     <plurals name="chat_jump_newer">
         <item quantity="zero">الانتقال إلى %1$s رسالة جديدة</item>
@@ -197,6 +197,7 @@
     <string name="chat_message_mismatched">أُرسلت من جهاز لا تتطابق مفاتيحه</string>
     <string name="chat_list_select">اختر محادثة</string>
     <string name="chat_message_discard">تجاهل</string>
+    <string name="chat_message_unencrypted">إرسال دون تشفير</string>
     <plurals name="chat_message_too_long">
         <item quantity="zero">الرسالة أطول من الحد بمقدار %1$s حرف</item>
         <item quantity="one">الرسالة أطول من الحد بمقدار %1$s حرف</item>

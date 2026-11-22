@@ -21,6 +21,16 @@ private val SAID = setOf("FREQ", "INTERVAL", "BYDAY", "BYMONTHDAY", "BYMONTH", "
 private val TOKEN = Regex("^([+-]?\\d{1,2})?(SU|MO|TU|WE|TH|FR|SA)$")
 
 /**
+ * The editor's Repeat field in words, or null where its rule has parts the
+ * summary cannot say or the event does not repeat. The end is the last day
+ * the field holds, read in the event's own zone: a timed series' `UNTIL` is
+ * an instant in UTC, whose date can be the day after, so the rule is written
+ * as a whole-day one, whose `UNTIL` is that day itself.
+ */
+fun ruleWords(recurrence: Recurrence, resources: Resources, format: Format, locale: Locale): String? =
+    recurrence.rule(allday = true)?.let { rule -> ruleSummary(rule, resources, format, locale) }
+
+/**
  * A repeat rule the editor cannot express, put into words as the web editor
  * says it: "Every 2 weeks, on Tuesday and Thursday, 10 times". A rule with
  * parts it cannot say answers null, and nothing is shown.

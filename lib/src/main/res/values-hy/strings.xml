@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s-ը վերսկսեց խաղը</string>
     <string name="game_not_found">Խաղը չի գտնվել</string>
     <string name="game_chat_move_played_you">Դուք խաղացիք %1$s</string>
+    <string name="share_title">Կիսվել</string>
+    <string name="share_feed">Հրապարակել հոսքում</string>
+    <string name="share_chat">Ուղարկել զրույցում</string>
     <string name="devices_add">Ավելացնել սարք</string>
     <string name="devices_copy">Պատճենել %1$s</string>
     <string name="devices_create">Ստեղծել</string>

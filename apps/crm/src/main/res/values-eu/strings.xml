@@ -16,7 +16,6 @@
     <string name="crm_create_object">Sortu objektua</string>
     <string name="crm_search">Bilatu</string>
     <string name="crm_settings">Ezarpenak</string>
-    <string name="crm_link">Esteka</string>
     <string name="crm_design">Diseinua</string>
     <string name="crm_export_failed">Ezin izan da esportazioa gorde</string>
     <string name="crm_sort_rank">Eskuz</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Ez da CRMrik aurkitu</string>
     <string name="crm_create_blocked_no_parents">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
     <string name="crm_export_csv">Esportatu CSV</string>
-    <string name="crm_share_link_title">Partekatu CRM</string>
     <string name="crm_export_saved">CRM datuak gordeta</string>
     <string name="crm_create_upload_json">Igo .zip edo .json fitxategia</string>
     <string name="crm_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>

@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">एगो टेम्पलेट चुनीं</string>
     <string name="projects_create_next">अगिला</string>
     <string name="projects_filter">फिल्टर</string>
-    <string name="projects_link">लिंक</string>
     <string name="projects_filter_clear_all">सब साफ करीं</string>
     <string name="projects_filter_all">सब</string>
     <string name="projects_filter_other">दोसर</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ई संलग्नक हमेशा खातिर मिटा दिहल जाई।</string>
     <string name="projects_attachment_delete_confirm_title">संलग्नक मिटावल जाव?</string>
     <string name="projects_settings_unsubscribe_section">परियोजना से सदस्यता खतम करीं</string>
-    <string name="projects_share_link_title">परियोजना साझा करीं</string>
     <string name="projects_sort_filter_title">छाँटीं आ छानीं</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 जइसन पढ़े लायक ID खातिर इस्तेमाल होला</string>
     <plurals name="projects_request_conflicts">

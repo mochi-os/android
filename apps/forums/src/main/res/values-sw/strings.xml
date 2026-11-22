@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Maagizo ya alama</string>
     <string name="forums_ai_prompt_tag_label">Maagizo ya lebo</string>
     <string name="forums_ai_prompt_variables">Vigezo: %1$s</string>
-    <string name="forums_link">Kiungo</string>
     <string name="forums_moderation_ban_message">Atapoteza ufikiaji wa jukwaa hadi utakapoondoa kizuizi.</string>
     <string name="forums_moderation_ban_title">Umpige marufuku %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Bado hakuna vitendo vya usimamizi vilivyorekodiwa</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Jukwaa limebadilishwa jina</string>
     <string name="forums_settings_name_clear_cd">Futa jina</string>
     <string name="forums_settings_unsubscribe_section">Jiondoe kwenye jukwaa</string>
-    <string name="forums_share_link_title">Kiungo cha jukwaa</string>
     <string name="forums_find_found_by_url">Imepatikana kwa URL</string>
     <string name="forums_moderation_pending_posts">Machapisho yanayosubiri (%1$s)</string>
     <string name="forums_moderation_pending_comments">Maoni yanayosubiri (%1$s)</string>

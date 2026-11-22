@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Varsayılan</string>
     <string name="feeds_ai_prompt_custom">Özel</string>
     <string name="feeds_ai_prompt_variables">Değişkenler: %1$s</string>
-    <string name="feeds_link">Bağlantı</string>
-    <string name="feeds_share_link_title">Akış bağlantısı</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s yorum</item>
         <item quantity="other">%1$s yorum</item>

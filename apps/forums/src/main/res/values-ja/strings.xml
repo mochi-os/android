@@ -210,7 +210,6 @@
     <string name="forums_ai_prompt_score_label">スコアプロンプト</string>
     <string name="forums_ai_prompt_tag_label">タグプロンプト</string>
     <string name="forums_ai_prompt_variables">変数: %1$s</string>
-    <string name="forums_link">リンク</string>
     <string name="forums_moderation_ban_message">制限を解除するまで、このユーザーはフォーラムにアクセスできなくなります。</string>
     <string name="forums_moderation_ban_title">%1$s をBANしますか？</string>
     <string name="forums_moderation_log_empty_subtitle">記録されたモデレーション操作はまだありません</string>
@@ -239,7 +238,6 @@
     <string name="forums_settings_forum_renamed">フォーラムの名前を変更しました</string>
     <string name="forums_settings_name_clear_cd">名前を消去</string>
     <string name="forums_settings_unsubscribe_section">フォーラムの購読を解除</string>
-    <string name="forums_share_link_title">フォーラムのリンク</string>
     <string name="forums_find_found_by_url">URLで見つかりました</string>
     <string name="forums_moderation_pending_posts">保留中の投稿 (%1$s)</string>
     <string name="forums_moderation_pending_comments">保留中のコメント (%1$s)</string>

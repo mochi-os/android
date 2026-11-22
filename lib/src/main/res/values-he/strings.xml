@@ -357,6 +357,9 @@
     <string name="game_system_score_resume">%1$s חידש את המשחק</string>
     <string name="game_not_found">המשחק לא נמצא</string>
     <string name="game_chat_move_played_you">שיחקת %1$s</string>
+    <string name="share_title">שתף</string>
+    <string name="share_feed">פרסום בפיד</string>
+    <string name="share_chat">שליחה בצ\'אט</string>
     <string name="devices_add">הוספת מכשיר</string>
     <string name="devices_copy">העתק %1$s</string>
     <string name="devices_create">צור</string>

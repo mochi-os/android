@@ -196,8 +196,6 @@
     <string name="forums_settings_name_cancel_cd">Cancelar edición</string>
     <string name="forums_settings_save_name">Guardar nombre</string>
     <string name="forums_access_management">Gestión de acceso</string>
-    <string name="forums_link">Enlace</string>
-    <string name="forums_share_link_title">Enlace del foro</string>
     <string name="forums_access_level_moderate_full">Moderar, publicar, comentar, votar y ver</string>
     <string name="forums_access_level_post_full">Publicar, comentar, votar y ver</string>
     <string name="forums_access_level_comment_full">Comentar, votar y ver</string>

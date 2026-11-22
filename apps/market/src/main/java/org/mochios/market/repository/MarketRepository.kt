@@ -25,11 +25,9 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapEmpty
-import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
-import org.mochios.market.api.Changed
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
@@ -284,7 +282,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun publishListing(fields: Map<String, String?>): Changed<Listing> {
+    suspend fun publishListing(fields: Map<String, String?>): Listing {
         val id = fields["id"]
             ?: throw IllegalArgumentException("publishListing requires id")
         return try {
@@ -296,7 +294,7 @@ class MarketRepository @Inject constructor(
                 closes = fields["closes"],
                 extend = fields["extend"],
                 extension = fields["extension"],
-            ).unwrapRaw().also { knownListings.remove(id) }
+            ).unwrap().also { knownListings.remove(id) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -478,11 +476,11 @@ class MarketRepository @Inject constructor(
 
     // ---- Photos ----
 
-    suspend fun uploadPhoto(listing: String, file: File, tracker: UploadTracker? = null): Changed<Photo> {
+    suspend fun uploadPhoto(listing: String, file: File, tracker: UploadTracker? = null): Photo {
         return try {
             val listingPart = listing.toString().toRequestBody(text)
             val filePart = multipart("file", file, tracker)
-            api.uploadPhoto(listingPart, filePart).unwrapRaw()
+            api.uploadPhoto(listingPart, filePart).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -504,22 +502,18 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    /** Delete a photo of [listing]; answers what the listing's copies went without. */
-    suspend fun deletePhoto(id: String, listing: String): List<String> {
-        return try {
-            api.deletePhoto(id, listing).unwrapRaw().unsent.orEmpty()
+    suspend fun deletePhoto(id: String) {
+        try {
+            api.deletePhoto(id).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
 
-    /**
-     * Reorder [listing]'s photos; answers them in the server's new order, and
-     * what its copies went without.
-     */
-    suspend fun reorderPhotos(listing: String, ids: List<String>): Changed<List<Photo>> {
+    /** Reorder [listing]'s photos; answers them in the server's new order. */
+    suspend fun reorderPhotos(listing: String, ids: List<String>): List<Photo> {
         return try {
-            api.reorderPhotos(listing.toString(), gson.toJson(ids)).unwrapRaw()
+            api.reorderPhotos(listing.toString(), gson.toJson(ids)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

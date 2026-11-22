@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">テンプレートを選択</string>
     <string name="projects_create_next">次へ</string>
     <string name="projects_filter">フィルター</string>
-    <string name="projects_link">リンク</string>
     <string name="projects_filter_clear_all">すべてクリア</string>
     <string name="projects_filter_all">すべて</string>
     <string name="projects_filter_other">その他</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">この添付ファイルは完全に削除されます。</string>
     <string name="projects_attachment_delete_confirm_title">添付ファイルを削除しますか?</string>
     <string name="projects_settings_unsubscribe_section">プロジェクトの購読を解除</string>
-    <string name="projects_share_link_title">プロジェクトを共有</string>
     <string name="projects_sort_filter_title">並べ替えと絞り込み</string>
     <string name="projects_create_prefix_hint">%1$s-1、%1$s-2 のような読みやすい ID に使用されます</string>
     <plurals name="projects_request_conflicts">

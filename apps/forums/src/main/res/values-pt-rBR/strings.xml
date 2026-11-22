@@ -234,7 +234,6 @@
     <string name="forums_settings_forum_renamed">Fórum renomeado</string>
     <string name="forums_settings_name_clear_cd">Limpar nome</string>
     <string name="forums_settings_unsubscribe_section">Remover inscrição do fórum</string>
-    <string name="forums_share_link_title">Link do fórum</string>
     <string name="forums_find_found_by_url">Encontrado por URL</string>
     <string name="forums_moderation_pending_posts">Publicações pendentes (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentários pendentes (%1$s)</string>

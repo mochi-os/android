@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">به‌روزرسانی شده %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحه «%1$s» هنوز وجود ندارد.</string>
-    <string name="wikis_pageview_share_chooser">پیوند ویکی</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ویکی</string>
-    <string name="wikis_page_action_share">پیوند</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
     <string name="wikis_search_placeholder">جستجوی ویکی</string>
     <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک %1$s را قطع کنید؟</string>

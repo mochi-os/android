@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">ډیفالټ</string>
     <string name="feeds_ai_prompt_custom">دودیز</string>
     <string name="feeds_ai_prompt_variables">متغیرونه: %1$s</string>
-    <string name="feeds_link">لینک</string>
-    <string name="feeds_share_link_title">د فیډ لینک</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s تبصره</item>
         <item quantity="other">%1$s تبصرې</item>

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s vazhdoi lojën</string>
     <string name="game_not_found">Loja nuk u gjet</string>
     <string name="game_chat_move_played_you">Ti luajte %1$s</string>
+    <string name="share_title">Shpërndaj</string>
+    <string name="share_feed">Posto në një feed</string>
+    <string name="share_chat">Dërgo në një bisedë</string>
     <string name="devices_add">Shto një pajisje</string>
     <string name="devices_copy">Kopjo %1$s</string>
     <string name="devices_create">Krijo</string>

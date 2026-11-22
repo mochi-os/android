@@ -184,7 +184,7 @@
     <string name="chat_refused_friends_only">Dim ond sgyrsiau gan ffrindiau y mae %1$s yn eu derbyn.</string>
     <string name="chat_message_earlier">Mae negeseuon o cyn i\'r cyfrif hwn gael ei ychwanegu at Mochi wedi\'u hamgryptio ac ni ellir eu darllen yma</string>
     <string name="chat_message_excluded">Wedi\'i amgryptio ar gyfer dyfeisiau eraill yn unig</string>
-    <string name="chat_setup">Gosod</string>
+    <string name="chat_message_changed">Mae allwedd amgryptio\'r anfonwr wedi newid</string>    <string name="chat_setup">Gosod</string>
     <string name="chat_jump_bottom">Neidio i\'r gwaelod</string>
     <plurals name="chat_jump_newer">
         <item quantity="zero">Neidio i %1$s negeseuon newydd</item>
@@ -198,6 +198,7 @@
     <string name="chat_message_mismatched">Anfonwyd o ddyfais nad yw ei hallweddau\'n cyfateb</string>
     <string name="chat_list_select">Dewiswch sgwrs</string>
     <string name="chat_message_discard">Hepgor</string>
+    <string name="chat_message_unencrypted">Anfon heb amgryptio</string>
     <plurals name="chat_message_too_long">
         <item quantity="zero">Mae\'r neges %1$s nod yn rhy hir</item>
         <item quantity="one">Mae\'r neges %1$s nod yn rhy hir</item>

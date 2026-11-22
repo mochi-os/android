@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Uuendatud %1$s</string>
     <string name="wikis_pageview_not_found_description">Lehte „%1$s\" ei ole veel olemas.</string>
-    <string name="wikis_pageview_share_chooser">Viki link</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
     <string name="wikis_search_placeholder">Otsi wikit</string>
     <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimusest %1$s loobuda?</string>

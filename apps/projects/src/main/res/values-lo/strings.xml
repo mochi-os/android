@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ເລືອກແມ່ແບບ</string>
     <string name="projects_create_next">ຕໍ່ໄປ</string>
     <string name="projects_filter">ຕົວກອງ</string>
-    <string name="projects_link">ລິ້ງ</string>
     <string name="projects_filter_clear_all">ລ້າງທັງໝົດ</string>
     <string name="projects_filter_all">ທັງໝົດ</string>
     <string name="projects_filter_other">ອື່ນໆ</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ໄຟລ໌ແນບນີ້ຈະຖືກລຶບຖາວອນ.</string>
     <string name="projects_attachment_delete_confirm_title">ລຶບໄຟລ໌ແນບບໍ?</string>
     <string name="projects_settings_unsubscribe_section">ເຊົາຕິດຕາມໂຄງການ</string>
-    <string name="projects_share_link_title">ແບ່ງປັນໂຄງການ</string>
     <string name="projects_sort_filter_title">ຈັດຮຽງ ແລະ ກັ່ນຕອງ</string>
     <string name="projects_create_prefix_hint">ໃຊ້ສຳລັບ ID ທີ່ອ່ານໄດ້ ເຊັ່ນ %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

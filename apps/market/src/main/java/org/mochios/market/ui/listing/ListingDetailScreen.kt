@@ -47,6 +47,7 @@ import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -103,6 +104,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.share.ShareSheet
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.StatusTone
@@ -150,11 +152,13 @@ import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.components.conditionBadgeColor
 import org.mochios.market.ui.components.conditionLabel
 import org.mochios.market.ui.components.pricingLabel
+import org.mochios.market.ui.components.shareable
 import org.mochios.market.ui.components.shownStatus
 import org.mochios.market.ui.dialog.AppealRemovalDialog
 import org.mochios.market.ui.dialog.RemoveListingDialog
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
+import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -405,6 +409,7 @@ fun ListingDetailScreen(
                         onDelete = { deleteOpen = true },
                         onClear = { viewModel.deleteListing() },
                         onAppeal = { appealOpen = true },
+                        onShare = { viewModel.share(format) },
                         onCancelReservation = { viewModel.cancelReservation() },
                         cancellingReservation = state.cancellingReservation,
                         // Through the authenticated client, not a browser: the
@@ -464,6 +469,8 @@ fun ListingDetailScreen(
             onSuccess = { viewModel.load(listingId) },
         )
     }
+
+    ShareSheet(viewModel.shares)
 
     ReportDialogHost(
         open = reportOpen,
@@ -594,6 +601,7 @@ private fun ListingDetailContent(
     onDelete: () -> Unit,
     onClear: () -> Unit,
     onAppeal: () -> Unit,
+    onShare: () -> Unit,
     onCancelReservation: () -> Unit,
     cancellingReservation: Boolean,
     onAssetDownload: (Asset) -> Unit,
@@ -905,6 +913,7 @@ private fun ListingDetailContent(
                             onRelist = onRelist,
                             onClear = onClear,
                             onAppeal = onAppeal,
+                            onShare = onShare,
                         )
                     }
                 }
@@ -1059,7 +1068,7 @@ private fun DeliveryMethodChips(listing: Listing) {
  * The owner's actions on their listing, the same as the ⋯ menu on My
  * listings: a draft is edited or deleted; a rejected one is cleared from the
  * list or appealed; one otherwise removed is cleared from the list; anything
- * else is relisted or removed.
+ * else is relisted or removed, and one live for sale shared.
  */
 @Composable
 private fun OwnerActions(
@@ -1069,6 +1078,7 @@ private fun OwnerActions(
     onRelist: () -> Unit,
     onClear: () -> Unit,
     onAppeal: () -> Unit,
+    onShare: () -> Unit,
 ) {
     val status = listing.shownStatus()
     when {
@@ -1088,6 +1098,7 @@ private fun OwnerActions(
             OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
         }
         else -> {
+            if (listing.shareable()) OwnerAction(Icons.Outlined.Share, MochiR.string.share_title, onShare)
             OwnerAction(Icons.Default.Refresh, R.string.market_listings_action_relist, onRelist)
             OwnerAction(Icons.Outlined.Delete, R.string.market_listings_remove_listing, onDelete)
         }

@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ti bẹ̀rẹ̀ eré padà</string>
     <string name="game_not_found">A kò rí eré náà</string>
     <string name="game_chat_move_played_you">O ṣe %1$s</string>
+    <string name="share_title">Pín</string>
+    <string name="share_feed">Fi ránṣẹ́ sí feed kan</string>
+    <string name="share_chat">Fi ránṣẹ́ nínú chat</string>
     <string name="devices_add">Fi ẹ̀rọ kan kún</string>
     <string name="devices_copy">Ṣe àdàkọ %1$s</string>
     <string name="devices_create">Dá</string>

@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">更新 %1$s</string>
     <string name="wikis_pageview_not_found_description">ページ「%1$s」はまだ存在しません。</string>
-    <string name="wikis_pageview_share_chooser">ウィキのリンク</string>
     <string name="wikis_pageview_clipboard_label_rss">WikiのRSS URL</string>
-    <string name="wikis_page_action_share">リンク</string>
     <string name="wikis_open_sidebar">サイドバーを開く</string>
     <string name="wikis_search_placeholder">wikiを検索</string>
     <string name="wikis_unsubscribe_confirm_message">%1$sの購読を解除してもよろしいですか？</string>

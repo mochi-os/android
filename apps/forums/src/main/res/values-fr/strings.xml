@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Invite de notation</string>
     <string name="forums_ai_prompt_tag_label">Invite d\'étiquette</string>
     <string name="forums_ai_prompt_variables">Variables : %1$s</string>
-    <string name="forums_link">Lien</string>
     <string name="forums_moderation_ban_message">Cette personne perd l\'accès au forum jusqu\'à ce que vous leviez la restriction.</string>
     <string name="forums_moderation_ban_title">Bannir %1$s ?</string>
     <string name="forums_moderation_log_empty_subtitle">Aucune action de modération n\'a encore été enregistrée</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forum renommé</string>
     <string name="forums_settings_name_clear_cd">Effacer le nom</string>
     <string name="forums_settings_unsubscribe_section">Se désabonner du forum</string>
-    <string name="forums_share_link_title">Lien du forum</string>
     <string name="forums_find_found_by_url">Trouvé par URL</string>
     <string name="forums_moderation_pending_posts">Publications en attente (%1$s)</string>
     <string name="forums_moderation_pending_comments">Commentaires en attente (%1$s)</string>

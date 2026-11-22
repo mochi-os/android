@@ -30,6 +30,9 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.AttachmentOpener
+import org.mochios.android.i18n.Format
+import org.mochios.android.share.Shared
+import org.mochios.market.ui.components.listingShare
 import org.mochios.market.R
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
@@ -157,6 +160,17 @@ class ListingDetailViewModel @Inject constructor(
 
     private val _state = MutableStateFlow(ListingDetailUiState())
     val state: StateFlow<ListingDetailUiState> = _state.asStateFlow()
+
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The listing, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
+
+    /** Share the listing shown, its price in [format]. */
+    fun share(format: Format) {
+        val listing = _state.value.listing?.listing ?: return
+        _shares.tryEmit(listingShare(listing, session.getServerUrlBlocking(), format))
+    }
 
     private val _events = MutableSharedFlow<ListingDetailEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<ListingDetailEvent> = _events.asSharedFlow()

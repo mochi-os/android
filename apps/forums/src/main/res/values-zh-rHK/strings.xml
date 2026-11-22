@@ -169,8 +169,6 @@
     <string name="forums_settings_name_cancel_cd">取消編輯</string>
     <string name="forums_settings_save_name">儲存名稱</string>
     <string name="forums_access_management">存取管理</string>
-    <string name="forums_link">連結</string>
-    <string name="forums_share_link_title">論壇連結</string>
     <string name="forums_access_level_moderate_full">管理、發文、留言、投票和檢視</string>
     <string name="forums_access_level_post_full">發文、留言、投票和檢視</string>
     <string name="forums_access_level_comment_full">留言、投票和檢視</string>

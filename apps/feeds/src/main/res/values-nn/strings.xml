@@ -199,8 +199,6 @@
     <string name="feeds_ai_prompt_default">Standard</string>
     <string name="feeds_ai_prompt_custom">Tilpassa</string>
     <string name="feeds_ai_prompt_variables">Variablar: %1$s</string>
-    <string name="feeds_link">Lenkje</string>
-    <string name="feeds_share_link_title">Straumlenkje</string>
     <string name="feeds_saved_clear_confirm_body">Dette fjernar alle innlegg frå lista di over lagra. Dette kan ikkje angrast.</string>
     <string name="feeds_saved_clear_confirm_title">Tømme alle lagra innlegg?</string>
     <string name="feeds_saved_empty_subtitle">Trykk på bokmerket på eit innlegg for å lagra det her til seinare.</string>

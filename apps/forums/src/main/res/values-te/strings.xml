@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">స్కోర్ ప్రాంప్ట్</string>
     <string name="forums_ai_prompt_tag_label">ట్యాగ్ ప్రాంప్ట్</string>
     <string name="forums_ai_prompt_variables">వేరియబుల్స్: %1$s</string>
-    <string name="forums_link">లింక్</string>
     <string name="forums_moderation_ban_message">మీరు పరిమితిని తీసివేసే వరకు ఫోరమ్‌కు ప్రాప్యత కోల్పోతారు.</string>
     <string name="forums_moderation_ban_title">%1$sను నిషేధించాలా?</string>
     <string name="forums_moderation_log_empty_subtitle">ఇంకా ఎటువంటి పర్యవేక్షణ చర్యలు నమోదు కాలేదు</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">ఫోరమ్ పేరు మార్చబడింది</string>
     <string name="forums_settings_name_clear_cd">పేరును తొలగించు</string>
     <string name="forums_settings_unsubscribe_section">ఫోరమ్ నుండి చందా రద్దు చేయండి</string>
-    <string name="forums_share_link_title">ఫోరమ్ లింక్</string>
     <string name="forums_find_found_by_url">URL ద్వారా కనుగొనబడింది</string>
     <string name="forums_moderation_pending_posts">పెండింగ్ పోస్ట్‌లు (%1$s)</string>
     <string name="forums_moderation_pending_comments">పెండింగ్ వ్యాఖ్యలు (%1$s)</string>

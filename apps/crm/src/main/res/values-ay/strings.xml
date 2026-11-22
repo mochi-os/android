@@ -16,7 +16,6 @@
     <string name="crm_create_object">Objeto luraña</string>
     <string name="crm_search">Thaqhama</string>
     <string name="crm_settings">Wakichawinaka</string>
-    <string name="crm_link">Enlace</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Apsuta janiw imañjamäkiti</string>
     <string name="crm_sort_rank">Manual</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM jan jikxatasiti</string>
     <string name="crm_create_blocked_no_parents">Janiraw kuna item tipos luraskaspati. Nayraqat wakisir awki itemanak luram.</string>
     <string name="crm_export_csv">CSV apsuña</string>
-    <string name="crm_share_link_title">CRM compartiña</string>
     <string name="crm_export_saved">CRM yatiyawi imantata</string>
     <string name="crm_create_upload_json">.zip jan ukax .json archivo apkataña</string>
     <string name="crm_create_blocked_no_options">Janiw lurañjamäkiti: %1$s wakisiwa ukampis janiw ajlliñatak opcionanakapax utjkiti. Diseño ukan opcionanak yapxatam.</string>

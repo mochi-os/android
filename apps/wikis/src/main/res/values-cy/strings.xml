@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Diweddarwyd %1$s</string>
     <string name="wikis_pageview_not_found_description">Nid yw’r dudalen “%1$s” yn bodoli eto.</string>
-    <string name="wikis_pageview_share_chooser">Dolen wici</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Dolen</string>
     <string name="wikis_open_sidebar">Agor y bar ochr</string>
     <string name="wikis_search_placeholder">Chwilio am wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Ydych chi’n siŵr eich bod am ddad-danysgrifio o %1$s?</string>

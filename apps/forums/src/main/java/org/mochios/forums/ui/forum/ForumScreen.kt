@@ -49,7 +49,6 @@ import androidx.compose.material.icons.outlined.EmojiEvents
 import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material.icons.outlined.History
-import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
@@ -61,6 +60,7 @@ import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.ThumbsUpDown
 import androidx.compose.material.icons.outlined.Whatshot
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -128,7 +128,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.rememberCopier
-import org.mochios.android.util.shareLink
+import org.mochios.android.share.ShareSheet
 import org.mochios.forums.R
 import org.mochios.forums.model.communityHandle
 import org.mochios.forums.model.forumPath
@@ -371,7 +371,6 @@ private fun ForumContent(
     val resources = LocalResources.current
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
     val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
-    val shareLinkTitle = stringResource(R.string.forums_share_link_title)
 
     // Opened next time the app starts only once it has loaded: a forum that
     // fails to open would otherwise reopen, and fail, at every start.
@@ -401,8 +400,6 @@ private fun ForumContent(
                 is ForumEvent.CopyRssUrl -> {
                     copier.copy(event.url, label = rssClipboardLabel, message = rssCopiedMessage)
                 }
-
-                is ForumEvent.ShareLink -> shareLink(context, event.link, shareLinkTitle)
 
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
                 is ForumEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMessage)
@@ -581,12 +578,12 @@ private fun ForumContent(
                             // aggregate has no single forum to share.
                             if (!isAll && uiState.canManage && uiState.forum.id.isNotEmpty()) {
                                 MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_link)) },
+                                    text = { Text(stringResource(MochiR.string.share_title)) },
                                     onClick = {
                                         showOverflowMenu = false
-                                        viewModel.shareLink()
+                                        viewModel.share()
                                     },
-                                    leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                    leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
                                 )
                             }
                             // Subscribers reach settings too — their view is
@@ -790,6 +787,8 @@ private fun ForumContent(
             }
         }
     }
+
+    ShareSheet(viewModel.shares)
 
     if (revokeRssOpen) {
         RssRevokeDialog(

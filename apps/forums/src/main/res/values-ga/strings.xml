@@ -214,7 +214,6 @@
     <string name="forums_ai_prompt_score_label">Leid scóir</string>
     <string name="forums_ai_prompt_tag_label">Leid clibe</string>
     <string name="forums_ai_prompt_variables">Athróga: %1$s</string>
-    <string name="forums_link">Nasc</string>
     <string name="forums_moderation_ban_message">Caillfidh siad rochtain ar an bhfóram go dtí go mbainfidh tú an srian.</string>
     <string name="forums_moderation_ban_title">Cuir cosc ar %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Níl aon ghníomhartha modhnaithe taifeadta go fóill</string>
@@ -243,7 +242,6 @@
     <string name="forums_settings_forum_renamed">Athainmníodh an fóram</string>
     <string name="forums_settings_name_clear_cd">Glan an t-ainm</string>
     <string name="forums_settings_unsubscribe_section">Díliostáil ón bhfóram</string>
-    <string name="forums_share_link_title">Nasc an fhóraim</string>
     <string name="forums_find_found_by_url">Aimsithe de réir URL</string>
     <string name="forums_moderation_pending_posts">Postálacha ar feitheamh (%1$s)</string>
     <string name="forums_moderation_pending_comments">Tráchtanna ar feitheamh (%1$s)</string>

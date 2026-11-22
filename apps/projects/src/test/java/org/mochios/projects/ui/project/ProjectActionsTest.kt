@@ -5,8 +5,10 @@
 
 package org.mochios.projects.ui.project
 
+import android.content.Intent
 import android.os.Looper
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.core.content.IntentCompat
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
@@ -40,6 +42,9 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.share.EXTRA_ADDRESS
+import org.mochios.android.share.EXTRA_WORDS
+import org.mochios.android.share.ShareSheet
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
@@ -136,6 +141,7 @@ class ProjectActionsTest {
                         "hierarchy": {"task": [""], "bug": ["", "task", "bug"]}}"""
                     "p1/-/objects" -> """{"objects": [$objects], "watched": []}"""
                     "p1/-/people" -> """{"people": []}"""
+                    "p1/-/share" -> """{"link": "mochi://12D3KooWPeer/p1"}"""
                     "-/list" -> """{"projects": [{"id": "p1", "name": "Board"}]}"""
                     else -> "{}"
                 }
@@ -304,6 +310,36 @@ class ProjectActionsTest {
         assertEquals("THE POINT: each of the eight is reported", 8, failures.size)
         assertNull("nothing goes to the error only an empty page draws", model.uiState.value.error)
         assertNotNull(model.uiState.value.projectDetails)
+    }
+
+    /**
+     * What the system share sheet opened for, once it opens; the launch of
+     * the test's own host activity is passed over.
+     */
+    private fun sheet(): Intent {
+        val deadline = System.currentTimeMillis() + 5_000
+        while (System.currentTimeMillis() < deadline) {
+            shadowOf(Looper.getMainLooper()).idleFor(20, TimeUnit.MILLISECONDS)
+            val started = shadowOf(context).nextStartedActivity
+            if (started == null) {
+                Thread.sleep(10)
+            } else if (started.action == Intent.ACTION_CHOOSER) {
+                return IntentCompat.getParcelableExtra(started, Intent.EXTRA_INTENT, Intent::class.java)!!
+            }
+        }
+        throw AssertionError("the share sheet did not open")
+    }
+
+    @Test
+    fun `the project's Share hands other apps the link it is joined by, and Mochi the project by name and address`() {
+        val model = project()
+        rule.setContent { ShareSheet(model.shares) }
+        rule.runOnIdle { model.share() }
+        val send = sheet()
+        assertTrue(asked.any { (path, _) -> path == "p1/-/share" })
+        assertEquals("mochi://12D3KooWPeer/p1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Board", send.getStringExtra(EXTRA_WORDS))
+        assertEquals(server.url("/").toString().trimEnd('/') + "/projects/p1", send.getStringExtra(EXTRA_ADDRESS))
     }
 
     @Test

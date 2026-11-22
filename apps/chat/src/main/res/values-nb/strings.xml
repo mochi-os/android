@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s godtar bare chatter fra venner.</string>
     <string name="chat_message_earlier">Meldinger fra før denne kontoen ble lagt til i Mochi er krypterte og kan ikke leses her</string>
     <string name="chat_message_excluded">Kun kryptert for andre enheter</string>
+    <string name="chat_message_changed">Avsenderens krypteringsnøkkel er endret</string>
     <string name="chat_setup">Sett opp</string>
     <string name="chat_jump_bottom">Hopp til bunnen</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Sendt fra en enhet der nøklene ikke stemmer</string>
     <string name="chat_list_select">Velg en samtale</string>
     <string name="chat_message_discard">Forkast</string>
+    <string name="chat_message_unencrypted">Send ukryptert</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Meldingen er %1$s tegn for lang</item>
         <item quantity="other">Meldingen er %1$s tegn for lang</item>

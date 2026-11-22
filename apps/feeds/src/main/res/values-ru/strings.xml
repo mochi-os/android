@@ -213,8 +213,6 @@
     <string name="feeds_ai_prompt_default">По умолчанию</string>
     <string name="feeds_ai_prompt_custom">Пользовательский</string>
     <string name="feeds_ai_prompt_variables">Переменные: %1$s</string>
-    <string name="feeds_link">Ссылка</string>
-    <string name="feeds_share_link_title">Ссылка на ленту</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s комментарий</item>
         <item quantity="few">%1$s комментария</item>

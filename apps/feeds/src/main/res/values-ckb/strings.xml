@@ -209,8 +209,6 @@
     <string name="feeds_ai_prompt_default">بنەڕەت</string>
     <string name="feeds_ai_prompt_custom">تایبەت</string>
     <string name="feeds_ai_prompt_variables">گۆڕاوەکان: %1$s</string>
-    <string name="feeds_link">بەستەر</string>
-    <string name="feeds_share_link_title">بەستەری فید</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s لێدوان</item>
         <item quantity="other">%1$s لێدوان</item>

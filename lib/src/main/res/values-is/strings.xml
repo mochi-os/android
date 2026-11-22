@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s hélt leik áfram</string>
     <string name="game_not_found">Leikur fannst ekki</string>
     <string name="game_chat_move_played_you">Þú lékst %1$s</string>
+    <string name="share_title">Deila</string>
+    <string name="share_feed">Birta í streymi</string>
+    <string name="share_chat">Senda í spjalli</string>
     <string name="devices_add">Bæta við tæki</string>
     <string name="devices_copy">Afrita %1$s</string>
     <string name="devices_create">Búa til</string>

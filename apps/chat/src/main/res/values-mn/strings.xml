@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s зөвхөн найзуудаасаа чат хүлээн авдаг.</string>
     <string name="chat_message_earlier">Энэ бүртгэлийг Mochi-д нэмэхээс өмнөх мессежүүд шифрлэгдсэн тул энд уншиж болохгүй</string>
     <string name="chat_message_excluded">Зөвхөн бусад төхөөрөмжид шифрлэгдсэн</string>
-    <string name="chat_setup">Тохируулах</string>
+    <string name="chat_message_changed">Илгээгчийн шифрлэлтийн түлхүүр өөрчлөгдсөн</string>    <string name="chat_setup">Тохируулах</string>
     <string name="chat_jump_bottom">Доош очих</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s шинэ мессеж рүү очих</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Түлхүүрүүд нь таарахгүй төхөөрөмжөөс илгээсэн</string>
     <string name="chat_list_select">Чат сонгох</string>
     <string name="chat_message_discard">Хаях</string>
+    <string name="chat_message_unencrypted">Шифрлэлтгүйгээр илгээх</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Мессеж %1$s тэмдэгтээр хэт урт байна</item>
         <item quantity="other">Мессеж %1$s тэмдэгтээр хэт урт байна</item>

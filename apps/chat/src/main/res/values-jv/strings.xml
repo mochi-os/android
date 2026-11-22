@@ -173,7 +173,7 @@
     <string name="chat_refused_friends_only">%1$s mung nampa obrolan saka kanca.</string>
     <string name="chat_message_earlier">Pesen saka sadurunge akun iki ditambahake menyang Mochi dienkripsi lan ora bisa diwaca ing kene</string>
     <string name="chat_message_excluded">Mung dienkripsi kanggo piranti liya</string>
-    <string name="chat_setup">Setel</string>
+    <string name="chat_message_changed">Kunci enkripsi pangirim wis owah</string>    <string name="chat_setup">Setel</string>
     <string name="chat_jump_bottom">Mlumpat menyang ngisor</string>
     <plurals name="chat_jump_newer">
         <item quantity="other">Mlumpat menyang %1$s pesen anyar</item>
@@ -182,6 +182,7 @@
     <string name="chat_message_mismatched">Dikirim saka piranti sing kunciné ora cocog</string>
     <string name="chat_list_select">Pilih chat</string>
     <string name="chat_message_discard">Buwang</string>
+    <string name="chat_message_unencrypted">Kirim tanpa enkripsi</string>
     <plurals name="chat_message_too_long">
         <item quantity="other">Pesen kedawan %1$s karakter</item>
     </plurals>

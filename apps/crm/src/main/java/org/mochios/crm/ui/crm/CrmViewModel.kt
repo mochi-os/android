@@ -36,6 +36,7 @@ import org.mochios.android.model.canWrite
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
+import org.mochios.android.share.Shared
 import org.mochios.crm.ui.board.boardClass
 import org.mochios.crm.ui.board.boardOptions
 import org.mochios.crm.ui.board.dropRank
@@ -113,9 +114,10 @@ class CrmViewModel @Inject constructor(
     private val _collapsedColumns = MutableStateFlow(collapsedColumnsStore.get(crmId))
     val collapsedColumns: StateFlow<Map<String, Set<String>>> = _collapsedColumns.asStateFlow()
 
-    /** Emits the CRM's share link once fetched, for the screen to share. */
-    private val _shareLink = MutableSharedFlow<String>()
-    val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
+    private val _shares = MutableSharedFlow<Shared>(extraBufferCapacity = 1)
+
+    /** The CRM, readied for the system share sheet. */
+    val shares: SharedFlow<Shared> = _shares.asSharedFlow()
 
     // A mutation that fails after the CRM has loaded: uiState.error only
     // renders while nothing is loaded, so these are toasted by the screen.
@@ -367,15 +369,21 @@ class CrmViewModel @Inject constructor(
         return (opening ?: details.views.firstOrNull())?.id
     }
 
-    /** Fetch the CRM's share link and emit it for the screen to share. */
-    fun shareCrm() {
+    /**
+     * Share the CRM: by its name and address, and to other apps by the link
+     * another server joins it by, which the server assembles.
+     */
+    fun share() {
         viewModelScope.launch {
             try {
                 // share refuses a fingerprint; the route id may be one.
                 val link = repository.getShareLink(entityId())
-                if (link.isNotBlank()) {
-                    _shareLink.emit(link)
-                }
+                val crm = _uiState.value.crmDetails?.crm
+                val address = sessionManager.getServerUrlBlocking().trimEnd('/') + "/crm/" +
+                    (crm?.fingerprint?.takeIf { it.isNotEmpty() } ?: crmId)
+                _shares.emit(Shared(text = crm?.name.orEmpty(), url = address, link = link))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }

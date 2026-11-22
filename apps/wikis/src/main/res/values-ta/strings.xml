@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">புதுப்பிக்கப்பட்டது %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” பக்கம் இதுவரை இல்லை.</string>
-    <string name="wikis_pageview_share_chooser">விக்கி இணைப்பு</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">இணைப்பு</string>
     <string name="wikis_open_sidebar">பக்கப்பட்டியைத் திற</string>
     <string name="wikis_search_placeholder">wiki தேடு</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s இலிருந்து சந்தாவை நிறுத்த விரும்புகிறீர்களா?</string>

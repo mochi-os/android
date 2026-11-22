@@ -5,6 +5,7 @@
 
 package org.mochios.chat.ui.chat
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
@@ -86,8 +87,20 @@ internal fun isEarlierHistory(message: ChatMessage): Boolean =
 
 /** What an encrypted message with nothing to show says in its place. */
 @Composable
-internal fun encryptedText(message: ChatMessage): String =
-    stringResource(if (message.encrypted == 3) R.string.chat_message_excluded else R.string.chat_message_encrypted)
+internal fun encryptedText(message: ChatMessage): String = stringResource(sealed(message.encrypted))
+
+/**
+ * The line for a message that cannot be read, by how it came
+ * ([ChatMessage.encrypted]), as the web says it: why it cannot be, where
+ * that is known, and otherwise that it is encrypted.
+ */
+@StringRes
+internal fun sealed(encrypted: Int): Int = when (encrypted) {
+    3 -> R.string.chat_message_excluded
+    4 -> R.string.chat_message_changed
+    5 -> R.string.chat_message_distrusted
+    else -> R.string.chat_message_encrypted
+}
 
 /**
  * The line under a one-to-one conversation's name: whether the other person
@@ -219,6 +232,10 @@ internal data class ReplyActions(
     val onReact: (String, String) -> Unit = { _, _ -> },
     val onForward: (ChatMessage) -> Unit = {},
     val onRetry: (Long) -> Unit = {},
+    /** Send unsent replies refused for want of encryption unencrypted. */
+    val onUnencrypted: (Long) -> Unit = {},
+    /** Send the box's reply unencrypted, after the send refused it for want of encryption. */
+    val onSendUnencrypted: () -> Unit = {},
     val onCopy: (String) -> Unit = {},
     val onDiscard: (Long) -> Unit = {},
 )
@@ -315,6 +332,7 @@ internal fun ColumnScope.ThreadContent(
             UnsentRow(
                 message = reply,
                 onRetry = { replies.onRetry(reply.key) },
+                onUnencrypted = { replies.onUnencrypted(reply.key) },
                 onCopy = { replies.onCopy(reply.text) },
                 onDiscard = { replies.onDiscard(reply.key) },
                 retryEnabled = !thread.isSending,
@@ -332,7 +350,13 @@ internal fun ColumnScope.ThreadContent(
                 sendLabel = if (replies.editing) stringResource(MochiR.string.common_save) else stringResource(R.string.chat_message_send),
                 banner = {
                     Column {
-                        if (replies.editing) EditComposerPreview(onCancel = replies.onCancelEdit)
+                        if (replies.editing) {
+                            EditComposerPreview(onCancel = replies.onCancelEdit)
+                        } else {
+                            thread.refusal?.let { refusal ->
+                                RefusalLine(refusal, onUnencrypted = replies.onSendUnencrypted, enabled = !thread.isSending)
+                            }
+                        }
                         LengthLine(text)
                     }
                 },

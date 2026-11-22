@@ -7,6 +7,7 @@ package org.mochios.feeds.ui.post
 
 import org.mochios.android.util.attachmentModel
 import android.net.Uri
+import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -115,6 +116,8 @@ import org.mochios.android.R as MochiR
 @Composable
 fun CreatePostScreen(
     onNavigateBack: () -> Unit,
+    // Where the screen goes once the post is made, to the feed it went to.
+    onPosted: (feedId: String) -> Unit = { onNavigateBack() },
     viewModel: CreatePostViewModel = hiltViewModel()
 ) {
     val availableFeeds by viewModel.availableFeeds.collectAsState()
@@ -178,7 +181,7 @@ fun CreatePostScreen(
             viewModel.unsent.value.forEach { line ->
                 Toast.makeText(context, line, Toast.LENGTH_LONG).show()
             }
-            onNavigateBack()
+            onPosted(selectedFeed)
         }
     }
 
@@ -656,7 +659,10 @@ fun CreatePostScreen(
                             )
                             val context = LocalContext.current
                             val isMedia = remember(uri) {
-                                context.contentResolver.getType(uri)?.let {
+                                // An image shared to Mochi is a file of its own, named for its type.
+                                val type = context.contentResolver.getType(uri)
+                                    ?: MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(uri.toString()))
+                                type?.let {
                                     it.startsWith("image/") || it.startsWith("video/")
                                 } == true
                             }

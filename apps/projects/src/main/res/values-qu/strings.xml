@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Plantillata akllay</string>
     <string name="projects_create_next">Qatiqnin</string>
     <string name="projects_filter">Filtro</string>
-    <string name="projects_link">T\'inki</string>
     <string name="projects_filter_clear_all">Llapan pichay</string>
     <string name="projects_filter_all">Llapan</string>
     <string name="projects_filter_other">Huk</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Kay adjuntoqa wiñaypaq wischusqa kanqa.</string>
     <string name="projects_attachment_delete_confirm_title">¿Adjuntota wischunki?</string>
     <string name="projects_settings_unsubscribe_section">Proyectomanta suscripcionta qichuy</string>
-    <string name="projects_share_link_title">Proyectota rakiy</string>
     <string name="projects_sort_filter_title">Ordenay hinaspa filtray</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 hina ñawinchakuq ID-kunapaq llamk\'achikun</string>
     <plurals name="projects_request_conflicts">

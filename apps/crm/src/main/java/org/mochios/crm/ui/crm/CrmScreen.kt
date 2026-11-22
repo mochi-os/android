@@ -5,8 +5,6 @@
 
 package org.mochios.crm.ui.crm
 
-import android.content.Context
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
@@ -44,12 +42,12 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
-import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.TableChart
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -118,6 +116,7 @@ import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.share.ShareSheet
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.model.CrmField
@@ -492,12 +491,6 @@ private fun CrmContent(
     }
 
     val context = LocalContext.current
-    val shareTitle = stringResource(R.string.crm_share_link_title)
-    LaunchedEffect(viewModel) {
-        viewModel.shareLink.collect { link ->
-            shareCrmLink(context, link, shareTitle)
-        }
-    }
 
     // A drag, delete or column edit the server refused: the card snaps back,
     // so say why.
@@ -718,12 +711,12 @@ private fun CrmContent(
                                 // owns; it's hidden on subscribed ones.
                                 if (details?.crm?.owner?.local == true) {
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.crm_link)) },
+                                        text = { Text(stringResource(MochiR.string.share_title)) },
                                         onClick = {
                                             showOverflow = false
-                                            viewModel.shareCrm()
+                                            viewModel.share()
                                         },
-                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                        leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
                                     )
                                 }
                                 MochiDropdownMenuItem(
@@ -869,6 +862,8 @@ private fun CrmContent(
         }
     }
 
+    ShareSheet(viewModel.shares)
+
     if (uiState.isExporting) {
         ExportProgressDialog()
     }
@@ -916,20 +911,6 @@ private fun CrmContent(
             onDismiss = { showFilters = false },
         )
     }
-}
-
-/** Opens the system share sheet with the CRM's [link]. */
-private fun shareCrmLink(context: Context, link: String, title: String) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, link)
-        // Names the sheet's content preview. Android 10+ ignores the
-        // createChooser title, so without this the sheet reads "Sharing text".
-        putExtra(Intent.EXTRA_TITLE, title)
-    }
-    val chooser = Intent.createChooser(intent, title)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
 }
 
 /** Sort keys the server understands regardless of the CRM's own fields. */

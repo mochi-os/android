@@ -210,8 +210,6 @@
     <string name="feeds_ai_prompt_default">Podrazumijevano</string>
     <string name="feeds_ai_prompt_custom">Prilagođeno</string>
     <string name="feeds_ai_prompt_variables">Varijable: %1$s</string>
-    <string name="feeds_link">Veza</string>
-    <string name="feeds_share_link_title">Veza feeda</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s komentar</item>
         <item quantity="few">%1$s komentara</item>

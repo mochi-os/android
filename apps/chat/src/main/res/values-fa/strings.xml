@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s فقط گفت‌وگو با دوستان را می‌پذیرد.</string>
     <string name="chat_message_earlier">پیام‌های مربوط به پیش از افزودن این حساب به Mochi رمزگذاری شده‌اند و اینجا قابل خواندن نیستند</string>
     <string name="chat_message_excluded">فقط برای دستگاه‌های دیگر رمزگذاری شده</string>
-    <string name="chat_setup">راه‌اندازی</string>
+    <string name="chat_message_changed">کلید رمزگذاری فرستنده تغییر کرده است</string>    <string name="chat_setup">راه‌اندازی</string>
     <string name="chat_jump_bottom">پرش به پایین</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">پرش به %1$s پیام جدید</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">از دستگاهی فرستاده شده که کلیدهایش مطابقت ندارند</string>
     <string name="chat_list_select">انتخاب یک گفت‌وگو</string>
     <string name="chat_message_discard">دور انداختن</string>
+    <string name="chat_message_unencrypted">ارسال بدون رمزگذاری</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">پیام %1$s نویسه از حد مجاز طولانی‌تر است</item>
         <item quantity="other">پیام %1$s نویسه از حد مجاز طولانی‌تر است</item>

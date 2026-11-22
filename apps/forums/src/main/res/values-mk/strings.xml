@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Промпт за оценување</string>
     <string name="forums_ai_prompt_tag_label">Промпт за ознаки</string>
     <string name="forums_ai_prompt_variables">Променливи: %1$s</string>
-    <string name="forums_link">Врска</string>
     <string name="forums_moderation_ban_message">Го губи пристапот до форумот додека не го отстраните ограничувањето.</string>
     <string name="forums_moderation_ban_title">Да се блокира %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Сè уште нема забележани дејства на модерирање</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Форумот е преименуван</string>
     <string name="forums_settings_name_clear_cd">Исчисти го името</string>
     <string name="forums_settings_unsubscribe_section">Отпиши се од форумот</string>
-    <string name="forums_share_link_title">Врска на форумот</string>
     <string name="forums_find_found_by_url">Пронајдено преку URL</string>
     <string name="forums_moderation_pending_posts">Објави на чекање (%1$s)</string>
     <string name="forums_moderation_pending_comments">Коментари на чекање (%1$s)</string>

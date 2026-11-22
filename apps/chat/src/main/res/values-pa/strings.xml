@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s ਸਿਰਫ਼ ਦੋਸਤਾਂ ਤੋਂ ਹੀ ਚੈਟਾਂ ਸਵੀਕਾਰ ਕਰਦੇ ਹਨ।</string>
     <string name="chat_message_earlier">ਇਸ ਖਾਤੇ ਨੂੰ Mochi ਵਿੱਚ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਦੇ ਸੁਨੇਹੇ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਹੋਏ ਹਨ ਅਤੇ ਇੱਥੇ ਪੜ੍ਹੇ ਨਹੀਂ ਜਾ ਸਕਦੇ</string>
     <string name="chat_message_excluded">ਸਿਰਫ਼ ਹੋਰ ਡਿਵਾਈਸਾਂ ਲਈ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ</string>
+    <string name="chat_message_changed">ਭੇਜਣ ਵਾਲੇ ਦੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਦਲ ਗਈ ਹੈ</string>
     <string name="chat_setup">ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
     <string name="chat_jump_bottom">ਸਭ ਤੋਂ ਹੇਠਾਂ ਜਾਓ</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">ਉਸ ਡਿਵਾਈਸ ਤੋਂ ਭੇਜਿਆ ਜਿਸ ਦੀਆਂ ਕੁੰਜੀਆਂ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀਆਂ</string>
     <string name="chat_list_select">ਚੈਟ ਚੁਣੋ</string>
     <string name="chat_message_discard">ਛੱਡ ਦਿਓ</string>
+    <string name="chat_message_unencrypted">ਇਨਕ੍ਰਿਪਸ਼ਨ ਤੋਂ ਬਿਨਾਂ ਭੇਜੋ</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">ਸੁਨੇਹਾ %1$s ਅੱਖਰ ਜ਼ਿਆਦਾ ਲੰਮਾ ਹੈ</item>
         <item quantity="other">ਸੁਨੇਹਾ %1$s ਅੱਖਰ ਜ਼ਿਆਦਾ ਲੰਮਾ ਹੈ</item>

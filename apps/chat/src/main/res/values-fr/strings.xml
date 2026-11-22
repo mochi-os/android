@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s n\'accepte que les chats de ses amis.</string>
     <string name="chat_message_earlier">Les messages antérieurs à l\'ajout de ce compte à Mochi sont chiffrés et ne peuvent pas être lus ici</string>
     <string name="chat_message_excluded">Chiffré uniquement pour d\'autres appareils</string>
-    <string name="chat_setup">Configurer</string>
+    <string name="chat_message_changed">La clé de chiffrement de l\'expéditeur a changé</string>    <string name="chat_setup">Configurer</string>
     <string name="chat_jump_bottom">Aller en bas</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Aller à %1$s nouveau message</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Envoyé depuis un appareil dont les clés ne correspondent pas</string>
     <string name="chat_list_select">Sélectionner une conversation</string>
     <string name="chat_message_discard">Abandonner</string>
+    <string name="chat_message_unencrypted">Envoyer sans chiffrement</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Le message dépasse la limite de %1$s caractère</item>
         <item quantity="other">Le message dépasse la limite de %1$s caractères</item>

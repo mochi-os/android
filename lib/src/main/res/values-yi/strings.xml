@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s האָט ווידער אָנגעהויבן שפּילן</string>
     <string name="game_not_found">שפּיל ניט געפֿונען</string>
     <string name="game_chat_move_played_you">איר האָט געשפּילט %1$s</string>
+    <string name="share_title">טיילן</string>
+    <string name="share_feed">פּובליקירן אין אַ פֿיד</string>
+    <string name="share_chat">שיקן אין אַ שמועס</string>
     <string name="devices_add">צולייגן אַ מיטל</string>
     <string name="devices_copy">קאָפּירן %1$s</string>
     <string name="devices_create">באַשאַפֿן</string>

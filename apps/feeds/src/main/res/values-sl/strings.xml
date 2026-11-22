@@ -213,8 +213,6 @@
     <string name="feeds_ai_prompt_default">Privzeto</string>
     <string name="feeds_ai_prompt_custom">Po meri</string>
     <string name="feeds_ai_prompt_variables">Spremenljivke: %1$s</string>
-    <string name="feeds_link">Povezava</string>
-    <string name="feeds_share_link_title">Povezava kanala</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s komentar</item>
         <item quantity="two">%1$s komentarja</item>

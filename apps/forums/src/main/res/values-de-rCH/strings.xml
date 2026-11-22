@@ -180,8 +180,6 @@
     <string name="forums_settings_name_cancel_cd">Bearbeitung abbrechen</string>
     <string name="forums_settings_save_name">Namen speichern</string>
     <string name="forums_access_management">Zugriffsverwaltung</string>
-    <string name="forums_link">Link</string>
-    <string name="forums_share_link_title">Forum-Link</string>
     <string name="forums_access_level_moderate_full">Moderieren, posten, kommentieren, abstimmen und ansehen</string>
     <string name="forums_access_level_post_full">Posten, kommentieren, abstimmen und ansehen</string>
     <string name="forums_access_level_comment_full">Kommentieren, abstimmen und ansehen</string>

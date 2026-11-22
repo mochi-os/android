@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Kies \'n sjabloon</string>
     <string name="projects_create_next">Volgende</string>
     <string name="projects_filter">Filter</string>
-    <string name="projects_link">Skakel</string>
     <string name="projects_filter_clear_all">Maak alles skoon</string>
     <string name="projects_filter_all">Alle</string>
     <string name="projects_filter_other">Ander</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Hierdie aanhangsel word permanent uitgevee.</string>
     <string name="projects_attachment_delete_confirm_title">Vee aanhangsel uit?</string>
     <string name="projects_settings_unsubscribe_section">Teken uit van projek</string>
-    <string name="projects_share_link_title">Deel projek</string>
     <string name="projects_sort_filter_title">Sorteer &amp; filtreer</string>
     <string name="projects_create_prefix_hint">Gebruik vir leesbare ID\'s soos %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

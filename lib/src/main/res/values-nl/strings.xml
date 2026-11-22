@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s heeft het spel hervat</string>
     <string name="game_not_found">Spel niet gevonden</string>
     <string name="game_chat_move_played_you">Jij speelde %1$s</string>
+    <string name="share_title">Delen</string>
+    <string name="share_feed">In een feed plaatsen</string>
+    <string name="share_chat">In een chat versturen</string>
     <string name="devices_add">Apparaat toevoegen</string>
     <string name="devices_copy">%1$s kopiëren</string>
     <string name="devices_create">Aanmaken</string>

@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s võtab vestlusi vastu ainult sõpradelt.</string>
     <string name="chat_message_earlier">Sõnumid ajast enne selle konto Mochisse lisamist on krüpteeritud ja neid ei saa siin lugeda</string>
     <string name="chat_message_excluded">Krüpteeritud ainult teistele seadmetele</string>
-    <string name="chat_setup">Seadista</string>
+    <string name="chat_message_changed">Saatja krüpteerimisvõti on muutunud</string>    <string name="chat_setup">Seadista</string>
     <string name="chat_jump_bottom">Mine lõppu</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Liigu %1$s uue sõnumi juurde</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Saadetud seadmest, mille võtmed ei klapi</string>
     <string name="chat_list_select">Vali vestlus</string>
     <string name="chat_message_discard">Loobu</string>
+    <string name="chat_message_unencrypted">Saada krüpteerimata</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Sõnum on %1$s märgi võrra liiga pikk</item>
         <item quantity="other">Sõnum on %1$s märgi võrra liiga pikk</item>

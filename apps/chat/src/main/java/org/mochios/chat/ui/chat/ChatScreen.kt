@@ -13,6 +13,8 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -913,6 +915,7 @@ private fun ChatContent(
                     UnsentRow(
                         message = message,
                         onRetry = { viewModel.retry(message.key) },
+                        onUnencrypted = { viewModel.retry(message.key, unencrypted = true) },
                         onCopy = { copier.copy(message.text, label = "message") },
                         onDiscard = { viewModel.discard(message.key) },
                         retryEnabled = !uiState.isSending,
@@ -1002,6 +1005,13 @@ private fun ChatContent(
                                         onCancel = { viewModel.cancelReply() },
                                     )
                                 }
+                                uiState.refusal?.let { refusal ->
+                                    RefusalLine(
+                                        refusal = refusal,
+                                        onUnencrypted = { viewModel.sendMessage(unencrypted = true) },
+                                        enabled = !uiState.isSending,
+                                    )
+                                }
                             }
                             LengthLine(text)
                         }
@@ -1019,7 +1029,7 @@ private fun ChatContent(
                     // No reply goes under a deleted message, though its thread stays to read.
                     canWrite = uiState.chat.active() && !thread.root.deleted,
                     onDraft = if (replyEdit != null) viewModel::setEditDraft else viewModel::setThreadDraft,
-                    onSend = if (replyEdit != null) viewModel::saveEdit else viewModel::sendThreadReply,
+                    onSend = if (replyEdit != null) viewModel::saveEdit else ({ viewModel.sendThreadReply() }),
                     onEarlier = viewModel::loadEarlierReplies,
                     onDismiss = viewModel::closeThread,
                     draft = threadDraft,
@@ -1034,7 +1044,9 @@ private fun ChatContent(
                         onDelete = { reply -> pendingDelete = listOf(reply.id) },
                         onReact = viewModel::react,
                         onForward = { reply -> viewModel.openForward(reply.id) },
-                        onRetry = viewModel::retryReply,
+                        onRetry = { key -> viewModel.retryReply(key) },
+                        onUnencrypted = { key -> viewModel.retryReply(key, unencrypted = true) },
+                        onSendUnencrypted = { viewModel.sendThreadReply(unencrypted = true) },
                         onCopy = { text -> copier.copy(text, label = "message") },
                         onDiscard = viewModel::discardReply,
                     ),
@@ -1644,12 +1656,15 @@ private fun JumpButton(newer: Int, onClick: () -> Unit, modifier: Modifier = Mod
 
 /**
  * A message whose send failed while the composer held the next one: its
- * text, why it failed, and Retry, Copy and Discard.
+ * text, why it failed, and Retry, Copy and Discard; and where it was refused
+ * for want of encryption, Send unencrypted.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun UnsentRow(
     message: Unsent,
     onRetry: () -> Unit,
+    onUnencrypted: () -> Unit,
     onCopy: () -> Unit,
     onDiscard: () -> Unit,
     retryEnabled: Boolean = true,
@@ -1707,9 +1722,15 @@ internal fun UnsentRow(
                 }
             }
         }
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        // Wrapping: four actions, translated, are wider than a phone.
+        FlowRow(horizontalArrangement = Arrangement.End, itemVerticalAlignment = Alignment.CenterVertically) {
             MochiTextButton(onClick = onRetry, enabled = retryEnabled) {
                 Text(stringResource(MochiR.string.common_retry))
+            }
+            if (message.refused) {
+                MochiTextButton(onClick = onUnencrypted, enabled = retryEnabled) {
+                    Text(stringResource(R.string.chat_message_unencrypted))
+                }
             }
             if (message.text.isNotEmpty()) {
                 MochiTextButton(onClick = onCopy) {
@@ -1719,6 +1740,33 @@ internal fun UnsentRow(
             MochiTextButton(onClick = onDiscard) {
                 Text(stringResource(R.string.chat_message_discard))
             }
+        }
+    }
+}
+
+/**
+ * Why the composer's message came back into it, where the send refused it for
+ * want of encryption, in the server's words, and Send unencrypted.
+ */
+@Composable
+internal fun RefusalLine(refusal: MochiError, onUnencrypted: () -> Unit, enabled: Boolean = true) {
+    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp), horizontalAlignment = Alignment.End) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                Icons.Outlined.ErrorOutline,
+                contentDescription = null,
+                modifier = Modifier.size(14.dp),
+                tint = MaterialTheme.colorScheme.error,
+            )
+            Spacer(Modifier.width(4.dp))
+            Text(
+                text = refusal.userMessage(),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.error,
+            )
+        }
+        MochiTextButton(onClick = onUnencrypted, enabled = enabled) {
+            Text(stringResource(R.string.chat_message_unencrypted))
         }
     }
 }

@@ -175,6 +175,7 @@
     <string name="chat_refused_friends_only">%1$s wamukela izingxoxo ezivela kubangane kuphela.</string>
     <string name="chat_message_earlier">Imilayezo yangaphambi kokuthi le akhawunti yengezwe ku-Mochi ibethelwe futhi ayikwazi ukufundwa lapha</string>
     <string name="chat_message_excluded">Kubethelwe ezinye izisetshenziswa kuphela</string>
+    <string name="chat_message_changed">Ukhiye wokubethela womthumeli ushintshile</string>
     <string name="chat_setup">Setha</string>
     <string name="chat_jump_bottom">Yeqela phansi</string>
     <plurals name="chat_jump_newer">
@@ -185,6 +186,7 @@
     <string name="chat_message_mismatched">Ithunyelwe kudivayisi okhiye bayo abangafani</string>
     <string name="chat_list_select">Khetha ingxoxo</string>
     <string name="chat_message_discard">Lahla</string>
+    <string name="chat_message_unencrypted">Thumela ngaphandle kokubethela</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Umlayezo ude kakhulu ngohlamvu olungu-%1$s</item>
         <item quantity="other">Umlayezo ude kakhulu ngezinhlamvu ezingu-%1$s</item>

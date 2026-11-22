@@ -177,6 +177,7 @@
     <string name="chat_refused_friends_only">%1$s acceptă chaturi doar de la prieteni.</string>
     <string name="chat_message_earlier">Mesajele de dinainte ca acest cont să fie adăugat în Mochi sunt criptate și nu pot fi citite aici</string>
     <string name="chat_message_excluded">Criptat doar pentru alte dispozitive</string>
+    <string name="chat_message_changed">Cheia de criptare a expeditorului s-a schimbat</string>
     <string name="chat_setup">Configurează</string>
     <string name="chat_jump_bottom">Sari la final</string>
     <plurals name="chat_jump_newer">
@@ -188,6 +189,7 @@
     <string name="chat_message_mismatched">Trimis de pe un dispozitiv ale cărui chei nu se potrivesc</string>
     <string name="chat_list_select">Selectează o conversație</string>
     <string name="chat_message_discard">Renunță</string>
+    <string name="chat_message_unencrypted">Trimite necriptat</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Mesajul este prea lung cu %1$s caracter</item>
         <item quantity="few">Mesajul este prea lung cu %1$s caractere</item>

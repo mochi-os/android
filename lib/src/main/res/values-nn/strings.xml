@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s tok opp att spelet</string>
     <string name="game_not_found">Fann ikkje spelet</string>
     <string name="game_chat_move_played_you">Du spelte %1$s</string>
+    <string name="share_title">Del</string>
+    <string name="share_feed">Publiser i ein straum</string>
+    <string name="share_chat">Send i ein prat</string>
     <string name="devices_add">Legg til ei eining</string>
     <string name="devices_copy">Kopier %1$s</string>
     <string name="devices_create">Opprett</string>

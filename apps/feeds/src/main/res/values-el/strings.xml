@@ -207,8 +207,6 @@
     <string name="feeds_ai_prompt_default">Προεπιλογή</string>
     <string name="feeds_ai_prompt_custom">Προσαρμοσμένο</string>
     <string name="feeds_ai_prompt_variables">Μεταβλητές: %1$s</string>
-    <string name="feeds_link">Σύνδεσμος</string>
-    <string name="feeds_share_link_title">Σύνδεσμος ροής</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s σχόλιο</item>
         <item quantity="other">%1$s σχόλια</item>

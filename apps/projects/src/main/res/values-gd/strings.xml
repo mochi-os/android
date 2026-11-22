@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Tagh teamplaid</string>
     <string name="projects_create_next">Air adhart</string>
     <string name="projects_filter">Sìolachan</string>
-    <string name="projects_link">Ceangal</string>
     <string name="projects_filter_clear_all">Falamhaich a h-uile</string>
     <string name="projects_filter_all">Na h-uile</string>
     <string name="projects_filter_other">Eile</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Thèid an ceanglachan seo a sguabadh às gu buan.</string>
     <string name="projects_attachment_delete_confirm_title">Sguab às an ceanglachan?</string>
     <string name="projects_settings_unsubscribe_section">Dì-chlàraich on phròiseact</string>
-    <string name="projects_share_link_title">Co-roinn am pròiseact</string>
     <string name="projects_sort_filter_title">Seòrsaich is criathraich</string>
     <string name="projects_create_prefix_hint">Ga chleachdadh airson IDan so-leughta mar %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s hyväksyy keskusteluja vain kavereilta.</string>
     <string name="chat_message_earlier">Viestit ajalta ennen tämän tilin lisäämistä Mochiin ovat salattuja, eikä niitä voi lukea täällä</string>
     <string name="chat_message_excluded">Salattu vain muille laitteille</string>
-    <string name="chat_setup">Aseta</string>
+    <string name="chat_message_changed">Lähettäjän salausavain on vaihtunut</string>    <string name="chat_setup">Aseta</string>
     <string name="chat_jump_bottom">Siirry alas</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Siirry %1$s uuteen viestiin</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Lähetetty laitteelta, jonka avaimet eivät täsmää</string>
     <string name="chat_list_select">Valitse keskustelu</string>
     <string name="chat_message_discard">Hylkää</string>
+    <string name="chat_message_unencrypted">Lähetä salaamattomana</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Viesti on %1$s merkin liian pitkä</item>
         <item quantity="other">Viesti on %1$s merkkiä liian pitkä</item>

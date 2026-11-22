@@ -205,8 +205,6 @@
     <string name="feeds_ai_prompt_default">Lalai</string>
     <string name="feeds_ai_prompt_custom">Tersuai</string>
     <string name="feeds_ai_prompt_variables">Pemboleh ubah: %1$s</string>
-    <string name="feeds_link">Pautan</string>
-    <string name="feeds_share_link_title">Pautan suapan</string>
     <plurals name="feeds_comment_count">
         <item quantity="other">%1$s komen</item>
     </plurals>

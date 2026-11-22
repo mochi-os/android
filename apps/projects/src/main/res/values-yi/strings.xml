@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">קלײַבט אַ מוסטער</string>
     <string name="projects_create_next">ווײַטער</string>
     <string name="projects_filter">פֿילטער</string>
-    <string name="projects_link">לינק</string>
     <string name="projects_filter_clear_all">רייניקן אַלץ</string>
     <string name="projects_filter_all">אַלע</string>
     <string name="projects_filter_other">אַנדער</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">דער צוגאָב וועט אויף אייביק אויסגעמעקט ווערן.</string>
     <string name="projects_attachment_delete_confirm_title">אויסמעקן דעם צוגאָב?</string>
     <string name="projects_settings_unsubscribe_section">אָפּזאָגן זיך פֿונעם פּראָיעקט</string>
-    <string name="projects_share_link_title">טיילן דעם פּראָיעקט</string>
     <string name="projects_sort_filter_title">סאָרטירן און פֿילטרירן</string>
     <string name="projects_create_prefix_hint">גענוצט פֿאַר לייענעוודיקע ID-ס ווי %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

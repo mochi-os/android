@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Aktualizované %1$s</string>
     <string name="wikis_pageview_not_found_description">Stránka „%1$s\" zatiaľ neexistuje.</string>
-    <string name="wikis_pageview_share_chooser">Odkaz na wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL wiki</string>
-    <string name="wikis_page_action_share">Odkaz</string>
     <string name="wikis_open_sidebar">Otvoriť bočný panel</string>
     <string name="wikis_search_placeholder">Hľadať wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Naozaj chcete zrušiť odber %1$s?</string>

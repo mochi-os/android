@@ -224,9 +224,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Siden \"%1$s\" finnes ikke ennå.</string>
-    <string name="wikis_pageview_share_chooser">Wiki-lenke</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_page_action_share">Lenke</string>
     <string name="wikis_open_sidebar">Åpne sidefelt</string>
     <string name="wikis_search_placeholder">Søk etter en wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Er du sikker på at du vil avslutte abonnementet på %1$s?</string>

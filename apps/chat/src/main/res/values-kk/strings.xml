@@ -176,7 +176,7 @@
     <string name="chat_refused_friends_only">%1$s чаттарды тек достардан қабылдайды.</string>
     <string name="chat_message_earlier">Бұл аккаунт Mochi-ге қосылғанға дейінгі хабарламалар шифрланған және оларды мұнда оқу мүмкін емес</string>
     <string name="chat_message_excluded">Тек басқа құрылғылар үшін шифрланған</string>
-    <string name="chat_setup">Орнату</string>
+    <string name="chat_message_changed">Жіберушінің шифрлау кілті өзгерді</string>    <string name="chat_setup">Орнату</string>
     <string name="chat_jump_bottom">Төменге өту</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s жаңа хабарламаға өту</item>
@@ -186,6 +186,7 @@
     <string name="chat_message_mismatched">Кілттері сәйкес келмейтін құрылғыдан жіберілген</string>
     <string name="chat_list_select">Чатты таңдау</string>
     <string name="chat_message_discard">Алып тастау</string>
+    <string name="chat_message_unencrypted">Шифрламай жіберу</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Хабарлама шектен %1$s таңбаға ұзын</item>
         <item quantity="other">Хабарлама шектен %1$s таңбаға ұзын</item>

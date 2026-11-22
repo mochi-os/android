@@ -175,8 +175,6 @@
     <string name="feeds_banner_dismiss">Banner schliessen</string>
     <string name="feeds_members_search">Mitglieder filtern</string>
     <string name="feeds_ai_prompt_default">Standard</string>
-    <string name="feeds_link">Link</string>
-    <string name="feeds_share_link_title">Feed-Link</string>
     <string name="feeds_ai_prompt_custom">Benutzerdefiniert</string>
     <string name="feeds_ai_prompt_variables">Variablen: %1$s</string>
     <string name="feeds_interest_boosted">Interesse erhöht</string>

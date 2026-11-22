@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Yan àwòṣe</string>
     <string name="projects_create_next">Tó kàn</string>
     <string name="projects_filter">Yọ́</string>
-    <string name="projects_link">Ọ̀nà àsopọ̀</string>
     <string name="projects_filter_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
     <string name="projects_filter_all">Gbogbo</string>
     <string name="projects_filter_other">Mìíràn</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">A ó pa àfikún yìí rẹ́ pátápátá.</string>
     <string name="projects_attachment_delete_confirm_title">Pa àfikún rẹ́?</string>
     <string name="projects_settings_unsubscribe_section">Dá ìforúkọsílẹ̀ iṣẹ́ àkanṣe dúró</string>
-    <string name="projects_share_link_title">Pín iṣẹ́ àkanṣe</string>
     <string name="projects_sort_filter_title">Tò kí o sì sẹ́</string>
     <string name="projects_create_prefix_hint">A ń lò fún àwọn ID tí a lè kà bíi %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

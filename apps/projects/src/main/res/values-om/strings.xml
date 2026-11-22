@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Galmee filadhu</string>
     <string name="projects_create_next">Itti aanu</string>
     <string name="projects_filter">Filannoo</string>
-    <string name="projects_link">Geessituu</string>
     <string name="projects_filter_clear_all">Hunda cilliisi</string>
     <string name="projects_filter_all">Hunda</string>
     <string name="projects_filter_other">Biraa</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Maxxansaan kun bara baraan ni haqama.</string>
     <string name="projects_attachment_delete_confirm_title">Maxxansaa haquu?</string>
     <string name="projects_settings_unsubscribe_section">Hordoffii pirojektii dhaabi</string>
-    <string name="projects_share_link_title">Pirojektii qoodi</string>
     <string name="projects_sort_filter_title">Tartiibessi fi calaali</string>
     <string name="projects_create_prefix_hint">ID dubbifamuu danda\'aniif kan fayyadu, fakkeenyaaf %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

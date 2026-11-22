@@ -5,6 +5,7 @@
 
 package org.mochios.chat.ui.chat
 
+import android.net.Uri
 import android.os.Looper
 import androidx.lifecycle.SavedStateHandle
 import com.google.gson.Gson
@@ -19,6 +20,7 @@ import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -39,6 +41,7 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
 import java.net.URLDecoder
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
@@ -70,8 +73,9 @@ class ChatComposerTest {
     @Volatile private var forwardGate: CountDownLatch? = null
     @Volatile private var presenceGate: CountDownLatch? = null
 
-    /** The status a send answers with. */
+    /** The status a send answers with, and the server's words where it refuses. */
     @Volatile private var sendStatus = 200
+    @Volatile private var sendError = "The server could not take it"
 
     @Before
     fun begin() {
@@ -94,7 +98,7 @@ class ChatComposerTest {
                     "/chat/c1/-/send" -> {
                         sendGate?.await(5, TimeUnit.SECONDS)
                         if (sendStatus == 200) ok("""{"id": "n1"}""")
-                        else MockResponse().setResponseCode(sendStatus).setBody("""{"error": "The server could not take it"}""")
+                        else MockResponse().setResponseCode(sendStatus).setBody("""{"error": "$sendError"}""")
                     }
                     "/chat/c1/-/messages/edit" -> ok("""{"id": "m1", "edited": 200}""")
                     "/chat/c1/-/messages/delete" -> ok("""{"deleted": ["m1"]}""")
@@ -223,6 +227,7 @@ class ChatComposerTest {
         val failed = model.uiState.value.unsent.single()
         assertEquals("first", failed.text)
         assertEquals("The server could not take it", failed.error.message)
+        assertFalse("a failure that is not for want of encryption offers no unencrypted send", failed.refused)
         sendGate = null
         sendStatus = 200
         model.retry(failed.key)
@@ -255,6 +260,112 @@ class ChatComposerTest {
         assertEquals("body=first reply&thread=m1", sent("/chat/c1/-/send"))
         assertEquals("the box keeps the next reply", "second reply", model.uiState.value.thread?.draft)
         assertTrue(model.uiState.value.thread!!.unsent.isEmpty())
+    }
+
+    /** The server's refusal of a message that would go unencrypted where the conversation was encrypted. */
+    private fun refuseEncryption() {
+        sendStatus = 409
+        sendError = "The message can no longer be encrypted for everyone in this conversation"
+    }
+
+    private fun picked(name: String): Uri {
+        val file = File(context.filesDir, name)
+        file.writeText("bytes of $name")
+        return Uri.fromFile(file)
+    }
+
+    @Test
+    fun `a send refused for want of encryption comes back saying so, and goes unencrypted when the user chooses`() {
+        val model = open()
+        refuseEncryption()
+        model.setDraft("secret")
+        model.sendMessage()
+        until("the refusal") { count("/chat/c1/-/send") == 1 && !model.uiState.value.isSending }
+        assertEquals("secret", model.uiState.value.draft)
+        assertEquals(
+            "THE POINT: the server's words, under the composer",
+            "The message can no longer be encrypted for everyone in this conversation",
+            model.uiState.value.refusal?.message,
+        )
+        assertNull("said once, by the composer", model.uiState.value.notice)
+        sendStatus = 200
+        model.sendMessage(unencrypted = true)
+        until("the send") { count("/chat/c1/-/send") == 2 && !model.uiState.value.isSending }
+        assertEquals("body=secret&unencrypted=true", sent("/chat/c1/-/send"))
+        assertNull(model.uiState.value.refusal)
+    }
+
+    @Test
+    fun `a refused message with files beside the next one goes unencrypted, files and all, from its row`() {
+        val model = open()
+        sendGate = CountDownLatch(1)
+        refuseEncryption()
+        model.addAttachments(listOf(picked("plan.txt")))
+        model.setDraft("with a file")
+        model.sendMessage()
+        until("the send") { count("/chat/c1/-/send") == 1 }
+        model.setDraft("next")
+        sendGate!!.countDown()
+        until("the refusal") { !model.uiState.value.isSending }
+        assertTrue("not unencrypted unasked", !sent("/chat/c1/-/send")!!.contains("name=\"unencrypted\""))
+        val failed = model.uiState.value.unsent.single()
+        assertTrue("THE POINT: the row offers to send it unencrypted", failed.refused)
+        assertEquals(1, failed.attachments.size)
+        sendGate = null
+        sendStatus = 200
+        model.retry(failed.key, unencrypted = true)
+        until("the retry") { count("/chat/c1/-/send") == 2 && !model.uiState.value.isSending }
+        val body = sent("/chat/c1/-/send")!!
+        assertTrue(body, body.contains("name=\"unencrypted\""))
+        assertTrue(body, body.contains("filename=\"plan.txt\""))
+        assertTrue(model.uiState.value.unsent.isEmpty())
+        assertEquals("next", model.uiState.value.draft)
+        assertNull("the composer's message was never refused", model.uiState.value.refusal)
+    }
+
+    @Test
+    fun `a thread reply refused for want of encryption comes back into the box, and goes unencrypted from it`() {
+        val model = open()
+        model.openThread(model.uiState.value.messages.single())
+        until("the thread") { model.uiState.value.thread?.isLoading == false }
+        refuseEncryption()
+        model.setThreadDraft("secret reply")
+        model.sendThreadReply()
+        until("the refusal") { count("/chat/c1/-/send") == 1 && model.uiState.value.thread?.isSending == false }
+        assertEquals("secret reply", model.uiState.value.thread?.draft)
+        assertEquals(
+            "The message can no longer be encrypted for everyone in this conversation",
+            model.uiState.value.thread?.refusal?.message,
+        )
+        assertNull(model.uiState.value.notice)
+        sendStatus = 200
+        model.sendThreadReply(unencrypted = true)
+        until("the send") { count("/chat/c1/-/send") == 2 && model.uiState.value.thread?.isSending == false }
+        assertEquals("body=secret reply&thread=m1&unencrypted=true", sent("/chat/c1/-/send"))
+        assertNull(model.uiState.value.thread?.refusal)
+    }
+
+    @Test
+    fun `a thread reply refused beside the next one goes unencrypted from its row`() {
+        val model = open()
+        model.openThread(model.uiState.value.messages.single())
+        until("the thread") { model.uiState.value.thread?.isLoading == false }
+        sendGate = CountDownLatch(1)
+        refuseEncryption()
+        model.setThreadDraft("first reply")
+        model.sendThreadReply()
+        until("the send") { count("/chat/c1/-/send") == 1 }
+        model.setThreadDraft("second reply")
+        sendGate!!.countDown()
+        until("the refusal") { model.uiState.value.thread?.isSending == false }
+        val failed = model.uiState.value.thread!!.unsent.single()
+        assertTrue(failed.refused)
+        sendGate = null
+        sendStatus = 200
+        model.retryReply(failed.key, unencrypted = true)
+        until("the retry") { count("/chat/c1/-/send") == 2 && model.uiState.value.thread?.isSending == false }
+        assertEquals("body=first reply&thread=m1&unencrypted=true", sent("/chat/c1/-/send"))
+        assertEquals("second reply", model.uiState.value.thread?.draft)
     }
 
     @Test

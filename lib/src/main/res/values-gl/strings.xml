@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s retomou a partida</string>
     <string name="game_not_found">Non se atopou a partida</string>
     <string name="game_chat_move_played_you">Xogaches %1$s</string>
+    <string name="share_title">Compartir</string>
+    <string name="share_feed">Publicar nun fío</string>
+    <string name="share_chat">Enviar nun chat</string>
     <string name="devices_add">Engadir un dispositivo</string>
     <string name="devices_copy">Copiar %1$s</string>
     <string name="devices_create">Crear</string>

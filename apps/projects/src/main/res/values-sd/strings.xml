@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ٽيمپليٽ چونڊيو</string>
     <string name="projects_create_next">اڳيون</string>
     <string name="projects_filter">فلٽر</string>
-    <string name="projects_link">لنڪ</string>
     <string name="projects_filter_clear_all">سڀ صاف ڪريو</string>
     <string name="projects_filter_all">سڀ</string>
     <string name="projects_filter_other">ٻيو</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">هي ڳنڍيل فائل هميشه لاءِ ڊهي ويندي.</string>
     <string name="projects_attachment_delete_confirm_title">ڳنڍيل فائل ڊاهيو؟</string>
     <string name="projects_settings_unsubscribe_section">منصوبي جي رڪنيت ڇڏيو</string>
-    <string name="projects_share_link_title">منصوبو ونڊيو</string>
     <string name="projects_sort_filter_title">ترتيب ۽ فلٽر</string>
     <string name="projects_create_prefix_hint">%1$s-1، %1$s-2 جهڙين پڙهڻ جوڳين ID لاءِ استعمال ٿئي ٿو</string>
     <plurals name="projects_request_conflicts">

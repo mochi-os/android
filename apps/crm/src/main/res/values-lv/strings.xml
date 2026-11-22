@@ -16,7 +16,6 @@
     <string name="crm_create_object">Izveidot objektu</string>
     <string name="crm_search">Meklēt</string>
     <string name="crm_settings">Iestatījumi</string>
-    <string name="crm_link">Saite</string>
     <string name="crm_design">Dizains</string>
     <string name="crm_export_failed">Neizdevās saglabāt eksportu</string>
     <string name="crm_sort_rank">Manuāls</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">CRM nav atrasti</string>
     <string name="crm_create_blocked_no_parents">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
     <string name="crm_export_csv">Eksportēt CSV</string>
-    <string name="crm_share_link_title">Kopīgot CRM</string>
     <string name="crm_export_saved">CRM dati saglabāti</string>
     <string name="crm_create_upload_json">Augšupielādējiet .zip vai .json failu</string>
     <string name="crm_create_blocked_no_options">Nevar izveidot: %1$s ir obligāts, taču tam nav izvēles iespēju. Pievienojiet opcijas Dizainā.</string>

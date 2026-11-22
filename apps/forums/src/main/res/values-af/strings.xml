@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Telling-prompt</string>
     <string name="forums_ai_prompt_tag_label">Etiket-prompt</string>
     <string name="forums_ai_prompt_variables">Veranderlikes: %1$s</string>
-    <string name="forums_link">Skakel</string>
     <string name="forums_moderation_ban_message">Hulle verloor toegang tot die forum totdat jy die beperking verwyder.</string>
     <string name="forums_moderation_ban_title">Verban %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Daar is nog geen modereringsaksies aangeteken nie</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forum hernoem</string>
     <string name="forums_settings_name_clear_cd">Maak naam skoon</string>
     <string name="forums_settings_unsubscribe_section">Teken uit van forum</string>
-    <string name="forums_share_link_title">Forumskakel</string>
     <string name="forums_find_found_by_url">Gevind via URL</string>
     <string name="forums_moderation_pending_posts">Hangende plasings (%1$s)</string>
     <string name="forums_moderation_pending_comments">Hangende kommentare (%1$s)</string>

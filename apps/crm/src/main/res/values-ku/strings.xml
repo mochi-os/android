@@ -16,7 +16,6 @@
     <string name="crm_create_object">Obje çêbike</string>
     <string name="crm_search">Lêger</string>
     <string name="crm_settings">Mîheng</string>
-    <string name="crm_link">Girêdan</string>
     <string name="crm_design">Sêwiran</string>
     <string name="crm_export_failed">Nekarî hinardekirin tomar bike</string>
     <string name="crm_sort_rank">Destî</string>
@@ -270,7 +269,6 @@
     <string name="crm_no_crms_found">Tu CRM nehatin dîtin</string>
     <string name="crm_create_blocked_no_parents">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="crm_export_csv">CSV derxe</string>
-    <string name="crm_share_link_title">CRM parve bike</string>
     <string name="crm_export_saved">Daneyên CRM hatin tomarkirin</string>
     <string name="crm_create_upload_json">Pelê .zip an .json bar bike</string>
     <string name="crm_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>

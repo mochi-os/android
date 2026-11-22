@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Prompt ng score</string>
     <string name="forums_ai_prompt_tag_label">Prompt ng tag</string>
     <string name="forums_ai_prompt_variables">Mga variable: %1$s</string>
-    <string name="forums_link">Link</string>
     <string name="forums_moderation_ban_message">Mawawalan sila ng access sa forum hangga\'t hindi mo inaalis ang paghihigpit.</string>
     <string name="forums_moderation_ban_title">I-ban si %1$s?</string>
     <string name="forums_moderation_log_empty_subtitle">Wala pang naitalang aksyon ng pagmomoderate</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Na-rename ang forum</string>
     <string name="forums_settings_name_clear_cd">I-clear ang pangalan</string>
     <string name="forums_settings_unsubscribe_section">Mag-unsubscribe sa forum</string>
-    <string name="forums_share_link_title">Link ng forum</string>
     <string name="forums_find_found_by_url">Nahanap sa pamamagitan ng URL</string>
     <string name="forums_moderation_pending_posts">Mga nakabinbing post (%1$s)</string>
     <string name="forums_moderation_pending_comments">Mga nakabinbing komento (%1$s)</string>

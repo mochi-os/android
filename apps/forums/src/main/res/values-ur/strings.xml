@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">اسکور پرامپٹ</string>
     <string name="forums_ai_prompt_tag_label">ٹیگ پرامپٹ</string>
     <string name="forums_ai_prompt_variables">متغیرات: %1$s</string>
-    <string name="forums_link">لنک</string>
     <string name="forums_moderation_ban_message">جب تک آپ پابندی نہیں ہٹاتے، فورم تک رسائی ختم ہو جائے گی۔</string>
     <string name="forums_moderation_ban_title">%1$s پر پابندی لگائیں؟</string>
     <string name="forums_moderation_log_empty_subtitle">ابھی تک کوئی نگرانی کی کارروائی ریکارڈ نہیں ہوئی</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">فورم کا نام تبدیل ہو گیا</string>
     <string name="forums_settings_name_clear_cd">نام صاف کریں</string>
     <string name="forums_settings_unsubscribe_section">فورم کی رکنیت ختم کریں</string>
-    <string name="forums_share_link_title">فورم لنک</string>
     <string name="forums_find_found_by_url">URL سے ملا</string>
     <string name="forums_moderation_pending_posts">زیر التوا پوسٹس (%1$s)</string>
     <string name="forums_moderation_pending_comments">زیر التوا تبصرے (%1$s)</string>

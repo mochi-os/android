@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ជ្រើសរើសគំរូ</string>
     <string name="projects_create_next">បន្ទាប់</string>
     <string name="projects_filter">តម្រង</string>
-    <string name="projects_link">តំណ</string>
     <string name="projects_filter_clear_all">សម្អាតទាំងអស់</string>
     <string name="projects_filter_all">ទាំងអស់</string>
     <string name="projects_filter_other">ផ្សេងទៀត</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ឯកសារភ្ជាប់នេះនឹងត្រូវលុបជាអចិន្ត្រៃយ៍។</string>
     <string name="projects_attachment_delete_confirm_title">លុបឯកសារភ្ជាប់?</string>
     <string name="projects_settings_unsubscribe_section">ឈប់ជាវគម្រោង</string>
-    <string name="projects_share_link_title">ចែករំលែកគម្រោង</string>
     <string name="projects_sort_filter_title">តម្រៀប និងត្រង</string>
     <string name="projects_create_prefix_hint">ប្រើសម្រាប់លេខសម្គាល់ដែលអានបានដូចជា %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s yalnız dostlardan söhbət qəbul edir.</string>
     <string name="chat_message_earlier">Bu hesab Mochi-yə əlavə edilməzdən əvvəlki mesajlar şifrələnib və burada oxuna bilməz</string>
     <string name="chat_message_excluded">Yalnız digər cihazlar üçün şifrələnib</string>
-    <string name="chat_setup">Quraşdır</string>
+    <string name="chat_message_changed">Göndərənin şifrələmə açarı dəyişib</string>    <string name="chat_setup">Quraşdır</string>
     <string name="chat_jump_bottom">Aşağı keç</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">%1$s yeni mesaja keç</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Açarları uyğun gəlməyən cihazdan göndərilib</string>
     <string name="chat_list_select">Söhbət seç</string>
     <string name="chat_message_discard">At</string>
+    <string name="chat_message_unencrypted">Şifrələmədən göndər</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Mesaj limitdən %1$s simvol uzundur</item>
         <item quantity="other">Mesaj limitdən %1$s simvol uzundur</item>

@@ -213,8 +213,6 @@
     <string name="feeds_ai_prompt_default">За замовчуванням</string>
     <string name="feeds_ai_prompt_custom">Користувацький</string>
     <string name="feeds_ai_prompt_variables">Змінні: %1$s</string>
-    <string name="feeds_link">Посилання</string>
-    <string name="feeds_share_link_title">Посилання на стрічку</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">%1$s коментар</item>
         <item quantity="few">%1$s коментарі</item>

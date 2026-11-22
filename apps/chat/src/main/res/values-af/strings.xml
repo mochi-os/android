@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s aanvaar slegs geselsies van vriende.</string>
     <string name="chat_message_earlier">Boodskappe van voordat hierdie rekening by Mochi gevoeg is, is geënkripteer en kan nie hier gelees word nie</string>
     <string name="chat_message_excluded">Slegs vir ander toestelle geënkripteer</string>
-    <string name="chat_setup">Stel op</string>
+    <string name="chat_message_changed">Die sender se enkripsiesleutel het verander</string>    <string name="chat_setup">Stel op</string>
     <string name="chat_jump_bottom">Spring na onder</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">Spring na %1$s nuwe boodskap</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">Gestuur vanaf \'n toestel waarvan die sleutels nie ooreenstem nie</string>
     <string name="chat_list_select">Kies \'n geselsie</string>
     <string name="chat_message_discard">Gooi weg</string>
+    <string name="chat_message_unencrypted">Stuur onversleuteld</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">Die boodskap is %1$s karakter te lank</item>
         <item quantity="other">Die boodskap is %1$s karakters te lank</item>

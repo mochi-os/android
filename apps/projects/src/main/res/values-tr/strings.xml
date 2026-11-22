@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Bir şablon seçin</string>
     <string name="projects_create_next">İleri</string>
     <string name="projects_filter">Filtrele</string>
-    <string name="projects_link">Bağlantı</string>
     <string name="projects_filter_clear_all">Tümünü temizle</string>
     <string name="projects_filter_all">Tümü</string>
     <string name="projects_filter_other">Diğer</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Bu ek kalıcı olarak silinecek.</string>
     <string name="projects_attachment_delete_confirm_title">Ek silinsin mi?</string>
     <string name="projects_settings_unsubscribe_section">Proje aboneliğinden çık</string>
-    <string name="projects_share_link_title">Projeyi paylaş</string>
     <string name="projects_sort_filter_title">Sırala ve filtrele</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 gibi okunabilir kimlikler için kullanılır</string>
     <plurals name="projects_request_conflicts">

@@ -222,9 +222,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Абноўлена %1$s</string>
     <string name="wikis_pageview_not_found_description">Старонка „%1$s\" яшчэ не існуе.</string>
-    <string name="wikis_pageview_share_chooser">Спасылка на вікі</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_page_action_share">Спасылка</string>
     <string name="wikis_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="wikis_search_placeholder">Пошук wiki</string>
     <string name="wikis_unsubscribe_confirm_message">Вы ўпэўнены, што хочаце адпісацца ад %1$s?</string>

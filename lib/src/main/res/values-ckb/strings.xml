@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s یاری دەستپێکردەوە</string>
     <string name="game_not_found">یاری نەدۆزرایەوە</string>
     <string name="game_chat_move_played_you">تۆ یاریت کرد %1$s</string>
+    <string name="share_title">هاوبەش بکە</string>
+    <string name="share_feed">لە فیدێکدا بڵاوی بکەرەوە</string>
+    <string name="share_chat">لە گفتوگۆیەکدا بینێرە</string>
     <string name="devices_add">زیادکردنی ئامێر</string>
     <string name="devices_copy">کۆپیکردنی %1$s</string>
     <string name="devices_create">دروستکردن</string>

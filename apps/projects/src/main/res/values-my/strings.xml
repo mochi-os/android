@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">ပုံစံခွက် တစ်ခု ရွေးချယ်ပါ</string>
     <string name="projects_create_next">ရှေ့သို့</string>
     <string name="projects_filter">စိစစ်</string>
-    <string name="projects_link">လင့်ခ်</string>
     <string name="projects_filter_clear_all">အားလုံး ရှင်းမည်</string>
     <string name="projects_filter_all">အားလုံး</string>
     <string name="projects_filter_other">အခြား</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">ဤပူးတွဲဖိုင်ကို အပြီးအပိုင် ဖျက်ပါမည်။</string>
     <string name="projects_attachment_delete_confirm_title">ပူးတွဲဖိုင်ကို ဖျက်မလား?</string>
     <string name="projects_settings_unsubscribe_section">ပရောဂျက် စာရင်းသွင်းမှု ရပ်ရန်</string>
-    <string name="projects_share_link_title">ပရောဂျက် မျှဝေရန်</string>
     <string name="projects_sort_filter_title">စီစဉ်ပြီး စစ်ထုတ်ရန်</string>
     <string name="projects_create_prefix_hint">%1$s-1၊ %1$s-2 ကဲ့သို့ ဖတ်နိုင်သော ID များအတွက် အသုံးပြုသည်</string>
     <plurals name="projects_request_conflicts">

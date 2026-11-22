@@ -175,7 +175,7 @@
     <string name="chat_refused_friends_only">%1$s تەنها گفتوگۆ لە هاوڕێیانەوە وەردەگرێت.</string>
     <string name="chat_message_earlier">پەیامەکانی پێش زیادکردنی ئەم هەژمارە بۆ Mochi شفرەکراون و لێرە ناخوێنرێنەوە</string>
     <string name="chat_message_excluded">تەنها بۆ ئامێرەکانی تر شفرەکراوە</string>
-    <string name="chat_setup">ڕێکخستن</string>
+    <string name="chat_message_changed">کلیلی شفرەکردنی نێرەر گۆڕاوە</string>    <string name="chat_setup">ڕێکخستن</string>
     <string name="chat_jump_bottom">بازدان بۆ خوارەوە</string>
     <plurals name="chat_jump_newer">
         <item quantity="one">بازدان بۆ %1$s پەیامی نوێ</item>
@@ -185,6 +185,7 @@
     <string name="chat_message_mismatched">لە ئامێرێکەوە نێردراوە کە کلیلەکانی یەک ناگرنەوە</string>
     <string name="chat_list_select">گفتوگۆیەک هەڵبژێرە</string>
     <string name="chat_message_discard">فڕێدان</string>
+    <string name="chat_message_unencrypted">بێ نهێنیکردن بنێرە</string>
     <plurals name="chat_message_too_long">
         <item quantity="one">نامەکە %1$s پیت لە سنوور درێژترە</item>
         <item quantity="other">نامەکە %1$s پیت لە سنوور درێژترە</item>

@@ -184,8 +184,6 @@
     <string name="feeds_banner_dismiss">Masquer la bannière</string>
     <string name="feeds_members_search">Filtrer les membres</string>
     <string name="feeds_ai_prompt_default">Par défaut</string>
-    <string name="feeds_link">Lien</string>
-    <string name="feeds_share_link_title">Lien du flux</string>
     <string name="feeds_ai_prompt_custom">Personnalisé</string>
     <string name="feeds_ai_prompt_variables">Variables : %1$s</string>
     <string name="feeds_interest_boosted">Centre d\'intérêt renforcé</string>

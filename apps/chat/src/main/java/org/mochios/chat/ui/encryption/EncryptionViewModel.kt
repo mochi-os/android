@@ -130,16 +130,23 @@ class EncryptionViewModel @Inject constructor(
         }
     }
 
-    /** The user's word on a device of [person]'s, having compared its fingerprint. */
-    fun trust(person: String, device: String, trust: String) {
+    /**
+     * The user's word on a device of [person]'s, having compared the
+     * fingerprint shown for it, which goes with the word: where the device's
+     * identity has changed since, the server refuses it, saying so, and the
+     * devices are read again to show the new one.
+     */
+    fun trust(person: String, device: EncryptionDevice, trust: String) {
         viewModelScope.launch {
             try {
-                repository.trust(chatId, person, device, trust)
+                repository.trust(chatId, person, device.id, trust, device.fingerprint)
                 say(application.getString(MochiR.string.common_saved))
-                devices(person)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 say(said(e, application.getString(R.string.chat_encryption_save_failed)))
             }
+            devices(person)
         }
     }
 

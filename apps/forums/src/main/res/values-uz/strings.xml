@@ -211,7 +211,6 @@
     <string name="forums_ai_prompt_score_label">Baholash soʻrovi</string>
     <string name="forums_ai_prompt_tag_label">Teg soʻrovi</string>
     <string name="forums_ai_prompt_variables">O\'zgaruvchilar: %1$s</string>
-    <string name="forums_link">Havola</string>
     <string name="forums_moderation_ban_message">Siz cheklovni olib tashlamaguningizcha forumga kirish huquqini yo\'qotadi.</string>
     <string name="forums_moderation_ban_title">%1$s bloklansinmi?</string>
     <string name="forums_moderation_log_empty_subtitle">Hozircha moderatsiya amallari qayd etilmagan</string>
@@ -240,7 +239,6 @@
     <string name="forums_settings_forum_renamed">Forum nomi oʻzgartirildi</string>
     <string name="forums_settings_name_clear_cd">Nomni tozalash</string>
     <string name="forums_settings_unsubscribe_section">Forumdan obunani bekor qilish</string>
-    <string name="forums_share_link_title">Forum havolasi</string>
     <string name="forums_find_found_by_url">URL orqali topildi</string>
     <string name="forums_moderation_pending_posts">Kutilayotgan postlar (%1$s)</string>
     <string name="forums_moderation_pending_comments">Kutilayotgan izohlar (%1$s)</string>

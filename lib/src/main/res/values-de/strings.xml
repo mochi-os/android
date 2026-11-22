@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s hat das Spiel fortgesetzt</string>
     <string name="game_not_found">Spiel nicht gefunden</string>
     <string name="game_chat_move_played_you">Sie haben %1$s gespielt</string>
+    <string name="share_title">Teilen</string>
+    <string name="share_feed">In einem Feed posten</string>
+    <string name="share_chat">In einem Chat senden</string>
     <string name="devices_add">Gerät hinzufügen</string>
     <string name="devices_copy">%1$s kopieren</string>
     <string name="devices_create">Erstellen</string>

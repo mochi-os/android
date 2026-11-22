@@ -210,8 +210,6 @@
     <string name="feeds_ai_prompt_default">Noklusētais</string>
     <string name="feeds_ai_prompt_custom">Pielāgots</string>
     <string name="feeds_ai_prompt_variables">Mainīgie: %1$s</string>
-    <string name="feeds_link">Saite</string>
-    <string name="feeds_share_link_title">Plūsmas saite</string>
     <plurals name="feeds_comment_count">
         <item quantity="zero">%1$s komentāru</item>
         <item quantity="one">%1$s komentārs</item>

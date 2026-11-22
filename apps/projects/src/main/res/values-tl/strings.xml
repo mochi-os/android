@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">Pumili ng template</string>
     <string name="projects_create_next">Susunod</string>
     <string name="projects_filter">I-filter</string>
-    <string name="projects_link">Link</string>
     <string name="projects_filter_clear_all">Burahin lahat</string>
     <string name="projects_filter_all">Lahat</string>
     <string name="projects_filter_other">Iba pa</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">Permanenteng buburahin ang attachment na ito.</string>
     <string name="projects_attachment_delete_confirm_title">Burahin ang attachment?</string>
     <string name="projects_settings_unsubscribe_section">Mag-unsubscribe sa proyekto</string>
-    <string name="projects_share_link_title">Ibahagi ang proyekto</string>
     <string name="projects_sort_filter_title">Pagbukud-bukurin at salain</string>
     <string name="projects_create_prefix_hint">Ginagamit para sa mga nababasang ID tulad ng %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">

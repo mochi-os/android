@@ -14,9 +14,10 @@ import javax.xml.parsers.DocumentBuilderFactory
 
 /**
  * The shell's manifest declares the entry points other apps can reach, and
- * these are the ones it must keep narrow: only MainActivity and the home
- * icon take another app's intent, the push receiver takes no cleartext
- * delivery, and the distributor takes only Mochi-signed callers.
+ * these are the ones it must keep narrow: only MainActivity, the home icon
+ * and the share destination take another app's intent, the share
+ * destination only a share, the push receiver takes no cleartext delivery,
+ * and the distributor takes only Mochi-signed callers.
  */
 class ShellManifestTest {
 
@@ -42,15 +43,28 @@ class ShellManifestTest {
         }
 
     @Test
-    fun `only MainActivity and the home icon are exported`() {
+    fun `only MainActivity, the home icon and the share destination are exported`() {
         val exported = elements("activity").associate { activity ->
             activity.attribute("name") to activity.attribute("exported")
         }
-        assertEquals(LAUNCHER_ACTIVITIES.size + 1, exported.size)
+        assertEquals(LAUNCHER_ACTIVITIES.size + 2, exported.size)
         for ((name, value) in exported) {
-            val expected = if (name == ".MainActivity" || name == ".MochiHomeLauncher") "true" else "false"
+            val expected = if (name in setOf(".MainActivity", ".MochiHomeLauncher", SHARE)) "true" else "false"
             assertEquals(name, expected, value)
         }
+    }
+
+    @Test
+    fun `the share destination takes a share and nothing that routes`() {
+        val share = elements("activity").single { it.attribute("name") == SHARE }
+        assertEquals(listOf("android.intent.action.SEND", "android.intent.action.SEND_MULTIPLE"), share.actions())
+        assertEquals(0, share.getElementsByTagName("category").let { categories ->
+            (0 until categories.length).count { index -> (categories.item(index) as Element).attribute("name") != "android.intent.category.DEFAULT" }
+        })
+        val data = share.getElementsByTagName("data")
+        val types = (0 until data.length).map { index -> data.item(index) as Element }
+        assertTrue("no scheme or host: $types", types.all { it.attribute("scheme").isEmpty() && it.attribute("host").isEmpty() })
+        assertEquals(setOf("text/plain", "image/*"), types.map { it.attribute("mimeType") }.toSet())
     }
 
     @Test
@@ -80,5 +94,10 @@ class ShellManifestTest {
         assertTrue(elements("uses-permission").any { it.attribute("name") == permission })
         // The connector finds a distributor by its filter, so it stays.
         assertTrue("org.unifiedpush.android.distributor.REGISTER" in receiver.actions())
+    }
+
+    private companion object {
+        /** Mochi in the system share sheet. */
+        const val SHARE = "org.mochios.android.share.ShareActivity"
     }
 }

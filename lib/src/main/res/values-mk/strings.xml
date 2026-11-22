@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s ја продолжи играта</string>
     <string name="game_not_found">Играта не е пронајдена</string>
     <string name="game_chat_move_played_you">Вие игравте %1$s</string>
+    <string name="share_title">Сподели</string>
+    <string name="share_feed">Објави во канал</string>
+    <string name="share_chat">Испрати во разговор</string>
     <string name="devices_add">Додај уред</string>
     <string name="devices_copy">Копирај %1$s</string>
     <string name="devices_create">Создај</string>

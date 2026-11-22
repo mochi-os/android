@@ -353,6 +353,9 @@
     <string name="game_system_score_resume">%1$s খেলা আবার শুরু করেছেন</string>
     <string name="game_not_found">গেম পাওয়া যায়নি</string>
     <string name="game_chat_move_played_you">আপনি %1$s খেলেছেন</string>
+    <string name="share_title">শেয়ার করুন</string>
+    <string name="share_feed">ফিডে পোস্ট করুন</string>
+    <string name="share_chat">চ্যাটে পাঠান</string>
     <string name="devices_add">ডিভাইস যোগ করুন</string>
     <string name="devices_copy">%1$s কপি করুন</string>
     <string name="devices_create">তৈরি করুন</string>

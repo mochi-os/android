@@ -256,7 +256,6 @@
     <string name="projects_create_choose_template">اختر قالباً</string>
     <string name="projects_create_next">التالي</string>
     <string name="projects_filter">تصفية</string>
-    <string name="projects_link">رابط</string>
     <string name="projects_filter_clear_all">مسح الكل</string>
     <string name="projects_filter_all">الكل</string>
     <string name="projects_filter_other">أخرى</string>
@@ -300,7 +299,6 @@
     <string name="projects_attachment_delete_confirm_message">سيتم حذف هذا المرفق نهائيًا.</string>
     <string name="projects_attachment_delete_confirm_title">حذف المرفق؟</string>
     <string name="projects_settings_unsubscribe_section">إنهاء الاشتراك في المشروع</string>
-    <string name="projects_share_link_title">مشاركة المشروع</string>
     <string name="projects_sort_filter_title">فرز وتصفية</string>
     <string name="projects_create_prefix_hint">يُستخدم لمعرّفات مقروءة مثل %1$s-1 و%1$s-2</string>
     <plurals name="projects_request_conflicts">
