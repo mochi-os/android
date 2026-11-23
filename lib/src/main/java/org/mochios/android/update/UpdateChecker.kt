@@ -27,9 +27,12 @@ import java.security.Signature
 import java.security.spec.X509EncodedKeySpec
 import java.util.Base64
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.awaitCancellation
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -38,6 +41,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
+import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okio.Buffer
@@ -61,10 +65,11 @@ class UpdateChecker(
 ) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result {
-        // A foreground download already holds the gate. Waiting on it would
-        // burn this worker's ten-minute window (and a wakelock) doing nothing,
-        // so back off and let WorkManager re-run us once it has finished.
-        if (state.value is DownloadState.Running) return Result.retry()
+        // A download already holds the gate. Waiting on it would burn this
+        // worker's ten-minute window (and a wakelock) doing nothing, so back
+        // off and let WorkManager re-run us once it has finished. The gate,
+        // not [state]: the lock is the transfer itself.
+        if (gate.isLocked) return Result.retry()
         // The daily poll reads only the manifest, and hands a newer version's
         // download to the work that waits for an unmetered network.
         if (inputData.getBoolean(KEY_POLL, false)) {
@@ -278,7 +283,15 @@ class UpdateChecker(
          * as OkHttp's execute() blocks and callers may be on the main
          * dispatcher.
          */
-        suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
+        suspend fun checkNow(context: Context): CheckOutcome =
+            checkNow(context, BASE_URL, MANIFEST_PUBLIC_KEY, Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+
+        internal suspend fun checkNow(
+            context: Context,
+            base: String,
+            key: String,
+            platform: Boolean,
+        ): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) {
                 // The store is responsible for updates here. About-dialog
@@ -289,7 +302,7 @@ class UpdateChecker(
             val current = currentVersionName(ctx) ?: return@withContext CheckOutcome.UpToDate
 
             val manifest = try {
-                fetchManifest(ctx)
+                fetchManifest(ctx, base, key, platform)
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
                 return@withContext CheckOutcome.NetworkError
@@ -338,41 +351,51 @@ class UpdateChecker(
                 }
 
                 _state.value = DownloadState.Running(latest, target.length().coerceAtMost(release.size), release.size)
-                var complete = false
-                for (attempt in 1..DOWNLOAD_ATTEMPTS) {
-                    try {
-                        val done = download(target, release) { downloaded, total ->
-                            _state.value = DownloadState.Running(latest, downloaded, total)
+                try {
+                    var complete = false
+                    for (attempt in 1..DOWNLOAD_ATTEMPTS) {
+                        try {
+                            val done = download(target, release, base) { downloaded, total ->
+                                _state.value = DownloadState.Running(latest, downloaded, total)
+                            }
+                            if (done) {
+                                complete = true
+                                break
+                            }
+                            Log.i(TAG, "APK incomplete at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
+                        } catch (e: Exception) {
+                            Log.i(TAG, "APK download dropped at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
                         }
-                        if (done) {
-                            complete = true
-                            break
+                        // Keep the partial — the next attempt resumes from it.
+                        if (attempt < DOWNLOAD_ATTEMPTS) {
+                            // Linear backoff: 2s, then 4s.
+                            delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
                         }
-                        Log.i(TAG, "APK incomplete at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
-                    } catch (e: Exception) {
-                        Log.i(TAG, "APK download dropped at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
                     }
-                    // Keep the partial — the next attempt resumes from it.
-                    if (attempt < DOWNLOAD_ATTEMPTS) {
-                        // Linear backoff: 2s, then 4s.
-                        delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
+                    if (!complete) {
+                        // Leave the partial in place on purpose: the next check resumes it.
+                        _state.value = DownloadState.Failed(latest)
+                        return@withLock CheckOutcome.DownloadFailed
                     }
-                }
-                if (!complete) {
-                    // Leave the partial in place on purpose: the next check resumes it.
-                    _state.value = DownloadState.Failed(latest)
-                    return@withLock CheckOutcome.DownloadFailed
-                }
 
-                prefs(ctx).edit()
-                    .putString(KEY_PENDING, latest)
-                    .putString(KEY_PENDING_PATH, target.absolutePath)
-                    .putLong(KEY_PENDING_SIZE, release.size)
-                    .putString(KEY_PENDING_SHA, release.sha256)
-                    .apply()
-                Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
-                _state.value = DownloadState.Staged(latest)
-                CheckOutcome.UpdateStaged
+                    prefs(ctx).edit()
+                        .putString(KEY_PENDING, latest)
+                        .putString(KEY_PENDING_PATH, target.absolutePath)
+                        .putLong(KEY_PENDING_SIZE, release.size)
+                        .putString(KEY_PENDING_SHA, release.sha256)
+                        .apply()
+                    Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
+                    _state.value = DownloadState.Staged(latest)
+                    CheckOutcome.UpdateStaged
+                } finally {
+                    // A worker WorkManager stops (the Wi-Fi an unmetered
+                    // download waits for is lost, or the job's ten minutes run
+                    // out) leaves here by cancellation, mid-transfer. Running
+                    // must not outlive it: the About dialog would freeze on the
+                    // last percentage with its button disabled for as long as
+                    // the process lives, which the push service keeps it doing.
+                    if (_state.value is DownloadState.Running) _state.value = DownloadState.Failed(latest)
+                }
             }
         }
 
@@ -550,19 +573,46 @@ class UpdateChecker(
          * and keeps the partial. The versioned URL stops a resume splicing two
          * different artifacts.
          */
-        private fun download(
+        private suspend fun download(
             target: File,
             release: Release,
+            base: String,
             onProgress: (downloaded: Long, total: Long) -> Unit,
-        ): Boolean {
+        ): Boolean = coroutineScope {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
             // Already at the declared length: verify what is on disk rather
             // than requesting a range beyond the end, which answers 416.
-            if (have >= release.size) return verify(target, release)
-            val builder = Request.Builder().url("$BASE_URL/${release.file}").get()
+            if (have >= release.size) return@coroutineScope verify(target, release)
+            val builder = Request.Builder().url("$base/${release.file}").get()
             if (have > 0) builder.header("Range", "bytes=$have-")
-            downloadClient().newCall(builder.build()).execute().use { resp ->
+            val call = downloadClient().newCall(builder.build())
+            // Blocking IO is deaf to cancellation, so a stopped worker would
+            // hold the transfer and the gate until the read timed out. Cancel
+            // the call itself; undispatched so the watch is in place before the
+            // request goes out.
+            val watch = launch(start = CoroutineStart.UNDISPATCHED) {
+                try {
+                    awaitCancellation()
+                } finally {
+                    call.cancel()
+                }
+            }
+            try {
+                transfer(call, target, release, have, onProgress)
+            } finally {
+                watch.cancel()
+            }
+        }
+
+        private fun transfer(
+            call: Call,
+            target: File,
+            release: Release,
+            have: Long,
+            onProgress: (downloaded: Long, total: Long) -> Unit,
+        ): Boolean {
+            call.execute().use { resp ->
                 // 206 = resume accepted; 200 = full body (first fetch, or a
                 // server that ignored the Range header).
                 if (resp.code != 200 && resp.code != 206) {
