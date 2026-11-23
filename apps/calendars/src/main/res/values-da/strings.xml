@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Vis på kort</string>
     <string name="calendars_location_flight">Følg flyet</string>
     <string name="calendars_preferences_week_numbers">Vis ugenumre</string>
+    <string name="calendars_poll_interrupted">Den seneste hentning blev ikke fuldført</string>
 </resources>

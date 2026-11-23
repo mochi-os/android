@@ -54,4 +54,5 @@
     <string name="calendars_location_map">Op kaart tonen</string>
     <string name="calendars_location_flight">Vlucht volgen</string>
     <string name="calendars_preferences_week_numbers">Weeknummers tonen</string>
+    <string name="calendars_poll_interrupted">Het laatste ophalen is niet voltooid</string>
 </resources>

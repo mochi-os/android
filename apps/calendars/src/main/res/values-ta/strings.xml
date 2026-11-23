@@ -259,4 +259,5 @@
     <string name="calendars_location_map">வரைபடத்தில் காட்டு</string>
     <string name="calendars_location_flight">விமானத்தைக் கண்காணி</string>
     <string name="calendars_preferences_week_numbers">வார எண்களைக் காட்டு</string>
+    <string name="calendars_poll_interrupted">கடைசி பெறுதல் முடிவடையவில்லை</string>
 </resources>

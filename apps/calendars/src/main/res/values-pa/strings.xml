@@ -259,4 +259,5 @@
     <string name="calendars_location_map">ਨਕਸ਼ੇ \'ਤੇ ਦਿਖਾਓ</string>
     <string name="calendars_location_flight">ਉਡਾਣ ਟ੍ਰੈਕ ਕਰੋ</string>
     <string name="calendars_preferences_week_numbers">ਹਫ਼ਤੇ ਦੇ ਨੰਬਰ ਦਿਖਾਓ</string>
+    <string name="calendars_poll_interrupted">ਆਖਰੀ ਪ੍ਰਾਪਤੀ ਪੂਰੀ ਨਹੀਂ ਹੋਈ</string>
 </resources>

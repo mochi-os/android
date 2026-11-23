@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Ipakita sa mapa</string>
     <string name="calendars_location_flight">Subaybayan ang flight</string>
     <string name="calendars_preferences_week_numbers">Ipakita ang mga numero ng linggo</string>
+    <string name="calendars_poll_interrupted">Hindi natapos ang huling pagkuha</string>
 </resources>

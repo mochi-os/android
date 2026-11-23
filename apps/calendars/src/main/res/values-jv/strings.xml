@@ -250,4 +250,5 @@
     <string name="calendars_location_map">Tampilake ing peta</string>
     <string name="calendars_location_flight">Lacak penerbangan</string>
     <string name="calendars_preferences_week_numbers">Tampilake nomer minggu</string>
+    <string name="calendars_poll_interrupted">Panjupukan pungkasan ora rampung</string>
 </resources>

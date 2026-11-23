@@ -30,6 +30,12 @@ sealed interface PollReason {
     /** Nothing answered at the address. */
     object Unreachable : PollReason
 
+    /**
+     * The fetch or sync never finished. The server records this before it
+     * starts one, and the outcome replaces it once it ends.
+     */
+    object Interrupted : PollReason
+
     /** The address answered, with [code]. */
     data class Status(val code: Int) : PollReason
 
@@ -60,6 +66,7 @@ fun pollReason(failure: String): PollReason? {
         "conflict" -> PollReason.Conflict
         "missing" -> PollReason.Missing
         "transport" -> PollReason.Unreachable
+        "interrupted" -> PollReason.Interrupted
         else -> PollReason.Other(token)
     }
 }

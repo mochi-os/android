@@ -20,6 +20,7 @@ import org.mochios.calendars.ui.calendar.clockZone
 import org.mochios.calendars.ui.calendar.cut
 import org.mochios.calendars.ui.calendar.days
 import org.mochios.calendars.ui.calendar.ends
+import org.mochios.calendars.ui.calendar.resizable
 import org.mochios.calendars.ui.calendar.rows
 import java.time.LocalDate
 import java.time.ZoneId
@@ -99,6 +100,38 @@ class PlacementTest {
         assertEquals(Cut(22f, 24f), cut(overnight, SEPTEMBER_22, LONDON, zones = true))
         assertEquals(Cut(0f, 2f), cut(overnight, SEPTEMBER_23, LONDON, zones = true))
         assertEquals(SEPTEMBER_22 to SEPTEMBER_23, days(overnight, LONDON, zones = true))
+    }
+
+    /**
+     * The first day's block of an occurrence crossing midnight runs to
+     * midnight, which is not where it ends: resizing it would end the
+     * occurrence that day.
+     */
+    @Test
+    fun `an occurrence crossing midnight resizes from its last day's block alone`() {
+        val overnight = Instance(
+            start = at("Europe/London", 2026, 9, 22, 22),
+            finish = at("Europe/London", 2026, 9, 23, 2),
+            zone = Zone("Europe/London", "Europe/London"),
+        )
+        assertFalse(resizable(overnight, SEPTEMBER_22, LONDON, zones = true))
+        assertTrue(resizable(overnight, SEPTEMBER_23, LONDON, zones = true))
+    }
+
+    @Test
+    fun `an occurrence within a day resizes from its block, and one ending at midnight from its one day`() {
+        assertTrue(resizable(meeting, SEPTEMBER_22, LONDON, zones = true))
+        val evening = Instance(
+            start = at("Europe/London", 2026, 9, 22, 22),
+            finish = at("Europe/London", 2026, 9, 23, 0),
+            zone = Zone("Europe/London", "Europe/London"),
+        )
+        assertTrue(resizable(evening, SEPTEMBER_22, LONDON, zones = true))
+    }
+
+    @Test
+    fun `an occurrence ending before it starts by the clock has no end to resize`() {
+        assertFalse(resizable(flight, LocalDate.of(2026, 9, 21), LONDON, zones = true))
     }
 
     @Test

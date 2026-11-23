@@ -287,4 +287,5 @@
     <string name="calendars_location_map">Показать на карте</string>
     <string name="calendars_location_flight">Отследить рейс</string>
     <string name="calendars_preferences_week_numbers">Показывать номера недель</string>
+    <string name="calendars_poll_interrupted">Последняя загрузка не завершилась</string>
 </resources>

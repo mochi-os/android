@@ -273,4 +273,5 @@
     <string name="calendars_location_map">Rādīt kartē</string>
     <string name="calendars_location_flight">Sekot lidojumam</string>
     <string name="calendars_preferences_week_numbers">Rādīt nedēļu numurus</string>
+    <string name="calendars_poll_interrupted">Pēdējā ielāde netika pabeigta</string>
 </resources>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Sýna á korti</string>
     <string name="calendars_location_flight">Fylgjast með flugi</string>
     <string name="calendars_preferences_week_numbers">Sýna vikunúmer</string>
+    <string name="calendars_poll_interrupted">Síðasta niðurhali lauk ekki</string>
 </resources>

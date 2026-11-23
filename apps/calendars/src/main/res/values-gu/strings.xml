@@ -259,4 +259,5 @@
     <string name="calendars_location_map">નકશા પર બતાવો</string>
     <string name="calendars_location_flight">ફ્લાઇટ ટ્રૅક કરો</string>
     <string name="calendars_preferences_week_numbers">અઠવાડિયાના નંબર બતાવો</string>
+    <string name="calendars_poll_interrupted">છેલ્લું મેળવવાનું પૂર્ણ થયું નહીં</string>
 </resources>

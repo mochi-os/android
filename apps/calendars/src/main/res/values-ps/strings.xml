@@ -259,4 +259,5 @@
     <string name="calendars_location_map">په نقشه کې ښکاره کړئ</string>
     <string name="calendars_location_flight">الوتنه تعقیب کړئ</string>
     <string name="calendars_preferences_week_numbers">د اونیو شمېرې وښایاست</string>
+    <string name="calendars_poll_interrupted">وروستی راوړل بشپړ نه شول</string>
 </resources>

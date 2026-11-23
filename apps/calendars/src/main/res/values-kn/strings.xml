@@ -259,4 +259,5 @@
     <string name="calendars_location_map">ನಕ್ಷೆಯಲ್ಲಿ ತೋರಿಸಿ</string>
     <string name="calendars_location_flight">ವಿಮಾನವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
     <string name="calendars_preferences_week_numbers">ವಾರದ ಸಂಖ್ಯೆಗಳನ್ನು ತೋರಿಸಿ</string>
+    <string name="calendars_poll_interrupted">ಕೊನೆಯ ಪಡೆಯುವಿಕೆ ಪೂರ್ಣಗೊಳ್ಳಲಿಲ್ಲ</string>
 </resources>

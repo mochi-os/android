@@ -7,6 +7,7 @@ package org.mochios.calendars.ui.calendar
 
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.editor.EventForm
+import org.mochios.calendars.ui.editor.Scope
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
@@ -74,6 +75,20 @@ fun dropped(
     val shift = at(target, after.from, startZone) - at(day, before.from, startZone)
     return instance.start + shift to instance.finish + shift
 }
+
+/**
+ * Whether a move of [instance] over [scope] takes [occurrence], which the
+ * move's preview then draws where the move puts it: the occurrence itself,
+ * known by its identity rather than its start, since "This event" may have
+ * moved an override onto another occurrence's start; every occurrence of a
+ * series moved whole; and each from the one moved on for "This and
+ * following".
+ */
+fun takes(instance: Instance, scope: Scope, occurrence: Instance): Boolean =
+    occurrence.event == instance.event && (
+        !instance.recurring || occurrence.identity == instance.identity ||
+            scope == Scope.ALL || (scope == Scope.FOLLOWING && occurrence.start >= instance.start)
+        )
 
 /** How long a drag rests at a grid's edge before the page turns, and again for each further page. */
 const val PAGE_HOLD = 500L

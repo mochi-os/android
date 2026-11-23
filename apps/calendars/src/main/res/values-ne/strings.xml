@@ -259,4 +259,5 @@
     <string name="calendars_location_map">नक्सामा देखाउनुहोस्</string>
     <string name="calendars_location_flight">उडान ट्र्याक गर्नुहोस्</string>
     <string name="calendars_preferences_week_numbers">हप्ता नम्बरहरू देखाउनुहोस्</string>
+    <string name="calendars_poll_interrupted">अन्तिम प्राप्ति पूरा भएन</string>
 </resources>

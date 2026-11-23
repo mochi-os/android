@@ -283,4 +283,5 @@
     <string name="calendars_location_map">Zobraziť na mape</string>
     <string name="calendars_location_flight">Sledovať let</string>
     <string name="calendars_preferences_week_numbers">Zobrazovať čísla týždňov</string>
+    <string name="calendars_poll_interrupted">Posledné načítanie sa nedokončilo</string>
 </resources>

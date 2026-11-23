@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Дар харита нишон додан</string>
     <string name="calendars_location_flight">Пайгирии парвоз</string>
     <string name="calendars_preferences_week_numbers">Рақамҳои ҳафтаҳоро нишон додан</string>
+    <string name="calendars_poll_interrupted">Боргирии охирин ба анҷом нарасид</string>
 </resources>

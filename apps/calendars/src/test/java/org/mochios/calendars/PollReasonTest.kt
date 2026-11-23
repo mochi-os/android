@@ -16,7 +16,8 @@ import org.mochios.calendars.ui.components.pollReason
  * drawer reads it. A subscription's are the ones `subscription_fetch` in
  * `apps/calendars/calendars.star` records: empty, `too_large`, `invalid`, or
  * `status:<n>`. A linked calendar's are `unauthorised`, `unauthorised:<n>`,
- * `conflict`, `missing`, `large`, `transport` and `status:<n>`.
+ * `conflict`, `missing`, `large`, `transport` and `status:<n>`. Either
+ * records `interrupted` for a poll that never finished.
  */
 class PollReasonTest {
 
@@ -53,6 +54,15 @@ class PollReasonTest {
     fun `a sync's size and transport failures read as a fetch's do`() {
         assertEquals(PollReason.Large, pollReason("large"))
         assertEquals(PollReason.Unreachable, pollReason("transport"))
+    }
+
+    /**
+     * The server books a poll as failed before it runs, so one that never
+     * finishes shows as failed rather than as up to date.
+     */
+    @Test
+    fun `a fetch or sync that never finished reads as interrupted`() {
+        assertEquals(PollReason.Interrupted, pollReason("interrupted"))
     }
 
     @Test

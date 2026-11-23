@@ -250,4 +250,5 @@
     <string name="calendars_location_map">地図で表示</string>
     <string name="calendars_location_flight">フライトを追跡</string>
     <string name="calendars_preferences_week_numbers">週番号を表示</string>
+    <string name="calendars_poll_interrupted">前回の取得は完了しませんでした</string>
 </resources>

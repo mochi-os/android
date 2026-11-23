@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Megjelenítés a térképen</string>
     <string name="calendars_location_flight">Járat követése</string>
     <string name="calendars_preferences_week_numbers">Hetek sorszámának megjelenítése</string>
+    <string name="calendars_poll_interrupted">A legutóbbi letöltés nem fejeződött be</string>
 </resources>

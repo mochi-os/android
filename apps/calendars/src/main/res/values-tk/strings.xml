@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Kartada görkez</string>
     <string name="calendars_location_flight">Uçuşy yzarla</string>
     <string name="calendars_preferences_week_numbers">Hepde belgilerini görkez</string>
+    <string name="calendars_poll_interrupted">Soňky almak tamamlanmady</string>
 </resources>

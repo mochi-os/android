@@ -104,6 +104,12 @@ class CalendarFlowTest {
     @Volatile private var lost = false
     @Volatile private var refusals = 0
 
+    /** Holds every read [refusals] lets through until released. */
+    @Volatile private var stall: CountDownLatch? = null
+
+    /** Another occurrence of the stand-up, listed in a range that holds it, or 0 for none. */
+    @Volatile private var later = 0L
+
     /** Whether a write is kept, so the next read of the event answers what it wrote, and what it wrote. */
     @Volatile private var keeping = false
     @Volatile private var kept: String? = null
@@ -135,7 +141,7 @@ class CalendarFlowTest {
                     "-/events/get" -> {
                         reading?.await(10, TimeUnit.SECONDS)
                         val refused = refusals > 0
-                        if (refused) refusals--
+                        if (refused) refusals-- else stall?.await(10, TimeUnit.SECONDS)
                         if (lost || refused) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""") else ok(stored())
                     }
                     "-/calendars/rename", "-/calendars/colour", "-/calendars/delete" ->
@@ -162,10 +168,20 @@ class CalendarFlowTest {
                             )
                         }
                         failing -> MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
-                        holding in query.split(",") -> ok(
-                            """{"instances": [{"event": "e1", "calendar": "$holding", "summary": "Stand-up",
-                                "start": $start, "finish": ${start + 3_600}, "recurring": $weekly}], "truncated": false}""",
-                        )
+                        holding in query.split(",") -> {
+                            val from = request.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0
+                            val until = request.requestUrl?.queryParameter("finish")?.toLongOrNull() ?: 0
+                            val also = if (later != 0L && later >= from && later < until) {
+                                """, {"event": "e1", "calendar": "$holding", "summary": "Stand-up",
+                                    "start": $later, "finish": ${later + 3_600}, "recurring": $weekly}"""
+                            } else {
+                                ""
+                            }
+                            ok(
+                                """{"instances": [{"event": "e1", "calendar": "$holding", "summary": "Stand-up",
+                                    "start": $start, "finish": ${start + 3_600}, "recurring": $weekly}$also], "truncated": false}""",
+                            )
+                        }
                         else -> ok("""{"instances": [], "truncated": false}""")
                     }.apply {
                         if (slow) {
@@ -899,6 +915,56 @@ class CalendarFlowTest {
         until { said.isNotEmpty() }
         // This server does not move it, so the listing read since says where it is.
         until { model.uiState.value.instances.single().start == start }
+    }
+
+    @Test
+    fun `a series moved with all events is drawn moved in a month read while it is written`() {
+        weekly = true
+        // Monday 14 December 10:00: only December's listing holds it, and
+        // October's month reads no further than November.
+        later = LocalDate.of(2026, 12, 14).atTime(10, 0).atZone(london).toEpochSecond()
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.any { it.start == start } }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        val listed = model.uiState.value.instances.first { it.start == start }
+        assertTrue("not held at the drop", model.uiState.value.instances.none { it.start == later })
+        model.move(listed, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ALL)
+        model.anchor(LocalDate.of(2026, 12, 14))
+        until { listings().any { it.requestUrl?.queryParameter("finish")?.toLongOrNull()?.let { finish -> finish > later } == true } }
+        settle()
+        val december = model.uiState.value.instances.filter { it.event == "e1" && it.start >= later - 86_400 }
+        assertEquals("THE POINT: drawn an hour on, where the write will put it", listOf(later + 3_600), december.map { it.start })
+        assertTrue("and read-only until it is listed again", december.single().readonly)
+        reading?.countDown()
+        until { said.isNotEmpty() }
+    }
+
+    @Test
+    fun `a second drag from where a failed move drew an occurrence still hides where that move took it from`() {
+        weekly = true
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        refusals = 1
+        stall = CountDownLatch(1)
+        // Monday 5 October's 10:00 to 11:00 alone, then, before that is
+        // written, that one and those after it on to 12:00; the first write fails.
+        model.move(model.uiState.value.instances.single(), start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ONE)
+        model.move(model.uiState.value.instances.single(), start + 7_200, start + 10_800, org.mochios.calendars.ui.editor.Scope.FOLLOWING)
+        reading?.countDown()
+        until { said.any { it is CalendarEvent.Failed } }
+        settle()
+        assertEquals(
+            "THE POINT: not at 10:00 as well, which the first move took it from",
+            listOf(start + 7_200),
+            model.uiState.value.instances.filter { it.event == "e1" }.map { it.start },
+        )
+        stall?.countDown()
+        until { said.size == 2 }
     }
 
     // ---- calendar actions ----

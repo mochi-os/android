@@ -287,4 +287,5 @@
     <string name="calendars_location_map">Seall air mapa</string>
     <string name="calendars_location_flight">Lean an turas-adhair</string>
     <string name="calendars_preferences_week_numbers">Seall àireamhan nan seachdainean</string>
+    <string name="calendars_poll_interrupted">Cha deach an togail mu dheireadh a choileanadh</string>
 </resources>

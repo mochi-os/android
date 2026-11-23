@@ -250,4 +250,5 @@
     <string name="calendars_location_map">在地图上显示</string>
     <string name="calendars_location_flight">追踪航班</string>
     <string name="calendars_preferences_week_numbers">显示周数</string>
+    <string name="calendars_poll_interrupted">上次获取未完成</string>
 </resources>

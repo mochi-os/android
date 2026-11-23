@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Kaartaa irratti agarsiisi</string>
     <string name="calendars_location_flight">Balalii hordofi</string>
     <string name="calendars_preferences_week_numbers">Lakkoofsota torbee agarsiisi</string>
+    <string name="calendars_poll_interrupted">Fudhachuun isa dhumaa hin xumuramne</string>
 </resources>

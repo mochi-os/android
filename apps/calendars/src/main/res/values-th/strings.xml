@@ -250,4 +250,5 @@
     <string name="calendars_location_map">แสดงบนแผนที่</string>
     <string name="calendars_location_flight">ติดตามเที่ยวบิน</string>
     <string name="calendars_preferences_week_numbers">แสดงหมายเลขสัปดาห์</string>
+    <string name="calendars_poll_interrupted">การดึงข้อมูลครั้งล่าสุดไม่เสร็จสิ้น</string>
 </resources>

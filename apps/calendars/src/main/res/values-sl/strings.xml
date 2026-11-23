@@ -287,4 +287,5 @@
     <string name="calendars_location_map">Prikaži na zemljevidu</string>
     <string name="calendars_location_flight">Spremljaj let</string>
     <string name="calendars_preferences_week_numbers">Prikaži številke tednov</string>
+    <string name="calendars_poll_interrupted">Zadnje pridobivanje se ni končalo</string>
 </resources>

@@ -250,4 +250,5 @@
     <string name="calendars_location_map">지도에서 보기</string>
     <string name="calendars_location_flight">항공편 추적</string>
     <string name="calendars_preferences_week_numbers">주 번호 표시</string>
+    <string name="calendars_poll_interrupted">마지막 가져오기가 끝나지 않았어요</string>
 </resources>

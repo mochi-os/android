@@ -287,4 +287,5 @@
     <string name="calendars_location_map">Pokaż na mapie</string>
     <string name="calendars_location_flight">Śledź lot</string>
     <string name="calendars_preferences_week_numbers">Pokazuj numery tygodni</string>
+    <string name="calendars_poll_interrupted">Ostatnie pobieranie nie zostało ukończone</string>
 </resources>

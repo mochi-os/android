@@ -315,4 +315,5 @@
     <string name="calendars_location_map">عرض على الخريطة</string>
     <string name="calendars_location_flight">تتبّع الرحلة</string>
     <string name="calendars_preferences_week_numbers">إظهار أرقام الأسابيع</string>
+    <string name="calendars_poll_interrupted">لم يكتمل آخر جلب</string>
 </resources>

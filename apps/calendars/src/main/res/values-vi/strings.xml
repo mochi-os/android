@@ -251,4 +251,5 @@
     <string name="calendars_location_map">Hiển thị trên bản đồ</string>
     <string name="calendars_location_flight">Theo dõi chuyến bay</string>
     <string name="calendars_preferences_week_numbers">Hiển thị số tuần</string>
+    <string name="calendars_poll_interrupted">Lần tải gần nhất chưa hoàn tất</string>
 </resources>

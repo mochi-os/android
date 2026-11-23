@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Ehechauka mapape</string>
     <string name="calendars_location_flight">Ehapykueho veve</string>
     <string name="calendars_preferences_week_numbers">Ehechauka arapokõindy papapy</string>
+    <string name="calendars_poll_interrupted">Pahague ñemboguejy ndopái</string>
 </resources>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Näytä kartalla</string>
     <string name="calendars_location_flight">Seuraa lentoa</string>
     <string name="calendars_preferences_week_numbers">Näytä viikkonumerot</string>
+    <string name="calendars_poll_interrupted">Viimeisin haku jäi kesken</string>
 </resources>

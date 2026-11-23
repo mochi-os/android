@@ -368,6 +368,7 @@ internal fun pollFailure(failure: String): String? = when (val reason = pollReas
     PollReason.Unauthorised -> stringResource(R.string.calendars_poll_unauthorised)
     PollReason.Conflict -> stringResource(R.string.calendars_poll_conflict)
     PollReason.Missing -> stringResource(R.string.calendars_poll_missing)
+    PollReason.Interrupted -> stringResource(R.string.calendars_poll_interrupted)
     is PollReason.Status -> stringResource(R.string.calendars_poll_status, reason.code.toString())
     is PollReason.Other -> reason.token
 }

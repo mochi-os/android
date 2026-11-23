@@ -259,4 +259,5 @@
     <string name="calendars_location_map">نمایش روی نقشه</string>
     <string name="calendars_location_flight">پیگیری پرواز</string>
     <string name="calendars_preferences_week_numbers">نمایش شمارهٔ هفته‌ها</string>
+    <string name="calendars_poll_interrupted">آخرین دریافت کامل نشد</string>
 </resources>

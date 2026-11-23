@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Ցույց տալ քարտեզի վրա</string>
     <string name="calendars_location_flight">Հետևել չվերթին</string>
     <string name="calendars_preferences_week_numbers">Ցուցադրել շաբաթների համարները</string>
+    <string name="calendars_poll_interrupted">Վերջին բեռնումը չավարտվեց</string>
 </resources>

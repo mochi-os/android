@@ -259,4 +259,5 @@
     <string name="calendars_location_map">සිතියමේ පෙන්වන්න</string>
     <string name="calendars_location_flight">ගුවන් ගමන ලුහුබඳින්න</string>
     <string name="calendars_preferences_week_numbers">සති අංක පෙන්වන්න</string>
+    <string name="calendars_poll_interrupted">අවසන් ලබාගැනීම සම්පූර්ණ නොවීය</string>
 </resources>

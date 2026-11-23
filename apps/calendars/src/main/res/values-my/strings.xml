@@ -250,4 +250,5 @@
     <string name="calendars_location_map">မြေပုံပေါ်တွင် ပြရန်</string>
     <string name="calendars_location_flight">လေယာဉ်ခရီးစဉ်ကို ခြေရာခံရန်</string>
     <string name="calendars_preferences_week_numbers">အပတ်နံပါတ်များကို ပြရန်</string>
+    <string name="calendars_poll_interrupted">နောက်ဆုံး ရယူမှု မပြီးဆုံးခဲ့ပါ</string>
 </resources>

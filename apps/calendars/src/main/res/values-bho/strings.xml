@@ -259,4 +259,5 @@
     <string name="calendars_location_map">नक्शा पर देखाईं</string>
     <string name="calendars_location_flight">उड़ान ट्रैक करीं</string>
     <string name="calendars_preferences_week_numbers">हफ्ता के नंबर देखाईं</string>
+    <string name="calendars_poll_interrupted">आखिरी बेर लावल पूरा ना भइल</string>
 </resources>

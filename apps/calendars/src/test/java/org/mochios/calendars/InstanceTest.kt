@@ -7,10 +7,13 @@ package org.mochios.calendars
 import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.calendar.last
+import org.mochios.calendars.ui.calendar.reminded
 import java.time.LocalDate
 
 /**
@@ -40,6 +43,22 @@ class InstanceTest {
         val midnight = 1790035200L // 2026-09-22T00:00Z, as a server expanding in UTC sends it
         assertEquals(LocalDate.of(2026, 9, 22), last(LocalDate.of(2026, 9, 22), midnight, midnight + 86400))
         assertEquals(LocalDate.of(2026, 9, 23), last(LocalDate.of(2026, 9, 22), midnight, midnight + 2 * 86400))
+    }
+
+    /**
+     * A reminder's link names its occurrence by its place in the series: an
+     * override moved onto another occurrence's start opens as itself, and
+     * that occurrence as itself. A link from before names it by its start.
+     */
+    @Test
+    fun aReminderOpensItsOccurrenceByItsPlaceInTheSeries() {
+        val own = Instance(event = "e1", start = 200, recurring = true)
+        val moved = Instance(event = "e1", start = 200, recurring = true, exception = true, replaced = 100)
+        assertSame(moved, reminded(listOf(own, moved), "e1", 100))
+        assertSame(own, reminded(listOf(moved, own), "e1", 200))
+        val alone = moved.copy(start = 300)
+        assertSame(alone, reminded(listOf(alone), "e1", 300))
+        assertNull(reminded(listOf(own), "e2", 200))
     }
 
     /** A core that knows about reminders says so; one that predates the field leaves it out. */

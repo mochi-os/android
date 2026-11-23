@@ -259,4 +259,5 @@
     <string name="calendars_location_map">മാപ്പിൽ കാണിക്കുക</string>
     <string name="calendars_location_flight">ഫ്ലൈറ്റ് ട്രാക്ക് ചെയ്യുക</string>
     <string name="calendars_preferences_week_numbers">ആഴ്ച നമ്പറുകൾ കാണിക്കുക</string>
+    <string name="calendars_poll_interrupted">അവസാനത്തെ ലഭ്യമാക്കൽ പൂർത്തിയായില്ല</string>
 </resources>

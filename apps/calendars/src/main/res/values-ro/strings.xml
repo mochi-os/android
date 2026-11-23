@@ -273,4 +273,5 @@
     <string name="calendars_location_map">Arată pe hartă</string>
     <string name="calendars_location_flight">Urmărește zborul</string>
     <string name="calendars_preferences_week_numbers">Afișează numerele săptămânilor</string>
+    <string name="calendars_poll_interrupted">Ultima preluare nu s-a încheiat</string>
 </resources>

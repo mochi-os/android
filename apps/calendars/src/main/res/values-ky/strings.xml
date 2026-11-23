@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Картадан көрсөтүү</string>
     <string name="calendars_location_flight">Рейске көз салуу</string>
     <string name="calendars_preferences_week_numbers">Жума номерлерин көрсөтүү</string>
+    <string name="calendars_poll_interrupted">Акыркы алуу аягына чыккан жок</string>
 </resources>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Εμφάνιση στον χάρτη</string>
     <string name="calendars_location_flight">Παρακολούθηση πτήσης</string>
     <string name="calendars_preferences_week_numbers">Εμφάνιση αριθμών εβδομάδων</string>
+    <string name="calendars_poll_interrupted">Η τελευταία λήψη δεν ολοκληρώθηκε</string>
 </resources>

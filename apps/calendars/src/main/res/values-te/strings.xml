@@ -259,4 +259,5 @@
     <string name="calendars_location_map">మ్యాప్‌లో చూపించు</string>
     <string name="calendars_location_flight">విమానాన్ని ట్రాక్ చేయి</string>
     <string name="calendars_preferences_week_numbers">వారం సంఖ్యలను చూపించు</string>
+    <string name="calendars_poll_interrupted">చివరి పొందడం పూర్తి కాలేదు</string>
 </resources>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Покажи на картата</string>
     <string name="calendars_location_flight">Проследи полета</string>
     <string name="calendars_preferences_week_numbers">Показвай номерата на седмиците</string>
+    <string name="calendars_poll_interrupted">Последното изтегляне не завърши</string>
 </resources>

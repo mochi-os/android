@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Bonisa kwimephu</string>
     <string name="calendars_location_flight">Landela inqwelomoya</string>
     <string name="calendars_preferences_week_numbers">Bonisa amanani eeveki</string>
+    <string name="calendars_poll_interrupted">Ukulanda kokugqibela akuzange kugqitywe</string>
 </resources>

@@ -265,4 +265,5 @@
     <string name="calendars_location_map">Mostrar en el mapa</string>
     <string name="calendars_location_flight">Seguir el vuelo</string>
     <string name="calendars_preferences_week_numbers">Mostrar los números de semana</string>
+    <string name="calendars_poll_interrupted">La última descarga no terminó</string>
 </resources>

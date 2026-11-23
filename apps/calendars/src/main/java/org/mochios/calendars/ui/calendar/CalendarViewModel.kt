@@ -377,7 +377,7 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /** A reminder's link waiting for its occurrence to load: its event and its start. */
+    /** A reminder's link waiting for its occurrence to load: its event and its place in the series. */
     private var pending: Pair<String, Long>? = null
 
     /** The pending reminder's calendar has already been shown once for it. */
@@ -414,7 +414,7 @@ class CalendarViewModel @Inject constructor(
      */
     private fun answer() {
         val (event, occurrence) = pending ?: return
-        val found = _uiState.value.instances.firstOrNull { it.event == event && it.start == occurrence }
+        val found = reminded(_uiState.value.instances, event, occurrence)
         if (found != null) {
             pending = null
             _events.tryEmit(CalendarEvent.Open(found))
@@ -504,7 +504,7 @@ class CalendarViewModel @Inject constructor(
 
     /** [instances] with each occurrence once, as overlapping reads list it in each. */
     private fun distinct(instances: List<Instance>) =
-        instances.distinctBy { instance -> instance.event to instance.start }
+        instances.distinctBy { instance -> instance.identity }
 
     /**
      * The list view's pages: how far the shown calendars reach, and each page
@@ -535,7 +535,7 @@ class CalendarViewModel @Inject constructor(
         val gathered = answers.flatMap { (instances, _) -> instances }
         val truncated = answers.any { (_, cut) -> cut }
         _uiState.value = _uiState.value.copy(
-            instances = land(gathered.distinctBy { it.event to it.start }, read),
+            instances = land(gathered.distinctBy { it.identity }, read),
             truncated = truncated,
             bounds = bounds,
             earliest = first,
@@ -608,7 +608,7 @@ class CalendarViewModel @Inject constructor(
                     }
                     // Merged rather than appended: a multi-day occurrence
                     // reaches into both pages and the server lists it in each.
-                    val merged = (arrived + instances).distinctBy { it.event to it.start }
+                    val merged = (arrived + instances).distinctBy { it.identity }
                     val grew = merged.size > arrived.size
                     _uiState.value = now.copy(
                         instances = land(merged),
@@ -979,14 +979,34 @@ class CalendarViewModel @Inject constructor(
     /**
      * A move drawn where it put its occurrences, laid over every listing that
      * lands until its write settles: [covers] picks the listed occurrences it
-     * replaces and [placed] is what it draws instead. [since] is how many
-     * listings had been asked for when its write began, and [written] says
-     * the write was answered; a listing asked for after both holds the move
-     * itself, and the preview goes.
+     * replaces and [placed] is what it draws instead of those held at the
+     * drop. A move of a whole series, or of an occurrence and those after
+     * it, covers occurrences no listing held then too, such as those of a
+     * month paged to while it is written: [place] draws each where the move
+     * leaves it, unless [known], the occurrences of the series by event that
+     * [placed] was made from or draws, has it already. [hides] is what the
+     * moves the drag started from covered, which stays hidden if they let go
+     * first. [since] is how many listings had been asked for when its write
+     * began, and [written] says the write was answered; a listing asked for
+     * after both holds the move itself, and the preview goes.
      */
-    private class Preview(val covers: (Instance) -> Boolean, val placed: List<Instance>) {
+    private class Preview(
+        val covers: (Instance) -> Boolean,
+        val placed: List<Instance>,
+        val place: ((Instance) -> Instance)?,
+        val known: Set<Pair<String, Long>>,
+        val hides: (Instance) -> Boolean,
+    ) {
         var since = Int.MAX_VALUE
         var written = false
+
+        /** [shown] as this move leaves it. */
+        fun over(shown: List<Instance>): List<Instance> {
+            val beyond = place?.let { moved ->
+                shown.filter { occurrence -> covers(occurrence) && (occurrence.event to occurrence.occurrence) !in known }.map(moved)
+            }.orEmpty()
+            return shown.filterNot { occurrence -> covers(occurrence) || hides(occurrence) } + placed + beyond
+        }
     }
 
     /** The moves being written, in the order they were made. */
@@ -1000,7 +1020,7 @@ class CalendarViewModel @Inject constructor(
 
     /** [instances] with every move still being written laid over them, in drawing order. */
     private fun overlaid(instances: List<Instance>): List<Instance> =
-        ordered(distinct(previews.fold(instances) { shown, preview -> shown.filterNot(preview.covers) + preview.placed }))
+        ordered(distinct(previews.fold(instances) { shown, preview -> preview.over(shown) }))
 
     /**
      * A listing has landed: what the server listed, with the moves still
@@ -1026,16 +1046,10 @@ class CalendarViewModel @Inject constructor(
      * until it comes.
      */
     private fun preview(instance: Instance, scope: Scope, place: (Instance) -> Instance): Preview {
-        val covers = { occurrence: Instance ->
-            occurrence.event == instance.event && (
-                !instance.recurring || occurrence.start == instance.start ||
-                    (scope == Scope.ONE && occurrence.occurrence == instance.occurrence) ||
-                    scope == Scope.ALL || (scope == Scope.FOLLOWING && occurrence.start >= instance.start)
-                )
-        }
+        val covers = { occurrence: Instance -> takes(instance, scope, occurrence) }
         val state = _uiState.value
         // An event that does not repeat has the one occurrence, which moves.
-        val moving = if (instance.recurring) (state.instances.filter(covers) + instance).distinctBy { it.start } else listOf(instance)
+        val moving = if (instance.recurring) (state.instances.filter(covers) + instance).distinctBy { it.occurrence } else listOf(instance)
         val placed = moving.map { occurrence ->
             val moved = place(occurrence)
             when {
@@ -1044,7 +1058,24 @@ class CalendarViewModel @Inject constructor(
                 else -> moved.copy(readonly = true)
             }
         }
-        val shown = Preview(covers, placed)
+        // A drag of an occurrence an earlier move drew goes on hiding what
+        // that move covered, which shows again if that move fails first.
+        val earlier = previews.filter { preview ->
+            preview.placed.any { drawn -> drawn.event == instance.event && drawn.start == instance.start }
+        }
+        val shown = Preview(
+            covers = covers,
+            placed = placed,
+            // The whole series, or this occurrence and those after it, moves
+            // the occurrences no listing held at the drop as well.
+            place = if (instance.recurring && scope != Scope.ONE) {
+                { occurrence -> place(occurrence).copy(readonly = true) }
+            } else {
+                null
+            },
+            known = (moving + placed).map { occurrence -> occurrence.event to occurrence.occurrence }.toSet(),
+            hides = { occurrence -> earlier.any { preview -> preview.covers(occurrence) || preview.hides(occurrence) } },
+        )
         previews += shown
         _uiState.value = state.copy(instances = overlaid(arrived))
         return shown
@@ -1605,6 +1636,17 @@ fun steps(
  */
 fun last(date: LocalDate, start: Long, finish: Long): LocalDate =
     date.plusDays(maxOf(1L, Math.round((finish - start) / 86400.0)) - 1)
+
+/**
+ * The occurrence of [event] a reminder's link names among [instances]: the
+ * one at [occurrence], its place in the series, which for an override is
+ * the occurrence it replaces, though "This event" may have moved it onto
+ * another occurrence's start. A link written before named it by its start,
+ * which is looked for when nothing has that place.
+ */
+fun reminded(instances: List<Instance>, event: String, occurrence: Long): Instance? =
+    instances.firstOrNull { it.identity == event to occurrence }
+        ?: instances.firstOrNull { it.event == event && it.start == occurrence }
 
 /**
  * Whether an occurrence is over: a timed one once its finish, epoch seconds,

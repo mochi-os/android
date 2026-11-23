@@ -6,6 +6,7 @@
 package org.mochios.calendars
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.Instance
@@ -22,6 +23,8 @@ import org.mochios.calendars.ui.calendar.dropped
 import org.mochios.calendars.ui.calendar.moved
 import org.mochios.calendars.ui.calendar.resized
 import org.mochios.calendars.ui.calendar.snap
+import org.mochios.calendars.ui.calendar.takes
+import org.mochios.calendars.ui.editor.Scope
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZoneOffset
@@ -126,6 +129,38 @@ class DragTest {
         )
         val (start, _) = dropped(abroad, MONDAY, Cut(10f, 11f), MONDAY, Cut(11f, 12f), NEW_YORK, NEW_YORK, resize = false)
         assertEquals(clock(NEW_YORK, 2026, 9, 21, 11), start)
+    }
+
+    // ---- what a move takes ----
+
+    /**
+     * "This event" moved the 21st's occurrence onto the 22nd's start: a move
+     * of the override takes it alone, and a move of the 22nd's own
+     * occurrence leaves the override where it is.
+     */
+    @Test
+    fun `a move of one occurrence takes it by its identity, not by its start`() {
+        val own = meeting.copy(event = "e1", start = clock(LONDON, 2026, 9, 22, 10), recurring = true)
+        val moved = own.copy(exception = true, replaced = clock(LONDON, 2026, 9, 21, 10))
+        assertTrue(takes(moved, Scope.ONE, moved))
+        assertFalse(takes(moved, Scope.ONE, own))
+        assertFalse(takes(own, Scope.ONE, moved))
+        assertTrue(takes(own, Scope.ALL, moved))
+    }
+
+    @Test
+    fun `a move of an event that does not repeat takes its one occurrence`() {
+        val single = meeting.copy(event = "e2")
+        assertTrue(takes(single, Scope.ONE, single.copy(start = single.start + 3_600)))
+        assertFalse(takes(single, Scope.ONE, single.copy(event = "e3")))
+    }
+
+    @Test
+    fun `this and following takes the occurrences from the one moved on`() {
+        val first = meeting.copy(event = "e1", recurring = true)
+        val later = first.copy(start = first.start + 86_400)
+        assertTrue(takes(first, Scope.FOLLOWING, later))
+        assertFalse(takes(later, Scope.FOLLOWING, first))
     }
 
     // ---- turning the page at the side ----

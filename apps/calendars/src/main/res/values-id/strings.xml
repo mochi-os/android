@@ -250,4 +250,5 @@
     <string name="calendars_location_map">Tampilkan di peta</string>
     <string name="calendars_location_flight">Lacak penerbangan</string>
     <string name="calendars_preferences_week_numbers">Tampilkan nomor minggu</string>
+    <string name="calendars_poll_interrupted">Pengambilan terakhir tidak selesai</string>
 </resources>

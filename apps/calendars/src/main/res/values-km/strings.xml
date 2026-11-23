@@ -250,4 +250,5 @@
     <string name="calendars_location_map">បង្ហាញលើផែនទី</string>
     <string name="calendars_location_flight">តាមដានជើងហោះហើរ</string>
     <string name="calendars_preferences_week_numbers">បង្ហាញលេខសប្តាហ៍</string>
+    <string name="calendars_poll_interrupted">ការទាញយកចុងក្រោយមិនបានបញ្ចប់ទេ</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="calendars_location_map">Uri fuq il-mappa</string>
     <string name="calendars_location_flight">Segwi t-titjira</string>
     <string name="calendars_preferences_week_numbers">Uri n-numri tal-ġimgħat</string>
+    <string name="calendars_poll_interrupted">L-aħħar ġbir ma tlestiex</string>
 </resources>

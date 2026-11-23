@@ -259,4 +259,5 @@
     <string name="calendars_location_map">मानचित्र पर दिखाएँ</string>
     <string name="calendars_location_flight">फ़्लाइट ट्रैक करें</string>
     <string name="calendars_preferences_week_numbers">सप्ताह संख्या दिखाएँ</string>
+    <string name="calendars_poll_interrupted">अंतिम बार लाना पूरा नहीं हुआ</string>
 </resources>

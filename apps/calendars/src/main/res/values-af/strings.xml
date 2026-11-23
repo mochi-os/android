@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Wys op kaart</string>
     <string name="calendars_location_flight">Volg vlug</string>
     <string name="calendars_preferences_week_numbers">Wys weeknommers</string>
+    <string name="calendars_poll_interrupted">Die laaste ophaal is nie voltooi nie</string>
 </resources>

@@ -301,4 +301,5 @@
     <string name="calendars_location_map">Taispeáin ar léarscáil</string>
     <string name="calendars_location_flight">Lean an eitilt</string>
     <string name="calendars_preferences_week_numbers">Taispeáin uimhreacha seachtaine</string>
+    <string name="calendars_poll_interrupted">Níor críochnaíodh an aisghabháil dheireanach</string>
 </resources>

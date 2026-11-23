@@ -283,4 +283,5 @@
     <string name="calendars_location_map">הצג במפה</string>
     <string name="calendars_location_flight">מעקב אחר טיסה</string>
     <string name="calendars_preferences_week_numbers">הצג מספרי שבועות</string>
+    <string name="calendars_poll_interrupted">האחזור האחרון לא הסתיים</string>
 </resources>

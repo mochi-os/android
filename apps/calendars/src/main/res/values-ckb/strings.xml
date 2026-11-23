@@ -259,4 +259,5 @@
     <string name="calendars_location_map">لەسەر نەخشە پیشان بدە</string>
     <string name="calendars_location_flight">بەدواداچوونی گەشتی ئاسمانی</string>
     <string name="calendars_preferences_week_numbers">ژمارەی هەفتەکان پیشان بدە</string>
+    <string name="calendars_poll_interrupted">دوایین هێنان تەواو نەبوو</string>
 </resources>

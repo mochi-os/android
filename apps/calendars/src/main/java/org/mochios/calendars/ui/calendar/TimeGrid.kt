@@ -140,9 +140,13 @@ fun opacity(carried: Boolean, over: Boolean, cancelled: Boolean): Float = when {
     else -> 1f
 }
 
-/** Whether [other] is the same occurrence as [instance]: the same event at the same start. */
+/**
+ * Whether [other] is the same occurrence as [instance]: the same event and
+ * the same occurrence of it, which an override moved onto another's start
+ * still is not.
+ */
 fun same(instance: Instance, other: Instance?): Boolean =
-    other != null && other.event == instance.event && other.start == instance.start
+    other != null && other.identity == instance.identity
 
 /** The roundest corner a block or bar takes, whatever the user's radius. */
 private val CORNER = 6.dp
@@ -408,7 +412,7 @@ fun TimeGrid(
         if (placed != null) {
             if (!placed.instance.editable) return null
             val bottom = (placed.top + maxOf(placed.height, leastPx / hourPx)) * hourPx
-            val resize = !placed.backwards && content * hourPx >= bottom - handlePx
+            val resize = resizable(placed.instance, day, user, zones) && content * hourPx >= bottom - handlePx
             val cut = Cut(placed.top, placed.top + placed.height, placed.backwards)
             return Drag.Lift(placed.instance, day, cut, content - placed.top, resize, band = false)
         }
@@ -850,7 +854,7 @@ private fun AllDayBand(
                 for (bar in bars) {
                     val instance = bar.item ?: lifted?.instance ?: continue
                     val raised = bar.item == null
-                    key(instance.event, instance.start, raised) {
+                    key(instance.identity, raised) {
                         Box(
                             modifier = Modifier
                                 .offset(x = width * bar.column, y = ROW * bar.row + 2.dp)
@@ -943,7 +947,8 @@ private fun DayColumn(
                     instance = placed.instance,
                     backwards = placed.backwards,
                     span = interval(placed.instance, zones, format::formatTime, ranged()),
-                    handle = placed.instance.editable && !placed.backwards,
+                    handle = placed.instance.editable &&
+                        resizable(placed.instance, day, viewModel.timezone(), zones),
                     stacked = stacked,
                     chosen = same(placed.instance, selected),
                     modifier = Modifier.clickable { onOpen(placed.instance) },

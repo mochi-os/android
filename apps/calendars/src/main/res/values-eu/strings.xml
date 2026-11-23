@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Erakutsi mapan</string>
     <string name="calendars_location_flight">Jarraitu hegaldiari</string>
     <string name="calendars_preferences_week_numbers">Erakutsi aste-zenbakiak</string>
+    <string name="calendars_poll_interrupted">Azken eskuratzea ez da amaitu</string>
 </resources>

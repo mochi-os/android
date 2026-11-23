@@ -71,6 +71,13 @@ data class Instance(
     val occurrence: Long get() = replaced ?: start
 
     /**
+     * What the views know the occurrence by: its event and [occurrence],
+     * which no other occurrence listed shares. Its start is not enough:
+     * "This event" may have moved an override onto another occurrence's.
+     */
+    val identity: Pair<String, Long> get() = event to occurrence
+
+    /**
      * An override listed by a core that does not name the occurrence it
      * replaces: its [occurrence] is where it now falls, and where it was moved
      * from is read from its event's tree.

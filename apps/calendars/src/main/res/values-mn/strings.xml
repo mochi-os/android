@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Газрын зураг дээр харуулах</string>
     <string name="calendars_location_flight">Нислэгийг хянах</string>
     <string name="calendars_preferences_week_numbers">Долоо хоногийн дугаарыг харуулах</string>
+    <string name="calendars_poll_interrupted">Сүүлийн таталт дуусаагүй</string>
 </resources>

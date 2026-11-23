@@ -265,4 +265,5 @@
     <string name="calendars_location_map">Mostra sulla mappa</string>
     <string name="calendars_location_flight">Segui il volo</string>
     <string name="calendars_preferences_week_numbers">Mostra i numeri delle settimane</string>
+    <string name="calendars_poll_interrupted">L\'ultimo recupero non è stato completato</string>
 </resources>

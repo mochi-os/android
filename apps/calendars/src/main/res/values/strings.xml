@@ -26,6 +26,7 @@
     <string name="calendars_poll_unauthorised">The calendar\'s server refused the account\'s credentials</string>
     <string name="calendars_poll_conflict">An event changed on both sides</string>
     <string name="calendars_poll_missing">The calendar is gone from its server</string>
+    <string name="calendars_poll_interrupted">The last fetch did not finish</string>
     <string name="calendars_delete_title">Delete %1$s?</string>
     <string name="calendars_delete_message">Its events are deleted with it.</string>
     <string name="calendars_remove">Remove</string>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">რუკაზე ჩვენება</string>
     <string name="calendars_location_flight">რეისის თვალყურის დევნება</string>
     <string name="calendars_preferences_week_numbers">კვირების ნომრების ჩვენება</string>
+    <string name="calendars_poll_interrupted">ბოლო მიღება არ დასრულდა</string>
 </resources>

@@ -116,6 +116,18 @@ fun cut(instance: Instance, day: LocalDate, user: ZoneId, zones: Boolean): Cut? 
     return Cut(from, maxOf(to, from + MINIMUM))
 }
 
+/**
+ * Whether the block a timed occurrence puts on [day] resizes it: only the
+ * one holding its end. An earlier day's block of an occurrence crossing
+ * midnight runs to midnight, which is not where the occurrence ends, and
+ * resizing it would end the occurrence there; one that ends before it
+ * starts by the clock has no end of its own to drag.
+ */
+fun resizable(instance: Instance, day: LocalDate, user: ZoneId, zones: Boolean): Boolean {
+    val ends = ends(instance, user, zones)
+    return !ends.backwards && day == ends.to.day
+}
+
 /** An all-day occurrence's [first] and [last] days, which the band lays out as a bar. */
 data class Span<T>(val item: T, val first: LocalDate, val last: LocalDate)
 

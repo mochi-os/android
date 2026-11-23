@@ -259,4 +259,5 @@
     <string name="calendars_location_map">በካርታ ላይ አሳይ</string>
     <string name="calendars_location_flight">በረራን ተከታተል</string>
     <string name="calendars_preferences_week_numbers">የሳምንት ቁጥሮችን አሳይ</string>
+    <string name="calendars_poll_interrupted">የመጨረሻው ማምጣት አልተጠናቀቀም</string>
 </resources>

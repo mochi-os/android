@@ -259,4 +259,5 @@
     <string name="calendars_location_map">মানচিত্রে দেখান</string>
     <string name="calendars_location_flight">ফ্লাইট ট্র্যাক করুন</string>
     <string name="calendars_preferences_week_numbers">সপ্তাহের নম্বর দেখান</string>
+    <string name="calendars_poll_interrupted">সর্বশেষ আনা শেষ হয়নি</string>
 </resources>

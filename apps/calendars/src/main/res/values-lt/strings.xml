@@ -283,4 +283,5 @@
     <string name="calendars_location_map">Rodyti žemėlapyje</string>
     <string name="calendars_location_flight">Sekti skrydį</string>
     <string name="calendars_preferences_week_numbers">Rodyti savaičių numerius</string>
+    <string name="calendars_poll_interrupted">Paskutinis gavimas nebuvo baigtas</string>
 </resources>

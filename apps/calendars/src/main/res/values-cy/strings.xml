@@ -315,4 +315,5 @@
     <string name="calendars_location_map">Dangos ar fap</string>
     <string name="calendars_location_flight">Dilyn yr ehediad</string>
     <string name="calendars_preferences_week_numbers">Dangos rhifau wythnosau</string>
+    <string name="calendars_poll_interrupted">Ni orffennodd y nôl diwethaf</string>
 </resources>

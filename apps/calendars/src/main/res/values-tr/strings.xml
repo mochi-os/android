@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Haritada göster</string>
     <string name="calendars_location_flight">Uçuşu takip et</string>
     <string name="calendars_preferences_week_numbers">Hafta numaralarını göster</string>
+    <string name="calendars_poll_interrupted">Son alma tamamlanmadı</string>
 </resources>

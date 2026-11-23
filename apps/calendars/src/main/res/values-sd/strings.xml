@@ -259,4 +259,5 @@
     <string name="calendars_location_map">نقشي تي ڏيکاريو</string>
     <string name="calendars_location_flight">اڏام کي ٽريڪ ڪريو</string>
     <string name="calendars_preferences_week_numbers">هفتن جا نمبر ڏيکاريو</string>
+    <string name="calendars_poll_interrupted">آخري حاصلات مڪمل نه ٿي</string>
 </resources>

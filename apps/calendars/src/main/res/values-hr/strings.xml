@@ -273,4 +273,5 @@
     <string name="calendars_location_map">Prikaži na karti</string>
     <string name="calendars_location_flight">Prati let</string>
     <string name="calendars_preferences_week_numbers">Prikaži brojeve tjedana</string>
+    <string name="calendars_poll_interrupted">Posljednje dohvaćanje nije dovršeno</string>
 </resources>

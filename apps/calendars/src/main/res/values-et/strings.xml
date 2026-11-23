@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Näita kaardil</string>
     <string name="calendars_location_flight">Jälgi lendu</string>
     <string name="calendars_preferences_week_numbers">Näita nädalanumbreid</string>
+    <string name="calendars_poll_interrupted">Viimane toomine ei jõudnud lõpule</string>
 </resources>

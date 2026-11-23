@@ -658,7 +658,7 @@ private fun Cell(
                         verticalArrangement = Arrangement.spacedBy(STEP),
                     ) {
                         for ((instance, look) in group.entries) {
-                            key(instance.event, instance.start) { Entry(instance, look) }
+                            key(instance.identity) { Entry(instance, look) }
                         }
                     }
                 }
@@ -1084,7 +1084,7 @@ private sealed class Listed(val key: String, val day: LocalDate) {
 
     /** An occurrence on [day]; [last] when nothing of its day follows it. */
     class Event(day: LocalDate, val instance: Instance, val last: Boolean) :
-        Listed("$day-${instance.event}-${instance.start}", day)
+        Listed("$day-${instance.event}-${instance.occurrence}", day)
 }
 
 /**

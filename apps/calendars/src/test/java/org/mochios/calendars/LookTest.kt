@@ -403,4 +403,17 @@ class LookTest {
         assertFalse(same(Instance(event = "f", start = 100), open))
         assertFalse(same(open, null))
     }
+
+    /**
+     * "This event" can move an override onto another occurrence's start:
+     * the two then share a start and are still two occurrences.
+     */
+    @Test
+    fun `an override moved onto another occurrence's start is not that occurrence`() {
+        val own = Instance(event = "e", start = 200, recurring = true)
+        val moved = Instance(event = "e", start = 200, recurring = true, exception = true, replaced = 100)
+        assertFalse(same(moved, own))
+        assertTrue(same(moved, moved.copy(start = 300)))
+        assertEquals(2, listOf(own, moved).distinctBy { it.identity }.size)
+    }
 }

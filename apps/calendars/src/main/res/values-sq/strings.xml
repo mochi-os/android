@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Shfaq në hartë</string>
     <string name="calendars_location_flight">Ndiq fluturimin</string>
     <string name="calendars_preferences_week_numbers">Shfaq numrat e javëve</string>
+    <string name="calendars_poll_interrupted">Marrja e fundit nuk përfundoi</string>
 </resources>

@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Onyesha kwenye ramani</string>
     <string name="calendars_location_flight">Fuatilia safari ya ndege</string>
     <string name="calendars_preferences_week_numbers">Onyesha namba za wiki</string>
+    <string name="calendars_poll_interrupted">Upakuaji wa mwisho haukukamilika</string>
 </resources>

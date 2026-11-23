@@ -255,4 +255,5 @@
     <string name="calendars_location_map">Montre sou kat la</string>
     <string name="calendars_location_flight">Swiv vòl la</string>
     <string name="calendars_preferences_week_numbers">Montre nimewo semèn yo</string>
+    <string name="calendars_poll_interrupted">Dènye rekiperasyon an pa t fini</string>
 </resources>

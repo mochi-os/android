@@ -259,4 +259,5 @@
     <string name="calendars_location_map">Xaritada koʻrsatish</string>
     <string name="calendars_location_flight">Parvozni kuzatish</string>
     <string name="calendars_preferences_week_numbers">Hafta raqamlarini koʻrsatish</string>
+    <string name="calendars_poll_interrupted">Oxirgi olish yakunlanmadi</string>
 </resources>

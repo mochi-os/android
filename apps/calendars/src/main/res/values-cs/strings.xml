@@ -279,4 +279,5 @@
     <string name="calendars_location_map">Zobrazit na mapě</string>
     <string name="calendars_location_flight">Sledovat let</string>
     <string name="calendars_preferences_week_numbers">Zobrazovat čísla týdnů</string>
+    <string name="calendars_poll_interrupted">Poslední načtení nebylo dokončeno</string>
 </resources>
