@@ -9,17 +9,21 @@ import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.Downloads
+import org.mochios.settings.R
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.ui.login.SettingsStepUpClient
 import org.mochios.settings.ui.login.StepUpController
@@ -34,12 +38,24 @@ data class Identity(
     val role: String = "",
 )
 
+/** Where the user's data export is: nothing to show, a bundle being built, or
+ *  one built and not yet downloaded. A failure is said once, as an error. */
+sealed interface Export {
+    data object None : Export
+    data object Building : Export
+    data class Ready(val file: String) : Export
+}
+
+/** How often the screen asks again while a bundle is being built. */
+internal const val EXPORT_POLL_MILLISECONDS = 3_000L
+
 data class AccountUiState(
     val isLoading: Boolean = true,
     val isSaving: Boolean = false,
     val error: MochiError? = null,
     val identity: Identity = Identity(),
     val nameDraft: String = "",
+    val export: Export = Export.None,
 )
 
 /**
@@ -70,10 +86,18 @@ class AccountViewModel @Inject constructor(
     private val _closed = MutableSharedFlow<Unit>()
     val closed: SharedFlow<Unit> = _closed.asSharedFlow()
 
-    // The built bundle's filename, once it is built: the screen asks where to
-    // save it, and saveExport streams it there.
+    // The built bundle's filename, once it is built while the user waits: the
+    // screen asks where to save it, and saveExport streams it there.
     private val _exportReady = MutableSharedFlow<String>()
     val exportReady: SharedFlow<String> = _exportReady.asSharedFlow()
+
+    // A message for the screen to show once: a bundle it watched being built
+    // is ready.
+    private val _notices = MutableSharedFlow<Int>(extraBufferCapacity = 1)
+    val notices: SharedFlow<Int> = _notices.asSharedFlow()
+
+    /** How long [watchExport] waits between reads; a test shortens it. */
+    internal var pollMillis = EXPORT_POLL_MILLISECONDS
 
     init {
         refresh()
@@ -89,22 +113,76 @@ class AccountViewModel @Inject constructor(
     }
 
     /** Begin a data export. The screen collects the passphrase first; this
-     *  re-verifies the login factor(s), builds the encrypted bundle, then emits
-     *  its filename for the screen to ask where it goes. */
+     *  re-verifies the login factor(s) and starts the encrypted bundle. One
+     *  the server built at once is emitted for the screen to ask where it
+     *  goes; a larger one goes on being built, and [watchExport] follows it. */
     fun exportData(passphrase: String) {
         val pass = passphrase.trim()
         if (pass.isEmpty()) return
         stepUp.request { stepUpToken ->
-            _exportReady.emit(api.exportData(stepUpToken, pass).unwrapRaw().filename)
+            val answer = api.exportData(stepUpToken, pass).unwrapRaw()
+            val file = answer.file.ifBlank { answer.filename }
+            if (answer.state == "building") {
+                _uiState.update { it.copy(export = Export.Building) }
+            } else if (file.isNotBlank()) {
+                // Offered as well, for when the user backs out of choosing
+                // where it goes.
+                _uiState.update { it.copy(export = Export.Ready(file)) }
+                _exportReady.emit(file)
+            }
+        }
+    }
+
+    /** Read how the export stands, and while a bundle is being built read it
+     *  again every [pollMillis]. The screen runs this while it is shown, so a
+     *  bundle built while it was away is offered when it opens. */
+    suspend fun watchExport() {
+        readExport()
+        while (_uiState.value.export == Export.Building) {
+            delay(pollMillis)
+            readExport()
+        }
+    }
+
+    private suspend fun readExport() {
+        val status = try {
+            api.exportStatus().unwrapRaw()
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            // A failed read leaves the section as it was; the next one may do.
+            return
+        }
+        // A change is told only for a build this screen saw under way: a
+        // failure from an earlier visit was told by its notification.
+        val watched = _uiState.value.export == Export.Building
+        when (status.state) {
+            "building" -> _uiState.update { it.copy(export = Export.Building) }
+            "ready" -> {
+                _uiState.update { it.copy(export = if (status.file.isBlank()) Export.None else Export.Ready(status.file)) }
+                if (watched && status.file.isNotBlank()) _notices.tryEmit(R.string.account_data_ready)
+            }
+            "failed" -> _uiState.update {
+                it.copy(
+                    export = Export.None,
+                    error = if (watched) MochiError.Unknown(status.error.ifBlank { null }) else it.error,
+                )
+            }
+            else -> _uiState.update { it.copy(export = Export.None) }
         }
     }
 
     /** Streams built bundle [filename] into [destination], through the
      *  settings client: the transfer outlives this screen and says how it
      *  ended. The server deletes the bundle as it serves it, so one transfer
-     *  is all there is. */
+     *  is all there is, and the section no longer offers it. */
     fun saveExport(filename: String, destination: Uri) {
+        _uiState.update { if (it.export == Export.Ready(filename)) it.copy(export = Export.None) else it }
         downloads.save(destination, filename) { api.downloadExport(filename).unwrapRaw() }
+    }
+
+    fun clearError() {
+        _uiState.update { it.copy(error = null) }
     }
 
     fun refresh() {

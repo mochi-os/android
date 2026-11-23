@@ -11,13 +11,13 @@ import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.util.languageName
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.PostEmbed
 import org.mochios.forums.model.postEmbed
 import org.mochios.forums.ui.components.linkHost
 import org.mochios.forums.ui.forum.blockableCommunity
-import org.mochios.forums.ui.newpost.languageName
 import org.mochios.forums.ui.newpost.linkError
 import org.mochios.forums.ui.post.memberServer
 import org.mochios.forums.ui.post.remoteMember

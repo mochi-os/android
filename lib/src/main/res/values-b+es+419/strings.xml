@@ -33,6 +33,7 @@
     <string name="common_subscribe">Suscribirse</string>
     <string name="common_copy">Copiar</string>
     <string name="common_copied">Copiado al portapapeles</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(editado)</string>
     <string name="comment_reply">Responder</string>
     <string name="person_picker_search">Buscar usuarios</string>

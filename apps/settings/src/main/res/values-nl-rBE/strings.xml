@@ -83,7 +83,6 @@
     <string name="accounts_add_title">Account toevoegen</string>
     <string name="accounts_empty">Geen verbonden accounts</string>
     <string name="accounts_type_label">Type</string>
-    <string name="accounts_field_email">E-mail</string>
     <string name="accounts_field_model">Model</string>
     <string name="accounts_field_name">Naam</string>
     <string name="accounts_status_pending">In behandeling</string>
@@ -215,6 +214,7 @@
     <string name="account_oauth_link_title">Een provider koppelen</string>
     <string name="account_oauth_unlink_title">Account ontkoppelen?</string>
     <string name="account_oauth_unlink_message">Je zal je niet meer kunnen aanmelden met %1$s.</string>
+    <string name="account_oauth_unlink_network">Je zal je niet meer kunnen aanmelden met %1$s, maar het account blijft gekoppeld.</string>
     <string name="account_last_used">Laatst gebruikt %1$s</string>
     <string name="account_created">Aangemaakt %1$s</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad \"%1$s\" verwijderd.</string>
@@ -232,8 +232,6 @@
     <string name="notifprefs_delete_title">\"%1$s\" verwijderen?</string>
     <string name="system_status_update_available">Mochi %1$s is beschikbaar</string>
     <string name="system_status_installing">Bezig met installeren van %1$s…</string>
-    <string name="accounts_field_api_key">API-sleutel</string>
-    <string name="accounts_field_url">Server-URL</string>
     <string name="accounts_set_default_ai">Instellen als standaard-AI</string>
     <string name="accounts_verify_code">Code</string>
     <string name="accounts_verify_resend">Code opnieuw versturen</string>
@@ -338,12 +336,6 @@
     <string name="account_data_description">Download een volledige back-up die je kunt terugzetten op deze of een andere Mochi-server.</string>
     <string name="route_target_none">Geen doelen beschikbaar</string>
     <string name="login_invalid_code">Ongeldige code</string>
-    <string name="accounts_provider_browser">Browsermeldingen</string>
-    <string name="accounts_provider_fcm">Android-push</string>
-    <string name="accounts_provider_mcp">MCP-server</string>
-    <string name="accounts_provider_unifiedpush">Pushmelding</string>
-    <string name="accounts_provider_url">Externe URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
     <string name="accounts_verified">Account geverifieerd</string>
     <string name="accounts_verify_invalid">Ongeldige verificatiecode</string>
     <string name="accounts_verify_sent">Verificatiecode verzonden</string>
@@ -358,7 +350,6 @@
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_none">Geen bestemmingen geconfigureerd</string>
-    <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Geen bestemmingen</string>
     <string name="account_data_generate">Wachtwoordzin genereren</string>
     <string name="system_settings_theme_unknown">Onbekend thema</string>

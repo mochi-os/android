@@ -35,6 +35,14 @@
     <string name="common_subscribe">Langganan</string>
     <string name="common_copy">Salin</string>
     <string name="common_copied">Disalin menyang clipboard</string>
+    <string name="provider_browser">Pemberitahuan browser</string>
+    <string name="provider_caldav">Server kalender</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Notifikasi push</string>
+    <string name="provider_url">URL Eksternal</string>
+    <string name="provider_web">Web Mochi</string>
     <string name="comment_edited">(disunting)</string>
     <string name="comment_reply">Bales</string>
     <string name="person_picker_search">Goleki pangguna</string>

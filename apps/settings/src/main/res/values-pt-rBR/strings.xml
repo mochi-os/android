@@ -86,7 +86,6 @@
     <string name="accounts_add_title">Adicionar conta</string>
     <string name="accounts_empty">Nenhuma conta conectada</string>
     <string name="accounts_type_label">Tipo</string>
-    <string name="accounts_field_email">E-mail</string>
     <string name="accounts_field_model">Modelo</string>
     <string name="accounts_field_name">Nome</string>
     <string name="accounts_status_pending">Pendente</string>
@@ -204,6 +203,7 @@
     <string name="account_passkey_name_label">Nome (opcional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" não será mais usada para entrar.</string>
     <string name="account_totp_enabled">O autenticador está ativado.</string>
+    <string name="account_totp_turned_off">O app autenticador foi desativado pelo administrador do servidor.</string>
     <string name="account_totp_setup_step1">Escaneie ou insira este segredo no seu aplicativo autenticador.</string>
     <string name="account_totp_setup_step2">Insira o código de 6 dígitos exibido pelo aplicativo.</string>
     <string name="account_totp_code">Código</string>
@@ -223,11 +223,13 @@
     <string name="account_oauth_link_title">Vincular um provedor</string>
     <string name="account_oauth_unlink_title">Desvincular conta?</string>
     <string name="account_oauth_unlink_message">Você não poderá entrar com %1$s.</string>
+    <string name="account_oauth_unlink_network">Você não poderá entrar com %1$s, mas a conta continua vinculada.</string>
     <string name="account_last_used">Último uso em %1$s</string>
     <string name="account_created">Criado %1$s</string>
     <string name="route_delete_message">Isto removerá a rota para o caminho \"%1$s\".</string>
     <string name="route_empty">Nenhuma rota configurada.</string>
     <string name="route_meta">Prioridade %1$s · %2$s</string>
+    <string name="route_delete_failed">Falha ao excluir rota</string>
     <string name="interests_search_placeholder">Pesquisar tópicos para adicionar</string>
     <string name="interests_empty">Nenhum interesse ainda.</string>
     <string name="interests_summary_regenerate">Gerar resumo novamente</string>
@@ -240,8 +242,6 @@
     <string name="notifprefs_delete_title">Excluir \"%1$s\"?</string>
     <string name="system_status_update_available">Mochi %1$s está disponível</string>
     <string name="system_status_installing">Instalando %1$s…</string>
-    <string name="accounts_field_api_key">Chave de API</string>
-    <string name="accounts_field_url">URL do servidor</string>
     <string name="accounts_set_default_ai">Definir como IA padrão</string>
     <string name="accounts_verify_code">Código</string>
     <string name="accounts_verify_resend">Reenviar código</string>
@@ -296,6 +296,9 @@
     <string name="domain_status_verified">Verificado</string>
     <string name="domain_title">Domínios</string>
     <string name="domain_verify">Verificar DNS</string>
+    <string name="domain_verify_missing">Registro TXT não encontrado</string>
+    <string name="domain_delete_failed">Falha ao excluir domínio</string>
+    <string name="domain_delegation_delete_failed">Falha ao excluir delegação</string>
     <string name="settings_home_domains">Domínios</string>
     <plurals name="notifprefs_test_sent">
         <item quantity="one">Teste enviado para %1$s destino</item>
@@ -325,6 +328,8 @@
     <string name="account_data_dialog_body">Este é um backup completo que você pode restaurar neste ou em outro servidor Mochi. Confirme que é você para continuar.</string>
     <string name="account_data_passphrase">Frase secreta</string>
     <string name="account_data_passphrase_hint">Suas chaves privadas estão incluídas, criptografadas com esta frase de acesso. Guarde-a em um lugar seguro. Você precisará dela para restaurar.</string>
+    <string name="account_data_preparing">Preparando seus dados</string>
+    <string name="account_data_ready">Seus dados estão prontos para download</string>
     <string name="system_status_peer_unreachable">Inacessível</string>
     <string name="system_status_peer_address">Endereço</string>
     <string name="system_status_peer_seen">Visto pela última vez</string>
@@ -347,12 +352,6 @@
     <string name="account_data_description">Baixe um backup completo que você pode restaurar neste ou em outro servidor Mochi.</string>
     <string name="route_target_none">Nenhum destino disponível</string>
     <string name="login_invalid_code">Código inválido</string>
-    <string name="accounts_provider_browser">Notificações do navegador</string>
-    <string name="accounts_provider_fcm">Push do Android</string>
-    <string name="accounts_provider_mcp">Servidor MCP</string>
-    <string name="accounts_provider_unifiedpush">Notificação push</string>
-    <string name="accounts_provider_url">URL externa</string>
-    <string name="accounts_provider_web">Mochi web</string>
     <string name="accounts_verified">Conta verificada</string>
     <string name="accounts_verify_invalid">Código de verificação inválido</string>
     <string name="accounts_verify_sent">Código de verificação enviado</string>
@@ -371,7 +370,6 @@
         <item quantity="other">Teste enviado para %1$s de %2$s destinos</item>
     </plurals>
     <string name="notifprefs_test_none">Nenhum destino configurado</string>
-    <string name="notifprefs_transport_fcm">Push do Android</string>
     <string name="notifprefs_no_destinations">Nenhum destino</string>
     <string name="account_data_generate">Gerar frase secreta</string>
     <string name="account_totp_open">Abrir no app autenticador</string>

@@ -35,6 +35,14 @@
     <string name="common_subscribe">ជាវ</string>
     <string name="common_copy">ចម្លង</string>
     <string name="common_copied">បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់</string>
+    <string name="provider_browser">ការជូនដំណឹងពីកម្មវិធីរុករក</string>
+    <string name="provider_caldav">ម៉ាស៊ីនមេប្រតិទិន</string>
+    <string name="provider_email">អ៊ីមែល</string>
+    <string name="provider_fcm">ការជូនដំណឹង Android</string>
+    <string name="provider_mcp">ម៉ាស៊ីនមេ MCP</string>
+    <string name="provider_unifiedpush">ការជូនដំណឹងរុញ</string>
+    <string name="provider_url">URL ខាងក្រៅ</string>
+    <string name="provider_web">Mochi វេប</string>
     <string name="comment_edited">(បានកែ)</string>
     <string name="comment_reply">ឆ្លើយតប</string>
     <string name="person_picker_search">ស្វែងរកអ្នកប្រើ</string>

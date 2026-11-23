@@ -35,6 +35,14 @@
     <string name="common_subscribe">Obuna boʻlish</string>
     <string name="common_copy">Nusxalash</string>
     <string name="common_copied">Buferga nusxalandi</string>
+    <string name="provider_browser">Brauzer bildirishnomalari</string>
+    <string name="provider_caldav">Kalendar serveri</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Android push bildirishnomalari</string>
+    <string name="provider_mcp">MCP serveri</string>
+    <string name="provider_unifiedpush">Push bildirishnoma</string>
+    <string name="provider_url">Tashqi URL</string>
+    <string name="provider_web">Mochi veb</string>
     <string name="comment_edited">(tahrirlangan)</string>
     <string name="comment_reply">Javob</string>
     <string name="person_picker_search">Foydalanuvchilarni qidirish</string>

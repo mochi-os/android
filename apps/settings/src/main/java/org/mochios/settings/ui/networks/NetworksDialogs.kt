@@ -26,33 +26,36 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.CopyButton
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.SecureWindow
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
-import org.mochios.settings.api.AccountKey
 import org.mochios.settings.api.Availability
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
@@ -157,7 +160,7 @@ internal fun LinkDialog(
 internal fun AddNameDialog(
     parent: Handle,
     busy: Boolean,
-    check: suspend (String, String) -> Availability?,
+    check: suspend (String, String) -> Result<Availability>,
     onAdd: (String) -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -185,7 +188,7 @@ internal fun AddNameDialog(
         },
         confirmText = stringResource(MochiR.string.common_add),
         onConfirm = { onAdd(name) },
-        confirmEnabled = result?.available == true && !checking && !busy,
+        confirmEnabled = result.free() && !checking && !busy,
         confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_cancel),
         dismissEnabled = !busy,
@@ -398,7 +401,7 @@ internal fun MoveDialog(
 
 /** A value shown to be copied, read-only, with its copy button. */
 @Composable
-private fun CopyField(label: String, value: String, sensitive: Boolean = false) {
+private fun CopyField(label: String, value: String) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         MochiTextField(
             value = value,
@@ -408,47 +411,90 @@ private fun CopyField(label: String, value: String, sensitive: Boolean = false) 
             singleLine = true,
             modifier = Modifier.weight(1f),
         )
-        CopyButton(value = value, contentDescription = stringResource(MochiR.string.common_copy), sensitive = sensitive)
+        CopyButton(value = value, contentDescription = stringResource(MochiR.string.common_copy))
     }
 }
 
 /**
+ * A secret shown once, as plain text rather than a field: it cannot be
+ * selected and copied as an ordinary clip, so the copy button, which copies
+ * it as a sensitive one, is the only way to take it.
+ */
+@Composable
+private fun SecretField(label: String, value: String) {
+    Column {
+        Text(label, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                value,
+                fontFamily = FontFamily.Monospace,
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.weight(1f),
+            )
+            CopyButton(value = value, contentDescription = stringResource(MochiR.string.common_copy), sensitive = true)
+        }
+    }
+}
+
+/**
+ * How a dialog showing a secret closes: while the secret is on screen only
+ * by its own button, since a tap beside it or Back would lose it for good.
+ */
+private fun secretProperties(shown: Boolean) =
+    DialogProperties(dismissOnBackPress = !shown, dismissOnClickOutside = !shown)
+
+/** A key's kind in the user's words, never the stored value. */
+@Composable
+internal fun keyKind(kind: String): String = stringResource(
+    when (kind) {
+        "signing" -> R.string.networks_key_signing
+        "rotation" -> R.string.networks_key_rotation
+        "recovery" -> R.string.networks_key_recovery
+        else -> R.string.networks_key_other
+    },
+)
+
+/**
  * A hosted account's keys: what it signs with, replaced here, and on Bluesky
  * the recovery key the user keeps - offered as soon as the account is made,
- * with the dialog opening on the question.
+ * with the dialog opening on the question. What it shows is [state], held by
+ * the view model, so the recovery key survives the screen being recreated.
  */
 @Composable
 internal fun KeysDialog(
-    account: NetworkAccount,
-    offer: Boolean,
+    state: KeysDialogState,
     busy: Set<String>,
-    load: suspend (NetworkAccount) -> List<AccountKey>?,
-    onReplace: (() -> Unit) -> Unit,
-    onRecovery: ((String) -> Unit) -> Unit,
+    onReplace: () -> Unit,
+    onRecovery: () -> Unit,
+    onRetry: () -> Unit,
     onDismiss: () -> Unit,
 ) {
     val format = LocalFormat.current
-    var keys by remember { mutableStateOf<List<AccountKey>?>(null) }
-    var round by remember { mutableStateOf(0) }
-    var replacing by remember { mutableStateOf(false) }
-    var recovering by remember { mutableStateOf(offer) }
-    var secret by remember { mutableStateOf("") }
-    LaunchedEffect(account.id, round) { keys = load(account) }
+    val account = state.account
+    val secret = state.secret
+    var replacing by rememberSaveable(account.id) { mutableStateOf(false) }
+    var recovering by rememberSaveable(account.id) { mutableStateOf(state.offer && secret.isEmpty()) }
     // The dialog's own changes; another account's leave it usable.
     val working = "keys" in busy || "recovery" in busy
+    val shown = secret.isNotEmpty()
 
     MochiAlertDialog(
         onDismissRequest = { if (!working) onDismiss() },
         title = stringResource(R.string.networks_keys),
+        properties = secretProperties(shown),
         content = {
+            // The recovery key can take the account away: kept out of
+            // screenshots, screen recordings and Recents while it shows.
+            if (shown) SecureWindow()
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                val listed = keys
-                if (listed == null) {
-                    CircularProgressIndicator(Modifier.size(24.dp))
-                } else {
-                    for (key in listed) {
+                val listed = state.keys
+                val failure = state.failure
+                when {
+                    failure != null -> InlineErrorState(message = failure, onRetry = onRetry)
+                    listed == null -> CircularProgressIndicator(Modifier.size(24.dp))
+                    else -> for (key in listed) {
                         Column {
-                            Text("${key.kind} · ${key.algorithm}", style = MaterialTheme.typography.bodyMedium)
+                            Text("${keyKind(key.kind)} · ${key.algorithm}", style = MaterialTheme.typography.bodyMedium)
                             Text(
                                 stringResource(R.string.account_created, format.formatTimestamp(key.created)),
                                 style = MaterialTheme.typography.bodySmall,
@@ -457,8 +503,8 @@ internal fun KeysDialog(
                         }
                     }
                 }
-                if (secret.isNotEmpty()) {
-                    CopyField(stringResource(R.string.networks_recovery), secret, sensitive = true)
+                if (shown) {
+                    SecretField(stringResource(R.string.networks_recovery), secret)
                     Text(
                         stringResource(R.string.networks_recovery_hint),
                         style = MaterialTheme.typography.bodySmall,
@@ -491,7 +537,7 @@ internal fun KeysDialog(
             confirmText = stringResource(R.string.networks_replace),
             onConfirm = {
                 replacing = false
-                onReplace { round++ }
+                onReplace()
             },
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
@@ -505,10 +551,7 @@ internal fun KeysDialog(
             confirmText = stringResource(R.string.networks_recovery_make),
             onConfirm = {
                 recovering = false
-                onRecovery { made ->
-                    secret = made
-                    round++
-                }
+                onRecovery()
             },
             dismissText = stringResource(MochiR.string.common_cancel),
         )
@@ -521,36 +564,45 @@ internal fun KeysDialog(
  * the account, and its posts land in the account's home feed, which an app
  * given a password is never asked for: a hosted Bluesky account with none
  * chooses one here, a public feed or a new one, as the consent page has an
- * app signing in there choose. [onMake] is given the device, the home feed
- * chosen (null when none is asked for) and where the password goes.
+ * app signing in there choose. [onMake] is given the device and the home
+ * feed chosen (null when none is asked for). What it shows is [state], held
+ * by the view model: the password survives the screen being recreated, and
+ * the account carries the home feed the server last answered, so one the
+ * first attempt saved is not asked for again on a retry.
  */
 @Composable
 internal fun PasswordDialog(
-    account: NetworkAccount,
+    state: PasswordDialogState,
     feeds: List<NetworkFeed>,
     busy: Boolean,
-    onMake: (String, String?, (String) -> Unit) -> Unit,
+    onMake: (String, String?) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    var device by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+    val account = state.account
+    val password = state.password
+    var device by rememberSaveable(account.id) { mutableStateOf("") }
     val homeless = account.type == "bluesky" && account.hosted && account.home.isEmpty()
     val choices = feeds.filter { it.privacy == "public" }.sortedWith(compareBy(NaturalCompare) { it.name })
-    var home by remember { mutableStateOf(choices.firstOrNull()?.id ?: NetworksViewModel.HOME_NEW) }
+    var home by rememberSaveable(account.id) { mutableStateOf(choices.firstOrNull()?.id ?: NetworksViewModel.HOME_NEW) }
     var picking by remember { mutableStateOf(false) }
     val fresh = stringResource(R.string.networks_home_new)
+    val shown = password.isNotEmpty()
     MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.networks_password_title),
+        properties = secretProperties(shown),
         content = {
+            // The password signs in as the account and never expires: kept
+            // out of screenshots, screen recordings and Recents while it shows.
+            if (shown) SecureWindow()
             Column(
                 modifier = Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 CopyField(stringResource(R.string.networks_server), serverAddress(account))
                 CopyField(stringResource(R.string.networks_address), account.identifier)
-                if (password.isNotEmpty()) {
-                    CopyField(stringResource(R.string.networks_password), password, sensitive = true)
+                if (shown) {
+                    SecretField(stringResource(R.string.networks_password), password)
                     Text(
                         stringResource(R.string.networks_password_hint),
                         style = MaterialTheme.typography.bodySmall,
@@ -589,8 +641,8 @@ internal fun PasswordDialog(
                 }
             }
         },
-        confirmText = if (password.isEmpty()) stringResource(R.string.networks_password_make) else null,
-        onConfirm = { onMake(device, if (homeless) home else null) { password = it } },
+        confirmText = if (!shown) stringResource(R.string.networks_password_make) else null,
+        onConfirm = { onMake(device, if (homeless) home else null) },
         confirmEnabled = device.isNotBlank() && !busy,
         confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_close),

@@ -35,6 +35,14 @@
     <string name="common_subscribe">订阅</string>
     <string name="common_copy">复制</string>
     <string name="common_copied">已复制到剪贴板</string>
+    <string name="provider_browser">浏览器通知</string>
+    <string name="provider_caldav">日历服务器</string>
+    <string name="provider_email">邮箱</string>
+    <string name="provider_fcm">Android 推送</string>
+    <string name="provider_mcp">MCP 服务器</string>
+    <string name="provider_unifiedpush">推送通知</string>
+    <string name="provider_url">外部 URL</string>
+    <string name="provider_web">Mochi 网页版</string>
     <string name="comment_edited">(已编辑)</string>
     <string name="comment_reply">回复</string>
     <string name="person_picker_search">搜索用户</string>

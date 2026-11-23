@@ -35,6 +35,14 @@
     <string name="common_subscribe">ይመዝገቡ</string>
     <string name="common_copy">ቅዳ</string>
     <string name="common_copied">ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
+    <string name="provider_browser">የአሳሽ ማሳወቂያዎች</string>
+    <string name="provider_caldav">የቀን መቁጠሪያ አገልጋይ</string>
+    <string name="provider_email">ኢሜይል</string>
+    <string name="provider_fcm">የAndroid ግፋ</string>
+    <string name="provider_mcp">የMCP አገልጋይ</string>
+    <string name="provider_unifiedpush">የግፋ ማሳወቂያ</string>
+    <string name="provider_url">ውጫዊ URL</string>
+    <string name="provider_web">Mochi ድር</string>
     <string name="comment_edited">(ተሻሽሏል)</string>
     <string name="comment_reply">ምላሽ ስጥ</string>
     <string name="person_picker_search">ተጠቃሚዎችን ይፈልጉ</string>

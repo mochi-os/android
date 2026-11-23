@@ -303,12 +303,18 @@ interface NetworksApi {
         @Field("address") address: String,
     ): Response<NetworkAccount>
 
+    /**
+     * With [create], a new feed replaces [previous], the home the client last
+     * saw ("" for none); a home the account has since been given is kept, so
+     * a retry makes no second feed.
+     */
     @FormUrlEncoded
     @POST("settings/-/user/networks/account/home")
     suspend fun home(
         @Field("id") id: String,
         @Field("feed") feed: String,
         @Field("create") create: String? = null,
+        @Field("previous") previous: String? = null,
     ): Response<NetworkAccount>
 
     @FormUrlEncoded
@@ -323,15 +329,21 @@ interface NetworksApi {
     @POST("settings/-/user/networks/account/keys/replace")
     suspend fun replaceKeys(@Field("id") id: String): Response<Unit>
 
+    /** [token] is a step-up proof, spent by this one call. */
     @FormUrlEncoded
     @POST("settings/-/user/networks/account/keys/recovery")
-    suspend fun recovery(@Field("id") id: String): Response<RecoveryKey>
+    suspend fun recovery(
+        @Field("id") id: String,
+        @Field("token") token: String,
+    ): Response<RecoveryKey>
 
+    /** [token] is a step-up proof, spent by this one call. */
     @FormUrlEncoded
     @POST("settings/-/user/networks/account/password")
     suspend fun password(
         @Field("id") id: String,
         @Field("name") name: String,
+        @Field("token") token: String,
     ): Response<MintedPassword>
 
     @FormUrlEncoded
@@ -365,11 +377,13 @@ interface NetworksApi {
         @Query("offset") offset: Int,
     ): Response<SystemHandles>
 
+    /** [token] is a step-up proof, spent by this one call. */
     @FormUrlEncoded
     @POST("settings/-/system/handles/release")
     suspend fun releaseAny(
         @Field("name") name: String,
         @Field("domain") domain: String,
+        @Field("token") token: String,
     ): Response<Unit>
 
     @FormUrlEncoded

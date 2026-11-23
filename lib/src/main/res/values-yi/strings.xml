@@ -35,6 +35,14 @@
     <string name="common_subscribe">אַבאָנירן</string>
     <string name="common_copy">קאָפּירן</string>
     <string name="common_copied">קאָפּירט צו קליפּברעט</string>
+    <string name="provider_browser">בראָוזער נאָטיפֿיקאַציעס</string>
+    <string name="provider_caldav">קאַלענדאַר־סערווער</string>
+    <string name="provider_email">בליצפּאָסט</string>
+    <string name="provider_fcm">Android פּוש</string>
+    <string name="provider_mcp">MCP סערװער</string>
+    <string name="provider_unifiedpush">פּוש־מעלדונג</string>
+    <string name="provider_url">אינדרויסנדיקער URL</string>
+    <string name="provider_web">Mochi װעב</string>
     <string name="comment_edited">(רעדאַגירט)</string>
     <string name="comment_reply">ענטפֿער</string>
     <string name="person_picker_search">זוך באַניצערס</string>

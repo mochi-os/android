@@ -35,6 +35,14 @@
     <string name="common_subscribe">ګډون وکړئ</string>
     <string name="common_copy">کاپي کړئ</string>
     <string name="common_copied">په کلیپ بورډ کاپي شو</string>
+    <string name="provider_browser">د براوزر خبرتیاوې</string>
+    <string name="provider_caldav">د کليز سرور</string>
+    <string name="provider_email">بریښنالیک</string>
+    <string name="provider_fcm">د Android پوش</string>
+    <string name="provider_mcp">MCP سرور</string>
+    <string name="provider_unifiedpush">د پوش خبرتیا</string>
+    <string name="provider_url">بهرنی URL</string>
+    <string name="provider_web">Mochi وېب</string>
     <string name="comment_edited">(سمول شوی)</string>
     <string name="comment_reply">ځواب</string>
     <string name="person_picker_search">کاروونکي وپلټئ</string>

@@ -35,6 +35,14 @@
     <string name="common_subscribe">Suscribiy</string>
     <string name="common_copy">Copiay</string>
     <string name="common_copied">Clipboard-man copiasqa</string>
+    <string name="provider_browser">Navegador willaykuna</string>
+    <string name="provider_caldav">Calendario servidor</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Android push willakuy</string>
+    <string name="provider_mcp">MCP servidor</string>
+    <string name="provider_unifiedpush">Push willay</string>
+    <string name="provider_url">Hawa URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(hukchasqa)</string>
     <string name="comment_reply">Kutichiy</string>
     <string name="person_picker_search">Apaykachaqkunata maskay</string>

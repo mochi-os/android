@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abbona</string>
     <string name="common_copy">Ikkupja</string>
     <string name="common_copied">Ikkupjat fil-clipboard</string>
+    <string name="provider_browser">Notifiki tal-browser</string>
+    <string name="provider_caldav">Server tal-kalendarju</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Notifika push</string>
+    <string name="provider_url">URL Estern</string>
+    <string name="provider_web">Web ta\' Mochi</string>
     <string name="comment_edited">(editjat)</string>
     <string name="comment_reply">Wieġeb</string>
     <string name="person_picker_search">Fittex utenti</string>

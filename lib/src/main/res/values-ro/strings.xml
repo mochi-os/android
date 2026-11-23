@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abonează-te</string>
     <string name="common_copy">Copiază</string>
     <string name="common_copied">Copiat în clipboard</string>
+    <string name="provider_browser">Notificări de browser</string>
+    <string name="provider_caldav">Server de calendar</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Notificare push</string>
+    <string name="provider_url">URL extern</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(editat)</string>
     <string name="comment_reply">Răspunde</string>
     <string name="person_picker_search">Caută utilizatori</string>

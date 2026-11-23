@@ -11,6 +11,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.ResponseBody
+import org.mochios.android.api.Slow
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Field
@@ -117,6 +118,8 @@ data class OAuthIdentity(
     val used: Long = 0,
     /** Whether the server can confirm the user's identity through it; null from a core that does not say. */
     val verify: Boolean? = null,
+    /** For a network's sign-in, the address of the linked account it signs in with; empty otherwise. */
+    val account: String = "",
 )
 
 data class OAuthIdentitiesResponse(val identities: List<OAuthIdentity> = emptyList())
@@ -125,9 +128,18 @@ data class OAuthIdentitiesResponse(val identities: List<OAuthIdentity> = emptyLi
  *  the soft-deleted account will be hard-purged. */
 data class CloseResponse(val purge: Long = 0)
 
-/** Data-export build result: the server-side on-disk filename of the bundle,
- *  which the client then streams via the public export/download action. */
-data class ExportResponse(val filename: String = "")
+/**
+ * How a data export stands: `building`, `ready` with the bundle's [file],
+ * which the client streams through the export/download action, `failed` with
+ * the server's translated [error], or `none`. An older server answers the
+ * export with [filename] alone, once the bundle is built.
+ */
+data class ExportResponse(
+    val state: String = "",
+    val file: String = "",
+    val filename: String = "",
+    val error: String = "",
+)
 
 // ---------- Retrofit ----------
 
@@ -233,14 +245,22 @@ interface AccountApi {
     @POST("settings/-/user/account/close")
     suspend fun closeAccount(@Field("token") token: String): Response<CloseResponse>
 
-    /** Builds the restorable backup bundle; gated on step-up. Returns its filename - the
-     *  bytes come from the public export/download action. */
+    /** Starts the restorable backup bundle; gated on step-up. The server waits a
+     *  few seconds for it, so a small one comes back ready with its file, a
+     *  larger one building; the bytes come from the public export/download
+     *  action. Slow, because an older server builds the bundle before it
+     *  answers. */
+    @Slow
     @FormUrlEncoded
     @POST("settings/-/user/account/export")
     suspend fun exportData(
         @Field("token") token: String,
         @Field("passphrase") passphrase: String,
     ): Response<ExportResponse>
+
+    /** How the export stands, asked again every few seconds while it is built. */
+    @GET("settings/-/user/account/export/status")
+    suspend fun exportStatus(): Response<ExportResponse>
 
     /** The built bundle itself, not a JSON envelope; the server deletes it as
      *  it serves it. @Streaming keeps it off the heap. */

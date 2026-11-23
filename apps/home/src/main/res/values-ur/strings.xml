@@ -5,6 +5,9 @@
     <string name="home_menu_user">صارف</string>
     <string name="home_menu_empty">کوئی غیر پڑھی notifications نہیں</string>
     <string name="home_menu_view_all">سب دیکھیں</string>
+    <string name="home_menu_read_failed">اطلاع کو پڑھا ہوا نشان زد نہیں کیا جا سکا</string>
+    <string name="home_menu_read_all_failed">تمام اطلاعات کو پڑھا ہوا نشان زد نہیں کیا جا سکا</string>
+    <string name="home_menu_category_failed">زمرہ اپڈیٹ کرنے میں ناکامی</string>
     <string name="home_menu_no_topic">ابھی تک کوئی ٹاپک ریکارڈ نہیں — اگلی اطلاع کے بعد دوبارہ کوشش کریں۔</string>
     <string name="home_menu_manage_categories">زمروں کا نظم کریں</string>
 </resources>

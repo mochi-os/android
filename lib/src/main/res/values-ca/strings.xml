@@ -35,6 +35,14 @@
     <string name="common_subscribe">Subscriu-te</string>
     <string name="common_copy">Copia</string>
     <string name="common_copied">Copiat al porta-retalls</string>
+    <string name="provider_browser">Notificacions del navegador</string>
+    <string name="provider_caldav">Servidor de calendari</string>
+    <string name="provider_email">Correu electrònic</string>
+    <string name="provider_fcm">Push d\'Android</string>
+    <string name="provider_mcp">Servidor MCP</string>
+    <string name="provider_unifiedpush">Notificació push</string>
+    <string name="provider_url">URL externa</string>
+    <string name="provider_web">Web de Mochi</string>
     <string name="comment_edited">(editat)</string>
     <string name="comment_reply">Respon</string>
     <string name="person_picker_search">Cerca usuaris</string>

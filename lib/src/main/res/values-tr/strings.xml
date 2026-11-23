@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abone ol</string>
     <string name="common_copy">Kopyala</string>
     <string name="common_copied">Panoya kopyalandı</string>
+    <string name="provider_browser">Tarayıcı bildirimleri</string>
+    <string name="provider_caldav">Takvim sunucusu</string>
+    <string name="provider_email">E-posta</string>
+    <string name="provider_fcm">Android anlık bildirim</string>
+    <string name="provider_mcp">MCP sunucusu</string>
+    <string name="provider_unifiedpush">Anlık bildirim</string>
+    <string name="provider_url">Harici URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(düzenlendi)</string>
     <string name="comment_reply">Yanıtla</string>
     <string name="person_picker_search">Kullanıcılarda ara</string>

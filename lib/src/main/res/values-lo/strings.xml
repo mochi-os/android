@@ -35,6 +35,14 @@
     <string name="common_subscribe">ສະໝັກສະມາຊິກ</string>
     <string name="common_copy">ສຳເນົາ</string>
     <string name="common_copied">ສຳເນົາໄປຄລິບບອດແລ້ວ</string>
+    <string name="provider_browser">ການແຈ້ງເຕືອນຕົວທ່ອງເວັບ</string>
+    <string name="provider_caldav">ເຊີບເວີປະຕິທິນ</string>
+    <string name="provider_email">ອີເມວ</string>
+    <string name="provider_fcm">ການແຈ້ງເຕືອນແບບພຸຊ Android</string>
+    <string name="provider_mcp">ເຊີບເວີ MCP</string>
+    <string name="provider_unifiedpush">ການແຈ້ງເຕືອນແບບພຸຊ</string>
+    <string name="provider_url">URL ພາຍນອກ</string>
+    <string name="provider_web">Mochi ເວັບ</string>
     <string name="comment_edited">(ແກ້ໄຂແລ້ວ)</string>
     <string name="comment_reply">ຕອບ</string>
     <string name="person_picker_search">ຄົ້ນຫາຜູ້ໃຊ້</string>

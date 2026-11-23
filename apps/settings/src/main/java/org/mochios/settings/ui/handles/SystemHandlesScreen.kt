@@ -64,6 +64,7 @@ import org.mochios.settings.R
 import org.mochios.settings.api.Availability
 import org.mochios.settings.api.RegistryAccount
 import org.mochios.settings.api.RegistryHandle
+import org.mochios.settings.ui.login.StepUpHost
 import org.mochios.settings.ui.networks.HandleChooser
 import org.mochios.settings.ui.networks.networkLabel
 import org.mochios.settings.ui.systemusers.PaginationBar
@@ -91,6 +92,7 @@ fun SystemHandlesScreen(
         }
     }
 
+    StepUpHost(viewModel.stepUp)
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
@@ -170,7 +172,7 @@ fun SystemHandlesScreen(
 internal fun SystemHandlesList(
     state: SystemHandlesUiState,
     onRetry: () -> Unit,
-    check: suspend (String, String) -> Availability?,
+    check: suspend (String, String) -> Result<Availability>,
     onReserve: (name: String, domain: String, onReserved: () -> Unit) -> Unit,
     onTakedown: (RegistryAccount) -> Unit,
     onRestore: (RegistryAccount) -> Unit,

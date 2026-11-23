@@ -35,6 +35,14 @@
     <string name="common_subscribe">Gerast áskrifandi</string>
     <string name="common_copy">Afrita</string>
     <string name="common_copied">Afritað á klippiborðið</string>
+    <string name="provider_browser">Tilkynningar vafra</string>
+    <string name="provider_caldav">Dagatalsþjónn</string>
+    <string name="provider_email">Tölvupóstur</string>
+    <string name="provider_fcm">Android-ýting</string>
+    <string name="provider_mcp">MCP-þjónn</string>
+    <string name="provider_unifiedpush">Ýtitilkynning</string>
+    <string name="provider_url">Ytri slóð</string>
+    <string name="provider_web">Mochi-vefur</string>
     <string name="comment_edited">(breytt)</string>
     <string name="comment_reply">Svara</string>
     <string name="person_picker_search">Leita að notendum</string>

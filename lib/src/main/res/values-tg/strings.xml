@@ -35,6 +35,14 @@
     <string name="common_subscribe">Обуна шудан</string>
     <string name="common_copy">Нусхабардорӣ</string>
     <string name="common_copied">Ба буфер нусхабардорӣ шуд</string>
+    <string name="provider_browser">Огоҳиномаҳои браузер</string>
+    <string name="provider_caldav">Сервери тақвим</string>
+    <string name="provider_email">Имейл</string>
+    <string name="provider_fcm">Огоҳиҳои пуш барои Android</string>
+    <string name="provider_mcp">Сервери MCP</string>
+    <string name="provider_unifiedpush">Огоҳиномаи пуш</string>
+    <string name="provider_url">URL-и берунӣ</string>
+    <string name="provider_web">Mochi веб</string>
     <string name="comment_edited">(таҳриршуда)</string>
     <string name="comment_reply">Ҷавоб</string>
     <string name="person_picker_search">Ҷустуҷӯи корбарон</string>

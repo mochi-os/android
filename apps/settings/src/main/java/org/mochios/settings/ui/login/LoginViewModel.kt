@@ -8,9 +8,11 @@ package org.mochios.settings.ui.login
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
@@ -20,7 +22,6 @@ import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.OAuthPkce
 import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.auth.StepUpClient
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.AccountApi
@@ -71,14 +72,19 @@ class LoginViewModel @Inject constructor(
     private val passkeyManager: PasskeyManager,
     private val authRepository: AuthRepository,
     private val sessionManager: SessionManager,
-    stepUp: SettingsStepUpClient,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
-
-    /** Injected into the StepUpDialog rendered by the screen. */
-    val stepUpClient: StepUpClient = stepUp
 
     private val _uiState = MutableStateFlow(LoginUiState())
     val uiState: StateFlow<LoginUiState> = _uiState.asStateFlow()
+
+    /** Every change to a login factor re-verifies one first; the screen hosts
+     *  the dialog with [StepUpHost]. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.update { it.copy(error = e.toMochiError()) } },
+    )
 
     private val _newTotpSetup = MutableStateFlow<TotpSetupResponse?>(null)
     val newTotpSetup: StateFlow<TotpSetupResponse?> = _newTotpSetup.asStateFlow()
@@ -88,12 +94,6 @@ class LoginViewModel @Inject constructor(
 
     private val _oauthLaunchUrl = MutableStateFlow<String?>(null)
     val oauthLaunchUrl: StateFlow<String?> = _oauthLaunchUrl.asStateFlow()
-
-    /** True while the step-up dialog is shown for a pending gated action. */
-    private val _stepUpVisible = MutableStateFlow(false)
-    val stepUpVisible: StateFlow<Boolean> = _stepUpVisible.asStateFlow()
-
-    private var pendingStepUp: (suspend (String) -> Unit)? = null
 
     init {
         refresh()
@@ -142,40 +142,24 @@ class LoginViewModel @Inject constructor(
                     oauth = oauth,
                     oauthProviders = oauthProviders,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
     }
 
-    // ---------- Step-up plumbing ----------
-
-    /** Open the step-up dialog; [run] fires with the proof token once the user
-     *  re-verifies their login factor(s). */
-    private fun requestStepUp(run: suspend (String) -> Unit) {
-        pendingStepUp = run
-        _stepUpVisible.value = true
+    fun clearError() {
+        _uiState.update { it.copy(error = null) }
     }
 
-    fun onStepUpVerified(token: String) {
-        _stepUpVisible.value = false
-        val run = pendingStepUp
-        pendingStepUp = null
-        if (run != null) {
-            viewModelScope.launch {
-                try {
-                    run(token)
-                } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(error = e.toMochiError())
-                }
-            }
-        }
-    }
+    private fun requestStepUp(run: suspend (String) -> Unit) = stepUp.request(run = run)
 
-    fun cancelStepUp() {
-        _stepUpVisible.value = false
-        pendingStepUp = null
-    }
+    /** Whether the server administrator has turned [method] off: the server
+     *  refuses to enrol it then, so no step-up is spent on asking. */
+    private fun turnedOff(method: String): Boolean =
+        _uiState.value.methods[method]?.system == "disabled"
 
     // ---------- Login methods (tri-state) ----------
 
@@ -192,13 +176,16 @@ class LoginViewModel @Inject constructor(
     // ---------- Passkeys ----------
 
     /** [fallback] is the translated name a passkey takes when the user gives none. */
-    fun registerPasskey(name: String, fallback: String) = requestStepUp { token ->
-        val begin = api.beginPasskeyRegister().unwrapRaw()
-        if (begin.ceremony.isBlank()) throw RuntimeException("missing ceremony")
-        val credentialJson = passkeyManager.register(begin.options)
-        val finishName = passkeyRegisterName(name, fallback)
-        api.finishPasskeyRegister(token, begin.ceremony, credentialJson, finishName).unwrapRaw()
-        refresh()
+    fun registerPasskey(name: String, fallback: String) {
+        if (turnedOff("passkey")) return
+        requestStepUp { token ->
+            val begin = api.beginPasskeyRegister().unwrapRaw()
+            if (begin.ceremony.isBlank()) throw RuntimeException("missing ceremony")
+            val credentialJson = passkeyManager.register(begin.options)
+            val finishName = passkeyRegisterName(name, fallback)
+            api.finishPasskeyRegister(token, begin.ceremony, credentialJson, finishName).unwrapRaw()
+            refresh()
+        }
     }
 
     fun renamePasskey(id: String, name: String) {
@@ -217,9 +204,11 @@ class LoginViewModel @Inject constructor(
 
     // ---------- TOTP ----------
 
-    fun beginTotpSetup() = requestStepUp { token ->
-        val setup = api.setupTotp(token).unwrapRaw()
-        _newTotpSetup.value = setup
+    fun beginTotpSetup() {
+        if (turnedOff("totp")) return
+        requestStepUp { token ->
+            _newTotpSetup.value = api.setupTotp(token).unwrapRaw()
+        }
     }
 
     fun verifyTotp(code: String) = mutate {
@@ -243,10 +232,13 @@ class LoginViewModel @Inject constructor(
 
     // ---------- Recovery codes ----------
 
-    fun generateRecovery() = requestStepUp { token ->
-        val codes = api.generateRecovery(token).unwrapRaw().codes
-        _newRecoveryCodes.value = codes
-        _uiState.value = _uiState.value.copy(recoveryCount = codes.size)
+    fun generateRecovery() {
+        if (turnedOff("recovery")) return
+        requestStepUp { token ->
+            val codes = api.generateRecovery(token).unwrapRaw().codes
+            _newRecoveryCodes.value = codes
+            _uiState.value = _uiState.value.copy(recoveryCount = codes.size)
+        }
     }
 
     fun acknowledgeRecoveryCodes() {
@@ -296,6 +288,8 @@ class LoginViewModel @Inject constructor(
                 }
                 authRepository.exchangeOAuthLink(code, verifier, token)
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -317,6 +311,8 @@ class LoginViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 block()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

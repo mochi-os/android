@@ -35,6 +35,14 @@
     <string name="common_subscribe">Жазылуу</string>
     <string name="common_copy">Көчүрүү</string>
     <string name="common_copied">Алмашуу буферине көчүрүлдү</string>
+    <string name="provider_browser">Браузер эскертүүлөрү</string>
+    <string name="provider_caldav">Календарь сервери</string>
+    <string name="provider_email">Электрондук почта</string>
+    <string name="provider_fcm">Android пуш билдирүүсү</string>
+    <string name="provider_mcp">MCP сервери</string>
+    <string name="provider_unifiedpush">Пуш билдирүүсү</string>
+    <string name="provider_url">Тышкы URL</string>
+    <string name="provider_web">Mochi веб</string>
     <string name="comment_edited">(өзгөртүлгөн)</string>
     <string name="comment_reply">Жооп</string>
     <string name="person_picker_search">Колдонуучуларды издөө</string>

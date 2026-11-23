@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abuna ýaz</string>
     <string name="common_copy">Nusgalamak</string>
     <string name="common_copied">Aralyk buferine nusgalandy</string>
+    <string name="provider_browser">Brauzer bildirişleri</string>
+    <string name="provider_caldav">Senenama serweri</string>
+    <string name="provider_email">E-poçta</string>
+    <string name="provider_fcm">Android push bildirişleri</string>
+    <string name="provider_mcp">MCP serweri</string>
+    <string name="provider_unifiedpush">Push bildirişi</string>
+    <string name="provider_url">Daşarky URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(redaktirlendi)</string>
     <string name="comment_reply">Jogap</string>
     <string name="person_picker_search">Ulanyjylary gözle</string>

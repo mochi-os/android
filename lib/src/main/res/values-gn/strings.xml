@@ -35,6 +35,14 @@
     <string name="common_subscribe">Esuscribi</string>
     <string name="common_copy">Kopia</string>
     <string name="common_copied">Oñekopiáma clipboard-pe</string>
+    <string name="provider_browser">Kundahára momarandukuéra</string>
+    <string name="provider_caldav">Arapapaha mohendaha</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Android momarandu</string>
+    <string name="provider_mcp">MCP mohendaha</string>
+    <string name="provider_unifiedpush">Push momarandu</string>
+    <string name="provider_url">URL okapegua</string>
+    <string name="provider_web">Mochi ñanduti</string>
     <string name="comment_edited">(oñembosako\'íva)</string>
     <string name="comment_reply">Embohovái</string>
     <string name="person_picker_search">Eheka puruhárakuéra</string>

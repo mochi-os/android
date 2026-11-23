@@ -64,6 +64,7 @@
     <string name="account_oauth_link_title">Anbieter verknüpfen</string>
     <string name="account_oauth_unlink_title">Konto trennen?</string>
     <string name="account_oauth_unlink_message">Sie können sich nicht mehr mit %1$s anmelden.</string>
+    <string name="account_oauth_unlink_network">Sie können sich nicht mehr mit %1$s anmelden, aber das Konto bleibt verbunden.</string>
     <string name="account_unlink">Trennen</string>
     <string name="account_done">Fertig</string>
     <string name="account_rename">Umbenennen</string>
@@ -133,10 +134,7 @@
     <string name="accounts_add">Konto hinzufügen</string>
     <string name="accounts_add_title">Konto hinzufügen</string>
     <string name="accounts_empty">Keine verbundenen Konten</string>
-    <string name="accounts_field_email">E-Mail</string>
-    <string name="accounts_field_api_key">API-Schlüssel</string>
     <string name="accounts_field_model">Modell</string>
-    <string name="accounts_field_url">Server-URL</string>
     <string name="accounts_status_pending">Ausstehend</string>
     <string name="accounts_status_verified">Verifiziert</string>
     <string name="accounts_status_connected">Verbunden</string>
@@ -325,8 +323,6 @@
     <string name="login_method_oauth">Anmeldung über Drittanbieter</string>
     <string name="login_method_recovery">Wiederherstellungscodes</string>
     <string name="route_target_select">Auswählen</string>
-    <string name="accounts_provider_url">Externe URL</string>
-    <string name="accounts_provider_web">Mochi Web</string>
     <string name="account_data_generate">Passphrase generieren</string>
     <string name="networks_connected">Verbunden</string>
     <string name="networks_address">Adresse</string>

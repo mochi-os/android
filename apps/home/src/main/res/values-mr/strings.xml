@@ -5,6 +5,9 @@
     <string name="home_menu_user">वापरकर्ता</string>
     <string name="home_menu_empty">न वाचलेले नोटिफिकेशन्स नाहीत</string>
     <string name="home_menu_view_all">सर्व पहा</string>
+    <string name="home_menu_read_failed">सूचना वाचली म्हणून चिन्हांकित करता आली नाही</string>
+    <string name="home_menu_read_all_failed">सर्व सूचना वाचल्या म्हणून चिन्हांकित करता आल्या नाहीत</string>
+    <string name="home_menu_category_failed">श्रेणी अद्यतनित करण्यात अयशस्वी</string>
     <string name="home_menu_no_topic">अद्याप टॉपिक रेकॉर्ड नाही — पुढील नोटिफिकेशननंतर पुन्हा प्रयत्न करा.</string>
     <string name="home_menu_manage_categories">श्रेणी व्यवस्थापित करा</string>
 </resources>

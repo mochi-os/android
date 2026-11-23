@@ -26,20 +26,25 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -48,9 +53,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -59,6 +67,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.fingerprint
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Delegation
@@ -74,14 +83,33 @@ fun DomainsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     var showAddDomain by remember { mutableStateOf(false) }
+    val snackbar = remember { SnackbarHostState() }
+
+    LaunchedEffect(Unit) {
+        viewModel.messages.collect { snackbar.showSnackbar(it) }
+    }
+    // A failed read while domains are listed is shown over them rather than
+    // replacing them: the full-screen arm below only fires when there is
+    // nothing to show.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.domains.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.domain_title)) },
                 navigationIcon = {
                     MochiIconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
                     }
                 },
                 actions = {
@@ -96,10 +124,10 @@ fun DomainsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                state.isLoading && state.domains.isEmpty() -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 state.error != null && state.domains.isEmpty() -> ErrorState(
                     error = state.error!!,
-                    onRetry = viewModel::refresh,
+                    onRetry = { viewModel.refresh() },
                 )
                 state.domains.isEmpty() -> Text(
                     text = stringResource(
@@ -118,6 +146,8 @@ fun DomainsScreen(
                             domain = domain,
                             details = state.details[domain.domain],
                             isLoadingDetails = state.loadingDetails.contains(domain.domain),
+                            detailsError = state.detailsErrors[domain.domain],
+                            isVerifying = domain.domain in state.verifying,
                             isAdmin = state.isAdmin,
                             apps = state.apps,
                             entities = state.entities,
@@ -161,10 +191,12 @@ fun DomainsScreen(
 }
 
 @Composable
-private fun DomainCard(
+internal fun DomainCard(
     domain: Domain,
     details: DomainDetailsData?,
     isLoadingDetails: Boolean,
+    detailsError: MochiError?,
+    isVerifying: Boolean,
     isAdmin: Boolean,
     apps: List<org.mochios.settings.api.RouteApp>,
     entities: List<org.mochios.settings.api.RouteEntity>,
@@ -182,7 +214,13 @@ private fun DomainCard(
     onDelegationCreate: (path: String, owner: String) -> Unit,
     onDelegationDelete: (path: String, owner: String) -> Unit,
 ) {
-    var expanded by remember { mutableStateOf(false) }
+    // Saved, so the card stays open while the list is read again after an
+    // action, and when it scrolls away and back.
+    var expanded by rememberSaveable(domain.domain) { mutableStateOf(false) }
+    // A card restored open, with the screen made again, reads what it shows.
+    LaunchedEffect(Unit) {
+        if (expanded && details == null) onExpand()
+    }
     var showDeleteDomain by remember { mutableStateOf(false) }
     var showAddRoute by remember { mutableStateOf(false) }
     var editRoute by remember { mutableStateOf<Route?>(null) }
@@ -212,21 +250,25 @@ private fun DomainCard(
                 }) {
                     Icon(
                         if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
-                        contentDescription = null,
+                        contentDescription = stringResource(
+                            if (expanded) MochiR.string.common_collapse else MochiR.string.common_expand,
+                        ),
                     )
                 }
             }
 
             if (expanded) {
                 Spacer(Modifier.height(8.dp))
-                if (isLoadingDetails && details == null) {
+                if (details == null && detailsError != null && !isLoadingDetails) {
+                    InlineErrorState(error = detailsError, onRetry = onExpand)
+                } else if (details == null) {
                     Box(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
                         CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                     }
-                } else if (details != null) {
+                } else {
                     // DNS verification hint
                     if (domain.verified == 0 && domain.token.isNotBlank()) {
-                        VerificationBlock(domain = domain, onVerify = onVerify)
+                        VerificationBlock(domain = domain, isVerifying = isVerifying, onVerify = onVerify)
                         Spacer(Modifier.height(12.dp))
                     }
 
@@ -391,28 +433,26 @@ private fun DomainCard(
     }
 }
 
+/**
+ * The TXT record the domain is verified by: its name and value, each copied
+ * with a tap into the DNS provider's form, and the button that looks it up.
+ */
 @Composable
-private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
+internal fun VerificationBlock(domain: Domain, isVerifying: Boolean, onVerify: () -> Unit) {
     MochiCard {
-        Column(modifier = Modifier.padding(8.dp)) {
+        Column(modifier = Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
                 text = stringResource(R.string.domain_dns_hint),
                 style = MaterialTheme.typography.labelMedium,
                 fontWeight = FontWeight.Medium,
             )
-            Spacer(Modifier.height(4.dp))
-            Text(
-                text = "_mochi-verify.${domain.domain}",
-                style = MaterialTheme.typography.bodySmall,
-                fontFamily = FontFamily.Monospace,
-            )
-            Text(
-                text = "mochi-verify=${domain.token}",
-                style = MaterialTheme.typography.bodySmall,
-                fontFamily = FontFamily.Monospace,
-            )
-            Spacer(Modifier.height(4.dp))
-            MochiOutlinedButton(onClick = onVerify) {
+            DataChip(value = "_mochi-verify.${domain.domain}", wrap = true)
+            DataChip(value = "mochi-verify=${domain.token}", wrap = true)
+            MochiOutlinedButton(onClick = onVerify, enabled = !isVerifying) {
+                if (isVerifying) {
+                    CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                }
                 Text(stringResource(R.string.domain_verify))
             }
         }
@@ -536,7 +576,7 @@ private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) 
 }
 
 @Composable
-private fun RouteDialog(
+internal fun RouteDialog(
     initial: Route?,
     apps: List<org.mochios.settings.api.RouteApp>,
     entities: List<org.mochios.settings.api.RouteEntity>,
@@ -568,17 +608,23 @@ private fun RouteDialog(
                 Spacer(Modifier.height(8.dp))
                 // App and entity targets pick from the server-provided lists so
                 // the user never types a raw id; redirect targets stay free-text
-                // (an arbitrary URL).
+                // (an arbitrary URL). The route's own target is named as the
+                // route row names it while it is still the one picked: the lists
+                // load as the dialog opens, and an administrator's lists hold
+                // none of another user's entities.
+                val current = initial?.takeIf { it.method == method && it.target == target }?.let { routeTarget(it) }
                 when (method) {
                     "app" -> TargetPicker(
                         label = stringResource(R.string.route_target_app),
-                        selectedLabel = apps.firstOrNull { it.id == target }?.name,
+                        selected = target,
+                        selectedLabel = apps.firstOrNull { it.id == target }?.name ?: current,
                         options = apps.map { it.id to it.name },
                         onSelect = { target = it },
                     )
                     "entity" -> TargetPicker(
                         label = stringResource(R.string.route_target_entity),
-                        selectedLabel = entities.firstOrNull { it.id == target }?.name,
+                        selected = target,
+                        selectedLabel = entities.firstOrNull { it.id == target }?.name ?: current,
                         options = entities.map { it.id to it.name },
                         onSelect = { target = it },
                     )
@@ -626,7 +672,20 @@ internal fun routeMethodLabel(method: String): Int = when (method) {
 /** A route row's second line: how the path is served, then what serves it. */
 @Composable
 internal fun routeSummary(route: Route): String =
-    stringResource(R.string.route_summary, stringResource(routeMethodLabel(route.method)), route.targetName ?: route.target)
+    stringResource(R.string.route_summary, stringResource(routeMethodLabel(route.method)), routeTarget(route))
+
+/** An entity's id, as core writes one. */
+private val ENTITY_ID = Regex("^\\w{49,51}$")
+
+/**
+ * What a route points at: the app's or entity's name, a redirect's address, or,
+ * for a target the server has no name for, its fingerprint rather than its id.
+ */
+internal fun routeTarget(route: Route): String = when {
+    !route.targetName.isNullOrBlank() -> route.targetName
+    route.method != "redirect" && ENTITY_ID.matches(route.target) -> fingerprint(route.target)
+    else -> route.target
+}
 
 /** A route's priority, written as the user writes numbers, and whether it is on. */
 @Composable
@@ -671,6 +730,7 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
 @Composable
 private fun TargetPicker(
     label: String,
+    selected: String,
     selectedLabel: String?,
     options: List<Pair<String, String>>,
     onSelect: (String) -> Unit,
@@ -692,7 +752,7 @@ private fun TargetPicker(
                 MochiDropdownMenuItem(
                     text = { Text(name) },
                     onClick = { onSelect(id); open = false },
-                    selected = selectedLabel == name,
+                    selected = selected == id,
                 )
             }
         }

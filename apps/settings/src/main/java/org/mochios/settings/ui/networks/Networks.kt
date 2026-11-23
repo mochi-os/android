@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.providerName
 import org.mochios.settings.R
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
@@ -23,19 +24,10 @@ import java.text.Normalizer
 // (apps/settings/web/src/features/user/networks.tsx).
 
 /**
- * A network's name: brand and protocol names, the same in every language. A
+ * A network's name, from the one table every screen names a service by: a
  * hosted account on the fediverse goes by ActivityPub, the protocol it speaks.
  */
-@Composable
-internal fun networkLabel(type: String): String = when (type) {
-    "fediverse" -> "ActivityPub"
-    "xmpp" -> "XMPP"
-    "bluesky" -> "Bluesky"
-    "matrix" -> "Matrix"
-    "mastodon" -> "Mastodon"
-    "lemmy" -> "Lemmy"
-    else -> type
-}
+internal fun networkLabel(type: String): String = providerName(type)
 
 /**
  * The provider an account on a network is linked through, where it is not the

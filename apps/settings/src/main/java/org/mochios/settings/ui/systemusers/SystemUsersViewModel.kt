@@ -11,16 +11,23 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.api.userMessage
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.settings.R
 import org.mochios.settings.api.SystemUser
 import org.mochios.settings.api.SystemUserSession
 import org.mochios.settings.api.SystemUsersApi
@@ -33,8 +40,9 @@ enum class SystemUsersSort { USERNAME, STATUS, LAST }
 enum class SystemUsersOrder { ASC, DESC }
 
 /**
- * Toast signals the screen resolves to string resources, keeping the ViewModel
- * free of Android string ids.
+ * What succeeded, for the screen to say in its own words: the session count is
+ * a plural, which only the Compose layer can inflect. A failure is a message
+ * the view model has already worded (see [SystemUsersViewModel.messages]).
  */
 enum class SystemUsersToast {
     USER_CREATED,
@@ -44,11 +52,6 @@ enum class SystemUsersToast {
     SUSPENSION_REMOVED,
     SESSION_REVOKED,
     SESSIONS_REVOKED,
-    CREATE_FAILED,
-    UPDATE_FAILED,
-    DELETE_FAILED,
-    STATUS_FAILED,
-    REVOKE_FAILED,
 }
 
 data class SystemUsersUiState(
@@ -65,6 +68,7 @@ data class SystemUsersUiState(
     val sessions: List<SystemUserSession> = emptyList(),
     val sessionsRevokedCount: Int = 0,
     val currentUsername: String = "",
+    /** A failed read of the list; an action's failure is a message instead. */
     val error: MochiError? = null,
     val toast: SystemUsersToast? = null,
 )
@@ -88,12 +92,19 @@ class SystemUsersViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(SystemUsersUiState())
     val uiState: StateFlow<SystemUsersUiState> = _uiState.asStateFlow()
 
+    /**
+     * Why an action failed, said once: the server's reason, else the action's
+     * own words. Shown whether or not any users are listed.
+     */
+    private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 8)
+    val messages: SharedFlow<String> = _messages.asSharedFlow()
+
     /** Step-up gate for the administrator mutations: a stolen session must
      *  re-verify a login factor before it can change the server. */
     val stepUp = StepUpController(
         client = stepUpClient,
         scope = viewModelScope,
-        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+        onError = { e -> _messages.tryEmit(e.toMochiError().userMessage()) },
     )
 
     private var searchJob: Job? = null
@@ -114,7 +125,11 @@ class SystemUsersViewModel @Inject constructor(
 
     private var refreshJob: Job? = null
 
-    /** Load the page the current search, sort and offset ask for, dropping any older load. */
+    /**
+     * Load the page the current search, sort and offset ask for, dropping any
+     * older load. The users shown stay on screen while it is read; the screen
+     * shows a spinner only while it has none.
+     */
     fun refresh() {
         refreshJob?.cancel()
         refreshJob = viewModelScope.launch {
@@ -187,7 +202,7 @@ class SystemUsersViewModel @Inject constructor(
         createGated(role, stepUp) { token ->
             mutate(
                 success = SystemUsersToast.USER_CREATED,
-                failure = SystemUsersToast.CREATE_FAILED,
+                fallback = R.string.system_users_toast_create_failed,
                 onDone = onDone,
             ) { api.create(username, role, token).unwrapRaw() }
         }
@@ -197,7 +212,7 @@ class SystemUsersViewModel @Inject constructor(
         stepUp.request { token ->
             mutate(
                 success = SystemUsersToast.USER_UPDATED,
-                failure = SystemUsersToast.UPDATE_FAILED,
+                fallback = R.string.system_users_toast_update_failed,
                 onDone = onDone,
             ) { api.update(uid, username, role, token).unwrapEmpty() }
         }
@@ -207,7 +222,7 @@ class SystemUsersViewModel @Inject constructor(
         stepUp.request { token ->
             mutate(
                 success = SystemUsersToast.USER_DELETED,
-                failure = SystemUsersToast.DELETE_FAILED,
+                fallback = R.string.system_users_toast_delete_failed,
                 onDone = onDone,
             ) { api.delete(uid, token).unwrapRaw() }
         }
@@ -219,7 +234,7 @@ class SystemUsersViewModel @Inject constructor(
         stepUp.request { token ->
             mutate(
                 success = ok,
-                failure = SystemUsersToast.STATUS_FAILED,
+                fallback = R.string.system_users_toast_status_failed,
                 onDone = onDone,
             ) {
                 if (suspended) api.activate(user.uid, token).unwrapRaw()
@@ -237,11 +252,11 @@ class SystemUsersViewModel @Inject constructor(
                     sessionsLoadingFor = null,
                     sessions = data.sessions,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    sessionsLoadingFor = null,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(sessionsLoadingFor = null)
+                _messages.emit(e.toMochiError().userMessage())
             }
         }
     }
@@ -262,12 +277,11 @@ class SystemUsersViewModel @Inject constructor(
                     sessionsRevokedCount = resp.revoked,
                     toast = if (sessionId != null) SystemUsersToast.SESSION_REVOKED else SystemUsersToast.SESSIONS_REVOKED,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    mutating = false,
-                    error = e.toMochiError(),
-                    toast = SystemUsersToast.REVOKE_FAILED,
-                )
+                _uiState.value = _uiState.value.copy(mutating = false)
+                _messages.emit(failure(e, R.string.system_users_toast_revoke_failed))
             }
         }
     }
@@ -276,9 +290,10 @@ class SystemUsersViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(toast = null, sessionsRevokedCount = 0)
     }
 
+    /** Run an action; a failure is said once, with [fallback] as its words where the server gives none. */
     private fun mutate(
         success: SystemUsersToast,
-        failure: SystemUsersToast,
+        fallback: Int,
         onDone: (Boolean) -> Unit,
         block: suspend () -> Unit,
     ) {
@@ -289,16 +304,19 @@ class SystemUsersViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(mutating = false, toast = success)
                 refresh()
                 onDone(true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    mutating = false,
-                    error = e.toMochiError(),
-                    toast = failure,
-                )
+                _uiState.value = _uiState.value.copy(mutating = false)
+                _messages.emit(failure(e, fallback))
                 onDone(false)
             }
         }
     }
+
+    /** The server's reason for a refusal, else the action's own words for its failure. */
+    private fun failure(e: Throwable, fallback: Int): String =
+        e.toMochiError().messageOrFallback(AppContext.get().getString(fallback))
 
     private fun SystemUsersSort.serial(): String = when (this) {
         SystemUsersSort.USERNAME -> "username"

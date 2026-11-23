@@ -692,6 +692,42 @@ class NetworksScreenTest {
     }
 
     @Test
+    fun `the recovery key on screen is closed only by Done, not by Back or a tap beside it`() {
+        var closed = 0
+        var setup by mutableStateOf(SetupState(asked = true))
+        rule.setContent { SetupDialog(setup, onPassword = {}, onSetup = {}, onClose = { closed++ }) }
+        val dialog = { org.robolectric.shadows.ShadowDialog.getLatestDialog() as androidx.activity.ComponentDialog }
+        val back = {
+            rule.runOnUiThread { dialog().onBackPressedDispatcher.onBackPressed() }
+            rule.waitForIdle()
+        }
+        // A tap far beside the dialog's content: pressed and lifted there.
+        val outside = {
+            rule.runOnUiThread {
+                for (action in listOf(android.view.MotionEvent.ACTION_DOWN, android.view.MotionEvent.ACTION_UP)) {
+                    val event = android.view.MotionEvent.obtain(0, 0, action, -50f, -50f, 0)
+                    dialog().onTouchEvent(event)
+                    event.recycle()
+                }
+            }
+            rule.waitForIdle()
+        }
+        // Before the key is made, Back and a tap outside close it as any dialog.
+        back()
+        outside()
+        assertEquals(2, closed)
+        setup = SetupState(recovery = "EsTc abcd")
+        rule.waitForIdle()
+        // THE POINT: while the key shows, neither loses it.
+        back()
+        outside()
+        assertEquals(2, closed)
+        rule.onNodeWithText("EsTc abcd").assertIsDisplayed()
+        rule.onNodeWithText("Done").performClick()
+        assertEquals(3, closed)
+    }
+
+    @Test
     fun `the recovery key is copied as a secret, and its dialog kept out of screenshots`() {
         var host: android.content.Context? = null
         rule.setContent {

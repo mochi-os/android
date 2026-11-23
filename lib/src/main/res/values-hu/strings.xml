@@ -35,6 +35,14 @@
     <string name="common_subscribe">Feliratkozás</string>
     <string name="common_copy">Másolás</string>
     <string name="common_copied">A vágólapra másolva</string>
+    <string name="provider_browser">Böngészőértesítések</string>
+    <string name="provider_caldav">Naptárkiszolgáló</string>
+    <string name="provider_email">E-mail</string>
+    <string name="provider_fcm">Android push értesítés</string>
+    <string name="provider_mcp">MCP-kiszolgáló</string>
+    <string name="provider_unifiedpush">Push értesítés</string>
+    <string name="provider_url">Külső URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(szerkesztve)</string>
     <string name="comment_reply">Válasz</string>
     <string name="person_picker_search">Felhasználók keresése</string>

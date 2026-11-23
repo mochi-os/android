@@ -75,6 +75,17 @@ class NetworksViewModelTest {
     @Volatile private var accountGate: CountDownLatch? = null
     @Volatile private var createRefused = false
 
+    /** Holds the list back while it is set. */
+    @Volatile private var dataGate: CountDownLatch? = null
+
+    /** Whether the server refuses a password, an account's keys, or a name's check. */
+    @Volatile private var passwordRefused = false
+    @Volatile private var keysRefused = false
+    @Volatile private var availableRefused = false
+
+    private fun refused(status: Int, error: String) =
+        MockResponse().setResponseCode(status).setBody("""{"error": "$error"}""").setHeader("Content-Type", "application/json")
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -84,7 +95,18 @@ class NetworksViewModelTest {
                 val body = request.body.readUtf8()
                 requests += path to body + "|" + request.getHeader("Authorization").orEmpty()
                 return when (path) {
-                    "settings/-/user/networks/data" -> json("""{"offered": true, "networks": ["fediverse"]}""")
+                    "settings/-/user/networks/data" -> {
+                        dataGate?.await(5, TimeUnit.SECONDS)
+                        json("""{"offered": true, "networks": ["fediverse"]}""")
+                    }
+                    "settings/-/user/networks/handle/available" ->
+                        if (availableRefused) refused(400, "Checks are paused") else json("""{"available": true, "name": "alice"}""")
+                    "settings/-/user/networks/account/keys" ->
+                        if (keysRefused) refused(400, "No keys here") else json("""[{"kind": "signing", "algorithm": "p256", "created": 1}]""")
+                    "settings/-/user/networks/account/keys/recovery" -> {
+                        order += "recovery"
+                        json("""{"public": "did:key:z", "private": "deadbeef"}""")
+                    }
                     "settings/-/user/networks/account/link" ->
                         if (body.contains("challenge=")) {
                             json("""{"url": "https://m.example/oauth/authorize", "nonce": "n1"}""")
@@ -112,7 +134,7 @@ class NetworksViewModelTest {
                     }
                     "settings/-/user/networks/account/password" -> {
                         order += "password"
-                        json("""{"password": "s3cret"}""")
+                        if (passwordRefused) refused(500, "Not now") else json("""{"password": "s3cret"}""")
                     }
                     "settings/-/user/networks/account/create" -> {
                         accountGate?.await(5, TimeUnit.SECONDS)
@@ -192,11 +214,85 @@ class NetworksViewModelTest {
         val model = model()
         until { model.uiState.value.data != null }
         val handle = Handle(name = "alice", domain = "a.example")
-        model.create(handle, "bluesky") {}
+        model.create(handle, "bluesky")
         assertEquals(mapOf("alice/bluesky" to true), model.uiState.value.moving)
         accountGate!!.countDown()
         until { model.uiState.value.moving.isEmpty() }
         assertTrue(model.uiState.value.busy.isEmpty())
+    }
+
+    @Test
+    fun `a moved switch holds where it was moved until the list has been read again`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        dataGate = CountDownLatch(1)
+        model.create(Handle(name = "alice", domain = "a.example"), "fediverse")
+        until { requests.count { it.first == "settings/-/user/networks/data" } == 2 && model.uiState.value.busy.isEmpty() }
+        settle()
+        // THE POINT: the account is made, but the list the switch falls back
+        // to has not landed, so the switch stays where it was moved.
+        assertEquals(mapOf("alice/fediverse" to true), model.uiState.value.moving)
+        dataGate!!.countDown()
+        until { model.uiState.value.moving.isEmpty() }
+    }
+
+    @Test
+    fun `a new Bluesky account opens its keys on the recovery key's question`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        model.create(Handle(name = "alice", domain = "a.example"), "bluesky")
+        until { model.keysDialog.value?.keys != null }
+        assertEquals("b1", model.keysDialog.value!!.account.id)
+        assertTrue(model.keysDialog.value!!.offer)
+    }
+
+    @Test
+    fun `a recovery key is made only with a step-up's proof, and held in the view model until its dialog closes`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        val account = NetworkAccount(id = "b1", type = "bluesky", hosted = true)
+        model.openKeys(account, offer = true)
+        until { model.keysDialog.value?.keys != null }
+        model.recovery(account)
+        // The key can take the account away, so nothing is sent before the step-up.
+        assertTrue(model.stepUp.visible.value)
+        assertTrue(sent("settings/-/user/networks/account/keys/recovery").isEmpty())
+        model.stepUp.onVerified("proof")
+        until { model.keysDialog.value?.secret?.isNotEmpty() == true }
+        assertEquals(mapOf("id" to "b1", "token" to "proof"), sent("settings/-/user/networks/account/keys/recovery").single())
+        // THE POINT: the key is the view model's, which outlives the screen,
+        // and goes only when the dialog is closed.
+        assertEquals("deadbeef", model.keysDialog.value!!.secret)
+        assertFalse(model.keysDialog.value!!.offer)
+        model.closeKeys()
+        assertNull(model.keysDialog.value)
+    }
+
+    @Test
+    fun `keys that cannot be read say why, and are read again on a retry`() {
+        keysRefused = true
+        val model = model()
+        until { model.uiState.value.data != null }
+        model.openKeys(NetworkAccount(id = "f1", type = "fediverse", hosted = true))
+        until { model.keysDialog.value?.failure != null }
+        assertEquals("No keys here", model.keysDialog.value!!.failure)
+        assertNull(model.keysDialog.value!!.keys)
+        keysRefused = false
+        model.retryKeys()
+        until { model.keysDialog.value?.keys != null }
+        assertNull(model.keysDialog.value!!.failure)
+        assertEquals(listOf("signing"), model.keysDialog.value!!.keys!!.map { it.kind })
+    }
+
+    @Test
+    fun `a name whose availability cannot be read is a failure, with the server's reason, not an answer`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        assertTrue(runBlocking { model.available("alice", "a.example") }.getOrThrow().available)
+        availableRefused = true
+        val result = runBlocking { model.available("alice", "a.example") }
+        assertTrue(result.isFailure)
+        assertEquals("Checks are paused", failureText(result.exceptionOrNull()!!, R.string.networks_check_failed))
     }
 
     @Test
@@ -302,23 +398,77 @@ class NetworksViewModelTest {
         val model = model()
         until { model.uiState.value.data != null }
         val account = NetworkAccount(id = "b1", type = "bluesky", hosted = true)
-        var password = ""
-        model.password(account, " Phone ", "n") { password = it }
-        until { password.isNotEmpty() }
-        // THE POINT: the home feed is saved, then the password made.
+        model.openPassword(account)
+        model.password(account, " Phone ", "n")
+        // The password never expires, so nothing is sent before the step-up.
+        assertTrue(model.stepUp.visible.value)
+        settle()
+        assertTrue(order.isEmpty())
+        model.stepUp.onVerified("proof")
+        until { model.passwordDialog.value?.password?.isNotEmpty() == true }
+        // THE POINT: the home feed is saved, then the password made with the proof.
         assertEquals(listOf("home", "password"), order.toList())
         assertEquals(mapOf("id" to "b1", "feed" to "n"), sent("settings/-/user/networks/account/home").single())
-        assertEquals(mapOf("id" to "b1", "name" to "Phone"), sent("settings/-/user/networks/account/password").single())
+        assertEquals(
+            mapOf("id" to "b1", "name" to "Phone", "token" to "proof"),
+            sent("settings/-/user/networks/account/password").single(),
+        )
+        // The password is the view model's, which outlives the screen, until the dialog closes.
+        assertEquals("s3cret", model.passwordDialog.value!!.password)
+        model.closePassword()
+        assertNull(model.passwordDialog.value)
 
         order.clear()
         homeRefused = true
-        var made = false
-        model.password(account, "Phone", NetworksViewModel.HOME_NEW) { made = true }
+        model.openPassword(account)
+        model.password(account, "Phone", NetworksViewModel.HOME_NEW)
+        model.stepUp.onVerified("again")
         until { "password" !in model.uiState.value.busy && order.isNotEmpty() }
         settle()
         // THE POINT: a refused home feed stops there; no password is made.
         assertEquals(listOf("home"), order.toList())
-        assertEquals(false, made)
+        assertEquals("", model.passwordDialog.value!!.password)
+    }
+
+    @Test
+    fun `a password retried after a failed mint saves no second home feed`() {
+        passwordRefused = true
+        val model = model()
+        until { model.uiState.value.data != null }
+        val account = NetworkAccount(id = "b1", type = "bluesky", hosted = true)
+        model.openPassword(account)
+        model.password(account, "Phone", NetworksViewModel.HOME_NEW)
+        model.stepUp.onVerified("one")
+        until { "password" in order && "password" !in model.uiState.value.busy }
+        // A new feed names the home it replaces, none, so the server keeps a
+        // home an earlier attempt made rather than making another.
+        assertEquals(
+            mapOf("id" to "b1", "feed" to "", "create" to "true", "previous" to ""),
+            sent("settings/-/user/networks/account/home").single(),
+        )
+        // THE POINT: the dialog holds the account as the home feed's save
+        // answered it, so the retry is not asked for a home feed again.
+        val open = model.passwordDialog.value!!
+        assertEquals("n", open.account.home)
+        passwordRefused = false
+        model.password(open.account, "Phone", null)
+        model.stepUp.onVerified("two")
+        until { model.passwordDialog.value?.password?.isNotEmpty() == true }
+        assertEquals(1, sent("settings/-/user/networks/account/home").size)
+        assertEquals(listOf("one", "two"), sent("settings/-/user/networks/account/password").map { it["token"] })
+    }
+
+    @Test
+    fun `a new home feed names the home it replaces`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        var saved = false
+        model.home(NetworkAccount(id = "f1", type = "fediverse", hosted = true, home = "old"), NetworksViewModel.HOME_NEW) { saved = true }
+        until { saved }
+        assertEquals(
+            mapOf("id" to "f1", "feed" to "", "create" to "true", "previous" to "old"),
+            sent("settings/-/user/networks/account/home").single(),
+        )
     }
 
     /** Lets a request already on its way reach the server: one sent alongside would have by now. */

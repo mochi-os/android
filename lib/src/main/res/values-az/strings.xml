@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abunə ol</string>
     <string name="common_copy">Kopyala</string>
     <string name="common_copied">Mübadilə yaddaşına kopyalandı</string>
+    <string name="provider_browser">Brauzer bildirişləri</string>
+    <string name="provider_caldav">Təqvim serveri</string>
+    <string name="provider_email">E-poçt</string>
+    <string name="provider_fcm">Android push bildirişi</string>
+    <string name="provider_mcp">MCP serveri</string>
+    <string name="provider_unifiedpush">Push bildirişi</string>
+    <string name="provider_url">Xarici URL</string>
+    <string name="provider_web">Mochi veb</string>
     <string name="comment_edited">(redaktə edildi)</string>
     <string name="comment_reply">Cavabla</string>
     <string name="person_picker_search">İstifadəçi axtar</string>

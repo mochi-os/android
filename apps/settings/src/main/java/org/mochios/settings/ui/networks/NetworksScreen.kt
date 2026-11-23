@@ -95,6 +95,10 @@ fun NetworksScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val launch by viewModel.launch.collectAsState()
+    // The dialogs that show a secret once are held by the view model, so
+    // turning the phone does not close them and lose it.
+    val keys by viewModel.keysDialog.collectAsState()
+    val password by viewModel.passwordDialog.collectAsState()
     val context = LocalContext.current
     val snackbar = remember { SnackbarHostState() }
 
@@ -141,9 +145,6 @@ fun NetworksScreen(
     var labelersFor by remember { mutableStateOf<NetworkAccount?>(null) }
     var homeFor by remember { mutableStateOf<NetworkAccount?>(null) }
     var movingFor by remember { mutableStateOf<NetworkAccount?>(null) }
-    var keysFor by remember { mutableStateOf<NetworkAccount?>(null) }
-    var offering by remember { mutableStateOf(false) }
-    var passwordFor by remember { mutableStateOf<NetworkAccount?>(null) }
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
@@ -180,29 +181,16 @@ fun NetworksScreen(
                     onReserve = viewModel::reserve,
                     onLink = { linking = "" },
                     onToggle = { handle, network, account ->
-                        if (account != null) {
-                            removing = account
-                        } else {
-                            viewModel.create(handle, network) { made ->
-                                // A Bluesky account is offered its recovery key
-                                // the moment it exists.
-                                if (network == "bluesky" && made.id.isNotEmpty()) {
-                                    offering = true
-                                    keysFor = made
-                                }
-                            }
-                        }
+                        if (account != null) removing = account else viewModel.create(handle, network)
                     },
                     onAddName = { adding = it },
-                    onArrive = { handle ->
-                        viewModel.arrive(handle) { made -> if (made.id.isNotEmpty()) passwordFor = made }
-                    },
+                    onArrive = viewModel::arrive,
                     onRelease = { releasing = it },
                     actions = AccountActions(
                         onRename = { renaming = it },
-                        onPassword = { passwordFor = it },
+                        onPassword = viewModel::openPassword,
                         onHome = { homeFor = it },
-                        onKeys = { keysFor = it },
+                        onKeys = { viewModel.openKeys(it) },
                         onAutomated = viewModel::toggleAutomated,
                         onAliases = { aliasesFor = it },
                         onMove = { movingFor = it },
@@ -286,27 +274,23 @@ fun NetworksScreen(
             onDismiss = { movingFor = null },
         )
     }
-    keysFor?.let { account ->
+    keys?.let { open ->
         KeysDialog(
-            account = account,
-            offer = offering,
+            state = open,
             busy = state.busy,
-            load = viewModel::keys,
-            onReplace = { done -> viewModel.replaceKeys(account, done) },
-            onRecovery = { made -> viewModel.recovery(account, made) },
-            onDismiss = {
-                keysFor = null
-                offering = false
-            },
+            onReplace = { viewModel.replaceKeys(open.account) },
+            onRecovery = { viewModel.recovery(open.account) },
+            onRetry = viewModel::retryKeys,
+            onDismiss = viewModel::closeKeys,
         )
     }
-    passwordFor?.let { account ->
+    password?.let { open ->
         PasswordDialog(
-            account = account,
+            state = open,
             feeds = data?.feeds.orEmpty(),
             busy = "password" in state.busy,
-            onMake = { device, home, made -> viewModel.password(account, device, home, made) },
-            onDismiss = { passwordFor = null },
+            onMake = { device, home -> viewModel.password(open.account, device, home) },
+            onDismiss = viewModel::closePassword,
         )
     }
     releasing?.let { handle ->
@@ -364,7 +348,7 @@ internal fun NetworksContent(
     data: NetworksData,
     busy: Set<String>,
     moving: Map<String, Boolean> = emptyMap(),
-    check: suspend (String, String) -> org.mochios.settings.api.Availability?,
+    check: suspend (String, String) -> Result<org.mochios.settings.api.Availability>,
     onReserve: (String, String, () -> Unit) -> Unit,
     onLink: () -> Unit,
     onToggle: (Handle, String, NetworkAccount?) -> Unit,

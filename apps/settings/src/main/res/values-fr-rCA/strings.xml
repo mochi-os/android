@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="accounts_field_email">Courriel</string>
     <string name="system_setting_auth_email">Connexion avec un code par courriel</string>
     <string name="system_setting_email_from">Adresse d\'expéditeur par défaut pour les courriels système</string>
     <string name="system_setting_operator_email">Courriel de l\'opérateur</string>
@@ -138,9 +137,7 @@
     <string name="accounts_add">Ajouter un compte</string>
     <string name="accounts_add_title">Ajouter un compte</string>
     <string name="accounts_empty">Aucun compte connecté</string>
-    <string name="accounts_field_api_key">Clé API</string>
     <string name="accounts_field_model">Modèle</string>
-    <string name="accounts_field_url">URL du serveur</string>
     <string name="accounts_status_pending">En attente</string>
     <string name="accounts_status_verified">Vérifié</string>
     <string name="accounts_status_connected">Connecté</string>
@@ -329,8 +326,6 @@
     <string name="login_method_oauth">Connexion tierce</string>
     <string name="login_method_recovery">Codes de récupération</string>
     <string name="route_target_select">Sélectionner</string>
-    <string name="accounts_provider_url">URL externe</string>
-    <string name="accounts_provider_web">Mochi web</string>
     <string name="account_data_generate">Générer une phrase de passe</string>
     <string name="networks_connected">Connecté</string>
     <string name="networks_address">Adresse</string>

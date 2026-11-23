@@ -5,6 +5,9 @@
     <string name="home_menu_user">Cleachdaiche</string>
     <string name="home_menu_empty">Chan eil brathan gun leughadh</string>
     <string name="home_menu_view_all">Seall a h-uile</string>
+    <string name="home_menu_read_failed">Cha b\' urrainn comharra \'air a leughadh\' a chur ris an fhios</string>
+    <string name="home_menu_read_all_failed">Cha b\' urrainn comharra \'air a leughadh\' a chur ris a h-uile fios</string>
+    <string name="home_menu_category_failed">Cha b\' urrainn an roinn-seòrsa ùrachadh</string>
     <string name="home_menu_no_topic">Chan eil clàradh cuspair ann fhathast — feuch a-rithist às dèidh an ath bhrath.</string>
     <string name="home_menu_manage_categories">Stiùirich roinnean</string>
 </resources>

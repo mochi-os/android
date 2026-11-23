@@ -44,6 +44,8 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -172,6 +174,12 @@ fun HomeScreen(
     val menuState by menu.state.collectAsState()
     val count by menu.count.collectAsState()
     var open by rememberSaveable { mutableStateOf(false) }
+    // A failed read from the menu is said where the user is once it fails:
+    // over the menu while it is open, over the home screen once it has closed.
+    val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(Unit) {
+        menu.failures.collect { snackbar.showSnackbar(it) }
+    }
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
         viewModel.refresh()
@@ -190,6 +198,7 @@ fun HomeScreen(
                 open = true
             }
         },
+        snackbarHost = { if (!open) SnackbarHost(snackbar) },
     ) {
         HomeContent(
             state = state,
@@ -213,36 +222,39 @@ fun HomeScreen(
             onDismissRequest = close,
             sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
         ) {
-            UserMenu(
-                state = menuState,
-                modifier = Modifier.fillMaxHeight(),
-                onLogout = {
-                    close()
-                    onLogout()
-                },
-                onReadAll = {
-                    menu.readAll()
-                    close()
-                },
-                onViewAll = {
-                    close()
-                    onOpenNotifications()
-                },
-                onOpen = { notification ->
-                    menu.read(notification)
-                    if (notification.link.isNotBlank()) {
+            Box(modifier = Modifier.fillMaxHeight()) {
+                UserMenu(
+                    state = menuState,
+                    modifier = Modifier.fillMaxHeight(),
+                    onLogout = {
                         close()
-                        onOpenLink(notification.link)
-                    }
-                },
-                onPick = menu::pick,
-                onClosePicker = menu::closePicker,
-                onCategorise = menu::categorise,
-                onManageCategories = {
-                    close()
-                    onManageCategories()
-                },
-            )
+                        onLogout()
+                    },
+                    onReadAll = {
+                        menu.readAll()
+                        close()
+                    },
+                    onViewAll = {
+                        close()
+                        onOpenNotifications()
+                    },
+                    onOpen = { notification ->
+                        menu.read(notification)
+                        if (notification.link.isNotBlank()) {
+                            close()
+                            onOpenLink(notification.link)
+                        }
+                    },
+                    onPick = menu::pick,
+                    onClosePicker = menu::closePicker,
+                    onCategorise = menu::categorise,
+                    onManageCategories = {
+                        close()
+                        onManageCategories()
+                    },
+                )
+                SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))
+            }
         }
     }
 }
@@ -260,11 +272,13 @@ internal fun HomePage(
     glow: Boolean,
     navigation: @Composable () -> Unit = {},
     actions: @Composable RowScope.() -> Unit = {},
+    snackbarHost: @Composable () -> Unit = {},
     content: @Composable () -> Unit,
 ) {
     HomeBackground(glow = glow) {
         Scaffold(
             containerColor = Color.Transparent,
+            snackbarHost = snackbarHost,
             // A see-through page cannot imply its text colour, so name it.
             contentColor = MaterialTheme.colorScheme.onBackground,
             topBar = {

@@ -35,6 +35,14 @@
     <string name="common_subscribe">Teken in</string>
     <string name="common_copy">Kopieer</string>
     <string name="common_copied">Gekopieer na knipbord</string>
+    <string name="provider_browser">Blaaierkennisgewings</string>
+    <string name="provider_caldav">Kalenderbediener</string>
+    <string name="provider_email">E-pos</string>
+    <string name="provider_fcm">Android-stoot</string>
+    <string name="provider_mcp">MCP-bediener</string>
+    <string name="provider_unifiedpush">Stootkennisgewing</string>
+    <string name="provider_url">Eksterne URL</string>
+    <string name="provider_web">Mochi-web</string>
     <string name="comment_edited">(gewysig)</string>
     <string name="comment_reply">Antwoord</string>
     <string name="person_picker_search">Soek gebruikers</string>

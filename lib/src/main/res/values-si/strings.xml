@@ -35,6 +35,14 @@
     <string name="common_subscribe">දායක වන්න</string>
     <string name="common_copy">පිටපත් කරන්න</string>
     <string name="common_copied">ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
+    <string name="provider_browser">බ්‍රවුසර දැනුම්දීම්</string>
+    <string name="provider_caldav">දින දර්ශන සේවාදායකය</string>
+    <string name="provider_email">ඊමේල්</string>
+    <string name="provider_fcm">Android තල්ලුව</string>
+    <string name="provider_mcp">MCP සේවාදායකය</string>
+    <string name="provider_unifiedpush">තල්ලු දැනුම්දීම</string>
+    <string name="provider_url">බාහිර URL</string>
+    <string name="provider_web">Mochi වෙබ්</string>
     <string name="comment_edited">(සංස්කරණය කළා)</string>
     <string name="comment_reply">පිළිතුර</string>
     <string name="person_picker_search">පරිශීලකයින් සොයන්න</string>

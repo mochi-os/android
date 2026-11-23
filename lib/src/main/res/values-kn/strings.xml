@@ -35,6 +35,14 @@
     <string name="common_subscribe">ಚಂದಾದಾರರಾಗಿ</string>
     <string name="common_copy">ನಕಲಿಸಿ</string>
     <string name="common_copied">ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ</string>
+    <string name="provider_browser">ಬ್ರೌಸರ್ ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="provider_caldav">ಕ್ಯಾಲೆಂಡರ್ ಸರ್ವರ್</string>
+    <string name="provider_email">ಇಮೇಲ್</string>
+    <string name="provider_fcm">Android ಪುಶ್</string>
+    <string name="provider_mcp">MCP ಸರ್ವರ್</string>
+    <string name="provider_unifiedpush">ಪುಶ್ ಅಧಿಸೂಚನೆ</string>
+    <string name="provider_url">ಬಾಹ್ಯ URL</string>
+    <string name="provider_web">Mochi ವೆಬ್</string>
     <string name="comment_edited">(ಸಂಪಾದಿಸಲಾಗಿದೆ)</string>
     <string name="comment_reply">ರಿಪ್ಲೈ</string>
     <string name="person_picker_search">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ</string>

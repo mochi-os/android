@@ -35,6 +35,14 @@
     <string name="common_subscribe">Galaa\'i</string>
     <string name="common_copy">Garagalchi</string>
     <string name="common_copied">Garagalfamee gara saanduqa garagalchaa</string>
+    <string name="provider_browser">Beeksisa barreessaa</string>
+    <string name="provider_caldav">Sarvarii kaalaandarii</string>
+    <string name="provider_email">Imeelii</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Sarvara MCP</string>
+    <string name="provider_unifiedpush">Beeksisa push</string>
+    <string name="provider_url">URL alaa</string>
+    <string name="provider_web">Mochi marsariitii</string>
     <string name="comment_edited">(gulaalame)</string>
     <string name="comment_reply">Deebii</string>
     <string name="person_picker_search">Fayyadamtoota barbaadi</string>

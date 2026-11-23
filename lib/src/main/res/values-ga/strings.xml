@@ -35,6 +35,14 @@
     <string name="common_subscribe">Liostáil</string>
     <string name="common_copy">Cóipeáil</string>
     <string name="common_copied">Cóipeáilte chuig an ngearrthaisce</string>
+    <string name="provider_browser">Fógraí brabhsálaí</string>
+    <string name="provider_caldav">Freastalaí féilire</string>
+    <string name="provider_email">Ríomhphost</string>
+    <string name="provider_fcm">Brú Android</string>
+    <string name="provider_mcp">Freastalaí MCP</string>
+    <string name="provider_unifiedpush">Fógra brú</string>
+    <string name="provider_url">URL seachtrach</string>
+    <string name="provider_web">Mochi gréasáin</string>
     <string name="comment_edited">(curtha in eagar)</string>
     <string name="comment_reply">Freagair</string>
     <string name="person_picker_search">Cuardaigh úsáideoirí</string>

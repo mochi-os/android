@@ -35,6 +35,14 @@
     <string name="common_subscribe">اشتراک</string>
     <string name="common_copy">کپی</string>
     <string name="common_copied">در کلیپ‌بورد کپی شد</string>
+    <string name="provider_browser">اعلان‌های مرورگر</string>
+    <string name="provider_caldav">سرور تقویم</string>
+    <string name="provider_email">ایمیل</string>
+    <string name="provider_fcm">اعلان Android</string>
+    <string name="provider_mcp">سرور MCP</string>
+    <string name="provider_unifiedpush">اعلان فوری</string>
+    <string name="provider_url">آدرس خارجی</string>
+    <string name="provider_web">وب Mochi</string>
     <string name="comment_edited">(ویرایش‌شده)</string>
     <string name="comment_reply">پاسخ</string>
     <string name="person_picker_search">جست‌وجوی کاربران</string>

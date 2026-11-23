@@ -5,6 +5,9 @@
     <string name="home_menu_user">Utilisateur</string>
     <string name="home_menu_empty">Aucune notification non lue</string>
     <string name="home_menu_view_all">Tout voir</string>
+    <string name="home_menu_read_failed">Impossible de marquer la notification comme lue</string>
+    <string name="home_menu_read_all_failed">Impossible de marquer toutes les notifications comme lues</string>
+    <string name="home_menu_category_failed">Échec de la mise à jour de la catégorie</string>
     <string name="home_menu_no_topic">Aucun enregistrement de sujet pour le moment — réessayez après la prochaine notification.</string>
     <string name="home_menu_manage_categories">Gérer les catégories</string>
 </resources>

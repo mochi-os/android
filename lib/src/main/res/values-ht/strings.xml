@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abone</string>
     <string name="common_copy">Kopye</string>
     <string name="common_copied">Kopye nan clipboard</string>
+    <string name="provider_browser">Notifikasyon navigatè</string>
+    <string name="provider_caldav">Sèvè kalandriye</string>
+    <string name="provider_email">Imèl</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Sèvè MCP</string>
+    <string name="provider_unifiedpush">Notifikasyon push</string>
+    <string name="provider_url">URL Ekstèn</string>
+    <string name="provider_web">Mochi wèb</string>
     <string name="comment_edited">(edite)</string>
     <string name="comment_reply">Reponn</string>
     <string name="person_picker_search">Chèche itilizatè</string>

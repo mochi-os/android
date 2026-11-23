@@ -24,11 +24,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -50,11 +53,16 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.SecureWindow
 import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -88,13 +96,37 @@ fun AccountScreen(
     val saveExport = rememberDownloadSaver { request, destination ->
         viewModel.saveExport(request.key, destination)
     }
+    val save = { filename: String ->
+        saveExport(DownloadRequest(key = filename, name = filename, mimeType = MIME_ZIP))
+    }
     LaunchedEffect(Unit) {
-        viewModel.exportReady.collect { filename ->
-            saveExport(DownloadRequest(key = filename, name = filename, mimeType = MIME_ZIP))
+        viewModel.exportReady.collect { filename -> save(filename) }
+    }
+    // While the screen is shown it reads how the export stands, and follows a
+    // bundle being built until it is ready; it starts again once a new one is.
+    val building = state.export == Export.Building
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(building) {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.watchExport() }
+    }
+
+    // A failure is said over the screen, wherever the reader is, and cleared
+    // once said.
+    val snackbar = remember { SnackbarHostState() }
+    val resources = LocalResources.current
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
         }
+    }
+    LaunchedEffect(Unit) {
+        viewModel.notices.collect { notice -> snackbar.showSnackbar(resources.getString(notice)) }
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.account_title)) },
@@ -131,16 +163,12 @@ fun AccountScreen(
                 onPrivacy = viewModel::setPrivacy,
             )
 
-            DataSection(onExport = viewModel::exportData)
+            DataSection(export = state.export, onExport = viewModel::exportData, onSave = save)
 
             // Administrators can't close their own account (a self-closed sole
             // admin would strand the server — enforced server-side too).
             if (state.identity.role != "administrator") {
                 CloseAccountSection(onClose = viewModel::closeAccount)
-            }
-
-            state.error?.let { err ->
-                Text(text = err.userMessage(), color = MaterialTheme.colorScheme.error)
             }
         }
     }
@@ -148,8 +176,17 @@ fun AccountScreen(
     StepUpHost(viewModel.stepUp)
 }
 
+/**
+ * The data export: Download asks for a passphrase and starts the bundle; while
+ * the server builds it the button says so, and a bundle built and not yet
+ * downloaded is saved straight from it.
+ */
 @Composable
-private fun DataSection(onExport: (passphrase: String) -> Unit) {
+internal fun DataSection(
+    export: Export,
+    onExport: (passphrase: String) -> Unit,
+    onSave: (file: String) -> Unit,
+) {
     var showDialog by remember { mutableStateOf(false) }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -159,8 +196,18 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        MochiOutlinedButton(onClick = { showDialog = true }) {
-            Text(stringResource(R.string.account_data_download))
+        when (export) {
+            Export.Building -> MochiOutlinedButton(onClick = {}, enabled = false) {
+                CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.account_data_preparing))
+            }
+            is Export.Ready -> MochiOutlinedButton(onClick = { onSave(export.file) }) {
+                Text(stringResource(R.string.account_data_download))
+            }
+            Export.None -> MochiOutlinedButton(onClick = { showDialog = true }) {
+                Text(stringResource(R.string.account_data_download))
+            }
         }
     }
 
@@ -173,6 +220,10 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
             onDismissRequest = { showDialog = false },
             title = stringResource(R.string.account_data_dialog_title),
             content = {
+                // Kept out of screenshots, recordings and Recents while the
+                // phrase is in the clear. The field stays selectable: it has no
+                // copy button, so selecting is how a generated phrase is copied.
+                if (revealed) SecureWindow()
                 Column {
                     Text(
                         text = stringResource(R.string.account_data_dialog_body),
@@ -288,7 +339,7 @@ private fun IdentitySection(
                 ) {
                     Icon(
                         Icons.Default.Edit,
-                        contentDescription = null,
+                        contentDescription = stringResource(R.string.account_rename),
                         modifier = Modifier.size(18.dp),
                     )
                 }

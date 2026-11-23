@@ -35,6 +35,14 @@
     <string name="common_subscribe">Langgan</string>
     <string name="common_copy">Salin</string>
     <string name="common_copied">Disalin ka clipboard</string>
+    <string name="provider_browser">Béwara browser</string>
+    <string name="provider_caldav">Server kalénder</string>
+    <string name="provider_email">Surélék</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Wawaran push</string>
+    <string name="provider_url">URL Éksternal</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(diédit)</string>
     <string name="comment_reply">Bales</string>
     <string name="person_picker_search">Paluruh pamaké</string>

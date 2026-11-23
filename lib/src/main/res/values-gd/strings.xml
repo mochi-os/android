@@ -35,6 +35,14 @@
     <string name="common_subscribe">Fo-sgrìobh</string>
     <string name="common_copy">Dèan lethbhreac</string>
     <string name="common_copied">Air a chopaigeadh chun a\' chliopaboird</string>
+    <string name="provider_browser">Brathan brabhsair</string>
+    <string name="provider_caldav">Frithealaiche mhìosachan</string>
+    <string name="provider_email">Post-d</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Frithealaiche MCP</string>
+    <string name="provider_unifiedpush">Brath push</string>
+    <string name="provider_url">URL on taobh a-muigh</string>
+    <string name="provider_web">Lìon Mochi</string>
     <string name="comment_edited">(deasaichte)</string>
     <string name="comment_reply">Freagair</string>
     <string name="person_picker_search">Lorg cleachdaichean</string>

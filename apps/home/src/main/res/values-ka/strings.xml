@@ -5,6 +5,9 @@
     <string name="home_menu_user">მომხმარებელი</string>
     <string name="home_menu_empty">წაუკითხავი შეტყობინებები არ არის</string>
     <string name="home_menu_view_all">ყველას ნახვა</string>
+    <string name="home_menu_read_failed">შეტყობინების წაკითხულად მონიშვნა ვერ მოხერხდა</string>
+    <string name="home_menu_read_all_failed">ყველა შეტყობინების წაკითხულად მონიშვნა ვერ მოხერხდა</string>
+    <string name="home_menu_category_failed">კატეგორიის განახლება ვერ მოხერხდა</string>
     <string name="home_menu_no_topic">თემის ჩანაწერი ჯერ არ არის — სცადეთ ხელახლა შემდეგი შეტყობინების შემდეგ.</string>
     <string name="home_menu_manage_categories">კატეგორიების მართვა</string>
 </resources>

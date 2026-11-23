@@ -7,6 +7,9 @@ package org.mochios.home
 
 import android.os.Looper
 import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import org.junit.Assert.assertEquals
@@ -222,7 +225,55 @@ class HomeMenuViewModelTest {
         model.readAll()
         settle()
         assertEquals(listOf(chat, feeds), model.state.value.unread)
-        assertNotNull(model.state.value.error)
+        assertEquals(listOf("Failed to mark all notifications as read"), said(model))
+    }
+
+    /** What failed, said once wherever the user is; empty when nothing waits. */
+    private fun said(model: HomeMenuViewModel): List<String> {
+        val messages = mutableListOf<String>()
+        val collector = CoroutineScope(Dispatchers.Unconfined).launch { model.failures.collect { messages += it } }
+        settle()
+        collector.cancel()
+        return messages
+    }
+
+    /**
+     * The menu closes on "mark all read", and the list read as it next opened
+     * cleared the error before it was ever seen: the failure now waits for the
+     * home screen, and a list read since leaves it.
+     */
+    @Test
+    fun `a failed read of them all waits to be said, through the next list read`() {
+        val source = Source().apply { unread = listOf(chat, feeds) }
+        val model = model(source)
+        model.refresh()
+        settle()
+        source.fail = true
+        model.readAll()
+        settle()
+        source.fail = false
+        model.refresh()
+        settle()
+        assertNull("a failed action is not the list's error", model.state.value.error)
+        assertEquals(listOf("Failed to mark all notifications as read"), said(model))
+        assertEquals("said once", emptyList<String>(), said(model))
+    }
+
+    @Test
+    fun `a failed read is said, and the row comes back`() {
+        val source = Source().apply { unread = listOf(chat, feeds) }
+        val model = model(source)
+        model.refresh()
+        settle()
+        source.fail = true
+        model.read(chat)
+        settle()
+        source.fail = false
+        model.refresh()
+        settle()
+        assertEquals(listOf(chat, feeds), model.state.value.unread)
+        assertNull(model.state.value.error)
+        assertEquals(listOf("Failed to mark notification as read"), said(model))
     }
 
     @Test

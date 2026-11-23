@@ -35,6 +35,14 @@
     <string name="common_subscribe">הירשם</string>
     <string name="common_copy">העתק</string>
     <string name="common_copied">הועתק ללוח</string>
+    <string name="provider_browser">התראות דפדפן</string>
+    <string name="provider_caldav">שרת יומנים</string>
+    <string name="provider_email">אימייל</string>
+    <string name="provider_fcm">פוש ל-Android</string>
+    <string name="provider_mcp">שרת MCP</string>
+    <string name="provider_unifiedpush">התראת פוש</string>
+    <string name="provider_url">כתובת URL חיצונית</string>
+    <string name="provider_web">Mochi ברשת</string>
     <string name="comment_edited">(נערך)</string>
     <string name="comment_reply">השב</string>
     <string name="person_picker_search">חפש משתמשים</string>

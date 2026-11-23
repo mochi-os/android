@@ -89,8 +89,12 @@ fun SystemUsersScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    // An error while content is on screen is shown over it rather than
-    // replacing it: the full-screen arm below only fires when there is
+    // A failed action, said once whether or not any users are listed.
+    LaunchedEffect(Unit) {
+        viewModel.messages.collect { snackbar.showSnackbar(it) }
+    }
+    // A failed read while users are listed is shown over them rather than
+    // replacing them: the full-screen arm below only fires when there is
     // nothing to show, and nothing on it can reach a refresh to clear it.
     LaunchedEffect(state.error) {
         val failure = state.error
@@ -161,7 +165,7 @@ fun SystemUsersScreen(
                 )
 
                 when {
-                    state.isLoading -> Box(
+                    state.isLoading && state.users.isEmpty() -> Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center,
                     ) { CircularProgressIndicator() }
@@ -191,7 +195,9 @@ fun SystemUsersScreen(
                                 },
                             )
                         }
-                        if (state.search.isBlank() && state.count > state.limit) {
+                        // The server pages a search and counts its matches, as it
+                        // does the whole list.
+                        if (state.count > state.limit) {
                             item("pager") {
                                 PaginationBar(
                                     offset = state.offset,
@@ -306,11 +312,6 @@ internal fun systemUsersToastMessages(revokedCount: Int): Map<SystemUsersToast, 
         SystemUsersToast.SUSPENSION_REMOVED to stringResource(R.string.system_users_toast_suspension_removed),
         SystemUsersToast.SESSION_REVOKED to stringResource(R.string.system_users_toast_session_revoked),
         SystemUsersToast.SESSIONS_REVOKED to plural,
-        SystemUsersToast.CREATE_FAILED to stringResource(R.string.system_users_toast_create_failed),
-        SystemUsersToast.UPDATE_FAILED to stringResource(R.string.system_users_toast_update_failed),
-        SystemUsersToast.DELETE_FAILED to stringResource(R.string.system_users_toast_delete_failed),
-        SystemUsersToast.STATUS_FAILED to stringResource(R.string.system_users_toast_status_failed),
-        SystemUsersToast.REVOKE_FAILED to stringResource(R.string.system_users_toast_revoke_failed),
     )
 }
 

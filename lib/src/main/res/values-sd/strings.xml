@@ -35,6 +35,14 @@
     <string name="common_subscribe">سبسڪرائب ڪريو</string>
     <string name="common_copy">ڪاپي ڪريو</string>
     <string name="common_copied">ڪلپ بورڊ تي ڪاپي ٿيو</string>
+    <string name="provider_browser">براؤزر اطلاع</string>
+    <string name="provider_caldav">ڪئلينڊر سرور</string>
+    <string name="provider_email">اي ميل</string>
+    <string name="provider_fcm">Android پش</string>
+    <string name="provider_mcp">MCP سرور</string>
+    <string name="provider_unifiedpush">پش اطلاع</string>
+    <string name="provider_url">خارجي URL</string>
+    <string name="provider_web">Mochi ويب</string>
     <string name="comment_edited">(تبديل ٿيل)</string>
     <string name="comment_reply">جواب</string>
     <string name="person_picker_search">يوزر ڳوليو</string>

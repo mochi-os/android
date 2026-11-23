@@ -29,7 +29,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.MonitorHeart
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VerifiedUser
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -47,7 +46,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -57,7 +55,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -68,6 +65,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.util.providerName
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -77,7 +75,6 @@ import org.mochios.settings.api.Device
 import org.mochios.settings.api.Provider
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.ui.text.input.VisualTransformation
-import org.mochios.settings.api.ProviderField
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,11 +83,6 @@ fun ConnectedAccountsScreen(
     viewModel: ConnectedAccountsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val scope = rememberCoroutineScope()
-    var snack by remember { mutableStateOf<String?>(null) }
-    androidx.compose.runtime.LaunchedEffect(Unit) {
-        scope.launch { viewModel.toasts.collect { snack = it } }
-    }
     var adding by remember { mutableStateOf(false) }
     var verifying by remember { mutableStateOf<ConnectedAccount?>(null) }
     var settingsOf by remember { mutableStateOf<ConnectedAccount?>(null) }
@@ -98,36 +90,31 @@ fun ConnectedAccountsScreen(
     var forgetting by remember { mutableStateOf<Device?>(null) }
 
     val snackbar = remember { SnackbarHostState() }
-
+    LaunchedEffect(Unit) {
+        viewModel.toasts.collect { snackbar.showSnackbar(it) }
+    }
     // An error while content is on screen is shown over it rather than
-
     // replacing it: the full-screen arm below only fires when there is
-
     // nothing to show, and nothing on it can reach a refresh to clear it.
-
     LaunchedEffect(state.error) {
-
         val failure = state.error
-
         if (failure != null && (state.accounts.isNotEmpty() || state.providers.isNotEmpty())) {
-
             snackbar.showSnackbar(failure.userMessage())
-
             viewModel.clearError()
-
         }
-
     }
 
     Scaffold(
-
         snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.accounts_title)) },
                 navigationIcon = {
                     MochiIconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
                     }
                 },
             )
@@ -135,10 +122,11 @@ fun ConnectedAccountsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.isLoading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                state.isLoading && state.accounts.isEmpty() && state.providers.isEmpty() ->
+                    CircularProgressIndicator(Modifier.align(Alignment.Center))
                 state.error != null && state.accounts.isEmpty() && state.providers.isEmpty() -> ErrorState(
                     error = state.error!!,
-                    onRetry = viewModel::refresh,
+                    onRetry = { viewModel.refresh() },
                 )
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),
@@ -198,9 +186,6 @@ fun ConnectedAccountsScreen(
                     }
                 }
             }
-            snack?.let { msg ->
-                SnackBanner(msg) { snack = null }
-            }
         }
     }
 
@@ -259,7 +244,7 @@ fun ConnectedAccountsScreen(
                 Removal.Revoke -> stringResource(
                     R.string.accounts_revoke_confirm,
                     displayName(acc),
-                    providerTypeLabel(acc.type),
+                    providerName(acc.type),
                 )
                 Removal.Hosted -> stringResource(R.string.networks_remove_message, acc.identifier)
                 Removal.Linked -> stringResource(R.string.networks_unlink_message, acc.identifier, acc.server)
@@ -312,7 +297,7 @@ internal fun DeviceRow(
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.Medium,
                 )
-                val transports = accounts.map { providerTypeLabel(it.type) }
+                val transports = accounts.map { providerName(it.type) }
                 if (transports.isNotEmpty()) {
                     Text(
                         format.formatList(transports),
@@ -379,7 +364,7 @@ internal fun AccountRow(
                     }
                 }
                 Text(
-                    text = providerTypeLabel(account.type),
+                    text = providerName(account.type),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -402,7 +387,7 @@ internal fun AccountRow(
             }
             Box {
                 MochiIconButton(onClick = { menu = true }) {
-                    Icon(Icons.Default.MoreHoriz, contentDescription = null)
+                    Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(R.string.networks_account_actions))
                 }
                 MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                     if (needsVerify) {
@@ -452,7 +437,7 @@ internal fun AccountRow(
 }
 
 @Composable
-private fun AddAccountDialog(
+internal fun AddAccountDialog(
     providers: List<Provider>,
     onDismiss: () -> Unit,
     onSave: (String, Map<String, String>) -> Unit,
@@ -464,7 +449,9 @@ private fun AddAccountDialog(
         mutableStateOf(formProviders.firstOrNull()?.type ?: "")
     }
     val provider = formProviders.firstOrNull { it.type == selectedType }
-    val values = remember(selectedType) { mutableStateMapOf<String, String>() }
+    val values = remember(selectedType) {
+        mutableStateMapOf<String, String>().apply { putAll(prefilled(provider)) }
+    }
     val canSave = provider != null &&
         provider.fields.all { !it.required || values[it.name].orEmpty().isNotBlank() }
 
@@ -483,7 +470,7 @@ private fun AddAccountDialog(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         RadioButton(selected = selectedType == p.type, onClick = { selectedType = p.type })
-                        Text(providerTypeLabel(p.type))
+                        Text(providerName(p.type))
                     }
                 }
                 Spacer(Modifier.height(8.dp))
@@ -494,7 +481,14 @@ private fun AddAccountDialog(
                     MochiTextField(
                         value = values[field.name].orEmpty(),
                         onValueChange = { values[field.name] = it },
-                        label = { Text(fieldLabel(field)) },
+                        // The server sends each field's label in the user's
+                        // language, and its example value as the placeholder.
+                        label = { Text(field.label.ifEmpty { field.name }) },
+                        placeholder = if (field.placeholder.isNotEmpty()) {
+                            { Text(field.placeholder) }
+                        } else {
+                            null
+                        },
                         singleLine = true,
                         visualTransformation = if (secret) PasswordVisualTransformation() else VisualTransformation.None,
                         keyboardOptions = KeyboardOptions(
@@ -524,21 +518,14 @@ private fun AddAccountDialog(
     )
 }
 
-/** The server names each field by a label key; these are the same words the
- *  web form shows for them. */
-@Composable
-private fun fieldLabel(field: ProviderField): String = when (field.label) {
-    "accounts.field.address" -> stringResource(R.string.accounts_field_email)
-    "accounts.field.key" -> stringResource(R.string.accounts_field_api_key)
-    "accounts.field.model" -> stringResource(R.string.accounts_field_model)
-    "accounts.field.name" -> stringResource(R.string.accounts_field_name)
-    "accounts.field.url" -> stringResource(R.string.accounts_field_url)
-    "accounts.field.server" -> stringResource(R.string.accounts_field_server)
-    "accounts.field.token" -> stringResource(R.string.accounts_field_token)
-    "accounts.field.topic" -> stringResource(R.string.accounts_field_topic)
-    "accounts.field.secret" -> stringResource(R.string.accounts_field_secret)
-    else -> field.name
-}
+/**
+ * What a provider's form starts with, as the web's does: each optional text
+ * field that has an example value holds it, an AI account's model its default.
+ */
+internal fun prefilled(provider: Provider?): Map<String, String> =
+    provider?.fields.orEmpty()
+        .filter { !it.required && it.type == "text" && it.placeholder.isNotEmpty() }
+        .associate { it.name to it.placeholder }
 
 @Composable
 private fun VerifyDialog(
@@ -582,10 +569,7 @@ private fun AccountSettingsDialog(
     onDismiss: () -> Unit,
     onSave: (String, String) -> Unit,
 ) {
-    // Resolved outside the remember: displayName reads string resources, and a
-    // remember calculation is not a composable context.
-    val fallbackName = displayName(account)
-    var name by remember { mutableStateOf(account.label.ifBlank { fallbackName }) }
+    var name by remember { mutableStateOf(account.label.ifBlank { displayName(account) }) }
     val isAi = account.type == "openai" || account.type == "claude"
     var model by remember {
         mutableStateOf(if (account.identifier == "default") "" else account.identifier)
@@ -619,24 +603,10 @@ private fun AccountSettingsDialog(
     )
 }
 
-@Composable
-private fun SnackBanner(message: String, onDismiss: () -> Unit) {
-    androidx.compose.runtime.LaunchedEffect(message) {
-        kotlinx.coroutines.delay(3000)
-        onDismiss()
-    }
-    Box(modifier = Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.BottomCenter) {
-        MochiCard(colors = CardDefaults.elevatedCardColors()) {
-            Text(message, modifier = Modifier.padding(12.dp))
-        }
-    }
-}
-
-@Composable
 private fun displayName(account: ConnectedAccount): String {
     if (account.label.isNotBlank()) return account.label
     if (account.identifier.isNotBlank() && account.type in IDENTIFIED) return account.identifier
-    return providerTypeLabel(account.type)
+    return providerName(account.type)
 }
 
 /**
@@ -659,34 +629,6 @@ private fun capabilityLabel(capability: String): String = when (capability) {
     "ai" -> stringResource(R.string.accounts_capability_ai)
     "mcp" -> stringResource(R.string.accounts_capability_mcp)
     else -> capability
-}
-
-// Mirrors providerLabels() in lib/web/src/features/accounts/types.ts, which
-// translates the descriptive labels — including "Mochi web", where only the
-// brand is fixed. The bare product and company names (Apple, Claude, Facebook,
-// GitHub, Google, Microsoft, ntfy, OpenAI, Pushbullet, X) stay verbatim across
-// locales per the glossary.
-@Composable
-private fun providerTypeLabel(type: String): String = when (type) {
-    "apple" -> "Apple"
-    "browser" -> stringResource(R.string.accounts_provider_browser)
-    "caldav" -> stringResource(R.string.accounts_provider_caldav)
-    "claude" -> "Claude"
-    "email" -> stringResource(R.string.accounts_field_email)
-    "facebook" -> "Facebook"
-    "fcm" -> stringResource(R.string.accounts_provider_fcm)
-    "github" -> "GitHub"
-    "google" -> "Google"
-    "mcp" -> stringResource(R.string.accounts_provider_mcp)
-    "microsoft" -> "Microsoft"
-    "ntfy" -> "ntfy"
-    "openai" -> "OpenAI"
-    "pushbullet" -> "Pushbullet"
-    "unifiedpush" -> stringResource(R.string.accounts_provider_unifiedpush)
-    "url" -> stringResource(R.string.accounts_provider_url)
-    "web" -> stringResource(R.string.accounts_provider_web)
-    "x" -> "X"
-    else -> type
 }
 
 /**

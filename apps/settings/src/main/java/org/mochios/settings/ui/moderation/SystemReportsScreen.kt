@@ -40,7 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -57,6 +57,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
+import org.mochios.android.util.openWeb
 import org.mochios.settings.R
 import org.mochios.settings.api.Report
 import org.mochios.settings.ui.login.StepUpHost
@@ -204,7 +205,7 @@ internal fun ReportCard(
     onAction: (ReportAction) -> Unit,
 ) {
     val format = LocalFormat.current
-    val uri = LocalUriHandler.current
+    val context = LocalContext.current
     var menu by remember { mutableStateOf(false) }
     val muted = MaterialTheme.colorScheme.onSurfaceVariant
     MochiCard(modifier = Modifier.fillMaxWidth()) {
@@ -252,7 +253,8 @@ internal fun ReportCard(
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.primary,
                         maxLines = 1,
-                        modifier = Modifier.clickable { uri.openUri(link) },
+                        // A device with no browser drops the tap rather than closing the app.
+                        modifier = Modifier.clickable { openWeb(context, link) },
                     )
                 }
                 if (report.resolved > 0) {

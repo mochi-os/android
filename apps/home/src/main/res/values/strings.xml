@@ -6,6 +6,9 @@
     <string name="home_menu_user">User</string>
     <string name="home_menu_empty">No unread notifications</string>
     <string name="home_menu_view_all">View all</string>
+    <string name="home_menu_read_failed">Failed to mark notification as read</string>
+    <string name="home_menu_read_all_failed">Failed to mark all notifications as read</string>
+    <string name="home_menu_category_failed">Failed to update category</string>
     <string name="home_menu_no_topic">No topic record yet — try again after the next notification.</string>
     <string name="home_menu_manage_categories">Manage categories</string>
 </resources>

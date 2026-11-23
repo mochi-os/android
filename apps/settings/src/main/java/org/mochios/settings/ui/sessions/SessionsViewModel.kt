@@ -8,6 +8,7 @@ package org.mochios.settings.ui.sessions
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -46,9 +47,13 @@ class SessionsViewModel @Inject constructor(
 
     init { refresh() }
 
-    fun refresh() {
+    /**
+     * Read the sessions. A [quiet] read, after a revocation, leaves the list
+     * on screen while it is read again rather than blanking it to a spinner.
+     */
+    fun refresh(quiet: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            if (!quiet) _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val answer = api.listSessions().unwrapRaw()
                 _uiState.value = SessionsUiState(
@@ -57,6 +62,8 @@ class SessionsViewModel @Inject constructor(
                     signins = recentFirst(answer.signins),
                     passwords = recentFirst(answer.passwords),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -71,7 +78,9 @@ class SessionsViewModel @Inject constructor(
                 api.revokeSession(id).unwrapRaw()
                 _uiState.value = _uiState.value.copy(revoking = null)
                 onSuccess()
-                refresh()
+                refresh(quiet = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(revoking = null, error = e.toMochiError())
             }
@@ -87,7 +96,9 @@ class SessionsViewModel @Inject constructor(
                 api.revokeToken(hash).unwrapRaw()
                 _uiState.value = _uiState.value.copy(revoking = null)
                 onSuccess()
-                refresh()
+                refresh(quiet = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(revoking = null, error = e.toMochiError())
             }

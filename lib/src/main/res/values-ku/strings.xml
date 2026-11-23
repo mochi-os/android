@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abone bibe</string>
     <string name="common_copy">Kopî bike</string>
     <string name="common_copied">Hat kopîkirin li clipboard</string>
+    <string name="provider_browser">Agahdariyên geroka</string>
+    <string name="provider_caldav">Servera salnameyê</string>
+    <string name="provider_email">E-name</string>
+    <string name="provider_fcm">Push a Android</string>
+    <string name="provider_mcp">Rajekera MCP</string>
+    <string name="provider_unifiedpush">Agahdariya push</string>
+    <string name="provider_url">URL ya derveyî</string>
+    <string name="provider_web">Mochi di gerokê de</string>
     <string name="comment_edited">(hatî sererast kirin)</string>
     <string name="comment_reply">Bersiv</string>
     <string name="person_picker_search">Li bikarhêneran bigere</string>

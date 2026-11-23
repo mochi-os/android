@@ -30,8 +30,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.util.LanguageCompare
-import java.util.Locale
+import org.mochios.android.util.languageChoices
+import org.mochios.android.util.languageName
 
 /**
  * The languages forums is translated into, by their primary subtag: what a
@@ -46,17 +46,8 @@ internal val POST_LANGUAGES = listOf(
     "tr", "uk", "ur", "uz", "vi", "xh", "yi", "yo", "yue", "zh", "zu",
 )
 
-/** A language in its own name, so a reader finds theirs whatever language the app is in. */
-internal fun languageName(tag: String): String {
-    val locale = Locale.forLanguageTag(tag)
-    val name = locale.getDisplayName(locale)
-    if (name.isNullOrBlank() || name == tag) return tag
-    return name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(locale) else it.toString() }
-}
-
 /** Each language a post may be in, with its own name, in the order a reader looks for theirs. */
-internal fun postLanguageChoices(): List<Pair<String, String>> =
-    POST_LANGUAGES.map { it to languageName(it) }.sortedWith(compareBy(LanguageCompare) { it.second })
+internal fun postLanguageChoices(): List<Pair<String, String>> = languageChoices(POST_LANGUAGES)
 
 /** The link field of a forum post, with what is wrong with what was typed. */
 @Composable

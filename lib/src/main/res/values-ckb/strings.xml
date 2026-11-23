@@ -35,6 +35,14 @@
     <string name="common_subscribe">بەشداربە</string>
     <string name="common_copy">کۆپیکردن</string>
     <string name="common_copied">کۆپی کرا بۆ کلیپبۆرد</string>
+    <string name="provider_browser">ئاگادارکردنەوەی وێبگەڕ</string>
+    <string name="provider_caldav">ڕاژەکاری ڕۆژژمێر</string>
+    <string name="provider_email">ئیمەیڵ</string>
+    <string name="provider_fcm">پاڵنانی Android</string>
+    <string name="provider_mcp">ڕاژەی MCP</string>
+    <string name="provider_unifiedpush">ئاگادارکردنەوەی پاڵنان</string>
+    <string name="provider_url">URLی دەرەکی</string>
+    <string name="provider_web">وێبی Mochi</string>
     <string name="comment_edited">(دەستکاریکراو)</string>
     <string name="comment_reply">وەڵام</string>
     <string name="person_picker_search">گەڕانی بەکارهێنەران</string>

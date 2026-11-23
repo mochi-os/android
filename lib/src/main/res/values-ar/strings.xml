@@ -35,6 +35,14 @@
     <string name="common_subscribe">اشتراك</string>
     <string name="common_copy">نسخ</string>
     <string name="common_copied">تم النسخ إلى الحافظة</string>
+    <string name="provider_browser">إشعارات المتصفح</string>
+    <string name="provider_caldav">خادم تقويم</string>
+    <string name="provider_email">بريد إلكتروني</string>
+    <string name="provider_fcm">إشعار Android</string>
+    <string name="provider_mcp">خادم MCP</string>
+    <string name="provider_unifiedpush">إشعار فوري</string>
+    <string name="provider_url">رابط خارجي</string>
+    <string name="provider_web">Mochi على الويب</string>
     <string name="comment_edited">(تم التعديل)</string>
     <string name="comment_reply">رد</string>
     <string name="person_picker_search">البحث عن مستخدمين</string>

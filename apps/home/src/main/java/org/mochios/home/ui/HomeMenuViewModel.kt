@@ -8,17 +8,24 @@ package org.mochios.home.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationTopic
+import org.mochios.home.R
 import org.mochios.home.repository.MenuSource
 import javax.inject.Inject
 
@@ -33,7 +40,7 @@ data class HomeMenuState(
     val accent: String? = null,
     val unread: List<MochiNotification> = emptyList(),
     val loading: Boolean = true,
-    /** The last thing that failed, shown in the menu until the next success. */
+    /** Why the list could not be read, shown in the menu until it is read. */
     val error: MochiError? = null,
     val picker: CategoryPicker? = null,
 )
@@ -55,6 +62,15 @@ class HomeMenuViewModel @Inject constructor(
 
     private val _state = MutableStateFlow(HomeMenuState())
     val state: StateFlow<HomeMenuState> = _state.asStateFlow()
+
+    /**
+     * Why a read, a read of them all or a move to a category failed, each said
+     * once wherever the user is by then: the menu closes on some of them, and
+     * the list read after them must not wipe what went wrong. Held until the
+     * home screen is there to show it.
+     */
+    private val _failures = Channel<String>(Channel.BUFFERED)
+    val failures: Flow<String> = _failures.receiveAsFlow()
 
     /** The unread count the avatar carries, shared with every app's bell. */
     val count: StateFlow<Int> = source.count
@@ -108,21 +124,25 @@ class HomeMenuViewModel @Inject constructor(
             try {
                 val list = source.unread()
                 _state.update { it.copy(unread = list, loading = false, error = null) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.update { it.copy(loading = false, error = e.toMochiError()) }
             }
         }
     }
 
-    /** A notification tapped: it is read now, so it leaves the list. */
+    /** A notification tapped: it is read now, so it leaves the list, and comes back if the server refuses. */
     fun read(notification: MochiNotification) {
         if (!notification.isUnread) return
         _state.update { state -> state.copy(unread = state.unread.filterNot { it.id == notification.id }) }
         viewModelScope.launch {
             try {
                 source.read(notification.id)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.update { it.copy(error = e.toMochiError()) }
+                _failures.send(failure(e, R.string.home_menu_read_failed))
                 refresh()
             }
             source.recount()
@@ -135,12 +155,19 @@ class HomeMenuViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 source.readAll()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.update { it.copy(unread = before, error = e.toMochiError()) }
+                _state.update { it.copy(unread = before) }
+                _failures.send(failure(e, R.string.home_menu_read_all_failed))
             }
             source.recount()
         }
     }
+
+    /** The server's reason for a refusal, else the action's own words for its failure. */
+    private fun failure(e: Throwable, fallback: Int): String =
+        e.toMochiError().messageOrFallback(AppContext.get().getString(fallback))
 
     /** Open [notification]'s category picker, loading the categories and its topic. */
     fun pick(notification: MochiNotification) {
@@ -150,6 +177,8 @@ class HomeMenuViewModel @Inject constructor(
                 val categories = async { source.categories() }
                 val topic = async { source.topic(notification) }
                 CategoryPicker(notification.id, categories.await(), topic.await())
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 CategoryPicker(notification.id, emptyList(), null, e.toMochiError())
             }
@@ -168,8 +197,10 @@ class HomeMenuViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 source.categorise(notification, category)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.update { it.copy(error = e.toMochiError()) }
+                _failures.send(failure(e, R.string.home_menu_category_failed))
             }
         }
     }

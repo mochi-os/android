@@ -35,6 +35,14 @@
     <string name="common_subscribe">Odebírat</string>
     <string name="common_copy">Kopírovat</string>
     <string name="common_copied">Zkopírováno do schránky</string>
+    <string name="provider_browser">Oznámení prohlížeče</string>
+    <string name="provider_caldav">Kalendářový server</string>
+    <string name="provider_email">E-mail</string>
+    <string name="provider_fcm">Push oznámení pro Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Push oznámení</string>
+    <string name="provider_url">Externí URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(upraveno)</string>
     <string name="comment_reply">Odpovědět</string>
     <string name="person_picker_search">Hledat uživatele</string>

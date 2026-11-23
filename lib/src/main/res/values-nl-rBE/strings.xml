@@ -33,6 +33,7 @@
     <string name="common_subscribe">Abonneren</string>
     <string name="common_copy">Kopiëren</string>
     <string name="common_copied">Gekopieerd naar klembord</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(bewerkt)</string>
     <string name="comment_reply">Antwoord</string>
     <string name="person_picker_search">Gebruikers zoeken</string>

@@ -8,6 +8,7 @@ package org.mochios.settings.ui.notificationprefs
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -37,6 +38,8 @@ data class NotificationPrefsUiState(
     val topics: List<NotifTopic> = emptyList(),
     val available: DestinationsAvailable = DestinationsAvailable(),
     val error: MochiError? = null,
+    /** Why the topics could not be read before any were shown. */
+    val topicsError: MochiError? = null,
     /** A category delete in flight; its confirmation stays open until it answers. */
     val isDeletingCategory: Boolean = false,
 )
@@ -66,9 +69,13 @@ class NotificationPrefsViewModel @Inject constructor(
         }
     }
 
-    fun refresh() {
+    /**
+     * Read the categories. A [quiet] read, after a change, leaves the list on
+     * screen while it is read again rather than blanking it to a spinner.
+     */
+    fun refresh(quiet: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            if (!quiet) _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val cats = api.getCategories().unwrapRaw()
                 val dests = api.getDestinations().unwrapRaw()
@@ -77,26 +84,38 @@ class NotificationPrefsViewModel @Inject constructor(
                     categories = cats,
                     available = dests,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
     }
 
-    /** Fetch the topic list, which the topics tab asks for the first time it is opened. */
+    /**
+     * Fetch the topic list, which the topics tab asks for the first time it is
+     * opened and again after a change. The tab shows a spinner until the first
+     * read lands, and a failed later read over the list it holds.
+     */
     fun loadTopics() {
         if (topicsJob?.isActive == true) return
         topicsJob = viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(topicsError = null)
             try {
                 val topics = api.getTopics().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
-                    isLoading = false,
                     topicsLoaded = true,
                     topics = topics,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                val failure = e.toMochiError()
+                _uiState.value = if (_uiState.value.topicsLoaded) {
+                    _uiState.value.copy(error = failure)
+                } else {
+                    _uiState.value.copy(topicsError = failure)
+                }
             }
         }
     }
@@ -109,10 +128,12 @@ class NotificationPrefsViewModel @Inject constructor(
                 api.deleteCategory(id = id, reassign = reassignTo).unwrapEmpty()
                 _uiState.value = _uiState.value.copy(isDeletingCategory = false)
                 onSuccess()
-                refresh()
+                refresh(quiet = true)
                 if (_uiState.value.topicsLoaded) {
                     loadTopics()
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isDeletingCategory = false,
@@ -138,6 +159,8 @@ class NotificationPrefsViewModel @Inject constructor(
             try {
                 val result = api.testCategory(id = category.id).unwrapRaw()
                 _testSent.emit(result)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -148,10 +171,12 @@ class NotificationPrefsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 block()
-                refresh()
+                refresh(quiet = true)
                 if (_uiState.value.topicsLoaded) {
                     loadTopics()
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

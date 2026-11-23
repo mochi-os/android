@@ -35,6 +35,14 @@
     <string name="common_subscribe">Mag-subscribe</string>
     <string name="common_copy">Kopyahin</string>
     <string name="common_copied">Nakopya sa clipboard</string>
+    <string name="provider_browser">Mga notification ng browser</string>
+    <string name="provider_caldav">Server ng kalendaryo</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Android push</string>
+    <string name="provider_mcp">MCP server</string>
+    <string name="provider_unifiedpush">Push notification</string>
+    <string name="provider_url">Panlabas na URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(in-edit)</string>
     <string name="comment_reply">Tumugon</string>
     <string name="person_picker_search">Maghanap ng user</string>

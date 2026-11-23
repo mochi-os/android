@@ -22,6 +22,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.settings.R
+import org.mochios.settings.api.Availability
 import org.mochios.settings.api.Budget
 import org.mochios.settings.api.Certificates
 import org.mochios.settings.api.NetworkState
@@ -193,7 +194,7 @@ class OwnerScreensTest {
             SystemHandlesList(
                 state = state,
                 onRetry = {},
-                check = { _, _ -> null },
+                check = { _, _ -> Result.success(Availability()) },
                 onReserve = { _, _, _ -> },
                 onTakedown = {},
                 onRestore = {},

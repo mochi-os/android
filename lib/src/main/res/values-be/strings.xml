@@ -35,6 +35,14 @@
     <string name="common_subscribe">Падпісацца</string>
     <string name="common_copy">Капіраваць</string>
     <string name="common_copied">Скапіравана ў буфер абмену</string>
+    <string name="provider_browser">Апавяшчэнні браўзера</string>
+    <string name="provider_caldav">Сервер календароў</string>
+    <string name="provider_email">Эл. пошта</string>
+    <string name="provider_fcm">Пуш-апавяшчэнні для Android</string>
+    <string name="provider_mcp">MCP-сервер</string>
+    <string name="provider_unifiedpush">Пуш-апавяшчэнне</string>
+    <string name="provider_url">Знешні URL</string>
+    <string name="provider_web">Mochi вэб</string>
     <string name="comment_edited">(зменена)</string>
     <string name="comment_reply">Адказаць</string>
     <string name="person_picker_search">Пошук карыстальнікаў</string>

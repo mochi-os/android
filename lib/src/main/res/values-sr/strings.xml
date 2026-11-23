@@ -35,6 +35,14 @@
     <string name="common_subscribe">Претплати се</string>
     <string name="common_copy">Копирај</string>
     <string name="common_copied">Копирано у привремену меморију</string>
+    <string name="provider_browser">Обавештења прегледача</string>
+    <string name="provider_caldav">Сервер календара</string>
+    <string name="provider_email">Е-пошта</string>
+    <string name="provider_fcm">Пуш за Android</string>
+    <string name="provider_mcp">MCP сервер</string>
+    <string name="provider_unifiedpush">Пуш обавештење</string>
+    <string name="provider_url">Спољни URL</string>
+    <string name="provider_web">Mochi веб</string>
     <string name="comment_edited">(измењено)</string>
     <string name="comment_reply">Одговори</string>
     <string name="person_picker_search">Претражи кориснике</string>

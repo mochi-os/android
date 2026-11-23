@@ -33,6 +33,7 @@
 
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkeys_empty">No passkeys registered.</string>
+    <string name="account_passkeys_turned_off">Passkeys are turned off by the server administrator.</string>
     <string name="account_passkey_register">Add passkey</string>
     <string name="account_passkey_register_title">Add a passkey</string>
     <string name="account_passkey_name_label">Name (optional)</string>
@@ -41,6 +42,7 @@
 
     <string name="account_section_totp">Authenticator app</string>
     <string name="account_totp_enabled">Authenticator is enabled.</string>
+    <string name="account_totp_turned_off">The authenticator app is turned off by the server administrator.</string>
     <string name="account_totp_setup">Set up authenticator</string>
     <string name="account_totp_setup_title">Set up authenticator</string>
     <string name="account_totp_setup_step1">Scan or enter this secret in your authenticator app.</string>
@@ -52,6 +54,7 @@
 
     <string name="account_section_recovery">Recovery codes</string>
     <string name="account_recovery_none">No recovery codes generated.</string>
+    <string name="account_recovery_turned_off">Recovery codes are turned off by the server administrator.</string>
     <plurals name="account_recovery_count">
         <item quantity="one">%1$s remaining recovery code.</item>
         <item quantity="other">%1$s remaining recovery codes.</item>
@@ -70,6 +73,7 @@
     <string name="account_oauth_link_failed">Could not link account</string>
     <string name="account_oauth_unlink_title">Unlink account?</string>
     <string name="account_oauth_unlink_message">You won\'t be able to sign in with %1$s.</string>
+    <string name="account_oauth_unlink_network">You won\'t be able to sign in with %1$s, but the account stays linked.</string>
     <string name="account_unlink">Unlink</string>
 
     <string name="account_cancel">Cancel</string>
@@ -89,6 +93,8 @@
     <string name="account_data_dialog_body">This is a complete backup you can restore on this or another Mochi server. Verify it\'s you to continue.</string>
     <string name="account_data_passphrase">Passphrase</string>
     <string name="account_data_passphrase_hint">Your private keys are included, encrypted with this passphrase. Store it safely. You\'ll need it to restore.</string>
+    <string name="account_data_preparing">Preparing your data</string>
+    <string name="account_data_ready">Your data is ready to download</string>
     <string name="account_rename">Rename</string>
     <string name="account_disable">Disable</string>
     <string name="account_copy">Copy</string>
@@ -105,14 +111,8 @@
     <string name="sessions_revoke_message">The device using this session will be signed out.</string>
     <string name="sessions_revoke">Revoke</string>
 
-    <!-- Tokens -->
-
-    <!-- Replication -->
-
-    <!-- System replication -->
     <string name="settings_home_section_system">System</string>
 
-    <!-- Domains -->
     <!-- Routes -->
     <string name="route_section">Routes</string>
     <string name="route_add">Add route</string>
@@ -140,6 +140,9 @@
     <string name="route_enabled">Enabled</string>
     <string name="route_disabled">Disabled</string>
     <string name="route_meta">Priority %1$s · %2$s</string>
+    <string name="route_create_failed">Failed to create route</string>
+    <string name="route_update_failed">Failed to update route</string>
+    <string name="route_delete_failed">Failed to delete route</string>
 
     <!-- Interests -->
     <string name="interests_title">Interests</string>
@@ -167,7 +170,6 @@
     <string name="notifprefs_name_label">Name</string>
     <string name="notifprefs_destinations">Destinations</string>
     <string name="notifprefs_dest_web">Web browser</string>
-    <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_dest_device">Device</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
@@ -231,10 +233,7 @@
     <string name="accounts_add_title">Add account</string>
     <string name="accounts_empty">No connected accounts</string>
     <string name="accounts_type_label">Type</string>
-    <string name="accounts_field_email">Email</string>
-    <string name="accounts_field_api_key">API key</string>
     <string name="accounts_field_model">Model</string>
-    <string name="accounts_field_url">Server URL</string>
     <string name="accounts_field_name">Name</string>
     <string name="accounts_status_pending">Pending</string>
     <string name="accounts_status_verified">Verified</string>
@@ -294,6 +293,9 @@
     <string name="system_settings_configured">Configured</string>
     <string name="system_settings_save">Save</string>
     <string name="system_settings_clear">Clear</string>
+    <string name="system_settings_choose_file">Choose file</string>
+    <string name="system_settings_replace">Replace</string>
+    <string name="system_settings_read_failed">Failed to read file</string>
     <string name="system_settings_reset">Reset</string>
     <string name="system_settings_reset_to_default">Reset to default</string>
     <string name="system_settings_reset_title">Reset to default?</string>
@@ -417,15 +419,16 @@
     <string name="domain_status_verified">Verified</string>
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Verify DNS</string>
+    <string name="domain_verified">Domain verified</string>
+    <string name="domain_verify_missing">TXT record not found</string>
+    <string name="domain_verify_failed">Failed to verify domain</string>
+    <string name="domain_create_failed">Failed to create domain</string>
+    <string name="domain_update_failed">Failed to update domain</string>
+    <string name="domain_delete_failed">Failed to delete domain</string>
+    <string name="domain_delegation_create_failed">Failed to create delegation</string>
+    <string name="domain_delegation_delete_failed">Failed to delete delegation</string>
     <string name="settings_home_domains">Domains</string>
     <string name="login_invalid_code">Invalid code</string>
-    <string name="accounts_provider_browser">Browser notifications</string>
-    <string name="accounts_provider_fcm">Android push</string>
-    <string name="accounts_provider_mcp">MCP server</string>
-    <string name="accounts_provider_unifiedpush">Push notification</string>
-    <string name="accounts_provider_url">External URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
-    <string name="accounts_provider_caldav">Calendar server</string>
     <string name="accounts_verified">Account verified</string>
     <string name="accounts_verify_invalid">Invalid verification code</string>
     <string name="accounts_verify_sent">Verification code sent</string>
@@ -433,10 +436,6 @@
     <string name="accounts_test_failed">Test failed</string>
     <string name="account_totp_open">Open in authenticator app</string>
     <string name="account_data_generate">Generate passphrase</string>
-    <string name="accounts_field_server">Server URL</string>
-    <string name="accounts_field_token">Access token</string>
-    <string name="accounts_field_topic">Topic</string>
-    <string name="accounts_field_secret">Signing secret</string>
     <string name="system_documents_modified">Modified</string>
     <string name="system_documents_discard_title">Discard changes?</string>
     <string name="system_documents_discard">Discard</string>
@@ -476,6 +475,7 @@
     <string name="networks_reserve">Reserve</string>
     <string name="networks_checking">Checking…</string>
     <string name="networks_available">Available</string>
+    <string name="networks_check_failed">Could not check the name</string>
     <string name="networks_reason_invalid">Letters and digits only, starting with a letter, 3 to 20 characters</string>
     <string name="networks_reason_domain">You cannot reserve a name on this domain</string>
     <string name="networks_reason_blocked">That name is kept for the server</string>
@@ -557,6 +557,11 @@
     <string name="networks_replace_message">Other servers learn the new key from the account\'s document. Anything signed with the old key stops checking.</string>
     <string name="networks_keys_replaced">Keys replaced</string>
     <string name="networks_keys_failed">Could not replace the keys</string>
+    <string name="networks_keys_load_failed">Could not load the keys</string>
+    <string name="networks_key_signing">Signing key</string>
+    <string name="networks_key_rotation">Rotation key</string>
+    <string name="networks_key_recovery">Recovery key</string>
+    <string name="networks_key_other">Key</string>
     <string name="networks_recovery">Recovery key</string>
     <string name="networks_recovery_title">Make a recovery key?</string>
     <string name="networks_recovery_message">A recovery key lets you move the account or undo what a compromised server did. It replaces any earlier one and is shown once.</string>

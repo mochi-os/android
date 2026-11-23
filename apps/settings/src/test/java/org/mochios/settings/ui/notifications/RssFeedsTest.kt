@@ -5,7 +5,17 @@
 
 package org.mochios.settings.ui.notifications
 
+import android.content.ClipDescription
+import android.content.ClipboardManager
 import android.os.Looper
+import androidx.compose.ui.test.hasAnyAncestor
+import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.isDialog
+import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithContentDescription
+import androidx.compose.ui.test.onFirst
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -19,6 +29,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.api.MochiError
@@ -47,6 +58,9 @@ import java.util.concurrent.TimeUnit
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
 class RssFeedsTest {
+
+    @get:Rule
+    val rule = createComposeRule()
 
     private val context = RuntimeEnvironment.getApplication()
     private lateinit var server: MockWebServer
@@ -132,6 +146,31 @@ class RssFeedsTest {
     fun `the feeds list with the address a reader subscribes to`() {
         assertEquals(listOf("Reader", "Other"), model.uiState.value.feeds.map { it.name })
         assertEquals("$base/notifications/rss?token=t-r1", model.address(model.uiState.value.feeds.first()))
+    }
+
+    private val clipboard by lazy { context.getSystemService(ClipboardManager::class.java) }
+
+    private fun copied(): Pair<String?, Boolean?> =
+        clipboard.primaryClip?.getItemAt(0)?.text?.toString() to
+            clipboard.primaryClipDescription?.extras?.getBoolean(ClipDescription.EXTRA_IS_SENSITIVE)
+
+    @Test
+    fun `a feed's address, which carries its token, is copied as a secret from its card and once created`() {
+        rule.setContent { RssFeedsScreen(onBack = {}, viewModel = model) }
+        val copy = context.getString(org.mochios.android.R.string.common_copy)
+        rule.onAllNodesWithContentDescription(copy).onFirst().performClick()
+        rule.waitForIdle()
+        // THE POINT: kept out of the clipboard's preview, token and all.
+        assertEquals("$base/notifications/rss?token=t-r1" to true, copied())
+
+        model.create("New", existing = false) {}
+        until { model.uiState.value.created != null }
+        rule.waitForIdle()
+        val address = "$base/notifications/rss?token=t-r3"
+        rule.onNodeWithText(address).assertExists()
+        rule.onNode(hasContentDescription(copy) and hasAnyAncestor(isDialog())).performClick()
+        rule.waitForIdle()
+        assertEquals(address to true, copied())
     }
 
     @Test

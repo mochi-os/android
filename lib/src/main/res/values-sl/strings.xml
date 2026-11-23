@@ -35,6 +35,14 @@
     <string name="common_subscribe">Naroči se</string>
     <string name="common_copy">Kopiraj</string>
     <string name="common_copied">Kopirano v odložišče</string>
+    <string name="provider_browser">Obvestila brskalnika</string>
+    <string name="provider_caldav">Koledarski strežnik</string>
+    <string name="provider_email">E-pošta</string>
+    <string name="provider_fcm">Android push obvestila</string>
+    <string name="provider_mcp">Strežnik MCP</string>
+    <string name="provider_unifiedpush">Push obvestilo</string>
+    <string name="provider_url">Zunanji URL</string>
+    <string name="provider_web">Mochi splet</string>
     <string name="comment_edited">(urejeno)</string>
     <string name="comment_reply">Odgovori</string>
     <string name="person_picker_search">Iskanje uporabnikov</string>

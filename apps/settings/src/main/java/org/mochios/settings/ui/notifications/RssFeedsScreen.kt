@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
@@ -137,7 +136,9 @@ fun RssFeedsScreen(
                         RssFeedCard(
                             feed = feed,
                             busy = feed.id in state.busy,
-                            onCopy = { copier.copy(viewModel.address(feed)) },
+                            // The address carries the token that reads every
+                            // notification: kept out of the clipboard's preview.
+                            onCopy = { copier.copy(viewModel.address(feed), sensitive = true) },
                             onRename = { renaming = feed },
                             onDelete = { deleting = feed },
                             onEnabled = { enabled -> viewModel.setEnabled(feed, enabled) },
@@ -165,10 +166,16 @@ fun RssFeedsScreen(
             onConfirm = { viewModel.dismissCreated() },
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                SelectionContainer(modifier = Modifier.weight(1f)) {
-                    Text(address, fontFamily = FontFamily.Monospace, style = MaterialTheme.typography.bodySmall)
-                }
-                MochiIconButton(onClick = { copier.copy(address) }) {
+                // Plain text, not selectable: a selection copied by the system
+                // would put the token in the clipboard's preview, past the
+                // button's sensitive copy.
+                Text(
+                    address,
+                    fontFamily = FontFamily.Monospace,
+                    style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.weight(1f),
+                )
+                MochiIconButton(onClick = { copier.copy(address, sensitive = true) }) {
                     Icon(Icons.Outlined.ContentCopy, contentDescription = stringResource(MochiR.string.common_copy))
                 }
             }

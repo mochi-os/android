@@ -25,11 +25,7 @@ import org.mochios.settings.ui.login.StepUpController
 enum class DocumentKind(val value: String) {
     RULES("rules"),
     TERMS("terms"),
-    PRIVACY("privacy");
-
-    companion object {
-        fun from(value: String?): DocumentKind = values().firstOrNull { it.value == value } ?: RULES
-    }
+    PRIVACY("privacy"),
 }
 
 data class SystemDocumentsUiState(

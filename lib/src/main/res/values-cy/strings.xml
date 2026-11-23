@@ -35,6 +35,14 @@
     <string name="common_subscribe">Tanysgrifio</string>
     <string name="common_copy">Copïo</string>
     <string name="common_copied">Wedi\'i gopïo i\'r clipfwrdd</string>
+    <string name="provider_browser">Hysbysiadau porwr</string>
+    <string name="provider_caldav">Gweinydd calendr</string>
+    <string name="provider_email">E-bost</string>
+    <string name="provider_fcm">Gwthiad Android</string>
+    <string name="provider_mcp">Gweinydd MCP</string>
+    <string name="provider_unifiedpush">Hysbysiad gwthio</string>
+    <string name="provider_url">URL allanol</string>
+    <string name="provider_web">Gwe Mochi</string>
     <string name="comment_edited">(golygwyd)</string>
     <string name="comment_reply">Ymateb</string>
     <string name="person_picker_search">Chwilio defnyddwyr</string>

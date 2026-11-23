@@ -5,6 +5,9 @@
     <string name="home_menu_user">Колдонуучу</string>
     <string name="home_menu_empty">Окулбаган билдирмелер жок</string>
     <string name="home_menu_view_all">Бардыгын көрүү</string>
+    <string name="home_menu_read_failed">Билдирмени окулду деп белгилөө мүмкүн болгон жок</string>
+    <string name="home_menu_read_all_failed">Бардык билдирмелерди окулду деп белгилөө мүмкүн болгон жок</string>
+    <string name="home_menu_category_failed">Категорияны жаңылоо ишке ашкан жок</string>
     <string name="home_menu_no_topic">Тема жазуусу азырынча жок — кийинки билдирмеден кийин кайра аракет кылыңыз.</string>
     <string name="home_menu_manage_categories">Категорияларды башкаруу</string>
 </resources>

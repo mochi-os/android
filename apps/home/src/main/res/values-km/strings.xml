@@ -5,6 +5,9 @@
     <string name="home_menu_user">អ្នកប្រើប្រាស់</string>
     <string name="home_menu_empty">មិនមានការជូនដំណឹងដែលមិនទាន់អាន</string>
     <string name="home_menu_view_all">មើលទាំងអស់</string>
+    <string name="home_menu_read_failed">មិនអាចសម្គាល់ការជូនដំណឹងថាបានអានទេ</string>
+    <string name="home_menu_read_all_failed">មិនអាចសម្គាល់ការជូនដំណឹងទាំងអស់ថាបានអានទេ</string>
+    <string name="home_menu_category_failed">បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពប្រភេទ</string>
     <string name="home_menu_no_topic">មិនទាន់មានកំណត់ត្រាប្រធានបទ — សាកល្បងម្តងទៀតបន្ទាប់ពីការជូនដំណឹងលើកក្រោយ។</string>
     <string name="home_menu_manage_categories">គ្រប់គ្រងប្រភេទ</string>
 </resources>

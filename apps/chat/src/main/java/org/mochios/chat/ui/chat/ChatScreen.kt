@@ -1861,7 +1861,7 @@ internal fun SelectionBar(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         MochiIconButton(onClick = onClose) {
-            Icon(Icons.Default.Close, contentDescription = null)
+            Icon(Icons.Default.Close, contentDescription = stringResource(MochiR.string.common_close))
         }
         Text(
             text = stringResource(R.string.chat_selection_title, LocalFormat.current.formatNumber(count)),
@@ -1918,7 +1918,7 @@ internal fun EditComposerPreview(onCancel: () -> Unit) {
             overflow = TextOverflow.Ellipsis,
         )
         MochiIconButton(onClick = onCancel) {
-            Icon(Icons.Default.Close, contentDescription = null)
+            Icon(Icons.Default.Close, contentDescription = stringResource(MochiR.string.common_cancel))
         }
     }
 }

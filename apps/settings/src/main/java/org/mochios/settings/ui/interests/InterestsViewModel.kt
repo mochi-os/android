@@ -49,9 +49,13 @@ class InterestsViewModel @Inject constructor(
 
     init { refresh() }
 
-    fun refresh() {
+    /**
+     * Read the interests. A [quiet] read, after a change, leaves the list on
+     * screen while it is read again rather than blanking it to a spinner.
+     */
+    fun refresh(quiet: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            if (!quiet) _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val data = api.getInterests().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
@@ -59,28 +63,39 @@ class InterestsViewModel @Inject constructor(
                     interests = data.interests,
                     summary = data.summary,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
     }
 
+    /**
+     * Save a weight the slider was let go at: the row shows it at once, and
+     * goes back to the weight it had if the server refuses, unless a later
+     * save has moved it since. The rest of the list is left as it is.
+     */
     fun setWeight(qid: String, weight: Int) {
-        // Optimistic update so the slider is responsive
-        val current = _uiState.value.interests
-        val next = current.map { if (it.qid == qid) it.copy(weight = weight) else it }
-        _uiState.value = _uiState.value.copy(interests = next)
+        val before = _uiState.value.interests.firstOrNull { it.qid == qid }?.weight ?: return
+        if (before == weight) return
+        setWeightShown(qid, weight)
         viewModelScope.launch {
             try {
                 api.setInterest(qid, weight).unwrapEmpty()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                // Revert on failure
-                _uiState.value = _uiState.value.copy(
-                    interests = current,
-                    error = e.toMochiError(),
-                )
+                if (_uiState.value.interests.any { it.qid == qid && it.weight == weight }) setWeightShown(qid, before)
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    private fun setWeightShown(qid: String, weight: Int) {
+        _uiState.value = _uiState.value.copy(
+            interests = _uiState.value.interests.map { if (it.qid == qid) it.copy(weight = weight) else it },
+        )
     }
 
     /** The row goes on the tap and comes back, with the error, if the server
@@ -105,7 +120,7 @@ class InterestsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(interests = restored, error = e.toMochiError())
                 return@launch
             }
-            refresh()
+            refresh(quiet = true)
         }
     }
 
@@ -118,7 +133,9 @@ class InterestsViewModel @Inject constructor(
                     searchQuery = "",
                     searchResults = emptyList(),
                 )
-                refresh()
+                refresh(quiet = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -134,6 +151,8 @@ class InterestsViewModel @Inject constructor(
                     isRegeneratingSummary = false,
                     summary = resp.summary,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isRegeneratingSummary = false,

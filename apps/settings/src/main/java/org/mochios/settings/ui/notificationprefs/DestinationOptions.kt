@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.notifications.DestinationRow
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.providerName
 import org.mochios.settings.R
 import org.mochios.settings.api.DestinationsAvailable
 
@@ -45,10 +46,9 @@ internal fun destinationOptions(
                 }
             }
         }
-        val fcm = stringResource(R.string.notifprefs_transport_fcm)
         for (acc in available.accounts) {
             if (acc.device.isNotBlank() && acc.device in bound) continue
-            val transport = if (acc.type == "fcm") fcm else acc.type
+            val transport = providerName(acc.type)
             val name = if (acc.label.isNotBlank()) acc.label else if (acc.identifier.isNotBlank()) acc.identifier else transport
             // A push account bound to no device names its transport, so two
             // that share a phone's name can still be told apart.

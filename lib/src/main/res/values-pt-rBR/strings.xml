@@ -33,6 +33,8 @@
     <string name="common_subscribe">Inscrever-se</string>
     <string name="common_copy">Copiar</string>
     <string name="common_copied">Copiado para a área de transferência</string>
+    <string name="provider_email">E-mail</string>
+    <string name="provider_url">URL externa</string>
     <string name="comment_edited">(editado)</string>
     <string name="comment_reply">Responder</string>
     <string name="person_picker_search">Pesquisar usuários</string>

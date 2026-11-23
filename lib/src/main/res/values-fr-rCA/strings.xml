@@ -107,6 +107,7 @@
     <string name="common_expand">Développer</string>
     <string name="common_play_video">Lire la vidéo</string>
     <string name="common_copied">Copié dans le presse-papiers</string>
+    <string name="provider_email">Courriel</string>
     <string name="place_picker_name">Nom du lieu</string>
     <string name="place_picker_no_results">Aucun lieu trouvé</string>
     <string name="place_origin">Origine</string>

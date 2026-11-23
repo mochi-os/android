@@ -40,6 +40,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.ui.components.CountBadge
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -157,13 +158,9 @@ internal fun UserMenu(
                 Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = stringResource(R.string.home_menu_view_all))
             }
         }
+        // Why the list could not be read; an action's failure is a snackbar.
         state.error?.let { error ->
-            Text(
-                text = error.userMessage(),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-            )
+            InlineErrorState(error = error, modifier = Modifier.padding(horizontal = 16.dp))
         }
         when {
             empty -> Unit

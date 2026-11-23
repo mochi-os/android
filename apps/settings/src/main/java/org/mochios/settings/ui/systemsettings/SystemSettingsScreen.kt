@@ -5,6 +5,8 @@
 
 package org.mochios.settings.ui.systemsettings
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,14 +35,18 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -65,11 +71,16 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.SystemSetting
 import org.mochios.settings.api.SystemTheme
+import org.mochios.settings.ui.login.METHOD_STATE_SLOTS
+import org.mochios.settings.ui.login.MethodStatePicker
 import org.mochios.settings.ui.login.StepUpHost
 
-// Mirrors apps/settings/web/src/features/system/settings.tsx. File upload
-// (pattern == "text") is not supported on Android; the row degrades to a
-// multi-line text field.
+// Mirrors apps/settings/web/src/features/system/settings.tsx. A file setting
+// (pattern == "text") is set from a document the administrator picks, whose
+// text is saved as the value, as the web uploads one.
+
+/** The documents a file setting is picked from: its values are JSON. */
+private val FILE_TYPES = arrayOf("application/json", "text/*")
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -79,7 +90,26 @@ fun SystemSettingsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     StepUpHost(viewModel.stepUp)
+    val snackbar = remember { SnackbarHostState() }
+    // A refused save is said over the list; the full-screen error below is
+    // for a list that never loaded.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.settings.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
+    // The setting a document is being picked for, by name, so it outlasts the
+    // activity being recreated behind the picker.
+    var uploading by rememberSaveable { mutableStateOf<String?>(null) }
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        val name = uploading
+        uploading = null
+        if (uri != null && name != null) viewModel.upload(name, uri)
+    }
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.system_settings_title)) },
@@ -96,7 +126,7 @@ fun SystemSettingsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.isLoading -> CircularProgressIndicator(
+                state.isLoading && state.settings.isEmpty() -> CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center)
                 )
                 state.error != null && state.settings.isEmpty() -> ErrorState(
@@ -106,6 +136,10 @@ fun SystemSettingsScreen(
                 else -> SystemSettingsContent(
                     state = state,
                     onSave = { name, value -> viewModel.setValue(name, value) },
+                    onChooseFile = { name ->
+                        uploading = name
+                        picker.launch(FILE_TYPES)
+                    },
                 )
             }
         }
@@ -132,7 +166,6 @@ private val NETWORK_SETTINGS = listOf(
     "matrix",
     "xmpp",
 )
-private val METHOD_STATE_SLOTS = listOf("disabled", "allowed", "required")
 
 private fun isLogin(name: String) =
     name.startsWith("auth_") || name == "signup_enabled"
@@ -223,17 +256,10 @@ private val SETTING_LABEL_RESOURCES: Map<String, Int> = mapOf(
 )
 
 @Composable
-private fun methodStateLabel(slot: String): String = when (slot) {
-    "disabled" -> stringResource(R.string.system_settings_state_disabled)
-    "allowed" -> stringResource(R.string.system_settings_state_allowed)
-    "required" -> stringResource(R.string.system_settings_state_required)
-    else -> slot
-}
-
-@Composable
 internal fun SystemSettingsContent(
     state: SystemSettingsUiState,
     onSave: (String, String) -> Unit,
+    onChooseFile: (String) -> Unit = {},
 ) {
     // Resolve labels once so we can sort by user-visible name (matching the
     // web naturalCompare order).
@@ -279,13 +305,13 @@ internal fun SystemSettingsContent(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
-        section(loginTitle, login, state, onSave)
-        if (oauth.isNotEmpty()) section(oauthTitle, oauth, state, onSave)
-        section(userDefaultsTitle, userDefaults, state, onSave)
-        if (operator.isNotEmpty()) section(operatorTitle, operator, state, onSave)
-        if (networks.isNotEmpty()) section(networksTitle, networks, state, onSave)
-        if (push.isNotEmpty()) section(pushTitle, push, state, onSave)
-        section(otherTitle, other, state, onSave)
+        section(loginTitle, login, state, onSave, onChooseFile)
+        if (oauth.isNotEmpty()) section(oauthTitle, oauth, state, onSave, onChooseFile)
+        section(userDefaultsTitle, userDefaults, state, onSave, onChooseFile)
+        if (operator.isNotEmpty()) section(operatorTitle, operator, state, onSave, onChooseFile)
+        if (networks.isNotEmpty()) section(networksTitle, networks, state, onSave, onChooseFile)
+        if (push.isNotEmpty()) section(pushTitle, push, state, onSave, onChooseFile)
+        section(otherTitle, other, state, onSave, onChooseFile)
     }
 }
 
@@ -294,6 +320,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(
     settings: List<SystemSetting>,
     state: SystemSettingsUiState,
     onSave: (String, String) -> Unit,
+    onChooseFile: (String) -> Unit,
 ) {
     item("section-header-$title") {
         SectionHeader(title = title)
@@ -301,9 +328,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.section(
     items(settings, key = { "row-${it.name}" }) { setting ->
         SettingRow(
             setting = setting,
+            pending = state.pending[setting.name],
             isSaving = state.savingName == setting.name,
             themes = state.themes,
             onSave = { value -> onSave(setting.name, value) },
+            onChooseFile = { onChooseFile(setting.name) },
         )
     }
     item("section-spacer-$title") { Spacer(Modifier.height(8.dp)) }
@@ -320,14 +349,24 @@ private fun SectionHeader(title: String) {
     }
 }
 
+/**
+ * One setting. A control that saves on the tap shows [pending], the value
+ * asked for, until it is saved; once the step-up is cancelled or the server
+ * refuses, the view model drops it and the row shows the stored value again.
+ * Only the text field keeps text of its own, which stays on a failure for its
+ * Save to try again.
+ */
 @Composable
-private fun SettingRow(
+internal fun SettingRow(
     setting: SystemSetting,
+    pending: String?,
     isSaving: Boolean,
     themes: List<SystemTheme>,
     onSave: (String) -> Unit,
+    onChooseFile: () -> Unit = {},
 ) {
     var localValue by remember(setting.name, setting.value) { mutableStateOf(setting.value) }
+    val shown = pending ?: setting.value
     val label = settingLabel(setting)
     val isDefault = setting.value == setting.default
     val hasChanged = localValue != setting.value
@@ -366,13 +405,10 @@ private fun SettingRow(
                 }
             }
             methodStates != null -> MethodStatePicker(
-                value = localValue,
+                value = shown,
                 slots = methodStates,
-                disabled = isSaving,
-                onPick = {
-                    localValue = it
-                    onSave(it)
-                },
+                busy = isSaving,
+                onPick = onSave,
             )
             // default_theme holds an entity:theme id, which no one should read
             // or type, so it is picked from the installed themes by label.
@@ -380,13 +416,10 @@ private fun SettingRow(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 ThemeDropdown(
-                    value = localValue,
+                    value = shown,
                     themes = themes,
                     disabled = isSaving,
-                    onPick = {
-                        localValue = it
-                        onSave(it)
-                    },
+                    onPick = onSave,
                     modifier = Modifier.weight(1f),
                 )
                 if (!isDefault) {
@@ -398,62 +431,52 @@ private fun SettingRow(
                         defaultLabel = themeLabel(themes, setting.default)
                             ?: stringResource(R.string.system_settings_theme_unknown),
                     ) {
-                        localValue = setting.default
                         onSave(setting.default)
                     }
                 }
             }
             isBoolean(setting) -> Row(verticalAlignment = Alignment.CenterVertically) {
                 Switch(
-                    checked = localValue == "true",
+                    checked = shown == "true",
                     enabled = !isSaving,
-                    onCheckedChange = { checked ->
-                        val v = if (checked) "true" else "false"
-                        localValue = v
-                        onSave(v)
-                    },
+                    onCheckedChange = { checked -> onSave(if (checked) "true" else "false") },
                 )
                 if (!isDefault) {
                     Spacer(Modifier.size(8.dp))
                     ResetButton(setting = setting, label = label, disabled = isSaving) {
-                        localValue = setting.default
                         onSave(setting.default)
                     }
                 }
             }
             enumOpts != null -> EnumDropdown(
-                value = localValue,
+                value = shown,
                 options = enumOpts,
                 disabled = isSaving,
-                onPick = {
-                    localValue = it
-                    onSave(it)
-                },
+                onPick = onSave,
             )
             isFileUpload(setting) -> Row(verticalAlignment = Alignment.CenterVertically) {
-                MochiTextField(
-                    value = if (localValue.isBlank()) ""
-                            else stringResource(R.string.system_settings_configured),
-                    onValueChange = {},
-                    readOnly = true,
-                    modifier = Modifier.weight(1f),
-                )
-                if (localValue.isNotBlank()) {
+                if (shown.isNotBlank()) {
+                    Text(
+                        stringResource(R.string.system_settings_configured),
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.weight(1f),
+                    )
+                    MochiOutlinedButton(onClick = onChooseFile, enabled = !isSaving) {
+                        Text(stringResource(R.string.system_settings_replace))
+                    }
                     Spacer(Modifier.size(8.dp))
-                    MochiOutlinedButton(
-                        onClick = {
-                            localValue = ""
-                            onSave("")
-                        },
-                        enabled = !isSaving,
-                    ) {
+                    MochiOutlinedButton(onClick = { onSave("") }, enabled = !isSaving) {
                         Text(stringResource(R.string.system_settings_clear))
+                    }
+                } else {
+                    MochiOutlinedButton(onClick = onChooseFile, enabled = !isSaving) {
+                        Text(stringResource(R.string.system_settings_choose_file))
                     }
                 }
             }
             else -> Row(verticalAlignment = Alignment.CenterVertically) {
                 MochiTextField(
-                    value = localValue,
+                    value = pending ?: localValue,
                     onValueChange = { localValue = it },
                     enabled = !isSaving,
                     singleLine = true,
@@ -480,7 +503,6 @@ private fun SettingRow(
                         Text(stringResource(R.string.system_settings_save))
                     }
                     !isDefault -> ResetButton(setting = setting, label = label, disabled = isSaving) {
-                        localValue = setting.default
                         onSave(setting.default)
                     }
                 }
@@ -508,33 +530,6 @@ private fun ReadOnlyValue(setting: SystemSetting) {
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-    }
-}
-
-@Composable
-private fun MethodStatePicker(
-    value: String,
-    slots: Set<String>,
-    disabled: Boolean,
-    onPick: (String) -> Unit,
-) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        METHOD_STATE_SLOTS.filter { it in slots }.forEach { slot ->
-            val selected = value == slot
-            if (selected) {
-                MochiButton(
-                    onClick = {},
-                    enabled = false,
-                    modifier = Modifier.padding(end = 4.dp),
-                ) { Text(methodStateLabel(slot)) }
-            } else {
-                MochiOutlinedButton(
-                    onClick = { onPick(slot) },
-                    enabled = !disabled,
-                    modifier = Modifier.padding(end = 4.dp),
-                ) { Text(methodStateLabel(slot)) }
-            }
-        }
     }
 }
 

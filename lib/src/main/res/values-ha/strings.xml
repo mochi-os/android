@@ -35,6 +35,14 @@
     <string name="common_subscribe">Yi subscribe</string>
     <string name="common_copy">Kwafi</string>
     <string name="common_copied">An kwafi zuwa clipboard</string>
+    <string name="provider_browser">Sanarwar browser</string>
+    <string name="provider_caldav">Sabar kalanda</string>
+    <string name="provider_email">Imel</string>
+    <string name="provider_fcm">Tura ta Android</string>
+    <string name="provider_mcp">Sabar MCP</string>
+    <string name="provider_unifiedpush">Sanarwar push</string>
+    <string name="provider_url">URL na waje</string>
+    <string name="provider_web">Yanar gizon Mochi</string>
     <string name="comment_edited">(an gyara)</string>
     <string name="comment_reply">Amsa</string>
     <string name="person_picker_search">Bincika masu amfani</string>

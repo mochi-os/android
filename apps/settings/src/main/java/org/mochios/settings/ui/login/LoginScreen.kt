@@ -36,6 +36,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -55,24 +57,25 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.CopyButton
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.codeDigits
 import org.mochios.android.ui.components.rememberCopier
+import org.mochios.android.util.providerName
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.SecureWindow
-import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.settings.R
 import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.OAuthIdentity
@@ -90,7 +93,8 @@ private val LOGIN_METHOD_ROWS = listOf(
     MethodRow("recovery", true),
 )
 
-private val METHOD_STATE_SLOTS = listOf("disabled", "allowed", "required")
+/** Whether the server administrator has turned the method [info] describes off. */
+private fun turnedOff(info: MethodInfo?): Boolean = info?.system == "disabled"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -102,9 +106,19 @@ fun LoginScreen(
     val totpSetup by viewModel.newTotpSetup.collectAsState()
     val recoveryCodes by viewModel.newRecoveryCodes.collectAsState()
     val launchUrl by viewModel.oauthLaunchUrl.collectAsState()
-    val stepUpVisible by viewModel.stepUpVisible.collectAsState()
     val context = LocalContext.current
     val copier = rememberCopier()
+    val snackbar = remember { SnackbarHostState() }
+    // The screen is several screens tall, so a failure is said over it,
+    // wherever the reader is, and cleared once said. The full-screen arm below
+    // is for a first read that failed.
+    LaunchedEffect(state.error) {
+        val failure = state.error
+        if (failure != null && state.methods.isNotEmpty()) {
+            snackbar.showSnackbar(failure.userMessage())
+            viewModel.clearError()
+        }
+    }
 
     LaunchedEffect(launchUrl) {
         val url = launchUrl ?: return@LaunchedEffect
@@ -123,6 +137,7 @@ fun LoginScreen(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.login_title)) },
@@ -140,6 +155,13 @@ fun LoginScreen(
         if (state.isLoading && state.methods.isEmpty()) {
             Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
+            }
+            return@Scaffold
+        }
+        val failure = state.error
+        if (failure != null && state.methods.isEmpty()) {
+            Box(Modifier.fillMaxSize().padding(padding)) {
+                ErrorState(error = failure, onRetry = viewModel::refresh)
             }
             return@Scaffold
         }
@@ -162,6 +184,7 @@ fun LoginScreen(
             val passkeyFallback = stringResource(R.string.login_method_passkey)
             PasskeysSection(
                 passkeys = state.passkeys,
+                turnedOff = turnedOff(state.methods["passkey"]),
                 onRegister = { name -> viewModel.registerPasskey(name, passkeyFallback) },
                 onRename = viewModel::renamePasskey,
                 onDelete = viewModel::deletePasskey,
@@ -170,6 +193,7 @@ fun LoginScreen(
 
             TotpSection(
                 enabled = state.totpEnabled,
+                turnedOff = turnedOff(state.methods["totp"]),
                 onSetup = viewModel::beginTotpSetup,
                 onDisable = viewModel::disableTotp,
             )
@@ -185,22 +209,13 @@ fun LoginScreen(
 
             RecoveryCodesSection(
                 count = state.recoveryCount,
+                turnedOff = turnedOff(state.methods["recovery"]),
                 onGenerate = viewModel::generateRecovery,
             )
-
-            state.error?.let { err ->
-                Text(text = err.userMessage(), color = MaterialTheme.colorScheme.error)
-            }
         }
     }
 
-    if (stepUpVisible) {
-        StepUpDialog(
-            client = viewModel.stepUpClient,
-            onDismiss = viewModel::cancelStepUp,
-            onVerified = viewModel::onStepUpVerified,
-        )
-    }
+    StepUpHost(viewModel.stepUp)
 
     totpSetup?.let { setup ->
         TotpSetupDialog(
@@ -275,60 +290,37 @@ private fun LoginRequirementsSection(
             MethodStatePicker(
                 value = info.state,
                 slots = slots,
-                unavailable = unavailable,
                 busy = busy,
                 onPick = { next -> onChange(row.method, next) },
+                unavailable = unavailable,
             )
-        }
-    }
-}
-
-@Composable
-private fun stateLabel(slot: String): String = when (slot) {
-    "disabled" -> stringResource(R.string.system_settings_state_disabled)
-    "allowed" -> stringResource(R.string.system_settings_state_allowed)
-    "required" -> stringResource(R.string.system_settings_state_required)
-    else -> slot
-}
-
-@Composable
-private fun MethodStatePicker(
-    value: String,
-    slots: List<String>,
-    unavailable: Set<String>,
-    busy: Boolean,
-    onPick: (String) -> Unit,
-) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        METHOD_STATE_SLOTS.filter { it in slots }.forEach { slot ->
-            val selected = value == slot
-            val enabled = !busy && !selected && slot !in unavailable
-            if (selected) {
-                MochiButton(onClick = {}, enabled = false, modifier = Modifier.padding(start = 4.dp)) {
-                    Text(stateLabel(slot))
-                }
-            } else {
-                MochiOutlinedButton(
-                    onClick = { onPick(slot) },
-                    enabled = enabled,
-                    modifier = Modifier.padding(start = 4.dp),
-                ) { Text(stateLabel(slot)) }
-            }
         }
     }
 }
 
 // ---------- Passkeys ----------
 
+/** The line under a section whose method the server administrator turned off. */
 @Composable
-private fun PasskeysSection(
+private fun TurnedOffNote(text: String) {
+    Text(
+        text,
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+    )
+}
+
+@Composable
+internal fun PasskeysSection(
     passkeys: List<Passkey>,
+    turnedOff: Boolean,
     onRegister: (String) -> Unit,
     onRename: (String, String) -> Unit,
     onDelete: (String) -> Unit,
 ) {
     var showRegister by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_passkeys))
+    if (turnedOff) TurnedOffNote(stringResource(R.string.account_passkeys_turned_off))
     if (passkeys.isEmpty()) {
         Text(
             stringResource(R.string.account_passkeys_empty),
@@ -345,7 +337,7 @@ private fun PasskeysSection(
         }
     }
     Spacer(Modifier.height(8.dp))
-    MochiOutlinedButton(onClick = { showRegister = true }) {
+    MochiOutlinedButton(onClick = { showRegister = true }, enabled = !turnedOff) {
         Icon(Icons.Default.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
         Spacer(Modifier.width(ButtonDefaults.IconSpacing))
         Text(stringResource(R.string.account_passkey_register))
@@ -450,9 +442,10 @@ private fun PasskeyRow(
 // ---------- Authenticator app ----------
 
 @Composable
-private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> Unit) {
+internal fun TotpSection(enabled: Boolean, turnedOff: Boolean, onSetup: () -> Unit, onDisable: () -> Unit) {
     var confirmDisable by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_totp))
+    if (turnedOff) TurnedOffNote(stringResource(R.string.account_totp_turned_off))
     if (enabled) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
@@ -465,7 +458,7 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
             }
         }
     } else {
-        MochiOutlinedButton(onClick = onSetup) {
+        MochiOutlinedButton(onClick = onSetup, enabled = !turnedOff) {
             Icon(Icons.Default.Lock, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.account_totp_setup))
@@ -558,9 +551,10 @@ internal fun TotpSetupDialog(
 // ---------- Recovery codes ----------
 
 @Composable
-internal fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
+internal fun RecoveryCodesSection(count: Int, turnedOff: Boolean = false, onGenerate: () -> Unit) {
     var confirm by remember { mutableStateOf(false) }
     SectionHeader(stringResource(R.string.account_section_recovery))
+    if (turnedOff) TurnedOffNote(stringResource(R.string.account_recovery_turned_off))
     Text(
         if (count > 0) pluralStringResource(R.plurals.account_recovery_count, count, LocalFormat.current.formatNumber(count))
         else stringResource(R.string.account_recovery_none),
@@ -568,9 +562,10 @@ internal fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
     Spacer(Modifier.height(6.dp))
-    MochiOutlinedButton(onClick = {
-        if (count > 0) confirm = true else onGenerate()
-    }) {
+    MochiOutlinedButton(
+        onClick = { if (count > 0) confirm = true else onGenerate() },
+        enabled = !turnedOff,
+    ) {
         Text(
             if (count > 0) stringResource(R.string.account_recovery_regenerate)
             else stringResource(R.string.account_recovery_generate),
@@ -592,10 +587,14 @@ internal fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
     }
 }
 
+/** The codes are shown once, so only Done closes the dialog: a tap beside it
+ *  or Back would lose them. */
 @Composable
-private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDone: () -> Unit) {
+internal fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDone: () -> Unit) {
     MochiAlertDialog(
-        onDismissRequest = onDone,
+        onDismissRequest = {},
+        onDismiss = onDone,
+        properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false),
         title = stringResource(R.string.account_recovery_codes_title),
         content = {
             SecureWindow()
@@ -632,7 +631,7 @@ private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDo
 // ---------- Third-party login (OAuth) ----------
 
 @Composable
-private fun OAuthSection(
+internal fun OAuthSection(
     identities: List<OAuthIdentity>,
     providers: List<String>,
     onUnlink: (String) -> Unit,
@@ -651,10 +650,11 @@ private fun OAuthSection(
             MochiCard(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(modifier = Modifier.weight(1f)) {
-                        Text(oauthProviderLabel(id.provider), fontWeight = FontWeight.SemiBold)
-                        if (id.email.isNotBlank()) {
+                        Text(providerName(id.provider), fontWeight = FontWeight.SemiBold)
+                        val address = id.account.ifBlank { id.email }
+                        if (address.isNotBlank()) {
                             Text(
-                                id.email,
+                                address,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -670,7 +670,7 @@ private fun OAuthSection(
                 MochiAlertDialog(
                     onDismissRequest = { confirm = false },
                     title = stringResource(R.string.account_oauth_unlink_title),
-                    text = stringResource(R.string.account_oauth_unlink_message, oauthProviderLabel(id.provider)),
+                    text = unlinkMessage(id),
                     confirmText = stringResource(R.string.account_unlink),
                     onConfirm = {
                         confirm = false
@@ -706,7 +706,7 @@ private fun OAuthSection(
                                 },
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
-                                Text(oauthProviderLabel(provider))
+                                Text(providerName(provider))
                             }
                         }
                     }
@@ -748,16 +748,17 @@ internal fun UsageLines(created: Long = 0, used: Long = 0, never: Boolean = fals
     }
 }
 
-/** Proper brand casing for OAuth providers, mirroring web's
- *  `oauthProviderLabel`. Brand names stay verbatim (not localised). */
-private fun oauthProviderLabel(provider: String): String = when (provider.lowercase()) {
-    "github" -> "GitHub"
-    "google" -> "Google"
-    "facebook" -> "Facebook"
-    "microsoft" -> "Microsoft"
-    "x" -> "X"
-    else -> provider.replaceFirstChar { it.uppercase() }
-}
+/**
+ * What unlinking [identity]'s sign-in takes away. A network's sign-in names
+ * the linked account it signs in with, which stays linked.
+ */
+@Composable
+internal fun unlinkMessage(identity: OAuthIdentity): String =
+    if (identity.account.isNotBlank()) {
+        stringResource(R.string.account_oauth_unlink_network, identity.account)
+    } else {
+        stringResource(R.string.account_oauth_unlink_message, providerName(identity.provider))
+    }
 
 @Composable
 private fun SectionHeader(text: String) {

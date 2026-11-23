@@ -94,6 +94,7 @@
     <string name="account_oauth_link_title">連結提供者</string>
     <string name="account_oauth_unlink_title">解除連結帳戶?</string>
     <string name="account_oauth_unlink_message">你將無法使用 %1$s 登入。</string>
+    <string name="account_oauth_unlink_network">你將無法使用 %1$s 登入，但帳戶仍會保持連結。</string>
     <string name="account_done">完成</string>
     <string name="account_rename">重新命名</string>
     <string name="account_disable">停用</string>
@@ -171,10 +172,7 @@
     <string name="system_status_install_update">安裝更新</string>
     <string name="system_status_download_installer">下載安裝程式</string>
     <string name="system_status_download_from_packages">從 packages.mochi-os.org 下載</string>
-    <string name="accounts_field_email">電郵</string>
-    <string name="accounts_field_api_key">API 金鑰</string>
     <string name="accounts_field_model">模型</string>
-    <string name="accounts_field_url">伺服器網址</string>
     <string name="accounts_status_connected">已連接</string>
     <string name="accounts_default_for_ai">預設 AI</string>
     <string name="accounts_set_default_ai">設為預設 AI</string>
@@ -343,15 +341,9 @@
     <string name="account_data_passphrase_hint">您的私鑰已包含在內，使用此密碼短語加密。請妥善保存。還原時將需要用到它。</string>
     <string name="route_target_none">沒有可用的目標</string>
     <string name="accounts_verified">賬戶已驗證</string>
-    <string name="accounts_provider_url">外部網址</string>
-    <string name="accounts_provider_web">Mochi 網頁版</string>
     <string name="account_oauth_link_failed">無法關聯賬戶</string>
     <string name="account_data_generate">生成密語</string>
     <string name="account_totp_open">在驗證器應用程式中開啟</string>
-    <string name="accounts_field_server">伺服器網址</string>
-    <string name="accounts_field_token">存取權杖</string>
-    <string name="accounts_field_topic">主題</string>
-    <string name="accounts_field_secret">簽署密鑰</string>
     <string name="networks_account_updated">賬戶已更新</string>
     <string name="networks_connected">已連結</string>
     <string name="networks_alias_field">其他地方的賬戶</string>

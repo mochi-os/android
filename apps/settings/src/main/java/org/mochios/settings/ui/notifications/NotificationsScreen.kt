@@ -18,7 +18,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.DoneAll
@@ -59,6 +61,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -83,8 +86,8 @@ fun NotificationsScreen(
     var showClearConfirm by remember { mutableStateOf(false) }
     val snackbar = remember { SnackbarHostState() }
 
-    // A failed recategorisation is reported over the list rather than replacing
-    // it: the notifications loaded fine, and only the picker's own call failed.
+    // A failure while notifications are held is reported over the list rather
+    // than replacing it; with nothing held, the error state below says it.
     LaunchedEffect(uiState.error) {
         val failure = uiState.error
         if (failure != null && uiState.items.isNotEmpty()) {
@@ -152,10 +155,6 @@ fun NotificationsScreen(
         // individual notifications are read (the server unreadCount only
         // refreshes on load / mark-all-read).
         val unreadCount = uiState.items.count { it.isUnread }
-        val displayItems = when (uiState.tab) {
-            NotificationsTab.UNREAD -> uiState.items.filter { it.isUnread }
-            NotificationsTab.ALL -> uiState.items
-        }
 
         Column(
             Modifier
@@ -177,64 +176,15 @@ fun NotificationsScreen(
                 onSelect = { index -> viewModel.setTab(NotificationsTab.entries[index]) },
             )
 
-            when {
-                uiState.isLoading && uiState.items.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
-                }
-
-                displayItems.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = stringResource(
-                                if (uiState.tab == NotificationsTab.UNREAD) {
-                                    R.string.notifications_empty_unread
-                                } else {
-                                    R.string.notifications_empty
-                                },
-                            ),
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
-                }
-
-                else -> {
-                    PullToRefreshBox(
-                        isRefreshing = uiState.isRefreshing,
-                        onRefresh = { viewModel.refresh() },
-                        modifier = Modifier.fillMaxSize(),
-                    ) {
-                        LazyColumn(
-                            modifier = Modifier.fillMaxSize(),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
-                            verticalArrangement = Arrangement.spacedBy(6.dp),
-                        ) {
-                            items(displayItems, key = { it.id }) { n ->
-                                val topic = uiState.topicFor(n)
-                                NotificationCard(
-                                    notification = n,
-                                    onClick = {
-                                        if (n.read == 0L) viewModel.markRead(n.id)
-                                        if (n.link.isNotBlank()) onOpenLink(n.link)
-                                    },
-                                ) {
-                                    // Only offered when the server already holds a topic row: the
-                                    // set-category call requires one and does not create it, so
-                                    // without a row the control could not do anything.
-                                    if (topic != null && uiState.categories.isNotEmpty()) {
-                                        CategoryPicker(
-                                            topic = topic,
-                                            categories = uiState.categories,
-                                            onSetCategory = { row, id -> viewModel.setCategory(row, id) },
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            NotificationsBody(
+                uiState = uiState,
+                onRefresh = { viewModel.refresh() },
+                onOpen = { n ->
+                    if (n.read == 0L) viewModel.markRead(n.id)
+                    if (n.link.isNotBlank()) onOpenLink(n.link)
+                },
+                onSetCategory = { row, id -> viewModel.setCategory(row, id) },
+            )
         }
     }
 
@@ -251,6 +201,84 @@ fun NotificationsScreen(
             destructive = true,
             dismissText = stringResource(R.string.common_cancel),
         )
+    }
+}
+
+/**
+ * The list under the tabs: a spinner while the first read runs, an error
+ * with Retry when it failed and nothing is held, and otherwise the rows of
+ * the tab, or its empty line, under pull-to-refresh.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+internal fun NotificationsBody(
+    uiState: NotificationsUiState,
+    onRefresh: () -> Unit,
+    onOpen: (MochiNotification) -> Unit,
+    onSetCategory: (NotifTopic, String?) -> Unit,
+) {
+    val displayItems = when (uiState.tab) {
+        NotificationsTab.UNREAD -> uiState.items.filter { it.isUnread }
+        NotificationsTab.ALL -> uiState.items
+    }
+    val failure = uiState.error
+    when {
+        uiState.isLoading && uiState.items.isEmpty() -> {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        }
+
+        // Nothing held and the read failed: say so, rather than claim there
+        // is nothing to read.
+        failure != null && uiState.items.isEmpty() -> ErrorState(error = failure, onRetry = onRefresh)
+
+        else -> PullToRefreshBox(
+            isRefreshing = uiState.isRefreshing,
+            onRefresh = onRefresh,
+            modifier = Modifier.fillMaxSize(),
+        ) {
+            if (displayItems.isEmpty()) {
+                // Scrollable, so a pull reaches the box around it.
+                Box(
+                    Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = stringResource(
+                            if (uiState.tab == NotificationsTab.UNREAD) {
+                                R.string.notifications_empty_unread
+                            } else {
+                                R.string.notifications_empty
+                            },
+                        ),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            } else {
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    items(displayItems, key = { it.id }) { n ->
+                        val topic = uiState.topicFor(n)
+                        NotificationCard(notification = n, onClick = { onOpen(n) }) {
+                            // Only offered when the server already holds a topic row: the
+                            // set-category call requires one and does not create it, so
+                            // without a row the control could not do anything.
+                            if (topic != null && uiState.categories.isNotEmpty()) {
+                                CategoryPicker(
+                                    topic = topic,
+                                    categories = uiState.categories,
+                                    onSetCategory = onSetCategory,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

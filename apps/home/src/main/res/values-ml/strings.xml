@@ -5,6 +5,9 @@
     <string name="home_menu_user">ഉപയോക്താവ്</string>
     <string name="home_menu_empty">വായിക്കാത്ത അറിയിപ്പുകളൊന്നുമില്ല</string>
     <string name="home_menu_view_all">എല്ലാം കാണുക</string>
+    <string name="home_menu_read_failed">അറിയിപ്പ് വായിച്ചതായി അടയാളപ്പെടുത്താനായില്ല</string>
+    <string name="home_menu_read_all_failed">എല്ലാ അറിയിപ്പുകളും വായിച്ചതായി അടയാളപ്പെടുത്താനായില്ല</string>
+    <string name="home_menu_category_failed">വിഭാഗം പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="home_menu_no_topic">വിഷയ റെക്കോർഡ് ഇതുവരെയില്ല — അടുത്ത അറിയിപ്പിന് ശേഷം വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="home_menu_manage_categories">വിഭാഗങ്ങൾ നിയന്ത്രിക്കുക</string>
 </resources>

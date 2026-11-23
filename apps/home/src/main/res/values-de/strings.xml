@@ -5,6 +5,9 @@
     <string name="home_menu_user">Benutzer</string>
     <string name="home_menu_empty">Keine ungelesenen Benachrichtigungen</string>
     <string name="home_menu_view_all">Alle anzeigen</string>
+    <string name="home_menu_read_failed">Benachrichtigung konnte nicht als gelesen markiert werden</string>
+    <string name="home_menu_read_all_failed">Benachrichtigungen konnten nicht alle als gelesen markiert werden</string>
+    <string name="home_menu_category_failed">Kategorie konnte nicht aktualisiert werden</string>
     <string name="home_menu_no_topic">Noch kein Themaeintrag — versuchen Sie es nach der nächsten Benachrichtigung erneut.</string>
     <string name="home_menu_manage_categories">Kategorien verwalten</string>
 </resources>

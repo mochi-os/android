@@ -35,6 +35,14 @@
     <string name="common_subscribe">Berlangganan</string>
     <string name="common_copy">Salin</string>
     <string name="common_copied">Disalin ke clipboard</string>
+    <string name="provider_browser">Notifikasi browser</string>
+    <string name="provider_caldav">Server kalender</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Notifikasi push</string>
+    <string name="provider_url">URL eksternal</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(disunting)</string>
     <string name="comment_reply">Balas</string>
     <string name="person_picker_search">Cari pengguna</string>

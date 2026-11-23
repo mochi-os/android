@@ -35,6 +35,14 @@
     <string name="common_subscribe">Բաժանորդագրվել</string>
     <string name="common_copy">Պատճենել</string>
     <string name="common_copied">Պատճենվեց սեղմատախտակին</string>
+    <string name="provider_browser">Բրաուզերի ծանուցումներ</string>
+    <string name="provider_caldav">Օրացույցի սերվեր</string>
+    <string name="provider_email">Էլ․ փոստ</string>
+    <string name="provider_fcm">Android պուշ-ծանուցումներ</string>
+    <string name="provider_mcp">MCP սերվեր</string>
+    <string name="provider_unifiedpush">Պուշ-ծանուցում</string>
+    <string name="provider_url">Արտաքին URL</string>
+    <string name="provider_web">Mochi վեբ</string>
     <string name="comment_edited">(խմբագրված)</string>
     <string name="comment_reply">Պատասխանել</string>
     <string name="person_picker_search">Որոնել օգտատերեր</string>

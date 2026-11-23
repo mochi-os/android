@@ -5,6 +5,9 @@
     <string name="home_menu_user">Umsebenzisi</string>
     <string name="home_menu_empty">Azikho izaziso ezingafundiwe</string>
     <string name="home_menu_view_all">Buka konke</string>
+    <string name="home_menu_read_failed">Kuhlulekile ukumaka isaziso njengesifundiwe</string>
+    <string name="home_menu_read_all_failed">Kuhlulekile ukumaka zonke izaziso njengezifundiwe</string>
+    <string name="home_menu_category_failed">Kuhlulekile ukubuyekeza isigaba</string>
     <string name="home_menu_no_topic">Awukho umbiko wesihloko okwamanje — zama futhi ngemva kwesaziso esilandelayo.</string>
     <string name="home_menu_manage_categories">Phatha izigaba</string>
 </resources>

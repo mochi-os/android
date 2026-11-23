@@ -35,6 +35,14 @@
     <string name="common_subscribe">Forúkọsílẹ̀</string>
     <string name="common_copy">Ṣe àdàkọ</string>
     <string name="common_copied">A ti ṣe àdàkọ sí clipboard</string>
+    <string name="provider_browser">Àwọn ìfitónilétí browser</string>
+    <string name="provider_caldav">Sáfà kàlẹ́ńdà</string>
+    <string name="provider_email">Ímẹ́ẹ̀lì</string>
+    <string name="provider_fcm">Ìfitónilétí push Android</string>
+    <string name="provider_mcp">Sáfà MCP</string>
+    <string name="provider_unifiedpush">Ìfitónilétí push</string>
+    <string name="provider_url">URL òde</string>
+    <string name="provider_web">Web Mochi</string>
     <string name="comment_edited">(a tunṣe)</string>
     <string name="comment_reply">Dáhùn</string>
     <string name="person_picker_search">Wá àwọn user</string>

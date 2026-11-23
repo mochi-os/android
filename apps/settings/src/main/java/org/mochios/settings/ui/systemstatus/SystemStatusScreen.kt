@@ -5,9 +5,6 @@
 
 package org.mochios.settings.ui.systemstatus
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -52,7 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.CopyButton
-import org.mochios.android.util.webUri
+import org.mochios.android.util.openWeb
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
@@ -211,7 +208,7 @@ fun SystemStatusScreen(
                             isInstalling = state.isInstalling,
                             installError = state.installError?.userMessage(),
                             onInstall = { viewModel.installUpdate() },
-                            onOpen = { openUrl(context, it) },
+                            onOpen = { openWeb(context, it) },
                         )
                     }
                     state.networks?.let { networks ->
@@ -501,12 +498,4 @@ private fun formatSystemTimestamp(epochSeconds: Long): String {
     val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
     sdf.timeZone = TimeZone.getDefault()
     return sdf.format(Date(epochSeconds * 1000))
-}
-
-private fun openUrl(context: Context, url: String) {
-    val target = webUri(url) ?: return
-    val intent = Intent(Intent.ACTION_VIEW, target).apply {
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    }
-    context.startActivity(intent)
 }

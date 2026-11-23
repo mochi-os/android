@@ -51,8 +51,8 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.ZonePicker
-import org.mochios.android.util.LanguageCompare
 import org.mochios.android.util.Zones
+import org.mochios.android.util.languageChoices
 import java.text.Normalizer
 import java.util.Locale
 
@@ -172,29 +172,6 @@ private fun timezoneOptions(): List<Pair<String, String>> =
     listOf("auto" to stringResource(R.string.settings_value_auto))
 
 /**
- * Overrides where the platform's display name is not Mochi's wording; mirrors
- * the map in apps/settings/web/src/features/user/preferences.tsx.
- */
-private val LANGUAGE_NAMES = mapOf(
-    "en" to "English (international)",
-    "en-us" to "English (USA)",
-    "es" to "Español (España)",
-    "es-419" to "Español (latinoamericano)",
-)
-
-/**
- * Each language renders as its own native name, so a reader recognises theirs
- * by sight without already being able to read the current UI language.
- */
-private fun languageName(tag: String): String {
-    LANGUAGE_NAMES[tag.lowercase()]?.let { return it }
-    val locale = Locale.forLanguageTag(tag)
-    val native = locale.getDisplayName(locale)
-    if (native.isBlank()) return tag
-    return native.replaceFirstChar { it.titlecase(locale) }
-}
-
-/**
  * The automatic choice is stored as "auto", as the web stores it: the server
  * skips a blank value, so a blank could never clear a language once set.
  * [current] is included even if the server does not list it, so a saved value
@@ -207,11 +184,7 @@ internal fun languageOptions(
 ): List<Pair<String, String>> {
     val installed = (tags + current)
         .filter { it.isNotBlank() && !it.equals("auto", ignoreCase = true) }
-        .distinct()
-    val sorted = installed
-        .map { it to languageName(it) }
-        .sortedWith(compareBy(LanguageCompare) { it.second })
-    return listOf("auto" to defaultLabel) + sorted
+    return listOf("auto" to defaultLabel) + languageChoices(installed)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

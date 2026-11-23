@@ -35,6 +35,14 @@
     <string name="common_subscribe">구독</string>
     <string name="common_copy">복사</string>
     <string name="common_copied">클립보드에 복사되었어요</string>
+    <string name="provider_browser">브라우저 알림</string>
+    <string name="provider_caldav">캘린더 서버</string>
+    <string name="provider_email">이메일</string>
+    <string name="provider_fcm">Android 푸시</string>
+    <string name="provider_mcp">MCP 서버</string>
+    <string name="provider_unifiedpush">푸시 알림</string>
+    <string name="provider_url">외부 URL</string>
+    <string name="provider_web">Mochi 웹</string>
     <string name="comment_edited">(편집됨)</string>
     <string name="comment_reply">답글</string>
     <string name="person_picker_search">사용자 검색</string>

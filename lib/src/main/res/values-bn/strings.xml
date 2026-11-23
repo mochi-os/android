@@ -35,6 +35,14 @@
     <string name="common_subscribe">সাবস্ক্রাইব করুন</string>
     <string name="common_copy">কপি করুন</string>
     <string name="common_copied">ক্লিপবোর্ডে কপি করা হয়েছে</string>
+    <string name="provider_browser">ব্রাউজার নোটিফিকেশন</string>
+    <string name="provider_caldav">ক্যালেন্ডার সার্ভার</string>
+    <string name="provider_email">ইমেইল</string>
+    <string name="provider_fcm">Android পুশ</string>
+    <string name="provider_mcp">MCP সার্ভার</string>
+    <string name="provider_unifiedpush">পুশ বিজ্ঞপ্তি</string>
+    <string name="provider_url">বাহ্যিক URL</string>
+    <string name="provider_web">Mochi ওয়েব</string>
     <string name="comment_edited">(সম্পাদিত)</string>
     <string name="comment_reply">উত্তর দিন</string>
     <string name="person_picker_search">ব্যবহারকারী অনুসন্ধান করুন</string>

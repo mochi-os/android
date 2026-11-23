@@ -35,6 +35,14 @@
     <string name="common_subscribe">Захиалах</string>
     <string name="common_copy">Хуулах</string>
     <string name="common_copied">Хуулбарласан</string>
+    <string name="provider_browser">Хөтчийн мэдэгдэл</string>
+    <string name="provider_caldav">Хуанлийн сервер</string>
+    <string name="provider_email">Имэйл</string>
+    <string name="provider_fcm">Android пуш мэдэгдэл</string>
+    <string name="provider_mcp">MCP сервер</string>
+    <string name="provider_unifiedpush">Пуш мэдэгдэл</string>
+    <string name="provider_url">Гадаад URL</string>
+    <string name="provider_web">Mochi веб</string>
     <string name="comment_edited">(засварласан)</string>
     <string name="comment_reply">Хариулах</string>
     <string name="person_picker_search">Хэрэглэгчид хайх</string>

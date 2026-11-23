@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abonner</string>
     <string name="common_copy">Kopier</string>
     <string name="common_copied">Kopiert til utklippstavlen</string>
+    <string name="provider_browser">Nettleservarsler</string>
+    <string name="provider_caldav">Kalenderserver</string>
+    <string name="provider_email">E-post</string>
+    <string name="provider_fcm">Android-push</string>
+    <string name="provider_mcp">MCP-server</string>
+    <string name="provider_unifiedpush">Push-varsel</string>
+    <string name="provider_url">Ekstern URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(redigert)</string>
     <string name="comment_reply">Svar</string>
     <string name="person_picker_search">Søk i brukere</string>

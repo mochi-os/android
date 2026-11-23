@@ -35,6 +35,14 @@
     <string name="common_subscribe">Jiunge</string>
     <string name="common_copy">Nakili</string>
     <string name="common_copied">Imenakiliwa kwenye ubao wa kunakili</string>
+    <string name="provider_browser">Arifa za kivinjari</string>
+    <string name="provider_caldav">Seva ya kalenda</string>
+    <string name="provider_email">Barua pepe</string>
+    <string name="provider_fcm">Push ya Android</string>
+    <string name="provider_mcp">Seva ya MCP</string>
+    <string name="provider_unifiedpush">Arifa ya push</string>
+    <string name="provider_url">URL ya nje</string>
+    <string name="provider_web">Mochi wavuti</string>
     <string name="comment_edited">(imehaririwa)</string>
     <string name="comment_reply">Jibu</string>
     <string name="person_picker_search">Tafuta watumiaji</string>

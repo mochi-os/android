@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abonnieren</string>
     <string name="common_copy">Kopieren</string>
     <string name="common_copied">In die Zwischenablage kopiert</string>
+    <string name="provider_browser">Browser-Benachrichtigungen</string>
+    <string name="provider_caldav">Kalenderserver</string>
+    <string name="provider_email">E-Mail</string>
+    <string name="provider_fcm">Android-Push</string>
+    <string name="provider_mcp">MCP-Server</string>
+    <string name="provider_unifiedpush">Push-Benachrichtigung</string>
+    <string name="provider_url">Externe URL</string>
+    <string name="provider_web">Mochi Web</string>
     <string name="comment_edited">(bearbeitet)</string>
     <string name="comment_reply">Antworten</string>
     <string name="person_picker_search">Benutzer suchen</string>

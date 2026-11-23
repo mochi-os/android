@@ -47,15 +47,16 @@ private const val AVAILABILITY_DELAY = 400L
 
 /**
  * The check a name field runs as the user types, and its answer: the answer
- * for the name as it stands, and whether one is still coming.
+ * for the name as it stands, or why the server gave none, and whether one is
+ * still coming.
  */
 @Composable
 internal fun rememberAvailability(
     name: String,
     domain: String,
-    check: suspend (String, String) -> Availability?,
-): Pair<Availability?, Boolean> {
-    var result by remember { mutableStateOf<Availability?>(null) }
+    check: suspend (String, String) -> Result<Availability>,
+): Pair<Result<Availability>?, Boolean> {
+    var result by remember { mutableStateOf<Result<Availability>?>(null) }
     var checking by remember { mutableStateOf(false) }
     LaunchedEffect(name, domain) {
         result = null
@@ -71,17 +72,22 @@ internal fun rememberAvailability(
     return result to checking
 }
 
-/** Under a name field: checking, available, or why not. */
+/** Under a name field: checking, available, why not, or why the server could not say. */
 @Composable
-internal fun AvailabilityNote(result: Availability?, checking: Boolean) {
+internal fun AvailabilityNote(result: Result<Availability>?, checking: Boolean) {
+    val answer = result?.getOrNull()
     val (text, color) = when {
         checking -> stringResource(R.string.networks_checking) to MaterialTheme.colorScheme.onSurfaceVariant
         result == null -> return
-        result.available -> stringResource(R.string.networks_available) to MaterialTheme.colorScheme.primary
-        else -> availabilityReason(result.reason) to MaterialTheme.colorScheme.error
+        answer == null -> failureText(result.exceptionOrNull()!!, R.string.networks_check_failed) to MaterialTheme.colorScheme.error
+        answer.available -> stringResource(R.string.networks_available) to MaterialTheme.colorScheme.primary
+        else -> availabilityReason(answer.reason) to MaterialTheme.colorScheme.error
     }
     Text(text, style = MaterialTheme.typography.bodySmall, color = color)
 }
+
+/** Whether a check's answer lets the name be taken. */
+internal fun Result<Availability>?.free(): Boolean = this?.getOrNull()?.available == true
 
 /**
  * Choosing a handle: the field with its live check, a suggestion from the
@@ -94,7 +100,7 @@ internal fun HandleChooser(
     suggestion: String,
     title: String,
     reserving: Boolean,
-    check: suspend (String, String) -> Availability?,
+    check: suspend (String, String) -> Result<Availability>,
     onReserve: (name: String, domain: String, onReserved: () -> Unit) -> Unit,
 ) {
     var name by remember(suggestion) { mutableStateOf(suggestion) }
@@ -146,7 +152,7 @@ internal fun HandleChooser(
             }
             MochiButton(
                 onClick = { confirming = true },
-                enabled = result?.available == true && !checking && !reserving,
+                enabled = result.free() && !checking && !reserving,
             ) {
                 if (reserving) {
                     CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)

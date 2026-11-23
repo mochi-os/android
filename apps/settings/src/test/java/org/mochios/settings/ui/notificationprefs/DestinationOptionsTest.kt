@@ -10,10 +10,13 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.notifications.DestinationRow
+import org.mochios.settings.api.DestinationAccount
 import org.mochios.settings.api.DestinationFeed
 import org.mochios.settings.api.DestinationsAvailable
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
@@ -39,6 +42,25 @@ class DestinationOptionsTest {
         assertEquals(
             listOf("one", "two", "ten"),
             options.map { (row, _) -> row }.filter { it.type == "rss" }.map { it.target },
+        )
+    }
+
+    /** A push account bound to no device used to name its transport by its stored type: "Chrome · browser". */
+    @Test
+    fun `a push account bound to no device names its transport in words`() {
+        AppContext.set(RuntimeEnvironment.getApplication())
+        val available = DestinationsAvailable(
+            accounts = listOf(
+                DestinationAccount(id = "b", type = "browser", label = "Chrome"),
+                DestinationAccount(id = "u", type = "unifiedpush"),
+            ),
+        )
+        var options: List<Pair<DestinationRow, String>> = emptyList()
+        rule.setContent { options = destinationOptions(available) }
+        rule.waitForIdle()
+        assertEquals(
+            listOf("Chrome · Browser notifications", "Push notification"),
+            options.filter { (row, _) -> row.type == "account" }.map { (_, label) -> label },
         )
     }
 

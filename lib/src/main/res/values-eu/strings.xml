@@ -35,6 +35,14 @@
     <string name="common_subscribe">Harpidetu</string>
     <string name="common_copy">Kopiatu</string>
     <string name="common_copied">Arbelera kopiatu da</string>
+    <string name="provider_browser">Nabigatzaile jakinarazpenak</string>
+    <string name="provider_caldav">Egutegi-zerbitzaria</string>
+    <string name="provider_email">Posta elektronikoa</string>
+    <string name="provider_fcm">Android push jakinarazpenak</string>
+    <string name="provider_mcp">MCP zerbitzaria</string>
+    <string name="provider_unifiedpush">Push jakinarazpena</string>
+    <string name="provider_url">Kanpoko URLa</string>
+    <string name="provider_web">Mochi weba</string>
     <string name="comment_edited">(editatua)</string>
     <string name="comment_reply">Erantzun</string>
     <string name="person_picker_search">Bilatu erabiltzaileak</string>

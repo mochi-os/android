@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abonohu</string>
     <string name="common_copy">Kopjo</string>
     <string name="common_copied">U kopjua në kujtesën e fragmenteve</string>
+    <string name="provider_browser">Njoftime të shfletuesit</string>
+    <string name="provider_caldav">Server kalendari</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Server MCP</string>
+    <string name="provider_unifiedpush">Njoftim push</string>
+    <string name="provider_url">URL e jashtme</string>
+    <string name="provider_web">Mochi në shfletues</string>
     <string name="comment_edited">(redaktuar)</string>
     <string name="comment_reply">Përgjigju</string>
     <string name="person_picker_search">Kërko përdorues</string>

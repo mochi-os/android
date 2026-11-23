@@ -27,8 +27,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -53,6 +51,8 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 
@@ -107,14 +107,14 @@ fun SystemBlocksScreen(
                 ) {
                     item("add") {
                         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            OutlinedTextField(
+                            MochiTextField(
                                 value = target,
                                 onValueChange = { target = it },
                                 label = { Text(stringResource(R.string.blocks_target)) },
                                 singleLine = true,
                                 modifier = Modifier.fillMaxWidth(),
                             )
-                            OutlinedButton(
+                            MochiOutlinedButton(
                                 onClick = { viewModel.block(target) { target = "" } },
                                 enabled = target.isNotBlank() && "add" !in state.busy,
                             ) {

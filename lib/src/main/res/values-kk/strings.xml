@@ -35,6 +35,14 @@
     <string name="common_subscribe">Жазылу</string>
     <string name="common_copy">Көшіру</string>
     <string name="common_copied">Алмасу буферіне көшірілді</string>
+    <string name="provider_browser">Браузер хабарландырулары</string>
+    <string name="provider_caldav">Күнтізбе сервері</string>
+    <string name="provider_email">Электрондық пошта</string>
+    <string name="provider_fcm">Android push хабарландыруы</string>
+    <string name="provider_mcp">MCP сервері</string>
+    <string name="provider_unifiedpush">Push хабарландыруы</string>
+    <string name="provider_url">Сыртқы URL</string>
+    <string name="provider_web">Mochi веб</string>
     <string name="comment_edited">(өңделді)</string>
     <string name="comment_reply">Жауап беру</string>
     <string name="person_picker_search">Қолданушыларды іздеу</string>

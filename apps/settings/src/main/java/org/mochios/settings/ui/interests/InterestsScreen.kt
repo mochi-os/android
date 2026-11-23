@@ -42,7 +42,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,6 +53,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButtonTone
@@ -62,6 +65,7 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Interest
 import org.mochios.settings.api.InterestSearchResult
+import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -99,10 +103,10 @@ fun InterestsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                state.isLoading && state.interests.isEmpty() -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 state.error != null && state.interests.isEmpty() -> ErrorState(
                     error = state.error!!,
-                    onRetry = viewModel::refresh,
+                    onRetry = { viewModel.refresh() },
                 )
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),
@@ -120,7 +124,9 @@ fun InterestsScreen(
                             query = state.searchQuery,
                             results = state.searchResults,
                             isSearching = state.isSearching,
-                            searchError = state.searchError?.userMessage(),
+                            searchError = state.searchError?.messageOrFallback(
+                                stringResource(R.string.interests_search_failed),
+                            ),
                             onQueryChange = viewModel::onSearchQueryChange,
                             onSelect = viewModel::add,
                         )
@@ -211,15 +217,10 @@ private fun SearchSection(
                     CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
                 }
             },
+            // Why the search failed: the server's reason, else the fixed line.
+            isError = searchError != null,
+            supportingText = searchError?.let { message -> { Text(message) } },
         )
-        if (searchError != null) {
-            Text(
-                text = stringResource(R.string.interests_search_failed),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.padding(top = 4.dp, start = 4.dp),
-            )
-        }
         if (results.isNotEmpty()) {
             Spacer(Modifier.height(8.dp))
             MochiCard {
@@ -253,13 +254,26 @@ private fun SearchSection(
     }
 }
 
+/**
+ * The weight a slider position stands for. Rounded, not truncated: the
+ * slider's float arithmetic can put a tick just short of its ten (29.999998).
+ */
+internal fun sliderWeight(value: Float): Int = value.roundToInt()
+
+/**
+ * One interest with its weight. The slider moves the row only while it is
+ * dragged, and [onWeightChange] is called once, with the weight it was let go
+ * at, as the web saves on release.
+ */
 @Composable
-private fun InterestRow(
+internal fun InterestRow(
     interest: Interest,
     onWeightChange: (Int) -> Unit,
     onRemove: () -> Unit,
 ) {
-    val weightColor = interestColor(interest.weight.toDouble())
+    var dragged by remember(interest.qid) { mutableStateOf<Int?>(null) }
+    val weight = dragged ?: interest.weight
+    val weightColor = interestColor(weight.toDouble())
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -270,7 +284,7 @@ private fun InterestRow(
                     modifier = Modifier.weight(1f),
                 )
                 Text(
-                    text = if (interest.weight > 0) "+${interest.weight}" else "${interest.weight}",
+                    text = if (weight > 0) "+$weight" else "$weight",
                     style = MaterialTheme.typography.labelMedium,
                     color = weightColor,
                     modifier = Modifier
@@ -287,8 +301,12 @@ private fun InterestRow(
                 }
             }
             Slider(
-                value = interest.weight.toFloat(),
-                onValueChange = { onWeightChange(it.toInt()) },
+                value = weight.toFloat(),
+                onValueChange = { dragged = sliderWeight(it) },
+                onValueChangeFinished = {
+                    dragged?.let(onWeightChange)
+                    dragged = null
+                },
                 valueRange = -100f..100f,
                 steps = 19, // 20 segments at step 10 between -100 and 100
                 modifier = Modifier.fillMaxWidth(),

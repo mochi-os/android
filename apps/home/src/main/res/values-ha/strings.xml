@@ -5,6 +5,9 @@
     <string name="home_menu_user">Mai amfani</string>
     <string name="home_menu_empty">Babu sanarwa marasa karantawa</string>
     <string name="home_menu_view_all">Kalli duka</string>
+    <string name="home_menu_read_failed">An kasa yiwa sanarwar alama a matsayin an karanta</string>
+    <string name="home_menu_read_all_failed">An kasa yiwa duk sanarwa alama a matsayin an karanta</string>
+    <string name="home_menu_category_failed">An gaza sabunta category</string>
     <string name="home_menu_no_topic">Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba.</string>
     <string name="home_menu_manage_categories">Sarrafa rukunoni</string>
 </resources>

@@ -122,6 +122,11 @@ class OwnerViewModelsTest {
         Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build()
     }
 
+    private fun handlesModel() = SystemHandlesViewModel(
+        retrofit.create(NetworksApi::class.java),
+        SettingsStepUpClient(retrofit.create(AccountApi::class.java), PasskeyManager(context)),
+    )
+
     private fun until(done: () -> Boolean) {
         val deadline = System.currentTimeMillis() + 5_000
         while (!done()) {
@@ -137,7 +142,7 @@ class OwnerViewModelsTest {
 
     @Test
     fun `the registry is searched and paged on the server, a new search from the first page`() {
-        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        val model = handlesModel()
         until { !model.uiState.value.isLoading }
         assertEquals(mapOf("search" to "", "limit" to "25", "offset" to "0"), registry.last())
         assertEquals(60, model.uiState.value.count)
@@ -173,7 +178,7 @@ class OwnerViewModelsTest {
 
     @Test
     fun `a page left past the end steps back to the last page with handles`() {
-        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        val model = handlesModel()
         until { !model.uiState.value.isLoading }
         model.nextPage()
         until { registry.size == 2 && !model.uiState.value.isLoading }
@@ -236,19 +241,44 @@ class OwnerViewModelsTest {
     fun `a handle released while another's release runs waits for it, both showing busy, instead of being dropped`() {
         val gate = java.util.concurrent.CountDownLatch(1)
         releasing = gate
-        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        val model = handlesModel()
         until { !model.uiState.value.isLoading }
         val (first, second) = model.uiState.value.handles.take(2)
         model.release(first)
+        model.stepUp.onVerified("one")
         until { requests.any { it.first == "settings/-/system/handles/release" } }
         model.release(second)
+        model.stepUp.onVerified("two")
+        until { model.uiState.value.busy.size == 2 }
         assertEquals(setOf("a.example/name0", "a.example/name1"), model.uiState.value.busy)
         settle()
         assertEquals(1, requests.count { it.first == "settings/-/system/handles/release" })
         gate.countDown()
         until { requests.count { it.first == "settings/-/system/handles/release" } == 2 && model.uiState.value.busy.isEmpty() }
-        assertEquals("name1", form("settings/-/system/handles/release")["name"])
+        assertEquals(mapOf("name" to "name1", "domain" to "a.example", "token" to "two"), form("settings/-/system/handles/release"))
         // One at a time, in the order tapped: the second waited for the first's answer.
         assertEquals(listOf("release", "released", "release", "released"), order)
+    }
+
+    @Test
+    fun `a handle is released only with a step-up's proof, which the release carries`() {
+        val model = handlesModel()
+        until { !model.uiState.value.isLoading }
+        model.release(model.uiState.value.handles.first())
+        // THE POINT: nothing is sent before the step-up, and the release carries its proof.
+        assertTrue(model.stepUp.visible.value)
+        settle()
+        assertTrue(requests.none { it.first == "settings/-/system/handles/release" })
+        model.stepUp.onVerified("proof")
+        until { requests.any { it.first == "settings/-/system/handles/release" } && model.uiState.value.busy.isEmpty() }
+        assertEquals(mapOf("name" to "name0", "domain" to "a.example", "token" to "proof"), form("settings/-/system/handles/release"))
+    }
+
+    @Test
+    fun `a name the registry cannot check is a failure, not an answer`() {
+        val model = handlesModel()
+        until { !model.uiState.value.isLoading }
+        // The server here has no availability check, so the check fails.
+        assertTrue(kotlinx.coroutines.runBlocking { model.available("alice", "a.example") }.isFailure)
     }
 }

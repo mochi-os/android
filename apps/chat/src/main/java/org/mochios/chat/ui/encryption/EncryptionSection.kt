@@ -47,6 +47,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -370,6 +371,9 @@ internal fun SetupDialog(
     val shown = setup.recovery.isNotEmpty()
     MochiAlertDialog(
         onDismissRequest = onClose,
+        // The key is shown this once: while it is, only Done closes the
+        // dialog, since a tap beside it or Back would lose it for good.
+        properties = DialogProperties(dismissOnBackPress = !shown, dismissOnClickOutside = !shown),
         title = stringResource(if (shown) R.string.chat_encryption_key_title else R.string.chat_encryption_setup),
         content = when {
             shown -> ({

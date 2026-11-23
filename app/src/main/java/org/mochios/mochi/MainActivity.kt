@@ -971,6 +971,12 @@ open class MainActivity : ComponentActivity() {
                     // and an app opens at a network to set up an account there.
                     val route = SettingsApp.networks(parseQueryParam(query, "network"))
                     if (!navController.isAt(route)) navController.navigate(route) { launchSingleTop = true }
+                } else if (path == "settings/user/account") {
+                    // The web's Settings › Account, which the notification
+                    // that a data export is ready opens to download it.
+                    if (!navController.isAt(SettingsApp.ACCOUNT)) {
+                        navController.navigate(SettingsApp.ACCOUNT) { launchSingleTop = true }
+                    }
                 } else {
                     navController.openAppHome(SettingsApp.HOME)
                 }

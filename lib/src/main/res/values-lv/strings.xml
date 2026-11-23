@@ -35,6 +35,14 @@
     <string name="common_subscribe">Abonēt</string>
     <string name="common_copy">Kopēt</string>
     <string name="common_copied">Nokopēts starpliktuvē</string>
+    <string name="provider_browser">Pārlūka paziņojumi</string>
+    <string name="provider_caldav">Kalendāra serveris</string>
+    <string name="provider_email">E-pasts</string>
+    <string name="provider_fcm">Android push paziņojumi</string>
+    <string name="provider_mcp">MCP serveris</string>
+    <string name="provider_unifiedpush">Push paziņojums</string>
+    <string name="provider_url">Ārējs URL</string>
+    <string name="provider_web">Mochi tīmeklis</string>
     <string name="comment_edited">(rediģēts)</string>
     <string name="comment_reply">Atbildēt</string>
     <string name="person_picker_search">Meklēt lietotājus</string>

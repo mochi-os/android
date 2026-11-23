@@ -95,10 +95,10 @@ fun SessionsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                state.isLoading && !state.hasContent() -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 state.error != null && !state.hasContent() -> ErrorState(
                     error = state.error!!,
-                    onRetry = viewModel::refresh,
+                    onRetry = { viewModel.refresh() },
                 )
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),

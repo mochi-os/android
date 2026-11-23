@@ -35,6 +35,14 @@
     <string name="common_subscribe">Εγγραφή</string>
     <string name="common_copy">Αντιγραφή</string>
     <string name="common_copied">Αντιγράφηκε στο πρόχειρο</string>
+    <string name="provider_browser">Ειδοποιήσεις προγράμματος περιήγησης</string>
+    <string name="provider_caldav">Διακομιστής ημερολογίου</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Ειδοποιήσεις push Android</string>
+    <string name="provider_mcp">Διακομιστής MCP</string>
+    <string name="provider_unifiedpush">Ειδοποίηση push</string>
+    <string name="provider_url">Εξωτερικό URL</string>
+    <string name="provider_web">Mochi στον ιστό</string>
     <string name="comment_edited">(επεξεργάστηκε)</string>
     <string name="comment_reply">Απάντηση</string>
     <string name="person_picker_search">Αναζήτηση χρηστών</string>

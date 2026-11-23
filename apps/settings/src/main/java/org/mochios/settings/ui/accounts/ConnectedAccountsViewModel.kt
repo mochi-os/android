@@ -49,9 +49,13 @@ class ConnectedAccountsViewModel @Inject constructor(
 
     init { refresh() }
 
-    fun refresh() {
+    /**
+     * Read the accounts. A [quiet] read, after an action, leaves the list on
+     * screen while it is read again rather than blanking it to a spinner.
+     */
+    fun refresh(quiet: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            if (!quiet) _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val provs = api.providers().unwrapRaw()
                 val accs = api.list().unwrapRaw()
@@ -62,6 +66,8 @@ class ConnectedAccountsViewModel @Inject constructor(
                     accounts = accs,
                     devices = devs,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -98,7 +104,7 @@ class ConnectedAccountsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).unwrapEmpty()
-                refresh()
+                refresh(quiet = true)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -118,10 +124,6 @@ class ConnectedAccountsViewModel @Inject constructor(
         api.setDefault(account = id, type = "ai").unwrapEmpty()
     }
 
-    fun clearAiDefault(id: String) = mutate {
-        api.setDefault(account = id, type = "").unwrapEmpty()
-    }
-
     fun verify(id: String, code: String) {
         viewModelScope.launch {
             try {
@@ -129,7 +131,9 @@ class ConnectedAccountsViewModel @Inject constructor(
                 _toasts.emit(
                     string(if (ok) R.string.accounts_verified else R.string.accounts_verify_invalid)
                 )
-                refresh()
+                refresh(quiet = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -141,6 +145,8 @@ class ConnectedAccountsViewModel @Inject constructor(
             try {
                 api.verify(id = id, code = null).unwrapRaw()
                 _toasts.emit(string(R.string.accounts_verify_sent))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -156,6 +162,8 @@ class ConnectedAccountsViewModel @Inject constructor(
                         string(if (result.success) R.string.accounts_test_sent else R.string.accounts_test_failed)
                     }
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -166,7 +174,9 @@ class ConnectedAccountsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 block()
-                refresh()
+                refresh(quiet = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

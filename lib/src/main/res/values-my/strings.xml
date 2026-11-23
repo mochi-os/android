@@ -35,6 +35,14 @@
     <string name="common_subscribe">စာရင်းသွင်းမည်</string>
     <string name="common_copy">ကူးမည်</string>
     <string name="common_copied">ကလစ်ဘုတ်သို့ ကူးပြီး</string>
+    <string name="provider_browser">ဘရောက်ဇာ အကြောင်းကြားချက်များ</string>
+    <string name="provider_caldav">ပြက္ခဒိန် ဆာဗာ</string>
+    <string name="provider_email">အီးမေးလ်</string>
+    <string name="provider_fcm">Android တွန်းပို့ အကြောင်းကြားချက်</string>
+    <string name="provider_mcp">MCP ဆာဗာ</string>
+    <string name="provider_unifiedpush">တွန်းပို့ အကြောင်းကြားချက်</string>
+    <string name="provider_url">ပြင်ပ URL</string>
+    <string name="provider_web">Mochi ဝဘ်</string>
     <string name="comment_edited">(တည်းဖြတ်ပြီး)</string>
     <string name="comment_reply">ပြန်ကြား</string>
     <string name="person_picker_search">သုံးစွဲသူများ ရှာဖွေ</string>

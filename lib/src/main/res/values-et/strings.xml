@@ -35,6 +35,14 @@
     <string name="common_subscribe">Telli</string>
     <string name="common_copy">Kopeeri</string>
     <string name="common_copied">Kopeeritud lõikelauale</string>
+    <string name="provider_browser">Brauseri teavitused</string>
+    <string name="provider_caldav">Kalendriserver</string>
+    <string name="provider_email">E-post</string>
+    <string name="provider_fcm">Androidi tõuketeade</string>
+    <string name="provider_mcp">MCP server</string>
+    <string name="provider_unifiedpush">Tõuketeatis</string>
+    <string name="provider_url">Väline URL</string>
+    <string name="provider_web">Mochi veeb</string>
     <string name="comment_edited">(muudetud)</string>
     <string name="comment_reply">Vasta</string>
     <string name="person_picker_search">Otsi kasutajaid</string>

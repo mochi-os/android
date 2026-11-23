@@ -35,6 +35,14 @@
     <string name="common_subscribe">Tilaa</string>
     <string name="common_copy">Kopioi</string>
     <string name="common_copied">Kopioitu leikepöydälle</string>
+    <string name="provider_browser">Selaimen ilmoitukset</string>
+    <string name="provider_caldav">Kalenteripalvelin</string>
+    <string name="provider_email">Sähköposti</string>
+    <string name="provider_fcm">Android-push</string>
+    <string name="provider_mcp">MCP-palvelin</string>
+    <string name="provider_unifiedpush">Push-ilmoitus</string>
+    <string name="provider_url">Ulkoinen URL-osoite</string>
+    <string name="provider_web">Mochi-verkko</string>
     <string name="comment_edited">(muokattu)</string>
     <string name="comment_reply">Vastaa</string>
     <string name="person_picker_search">Hae käyttäjiä</string>

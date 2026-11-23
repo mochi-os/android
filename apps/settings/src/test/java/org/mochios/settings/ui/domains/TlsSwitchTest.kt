@@ -6,6 +6,9 @@
 package org.mochios.settings.ui.domains
 
 import android.os.Looper
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -116,9 +119,13 @@ class TlsSwitchTest {
     fun `the TLS switch goes back when the server refuses, saying why`() {
         refuse = true
         val model = model()
+        val said = CopyOnWriteArrayList<String>()
+        val collector = CoroutineScope(Dispatchers.Unconfined).launch { model.messages.collect { said += it } }
         model.setTls("a.example", false)
         gate.countDown()
-        until { model.uiState.value.error != null }
+        until { said.isNotEmpty() }
+        collector.cancel()
+        assertEquals(listOf("Not now"), said)
         assertEquals(1, model.uiState.value.domains.single().tls)
     }
 }

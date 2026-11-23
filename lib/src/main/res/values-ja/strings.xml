@@ -35,6 +35,14 @@
     <string name="common_subscribe">購読する</string>
     <string name="common_copy">コピー</string>
     <string name="common_copied">クリップボードにコピーしました</string>
+    <string name="provider_browser">ブラウザ通知</string>
+    <string name="provider_caldav">カレンダーサーバー</string>
+    <string name="provider_email">メールアドレス</string>
+    <string name="provider_fcm">Android プッシュ</string>
+    <string name="provider_mcp">MCP サーバー</string>
+    <string name="provider_unifiedpush">プッシュ通知</string>
+    <string name="provider_url">外部 URL</string>
+    <string name="provider_web">Mochiウェブ</string>
     <string name="comment_edited">(編集済み)</string>
     <string name="comment_reply">返信</string>
     <string name="person_picker_search">ユーザーを検索</string>

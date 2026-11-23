@@ -5,6 +5,9 @@
     <string name="home_menu_user">Корбар</string>
     <string name="home_menu_empty">Ягон огоҳиномаи нохонда нест</string>
     <string name="home_menu_view_all">Ҳамаро дидан</string>
+    <string name="home_menu_read_failed">Огоҳинома ҳамчун хондашуда қайд карда нашуд</string>
+    <string name="home_menu_read_all_failed">Ҳамаи огоҳиномаҳо ҳамчун хондашуда қайд карда нашуданд</string>
+    <string name="home_menu_category_failed">Навсозии категория ба анҷом нарасид</string>
     <string name="home_menu_no_topic">Ягон сабти мавзӯъ ҳоло нест — пас аз огоҳиномаи навбатӣ боз кӯшиш кунед.</string>
     <string name="home_menu_manage_categories">Идоракунии категорияҳо</string>
 </resources>

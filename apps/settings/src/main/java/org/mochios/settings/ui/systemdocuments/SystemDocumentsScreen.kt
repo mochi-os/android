@@ -60,10 +60,11 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.languageChoices
+import org.mochios.android.util.languageName
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
-import java.util.Locale
 import org.mochios.settings.ui.login.StepUpHost
 import org.mochios.settings.ui.preferences.PrefDropdown
 
@@ -123,14 +124,14 @@ internal fun SystemDocumentsEditor(
     onOpen: (name: String, language: String) -> Unit,
     onSave: (name: String, language: String, body: String) -> Unit,
 ) {
-    // Languages available for the active tab. Latin-script bucket first
-    // (mirrors web's sortedLanguages); we then sort each bucket case-insensitively.
+    // Languages available for the active tab, each in its own name, in the
+    // order the preferences' language picker lists them.
     val languages = remember(state.documents, state.tab) {
-        sortedLanguages(
+        languageChoices(
             state.documents
                 .filter { it.name == state.tab.value }
                 .map { it.language }
-        )
+        ).map { (tag, _) -> tag }
     }
 
     // Resolve the active language. Honour the user's explicit choice if it's
@@ -326,8 +327,8 @@ private fun LanguagePicker(
         )
         Spacer(Modifier.height(4.dp))
         PrefDropdown(
-            options = languages.map { it to languageDisplayName(it) },
-            selectedLabel = selected?.let { languageDisplayName(it) } ?: "",
+            options = languages.map { it to languageName(it) },
+            selectedLabel = selected?.let { languageName(it) } ?: "",
             onChange = onChange,
             searchable = true,
         )
@@ -419,41 +420,3 @@ private fun tabLabelRes(kind: DocumentKind): Int = when (kind) {
     DocumentKind.PRIVACY -> R.string.system_documents_tab_privacy
 }
 
-// Mirrors web's LANGUAGE_OVERRIDES: where Intl/Locale gives a generic name,
-// substitute a clearer regional label.
-private val LANGUAGE_OVERRIDES: Map<String, String> = mapOf(
-    "en" to "English (international)",
-    "en-us" to "English (USA)",
-    "es" to "Espanol (Espana)",
-    "es-419" to "Espanol (latinoamericano)",
-)
-
-private fun languageDisplayName(tag: String): String {
-    LANGUAGE_OVERRIDES[tag.lowercase()]?.let { return it }
-    val locale = Locale.forLanguageTag(tag)
-    val name = locale.getDisplayName(locale)
-    if (name.isNullOrBlank()) return tag
-    return name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(locale) else it.toString() }
-}
-
-// Latin-script bucket first, non-Latin second; sort case-insensitively within each.
-private fun sortedLanguages(tags: List<String>): List<String> {
-    return tags.distinct()
-        .map { it to languageDisplayName(it) }
-        .sortedWith(
-            compareBy(
-                { languageBucket(it.second) },
-                { it.second.lowercase() },
-            )
-        )
-        .map { it.first }
-}
-
-private fun languageBucket(name: String): Int {
-    for (ch in name) {
-        if (ch.isLetter()) {
-            return if (ch.code in 0x0000..0x024F) 0 else 1
-        }
-    }
-    return 0
-}

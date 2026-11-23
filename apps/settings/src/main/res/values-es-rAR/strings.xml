@@ -97,6 +97,7 @@
     <string name="account_oauth_link_title">Vincular un proveedor</string>
     <string name="account_oauth_unlink_title">¿Desvincular la cuenta?</string>
     <string name="account_oauth_unlink_message">No vas a poder iniciar sesión con %1$s.</string>
+    <string name="account_oauth_unlink_network">No vas a poder iniciar sesión con %1$s, pero la cuenta sigue vinculada.</string>
     <string name="account_unlink">Desvincular</string>
     <string name="account_done">Listo</string>
     <string name="account_copy">Copiar</string>
@@ -146,10 +147,7 @@
     <string name="system_status_peer_oldest">Mensaje en cola más antiguo</string>
     <string name="accounts_title">Cuentas conectadas</string>
     <string name="accounts_empty">No hay cuentas conectadas</string>
-    <string name="accounts_field_email">Correo electrónico</string>
-    <string name="accounts_field_api_key">Clave de API</string>
     <string name="accounts_field_model">Modelo</string>
-    <string name="accounts_field_url">URL del servidor</string>
     <string name="accounts_status_pending">Pendiente</string>
     <string name="accounts_status_verified">Verificada</string>
     <string name="accounts_status_connected">Conectada</string>
@@ -327,7 +325,6 @@
     <string name="login_method_oauth">Inicio de sesión con terceros</string>
     <string name="login_method_recovery">Códigos de recuperación</string>
     <string name="route_target_select">Seleccionar</string>
-    <string name="accounts_provider_url">URL externa</string>
     <string name="account_data_generate">Generar frase de contraseña</string>
     <string name="networks_connected">Conectado</string>
     <string name="networks_remove_entry">Quitá %1$s</string>

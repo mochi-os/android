@@ -35,6 +35,14 @@
     <string name="common_subscribe">Suscribiña</string>
     <string name="common_copy">Copiaña</string>
     <string name="common_copied">Clipboard-ru copiata</string>
+    <string name="provider_browser">Navegador yatiyäwinaka</string>
+    <string name="provider_caldav">Calendario servidor</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Android push yatiyawi</string>
+    <string name="provider_mcp">MCP servidor</string>
+    <string name="provider_unifiedpush">Push yatiyawi</string>
+    <string name="provider_url">Anqa URL</string>
+    <string name="provider_web">Mochi web</string>
     <string name="comment_edited">(askichata)</string>
     <string name="comment_reply">Jaysaña</string>
     <string name="person_picker_search">Apnaqirinak thaqhama</string>

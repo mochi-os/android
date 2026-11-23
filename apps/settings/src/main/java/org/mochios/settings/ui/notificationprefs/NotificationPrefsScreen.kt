@@ -31,7 +31,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -47,7 +46,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -58,7 +56,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.notifications.NotificationCategory
@@ -89,57 +86,52 @@ fun NotificationPrefsScreen(
     viewModel: NotificationPrefsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val scope = rememberCoroutineScope()
     // pluralStringResource is @Composable, so the result is held in state and
     // the sentence is built during composition rather than in the collector.
     var tested by remember { mutableStateOf<TestResult?>(null) }
-
-    androidx.compose.runtime.LaunchedEffect(Unit) {
-        scope.launch {
-            viewModel.testSent.collect { tested = it }
-        }
+    LaunchedEffect(Unit) {
+        viewModel.testSent.collect { tested = it }
     }
-    val snack = tested?.let { result -> testMessage(result) }
+    val testedMessage = tested?.let { result -> testMessage(result) }
 
     var deleting by remember { mutableStateOf<NotificationCategory?>(null) }
 
     val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(testedMessage) {
+        if (testedMessage != null) {
+            snackbar.showSnackbar(testedMessage)
+            tested = null
+        }
+    }
 
     LaunchedEffect(savedSignal) {
         if (savedSignal != 0L) {
-            viewModel.refresh()
+            viewModel.refresh(quiet = true)
         }
     }
 
     // An error while content is on screen is shown over it rather than
-
     // replacing it: the full-screen arm below only fires when there is
-
     // nothing to show, and nothing on it can reach a refresh to clear it.
-
     LaunchedEffect(state.error) {
-
         val failure = state.error
-
         if (failure != null && (state.categories.isNotEmpty() || state.topics.isNotEmpty())) {
-
             snackbar.showSnackbar(failure.userMessage())
-
             viewModel.clearError()
-
         }
-
     }
 
     Scaffold(
-
         snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.notifprefs_title)) },
                 navigationIcon = {
                     MochiIconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back),
+                        )
                     }
                 },
                 actions = {
@@ -165,8 +157,11 @@ fun NotificationPrefsScreen(
                     selectedIndex = state.tab.ordinal,
                     onSelect = { index -> viewModel.setTab(NotifTab.entries[index]) },
                 )
+                // The spinner only while the tab has nothing to show: a list
+                // read again after a change stays where the reader left it.
+                val topicsError = state.topicsError
                 when {
-                    state.isLoading -> Box(Modifier.fillMaxSize()) {
+                    state.tab == NotifTab.CATEGORIES && state.isLoading && state.categories.isEmpty() -> Box(Modifier.fillMaxSize()) {
                         CircularProgressIndicator(Modifier.align(Alignment.Center))
                     }
                     state.error != null && state.categories.isEmpty() && state.topics.isEmpty() -> ErrorState(
@@ -178,6 +173,13 @@ fun NotificationPrefsScreen(
                             }
                         },
                     )
+                    state.tab == NotifTab.TOPICS && !state.topicsLoaded && topicsError != null -> ErrorState(
+                        error = topicsError,
+                        onRetry = { viewModel.loadTopics() },
+                    )
+                    state.tab == NotifTab.TOPICS && !state.topicsLoaded -> Box(Modifier.fillMaxSize()) {
+                        CircularProgressIndicator(Modifier.align(Alignment.Center))
+                    }
                     state.tab == NotifTab.CATEGORIES -> CategoriesList(
                         categories = state.categories,
                         available = state.available,
@@ -192,9 +194,6 @@ fun NotificationPrefsScreen(
                         onRemove = { viewModel.removeTopic(it) },
                     )
                 }
-            }
-            if (snack != null) {
-                SnackBanner(snack) { tested = null }
             }
         }
     }
@@ -576,17 +575,4 @@ private fun DeleteCategoryDialog(
         dismissText = stringResource(MochiR.string.common_cancel),
         dismissEnabled = !busy,
     )
-}
-
-@Composable
-private fun SnackBanner(message: String, onDismiss: () -> Unit) {
-    androidx.compose.runtime.LaunchedEffect(message) {
-        kotlinx.coroutines.delay(3000)
-        onDismiss()
-    }
-    Box(modifier = Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.BottomCenter) {
-        MochiCard(colors = CardDefaults.elevatedCardColors()) {
-            Text(message, modifier = Modifier.padding(12.dp))
-        }
-    }
 }

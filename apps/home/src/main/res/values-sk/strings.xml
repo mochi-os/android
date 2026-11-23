@@ -5,6 +5,9 @@
     <string name="home_menu_user">Používateľ</string>
     <string name="home_menu_empty">Žiadne neprečítané notifikácie</string>
     <string name="home_menu_view_all">Zobraziť všetko</string>
+    <string name="home_menu_read_failed">Upozornenie sa nepodarilo označiť ako prečítané</string>
+    <string name="home_menu_read_all_failed">Všetky upozornenia sa nepodarilo označiť ako prečítané</string>
+    <string name="home_menu_category_failed">Nepodarilo sa aktualizovať kategóriu</string>
     <string name="home_menu_no_topic">Zatiaľ žiadny záznam témy — skúste to znova po ďalšej notifikácii.</string>
     <string name="home_menu_manage_categories">Spravovať kategórie</string>
 </resources>

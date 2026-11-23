@@ -5,6 +5,9 @@
     <string name="home_menu_user">Карыстальнік</string>
     <string name="home_menu_empty">Непрачытаных апавяшчэнняў няма</string>
     <string name="home_menu_view_all">Паглядзець усё</string>
+    <string name="home_menu_read_failed">Не ўдалося пазначыць апавяшчэнне як прачытанае</string>
+    <string name="home_menu_read_all_failed">Не ўдалося пазначыць усе апавяшчэнні як прачытаныя</string>
+    <string name="home_menu_category_failed">Не ўдалося абнавіць катэгорыю</string>
     <string name="home_menu_no_topic">Запісу тэмы яшчэ няма — паспрабуйце пасля наступнага апавяшчэння.</string>
     <string name="home_menu_manage_categories">Кіраваць катэгорыямі</string>
 </resources>

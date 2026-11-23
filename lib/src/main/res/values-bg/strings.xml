@@ -35,6 +35,14 @@
     <string name="common_subscribe">Абонирай се</string>
     <string name="common_copy">Копирай</string>
     <string name="common_copied">Копирано в клипборда</string>
+    <string name="provider_browser">Известия в браузъра</string>
+    <string name="provider_caldav">Сървър за календари</string>
+    <string name="provider_email">Имейл</string>
+    <string name="provider_fcm">Пуш известия за Android</string>
+    <string name="provider_mcp">MCP сървър</string>
+    <string name="provider_unifiedpush">Пуш известие</string>
+    <string name="provider_url">Външен URL</string>
+    <string name="provider_web">Mochi уеб</string>
     <string name="comment_edited">(редактирано)</string>
     <string name="comment_reply">Отговор</string>
     <string name="person_picker_search">Търси потребители</string>

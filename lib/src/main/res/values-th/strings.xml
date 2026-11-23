@@ -35,6 +35,14 @@
     <string name="common_subscribe">ติดตาม</string>
     <string name="common_copy">คัดลอก</string>
     <string name="common_copied">คัดลอกไปยังคลิปบอร์ดแล้ว</string>
+    <string name="provider_browser">การแจ้งเตือนของเบราว์เซอร์</string>
+    <string name="provider_caldav">เซิร์ฟเวอร์ปฏิทิน</string>
+    <string name="provider_email">อีเมล</string>
+    <string name="provider_fcm">พุช Android</string>
+    <string name="provider_mcp">เซิร์ฟเวอร์ MCP</string>
+    <string name="provider_unifiedpush">การแจ้งเตือนแบบพุช</string>
+    <string name="provider_url">URL ภายนอก</string>
+    <string name="provider_web">Mochi เว็บ</string>
     <string name="comment_edited">(แก้ไขแล้ว)</string>
     <string name="comment_reply">ตอบกลับ</string>
     <string name="person_picker_search">ค้นหาผู้ใช้</string>

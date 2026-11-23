@@ -25,7 +25,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
-import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.R
@@ -33,6 +32,9 @@ import org.mochios.settings.api.Availability
 import org.mochios.settings.api.NetworksApi
 import org.mochios.settings.api.RegistryAccount
 import org.mochios.settings.api.RegistryHandle
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
+import org.mochios.settings.ui.networks.failureText
 import javax.inject.Inject
 
 data class SystemHandlesUiState(
@@ -57,6 +59,7 @@ data class SystemHandlesUiState(
 @HiltViewModel
 class SystemHandlesViewModel @Inject constructor(
     private val api: NetworksApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemHandlesUiState())
@@ -64,6 +67,18 @@ class SystemHandlesViewModel @Inject constructor(
 
     private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
     val messages: SharedFlow<String> = _messages.asSharedFlow()
+
+    /**
+     * Step-up gate for a release, which removes a user's accounts on the
+     * handle with all they published, as the administrator's other
+     * destructive actions are gated. The release itself reports its own
+     * failure; this reports only a failure to start one.
+     */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> viewModelScope.launch { _messages.emit(failureText(e, R.string.networks_release_failed)) } },
+    )
 
     private var refreshJob: Job? = null
     private var searchJob: Job? = null
@@ -133,8 +148,14 @@ class SystemHandlesViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(error = null)
     }
 
-    suspend fun available(name: String, domain: String): Availability? =
-        runCatching { api.available(name, domain).unwrapRaw() }.getOrNull()
+    /** Whether a name may be taken, or why the server could not say. */
+    suspend fun available(name: String, domain: String): Result<Availability> = try {
+        Result.success(api.available(name, domain).unwrapRaw())
+    } catch (e: CancellationException) {
+        throw e
+    } catch (e: Exception) {
+        Result.failure(e)
+    }
 
     /** Take a name, through the same reservation the user's own Networks screen makes. */
     fun reserve(name: String, domain: String, onReserved: () -> Unit) =
@@ -144,9 +165,12 @@ class SystemHandlesViewModel @Inject constructor(
             onReserved()
         }
 
-    fun release(handle: RegistryHandle) = change("${handle.domain}/${handle.name}", R.string.networks_release_failed) {
-        api.releaseAny(handle.name, handle.domain).unwrapEmpty()
-        say(R.string.networks_released)
+    /** Release any user's handle once confirmed, behind a step-up whose proof the release spends. */
+    fun release(handle: RegistryHandle) = stepUp.request { token ->
+        change("${handle.domain}/${handle.name}", R.string.networks_release_failed) {
+            api.releaseAny(handle.name, handle.domain, token).unwrapEmpty()
+            say(R.string.networks_released)
+        }
     }
 
     /**
@@ -170,11 +194,10 @@ class SystemHandlesViewModel @Inject constructor(
             queue.withLock {
                 try {
                     block()
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (e: Exception) {
-                    val error = e.toMochiError()
-                    _messages.emit(
-                        if (error is MochiError.Unknown) error.message ?: AppContext.get().getString(fallback) else error.userMessage(),
-                    )
+                    _messages.emit(failureText(e, fallback))
                 } finally {
                     _uiState.update { it.copy(busy = it.busy - key) }
                 }

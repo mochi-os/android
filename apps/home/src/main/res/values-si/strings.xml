@@ -5,6 +5,9 @@
     <string name="home_menu_user">පරිශීලකයා</string>
     <string name="home_menu_empty">නොකියවූ දැනුම්දීම් නැත</string>
     <string name="home_menu_view_all">සියල්ල බලන්න</string>
+    <string name="home_menu_read_failed">දැනුම්දීම කියවූ ලෙස සලකුණු කිරීමට නොහැකි විය</string>
+    <string name="home_menu_read_all_failed">සියලු දැනුම්දීම් කියවූ ලෙස සලකුණු කිරීමට නොහැකි විය</string>
+    <string name="home_menu_category_failed">කාණ්ඩය යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="home_menu_no_topic">තවම මාතෘකා වාර්තාවක් නැත — ඊළඟ දැනුම්දීමෙන් පසු නැවත උත්සාහ කරන්න.</string>
     <string name="home_menu_manage_categories">ප්‍රවර්ග කළමනාකරණය කරන්න</string>
 </resources>

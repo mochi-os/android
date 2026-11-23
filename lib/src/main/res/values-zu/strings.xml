@@ -35,6 +35,14 @@
     <string name="common_subscribe">Bhalisa</string>
     <string name="common_copy">Kopisha</string>
     <string name="common_copied">Kukopishelwe kwi-clipboard</string>
+    <string name="provider_browser">Izaziso zebhrawuza</string>
+    <string name="provider_caldav">Iseva yekhalenda</string>
+    <string name="provider_email">I-imeyili</string>
+    <string name="provider_fcm">I-push ye-Android</string>
+    <string name="provider_mcp">Iseva ye-MCP</string>
+    <string name="provider_unifiedpush">Isaziso se-push</string>
+    <string name="provider_url">I-URL yangaphandle</string>
+    <string name="provider_web">Iwebhu ye-Mochi</string>
     <string name="comment_edited">(kuhleliwe)</string>
     <string name="comment_reply">Phendula</string>
     <string name="person_picker_search">Sesha abasebenzisi</string>

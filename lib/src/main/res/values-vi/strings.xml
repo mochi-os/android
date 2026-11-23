@@ -35,6 +35,14 @@
     <string name="common_subscribe">Đăng ký</string>
     <string name="common_copy">Sao chép</string>
     <string name="common_copied">Đã sao chép vào bộ nhớ tạm</string>
+    <string name="provider_browser">Thông báo trình duyệt</string>
+    <string name="provider_caldav">Máy chủ lịch</string>
+    <string name="provider_email">Email</string>
+    <string name="provider_fcm">Push Android</string>
+    <string name="provider_mcp">Máy chủ MCP</string>
+    <string name="provider_unifiedpush">Thông báo đẩy</string>
+    <string name="provider_url">URL bên ngoài</string>
+    <string name="provider_web">Web Mochi</string>
     <string name="comment_edited">(đã chỉnh sửa)</string>
     <string name="comment_reply">Trả lời</string>
     <string name="person_picker_search">Tìm kiếm người dùng</string>

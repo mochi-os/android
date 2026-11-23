@@ -82,7 +82,7 @@ class NetworksScreenTest {
                 data = data,
                 busy = busy,
                 moving = moving,
-                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                check = { name, domain -> Result.success(Availability(available = true, name = name, domain = domain)) },
                 onReserve = { _, _, _ -> },
                 onLink = onLink,
                 onToggle = onToggle,
@@ -189,7 +189,7 @@ class NetworksScreenTest {
             NetworksContent(
                 data = shown,
                 busy = emptySet(),
-                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                check = { name, domain -> Result.success(Availability(available = true, name = name, domain = domain)) },
                 onReserve = { _, _, _ -> },
                 onLink = {},
                 onToggle = { _, _, _ -> },
@@ -257,7 +257,7 @@ class NetworksScreenTest {
             NetworksContent(
                 data = base.copy(accounts = listOf(bluesky)),
                 busy = busy,
-                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                check = { name, domain -> Result.success(Availability(available = true, name = name, domain = domain)) },
                 onReserve = { _, _, _ -> },
                 onLink = {},
                 onToggle = { _, _, _ -> },
@@ -432,7 +432,7 @@ class NetworksScreenTest {
             NetworksContent(
                 data = shown,
                 busy = emptySet(),
-                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                check = { name, domain -> Result.success(Availability(available = true, name = name, domain = domain)) },
                 onReserve = { _, _, _ -> },
                 onLink = {},
                 onToggle = { _, _, _ -> },

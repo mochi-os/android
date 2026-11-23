@@ -7,6 +7,7 @@ package org.mochios.forums.ui.newpost
 
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.util.languageName
 
 /** The order a post's languages are offered in: by letter, not by code point. */
 class PostLanguagesTest {

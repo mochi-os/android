@@ -5,6 +5,9 @@
     <string name="home_menu_user">Vartotojas</string>
     <string name="home_menu_empty">Neperskaitytų pranešimų nėra</string>
     <string name="home_menu_view_all">Peržiūrėti viską</string>
+    <string name="home_menu_read_failed">Nepavyko pažymėti pranešimo kaip perskaityto</string>
+    <string name="home_menu_read_all_failed">Nepavyko pažymėti visų pranešimų kaip perskaitytų</string>
+    <string name="home_menu_category_failed">Nepavyko atnaujinti kategorijos</string>
     <string name="home_menu_no_topic">Dar nėra temos įrašo — bandykite dar kartą po kito pranešimo.</string>
     <string name="home_menu_manage_categories">Tvarkyti kategorijas</string>
 </resources>

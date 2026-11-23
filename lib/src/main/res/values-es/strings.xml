@@ -35,6 +35,14 @@
     <string name="common_subscribe">Suscribirse</string>
     <string name="common_copy">Copiar</string>
     <string name="common_copied">Copiado al portapapeles</string>
+    <string name="provider_browser">Notificaciones del navegador</string>
+    <string name="provider_caldav">Servidor de calendario</string>
+    <string name="provider_email">Correo electrónico</string>
+    <string name="provider_fcm">Push de Android</string>
+    <string name="provider_mcp">Servidor MCP</string>
+    <string name="provider_unifiedpush">Notificación push</string>
+    <string name="provider_url">URL externa</string>
+    <string name="provider_web">Web de Mochi</string>
     <string name="comment_edited">(editado)</string>
     <string name="comment_reply">Responder</string>
     <string name="person_picker_search">Buscar usuarios</string>

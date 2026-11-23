@@ -7,27 +7,57 @@ package org.mochios.android.util
 
 import android.content.Context
 import android.content.Intent
+import org.mochios.android.R
+import org.mochios.android.i18n.AppContext
 
 /**
- * Display names for the connected-service and network keys the server uses,
- * as the web client names them. Brand names stay verbatim in Latin script; a
- * raw key is never shown.
+ * Display names for the connected-service, network and push-transport keys the
+ * server uses, as the web client names them. Brand and protocol names stay
+ * verbatim in Latin script.
  */
 private val PROVIDER_NAMES = mapOf(
-    "google" to "Google",
-    "github" to "GitHub",
-    "microsoft" to "Microsoft",
+    "apple" to "Apple",
+    "bluesky" to "Bluesky",
+    "claude" to "Claude",
     "facebook" to "Facebook",
-    "x" to "X",
-    "stripe-customer" to "Stripe",
-    "xmpp" to "XMPP",
     // A hosted account on the fediverse, named by the protocol it speaks.
     "fediverse" to "ActivityPub",
+    "github" to "GitHub",
+    "google" to "Google",
+    "lemmy" to "Lemmy",
+    "mastodon" to "Mastodon",
+    "matrix" to "Matrix",
+    "microsoft" to "Microsoft",
+    "ntfy" to "ntfy",
+    "openai" to "OpenAI",
+    "pushbullet" to "Pushbullet",
+    "stripe-customer" to "Stripe",
+    "x" to "X",
+    "xmpp" to "XMPP",
 )
 
-/** The name for [key], whatever its case; a key not listed is shown capitalised. */
-fun providerName(key: String): String =
-    PROVIDER_NAMES[key.lowercase()] ?: key.replaceFirstChar { it.uppercaseChar() }
+/** The keys named in words rather than by a brand, in the reader's language. */
+private val PROVIDER_LABELS = mapOf(
+    "browser" to R.string.provider_browser,
+    "caldav" to R.string.provider_caldav,
+    "email" to R.string.provider_email,
+    "fcm" to R.string.provider_fcm,
+    "mcp" to R.string.provider_mcp,
+    "unifiedpush" to R.string.provider_unifiedpush,
+    "url" to R.string.provider_url,
+    "web" to R.string.provider_web,
+)
+
+/**
+ * The name for [key], whatever its case. Every type the server sends is listed;
+ * a key a later server adds is shown capitalised, a brand's likeliest spelling.
+ */
+fun providerName(key: String): String {
+    val lower = key.lowercase()
+    PROVIDER_NAMES[lower]?.let { return it }
+    PROVIDER_LABELS[lower]?.let { return AppContext.get().getString(it) }
+    return key.replaceFirstChar { it.uppercaseChar() }
+}
 
 /**
  * Open a peer-supplied web link in the browser. Anything but http and https is

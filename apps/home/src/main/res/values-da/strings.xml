@@ -5,6 +5,9 @@
     <string name="home_menu_user">Bruger</string>
     <string name="home_menu_empty">Ingen ulæste notifikationer</string>
     <string name="home_menu_view_all">Vis alle</string>
+    <string name="home_menu_read_failed">Kunne ikke markere notifikationen som læst</string>
+    <string name="home_menu_read_all_failed">Kunne ikke markere alle notifikationer som læst</string>
+    <string name="home_menu_category_failed">Kunne ikke opdatere kategori</string>
     <string name="home_menu_no_topic">Ingen emnepost endnu — prøv igen efter næste notifikation.</string>
     <string name="home_menu_manage_categories">Administrér kategorier</string>
 </resources>

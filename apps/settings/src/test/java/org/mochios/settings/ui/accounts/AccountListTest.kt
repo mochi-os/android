@@ -12,13 +12,16 @@ import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.i18n.AppContext
 import org.mochios.settings.api.ConnectedAccount
 import org.mochios.settings.api.Device
 import org.mochios.settings.api.Provider
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 
 /** Lists of names read as the language writes a list, as the web's formatList does. */
@@ -28,6 +31,12 @@ class AccountListTest {
 
     @get:Rule
     val rule = createComposeRule()
+
+    // An account's type is named through the app's resources.
+    @Before
+    fun begin() {
+        AppContext.set(RuntimeEnvironment.getApplication())
+    }
 
     /** The transports used to be joined with ", " in every language. */
     @Test

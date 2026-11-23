@@ -35,6 +35,14 @@
     <string name="common_subscribe">გამოწერა</string>
     <string name="common_copy">კოპირება</string>
     <string name="common_copied">ბუფერში დაკოპირდა</string>
+    <string name="provider_browser">ბრაუზერის შეტყობინებები</string>
+    <string name="provider_caldav">კალენდრის სერვერი</string>
+    <string name="provider_email">ელფოსტა</string>
+    <string name="provider_fcm">Android პუშ-შეტყობინება</string>
+    <string name="provider_mcp">MCP სერვერი</string>
+    <string name="provider_unifiedpush">პუშ-შეტყობინება</string>
+    <string name="provider_url">გარე URL</string>
+    <string name="provider_web">Mochi ვები</string>
     <string name="comment_edited">(რედაქტირებულია)</string>
     <string name="comment_reply">პასუხი</string>
     <string name="person_picker_search">მომხმარებლების ძიება</string>

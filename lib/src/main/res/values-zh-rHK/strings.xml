@@ -101,6 +101,7 @@
     <string name="common_expand">展開</string>
     <string name="common_play_video">播放影片</string>
     <string name="common_copied">已複製至剪貼簿</string>
+    <string name="provider_email">電郵</string>
     <string name="place_picker_name">地點名稱</string>
     <string name="place_picker_no_results">找不到地點</string>
     <string name="place_origin">起點</string>
