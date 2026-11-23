@@ -401,8 +401,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ธีมที่ไม่รู้จัก</string>
     <string name="system_documents_modified">แก้ไขแล้ว</string>
-    <string name="system_documents_discard_title">ละทิ้งการเปลี่ยนแปลงใช่ไหม?</string>
-    <string name="system_documents_discard">ละทิ้ง</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s สำเร็จ</item>
     </plurals>

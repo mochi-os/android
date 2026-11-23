@@ -400,8 +400,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema ora dikenal</string>
     <string name="system_documents_modified">Diowahi</string>
-    <string name="system_documents_discard_title">Buwang owahan?</string>
-    <string name="system_documents_discard">Buwang</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s kasil</item>
     </plurals>

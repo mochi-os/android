@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ዊኪዎችን ፈልግ</string>
     <string name="wikis_find_no_results">ምንም ዊኪዎች አልተገኙም</string>
     <string name="wikis_find_recommended_section">የተመከሩ ዊኪዎች</string>
-    <string name="wikis_join_title">ዊኪን አባዛ</string>
-    <string name="wikis_join_or_id">ወይም መለያውን በቀጥታ ያስገቡ</string>
-    <string name="wikis_join_id_label">የዊኪ የአካል መታወቂያ</string>
-    <string name="wikis_join_submit">ዊኪን አባዛ</string>
     <string name="wikis_create_title">ዊኪ ፍጠር</string>
     <string name="wikis_create_name_label">ስም</string>
     <string name="wikis_create_privacy_label">ማንኛውም ሰው ዊኪ እንዲፈልግ ፍቀድ</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">በዚህ ዊኪ ውስጥ ባሉ ሁሉም ገጾች ላይ የቅርብ ጊዜ ማስተካከያዎች።</string>
     <string name="wikis_changes_empty">እስካሁን ምንም ለውጦች የሉም</string>
     <string name="wikis_search_empty_query">የፍለጋ ቃል አስገባ</string>
-    <string name="wikis_redirects_title">ድጋሚ ማዘዋወሮች</string>
-    <string name="wikis_redirects_add">ጨምር</string>
     <string name="wikis_redirects_empty">ምንም ድጋሚ ማዘዋወሮች አልተዋቀሩም</string>
     <string name="wikis_redirect_create_title">ማዘዋወር ፍጠር</string>
     <string name="wikis_redirect_create_action">ፍጠር</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">አባሪዎች</string>
     <string name="wikis_attachments_upload">ፋይሎችን ጫን</string>
     <string name="wikis_attachments_uploading">በመስቀል ላይ…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ፋይል ተሰቅሏል</item>
+        <item quantity="other">%s ፋይሎች ተሰቅለዋል</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ፋይሎችን መስቀል አልተሳካም</string>
     <string name="wikis_attachments_search_clear">ፍለጋ አጽዳ</string>
     <string name="wikis_attachments_filter_all">ሁሉም ፋይሎች</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">መዳረሻ ተዘምኗል</string>
     <string name="wikis_access_revoke_success">መዳረሻ ተወግዷል</string>
     <string name="wikis_access_revoke_failed">መዳረሻን ማስወገድ አልተሳካም</string>
+    <string name="wikis_rss_revoke_failed">የRSS መዳረሻን መሻር አልተቻለም</string>
+    <string name="wikis_access_search_failed">ተጠቃሚዎችን መፈለግ አልተሳካም</string>
+    <string name="wikis_replica_unknown">ያልታወቀ</string>
     <string name="wikis_replicas_empty_title">እስካሁን ቅጂዎች የሉም</string>
     <string name="wikis_replicas_empty_message">ሌሎች ዊኪዎች ይህን ዊኪ ሲያባዙ፣ እዚህ ይታያሉ።</string>
     <string name="wikis_replicas_never_synced">በፍፁም</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">ከ%1$s መመዝገቢያ መሰረዝ እርግጠኛ ነዎት?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">በስም፣ በID፣ በጣት አሻራ ወይም በURL ይፈልጉ</string>
-    <string name="wikis_join_search_button">wiki ዎችን ይፈልጉ…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">የተጠቆመውን አገልጋይ ሳይጠቀም እንደገና እየሞከረ ነው…</string>
     <string name="wikis_comments_title_template">%1$s - አስተያየቶች</string>
     <string name="wikis_comment_form_placeholder_new">አስተያየት ይጻፉ</string>
     <string name="wikis_comment_form_placeholder_reply">መልስ ይጻፉ</string>
     <string name="wikis_comment_form_send">ላክ</string>
     <string name="wikis_comment_form_remove_attachment">አባሪውን ያስወግዱ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ይዘትዎን እዚህ Markdown በመጠቀም ይጻፉ</string>
     <string name="wikis_insert_dialog_empty">እስካሁን አባሪዎች የሉም። ለመጀመር ፋይል ይስቀሉ።</string>
     <string name="wikis_delete_page_message">“%1$s” (%2$s) የተባለውን ገጽ ሊሰርዙ ነው። ይህ ድርጊት ከታሪክ በማስመለስ ሊቀለበስ ይችላል።</string>
     <string name="wikis_delete_page_success">ገጽ ተሰርዟል</string>
     <string name="wikis_revert_page_title">ገጽን ይመልሱ</string>
     <string name="wikis_revert_page_message">%1$s ን ወደ ስሪት %2$s ሊመልሱ ነው። ይህ ከስሪት %2$s ይዘት ጋር አዲስ ክለሳ ይፈጥራል።</string>
-    <string name="wikis_revert_page_default_comment">ወደ ስሪት %1$s ተመልሷል</string>
     <string name="wikis_revert_page_success">ወደ ስሪት %1$s ተመልሷል</string>
     <string name="wikis_rename_page_renaming">ስም በመቀየር ላይ…</string>
     <string name="wikis_rename_page_success">የገጹ ስም ተቀይሯል</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">ለመጨረሻ ጊዜ የተመሳሰለው፦ %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ይህ ወደ “%1$s” ማዘመኛዎችን መላክ ያቆማል። ከፈለጉ እንደገና ማባዛት ይችላሉ።</string>
     <string name="wikis_replicas_removed_success">ቅጂ ተወግዷል</string>
-    <string name="wikis_load_more">ተጨማሪ ጫን</string>
     <string name="wikis_access_change_level">የመዳረሻ ደረጃ</string>
     <string name="wikis_access_subject_anyone">ማንኛውም ሰው</string>
     <string name="wikis_access_subject_authenticated">የተረጋገጡ ተጠቃሚዎች</string>

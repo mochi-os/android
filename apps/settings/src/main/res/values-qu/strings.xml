@@ -404,8 +404,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Mana riqsisqa tema</string>
     <string name="system_documents_modified">Hukchasqa</string>
-    <string name="system_documents_discard_title">¿Hukchaykunata wikch\'unkichu?</string>
-    <string name="system_documents_discard">Wikch\'uy</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s atipasqa</item>
         <item quantity="other">%1$s atipasqa</item>

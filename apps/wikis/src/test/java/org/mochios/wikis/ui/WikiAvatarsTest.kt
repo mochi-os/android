@@ -19,6 +19,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.ui.components.LoadState
 import org.mochios.wikis.model.Change
 import org.mochios.wikis.model.Revision
 import org.mochios.wikis.model.WikiComment
@@ -90,7 +91,7 @@ class WikiAvatarsTest {
         inWiki {
             PageHistoryBody(
                 slug = "home", wikiId = "w1", revisions = revisions, currentVersion = 4,
-                hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+                hasMore = false, load = LoadState.Idle, onLoadMore = {}, onView = {}, onRevert = {},
             )
         }
         assertEquals(
@@ -103,7 +104,7 @@ class WikiAvatarsTest {
     fun `recent changes ask for each author's avatar once`() {
         val changes = authors.mapIndexed { n, author -> Change(id = "r$n", slug = "home", author = author, name = author, version = n + 1) }
         inWiki {
-            ChangesBody(changes = changes, hasMore = false, isLoadingMore = false, onLoadMore = {}, onOpenPage = {})
+            ChangesBody(changes = changes, hasMore = false, load = LoadState.Idle, onLoadMore = {}, onOpenPage = {})
         }
         assertEquals(
             listOf("/wikis/w1/-/revision/r0/asset/avatar", "/wikis/w1/-/revision/r1/asset/avatar"),
@@ -140,7 +141,7 @@ class WikiAvatarsTest {
             PageHistoryBody(
                 slug = "home", wikiId = "w1",
                 revisions = listOf(Revision(id = pathed, author = "ann", name = "ann", version = 2), Revision(id = "r1?x=", author = "bob", name = "bob", version = 1)),
-                currentVersion = 2, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+                currentVersion = 2, hasMore = false, load = LoadState.Idle, onLoadMore = {}, onView = {}, onRevert = {},
             )
             WikiCommentThread(
                 comment = WikiComment(id = "c1#y", author = "bob", name = "bob", body = "Body", children = listOf(WikiComment(id = pathed, author = "ann", name = "ann", body = "Reply"))),
@@ -166,7 +167,7 @@ class WikiAvatarsTest {
             PageHistoryBody(
                 slug = "home", wikiId = "w1",
                 revisions = listOf(Revision(id = "..", author = "ann", name = "ann", version = 2), Revision(id = "r1", author = "bob", name = "bob", version = 1)),
-                currentVersion = 2, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+                currentVersion = 2, hasMore = false, load = LoadState.Idle, onLoadMore = {}, onView = {}, onRevert = {},
             )
             WikiCommentThread(
                 comment = WikiComment(id = "c1", author = "bob", name = "bob", body = "Body", children = listOf(WikiComment(id = ".", author = "ann", name = "ann", body = "Reply"))),

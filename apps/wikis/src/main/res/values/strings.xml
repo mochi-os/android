@@ -93,14 +93,6 @@
     <string name="wikis_find_no_results">No wikis found</string>
     <string name="wikis_find_recommended_section">Recommended wikis</string>
 
-    <!-- Replicate (join) wiki screen -->
-    <string name="wikis_join_title">Replicate wiki</string>
-    <string name="wikis_join_search_button">Search for wikis…</string>
-    <string name="wikis_join_or_id">Or enter ID directly</string>
-    <string name="wikis_join_id_label">Wiki entity ID</string>
-    <string name="wikis_join_id_hint">abc123</string>
-    <string name="wikis_join_submit">Replicate wiki</string>
-
     <!-- Create wiki dialog -->
     <string name="wikis_create_title">Create wiki</string>
     <string name="wikis_create_name_label">Name</string>
@@ -127,7 +119,6 @@
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_expand">(expand)</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
 
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%s reply</item>
@@ -181,7 +172,6 @@
     <string name="wikis_revert_page_title">Revert page</string>
     <string name="wikis_revert_page_message">You are about to revert %1$s to version %2$s. This will create a new revision with the content from version %2$s.</string>
     <string name="wikis_revert_page_comment_label">Revert comment</string>
-    <string name="wikis_revert_page_default_comment">Reverted to version %1$s</string>
     <string name="wikis_revert_page_confirm">Revert</string>
     <string name="wikis_revert_page_success">Reverted to version %1$s</string>
     <string name="wikis_revert_page_failed">Failed to revert page</string>
@@ -221,18 +211,13 @@
     <string name="wikis_changes_subtitle">Recent edits across all pages in this wiki.</string>
     <string name="wikis_changes_empty">No changes yet</string>
 
-    <!-- Pagination -->
-    <string name="wikis_load_more">Load more</string>
-
     <!-- Wiki content search screen -->
     <string name="wikis_search_pages_placeholder">Search pages by title or content</string>
     <string name="wikis_search_empty_query">Enter a search term</string>
     <string name="wikis_search_no_results">No pages found for \"%1$s\". Try different search terms.</string>
     <string name="wikis_search_updated">Updated %1$s</string>
 
-    <!-- Redirects screen -->
-    <string name="wikis_redirects_title">Redirects</string>
-    <string name="wikis_redirects_add">Add</string>
+    <!-- Redirects tab -->
     <string name="wikis_redirects_empty">No redirects configured</string>
     <string name="wikis_redirect_create_title">Create redirect</string>
     <string name="wikis_redirect_create_action">Create</string>
@@ -295,6 +280,10 @@
     <string name="wikis_attachments_title">Attachments</string>
     <string name="wikis_attachments_upload">Upload files</string>
     <string name="wikis_attachments_uploading">Uploading…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s file uploaded</item>
+        <item quantity="other">%s files uploaded</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Failed to upload files</string>
     <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
     <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
@@ -405,6 +394,10 @@
     <string name="wikis_access_set_failed">Failed to update access</string>
     <string name="wikis_access_revoke_success">Access removed</string>
     <string name="wikis_access_revoke_failed">Failed to remove access</string>
+    <string name="wikis_rss_revoke_failed">Failed to revoke RSS access</string>
+    <string name="wikis_access_search_failed">Failed to search users</string>
+    <!-- A replica of the wiki (another server's copy) whose name could not be found -->
+    <string name="wikis_replica_unknown">Unknown</string>
 
     <!-- Replicas tab -->
     <string name="wikis_replicas_empty_title">No replicas yet</string>

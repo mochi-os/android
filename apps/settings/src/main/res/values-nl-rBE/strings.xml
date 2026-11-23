@@ -354,8 +354,6 @@
     <string name="account_data_generate">Wachtwoordzin genereren</string>
     <string name="system_settings_theme_unknown">Onbekend thema</string>
     <string name="system_documents_modified">Gewijzigd</string>
-    <string name="system_documents_discard_title">Wijzigingen verwerpen?</string>
-    <string name="system_documents_discard">Verwerpen</string>
     <plurals name="notifprefs_test_partial">
         <item quantity="one">Test verzonden naar %1$s van %2$s bestemming</item>
         <item quantity="other">Test verzonden naar %1$s van %2$s bestemmingen</item>

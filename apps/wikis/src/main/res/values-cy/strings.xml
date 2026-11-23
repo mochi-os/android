@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Dod o hyd i wicis</string>
     <string name="wikis_find_no_results">Heb ddod o hyd i wicis</string>
     <string name="wikis_find_recommended_section">Wicis a argymhellir</string>
-    <string name="wikis_join_title">Dyblygu wici</string>
-    <string name="wikis_join_or_id">Neu rhowch ID yn uniongyrchol</string>
-    <string name="wikis_join_id_label">ID endid wici</string>
-    <string name="wikis_join_submit">Dyblygu wici</string>
     <string name="wikis_create_title">Creu wici</string>
     <string name="wikis_create_name_label">Enw</string>
     <string name="wikis_create_privacy_label">Caniatáu i unrhyw un chwilio am wici</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Golygiadau diweddar ar draws yr holl dudalennau yn y wici hwn.</string>
     <string name="wikis_changes_empty">Dim newidiadau eto</string>
     <string name="wikis_search_empty_query">Rhowch derm chwilio</string>
-    <string name="wikis_redirects_title">Ailgyfeiriadau</string>
-    <string name="wikis_redirects_add">Ychwanegu</string>
     <string name="wikis_redirects_empty">Dim ailgyfeiriadau wedi\'u ffurfweddu</string>
     <string name="wikis_redirect_create_title">Creu ailgyfeiriad</string>
     <string name="wikis_redirect_create_action">Creu</string>
@@ -144,6 +138,14 @@
     <string name="wikis_attachments_title">Atodiadau</string>
     <string name="wikis_attachments_upload">Llwytho ffeiliau i fyny</string>
     <string name="wikis_attachments_uploading">Yn llwytho i fyny…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="zero">%s ffeil wedi\'i lanlwytho</item>
+        <item quantity="one">%s ffeil wedi\'i lanlwytho</item>
+        <item quantity="two">%s ffeil wedi\'u lanlwytho</item>
+        <item quantity="few">%s ffeil wedi\'u lanlwytho</item>
+        <item quantity="many">%s ffeil wedi\'u lanlwytho</item>
+        <item quantity="other">%s ffeil wedi\'u lanlwytho</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Methwyd llwytho ffeiliau</string>
     <string name="wikis_attachments_search_clear">Clirio chwiliad</string>
     <string name="wikis_attachments_filter_all">Pob ffeil</string>
@@ -209,6 +211,9 @@
     <string name="wikis_access_set_success">Mynediad wedi\'i ddiweddaru</string>
     <string name="wikis_access_revoke_success">Mynediad wedi\'i dynnu</string>
     <string name="wikis_access_revoke_failed">Methwyd dileu mynediad</string>
+    <string name="wikis_rss_revoke_failed">Methwyd â dirymu mynediad RSS</string>
+    <string name="wikis_access_search_failed">Methwyd chwilio defnyddwyr</string>
+    <string name="wikis_replica_unknown">Anhysbys</string>
     <string name="wikis_replicas_empty_title">Dim copïau eto</string>
     <string name="wikis_replicas_empty_message">Pan fydd wicis eraill yn ailadrodd yr wici hwn, byddant yn ymddangos yma.</string>
     <string name="wikis_replicas_never_synced">Byth</string>
@@ -230,22 +235,18 @@
     <string name="wikis_unsubscribe_confirm_message">Ydych chi’n siŵr eich bod am ddad-danysgrifio o %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Chwilio yn ôl enw, ID, olion bysedd neu URL</string>
-    <string name="wikis_join_search_button">Chwilio am wicis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Yn ceisio eto heb y gweinydd a awgrymwyd…</string>
     <string name="wikis_comments_title_template">%1$s - Sylwadau</string>
     <string name="wikis_comment_form_placeholder_new">Ysgrifennu sylw</string>
     <string name="wikis_comment_form_placeholder_reply">Ysgrifennu ateb</string>
     <string name="wikis_comment_form_send">Anfon</string>
     <string name="wikis_comment_form_remove_attachment">Tynnu atodiad</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ysgrifennwch eich cynnwys yma gan ddefnyddio Markdown</string>
     <string name="wikis_insert_dialog_empty">Dim atodiadau eto. Uwchlwythwch ffeil i ddechrau.</string>
     <string name="wikis_delete_page_message">Rydych ar fin dileu’r dudalen “%1$s” (%2$s). Gellir dadwneud y weithred hon drwy adfer o’r hanes.</string>
     <string name="wikis_delete_page_success">Tudalen wedi\'i dileu</string>
     <string name="wikis_revert_page_title">Gwrthdroi tudalen</string>
     <string name="wikis_revert_page_message">Rydych ar fin dychwelyd %1$s i fersiwn %2$s. Bydd hyn yn creu diwygiad newydd gyda’r cynnwys o fersiwn %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Wedi dychwelyd i fersiwn %1$s</string>
     <string name="wikis_revert_page_success">Wedi dychwelyd i fersiwn %1$s</string>
     <string name="wikis_rename_page_renaming">Wrthi\'n ailenwi…</string>
     <string name="wikis_rename_page_success">Tudalen wedi\'i hailenwi</string>
@@ -276,7 +277,6 @@
     <string name="wikis_replicas_col_synced">Cysonwyd ddiwethaf: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Bydd hyn yn atal anfon diweddariadau at “%1$s”. Gallant ddyblygu eto os ydynt am wneud.</string>
     <string name="wikis_replicas_removed_success">Copi wedi\'i dynnu</string>
-    <string name="wikis_load_more">Llwytho mwy</string>
     <string name="wikis_access_change_level">Lefel mynediad</string>
     <string name="wikis_access_subject_anyone">Unrhyw un</string>
     <string name="wikis_access_subject_authenticated">Defnyddwyr dilysedig</string>

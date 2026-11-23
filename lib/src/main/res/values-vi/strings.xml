@@ -20,6 +20,8 @@
     <string name="common_clear_search">Xóa tìm kiếm</string>
     <string name="drawer_open">Mở menu</string>
     <string name="common_cancel">Hủy</string>
+    <string name="common_discard_title">Loại bỏ thay đổi?</string>
+    <string name="common_discard">Loại bỏ</string>
     <string name="common_filter">Bộ lọc</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Xóa bộ lọc</string>

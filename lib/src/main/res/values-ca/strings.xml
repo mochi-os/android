@@ -20,6 +20,8 @@
     <string name="common_clear_search">Esborra la cerca</string>
     <string name="drawer_open">Obre el menú</string>
     <string name="common_cancel">Cancel·la</string>
+    <string name="common_discard_title">Vols descartar els canvis?</string>
+    <string name="common_discard">Descarta</string>
     <string name="common_filter">Filtra</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Elimina el filtre</string>

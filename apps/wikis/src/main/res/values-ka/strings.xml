@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ვიკების ძიება</string>
     <string name="wikis_find_no_results">ვიკიები ვერ მოიძებნა</string>
     <string name="wikis_find_recommended_section">რეკომენდებული ვიკიები</string>
-    <string name="wikis_join_title">ვიკის რეპლიკაცია</string>
-    <string name="wikis_join_or_id">ან შეიყვანეთ ID პირდაპირ</string>
-    <string name="wikis_join_id_label">ვიკის ერთეულის ID</string>
-    <string name="wikis_join_submit">ვიკის რეპლიკაცია</string>
     <string name="wikis_create_title">wiki-ის შექმნა</string>
     <string name="wikis_create_name_label">სახელი</string>
     <string name="wikis_create_privacy_label">ნებისმიერს wiki-ის ძიების ნება დართე</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ბოლო რედაქტირებები ამ ვიკის ყველა გვერდზე.</string>
     <string name="wikis_changes_empty">ცვლილებები ჯერ არ არის</string>
     <string name="wikis_search_empty_query">შეიყვანეთ საძიებო ტერმინი</string>
-    <string name="wikis_redirects_title">გადამისამართებები</string>
-    <string name="wikis_redirects_add">დამატება</string>
     <string name="wikis_redirects_empty">გადამისამართებები არ არის კონფიგურირებული</string>
     <string name="wikis_redirect_create_title">გადამისამართების შექმნა</string>
     <string name="wikis_redirect_create_action">შექმნა</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">დანართები</string>
     <string name="wikis_attachments_upload">ფაილების ატვირთვა</string>
     <string name="wikis_attachments_uploading">იტვირთება...</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ფაილი აიტვირთა</item>
+        <item quantity="other">%s ფაილი აიტვირთა</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ფაილების ატვირთვა ვერ მოხერხდა</string>
     <string name="wikis_attachments_search_clear">ძიების გასუფთავება</string>
     <string name="wikis_attachments_filter_all">ყველა ფაილი</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">წვდომა განახლდა</string>
     <string name="wikis_access_revoke_success">წვდომა წაიშალა</string>
     <string name="wikis_access_revoke_failed">წვდომის წაშლა ვერ მოხერხდა</string>
+    <string name="wikis_rss_revoke_failed">RSS წვდომის გაწვევა ვერ მოხერხდა</string>
+    <string name="wikis_access_search_failed">მომხმარებლების ძიება ვერ მოხერხდა</string>
+    <string name="wikis_replica_unknown">უცნობი</string>
     <string name="wikis_replicas_empty_title">რეპლიკები ჯერ არ არის</string>
     <string name="wikis_replicas_empty_message">როცა სხვა ვიკები დაარეპლიცირებენ ამ ვიკის, ისინი აქ გამოჩნდებიან.</string>
     <string name="wikis_replicas_never_synced">არასოდეს</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">დარწმუნებული ხართ, რომ გსურთ %1$s-ის გამოწერის შეწყვეტა?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ძებნა სახელით, ID-ით, ანაბეჭდით ან URL-ით</string>
-    <string name="wikis_join_search_button">wiki-ების ძებნა…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">ხელახლა ცდა შემოთავაზებული სერვერის გარეშე…</string>
     <string name="wikis_comments_title_template">%1$s - კომენტარები</string>
     <string name="wikis_comment_form_placeholder_new">დაწერეთ კომენტარი</string>
     <string name="wikis_comment_form_placeholder_reply">დაწერეთ პასუხი</string>
     <string name="wikis_comment_form_send">გაგზავნა</string>
     <string name="wikis_comment_form_remove_attachment">დანართის ამოღება</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">დაწერეთ თქვენი შიგთავსი აქ Markdown-ით</string>
     <string name="wikis_insert_dialog_empty">ჯერ არ არის დანართები. ატვირთეთ ფაილი დასაწყებად.</string>
     <string name="wikis_delete_page_message">თქვენ აპირებთ გვერდის „%1$s“ (%2$s) წაშლას. ეს ქმედება შეიძლება გაუქმდეს ისტორიიდან აღდგენით.</string>
     <string name="wikis_delete_page_success">გვერდი წაიშალა</string>
     <string name="wikis_revert_page_title">გვერდის დაბრუნება</string>
     <string name="wikis_revert_page_message">თქვენ აპირებთ %1$s-ის დაბრუნებას ვერსიაზე %2$s. ეს შექმნის ახალ რევიზიას ვერსია %2$s-ის შიგთავსით.</string>
-    <string name="wikis_revert_page_default_comment">დაბრუნდა ვერსიაზე %1$s</string>
     <string name="wikis_revert_page_success">დაბრუნდა ვერსიაზე %1$s</string>
     <string name="wikis_rename_page_renaming">სახელი იცვლება…</string>
     <string name="wikis_rename_page_success">გვერდი გადაერქვა</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">ბოლო სინქრონიზაცია: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ეს შეაჩერებს განახლებების გაგზავნას „%1$s“-სთვის. მათ სურვილისამებრ შეუძლიათ ხელახლა რეპლიცირება.</string>
     <string name="wikis_replicas_removed_success">რეპლიკა წაიშალა</string>
-    <string name="wikis_load_more">მეტის ჩატვირთვა</string>
     <string name="wikis_access_change_level">წვდომის დონე</string>
     <string name="wikis_access_subject_anyone">ნებისმიერი</string>
     <string name="wikis_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">Futa utafutaji</string>
     <string name="drawer_open">Fungua menyu</string>
     <string name="common_cancel">Ghairi</string>
+    <string name="common_discard_title">Tupa mabadiliko?</string>
+    <string name="common_discard">Tupa</string>
     <string name="common_filter">Chuja</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Ondoa kichujio</string>

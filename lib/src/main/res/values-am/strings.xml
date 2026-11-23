@@ -20,6 +20,8 @@
     <string name="common_clear_search">ፍለጋ አጽዳ</string>
     <string name="drawer_open">ምናሌ ክፈት</string>
     <string name="common_cancel">ይቅር</string>
+    <string name="common_discard_title">ለውጦቹ ይጣሉ?</string>
+    <string name="common_discard">ጣል</string>
     <string name="common_filter">ማጣሪያ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ማጣሪያ አስወግድ</string>

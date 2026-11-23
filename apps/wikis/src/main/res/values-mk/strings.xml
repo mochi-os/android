@@ -44,10 +44,6 @@
     <string name="wikis_find_title">Најди wiki-а</string>
     <string name="wikis_find_no_results">Не се пронајдени wiki</string>
     <string name="wikis_find_recommended_section">Препорачани wiki</string>
-    <string name="wikis_join_title">Реплицирај wiki</string>
-    <string name="wikis_join_or_id">Или внесете го ID директно</string>
-    <string name="wikis_join_id_label">ID на ентитет на вики</string>
-    <string name="wikis_join_submit">Реплицирај wiki</string>
     <string name="wikis_create_title">Создај вики</string>
     <string name="wikis_create_name_label">Име</string>
     <string name="wikis_create_privacy_label">Дозволи на секого да пребарува вики</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">Неодамнешни уредувања на сите страници во ова wiki.</string>
     <string name="wikis_changes_empty">Сè уште нема промени</string>
     <string name="wikis_search_empty_query">Внесете поим за пребарување</string>
-    <string name="wikis_redirects_title">Пренасочувања</string>
-    <string name="wikis_redirects_add">Додај</string>
     <string name="wikis_redirects_empty">Не се конфигурирани пренасочувања</string>
     <string name="wikis_redirect_create_title">Создај пренасочување</string>
     <string name="wikis_redirect_create_action">Создај</string>
@@ -143,6 +137,10 @@
     <string name="wikis_attachments_title">Прилози</string>
     <string name="wikis_attachments_upload">Прикачи датотеки</string>
     <string name="wikis_attachments_uploading">Се прикачува…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">Прикачена %s датотека</item>
+        <item quantity="other">Прикачени %s датотеки</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Неуспешно прикачување на датотеки</string>
     <string name="wikis_attachments_search_clear">Исчисти пребарување</string>
     <string name="wikis_attachments_filter_all">Сите датотеки</string>
@@ -208,6 +206,9 @@
     <string name="wikis_access_set_success">Пристапот е ажуриран</string>
     <string name="wikis_access_revoke_success">Пристапот е отстранет</string>
     <string name="wikis_access_revoke_failed">Неуспешно отстранување на пристап</string>
+    <string name="wikis_rss_revoke_failed">Неуспешно отповикување на RSS пристапот</string>
+    <string name="wikis_access_search_failed">Неуспешно пребарување на корисници</string>
+    <string name="wikis_replica_unknown">Непознато</string>
     <string name="wikis_replicas_empty_title">Сè уште нема реплики</string>
     <string name="wikis_replicas_empty_message">Кога други викија ќе го реплицираат ова вики, ќе се појават овде.</string>
     <string name="wikis_replicas_never_synced">Никогаш</string>
@@ -228,22 +229,18 @@
     <string name="wikis_unsubscribe_confirm_message">Дали сте сигурни дека сакате да се отпишете од %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Барај по име, ID, отпечаток или URL</string>
-    <string name="wikis_join_search_button">Барај wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Се обидува повторно без предложениот сервер…</string>
     <string name="wikis_comments_title_template">%1$s - Коментари</string>
     <string name="wikis_comment_form_placeholder_new">Напишете коментар</string>
     <string name="wikis_comment_form_placeholder_reply">Напишете одговор</string>
     <string name="wikis_comment_form_send">Испрати</string>
     <string name="wikis_comment_form_remove_attachment">Отстрани прилог</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишете ја вашата содржина овде користејќи Markdown</string>
     <string name="wikis_insert_dialog_empty">Сè уште нема прилози. Прикачете датотека за да започнете.</string>
     <string name="wikis_delete_page_message">Се подготвувате да ја избришете страницата „%1$s\" (%2$s). Оваа акција може да се поништи со враќање од историјата.</string>
     <string name="wikis_delete_page_success">Страницата е избришана</string>
     <string name="wikis_revert_page_title">Врати страница</string>
     <string name="wikis_revert_page_message">Се подготвувате да ја вратите %1$s на верзија %2$s. Ова ќе создаде нова ревизија со содржината на верзија %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Вратено на верзија %1$s</string>
     <string name="wikis_revert_page_success">Вратено на верзија %1$s</string>
     <string name="wikis_rename_page_renaming">Преименување…</string>
     <string name="wikis_rename_page_success">Страницата е преименувана</string>
@@ -274,7 +271,6 @@
     <string name="wikis_replicas_col_synced">Последно синхронизирано: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ова ќе го запре испраќањето на ажурирања до „%1$s\". Тие можат повторно да реплицираат ако сакаат.</string>
     <string name="wikis_replicas_removed_success">Репликата е отстранета</string>
-    <string name="wikis_load_more">Вчитај повеќе</string>
     <string name="wikis_access_change_level">Ниво на пристап</string>
     <string name="wikis_access_subject_anyone">Секој</string>
     <string name="wikis_access_subject_authenticated">Автентицирани корисници</string>

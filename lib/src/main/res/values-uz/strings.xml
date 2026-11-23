@@ -20,6 +20,8 @@
     <string name="common_clear_search">Qidiruvni tozalash</string>
     <string name="drawer_open">Menyuni ochish</string>
     <string name="common_cancel">Bekor qilish</string>
+    <string name="common_discard_title">Oʻzgarishlar tashlab yuborilsinmi?</string>
+    <string name="common_discard">Tashlab yuborish</string>
     <string name="common_filter">Filtr</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Filtrni olib tashlash</string>

@@ -400,8 +400,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">အမည်မသိ အပြင်အဆင်</string>
     <string name="system_documents_modified">ပြင်ဆင်ထားသည်</string>
-    <string name="system_documents_discard_title">အပြောင်းအလဲများကို ဖျက်ပစ်မလား။</string>
-    <string name="system_documents_discard">ဖျက်ပစ်ရန်</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s အောင်မြင်</item>
     </plurals>

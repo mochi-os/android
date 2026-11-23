@@ -20,6 +20,8 @@
     <string name="common_clear_search">Falamhaich an lorg</string>
     <string name="drawer_open">Fosgail an clàr-taice</string>
     <string name="common_cancel">Sguir dheth</string>
+    <string name="common_discard_title">A bheil thu airson na h-atharraichean a thilgeil air falbh?</string>
+    <string name="common_discard">Tilg air falbh</string>
     <string name="common_filter">Sìolachan</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Thoir air falbh a\' chriathrag</string>

@@ -69,6 +69,5 @@ class CountFormatTest {
     fun `the version a revert goes back to`() {
         show { RevertDialog(slug = "home", version = 1234, isReverting = false, onConfirm = {}, onDismiss = {}) }
         rule.onNodeWithText("أنت على وشك استرجاع home إلى الإصدار 1234", substring = true).assertExists()
-        rule.onNodeWithText("تم الاسترجاع إلى الإصدار 1234").assertExists()
     }
 }

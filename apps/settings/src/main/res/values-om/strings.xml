@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bifa hin beekamne</string>
     <string name="system_documents_modified">Jijjiirame</string>
-    <string name="system_documents_discard_title">Jijjiiramoota gatuu?</string>
-    <string name="system_documents_discard">Gati</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s milkaa\'e</item>
         <item quantity="other">%1$s milkaa\'an</item>

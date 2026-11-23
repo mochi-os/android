@@ -29,7 +29,10 @@ import javax.inject.Inject
  */
 data class SettingsTabUiState(
     val isLoading: Boolean = true,
+    /** Whether [settings] holds the wiki's, not the defaults it starts with. */
+    val loaded: Boolean = false,
     val settings: WikiSettings = WikiSettings(),
+    /** Why the settings could not be loaded; an action's failure goes to the snackbar instead. */
     val error: MochiError? = null,
     val isRenaming: Boolean = false,
     val nameError: NameValidationError? = null,
@@ -40,9 +43,11 @@ data class SettingsTabUiState(
 
 enum class NameValidationError { REQUIRED, TOO_LONG, INVALID_CHAR }
 
+/** [messageRes] with [args]; for a failure, the server's reason in [error] where it sent one. */
 data class SettingsTabSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
+    val error: MochiError? = null,
 )
 
 private const val MAX_NAME_LENGTH = 100
@@ -76,6 +81,7 @@ class SettingsTabViewModel @Inject constructor(
                 val response = repository.getSettings(wikiId)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
+                    loaded = true,
                     settings = response.settings,
                     error = null,
                 )
@@ -120,7 +126,7 @@ class SettingsTabViewModel @Inject constructor(
                 onSuccess(trimmed)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRenaming = false)
-                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_name_save_failed))
+                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_name_save_failed, error = e.toMochiError()))
             }
         }
     }
@@ -143,7 +149,7 @@ class SettingsTabViewModel @Inject constructor(
                 onSuccess(trimmed)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false)
-                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_home_save_failed))
+                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_home_save_failed, error = e.toMochiError()))
             }
         }
     }
@@ -157,7 +163,7 @@ class SettingsTabViewModel @Inject constructor(
                 _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_sync_success))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSyncing = false)
-                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_sync_failed))
+                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_sync_failed, error = e.toMochiError()))
             }
         }
     }
@@ -172,7 +178,7 @@ class SettingsTabViewModel @Inject constructor(
                 _deleted.emit(Unit)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isDeleting = false)
-                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_delete_failed))
+                _snackbar.emit(SettingsTabSnackbar(R.string.wikis_settings_delete_failed, error = e.toMochiError()))
             }
         }
     }

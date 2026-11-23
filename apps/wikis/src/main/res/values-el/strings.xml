@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Εύρεση wiki</string>
     <string name="wikis_find_no_results">Δεν βρέθηκαν wikis</string>
     <string name="wikis_find_recommended_section">Συνιστώμενα wikis</string>
-    <string name="wikis_join_title">Αναπαραγωγή wiki</string>
-    <string name="wikis_join_or_id">Ή εισαγάγετε το ID απευθείας</string>
-    <string name="wikis_join_id_label">ID οντότητας wiki</string>
-    <string name="wikis_join_submit">Αναπαραγωγή wiki</string>
     <string name="wikis_create_title">Δημιουργία wiki</string>
     <string name="wikis_create_name_label">Όνομα</string>
     <string name="wikis_create_privacy_label">Να επιτρέπεται σε όλους η αναζήτηση wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Πρόσφατες επεξεργασίες σε όλες τις σελίδες αυτού του wiki.</string>
     <string name="wikis_changes_empty">Δεν υπάρχουν ακόμη αλλαγές</string>
     <string name="wikis_search_empty_query">Εισαγάγετε όρο αναζήτησης</string>
-    <string name="wikis_redirects_title">Ανακατευθύνσεις</string>
-    <string name="wikis_redirects_add">Προσθήκη</string>
     <string name="wikis_redirects_empty">Δεν έχουν διαμορφωθεί ανακατευθύνσεις</string>
     <string name="wikis_redirect_create_title">Δημιουργία ανακατεύθυνσης</string>
     <string name="wikis_redirect_create_action">Δημιουργία</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Συνημμένα</string>
     <string name="wikis_attachments_upload">Μεταφόρτωση αρχείων</string>
     <string name="wikis_attachments_uploading">Μεταφόρτωση…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s αρχείο μεταφορτώθηκε</item>
+        <item quantity="other">%s αρχεία μεταφορτώθηκαν</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Αποτυχία μεταφόρτωσης αρχείων</string>
     <string name="wikis_attachments_search_clear">Εκκαθάριση αναζήτησης</string>
     <string name="wikis_attachments_filter_all">Όλα τα αρχεία</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Η πρόσβαση ενημερώθηκε</string>
     <string name="wikis_access_revoke_success">Η πρόσβαση αφαιρέθηκε</string>
     <string name="wikis_access_revoke_failed">Αποτυχία αφαίρεσης πρόσβασης</string>
+    <string name="wikis_rss_revoke_failed">Αποτυχία ανάκλησης πρόσβασης RSS</string>
+    <string name="wikis_access_search_failed">Αποτυχία αναζήτησης χρηστών</string>
+    <string name="wikis_replica_unknown">Άγνωστο</string>
     <string name="wikis_replicas_empty_title">Δεν υπάρχουν ακόμη αντίγραφα</string>
     <string name="wikis_replicas_empty_message">Όταν άλλα wiki αντιγράφουν αυτό το wiki, θα εμφανίζονται εδώ.</string>
     <string name="wikis_replicas_never_synced">Ποτέ</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε την εγγραφή σας από %1$s;</string>
     <string name="wikis_clipboard_label_rss">URL RSS του wiki</string>
     <string name="wikis_find_search_placeholder">Αναζήτηση με όνομα, ID, αποτύπωμα ή URL</string>
-    <string name="wikis_join_search_button">Αναζήτηση για wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Επαναπροσπάθεια χωρίς τον προτεινόμενο διακομιστή…</string>
     <string name="wikis_comments_title_template">%1$s - Σχόλια</string>
     <string name="wikis_comment_form_placeholder_new">Γράψτε ένα σχόλιο</string>
     <string name="wikis_comment_form_placeholder_reply">Γράψτε μια απάντηση</string>
     <string name="wikis_comment_form_send">Αποστολή</string>
     <string name="wikis_comment_form_remove_attachment">Αφαίρεση συνημμένου</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Γράψτε το περιεχόμενό σας εδώ χρησιμοποιώντας Markdown</string>
     <string name="wikis_insert_dialog_empty">Δεν υπάρχουν ακόμη συνημμένα. Ανεβάστε ένα αρχείο για να ξεκινήσετε.</string>
     <string name="wikis_delete_page_message">Πρόκειται να διαγράψετε τη σελίδα «%1$s» (%2$s). Αυτή η ενέργεια μπορεί να αναιρεθεί με επαναφορά από το ιστορικό.</string>
     <string name="wikis_delete_page_success">Η σελίδα διαγράφηκε</string>
     <string name="wikis_revert_page_title">Επαναφορά σελίδας</string>
     <string name="wikis_revert_page_message">Πρόκειται να επαναφέρετε το %1$s στην έκδοση %2$s. Αυτό θα δημιουργήσει μια νέα αναθεώρηση με το περιεχόμενο της έκδοσης %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Επαναφορά στην έκδοση %1$s</string>
     <string name="wikis_revert_page_success">Επαναφορά στην έκδοση %1$s</string>
     <string name="wikis_rename_page_renaming">Μετονομασία…</string>
     <string name="wikis_rename_page_success">Η σελίδα μετονομάστηκε</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Τελευταίος συγχρονισμός: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Αυτό θα σταματήσει την αποστολή ενημερώσεων στο «%1$s». Μπορούν να αναπαραγάγουν ξανά αν θέλουν.</string>
     <string name="wikis_replicas_removed_success">Η αντίγραφο αφαιρέθηκε</string>
-    <string name="wikis_load_more">Φόρτωση περισσότερων</string>
     <string name="wikis_access_change_level">Επίπεδο πρόσβασης</string>
     <string name="wikis_access_subject_anyone">Οποιοσδήποτε</string>
     <string name="wikis_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>

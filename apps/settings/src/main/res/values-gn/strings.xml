@@ -404,8 +404,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téma ojekuaa\'ỹva</string>
     <string name="system_documents_modified">Oñemoambuéva</string>
-    <string name="system_documents_discard_title">¿Remboykese umi ñemoambue?</string>
-    <string name="system_documents_discard">Mboyke</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s osẽ porã</item>
         <item quantity="other">%1$s osẽ porã</item>

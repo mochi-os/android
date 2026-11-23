@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wikis finden</string>
     <string name="wikis_find_no_results">Keine Wikis gefunden</string>
     <string name="wikis_find_recommended_section">Empfohlene Wikis</string>
-    <string name="wikis_join_title">Wiki replizieren</string>
-    <string name="wikis_join_or_id">Oder ID direkt eingeben</string>
-    <string name="wikis_join_id_label">Wiki-Entitäts-ID</string>
-    <string name="wikis_join_submit">Wiki replizieren</string>
     <string name="wikis_create_title">Wiki erstellen</string>
     <string name="wikis_create_name_label">Name</string>
     <string name="wikis_create_privacy_label">Allen erlauben, nach Wiki zu suchen</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Letzte Bearbeitungen auf allen Seiten dieses Wikis.</string>
     <string name="wikis_changes_empty">Noch keine Änderungen</string>
     <string name="wikis_search_empty_query">Suchbegriff eingeben</string>
-    <string name="wikis_redirects_title">Weiterleitungen</string>
-    <string name="wikis_redirects_add">Hinzufügen</string>
     <string name="wikis_redirects_empty">Keine Weiterleitungen konfiguriert</string>
     <string name="wikis_redirect_create_title">Weiterleitung erstellen</string>
     <string name="wikis_redirect_create_action">Erstellen</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Anhänge</string>
     <string name="wikis_attachments_upload">Dateien hochladen</string>
     <string name="wikis_attachments_uploading">Wird hochgeladen…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s Datei hochgeladen</item>
+        <item quantity="other">%s Dateien hochgeladen</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Dateien konnten nicht hochgeladen werden</string>
     <string name="wikis_attachments_search_clear">Suche leeren</string>
     <string name="wikis_attachments_filter_all">Alle Dateien</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Zugriff aktualisiert</string>
     <string name="wikis_access_revoke_success">Zugriff entfernt</string>
     <string name="wikis_access_revoke_failed">Zugriff konnte nicht entfernt werden</string>
+    <string name="wikis_rss_revoke_failed">RSS-Zugriff konnte nicht widerrufen werden</string>
+    <string name="wikis_access_search_failed">Benutzersuche fehlgeschlagen</string>
+    <string name="wikis_replica_unknown">Unbekannt</string>
     <string name="wikis_replicas_empty_title">Noch keine Replikate</string>
     <string name="wikis_replicas_empty_message">Wenn andere Wikis dieses Wiki replizieren, erscheinen sie hier.</string>
     <string name="wikis_replicas_never_synced">Nie</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Möchtest du %1$s wirklich nicht mehr abonnieren?</string>
     <string name="wikis_clipboard_label_rss">Wiki-RSS-URL</string>
     <string name="wikis_find_search_placeholder">Nach Name, ID, Fingerabdruck oder URL suchen</string>
-    <string name="wikis_join_search_button">Nach Wikis suchen…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Erneuter Versuch ohne den vorgeschlagenen Server…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentare</string>
     <string name="wikis_comment_form_placeholder_new">Kommentar schreiben</string>
     <string name="wikis_comment_form_placeholder_reply">Antwort schreiben</string>
     <string name="wikis_comment_form_send">Senden</string>
     <string name="wikis_comment_form_remove_attachment">Anhang entfernen</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Schreibe deinen Inhalt hier mit Markdown</string>
     <string name="wikis_insert_dialog_empty">Noch keine Anhänge. Lade eine Datei hoch, um zu beginnen.</string>
     <string name="wikis_delete_page_message">Du bist dabei, die Seite „%1$s\" (%2$s) zu löschen. Diese Aktion kann durch Wiederherstellung aus dem Verlauf rückgängig gemacht werden.</string>
     <string name="wikis_delete_page_success">Seite gelöscht</string>
     <string name="wikis_revert_page_title">Seite zurücksetzen</string>
     <string name="wikis_revert_page_message">Du bist dabei, %1$s auf Version %2$s zurückzusetzen. Dies erstellt eine neue Revision mit dem Inhalt von Version %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Auf Version %1$s zurückgesetzt</string>
     <string name="wikis_revert_page_success">Auf Version %1$s zurückgesetzt</string>
     <string name="wikis_rename_page_renaming">Wird umbenannt…</string>
     <string name="wikis_rename_page_success">Seite umbenannt</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Zuletzt synchronisiert: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dies stoppt das Senden von Aktualisierungen an „%1$s\". Sie können erneut replizieren, wenn sie möchten.</string>
     <string name="wikis_replicas_removed_success">Replik entfernt</string>
-    <string name="wikis_load_more">Mehr laden</string>
     <string name="wikis_access_change_level">Zugriffsebene</string>
     <string name="wikis_access_subject_anyone">Jeder</string>
     <string name="wikis_access_subject_authenticated">Angemeldete Benutzer</string>

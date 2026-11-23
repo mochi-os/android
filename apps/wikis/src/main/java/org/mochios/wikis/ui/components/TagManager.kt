@@ -23,85 +23,42 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
-import org.mochios.wikis.repository.WikisRepository
-import javax.inject.Inject
 import org.mochios.android.R as MochiR
 
 /**
- * Tag chips and an add chip for the page footer. Injects its own
- * [TagManagerViewModel] so the page screen need not thread the repository
- * through; feedback goes to the caller's snackbar.
+ * Tag chips and an add chip for the page footer. The tags are the page's, as
+ * its view model holds them; adding and removing go back to it through
+ * [onAdd] and [onRemove], so no list of its own can outlive a later reload.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun TagManager(
-    wikiId: String,
-    slug: String,
     tags: List<String>,
     canEdit: Boolean,
     onTagClick: (String) -> Unit,
-    onTagsChanged: (List<String>) -> Unit,
+    onAdd: (String) -> Unit,
+    onRemove: (String) -> Unit,
     modifier: Modifier = Modifier,
-    snackbarHostState: SnackbarHostState? = null,
-    viewModel: TagManagerViewModel = hiltViewModel(),
 ) {
-    val state by viewModel.uiState.collectAsState()
-    val resources = LocalResources.current
-    val scope = rememberCoroutineScope()
     var addDialogOpen by remember { mutableStateOf(false) }
     var pendingRemoval by remember { mutableStateOf<String?>(null) }
-
-    // Bridge ViewModel snackbar events into the host's snackbar host.
-    if (snackbarHostState != null) {
-        LaunchedEffect(snackbarHostState) {
-            viewModel.snackbar.collect { msg ->
-                val text = resources.getString(msg.messageRes, *msg.args.toTypedArray())
-                scope.launch { snackbarHostState.showSnackbar(text) }
-            }
-        }
-    }
-
-    // Keep the screen's tags list in sync with the ViewModel's latest
-    // mutation outcome so the chip row updates immediately after add /
-    // remove operations complete.
-    LaunchedEffect(state.lastUpdated) {
-        val latest = state.lastUpdated ?: return@LaunchedEffect
-        onTagsChanged(latest)
-    }
 
     FlowRow(
         modifier = modifier.fillMaxWidth(),
@@ -164,7 +121,7 @@ fun TagManager(
             existingTags = tags,
             onDismiss = { addDialogOpen = false },
             onConfirm = { newTag ->
-                viewModel.add(wikiId, slug, tags, newTag)
+                onAdd(newTag)
                 addDialogOpen = false
             },
         )
@@ -181,7 +138,7 @@ fun TagManager(
             ),
             confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
-                viewModel.remove(wikiId, slug, tags, toRemove)
+                onRemove(toRemove)
                 pendingRemoval = null
             },
             destructive = true,
@@ -263,74 +220,4 @@ fun AddTagDialog(
         confirmEnabled = newTag.trim().isNotEmpty(),
         dismissText = stringResource(R.string.wikis_tag_dialog_cancel),
     )
-}
-
-data class TagManagerSnackbar(
-    val messageRes: Int,
-    val args: List<Any> = emptyList(),
-)
-
-data class TagManagerUiState(
-    val lastUpdated: List<String>? = null,
-)
-
-@HiltViewModel
-class TagManagerViewModel @Inject constructor(
-    @Suppress("UNUSED_PARAMETER") savedStateHandle: SavedStateHandle,
-    private val repository: WikisRepository,
-) : ViewModel() {
-
-    private val _uiState = MutableStateFlow(TagManagerUiState())
-    val uiState: StateFlow<TagManagerUiState> = _uiState.asStateFlow()
-
-    private val _snackbar = MutableSharedFlow<TagManagerSnackbar>(extraBufferCapacity = 4)
-    val snackbar: SharedFlow<TagManagerSnackbar> = _snackbar.asSharedFlow()
-
-    fun add(wikiId: String, slug: String, currentTags: List<String>, tag: String) {
-        viewModelScope.launch {
-            try {
-                repository.addTag(wikiId, slug, tag)
-                val newList = (currentTags + tag).distinct()
-                _uiState.value = TagManagerUiState(lastUpdated = newList)
-                _snackbar.emit(
-                    TagManagerSnackbar(
-                        R.string.wikis_tag_manager_added,
-                        listOf(tag),
-                    )
-                )
-            } catch (_: Exception) {
-                _snackbar.emit(TagManagerSnackbar(R.string.wikis_tag_manager_add_failed))
-            }
-        }
-    }
-
-    /**
-     * The chip goes on the tap and comes back, with the error, if the server
-     * refuses, in its old place among the tags shown by then.
-     */
-    fun remove(wikiId: String, slug: String, currentTags: List<String>, tag: String) {
-        _uiState.value = TagManagerUiState(lastUpdated = currentTags.filterNot { it.equals(tag, ignoreCase = true) })
-        viewModelScope.launch {
-            try {
-                repository.removeTag(wikiId, slug, tag)
-                _snackbar.emit(
-                    TagManagerSnackbar(
-                        R.string.wikis_tag_manager_removed,
-                        listOf(tag),
-                    )
-                )
-            } catch (e: CancellationException) {
-                throw e
-            } catch (_: Exception) {
-                val latest = _uiState.value.lastUpdated.orEmpty()
-                if (latest.none { it.equals(tag, ignoreCase = true) }) {
-                    val order = currentTags.withIndex().associate { (index, other) -> other.lowercase() to index }
-                    _uiState.value = TagManagerUiState(
-                        lastUpdated = (latest + tag).sortedBy { order[it.lowercase()] ?: Int.MAX_VALUE },
-                    )
-                }
-                _snackbar.emit(TagManagerSnackbar(R.string.wikis_tag_manager_remove_failed))
-            }
-        }
-    }
 }

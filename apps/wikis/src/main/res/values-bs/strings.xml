@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Pronađi wikije</string>
     <string name="wikis_find_no_results">Nisu pronađeni wikiji</string>
     <string name="wikis_find_recommended_section">Preporučeni wikiji</string>
-    <string name="wikis_join_title">Repliciraj wiki</string>
-    <string name="wikis_join_or_id">Ili unesite ID direktno</string>
-    <string name="wikis_join_id_label">ID wiki entiteta</string>
-    <string name="wikis_join_submit">Repliciraj wiki</string>
     <string name="wikis_create_title">Kreiraj wiki</string>
     <string name="wikis_create_name_label">Naziv</string>
     <string name="wikis_create_privacy_label">Dozvoli svima da pretražuju wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Nedavne izmjene na svim stranicama u ovom wikiju.</string>
     <string name="wikis_changes_empty">Još nema promjena</string>
     <string name="wikis_search_empty_query">Unesite pojam za pretragu</string>
-    <string name="wikis_redirects_title">Preusmjerenja</string>
-    <string name="wikis_redirects_add">Dodaj</string>
     <string name="wikis_redirects_empty">Nema konfigurisanih preusmjerenja</string>
     <string name="wikis_redirect_create_title">Kreiraj preusmjerenje</string>
     <string name="wikis_redirect_create_action">Kreiraj</string>
@@ -144,6 +138,11 @@
     <string name="wikis_attachments_title">Prilozi</string>
     <string name="wikis_attachments_upload">Otpremi fajlove</string>
     <string name="wikis_attachments_uploading">Otpremam…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s datoteka učitana</item>
+        <item quantity="few">%s datoteke učitane</item>
+        <item quantity="other">%s datoteka učitano</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Otpremanje datoteka nije uspjelo</string>
     <string name="wikis_attachments_search_clear">Očisti pretragu</string>
     <string name="wikis_attachments_filter_all">Svi fajlovi</string>
@@ -209,6 +208,9 @@
     <string name="wikis_access_set_success">Pristup ažuriran</string>
     <string name="wikis_access_revoke_success">Pristup uklonjen</string>
     <string name="wikis_access_revoke_failed">Uklanjanje pristupa nije uspjelo</string>
+    <string name="wikis_rss_revoke_failed">Neuspješno opozivanje RSS pristupa</string>
+    <string name="wikis_access_search_failed">Pretraga korisnika nije uspjela</string>
+    <string name="wikis_replica_unknown">Nepoznato</string>
     <string name="wikis_replicas_empty_title">Još nema replika</string>
     <string name="wikis_replicas_empty_message">Kada drugi wikiji repliciraju ovaj wiki, pojavit će se ovdje.</string>
     <string name="wikis_replicas_never_synced">Nikad</string>
@@ -230,22 +232,18 @@
     <string name="wikis_unsubscribe_confirm_message">Jeste li sigurni da se želite odjaviti s %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Traži po nazivu, ID-u, otisku ili URL-u</string>
-    <string name="wikis_join_search_button">Traži wikije…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Pokušavamo ponovo bez predloženog servera…</string>
     <string name="wikis_comments_title_template">%1$s - Komentari</string>
     <string name="wikis_comment_form_placeholder_new">Napišite komentar</string>
     <string name="wikis_comment_form_placeholder_reply">Napišite odgovor</string>
     <string name="wikis_comment_form_send">Pošalji</string>
     <string name="wikis_comment_form_remove_attachment">Ukloni prilog</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Napišite svoj sadržaj ovdje koristeći Markdown</string>
     <string name="wikis_insert_dialog_empty">Još nema priloga. Otpremite datoteku da počnete.</string>
     <string name="wikis_delete_page_message">Namjeravate izbrisati stranicu “%1$s” (%2$s). Ova radnja se može poništiti vraćanjem iz historije.</string>
     <string name="wikis_delete_page_success">Stranica obrisana</string>
     <string name="wikis_revert_page_title">Vrati stranicu</string>
     <string name="wikis_revert_page_message">Namjeravate vratiti %1$s na verziju %2$s. Ovo će kreirati novu reviziju sa sadržajem iz verzije %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Vraćeno na verziju %1$s</string>
     <string name="wikis_revert_page_success">Vraćeno na verziju %1$s</string>
     <string name="wikis_rename_page_renaming">Preimenovanje…</string>
     <string name="wikis_rename_page_success">Stranica preimenovana</string>
@@ -276,7 +274,6 @@
     <string name="wikis_replicas_col_synced">Posljednja sinhronizacija: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ovo će zaustaviti slanje ažuriranja na “%1$s”. Mogu ponovo replicirati ako žele.</string>
     <string name="wikis_replicas_removed_success">Replika uklonjena</string>
-    <string name="wikis_load_more">Učitaj više</string>
     <string name="wikis_access_change_level">Nivo pristupa</string>
     <string name="wikis_access_subject_anyone">Bilo ko</string>
     <string name="wikis_access_subject_authenticated">Prijavljeni korisnici</string>

@@ -44,10 +44,6 @@
     <string name="wikis_find_title">Tafuta wikis</string>
     <string name="wikis_find_no_results">Hakuna wiki zilizopatikana</string>
     <string name="wikis_find_recommended_section">Wiki zinazopendekezwa</string>
-    <string name="wikis_join_title">Nakili wiki</string>
-    <string name="wikis_join_or_id">Au ingiza kitambulisho moja kwa moja</string>
-    <string name="wikis_join_id_label">ID ya kitengo cha Wiki</string>
-    <string name="wikis_join_submit">Nakili wiki</string>
     <string name="wikis_create_title">Unda wiki</string>
     <string name="wikis_create_name_label">Jina</string>
     <string name="wikis_create_privacy_label">Ruhusu mtu yeyote kutafuta wiki</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">Mabadiliko ya hivi karibuni katika kurasa zote za wiki hii.</string>
     <string name="wikis_changes_empty">Hakuna mabadiliko bado</string>
     <string name="wikis_search_empty_query">Ingiza neno la utafutaji</string>
-    <string name="wikis_redirects_title">Maelekezo</string>
-    <string name="wikis_redirects_add">Ongeza</string>
     <string name="wikis_redirects_empty">Hakuna uelekezaji uliosanidiwa</string>
     <string name="wikis_redirect_create_title">Unda uelekezaji</string>
     <string name="wikis_redirect_create_action">Unda</string>
@@ -143,6 +137,10 @@
     <string name="wikis_attachments_title">Viambatisho</string>
     <string name="wikis_attachments_upload">Pakia faili</string>
     <string name="wikis_attachments_uploading">Inapakia…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">Faili %s limepakiwa</item>
+        <item quantity="other">Faili %s zimepakiwa</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Imeshindwa kupakia faili</string>
     <string name="wikis_attachments_search_clear">Futa utafutaji</string>
     <string name="wikis_attachments_filter_all">Faili zote</string>
@@ -208,6 +206,9 @@
     <string name="wikis_access_set_success">Ufikiaji umesasishwa</string>
     <string name="wikis_access_revoke_success">Ufikiaji umeondolewa</string>
     <string name="wikis_access_revoke_failed">Imeshindwa kuondoa ufikiaji</string>
+    <string name="wikis_rss_revoke_failed">Imeshindwa kubatilisha ufikiaji wa RSS</string>
+    <string name="wikis_access_search_failed">Imeshindwa kutafuta watumiaji</string>
+    <string name="wikis_replica_unknown">Haijulikani</string>
     <string name="wikis_replicas_empty_title">Hakuna nakala bado</string>
     <string name="wikis_replicas_empty_message">Wiki nyingine zikinakili wiki hii, zitaonekana hapa.</string>
     <string name="wikis_replicas_never_synced">Kamwe</string>
@@ -228,22 +229,18 @@
     <string name="wikis_unsubscribe_confirm_message">Una uhakika unataka kujiondoa kutoka %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL ya RSS ya Wiki</string>
     <string name="wikis_find_search_placeholder">Tafuta kwa jina, ID, alama ya kidole, au URL</string>
-    <string name="wikis_join_search_button">Tafuta wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Inajaribu tena bila seva iliyopendekezwa…</string>
     <string name="wikis_comments_title_template">%1$s - Maoni</string>
     <string name="wikis_comment_form_placeholder_new">Andika maoni</string>
     <string name="wikis_comment_form_placeholder_reply">Andika jibu</string>
     <string name="wikis_comment_form_send">Tuma</string>
     <string name="wikis_comment_form_remove_attachment">Ondoa kiambatisho</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Andika maudhui yako hapa kwa kutumia Markdown</string>
     <string name="wikis_insert_dialog_empty">Hakuna viambatisho bado. Pakia faili kuanza.</string>
     <string name="wikis_delete_page_message">Unakaribia kufuta ukurasa „%1$s\" (%2$s). Kitendo hiki kinaweza kutendekwa kwa kurudisha kutoka historia.</string>
     <string name="wikis_delete_page_success">Ukurasa umefutwa</string>
     <string name="wikis_revert_page_title">Rejesha ukurasa</string>
     <string name="wikis_revert_page_message">Unakaribia kurejesha %1$s kwa toleo %2$s. Hii itaunda marekebisho mapya na maudhui ya toleo %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Imerejeshwa kwa toleo %1$s</string>
     <string name="wikis_revert_page_success">Imerejeshwa kwa toleo %1$s</string>
     <string name="wikis_rename_page_renaming">Inabadilisha jina…</string>
     <string name="wikis_rename_page_success">Ukurasa umebadilishwa jina</string>
@@ -274,7 +271,6 @@
     <string name="wikis_replicas_col_synced">Maingiliano ya mwisho: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Hii itasitisha kutuma sasisho kwa „%1$s\". Wanaweza kufuata tena ikiwa wanataka.</string>
     <string name="wikis_replicas_removed_success">Nakala imeondolewa</string>
-    <string name="wikis_load_more">Pakia zaidi</string>
     <string name="wikis_access_change_level">Kiwango cha ufikiaji</string>
     <string name="wikis_access_subject_anyone">Mtu yeyote</string>
     <string name="wikis_access_subject_authenticated">Watumiaji waliothibitishwa</string>

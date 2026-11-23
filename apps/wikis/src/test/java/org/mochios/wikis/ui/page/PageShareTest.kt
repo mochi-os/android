@@ -193,8 +193,6 @@ class PageShareTest {
             PageOverflowMenu(
                 expanded = true,
                 onDismiss = {},
-                wikiId = "w1",
-                slug = "home",
                 permissions = permissions,
                 commentCount = 0,
                 canUnsubscribe = replica,

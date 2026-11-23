@@ -401,8 +401,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Àkòrí àìmọ̀</string>
     <string name="system_documents_modified">Ti yípadà</string>
-    <string name="system_documents_discard_title">Sọ àwọn àyípadà nù?</string>
-    <string name="system_documents_discard">Sọ nù</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s aṣeyọrí</item>
     </plurals>

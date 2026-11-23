@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Atrast wiki</string>
     <string name="wikis_find_no_results">Wiki nav atrastas</string>
     <string name="wikis_find_recommended_section">Ieteiktās wiki</string>
-    <string name="wikis_join_title">Replicēt wiki</string>
-    <string name="wikis_join_or_id">Vai ievadiet ID tieši</string>
-    <string name="wikis_join_id_label">Wiki entītijas ID</string>
-    <string name="wikis_join_submit">Replicēt wiki</string>
     <string name="wikis_create_title">Izveidot wiki</string>
     <string name="wikis_create_name_label">Nosaukums</string>
     <string name="wikis_create_privacy_label">Ļaut jebkuram meklēt wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Nesenas izmaiņas visās šīs wiki lapās.</string>
     <string name="wikis_changes_empty">Vēl nav izmaiņu</string>
     <string name="wikis_search_empty_query">Ievadiet meklēšanas vaicājumu</string>
-    <string name="wikis_redirects_title">Pāradresācijas</string>
-    <string name="wikis_redirects_add">Pievienot</string>
     <string name="wikis_redirects_empty">Pāradresācijas nav konfigurētas</string>
     <string name="wikis_redirect_create_title">Izveidot novirzīšanu</string>
     <string name="wikis_redirect_create_action">Izveidot</string>
@@ -144,6 +138,11 @@
     <string name="wikis_attachments_title">Pielikumi</string>
     <string name="wikis_attachments_upload">Augšupielādēt failus</string>
     <string name="wikis_attachments_uploading">Notiek augšupielāde…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="zero">Augšupielādēti %s failu</item>
+        <item quantity="one">Augšupielādēts %s fails</item>
+        <item quantity="other">Augšupielādēti %s faili</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Neizdevās augšupielādēt failus</string>
     <string name="wikis_attachments_search_clear">Notīrīt meklēšanu</string>
     <string name="wikis_attachments_filter_all">Visi faili</string>
@@ -209,6 +208,9 @@
     <string name="wikis_access_set_success">Piekļuve atjaunināta</string>
     <string name="wikis_access_revoke_success">Piekļuve noņemta</string>
     <string name="wikis_access_revoke_failed">Neizdevās noņemt piekļuvi</string>
+    <string name="wikis_rss_revoke_failed">Neizdevās atsaukt RSS piekļuvi</string>
+    <string name="wikis_access_search_failed">Neizdevās meklēt lietotājus</string>
+    <string name="wikis_replica_unknown">Nezināms</string>
     <string name="wikis_replicas_empty_title">Vēl nav repliku</string>
     <string name="wikis_replicas_empty_message">Kad citi wiki replicē šo wiki, tie parādīsies šeit.</string>
     <string name="wikis_replicas_never_synced">Nekad</string>
@@ -230,22 +232,18 @@
     <string name="wikis_unsubscribe_confirm_message">Vai tiešām vēlaties atteikties no %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Meklēt pēc nosaukuma, ID, pirkstu nospieduma vai URL</string>
-    <string name="wikis_join_search_button">Meklēt wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Mēģina vēlreiz bez ieteiktā servera…</string>
     <string name="wikis_comments_title_template">%1$s - Komentāri</string>
     <string name="wikis_comment_form_placeholder_new">Rakstiet komentāru</string>
     <string name="wikis_comment_form_placeholder_reply">Rakstiet atbildi</string>
     <string name="wikis_comment_form_send">Sūtīt</string>
     <string name="wikis_comment_form_remove_attachment">Noņemt pielikumu</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Rakstiet savu saturu šeit, izmantojot Markdown</string>
     <string name="wikis_insert_dialog_empty">Vēl nav pielikumu. Augšupielādējiet failu, lai sāktu.</string>
     <string name="wikis_delete_page_message">Jūs gatavojaties dzēst lapu „%1$s\" (%2$s). Šo darbību var atsaukt, atjaunojot no vēstures.</string>
     <string name="wikis_delete_page_success">Lapa dzēsta</string>
     <string name="wikis_revert_page_title">Atsaukt lapu</string>
     <string name="wikis_revert_page_message">Jūs gatavojaties atjaunot %1$s uz versiju %2$s. Tas izveidos jaunu redakciju ar versijas %2$s saturu.</string>
-    <string name="wikis_revert_page_default_comment">Atjaunots uz versiju %1$s</string>
     <string name="wikis_revert_page_success">Atjaunots uz versiju %1$s</string>
     <string name="wikis_rename_page_renaming">Pārdēvē…</string>
     <string name="wikis_rename_page_success">Lapa pārdēvēta</string>
@@ -276,7 +274,6 @@
     <string name="wikis_replicas_col_synced">Pēdējā sinhronizācija: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tas apturēs atjauninājumu sūtīšanu uz „%1$s\". Viņi var atkārtoti replicēt, ja vēlas.</string>
     <string name="wikis_replicas_removed_success">Replikācija noņemta</string>
-    <string name="wikis_load_more">Ielādēt vairāk</string>
     <string name="wikis_access_change_level">Piekļuves līmenis</string>
     <string name="wikis_access_subject_anyone">Jebkurš</string>
     <string name="wikis_access_subject_authenticated">Autentificēti lietotāji</string>

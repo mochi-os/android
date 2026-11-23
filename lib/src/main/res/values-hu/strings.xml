@@ -20,6 +20,8 @@
     <string name="common_clear_search">Keresés törlése</string>
     <string name="drawer_open">Menü megnyitása</string>
     <string name="common_cancel">Mégse</string>
+    <string name="common_discard_title">Elveted a módosításokat?</string>
+    <string name="common_discard">Elvetés</string>
     <string name="common_filter">Szűrő</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Szűrő eltávolítása</string>

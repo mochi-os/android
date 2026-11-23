@@ -44,10 +44,6 @@
     <string name="wikis_find_title">Najdi wikije</string>
     <string name="wikis_find_no_results">Wikijev ni mogoče najti</string>
     <string name="wikis_find_recommended_section">Priporočeni wikiji</string>
-    <string name="wikis_join_title">Repliciraj wiki</string>
-    <string name="wikis_join_or_id">Ali vnesite ID neposredno</string>
-    <string name="wikis_join_id_label">ID entitete wikija</string>
-    <string name="wikis_join_submit">Repliciraj wiki</string>
     <string name="wikis_create_title">Ustvari wiki</string>
     <string name="wikis_create_name_label">Ime</string>
     <string name="wikis_create_privacy_label">Dovoli vsem iskanje wikija</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">Nedavna urejanja vseh strani v tem wikiju.</string>
     <string name="wikis_changes_empty">Še ni sprememb</string>
     <string name="wikis_search_empty_query">Vnesite iskalni izraz</string>
-    <string name="wikis_redirects_title">Preusmeritve</string>
-    <string name="wikis_redirects_add">Dodaj</string>
     <string name="wikis_redirects_empty">Ni nastavljenih preusmeritev</string>
     <string name="wikis_redirect_create_title">Ustvari preusmeritev</string>
     <string name="wikis_redirect_create_action">Ustvari</string>
@@ -143,6 +137,12 @@
     <string name="wikis_attachments_title">Priloge</string>
     <string name="wikis_attachments_upload">Naloži datoteke</string>
     <string name="wikis_attachments_uploading">Nalaganje…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">Naložena %s datoteka</item>
+        <item quantity="two">Naloženi %s datoteki</item>
+        <item quantity="few">Naložene %s datoteke</item>
+        <item quantity="other">Naloženih %s datotek</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Neuspešno nalaganje datotek</string>
     <string name="wikis_attachments_search_clear">Počisti iskanje</string>
     <string name="wikis_attachments_filter_all">Vse datoteke</string>
@@ -208,6 +208,9 @@
     <string name="wikis_access_set_success">Dostop posodobljen</string>
     <string name="wikis_access_revoke_success">Dostop odstranjen</string>
     <string name="wikis_access_revoke_failed">Neuspešna odstranitev dostopa</string>
+    <string name="wikis_rss_revoke_failed">Odvzem dostopa RSS ni uspel</string>
+    <string name="wikis_access_search_failed">Neuspešno iskanje uporabnikov</string>
+    <string name="wikis_replica_unknown">Neznano</string>
     <string name="wikis_replicas_empty_title">Še ni replik</string>
     <string name="wikis_replicas_empty_message">Ko drugi wikiji replicirajo ta wiki, se bodo prikazali tukaj.</string>
     <string name="wikis_replicas_never_synced">Nikoli</string>
@@ -228,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Ali ste prepričani, da želite odjaviti naročnino na %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Išči po imenu, ID, prstnem odtisu ali URL</string>
-    <string name="wikis_join_search_button">Išči wikije…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Ponoven poskus brez predlaganega strežnika…</string>
     <string name="wikis_comments_title_template">%1$s - Komentarji</string>
     <string name="wikis_comment_form_placeholder_new">Napišite komentar</string>
     <string name="wikis_comment_form_placeholder_reply">Napišite odgovor</string>
     <string name="wikis_comment_form_send">Pošlji</string>
     <string name="wikis_comment_form_remove_attachment">Odstrani prilogo</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tukaj napišite svojo vsebino z Markdown</string>
     <string name="wikis_insert_dialog_empty">Še ni prilog. Naložite datoteko za začetek.</string>
     <string name="wikis_delete_page_message">Pripravljate se izbrisati stran „%1$s\" (%2$s). To dejanje lahko razveljavite z obnavljanjem iz zgodovine.</string>
     <string name="wikis_delete_page_success">Stran izbrisana</string>
     <string name="wikis_revert_page_title">Razveljavi stran</string>
     <string name="wikis_revert_page_message">Pripravljate se povrniti %1$s na različico %2$s. To bo ustvarilo novo različico z vsebino različice %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Povrnjeno na različico %1$s</string>
     <string name="wikis_revert_page_success">Povrnjeno na različico %1$s</string>
     <string name="wikis_rename_page_renaming">Preimenovanje…</string>
     <string name="wikis_rename_page_success">Stran preimenovana</string>
@@ -274,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Zadnja sinhronizacija: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">To bo ustavilo pošiljanje posodobitev na „%1$s\". Lahko ponovno replicirajo, če želijo.</string>
     <string name="wikis_replicas_removed_success">Replika odstranjena</string>
-    <string name="wikis_load_more">Naloži več</string>
     <string name="wikis_access_change_level">Raven dostopa</string>
     <string name="wikis_access_subject_anyone">Kdor koli</string>
     <string name="wikis_access_subject_authenticated">Overjeni uporabniki</string>

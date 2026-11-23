@@ -75,6 +75,9 @@
     <!-- The hamburger button that opens the navigation drawer -->
     <string name="drawer_open">Open menu</string>
     <string name="common_cancel">Cancel</string>
+    <!-- Asked before leaving an editor, or switching what it shows, with unsaved edits -->
+    <string name="common_discard_title">Discard changes?</string>
+    <string name="common_discard">Discard</string>
     <string name="common_continue">Continue</string>
     <string name="common_open_settings">Open settings</string>
     <string name="common_filter">Filter</string>

@@ -44,10 +44,6 @@
     <string name="wikis_find_title">Finn wiki-ar</string>
     <string name="wikis_find_no_results">Ingen wikiar funne</string>
     <string name="wikis_find_recommended_section">Tilrådde wikiar</string>
-    <string name="wikis_join_title">Replikker wiki</string>
-    <string name="wikis_join_or_id">Eller skriv inn ID-en direkte</string>
-    <string name="wikis_join_id_label">Wiki eining-ID</string>
-    <string name="wikis_join_submit">Replikker wiki</string>
     <string name="wikis_create_title">Opprett wiki</string>
     <string name="wikis_create_name_label">Namn</string>
     <string name="wikis_create_privacy_label">Tillat alle å søkje etter wiki</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">Nylege redigeringar på alle sider i denne wikien.</string>
     <string name="wikis_changes_empty">Ingen endringar enno</string>
     <string name="wikis_search_empty_query">Skriv inn eit søkjeord</string>
-    <string name="wikis_redirects_title">Omdirigeringar</string>
-    <string name="wikis_redirects_add">Legg til</string>
     <string name="wikis_redirects_empty">Ingen omdirigeringar er sette opp</string>
     <string name="wikis_redirect_create_title">Opprett omdirigering</string>
     <string name="wikis_redirect_create_action">Opprett</string>
@@ -143,6 +137,10 @@
     <string name="wikis_attachments_title">Vedlegg</string>
     <string name="wikis_attachments_upload">Last opp filer</string>
     <string name="wikis_attachments_uploading">Lastar opp…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fil lasta opp</item>
+        <item quantity="other">%s filer lasta opp</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Klarte ikkje lasta opp filer</string>
     <string name="wikis_attachments_search_clear">Tøm søk</string>
     <string name="wikis_attachments_filter_all">Alle filer</string>
@@ -208,6 +206,9 @@
     <string name="wikis_access_set_success">Tilgang oppdatert</string>
     <string name="wikis_access_revoke_success">Tilgang fjerna</string>
     <string name="wikis_access_revoke_failed">Klarte ikkje fjerna tilgang</string>
+    <string name="wikis_rss_revoke_failed">Klarte ikkje trekkje tilbake RSS-tilgang</string>
+    <string name="wikis_access_search_failed">Klarte ikkje søkja i brukarar</string>
+    <string name="wikis_replica_unknown">Ukjend</string>
     <string name="wikis_replicas_empty_title">Ingen replikaer enno</string>
     <string name="wikis_replicas_empty_message">Når andre wikiar replikerer denne wikien, vil dei dukke opp her.</string>
     <string name="wikis_replicas_never_synced">Aldri</string>
@@ -228,22 +229,18 @@
     <string name="wikis_unsubscribe_confirm_message">Er du sikker på at du vil seie opp abonnementet på %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Søk etter namn, ID, fingeravtrykk eller URL</string>
-    <string name="wikis_join_search_button">Søk etter wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Prøver igjen utan den føreslegne tenaren…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentarar</string>
     <string name="wikis_comment_form_placeholder_new">Skriv ein kommentar</string>
     <string name="wikis_comment_form_placeholder_reply">Skriv eit svar</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Fjern vedlegg</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skriv innhaldet ditt her med Markdown</string>
     <string name="wikis_insert_dialog_empty">Ingen vedlegg enno. Last opp ei fil for å kome i gang.</string>
     <string name="wikis_delete_page_message">Du er i ferd med å slette sida „%1$s\" (%2$s). Denne handlinga kan angrast ved å gjenopprette frå historikken.</string>
     <string name="wikis_delete_page_success">Side sletta</string>
     <string name="wikis_revert_page_title">Tilbakestill sida</string>
     <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$s. Dette opprettar ein ny revisjon med innhaldet frå versjon %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$s</string>
     <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$s</string>
     <string name="wikis_rename_page_renaming">Endrar namn…</string>
     <string name="wikis_rename_page_success">Sida fekk nytt namn</string>
@@ -274,7 +271,6 @@
     <string name="wikis_replicas_col_synced">Sist synkronisert: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dette stoppar sending av oppdateringar til „%1$s\". Dei kan replikere igjen om dei ønskjer.</string>
     <string name="wikis_replicas_removed_success">Replika fjerna</string>
-    <string name="wikis_load_more">Last fleire</string>
     <string name="wikis_access_change_level">Tilgangsnivå</string>
     <string name="wikis_access_subject_anyone">Alle</string>
     <string name="wikis_access_subject_authenticated">Autentiserte brukarar</string>

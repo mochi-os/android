@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Nájsť wiki</string>
     <string name="wikis_find_no_results">Nenašli sa žiadne wiki</string>
     <string name="wikis_find_recommended_section">Odporúčané wiki</string>
-    <string name="wikis_join_title">Replikovať wiki</string>
-    <string name="wikis_join_or_id">Alebo zadajte ID priamo</string>
-    <string name="wikis_join_id_label">ID entity wiki</string>
-    <string name="wikis_join_submit">Replikovať wiki</string>
     <string name="wikis_create_title">Vytvoriť wiki</string>
     <string name="wikis_create_name_label">Názov</string>
     <string name="wikis_create_privacy_label">Povoliť komukoľvek vyhľadávať wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Nedávne úpravy vo všetkých stránkach tejto wiki.</string>
     <string name="wikis_changes_empty">Zatiaľ žiadne zmeny</string>
     <string name="wikis_search_empty_query">Zadajte hľadaný výraz</string>
-    <string name="wikis_redirects_title">Presmerovania</string>
-    <string name="wikis_redirects_add">Pridať</string>
     <string name="wikis_redirects_empty">Nie sú nakonfigurované žiadne presmerovania</string>
     <string name="wikis_redirect_create_title">Vytvoriť presmerovanie</string>
     <string name="wikis_redirect_create_action">Vytvoriť</string>
@@ -144,6 +138,12 @@
     <string name="wikis_attachments_title">Prílohy</string>
     <string name="wikis_attachments_upload">Nahrať súbory</string>
     <string name="wikis_attachments_uploading">Nahráva sa…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">Nahraný %s súbor</item>
+        <item quantity="few">Nahrané %s súbory</item>
+        <item quantity="many">Nahraných %s súboru</item>
+        <item quantity="other">Nahraných %s súborov</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Nepodarilo sa nahrať súbory</string>
     <string name="wikis_attachments_search_clear">Vymazať vyhľadávanie</string>
     <string name="wikis_attachments_filter_all">Všetky súbory</string>
@@ -209,6 +209,9 @@
     <string name="wikis_access_set_success">Prístup aktualizovaný</string>
     <string name="wikis_access_revoke_success">Prístup odstránený</string>
     <string name="wikis_access_revoke_failed">Nepodarilo sa odstrániť prístup</string>
+    <string name="wikis_rss_revoke_failed">Odvolanie prístupu RSS zlyhalo</string>
+    <string name="wikis_access_search_failed">Nepodarilo sa vyhľadať používateľov</string>
+    <string name="wikis_replica_unknown">Neznáme</string>
     <string name="wikis_replicas_empty_title">Zatiaľ žiadne repliky</string>
     <string name="wikis_replicas_empty_message">Keď ostatné wiki replikujú túto wiki, objavia sa tu.</string>
     <string name="wikis_replicas_never_synced">Nikdy</string>
@@ -230,22 +233,18 @@
     <string name="wikis_unsubscribe_confirm_message">Naozaj chcete zrušiť odber %1$s?</string>
     <string name="wikis_clipboard_label_rss">RSS URL wiki</string>
     <string name="wikis_find_search_placeholder">Hľadať podľa názvu, ID, odtlačku alebo URL</string>
-    <string name="wikis_join_search_button">Hľadať wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Opakujem bez navrhnutého servera…</string>
     <string name="wikis_comments_title_template">%1$s - Komentáre</string>
     <string name="wikis_comment_form_placeholder_new">Napíšte komentár</string>
     <string name="wikis_comment_form_placeholder_reply">Napíšte odpoveď</string>
     <string name="wikis_comment_form_send">Odoslať</string>
     <string name="wikis_comment_form_remove_attachment">Odstrániť prílohu</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Napíšte svoj obsah tu pomocou Markdown</string>
     <string name="wikis_insert_dialog_empty">Zatiaľ žiadne prílohy. Nahrajte súbor pre začiatok.</string>
     <string name="wikis_delete_page_message">Chystáte sa zmazať stránku „%1$s\" (%2$s). Túto akciu možno vrátiť obnovou z histórie.</string>
     <string name="wikis_delete_page_success">Stránka zmazaná</string>
     <string name="wikis_revert_page_title">Vrátiť stránku späť</string>
     <string name="wikis_revert_page_message">Chystáte sa vrátiť %1$s na verziu %2$s. Tým vznikne nová revízia s obsahom verzie %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Vrátené na verziu %1$s</string>
     <string name="wikis_revert_page_success">Vrátené na verziu %1$s</string>
     <string name="wikis_rename_page_renaming">Premenovanie…</string>
     <string name="wikis_rename_page_success">Stránka premenovaná</string>
@@ -276,7 +275,6 @@
     <string name="wikis_replicas_col_synced">Posledná synchronizácia: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tým sa zastaví odosielanie aktualizácií do „%1$s\". Ak chcú, môžu replikovať znova.</string>
     <string name="wikis_replicas_removed_success">Replika odstránená</string>
-    <string name="wikis_load_more">Načítať viac</string>
     <string name="wikis_access_change_level">Úroveň prístupu</string>
     <string name="wikis_access_subject_anyone">Ktokoľvek</string>
     <string name="wikis_access_subject_authenticated">Prihlásení používatelia</string>

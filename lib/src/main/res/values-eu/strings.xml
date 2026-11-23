@@ -20,6 +20,8 @@
     <string name="common_clear_search">Garbitu bilaketa</string>
     <string name="drawer_open">Ireki menua</string>
     <string name="common_cancel">Utzi</string>
+    <string name="common_discard_title">Aldaketak baztertu?</string>
+    <string name="common_discard">Baztertu</string>
     <string name="common_filter">Iragazi</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Iragazkia kendu</string>

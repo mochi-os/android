@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Cerca wikis</string>
     <string name="wikis_find_no_results">No s\'ha trobat cap wiki</string>
     <string name="wikis_find_recommended_section">Wikis recomanats</string>
-    <string name="wikis_join_title">Replica el wiki</string>
-    <string name="wikis_join_or_id">O introdueix l\'ID directament</string>
-    <string name="wikis_join_id_label">ID d\'entitat de la wiki</string>
-    <string name="wikis_join_submit">Replica el wiki</string>
     <string name="wikis_create_title">Crea una wiki</string>
     <string name="wikis_create_name_label">Nom</string>
     <string name="wikis_create_privacy_label">Permet que qualsevol cerqui la wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Edicions recents a totes les pàgines d\'aquest wiki.</string>
     <string name="wikis_changes_empty">Encara no hi ha canvis</string>
     <string name="wikis_search_empty_query">Introdueix un terme de cerca</string>
-    <string name="wikis_redirects_title">Redireccions</string>
-    <string name="wikis_redirects_add">Afegeix</string>
     <string name="wikis_redirects_empty">Cap redirecció configurada</string>
     <string name="wikis_redirect_create_title">Crea una redirecció</string>
     <string name="wikis_redirect_create_action">Crea</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Fitxers adjunts</string>
     <string name="wikis_attachments_upload">Puja fitxers</string>
     <string name="wikis_attachments_uploading">Pujant…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fitxer pujat</item>
+        <item quantity="other">%s fitxers pujats</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">No s\'han pogut pujar els fitxers</string>
     <string name="wikis_attachments_search_clear">Esborra la cerca</string>
     <string name="wikis_attachments_filter_all">Tots els fitxers</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Accés actualitzat</string>
     <string name="wikis_access_revoke_success">Accés eliminat</string>
     <string name="wikis_access_revoke_failed">No s\'ha pogut retirar l\'accés</string>
+    <string name="wikis_rss_revoke_failed">No s\'ha pogut revocar l\'accés RSS</string>
+    <string name="wikis_access_search_failed">No s\'han pogut cercar usuaris</string>
+    <string name="wikis_replica_unknown">Desconegut</string>
     <string name="wikis_replicas_empty_title">Encara no hi ha rèpliques</string>
     <string name="wikis_replicas_empty_message">Quan altres wikis repliquin aquesta wiki, apareixeran aquí.</string>
     <string name="wikis_replicas_never_synced">Mai</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Segur que vols donar-te de baixa de %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nom, ID, empremta o URL</string>
-    <string name="wikis_join_search_button">Cerca wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Tornant a provar sense el servidor suggerit…</string>
     <string name="wikis_comments_title_template">%1$s - Comentaris</string>
     <string name="wikis_comment_form_placeholder_new">Escriu un comentari</string>
     <string name="wikis_comment_form_placeholder_reply">Escriu una resposta</string>
     <string name="wikis_comment_form_send">Envia</string>
     <string name="wikis_comment_form_remove_attachment">Elimina l\'adjunt</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Escriu el teu contingut aquí amb Markdown</string>
     <string name="wikis_insert_dialog_empty">Encara no hi ha adjunts. Puja un fitxer per començar.</string>
     <string name="wikis_delete_page_message">Estàs a punt d\'eliminar la pàgina «%1$s» (%2$s). Aquesta acció es pot desfer restaurant des de l\'historial.</string>
     <string name="wikis_delete_page_success">Pàgina eliminada</string>
     <string name="wikis_revert_page_title">Reverteix la pàgina</string>
     <string name="wikis_revert_page_message">Estàs a punt de revertir %1$s a la versió %2$s. Això crearà una revisió nova amb el contingut de la versió %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Revertit a la versió %1$s</string>
     <string name="wikis_revert_page_success">Revertit a la versió %1$s</string>
     <string name="wikis_rename_page_renaming">Reanomenant…</string>
     <string name="wikis_rename_page_success">Pàgina reanomenada</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Última sincronització: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Això aturarà l\'enviament d\'actualitzacions a «%1$s». Poden replicar de nou si volen.</string>
     <string name="wikis_replicas_removed_success">Rèplica eliminada</string>
-    <string name="wikis_load_more">Carrega\'n més</string>
     <string name="wikis_access_change_level">Nivell d\'accés</string>
     <string name="wikis_access_subject_anyone">Qualsevol</string>
     <string name="wikis_access_subject_authenticated">Usuaris autenticats</string>

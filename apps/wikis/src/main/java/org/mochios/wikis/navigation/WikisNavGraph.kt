@@ -6,11 +6,14 @@
 package org.mochios.wikis.navigation
 
 import android.net.Uri
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.holds
+import org.mochios.android.util.leaveRouter
 import org.mochios.wikis.ui.attachments.AttachmentsScreen
 import org.mochios.wikis.ui.changes.ChangesListScreen
 import org.mochios.wikis.ui.comments.CommentsScreen
@@ -18,12 +21,11 @@ import org.mochios.wikis.ui.editor.PageEditorScreen
 import org.mochios.wikis.ui.find.FindWikisScreen
 import org.mochios.wikis.ui.history.PageHistoryScreen
 import org.mochios.wikis.ui.history.RevisionViewScreen
-import org.mochios.wikis.ui.join.JoinWikiScreen
 import org.mochios.wikis.ui.list.CreateWikiScreen
 import org.mochios.wikis.ui.list.WikiListScreen
 import org.mochios.wikis.ui.page.PageViewScreen
 import org.mochios.wikis.ui.page.WikiHomeScreen
-import org.mochios.wikis.ui.redirects.RedirectsScreen
+import org.mochios.wikis.ui.router.WikisRouter
 import org.mochios.wikis.ui.search.SearchScreen
 import org.mochios.wikis.ui.settings.WikiSettingsScreen
 import org.mochios.wikis.ui.tags.TagPagesScreen
@@ -31,9 +33,15 @@ import org.mochios.wikis.ui.tags.TagsListScreen
 
 object WikisApp {
     // ---- Class-level routes (no wikiId) ----
+    /** The wiki list. */
     const val HOME = "wikis"
+
+    /**
+     * Where the app starts: it reopens the page last viewed over the list, or
+     * the list itself.
+     */
+    const val ROUTER = "wikis/router"
     const val FIND = "wikis/find"
-    const val JOIN = "wikis/join"
     const val CREATE = "wikis/create"
 
     // ---- Builders for entity-context routes ----
@@ -57,7 +65,6 @@ object WikisApp {
     fun comments(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/comments"
     fun settings(wikiId: String, tab: String = "settings") =
         "wikis/${segment(wikiId)}/settings?tab=${segment(tab)}"
-    fun redirects(wikiId: String) = "wikis/${segment(wikiId)}/redirects"
     fun tags(wikiId: String) = "wikis/${segment(wikiId)}/tags"
     fun tagPages(wikiId: String, tag: String) = "wikis/${segment(wikiId)}/tag/${segment(tag)}"
     fun search(wikiId: String, q: String? = null) =
@@ -81,7 +88,6 @@ object WikisApp {
     const val PAGE_REVISION = "wikis/{wikiId}/{page}/history/{version}"
     const val COMMENTS = "wikis/{wikiId}/{page}/comments"
     const val SETTINGS = "wikis/{wikiId}/settings?tab={tab}"
-    const val REDIRECTS = "wikis/{wikiId}/redirects"
     const val TAGS = "wikis/{wikiId}/tags"
     const val TAG_PAGES = "wikis/{wikiId}/tag/{tag}"
     const val SEARCH = "wikis/{wikiId}/search?q={q}"
@@ -89,11 +95,41 @@ object WikisApp {
     const val ATTACHMENTS = "wikis/{wikiId}/{page}/attachments"
 }
 
+/**
+ * Leave the [router] for the wiki list, with [page] - the page last viewed -
+ * opened over it, so Back from the page lands on the list as it does from a
+ * wiki opened there. Only while the router is still on top: a link opened over
+ * it as the app started is what the user asked for.
+ */
+fun NavController.reopen(router: NavBackStackEntry, page: String?) {
+    if (currentBackStackEntry?.id != router.id) return
+    leaveRouter(router, WikisApp.HOME)
+    page?.let { route -> navigate(route) }
+}
+
+/**
+ * Open the wiki list for a link: the copy already on the stack, dropping what
+ * is above it, or one in place of the router when the app started there, so
+ * Back from the list cannot uncover the router and reopen the last page.
+ */
+fun NavController.openWikis() {
+    when {
+        holds(WikisApp.HOME) -> popBackStack(WikisApp.HOME, inclusive = false)
+        holds(WikisApp.ROUTER) -> navigate(WikisApp.HOME) {
+            popUpTo(WikisApp.ROUTER) { inclusive = true }
+        }
+        else -> navigate(WikisApp.HOME) { launchSingleTop = true }
+    }
+}
+
 fun NavGraphBuilder.wikisNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit,
-    onOpenLink: (String) -> Unit = {},
 ) {
+    composable(WikisApp.ROUTER) { entry ->
+        WikisRouter(onResolve = { page -> navController.reopen(entry, page) })
+    }
+
     composable(WikisApp.HOME) {
         WikiListScreen(navController, onOpenNotifications = onOpenNotifications)
     }
@@ -120,18 +156,6 @@ fun NavGraphBuilder.wikisNavGraph(
             onCreated = { wikiId, home ->
                 navController.navigate(WikisApp.newPage(wikiId, home)) {
                     popUpTo(WikisApp.CREATE) { inclusive = true }
-                }
-            },
-        )
-    }
-
-    composable(WikisApp.JOIN) {
-        JoinWikiScreen(
-            onBack = { navController.popBackStack() },
-            onSearch = { navController.navigate(WikisApp.FIND) },
-            onJoined = { wikiId ->
-                navController.navigate(WikisApp.wikiHome(wikiId)) {
-                    popUpTo(WikisApp.HOME)
                 }
             },
         )
@@ -224,13 +248,6 @@ fun NavGraphBuilder.wikisNavGraph(
         ),
     ) {
         WikiSettingsScreen(navController)
-    }
-
-    composable(
-        route = WikisApp.REDIRECTS,
-        arguments = listOf(navArgument("wikiId") { type = NavType.StringType }),
-    ) {
-        RedirectsScreen(navController)
     }
 
     composable(

@@ -20,6 +20,8 @@
     <string name="common_clear_search">Barbaadii cilliisi</string>
     <string name="drawer_open">Menyuu bani</string>
     <string name="common_cancel">Haquu</string>
+    <string name="common_discard_title">Jijjiiramoota gatuu?</string>
+    <string name="common_discard">Gati</string>
     <string name="common_filter">Filannoo</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Calaltuu balleessuu</string>

@@ -8,6 +8,7 @@ package org.mochios.android.ui.components
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
+import org.mochios.android.api.OwnedAddress
 
 class AnonymousImageTest {
 
@@ -46,5 +47,21 @@ class AnonymousImageTest {
     @Test
     fun resolve_noServerRefused() {
         assertNull(resolveAnonymousImage("/a.png", ""))
+    }
+
+    @Test
+    fun model_bodyImageWithNoMapperIsAnonymous() {
+        assertEquals(AnonymousImage("/someapp/-/some-action"), imageModel("/someapp/-/some-action") { null })
+        assertEquals("data:image/png;base64,AAAA", imageModel("data:image/png;base64,AAAA") { null })
+    }
+
+    @Test
+    fun model_callerMapsItsOwnDestinationsAndNothingElse() {
+        val own = OwnedAddress.of("/wikis/w1/-/attachments/a1/thumbnail")
+        val model: (String) -> Any? = { destination -> if (destination == "attachments/a1/thumbnail") own else null }
+        assertEquals(own, imageModel("attachments/a1/thumbnail", model))
+        assertEquals(AnonymousImage("https://cdn.example/a.png"), imageModel("https://cdn.example/a.png", model))
+        // An inline image needs no request, whatever the caller maps.
+        assertEquals("data:image/png;base64,AAAA", imageModel("data:image/png;base64,AAAA") { own })
     }
 }

@@ -31,9 +31,11 @@ data class WikiSettingsUiState(
     val error: MochiError? = null,
 )
 
+/** [messageRes] with [args]; for a failure, the server's reason in [error] where it sent one. */
 data class WikiSettingsSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
@@ -88,9 +90,10 @@ class WikiSettingsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(wiki = current.copy(home = home))
     }
 
-    fun emit(messageRes: Int, vararg args: Any) {
+    /** Show a tab's message in the screen's snackbar. */
+    fun emit(messageRes: Int, args: List<Any> = emptyList(), error: MochiError? = null) {
         viewModelScope.launch {
-            _snackbar.emit(WikiSettingsSnackbar(messageRes, args.toList()))
+            _snackbar.emit(WikiSettingsSnackbar(messageRes, args, error))
         }
     }
 }

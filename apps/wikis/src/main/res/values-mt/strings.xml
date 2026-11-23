@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Sib wikis</string>
     <string name="wikis_find_no_results">Ma nstabu l-ebda wikis</string>
     <string name="wikis_find_recommended_section">Wikis rakkomandati</string>
-    <string name="wikis_join_title">Irreplika l-wiki</string>
-    <string name="wikis_join_or_id">Jew daħħal l-ID direttament</string>
-    <string name="wikis_join_id_label">ID tal-entità tal-wiki</string>
-    <string name="wikis_join_submit">Irreplika l-wiki</string>
     <string name="wikis_create_title">Oħloq wiki</string>
     <string name="wikis_create_name_label">Isem</string>
     <string name="wikis_create_privacy_label">Ippermetti lil kulħadd ifittex wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Edits reċenti fil-paġni kollha f\'dan il-wiki.</string>
     <string name="wikis_changes_empty">L-ebda bidliet s\'issa</string>
     <string name="wikis_search_empty_query">Daħħal terminu ta\' tiftix</string>
-    <string name="wikis_redirects_title">Ridirezzjonijiet</string>
-    <string name="wikis_redirects_add">Żid</string>
     <string name="wikis_redirects_empty">L-ebda redirects ikkonfigurati</string>
     <string name="wikis_redirect_create_title">Oħloq redirect</string>
     <string name="wikis_redirect_create_action">Oħloq</string>
@@ -144,6 +138,13 @@
     <string name="wikis_attachments_title">Mehmużin</string>
     <string name="wikis_attachments_upload">Tella\' fajls</string>
     <string name="wikis_attachments_uploading">Qed itella\'…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fajl ittella\'</item>
+        <item quantity="two">%s fajls ittellgħu</item>
+        <item quantity="few">%s fajls ittellgħu</item>
+        <item quantity="many">%s fajl ittellgħu</item>
+        <item quantity="other">%s fajl ittellgħu</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Ma rnexxiex jittellgħu l-fajls</string>
     <string name="wikis_attachments_search_clear">Naddaf it-tiftix</string>
     <string name="wikis_attachments_filter_all">Il-files kollha</string>
@@ -209,6 +210,9 @@
     <string name="wikis_access_set_success">Aċċess aġġornat</string>
     <string name="wikis_access_revoke_success">Aċċess imneħħi</string>
     <string name="wikis_access_revoke_failed">Ma rnexxiex jitneħħa l-aċċess</string>
+    <string name="wikis_rss_revoke_failed">Ma rnexxiex jiġi rrevokat l-aċċess RSS</string>
+    <string name="wikis_access_search_failed">Ma rnexxiex jiġu mfittxija l-utenti</string>
+    <string name="wikis_replica_unknown">Mhux magħruf</string>
     <string name="wikis_replicas_empty_title">L-ebda repliki s\'issa</string>
     <string name="wikis_replicas_empty_message">Meta wikis oħra jirreplikaw din il-wiki, jidhru hawn.</string>
     <string name="wikis_replicas_never_synced">Qatt</string>
@@ -230,22 +234,18 @@
     <string name="wikis_unsubscribe_confirm_message">Żgur li trid tħassar l-abbonament minn %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Fittex skont l-isem, ID, marka tas-swaba’ jew URL</string>
-    <string name="wikis_join_search_button">Fittex wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Qed nerġgħu nippruvaw mingħajr is-server suġġerit…</string>
     <string name="wikis_comments_title_template">%1$s - Kummenti</string>
     <string name="wikis_comment_form_placeholder_new">Ikteb kumment</string>
     <string name="wikis_comment_form_placeholder_reply">Ikteb tweġiba</string>
     <string name="wikis_comment_form_send">Ibgħat</string>
     <string name="wikis_comment_form_remove_attachment">Neħħi l-mehmuż</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ikteb il-kontenut tiegħek hawn bl-użu ta’ Markdown</string>
     <string name="wikis_insert_dialog_empty">Għad m’hemm l-ebda mehmuż. Tella’ fajl biex tibda.</string>
     <string name="wikis_delete_page_message">Int wasal biex tħassar il-paġna “%1$s” (%2$s). Din l-azzjoni tista’ titreġġa’ lura billi tirristawra mill-istorja.</string>
     <string name="wikis_delete_page_success">Paġna mħassra</string>
     <string name="wikis_revert_page_title">Reġġa\' lura l-paġna</string>
     <string name="wikis_revert_page_message">Int wasal biex tirriverti %1$s għall-verżjoni %2$s. Dan se joħloq reviżjoni ġdida bil-kontenut mill-verżjoni %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Reġa’ lura għall-verżjoni %1$s</string>
     <string name="wikis_revert_page_success">Reġa’ lura għall-verżjoni %1$s</string>
     <string name="wikis_rename_page_renaming">Qed jinbidel l-isem…</string>
     <string name="wikis_rename_page_success">Paġna msemmija mill-ġdid</string>
@@ -276,7 +276,6 @@
     <string name="wikis_replicas_col_synced">L-aħħar sinkronizzazzjoni: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dan se jwaqqaf li jintbagħtu aġġornamenti lil “%1$s”. Jistgħu jirreplikaw mill-ġdid jekk iridu.</string>
     <string name="wikis_replicas_removed_success">Replika mneħħija</string>
-    <string name="wikis_load_more">Tella\' aktar</string>
     <string name="wikis_access_change_level">Livell ta\' aċċess</string>
     <string name="wikis_access_subject_anyone">Kulħadd</string>
     <string name="wikis_access_subject_authenticated">Utenti awtentikati</string>

@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">અજાણી થીમ</string>
     <string name="system_documents_modified">સંશોધિત</string>
-    <string name="system_documents_discard_title">ફેરફારો છોડી દઈએ?</string>
-    <string name="system_documents_discard">છોડી દો</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s સફળ</item>
         <item quantity="other">%1$s સફળ</item>

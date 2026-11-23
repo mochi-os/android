@@ -20,6 +20,8 @@
     <string name="common_clear_search">Rensa sökning</string>
     <string name="drawer_open">Öppna meny</string>
     <string name="common_cancel">Avbryt</string>
+    <string name="common_discard_title">Kasta ändringarna?</string>
+    <string name="common_discard">Kasta</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Ta bort filter</string>

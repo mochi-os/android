@@ -20,6 +20,8 @@
     <string name="common_clear_search">Notīrīt meklēšanu</string>
     <string name="drawer_open">Atvērt izvēlni</string>
     <string name="common_cancel">Atcelt</string>
+    <string name="common_discard_title">Atmest izmaiņas?</string>
+    <string name="common_discard">Atmest</string>
     <string name="common_filter">Filtrēt</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Noņemt filtru</string>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Hitta wikis</string>
     <string name="wikis_find_no_results">Inga wikis hittades</string>
     <string name="wikis_find_recommended_section">Rekommenderade wikis</string>
-    <string name="wikis_join_title">Replikera wiki</string>
-    <string name="wikis_join_or_id">Eller ange ID direkt</string>
-    <string name="wikis_join_id_label">Wiki-entitets-ID</string>
-    <string name="wikis_join_submit">Replikera wiki</string>
     <string name="wikis_create_title">Skapa wiki</string>
     <string name="wikis_create_name_label">Namn</string>
     <string name="wikis_create_privacy_label">Tillåt alla att söka efter wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Senaste redigeringar på alla sidor i denna wiki.</string>
     <string name="wikis_changes_empty">Inga ändringar ännu</string>
     <string name="wikis_search_empty_query">Ange en sökterm</string>
-    <string name="wikis_redirects_title">Omdirigeringar</string>
-    <string name="wikis_redirects_add">Lägg till</string>
     <string name="wikis_redirects_empty">Inga omdirigeringar konfigurerade</string>
     <string name="wikis_redirect_create_title">Skapa omdirigering</string>
     <string name="wikis_redirect_create_action">Skapa</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Bilagor</string>
     <string name="wikis_attachments_upload">Ladda upp filer</string>
     <string name="wikis_attachments_uploading">Laddar upp…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fil uppladdad</item>
+        <item quantity="other">%s filer uppladdade</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Kunde inte ladda upp filer</string>
     <string name="wikis_attachments_search_clear">Rensa sökning</string>
     <string name="wikis_attachments_filter_all">Alla filer</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Åtkomst uppdaterad</string>
     <string name="wikis_access_revoke_success">Åtkomst borttagen</string>
     <string name="wikis_access_revoke_failed">Kunde inte ta bort åtkomst</string>
+    <string name="wikis_rss_revoke_failed">Det gick inte att återkalla RSS-åtkomst</string>
+    <string name="wikis_access_search_failed">Kunde inte söka efter användare</string>
+    <string name="wikis_replica_unknown">Okänd</string>
     <string name="wikis_replicas_empty_title">Inga repliker ännu</string>
     <string name="wikis_replicas_empty_message">När andra wikis replikerar den här wikin visas de här.</string>
     <string name="wikis_replicas_never_synced">Aldrig</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Är du säker på att du vill avsluta prenumerationen på %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Sök efter namn, ID, fingeravtryck eller URL</string>
-    <string name="wikis_join_search_button">Sök efter wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Försöker igen utan den föreslagna servern…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentarer</string>
     <string name="wikis_comment_form_placeholder_new">Skriv en kommentar</string>
     <string name="wikis_comment_form_placeholder_reply">Skriv ett svar</string>
     <string name="wikis_comment_form_send">Skicka</string>
     <string name="wikis_comment_form_remove_attachment">Ta bort bilaga</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skriv ditt innehåll här med Markdown</string>
     <string name="wikis_insert_dialog_empty">Inga bilagor än. Ladda upp en fil för att komma igång.</string>
     <string name="wikis_delete_page_message">Du är på väg att radera sidan \"%1$s\" (%2$s). Denna åtgärd kan ångras genom att återställa från historiken.</string>
     <string name="wikis_delete_page_success">Sida raderad</string>
     <string name="wikis_revert_page_title">Återställ sida</string>
     <string name="wikis_revert_page_message">Du är på väg att återställa %1$s till version %2$s. Detta skapar en ny revision med innehållet från version %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Återställd till version %1$s</string>
     <string name="wikis_revert_page_success">Återställd till version %1$s</string>
     <string name="wikis_rename_page_renaming">Byter namn…</string>
     <string name="wikis_rename_page_success">Sida har bytt namn</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Senast synkad: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Detta stoppar uppdateringar till \"%1$s\". De kan replikera igen om de vill.</string>
     <string name="wikis_replicas_removed_success">Replika borttagen</string>
-    <string name="wikis_load_more">Läs in fler</string>
     <string name="wikis_access_change_level">Åtkomstnivå</string>
     <string name="wikis_access_subject_anyone">Vem som helst</string>
     <string name="wikis_access_subject_authenticated">Autentiserade användare</string>

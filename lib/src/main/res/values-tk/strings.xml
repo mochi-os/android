@@ -20,6 +20,8 @@
     <string name="common_clear_search">Gözlegi arassalamak</string>
     <string name="drawer_open">Menýuny aç</string>
     <string name="common_cancel">Ýatyrmak</string>
+    <string name="common_discard_title">Üýtgeşmeler taşlansynmy?</string>
+    <string name="common_discard">Taşla</string>
     <string name="common_filter">Süzgüç</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Süzgüçi aýyr</string>

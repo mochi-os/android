@@ -20,6 +20,8 @@
     <string name="common_clear_search">Издөөнү тазалоо</string>
     <string name="drawer_open">Менюну ачуу</string>
     <string name="common_cancel">Жокко чыгаруу</string>
+    <string name="common_discard_title">Өзгөртүүлөрдү таштайсызбы?</string>
+    <string name="common_discard">Таштоо</string>
     <string name="common_filter">Чыпка</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Чыпканы алып салуу</string>

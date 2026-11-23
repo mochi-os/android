@@ -400,8 +400,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ຮູບແບບທີ່ບໍ່ຮູ້ຈັກ</string>
     <string name="system_documents_modified">ແກ້ໄຂແລ້ວ</string>
-    <string name="system_documents_discard_title">ຖິ້ມການປ່ຽນແປງບໍ?</string>
-    <string name="system_documents_discard">ຖິ້ມ</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s ສຳເລັດ</item>
     </plurals>

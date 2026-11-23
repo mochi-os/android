@@ -437,8 +437,6 @@
     <string name="account_totp_open">Open in authenticator app</string>
     <string name="account_data_generate">Generate passphrase</string>
     <string name="system_documents_modified">Modified</string>
-    <string name="system_documents_discard_title">Discard changes?</string>
-    <string name="system_documents_discard">Discard</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s succeeded</item>
         <item quantity="other">%1$s succeeded</item>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Golèk wiki</string>
     <string name="wikis_find_no_results">Ora ana wiki ditemokaké</string>
     <string name="wikis_find_recommended_section">Wiki disaranaké</string>
-    <string name="wikis_join_title">Replikasi wiki</string>
-    <string name="wikis_join_or_id">Utawa ketik ID langsung</string>
-    <string name="wikis_join_id_label">ID entitas wiki</string>
-    <string name="wikis_join_submit">Replikasi wiki</string>
     <string name="wikis_create_title">Gawé wiki</string>
     <string name="wikis_create_name_label">Jeneng</string>
     <string name="wikis_create_privacy_label">Idini sapa waé nggolèki wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Owahan paling anyar ing kabèh kaca ing wiki iki.</string>
     <string name="wikis_changes_empty">Durung ana owahan</string>
     <string name="wikis_search_empty_query">Lebokna istilah panggolèkan</string>
-    <string name="wikis_redirects_title">Redirect</string>
-    <string name="wikis_redirects_add">Tambah</string>
     <string name="wikis_redirects_empty">Ora ana redirect disetel</string>
     <string name="wikis_redirect_create_title">Gawé redirect</string>
     <string name="wikis_redirect_create_action">Gawé</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">Lampiran</string>
     <string name="wikis_attachments_upload">Unggah file</string>
     <string name="wikis_attachments_uploading">Lagi ngunggah…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">%s file diunggah</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Gagal ngunggah file</string>
     <string name="wikis_attachments_search_clear">Resiki panggolékan</string>
     <string name="wikis_attachments_filter_all">Kabèh berkas</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">Akses dianyari</string>
     <string name="wikis_access_revoke_success">Akses dibusak</string>
     <string name="wikis_access_revoke_failed">Gagal mbusak akses</string>
+    <string name="wikis_rss_revoke_failed">Gagal nyabut akses RSS</string>
+    <string name="wikis_access_search_failed">Gagal nggolèk pangguna</string>
+    <string name="wikis_replica_unknown">Ora dimangerteni</string>
     <string name="wikis_replicas_empty_title">Durung ana replika</string>
     <string name="wikis_replicas_empty_message">Yen wiki liya replikasi wiki iki, dheweke bakal katon ing kene.</string>
     <string name="wikis_replicas_never_synced">Ora tau</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">Sampeyan yakin arep mandheg langganan %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Golek miturut jeneng, ID, sidik jari, utawa URL</string>
-    <string name="wikis_join_search_button">Golek wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Nyoba maneh tanpa server sing disaranake…</string>
     <string name="wikis_comments_title_template">%1$s - Komentar</string>
     <string name="wikis_comment_form_placeholder_new">Tulis komentar</string>
     <string name="wikis_comment_form_placeholder_reply">Tulis wangsulan</string>
     <string name="wikis_comment_form_send">Kirim</string>
     <string name="wikis_comment_form_remove_attachment">Cabut lampiran</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tulis isi sampeyan ing kene nganggo Markdown</string>
     <string name="wikis_insert_dialog_empty">Durung ana lampiran. Unggah berkas kanggo miwiti.</string>
     <string name="wikis_delete_page_message">Sampeyan arep mbusak kaca “%1$s” (%2$s). Tumindak iki bisa dibalèkake kanthi mulihake saka riwayat.</string>
     <string name="wikis_delete_page_success">Kaca dibusak</string>
     <string name="wikis_revert_page_title">Balèkaké kaca</string>
     <string name="wikis_revert_page_message">Sampeyan arep mbalèkake %1$s menyang versi %2$s. Iki bakal nggawe revisi anyar kanthi isi saka versi %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Dibalèkake menyang versi %1$s</string>
     <string name="wikis_revert_page_success">Dibalèkake menyang versi %1$s</string>
     <string name="wikis_rename_page_renaming">Ngowahi jeneng…</string>
     <string name="wikis_rename_page_success">Jeneng kaca diowahi</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">Pungkasan disinkronaké: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Iki bakal mandhegake ngirim nganyari menyang “%1$s”. Dheweke bisa replikasi maneh yen kepengin.</string>
     <string name="wikis_replicas_removed_success">Replika wis dicabut</string>
-    <string name="wikis_load_more">Muat luwih akèh</string>
     <string name="wikis_access_change_level">Tingkat akses</string>
     <string name="wikis_access_subject_anyone">Sapa wae</string>
     <string name="wikis_access_subject_authenticated">Panganggo sing wis diverifikasi</string>

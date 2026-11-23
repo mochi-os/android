@@ -20,6 +20,8 @@
     <string name="common_clear_search">Clirio chwiliad</string>
     <string name="drawer_open">Agor dewislen</string>
     <string name="common_cancel">Canslo</string>
+    <string name="common_discard_title">Hepgor y newidiadau?</string>
+    <string name="common_discard">Hepgor</string>
     <string name="common_filter">Hidlo</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Tynnu hidlydd</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">Tøm søk</string>
     <string name="drawer_open">Åpne meny</string>
     <string name="common_cancel">Avbryt</string>
+    <string name="common_discard_title">Forkaste endringene?</string>
+    <string name="common_discard">Forkast</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Fjern filter</string>

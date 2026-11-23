@@ -20,6 +20,8 @@
     <string name="common_clear_search">ڳولا صاف ڪريو</string>
     <string name="drawer_open">مينيو کوليو</string>
     <string name="common_cancel">منسوخ ڪريو</string>
+    <string name="common_discard_title">تبديليون رد ڪجن؟</string>
+    <string name="common_discard">رد ڪريو</string>
     <string name="common_filter">فلٽر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">فلٽر ختم ڪريو</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">തിരയൽ മായ്ക്കുക</string>
     <string name="drawer_open">മെനു തുറക്കുക</string>
     <string name="common_cancel">റദ്ദാക്കുക</string>
+    <string name="common_discard_title">മാറ്റങ്ങൾ ഉപേക്ഷിക്കണോ?</string>
+    <string name="common_discard">ഉപേക്ഷിക്കുക</string>
     <string name="common_filter">ഫിൽട്ടർ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ഫിൽട്ടർ നീക്കം ചെയ്യുക</string>

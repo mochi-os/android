@@ -20,6 +20,8 @@
     <string name="common_clear_search">مسح البحث</string>
     <string name="drawer_open">فتح القائمة</string>
     <string name="common_cancel">إلغاء</string>
+    <string name="common_discard_title">تجاهل التغييرات؟</string>
+    <string name="common_discard">تجاهل</string>
     <string name="common_filter">تصفية</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">إزالة الفلتر</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">खोज साफ़ करें</string>
     <string name="drawer_open">मेन्यू खोलें</string>
     <string name="common_cancel">रद्द करें</string>
+    <string name="common_discard_title">बदलाव त्यागें?</string>
+    <string name="common_discard">त्यागें</string>
     <string name="common_filter">फ़िल्टर</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">फ़िल्टर हटाएं</string>

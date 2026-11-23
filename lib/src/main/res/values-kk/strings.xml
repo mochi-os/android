@@ -20,6 +20,8 @@
     <string name="common_clear_search">Іздеуді тазалау</string>
     <string name="drawer_open">Мәзірді ашу</string>
     <string name="common_cancel">Болдырмау</string>
+    <string name="common_discard_title">Өзгерістерді алып тастау керек пе?</string>
+    <string name="common_discard">Алып тастау</string>
     <string name="common_filter">Сүзгі</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Сүзгіні алып тастау</string>

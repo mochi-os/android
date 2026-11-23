@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Знайти вікі</string>
     <string name="wikis_find_no_results">Вікі не знайдено</string>
     <string name="wikis_find_recommended_section">Рекомендовані вікі</string>
-    <string name="wikis_join_title">Реплікувати вікі</string>
-    <string name="wikis_join_or_id">Або введіть ID напряму</string>
-    <string name="wikis_join_id_label">ID сутності вікі</string>
-    <string name="wikis_join_submit">Реплікувати вікі</string>
     <string name="wikis_create_title">Створити вікі</string>
     <string name="wikis_create_name_label">Назва</string>
     <string name="wikis_create_privacy_label">Дозволити всім шукати вікі</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Останні редагування на всіх сторінках цієї вікі.</string>
     <string name="wikis_changes_empty">Змін ще немає</string>
     <string name="wikis_search_empty_query">Введіть пошуковий запит</string>
-    <string name="wikis_redirects_title">Перенаправлення</string>
-    <string name="wikis_redirects_add">Додати</string>
     <string name="wikis_redirects_empty">Перенаправлення не налаштовано</string>
     <string name="wikis_redirect_create_title">Створити перенаправлення</string>
     <string name="wikis_redirect_create_action">Створити</string>
@@ -144,6 +138,12 @@
     <string name="wikis_attachments_title">Вкладення</string>
     <string name="wikis_attachments_upload">Завантажити файли</string>
     <string name="wikis_attachments_uploading">Завантаження…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s файл завантажено</item>
+        <item quantity="few">%s файли завантажено</item>
+        <item quantity="many">%s файлів завантажено</item>
+        <item quantity="other">%s файлу завантажено</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Не вдалося завантажити файли</string>
     <string name="wikis_attachments_search_clear">Очистити пошук</string>
     <string name="wikis_attachments_filter_all">Усі файли</string>
@@ -209,6 +209,9 @@
     <string name="wikis_access_set_success">Доступ оновлено</string>
     <string name="wikis_access_revoke_success">Доступ скасовано</string>
     <string name="wikis_access_revoke_failed">Не вдалося видалити доступ</string>
+    <string name="wikis_rss_revoke_failed">Не вдалося відкликати доступ RSS</string>
+    <string name="wikis_access_search_failed">Не вдалося знайти користувачів</string>
+    <string name="wikis_replica_unknown">Невідомо</string>
     <string name="wikis_replicas_empty_title">Реплік ще немає</string>
     <string name="wikis_replicas_empty_message">Коли інші вікі реплікуватимуть цю вікі, вони зʼявлятимуться тут.</string>
     <string name="wikis_replicas_never_synced">Ніколи</string>
@@ -230,22 +233,18 @@
     <string name="wikis_unsubscribe_confirm_message">Ви впевнені, що хочете відписатися від %1$s?</string>
     <string name="wikis_clipboard_label_rss">RSS URL вікі</string>
     <string name="wikis_find_search_placeholder">Пошук за назвою, ID, відбитком або URL</string>
-    <string name="wikis_join_search_button">Пошук вікі…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Повторна спроба без запропонованого сервера…</string>
     <string name="wikis_comments_title_template">%1$s - Коментарі</string>
     <string name="wikis_comment_form_placeholder_new">Напишіть коментар</string>
     <string name="wikis_comment_form_placeholder_reply">Напишіть відповідь</string>
     <string name="wikis_comment_form_send">Надіслати</string>
     <string name="wikis_comment_form_remove_attachment">Видалити вкладення</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишіть свій вміст тут за допомогою Markdown</string>
     <string name="wikis_insert_dialog_empty">Ще немає вкладень. Завантажте файл, щоб почати.</string>
     <string name="wikis_delete_page_message">Ви збираєтеся видалити сторінку „%1$s\" (%2$s). Цю дію можна скасувати, відновивши з історії.</string>
     <string name="wikis_delete_page_success">Сторінку видалено</string>
     <string name="wikis_revert_page_title">Відкотити сторінку</string>
     <string name="wikis_revert_page_message">Ви збираєтеся повернути %1$s до версії %2$s. Це створить нову редакцію з вмістом версії %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Повернуто до версії %1$s</string>
     <string name="wikis_revert_page_success">Повернуто до версії %1$s</string>
     <string name="wikis_rename_page_renaming">Перейменування…</string>
     <string name="wikis_rename_page_success">Сторінку перейменовано</string>
@@ -276,7 +275,6 @@
     <string name="wikis_replicas_col_synced">Остання синхронізація: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Це зупинить надсилання оновлень до „%1$s\". Вони можуть реплікувати знову, якщо захочуть.</string>
     <string name="wikis_replicas_removed_success">Репліку видалено</string>
-    <string name="wikis_load_more">Завантажити більше</string>
     <string name="wikis_access_change_level">Рівень доступу</string>
     <string name="wikis_access_subject_anyone">Будь-хто</string>
     <string name="wikis_access_subject_authenticated">Автентифіковані користувачі</string>

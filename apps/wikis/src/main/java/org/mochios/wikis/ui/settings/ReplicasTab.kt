@@ -39,12 +39,11 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
 
@@ -62,7 +61,7 @@ fun ReplicasTab(
 
     LaunchedEffect(Unit) {
         viewModel.snackbar.collect { msg ->
-            parentViewModel.emit(msg.messageRes, *msg.args.toTypedArray())
+            parentViewModel.emit(msg.messageRes, msg.args, msg.error)
         }
     }
 
@@ -71,6 +70,10 @@ fun ReplicasTab(
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
+        }
+        // A failed load is not a wiki nobody replicates.
+        state.error != null && state.replicas.isEmpty() -> {
+            ErrorState(error = state.error!!, onRetry = viewModel::load)
         }
         state.replicas.isEmpty() -> {
             EmptyState(
@@ -105,7 +108,7 @@ fun ReplicasTab(
             title = stringResource(R.string.wikis_replicas_remove_confirm_title),
             text = stringResource(
                 R.string.wikis_replicas_remove_confirm_message,
-                toRemove.name ?: toRemove.id,
+                replicaName(toRemove),
             ),
             confirmText = stringResource(R.string.wikis_replicas_remove_confirm_action),
             onConfirm = { viewModel.remove(toRemove.id) { pendingRemove = null } },
@@ -116,6 +119,14 @@ fun ReplicasTab(
         )
     }
 }
+
+/**
+ * A replica by the name the server resolved for it. One it could not resolve
+ * is unknown: its id means nothing to a reader.
+ */
+@Composable
+private fun replicaName(replica: Replica): String =
+    replica.name?.takeIf { name -> name.isNotBlank() } ?: stringResource(R.string.wikis_replica_unknown)
 
 @Composable
 private fun ReplicaCard(
@@ -141,14 +152,10 @@ private fun ReplicaCard(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                if (!replica.name.isNullOrBlank()) {
-                    Text(
-                        text = replica.name,
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                }
-                DataChip(value = replica.id, truncate = Truncate.MIDDLE)
+                Text(
+                    text = replicaName(replica),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = stringResource(R.string.wikis_replicas_col_subscribed, subscribedLabel),

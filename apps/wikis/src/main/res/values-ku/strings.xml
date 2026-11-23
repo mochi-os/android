@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wikiyan bibîne</string>
     <string name="wikis_find_no_results">Tu wiki nehatin dîtin</string>
     <string name="wikis_find_recommended_section">Wikiyên pêşniyarkirî</string>
-    <string name="wikis_join_title">Wikiyê replica bike</string>
-    <string name="wikis_join_or_id">An ID rasterast binivîsîne</string>
-    <string name="wikis_join_id_label">ID-ya hebûna wîkîyê</string>
-    <string name="wikis_join_submit">Wikiyê replica bike</string>
     <string name="wikis_create_title">Wiki çêbike</string>
     <string name="wikis_create_name_label">Nav</string>
     <string name="wikis_create_privacy_label">Destûr bide her kesî ku li wiki bigere</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Edîtkirinên dawîn li hemû rûpelên vê wikiyê.</string>
     <string name="wikis_changes_empty">Hêj tu guhertin tune</string>
     <string name="wikis_search_empty_query">Têgehekê lêgerînê binivîse</string>
-    <string name="wikis_redirects_title">Beralîkirin</string>
-    <string name="wikis_redirects_add">Zêde bike</string>
     <string name="wikis_redirects_empty">Tu beralîkirin nehatine mîhengkirin</string>
     <string name="wikis_redirect_create_title">Beralîkirin çêbike</string>
     <string name="wikis_redirect_create_action">Çêbike</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Pêvek</string>
     <string name="wikis_attachments_upload">Pelan bar bike</string>
     <string name="wikis_attachments_uploading">Tê barkirin…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s pel hate barkirin</item>
+        <item quantity="other">%s pel hatin barkirin</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Barkirina pelan neserkeftî bû</string>
     <string name="wikis_attachments_search_clear">Lêgerînê paqij bike</string>
     <string name="wikis_attachments_filter_all">Hemû pel</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Gihîştin hat nûkirin</string>
     <string name="wikis_access_revoke_success">Gihîştin hat rakirin</string>
     <string name="wikis_access_revoke_failed">Rakirina destûrê neserkeftî bû</string>
+    <string name="wikis_rss_revoke_failed">Vekişandina gihîştina RSS bi ser neket</string>
+    <string name="wikis_access_search_failed">Lêgerîna bikarhêneran neserkeftî bû</string>
+    <string name="wikis_replica_unknown">Nediyar</string>
     <string name="wikis_replicas_empty_title">Hêj tu replica tune</string>
     <string name="wikis_replicas_empty_message">Dema wîkîyên din vê wîkîyê dubare bikin, ew ê li vir xuya bibin.</string>
     <string name="wikis_replicas_never_synced">Tu car</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Tu bawer î ku dixwazî abonetiya %1$s betal bikî?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Bi nav, ID, şopa tiliyê an URL bigere</string>
-    <string name="wikis_join_search_button">Li wikiyan bigere…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Bêyî rajekarê pêşniyarkirî ji nû ve tê ceribandin…</string>
     <string name="wikis_comments_title_template">%1$s - Şîrove</string>
     <string name="wikis_comment_form_placeholder_new">Şîroveyekê binivîse</string>
     <string name="wikis_comment_form_placeholder_reply">Bersivekê binivîse</string>
     <string name="wikis_comment_form_send">Bişîne</string>
     <string name="wikis_comment_form_remove_attachment">Pêvekê rake</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Naveroka xwe li vir bi Markdown binivîse</string>
     <string name="wikis_insert_dialog_empty">Hîn tu pêvek tune. Ji bo destpêkirinê pelekê bar bike.</string>
     <string name="wikis_delete_page_message">Tu li ber jêbirina rûpela “%1$s” (%2$s) yî. Ev kirin dikare bi vegerandina ji dîrokê were vegerandin.</string>
     <string name="wikis_delete_page_success">Rûpel hate jêbirin</string>
     <string name="wikis_revert_page_title">Rûpelê vegerîne</string>
     <string name="wikis_revert_page_message">Tu li ber vegerandina %1$s bo guhertoya %2$s yî. Ev ê nirxandineke nû bi naveroka guhertoya %2$s biafirîne.</string>
-    <string name="wikis_revert_page_default_comment">Vegeriya guhertoya %1$s</string>
     <string name="wikis_revert_page_success">Vegeriya guhertoya %1$s</string>
     <string name="wikis_rename_page_renaming">Nav tê guhertin…</string>
     <string name="wikis_rename_page_success">Navê rûpelê hate guhertin</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Hevdemkirina dawîn: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ev ê şandina nûvekirinan ji “%1$s” re rawestîne. Ger bixwazin dikarin dîsa jê bikin.</string>
     <string name="wikis_replicas_removed_success">Replica hate rakirin</string>
-    <string name="wikis_load_more">Bêtir bar bike</string>
     <string name="wikis_access_change_level">Asta gihîştinê</string>
     <string name="wikis_access_subject_anyone">Her kes</string>
     <string name="wikis_access_subject_authenticated">Bikarhênerên pejirandî</string>

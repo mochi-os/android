@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Otsi wikisid</string>
     <string name="wikis_find_no_results">Vikisid ei leitud</string>
     <string name="wikis_find_recommended_section">Soovitatud vikid</string>
-    <string name="wikis_join_title">Replikeeri viki</string>
-    <string name="wikis_join_or_id">Või sisesta ID otse</string>
-    <string name="wikis_join_id_label">Wiki olemi ID</string>
-    <string name="wikis_join_submit">Replikeeri viki</string>
     <string name="wikis_create_title">Loo wiki</string>
     <string name="wikis_create_name_label">Nimi</string>
     <string name="wikis_create_privacy_label">Luba kõigil otsida wikit</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Hiljutised muudatused selle viki kõigil lehtedel.</string>
     <string name="wikis_changes_empty">Muudatusi veel pole</string>
     <string name="wikis_search_empty_query">Sisesta otsingusõna</string>
-    <string name="wikis_redirects_title">Ümbersuunamised</string>
-    <string name="wikis_redirects_add">Lisa</string>
     <string name="wikis_redirects_empty">Ümbersuunamisi pole seadistatud</string>
     <string name="wikis_redirect_create_title">Loo ümbersuunamine</string>
     <string name="wikis_redirect_create_action">Loo</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Manused</string>
     <string name="wikis_attachments_upload">Lae üles failid</string>
     <string name="wikis_attachments_uploading">Laadin üles…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fail üles laaditud</item>
+        <item quantity="other">%s faili üles laaditud</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Failide üleslaadimine ebaõnnestus</string>
     <string name="wikis_attachments_search_clear">Tühjenda otsing</string>
     <string name="wikis_attachments_filter_all">Kõik failid</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Juurdepääs uuendatud</string>
     <string name="wikis_access_revoke_success">Juurdepääs eemaldatud</string>
     <string name="wikis_access_revoke_failed">Pääsu eemaldamine ebaõnnestus</string>
+    <string name="wikis_rss_revoke_failed">RSS-i juurdepääsu äravõtmine ebaõnnestus</string>
+    <string name="wikis_access_search_failed">Kasutajate otsing ebaõnnestus</string>
+    <string name="wikis_replica_unknown">Tundmatu</string>
     <string name="wikis_replicas_empty_title">Replikaid veel pole</string>
     <string name="wikis_replicas_empty_message">Kui teised wikid replikeerivad seda wikit, ilmuvad need siia.</string>
     <string name="wikis_replicas_never_synced">Mitte kunagi</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimusest %1$s loobuda?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi</string>
-    <string name="wikis_join_search_button">Otsi wikist…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Proovin uuesti ilma soovitatud serverita…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentaarid</string>
     <string name="wikis_comment_form_placeholder_new">Kirjuta kommentaar</string>
     <string name="wikis_comment_form_placeholder_reply">Kirjuta vastus</string>
     <string name="wikis_comment_form_send">Saada</string>
     <string name="wikis_comment_form_remove_attachment">Eemalda manus</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Kirjuta oma sisu siia Markdowniga</string>
     <string name="wikis_insert_dialog_empty">Veel pole manuseid. Lae üles fail alustamiseks.</string>
     <string name="wikis_delete_page_message">Sa kustutad lehte „%1$s\" (%2$s). Selle saab tagasi võtta ajaloost taastamise teel.</string>
     <string name="wikis_delete_page_success">Leht kustutatud</string>
     <string name="wikis_revert_page_title">Taasta leht</string>
     <string name="wikis_revert_page_message">Sa taastad %1$s versioonile %2$s. See loob uue redaktsiooni versiooni %2$s sisuga.</string>
-    <string name="wikis_revert_page_default_comment">Taastatud versioonile %1$s</string>
     <string name="wikis_revert_page_success">Taastatud versioonile %1$s</string>
     <string name="wikis_rename_page_renaming">Ümbernimetamine…</string>
     <string name="wikis_rename_page_success">Leht ümbernimetatud</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Viimane sünkroonimine: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">See peatab värskenduste saatmise „%1$s\". Nad saavad uuesti replitseerida, kui soovivad.</string>
     <string name="wikis_replicas_removed_success">Replika eemaldatud</string>
-    <string name="wikis_load_more">Lae rohkem</string>
     <string name="wikis_access_change_level">Juurdepääsu tase</string>
     <string name="wikis_access_subject_anyone">Kõik</string>
     <string name="wikis_access_subject_authenticated">Autenditud kasutajad</string>

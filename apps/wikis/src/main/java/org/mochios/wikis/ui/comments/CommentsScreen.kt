@@ -50,6 +50,8 @@ import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.Upload
+import org.mochios.android.format.personName
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
@@ -75,11 +77,10 @@ fun CommentsScreen(
     val upload by viewModel.upload.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    // Forward ViewModel events (errors, toasts) onto the snackbar host.
+    // Forward ViewModel errors onto the snackbar host.
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
-                is CommentsEvent.Toast -> snackbarHostState.showSnackbar(event.message)
                 is CommentsEvent.Error -> snackbarHostState.showSnackbar(event.error.userMessage())
             }
         }
@@ -117,17 +118,17 @@ fun CommentsScreen(
                 .imePadding(),
         ) {
             val wikiInfo = state.wiki
+            val error = state.error
             when {
-                state.isLoading && state.comments.isEmpty() && wikiInfo == null -> {
-                    CommentsSkeleton()
-                }
-                wikiInfo == null && state.error != null -> {
+                // The wiki's information or the thread failed: one retry asks
+                // for whichever is missing.
+                error != null && (wikiInfo == null || state.comments.isEmpty()) -> {
                     ErrorState(
-                        error = state.error!!,
-                        onRetry = viewModel::loadComments,
+                        error = error,
+                        onRetry = viewModel::load,
                     )
                 }
-                wikiInfo == null -> {
+                wikiInfo == null || state.isLoading && state.comments.isEmpty() -> {
                     CommentsSkeleton()
                 }
                 else -> {
@@ -142,19 +143,21 @@ fun CommentsScreen(
                             state = state,
                             upload = upload,
                             canCompose = state.permissions.edit,
-                            onCreate = { body, uris ->
-                                viewModel.createComment(body = body, parent = null, uris = uris)
+                            onCreate = { body, sent ->
+                                viewModel.createComment(body = body, parent = null, onSent = sent)
                             },
                             resolveFileName = viewModel::fileName,
+                            onAddFiles = viewModel::addFiles,
+                            onRemoveFile = viewModel::removeFile,
                             onStartReply = { commentId, selectedText ->
                                 viewModel.requestStartReply(commentId, selectedText)
                             },
                             onCancelReply = { viewModel.cancelReply() },
                             onReplyDraftChange = { viewModel.updateReplyDraft(it) },
-                            onSubmitReply = { parentId, uris ->
-                                viewModel.submitReply(parentId, uris)
+                            onSubmitReply = { parentId, sent ->
+                                viewModel.submitReply(parentId, sent)
                             },
-                            onEdit = { id, body -> viewModel.editComment(id, body) },
+                            onEdit = { id, body, saved -> viewModel.editComment(id, body, saved) },
                             onDelete = if (state.permissions.edit || state.permissions.delete) {
                                 { id -> viewModel.deleteComment(id) }
                             } else null,
@@ -175,13 +178,15 @@ private fun CommentsBody(
     state: CommentsUiState,
     upload: Upload?,
     canCompose: Boolean,
-    onCreate: (body: String, files: List<Uri>?) -> Unit,
+    onCreate: (body: String, sent: () -> Unit) -> Unit,
     resolveFileName: suspend (Uri) -> String,
+    onAddFiles: (List<Uri>) -> Unit,
+    onRemoveFile: (Uri) -> Unit,
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
     onCancelReply: () -> Unit,
     onReplyDraftChange: (String) -> Unit,
-    onSubmitReply: (commentId: String, files: List<Uri>?) -> Unit,
-    onEdit: ((commentId: String, body: String) -> Unit)?,
+    onSubmitReply: (commentId: String, sent: () -> Unit) -> Unit,
+    onEdit: ((commentId: String, body: String, saved: () -> Unit) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
 ) {
     val isOwner = state.permissions.owner
@@ -239,14 +244,18 @@ private fun CommentsBody(
             val target = replyingTo?.let { id -> findComment(state.comments, id) }
             key(replyingTo) {
                 CommentForm(
-                    onSubmit = { body, files ->
+                    onSubmit = { body, sent ->
                         if (replyingTo != null) {
-                            onSubmitReply(replyingTo, files)
+                            onSubmitReply(replyingTo, sent)
                         } else {
-                            onCreate(body, files)
+                            onCreate(body, sent)
                         }
                     },
                     resolveFileName = resolveFileName,
+                    files = state.files,
+                    onAddFiles = onAddFiles,
+                    onRemoveFile = onRemoveFile,
+                    isSending = state.isSending,
                     initialText = if (replyingTo != null) state.replyDraft else "",
                     onTextChange = if (replyingTo != null) onReplyDraftChange else null,
                     placeholder = stringResource(
@@ -260,7 +269,7 @@ private fun CommentsBody(
                             ReplyComposerBanner(
                                 label = stringResource(
                                     R.string.wikis_comment_replying_to,
-                                    comment.name.ifBlank { comment.author },
+                                    personName(comment.name, fingerprint(comment.author)),
                                 ),
                                 preview = comment.body,
                                 cancelLabel = stringResource(

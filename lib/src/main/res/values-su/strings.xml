@@ -20,6 +20,8 @@
     <string name="common_clear_search">Bersihkeun panéangan</string>
     <string name="drawer_open">Buka menu</string>
     <string name="common_cancel">Batalkeun</string>
+    <string name="common_discard_title">Piceun parobahan?</string>
+    <string name="common_discard">Piceun</string>
     <string name="common_filter">Saring</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Hapus saringan</string>

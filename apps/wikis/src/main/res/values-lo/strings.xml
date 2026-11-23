@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ຄົ້ນຫາວິກິ</string>
     <string name="wikis_find_no_results">ບໍ່ພົບ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ທີ່ແນະນຳ</string>
-    <string name="wikis_join_title">ສຳເນົາ wiki</string>
-    <string name="wikis_join_or_id">ຫຼືປ້ອນ ID ໂດຍກົງ</string>
-    <string name="wikis_join_id_label">ID ຫົວໜ່ວຍ Wiki</string>
-    <string name="wikis_join_submit">ສຳເນົາ wiki</string>
     <string name="wikis_create_title">ສ້າງ wiki</string>
     <string name="wikis_create_name_label">ຊື່</string>
     <string name="wikis_create_privacy_label">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາ wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ການແກ້ໄຂລ່າສຸດໃນທຸກໜ້າຂອງ wiki ນີ້.</string>
     <string name="wikis_changes_empty">ຍັງບໍ່ມີການປ່ຽນແປງ</string>
     <string name="wikis_search_empty_query">ປ້ອນຄຳສຳລັບຄົ້ນຫາ</string>
-    <string name="wikis_redirects_title">ການປ່ຽນເສັ້ນທາງ</string>
-    <string name="wikis_redirects_add">ເພີ່ມ</string>
     <string name="wikis_redirects_empty">ບໍ່ມີການປ່ຽນເສັ້ນທາງທີ່ຕັ້ງຄ່າໄວ້</string>
     <string name="wikis_redirect_create_title">ສ້າງການປ່ຽນເສັ້ນທາງ</string>
     <string name="wikis_redirect_create_action">ສ້າງ</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">ໄຟລ໌ແນບ</string>
     <string name="wikis_attachments_upload">ອັບໂຫຼດໄຟລ໌</string>
     <string name="wikis_attachments_uploading">ກຳລັງອັບໂຫຼດ…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">ອັບໂຫຼດ %s ໄຟລ໌ແລ້ວ</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ອັບໂຫຼດໄຟລ໌ລົ້ມເຫຼວ</string>
     <string name="wikis_attachments_search_clear">ລ້າງການຄົ້ນຫາ</string>
     <string name="wikis_attachments_filter_all">ໄຟລ໌ທັງໝົດ</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
     <string name="wikis_access_revoke_success">ລົບການເຂົ້າເຖິງແລ້ວ</string>
     <string name="wikis_access_revoke_failed">ຍ້າຍສິດການເຂົ້າເຖິງລົ້ມເຫຼວ</string>
+    <string name="wikis_rss_revoke_failed">ຖອນການເຂົ້າເຖິງ RSS ບໍ່ສຳເລັດ</string>
+    <string name="wikis_access_search_failed">ຄົ້ນຫາຜູ້ໃຊ້ລົ້ມເຫຼວ</string>
+    <string name="wikis_replica_unknown">ບໍ່ຮູ້ຈັກ</string>
     <string name="wikis_replicas_empty_title">ຍັງບໍ່ມີ replica</string>
     <string name="wikis_replicas_empty_message">ເມື່ອ wikis ອື່ນສຳເນົາ wiki ນີ້, ພວກມັນຈະປະກົດຢູ່ທີ່ນີ້.</string>
     <string name="wikis_replicas_never_synced">ບໍ່ເຄີຍ</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການເຊົາຕິດຕາມ %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື ຫຼື URL</string>
-    <string name="wikis_join_search_button">ຄົ້ນຫາ wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">ກຳລັງລອງໃໝ່ໂດຍບໍ່ໃຊ້ເຊີບເວີທີ່ແນະນຳ…</string>
     <string name="wikis_comments_title_template">%1$s - ຄຳເຫັນ</string>
     <string name="wikis_comment_form_placeholder_new">ຂຽນຄຳເຫັນ</string>
     <string name="wikis_comment_form_placeholder_reply">ຂຽນຄຳຕອບ</string>
     <string name="wikis_comment_form_send">ສົ່ງ</string>
     <string name="wikis_comment_form_remove_attachment">ລຶບໄຟລ໌ແນບ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ຂຽນເນື້ອຫາຂອງທ່ານທີ່ນີ້ດ້ວຍ Markdown</string>
     <string name="wikis_insert_dialog_empty">ຍັງບໍ່ມີໄຟລ໌ແນບ. ອັບໂຫຼດໄຟລ໌ເພື່ອເລີ່ມຕົ້ນ.</string>
     <string name="wikis_delete_page_message">ທ່ານກຳລັງຈະລຶບໜ້າ “%1$s” (%2$s). ການກະທຳນີ້ສາມາດຍົກເລີກໄດ້ໂດຍການກູ້ຄືນຈາກປະຫວັດ.</string>
     <string name="wikis_delete_page_success">ລຶບໜ້າແລ້ວ</string>
     <string name="wikis_revert_page_title">ກັບຄືນໜ້າ</string>
     <string name="wikis_revert_page_message">ທ່ານກຳລັງຈະກັບຄືນ %1$s ສູ່ເວີຊັນ %2$s. ນີ້ຈະສ້າງການແກ້ໄຂໃໝ່ດ້ວຍເນື້ອຫາຈາກເວີຊັນ %2$s.</string>
-    <string name="wikis_revert_page_default_comment">ກັບຄືນສູ່ເວີຊັນ %1$s</string>
     <string name="wikis_revert_page_success">ກັບຄືນສູ່ເວີຊັນ %1$s</string>
     <string name="wikis_rename_page_renaming">ກຳລັງປ່ຽນຊື່…</string>
     <string name="wikis_rename_page_success">ປ່ຽນຊື່ໜ້າແລ້ວ</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">ຊິງຄ໌ຫຼ້າສຸດ: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ນີ້ຈະຢຸດການສົ່ງການອັບເດດໄປຫາ “%1$s”. ພວກເຂົາສາມາດເຮັດຊ້ຳໄດ້ອີກຖ້າຕ້ອງການ.</string>
     <string name="wikis_replicas_removed_success">ລຶບສຳເນົາແລ້ວ</string>
-    <string name="wikis_load_more">ໂຫຼດເພີ່ມ</string>
     <string name="wikis_access_change_level">ລະດັບການເຂົ້າເຖິງ</string>
     <string name="wikis_access_subject_anyone">ໃຜກໍໄດ້</string>
     <string name="wikis_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>

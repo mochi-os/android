@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ค้นหาวิกิ</string>
     <string name="wikis_find_no_results">ไม่พบ wiki</string>
     <string name="wikis_find_recommended_section">wiki ที่แนะนำ</string>
-    <string name="wikis_join_title">ทำซ้ำ wiki</string>
-    <string name="wikis_join_or_id">หรือป้อน ID โดยตรง</string>
-    <string name="wikis_join_id_label">ID เอนทิตีของวิกิ</string>
-    <string name="wikis_join_submit">ทำซ้ำ wiki</string>
     <string name="wikis_create_title">สร้าง wiki</string>
     <string name="wikis_create_name_label">ชื่อ</string>
     <string name="wikis_create_privacy_label">อนุญาตให้ใครก็ได้ค้นหา wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">การแก้ไขล่าสุดในทุกหน้าของ wiki นี้</string>
     <string name="wikis_changes_empty">ยังไม่มีการเปลี่ยนแปลง</string>
     <string name="wikis_search_empty_query">ป้อนคำค้นหา</string>
-    <string name="wikis_redirects_title">การเปลี่ยนเส้นทาง</string>
-    <string name="wikis_redirects_add">เพิ่ม</string>
     <string name="wikis_redirects_empty">ยังไม่ได้ตั้งค่าการเปลี่ยนเส้นทาง</string>
     <string name="wikis_redirect_create_title">สร้างการเปลี่ยนเส้นทาง</string>
     <string name="wikis_redirect_create_action">สร้าง</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">ไฟล์แนบ</string>
     <string name="wikis_attachments_upload">อัปโหลดไฟล์</string>
     <string name="wikis_attachments_uploading">กำลังอัปโหลด…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">อัปโหลด %s ไฟล์แล้ว</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ไม่สามารถอัปโหลดไฟล์ได้</string>
     <string name="wikis_attachments_search_clear">ล้างการค้นหา</string>
     <string name="wikis_attachments_filter_all">ไฟล์ทั้งหมด</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">อัปเดตการเข้าถึงแล้ว</string>
     <string name="wikis_access_revoke_success">ลบการเข้าถึงแล้ว</string>
     <string name="wikis_access_revoke_failed">ไม่สามารถเอาการเข้าถึงออกได้</string>
+    <string name="wikis_rss_revoke_failed">ไม่สามารถเพิกถอนการเข้าถึง RSS ได้</string>
+    <string name="wikis_access_search_failed">ค้นหาผู้ใช้ไม่สำเร็จ</string>
+    <string name="wikis_replica_unknown">ไม่ทราบ</string>
     <string name="wikis_replicas_empty_title">ยังไม่มี replica</string>
     <string name="wikis_replicas_empty_message">เมื่อวิกิอื่นจำลองวิกินี้ พวกมันจะปรากฏที่นี่</string>
     <string name="wikis_replicas_never_synced">ไม่เลย</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">คุณแน่ใจหรือไม่ที่จะเลิกติดตาม %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_find_search_placeholder">ค้นหาตามชื่อ, ID, ลายนิ้วมือ หรือ URL</string>
-    <string name="wikis_join_search_button">ค้นหาวิกิ…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">กำลังลองใหม่โดยไม่มีเซิร์ฟเวอร์ที่แนะนำ…</string>
     <string name="wikis_comments_title_template">%1$s - ความคิดเห็น</string>
     <string name="wikis_comment_form_placeholder_new">เขียนความคิดเห็น</string>
     <string name="wikis_comment_form_placeholder_reply">เขียนคำตอบ</string>
     <string name="wikis_comment_form_send">ส่ง</string>
     <string name="wikis_comment_form_remove_attachment">ลบไฟล์แนบ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">เขียนเนื้อหาของคุณที่นี่โดยใช้ Markdown</string>
     <string name="wikis_insert_dialog_empty">ยังไม่มีไฟล์แนบ อัปโหลดไฟล์เพื่อเริ่มต้น</string>
     <string name="wikis_delete_page_message">คุณกำลังจะลบหน้า \"%1$s\" (%2$s) การกระทำนี้สามารถยกเลิกได้โดยการคืนค่าจากประวัติ</string>
     <string name="wikis_delete_page_success">ลบหน้าแล้ว</string>
     <string name="wikis_revert_page_title">ย้อนกลับหน้า</string>
     <string name="wikis_revert_page_message">คุณกำลังจะย้อนกลับ %1$s ไปเป็นเวอร์ชัน %2$s ซึ่งจะสร้างการแก้ไขใหม่ด้วยเนื้อหาของเวอร์ชัน %2$s</string>
-    <string name="wikis_revert_page_default_comment">ย้อนกลับไปเป็นเวอร์ชัน %1$s</string>
     <string name="wikis_revert_page_success">ย้อนกลับไปเป็นเวอร์ชัน %1$s</string>
     <string name="wikis_rename_page_renaming">กำลังเปลี่ยนชื่อ…</string>
     <string name="wikis_rename_page_success">เปลี่ยนชื่อหน้าแล้ว</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">ซิงค์ล่าสุด: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">การกระทำนี้จะหยุดส่งการอัปเดตไปยัง \"%1$s\" พวกเขาสามารถจำลองอีกครั้งได้หากต้องการ</string>
     <string name="wikis_replicas_removed_success">ลบแบบจำลองแล้ว</string>
-    <string name="wikis_load_more">โหลดเพิ่ม</string>
     <string name="wikis_access_change_level">ระดับการเข้าถึง</string>
     <string name="wikis_access_subject_anyone">ใครก็ได้</string>
     <string name="wikis_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>

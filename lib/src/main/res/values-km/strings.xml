@@ -20,6 +20,8 @@
     <string name="common_clear_search">សម្អាតការស្វែងរក</string>
     <string name="drawer_open">បើកម៉ឺនុយ</string>
     <string name="common_cancel">បោះបង់</string>
+    <string name="common_discard_title">បោះចោលការផ្លាស់ប្ដូរឬ?</string>
+    <string name="common_discard">បោះចោល</string>
     <string name="common_filter">តម្រង</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">លុបតម្រង</string>

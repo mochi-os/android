@@ -20,6 +20,8 @@
     <string name="common_clear_search">Maskayta pichay</string>
     <string name="drawer_open">Menúta kichay</string>
     <string name="common_cancel">Mana ruway</string>
+    <string name="common_discard_title">¿Hukchaykunata wikch\'unkichu?</string>
+    <string name="common_discard">Wikch\'uy</string>
     <string name="common_filter">Filtro</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Filtrota qichuy</string>

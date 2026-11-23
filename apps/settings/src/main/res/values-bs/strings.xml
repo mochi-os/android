@@ -410,8 +410,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nepoznata tema</string>
     <string name="system_documents_modified">Izmijenjeno</string>
-    <string name="system_documents_discard_title">Odbaciti izmjene?</string>
-    <string name="system_documents_discard">Odbaci</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s uspješan</item>
         <item quantity="few">%1$s uspješna</item>

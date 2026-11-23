@@ -45,10 +45,6 @@
     <string name="wikis_find_title">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_find_no_results">വിക്കികളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="wikis_find_recommended_section">ശുപാർശ ചെയ്യുന്ന വിക്കികൾ</string>
-    <string name="wikis_join_title">വിക്കി റെപ്ലിക്കേറ്റ് ചെയ്യുക</string>
-    <string name="wikis_join_or_id">അല്ലെങ്കിൽ ID നേരിട്ട് നൽകുക</string>
-    <string name="wikis_join_id_label">വിക്കി എന്റിറ്റി ID</string>
-    <string name="wikis_join_submit">വിക്കി റെപ്ലിക്കേറ്റ് ചെയ്യുക</string>
     <string name="wikis_create_title">വിക്കി സൃഷ്ടിക്കുക</string>
     <string name="wikis_create_name_label">പേര്</string>
     <string name="wikis_create_privacy_label">ആർക്കും വിക്കി തിരയാൻ അനുവദിക്കുക</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ഈ വിക്കിയിലെ എല്ലാ പേജുകളിലെയും സമീപകാല എഡിറ്റുകൾ.</string>
     <string name="wikis_changes_empty">മാറ്റങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_search_empty_query">ഒരു തിരയൽ പദം നൽകുക</string>
-    <string name="wikis_redirects_title">റീഡയറക്ടുകൾ</string>
-    <string name="wikis_redirects_add">ചേർക്കുക</string>
     <string name="wikis_redirects_empty">റീഡയറക്ടുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
     <string name="wikis_redirect_create_title">റീഡയറക്ട് സൃഷ്ടിക്കുക</string>
     <string name="wikis_redirect_create_action">സൃഷ്ടിക്കുക</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="wikis_attachments_upload">ഫയലുകൾ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="wikis_attachments_uploading">അപ്‌ലോഡ് ചെയ്യുന്നു…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ഫയൽ അപ്‌ലോഡ് ചെയ്തു</item>
+        <item quantity="other">%s ഫയലുകൾ അപ്‌ലോഡ് ചെയ്തു</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ഫയലുകൾ അപ്‌ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_attachments_search_clear">തിരയൽ മായ്ക്കുക</string>
     <string name="wikis_attachments_filter_all">എല്ലാ ഫയലുകളും</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="wikis_access_revoke_success">ആക്സസ് നീക്കം ചെയ്തു</string>
     <string name="wikis_access_revoke_failed">ആക്സസ് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="wikis_rss_revoke_failed">RSS ആക്‌സസ് പിൻവലിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="wikis_access_search_failed">ഉപയോക്താക്കളെ തിരയുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="wikis_replica_unknown">അജ്ഞാതം</string>
     <string name="wikis_replicas_empty_title">റെപ്ലിക്കകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_replicas_empty_message">മറ്റ് വിക്കികൾ ഈ വിക്കി പകർത്തുമ്പോൾ, അവ ഇവിടെ ദൃശ്യമാകും.</string>
     <string name="wikis_replicas_never_synced">ഒരിക്കലുമില്ല</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">%1$s-ൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് ഉറപ്പാണോ?</string>
     <string name="wikis_clipboard_label_rss">വിക്കി RSS URL</string>
     <string name="wikis_find_search_placeholder">പേര്, ID, ഫിംഗർപ്രിന്റ് അല്ലെങ്കിൽ URL ഉപയോഗിച്ച് തിരയുക</string>
-    <string name="wikis_join_search_button">wiki-കൾ തിരയുക…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">നിർദ്ദേശിച്ച സെർവർ ഇല്ലാതെ വീണ്ടും ശ്രമിക്കുന്നു…</string>
     <string name="wikis_comments_title_template">%1$s - അഭിപ്രായങ്ങൾ</string>
     <string name="wikis_comment_form_placeholder_new">ഒരു അഭിപ്രായം എഴുതുക</string>
     <string name="wikis_comment_form_placeholder_reply">ഒരു മറുപടി എഴുതുക</string>
     <string name="wikis_comment_form_send">അയയ്ക്കുക</string>
     <string name="wikis_comment_form_remove_attachment">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">നിങ്ങളുടെ ഉള്ളടക്കം ഇവിടെ Markdown ഉപയോഗിച്ച് എഴുതുക</string>
     <string name="wikis_insert_dialog_empty">ഇതുവരെ അറ്റാച്ച്‌മെന്റുകളില്ല. ആരംഭിക്കാൻ ഒരു ഫയൽ അപ്‌ലോഡ് ചെയ്യുക.</string>
     <string name="wikis_delete_page_message">നിങ്ങൾ “%1$s” (%2$s) പേജ് ഇല്ലാതാക്കാൻ പോകുന്നു. ചരിത്രത്തിൽ നിന്ന് പുനഃസ്ഥാപിച്ച് ഈ പ്രവർത്തനം പഴയപടിയാക്കാം.</string>
     <string name="wikis_delete_page_success">പേജ് ഇല്ലാതാക്കി</string>
     <string name="wikis_revert_page_title">പേജ് പഴയപടിയാക്കുക</string>
     <string name="wikis_revert_page_message">നിങ്ങൾ %1$s നെ പതിപ്പ് %2$s ലേക്ക് പുനഃസ്ഥാപിക്കാൻ പോകുന്നു. ഇത് പതിപ്പ് %2$s ന്റെ ഉള്ളടക്കത്തോടെ പുതിയ പുനരവലോകനം സൃഷ്ടിക്കും.</string>
-    <string name="wikis_revert_page_default_comment">പതിപ്പ് %1$s ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
     <string name="wikis_revert_page_success">പതിപ്പ് %1$s ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
     <string name="wikis_rename_page_renaming">പുനർനാമകരണം ചെയ്യുന്നു…</string>
     <string name="wikis_rename_page_success">പേജ് പുനർനാമകരണം ചെയ്തു</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">അവസാനം സമന്വയിപ്പിച്ചത്: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ഇത് “%1$s” ലേക്ക് അപ്ഡേറ്റുകൾ അയയ്ക്കുന്നത് നിർത്തും. അവർക്ക് വേണമെങ്കിൽ വീണ്ടും പകർത്താം.</string>
     <string name="wikis_replicas_removed_success">റെപ്ലിക്ക നീക്കം ചെയ്തു</string>
-    <string name="wikis_load_more">കൂടുതൽ ലോഡുചെയ്യുക</string>
     <string name="wikis_access_change_level">ആക്സസ് ലെവൽ</string>
     <string name="wikis_access_subject_anyone">ആർക്കും</string>
     <string name="wikis_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>

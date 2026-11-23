@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
     <string name="wikis_find_recommended_section">Викиҳои тавсияшуда</string>
-    <string name="wikis_join_title">Такрор кардани вики</string>
-    <string name="wikis_join_or_id">Ё ID-ро бевосита ворид кунед</string>
-    <string name="wikis_join_id_label">ID-и объекти викӣ</string>
-    <string name="wikis_join_submit">Такрор кардани вики</string>
     <string name="wikis_create_title">Эҷоди вики</string>
     <string name="wikis_create_name_label">Ном</string>
     <string name="wikis_create_privacy_label">Иҷозат додан, ки ҳар кас викиро ҷустуҷӯ кунад</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Таҳриротҳои охирин дар тамоми саҳифаҳои ин вики.</string>
     <string name="wikis_changes_empty">То ҳол ягон тағйирот нест</string>
     <string name="wikis_search_empty_query">Истилоҳи ҷустуҷӯро ворид кунед</string>
-    <string name="wikis_redirects_title">Тағйиротҳои масир</string>
-    <string name="wikis_redirects_add">Илова кардан</string>
     <string name="wikis_redirects_empty">Ягон тағйири масир танзим нашудааст</string>
     <string name="wikis_redirect_create_title">Эҷоди равонкунӣ</string>
     <string name="wikis_redirect_create_action">Эҷод кардан</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Замимаҳо</string>
     <string name="wikis_attachments_upload">Файлҳоро бор кардан</string>
     <string name="wikis_attachments_uploading">Бор шуда истодааст…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s файл боргузорӣ шуд</item>
+        <item quantity="other">%s файл боргузорӣ шуд</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Боркунии файлҳо ба анҷом нарасид</string>
     <string name="wikis_attachments_search_clear">Тоза кардани ҷустуҷӯ</string>
     <string name="wikis_attachments_filter_all">Ҳама файлҳо</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Дастрасӣ навсозӣ шуд</string>
     <string name="wikis_access_revoke_success">Дастрасӣ хориҷ карда шуд</string>
     <string name="wikis_access_revoke_failed">Бартараф кардани дастрасӣ ба анҷом нарасид</string>
+    <string name="wikis_rss_revoke_failed">Бозхонд кардани дастрасии RSS ноком шуд</string>
+    <string name="wikis_access_search_failed">Ҷустуҷӯи корбарон ба анҷом нарасид</string>
+    <string name="wikis_replica_unknown">Номаълум</string>
     <string name="wikis_replicas_empty_title">То ҳол ягон нусха нест</string>
     <string name="wikis_replicas_empty_message">Вақте ки викиҳои дигар ин викиро такрор мекунанд, онҳо дар ин ҷо нишон дода мешаванд.</string>
     <string name="wikis_replicas_never_synced">Ҳеҷ гоҳ</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед обунаи %1$s-ро бекор кунед?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ҷустуҷӯ аз рӯи ном, ID, изи ангушт ё URL</string>
-    <string name="wikis_join_search_button">Ҷустуҷӯи wiki-ҳо…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Бе сервери пешниҳодшуда такрор кӯшиш карда мешавад…</string>
     <string name="wikis_comments_title_template">%1$s - Шарҳҳо</string>
     <string name="wikis_comment_form_placeholder_new">Шарҳ нависед</string>
     <string name="wikis_comment_form_placeholder_reply">Ҷавоб нависед</string>
     <string name="wikis_comment_form_send">Фиристодан</string>
     <string name="wikis_comment_form_remove_attachment">Хориҷ кардани замима</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Мундариҷаи худро дар ин ҷо бо Markdown нависед</string>
     <string name="wikis_insert_dialog_empty">Ҳанӯз замима нест. Барои оғоз файл бор кунед.</string>
     <string name="wikis_delete_page_message">Шумо мехоҳед саҳифаи “%1$s” (%2$s)-ро нест кунед. Ин амалро бо барқарорсозӣ аз таърих бекор кардан мумкин аст.</string>
     <string name="wikis_delete_page_success">Саҳифа нест карда шуд</string>
     <string name="wikis_revert_page_title">Бозгардонидани саҳифа</string>
     <string name="wikis_revert_page_message">Шумо мехоҳед %1$s-ро ба нусхаи %2$s баргардонед. Ин таҳрири нав бо мундариҷаи нусхаи %2$s эҷод мекунад.</string>
-    <string name="wikis_revert_page_default_comment">Ба нусхаи %1$s бозгардонида шуд</string>
     <string name="wikis_revert_page_success">Ба нусхаи %1$s бозгардонида шуд</string>
     <string name="wikis_rename_page_renaming">Тағйири ном…</string>
     <string name="wikis_rename_page_success">Номи саҳифа иваз карда шуд</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Ҳамоҳангсозии охирин: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ин фиристодани навсозиҳоро ба “%1$s” қатъ мекунад. Агар хоҳанд, метавонанд аз нав нусхабардорӣ кунанд.</string>
     <string name="wikis_replicas_removed_success">Нусха хориҷ карда шуд</string>
-    <string name="wikis_load_more">Бештар бор кунед</string>
     <string name="wikis_access_change_level">Сатҳи дастрасӣ</string>
     <string name="wikis_access_subject_anyone">Ҳар кас</string>
     <string name="wikis_access_subject_authenticated">Корбарони тасдиқшуда</string>

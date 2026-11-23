@@ -20,6 +20,8 @@
     <string name="common_clear_search">தேடலை அழி</string>
     <string name="drawer_open">மெனுவைத் திறக்கவும்</string>
     <string name="common_cancel">ரத்துசெய்</string>
+    <string name="common_discard_title">மாற்றங்களை நிராகரிக்கவா?</string>
+    <string name="common_discard">நிராகரி</string>
     <string name="common_filter">வடிகட்டி</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">வடிகட்டியை அகற்று</string>

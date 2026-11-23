@@ -45,10 +45,6 @@
     <string name="wikis_find_title">विकीहरू खोज्नुहोस्</string>
     <string name="wikis_find_no_results">कुनै विकी भेटिएन</string>
     <string name="wikis_find_recommended_section">सिफारिस गरिएका विकीहरू</string>
-    <string name="wikis_join_title">विकी रेप्लिकेट गर्नुहोस्</string>
-    <string name="wikis_join_or_id">वा सिधै ID प्रविष्ट गर्नुहोस्</string>
-    <string name="wikis_join_id_label">विकि इन्टिटी ID</string>
-    <string name="wikis_join_submit">विकी रेप्लिकेट गर्नुहोस्</string>
     <string name="wikis_create_title">wiki सिर्जना गर्नुहोस्</string>
     <string name="wikis_create_name_label">नाम</string>
     <string name="wikis_create_privacy_label">जोसुकैलाई wiki खोज्न अनुमति दिनुहोस्</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">यो विकीका सबै पृष्ठहरूमा हालैका सम्पादनहरू।</string>
     <string name="wikis_changes_empty">अहिलेसम्म कुनै परिवर्तन छैन</string>
     <string name="wikis_search_empty_query">खोज शब्द लेख्नुहोस्</string>
-    <string name="wikis_redirects_title">रिडाइरेक्टहरू</string>
-    <string name="wikis_redirects_add">थप्नुहोस्</string>
     <string name="wikis_redirects_empty">कुनै रिडाइरेक्ट कन्फिगर गरिएको छैन</string>
     <string name="wikis_redirect_create_title">रिडाइरेक्ट सिर्जना गर्नुहोस्</string>
     <string name="wikis_redirect_create_action">सिर्जना गर्नुहोस्</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">एट्याचमेन्टहरू</string>
     <string name="wikis_attachments_upload">फाइलहरू अपलोड गर्नुहोस्</string>
     <string name="wikis_attachments_uploading">अपलोड गर्दै…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s फाइल अपलोड भयो</item>
+        <item quantity="other">%s फाइलहरू अपलोड भए</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">फाइलहरू अपलोड गर्न असफल</string>
     <string name="wikis_attachments_search_clear">खोजी खाली गर्नुहोस्</string>
     <string name="wikis_attachments_filter_all">सबै फाइलहरू</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">पहुँच अद्यावधिक गरियो</string>
     <string name="wikis_access_revoke_success">पहुँच हटाइयो</string>
     <string name="wikis_access_revoke_failed">पहुँच हटाउन असफल</string>
+    <string name="wikis_rss_revoke_failed">RSS पहुँच फिर्ता लिन असफल</string>
+    <string name="wikis_access_search_failed">प्रयोगकर्ताहरू खोज्न असफल</string>
+    <string name="wikis_replica_unknown">अज्ञात</string>
     <string name="wikis_replicas_empty_title">अहिलेसम्म कुनै रेप्लिका छैन</string>
     <string name="wikis_replicas_empty_message">जब अरू विकिहरूले यो विकिको प्रतिकृति बनाउँछन्, तिनीहरू यहाँ देखिनेछन्।</string>
     <string name="wikis_replicas_never_synced">कहिल्यै होइन</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">के तपाईं %1$s बाट सदस्यता रद्द गर्न निश्चित हुनुहुन्छ?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिन्ट वा URL अनुसार खोज्नुहोस्</string>
-    <string name="wikis_join_search_button">wiki हरू खोज्नुहोस्…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">सुझाइएको सर्भरविना पुनः प्रयास गर्दै…</string>
     <string name="wikis_comments_title_template">%1$s - टिप्पणीहरू</string>
     <string name="wikis_comment_form_placeholder_new">टिप्पणी लेख्नुहोस्</string>
     <string name="wikis_comment_form_placeholder_reply">जवाफ लेख्नुहोस्</string>
     <string name="wikis_comment_form_send">पठाउनुहोस्</string>
     <string name="wikis_comment_form_remove_attachment">संलग्नक हटाउनुहोस्</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">आफ्नो सामग्री यहाँ Markdown प्रयोग गरी लेख्नुहोस्</string>
     <string name="wikis_insert_dialog_empty">अहिलेसम्म कुनै संलग्नक छैन। सुरु गर्न फाइल अपलोड गर्नुहोस्।</string>
     <string name="wikis_delete_page_message">तपाईं “%1$s” (%2$s) पृष्ठ मेट्न लाग्नुभएको छ। इतिहासबाट पुनर्स्थापना गरेर यो कार्य फिर्ता गर्न सकिन्छ।</string>
     <string name="wikis_delete_page_success">पृष्ठ मेटाइयो</string>
     <string name="wikis_revert_page_title">पृष्ठ फिर्ता गर्नुहोस्</string>
     <string name="wikis_revert_page_message">तपाईं %1$s लाई संस्करण %2$s मा फर्काउन लाग्नुभएको छ। यसले संस्करण %2$s को सामग्रीसहित नयाँ संशोधन सिर्जना गर्नेछ।</string>
-    <string name="wikis_revert_page_default_comment">संस्करण %1$s मा फर्काइयो</string>
     <string name="wikis_revert_page_success">संस्करण %1$s मा फर्काइयो</string>
     <string name="wikis_rename_page_renaming">नाम परिवर्तन गर्दै…</string>
     <string name="wikis_rename_page_success">पृष्ठको नाम परिवर्तन गरियो</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">पछिल्लो सिङ्क: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">यसले “%1$s” लाई अद्यावधिक पठाउन बन्द गर्नेछ। चाहेमा तिनीहरूले फेरि प्रतिकृति गर्न सक्छन्।</string>
     <string name="wikis_replicas_removed_success">रेप्लिका हटाइयो</string>
-    <string name="wikis_load_more">थप लोड गर्नुहोस्</string>
     <string name="wikis_access_change_level">पहुँच स्तर</string>
     <string name="wikis_access_subject_anyone">जोसुकै</string>
     <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ताहरू</string>

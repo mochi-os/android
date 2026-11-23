@@ -400,8 +400,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">រូបរាងមិនស្គាល់</string>
     <string name="system_documents_modified">បានកែប្រែ</string>
-    <string name="system_documents_discard_title">បោះចោលការផ្លាស់ប្ដូរឬ?</string>
-    <string name="system_documents_discard">បោះចោល</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s បានជោគជ័យ</item>
     </plurals>

@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -30,6 +31,7 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.android.util.slugify
 import org.mochios.android.util.slugifyPartial
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.components.WikiInfoLoader
 import javax.inject.Inject
 
 data class PageEditorUiState(
@@ -39,10 +41,15 @@ data class PageEditorUiState(
     val isUploading: Boolean = false,
     val isAttachmentsLoading: Boolean = false,
     val title: String = "",
+    /** The page's slug: as the user types it for a new page, as loaded for an existing one. */
     val slug: String = "",
+    /** The title and content an existing page was loaded with, which edits are measured against. */
     val originalTitle: String = "",
+    val originalContent: String = "",
     val content: String = "",
     val comment: String = "",
+    /** The page was saved: what the editor holds is the page's, with nothing left to lose. */
+    val saved: Boolean = false,
     val showPreview: Boolean = false,
     val attachments: List<Attachment> = emptyList(),
     /** The wiki the page belongs to, once `/-/info` has answered. */
@@ -50,6 +57,19 @@ data class PageEditorUiState(
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
 )
+
+/**
+ * Whether leaving the editor would lose what was typed, by the web editor's
+ * rule: a new page holds anything once its title or content is not blank; an
+ * existing page once its title, trimmed, or its content differs from what was
+ * loaded. The edit summary does not count, and nothing is unsaved once the
+ * page is saved.
+ */
+internal fun unsaved(isNew: Boolean, state: PageEditorUiState): Boolean = when {
+    state.saved -> false
+    isNew -> state.title.isNotBlank() || state.content.isNotBlank()
+    else -> state.title.trim() != state.originalTitle.trim() || state.content != state.originalContent
+}
 
 /**
  * One-shot events for the editor screen. Collected once and not replayed
@@ -103,36 +123,48 @@ class PageEditorViewModel @Inject constructor(
     private val _events = Channel<PageEditorEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
 
+    /**
+     * The wiki behind the page, for the context the preview renders inside -
+     * markdown resolves attachment URLs against it - and for whether this user
+     * may delete. An existing page loads it with the page, so a failure shows
+     * with the page's Retry rather than silently leaving Delete out.
+     */
+    private val information = WikiInfoLoader(
+        fetch = { repository.getInfo(wikiId) },
+        loaded = { response ->
+            _uiState.value = _uiState.value.copy(
+                wiki = response.wiki,
+                permissions = response.permissions ?: WikiPermissions(),
+            )
+        },
+    )
+
     init {
-        loadWiki()
-        if (!isNew) {
+        if (isNew) {
+            loadWiki()
+        } else {
             loadPage()
         }
     }
 
     /**
-     * The wiki behind the page, for the context the preview renders inside -
-     * markdown resolves attachment URLs against it - and for whether this user
-     * may delete. A failure leaves both at their defaults: the editor still
-     * writes and saves perfectly well without them.
+     * A new page's wiki. It has nothing to delete, and writes and saves
+     * without it, so a failure leaves the defaults.
      */
     private fun loadWiki() {
         viewModelScope.launch {
             try {
-                val response = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = response.wiki,
-                    permissions = response.permissions ?: WikiPermissions(),
-                )
+                information.ensure()
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
-                // Nothing to say: the page itself reports its own failures.
             }
         }
     }
 
-    /** Reload the page after a transient failure. No-op for new pages. */
+    /** Reload the page and its wiki after a failure. A new page asks for its wiki again. */
     fun retry() {
-        if (!isNew) loadPage()
+        if (isNew) loadWiki() else loadPage()
     }
 
     private fun loadPage() {
@@ -140,6 +172,7 @@ class PageEditorViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                information.ensure()
                 when (val r = repository.getPage(wikiId, slug)) {
                     is PageFetchResponse.Page -> {
                         _uiState.value = _uiState.value.copy(
@@ -147,6 +180,10 @@ class PageEditorViewModel @Inject constructor(
                             title = r.page.title,
                             originalTitle = r.page.title,
                             content = r.page.content,
+                            originalContent = r.page.content,
+                            // The page a redirect served may have another
+                            // slug than the route's; saving and deleting act
+                            // on the page shown.
                             slug = r.page.slug.ifEmpty { slug },
                         )
                     }
@@ -230,7 +267,7 @@ class PageEditorViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isSaving = true, error = null)
                 try {
                     val r = repository.createPage(wikiId, slug, title, state.content)
-                    _uiState.value = _uiState.value.copy(isSaving = false)
+                    _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
                     _events.send(PageEditorEvent.Saved(r.slug.ifEmpty { slug }))
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isSaving = false)
@@ -238,13 +275,17 @@ class PageEditorViewModel @Inject constructor(
                 }
             }
         } else {
-            val slug = initialSlug ?: return
+            // The page as loaded, not the route's slug: a redirect may have
+            // served another page, and saving under the route's name would
+            // make a second page the redirect hides.
+            val slug = state.slug.ifEmpty { return }
             viewModelScope.launch {
                 _uiState.value = _uiState.value.copy(isSaving = true, error = null)
                 try {
-                    repository.editPage(wikiId, slug, title, state.content, state.comment.trim())
-                    _uiState.value = _uiState.value.copy(isSaving = false)
-                    _events.send(PageEditorEvent.Saved(slug))
+                    val r = repository.editPage(wikiId, slug, title, state.content, state.comment.trim())
+                    _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
+                    // The server answers with the page it saved.
+                    _events.send(PageEditorEvent.Saved(r.slug.ifEmpty { slug }))
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isSaving = false)
                     _events.send(PageEditorEvent.Toast(e.toMochiError().messageOrFallback(editFailed)))
@@ -255,7 +296,8 @@ class PageEditorViewModel @Inject constructor(
 
     fun delete(deleteFailed: String) {
         if (isNew) return
-        val slug = initialSlug ?: return
+        // The page as loaded, which the confirmation names.
+        val slug = _uiState.value.slug.ifEmpty { return }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {

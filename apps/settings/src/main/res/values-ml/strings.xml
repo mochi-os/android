@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">അജ്ഞാത തീം</string>
     <string name="system_documents_modified">പരിഷ്കരിച്ചത്</string>
-    <string name="system_documents_discard_title">മാറ്റങ്ങൾ ഉപേക്ഷിക്കണോ?</string>
-    <string name="system_documents_discard">ഉപേക്ഷിക്കുക</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s വിജയിച്ചു</item>
         <item quantity="other">%1$s വിജയിച്ചു</item>

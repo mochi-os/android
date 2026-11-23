@@ -36,7 +36,9 @@ import org.commonmark.node.Image
  * request dedupe, and a server-relative path resolves against the session
  * server. The body is someone else's writing, so its images go as
  * [AnonymousImage]: never with the session cookie or app token, or
- * `![](/someapp/-/some-action)` would run that action as each reader.
+ * `![](/someapp/-/some-action)` would run that action as each reader. A
+ * caller that knows some destinations to be its own assets maps them to a
+ * model of its own; see [create].
  */
 class CoilImagesPlugin private constructor(
     private val loader: CoilDrawableLoader,
@@ -65,19 +67,38 @@ class CoilImagesPlugin private constructor(
          * A plugin loading through the app's singleton Coil loader.
          *
          * @param context Any context; only its application context is kept.
+         * @param model The Coil model for a markdown or HTML image destination
+         *   the caller recognises as one of its own assets, such as an
+         *   [org.mochios.android.api.OwnedAddress] fetched with a credential;
+         *   null for any other, which then loads as an [AnonymousImage].
          * @return The plugin, for `Markwon.Builder.usePlugin`.
          */
-        fun create(context: Context): CoilImagesPlugin =
-            CoilImagesPlugin(CoilDrawableLoader(context.applicationContext))
+        fun create(context: Context, model: (String) -> Any? = { null }): CoilImagesPlugin =
+            CoilImagesPlugin(CoilDrawableLoader(context.applicationContext, model))
     }
 }
+
+/**
+ * The Coil model an image [destination] loads as: an inline `data:` image as
+ * written, needing no request; what [model] answers for it; and otherwise an
+ * [AnonymousImage], an address that must load without credentials.
+ */
+internal fun imageModel(destination: String, model: (String) -> Any?): Any =
+    if (destination.startsWith("data:", ignoreCase = true)) {
+        destination
+    } else {
+        model(destination) ?: AnonymousImage(destination)
+    }
 
 /**
  * Loads each [AsyncDrawable]'s destination with Coil and hands the result to the
  * drawable. Markwon calls [load] and [cancel] on the main thread, where Coil also
  * delivers its target callbacks, so [requests] needs no lock.
  */
-internal class CoilDrawableLoader(private val context: Context) : AsyncDrawableLoader() {
+internal class CoilDrawableLoader(
+    private val context: Context,
+    private val model: (String) -> Any?,
+) : AsyncDrawableLoader() {
 
     private val requests = mutableMapOf<AsyncDrawable, Disposable>()
 
@@ -87,7 +108,7 @@ internal class CoilDrawableLoader(private val context: Context) : AsyncDrawableL
         }
         val maxWidth = Dimension(context.resources.displayMetrics.widthPixels)
         val request = ImageRequest.Builder(context)
-            .data(imageData(drawable.destination))
+            .data(imageModel(drawable.destination, model))
             .size(Size(maxWidth, Dimension.Undefined))
             .allowHardware(false)
             .target(
@@ -111,15 +132,6 @@ internal class CoilDrawableLoader(private val context: Context) : AsyncDrawableL
     }
 
     override fun placeholder(drawable: AsyncDrawable): Drawable? = null
-
-    // An inline `data:` image needs no request; everything else is an address
-    // that must load without credentials.
-    private fun imageData(destination: String): Any =
-        if (destination.startsWith("data:", ignoreCase = true)) {
-            destination
-        } else {
-            AnonymousImage(destination)
-        }
 
     private fun deliver(drawable: AsyncDrawable, result: Drawable) {
         if (!drawable.isAttached) {

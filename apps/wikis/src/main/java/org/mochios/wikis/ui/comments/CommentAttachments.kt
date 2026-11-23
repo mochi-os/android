@@ -5,57 +5,21 @@
 
 package org.mochios.wikis.ui.comments
 
-import android.content.Intent
-import android.net.Uri
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.components.FileKindIcon
-import org.mochios.android.ui.components.ImagePlaceholder
-import org.mochios.android.ui.components.LightboxScreen
-import org.mochios.android.util.segment
-import org.mochios.android.util.webUri
-import org.mochios.wikis.R
+import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
-import org.mochios.wikis.ui.components.attachmentAt
 import org.mochios.wikis.ui.components.attachmentPath
+import org.mochios.wikis.ui.components.library
 
 /**
- * Attachments under a comment body: image thumbnails open the lightbox, other
- * files open via `ACTION_VIEW`.
+ * Attachments under a comment body, through the library's gallery as the web
+ * draws them: image thumbnails open the lightbox, and any other file is
+ * fetched with the reader's credential and handed to an app that can show it,
+ * since the wiki serves a comment's files only to those who may read it.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CommentAttachments(
     attachments: List<Attachment>,
@@ -65,108 +29,15 @@ fun CommentAttachments(
 
     val wiki = LocalWikiContext.current
     val baseURL = wiki?.baseURL ?: return
-    val context = LocalContext.current
-    val format = LocalFormat.current
+    val shown = remember(attachments) { attachments.map { attachment -> attachment.library() } }
 
-    // An attachment whose id no segment can carry has no address, and is
-    // left out rather than shown broken.
-    val addressed = remember(attachments) { attachments.filter { segment(it.id) != null } }
-    val images = remember(addressed) { addressed.filter { it.type.startsWith("image/") } }
-    val files = remember(addressed) { addressed.filter { !it.type.startsWith("image/") } }
-
-    var showLightbox by rememberSaveable { mutableStateOf(false) }
-    var lightboxIndex by rememberSaveable { mutableIntStateOf(0) }
-
-    Column(
+    // An attachment whose id no segment can carry has no address, and the
+    // gallery leaves it out rather than showing it broken.
+    AttachmentGallery(
+        attachments = shown,
+        urlBuilder = { attachment -> attachmentPath(baseURL, attachment.id) },
+        thumbnailUrlBuilder = { attachment -> attachmentPath(baseURL, attachment.id, "thumbnail") },
+        compact = true,
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        if (images.isNotEmpty()) {
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                images.forEachIndexed { index, img ->
-                    Box(
-                        modifier = Modifier
-                            .height(80.dp)
-                            .clip(RoundedCornerShape(6.dp))
-                            .background(MaterialTheme.colorScheme.surfaceVariant)
-                            .clickable {
-                                lightboxIndex = index
-                                showLightbox = true
-                            },
-                    ) {
-                        var loaded by remember(img.id) { mutableStateOf(false) }
-                        // The tile takes its width from the image, so until it
-                        // arrives - or when it never does - a square stands in.
-                        if (!loaded) {
-                            ImagePlaceholder(
-                                shape = RoundedCornerShape(6.dp),
-                                modifier = Modifier.size(80.dp),
-                            )
-                        }
-                        AsyncImage(
-                            model = attachmentPath(baseURL, img.id, "thumbnail"),
-                            contentDescription = img.name,
-                            contentScale = ContentScale.Crop,
-                            onSuccess = { loaded = true },
-                            modifier = Modifier.height(80.dp),
-                        )
-                    }
-                }
-            }
-        }
-
-        if (files.isNotEmpty()) {
-            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                files.forEach { file ->
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .clickable {
-                                attachmentAt(baseURL, file.id)?.let { webUri(it) }?.let { uri ->
-                                    runCatching {
-                                        context.startActivity(
-                                            Intent(Intent.ACTION_VIEW, uri)
-                                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                                        )
-                                    }
-                                }
-                            }
-                            .padding(vertical = 2.dp),
-                    ) {
-                        FileKindIcon(
-                            type = file.type,
-                            name = file.name,
-                            modifier = Modifier.size(14.dp),
-                        )
-                        Spacer(Modifier.width(6.dp))
-                        Text(
-                            text = file.name,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        Spacer(Modifier.width(6.dp))
-                        Text(
-                            text = stringResource(
-                                R.string.wikis_comment_attachment_size,
-                                format.formatFileSize(file.size),
-                            ),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                        )
-                    }
-                }
-            }
-        }
-    }
-
-    if (showLightbox && images.isNotEmpty()) {
-        LightboxScreen(
-            images = images.map { attachmentPath(baseURL, it.id) ?: "" },
-            initialIndex = lightboxIndex,
-            onDismiss = { showLightbox = false },
-        )
-    }
+    )
 }

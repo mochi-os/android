@@ -43,4 +43,11 @@ data class PageRevisionResponse(
 
 data class RevisionVersion(
     val current: Int = 0,
+    /**
+     * The highest revision version below the one shown, 0 when there is none.
+     * Page versions are not contiguous - deleting a page bumps its version
+     * without a revision - so the one before is not simply one less. Null
+     * from a server that predates the field.
+     */
+    val previous: Int? = null,
 )

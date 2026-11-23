@@ -62,7 +62,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
+import org.mochios.android.format.personName
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
@@ -70,6 +72,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.fingerprint
 import org.mochios.wikis.R
 import org.mochios.wikis.model.RevisionDetail
 import org.mochios.wikis.navigation.WikisApp
@@ -109,7 +112,7 @@ fun RevisionViewScreen(
             showRevertDialog = false
             Toast.makeText(
                 context,
-                failure.userMessage().ifEmpty { revertFailedMsg },
+                failure.messageOrFallback(revertFailedMsg),
                 Toast.LENGTH_LONG,
             ).show()
             viewModel.clearRevertError()
@@ -144,16 +147,14 @@ fun RevisionViewScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
+            val error = state.error
             when {
-                state.isLoading && revision == null -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
-                }
-                state.error != null && revision == null -> {
+                // The wiki's information or the revision failed: one retry
+                // asks for whichever is missing.
+                error != null && (wikiInfo == null || revision == null) -> {
                     ErrorState(
-                        error = state.error!!,
-                        onRetry = viewModel::loadRevision,
+                        error = error,
+                        onRetry = viewModel::load,
                     )
                 }
                 revision == null || wikiInfo == null -> {
@@ -173,9 +174,11 @@ fun RevisionViewScreen(
                             slug = viewModel.slug,
                             revision = revision,
                             currentVersion = state.currentVersion,
+                            hasPrevious = state.hasPrevious,
                             showDiff = state.showDiff,
                             previousRevision = state.previousRevision,
                             previousLoading = state.previousLoading,
+                            compareError = state.compareError,
                             onToggleDiff = viewModel::toggleDiff,
                             onRevert = { showRevertDialog = true },
                             onInternalLink = { page ->
@@ -203,13 +206,15 @@ fun RevisionViewScreen(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun RevisionBody(
+internal fun RevisionBody(
     slug: String,
     revision: RevisionDetail,
     currentVersion: Int,
+    hasPrevious: Boolean,
     showDiff: Boolean,
     previousRevision: RevisionDetail?,
     previousLoading: Boolean,
+    compareError: MochiError?,
     onToggleDiff: () -> Unit,
     onRevert: () -> Unit,
     onInternalLink: (slug: String) -> Unit,
@@ -217,7 +222,6 @@ private fun RevisionBody(
     val format = LocalFormat.current
     val createdLabel = format.formatTimestamp(revision.created)
     val isCurrent = revision.version == currentVersion
-    val hasPrevious = revision.version > 1
 
     Column(
         modifier = Modifier
@@ -317,27 +321,14 @@ private fun RevisionBody(
                         )
                     }
                     // The name the server resolved for the author, as the
-                    // history list shows it. A fingerprint is what is left
-                    // when there is no name, and reads as one: monospace, and
-                    // cut short rather than run across the row.
-                    val fingerprint = revision.author
-                    val hasName = revision.name.isNotBlank()
-                    val shown = if (hasName) {
-                        revision.name
-                    } else if (fingerprint.length > 16) {
-                        "${fingerprint.substring(0, 16)}…"
-                    } else {
-                        fingerprint
-                    }
+                    // history list shows it; without one, the author's
+                    // fingerprint, never the entity id.
                     Text(
-                        text = stringResource(R.string.wikis_revision_author, shown),
-                        style = if (hasName) {
-                            MaterialTheme.typography.bodySmall
-                        } else {
-                            MaterialTheme.typography.bodySmall.copy(
-                                fontFamily = FontFamily.Monospace,
-                            )
-                        },
+                        text = stringResource(
+                            R.string.wikis_revision_author,
+                            personName(revision.name, fingerprint(revision.author)),
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
@@ -386,8 +377,10 @@ private fun RevisionBody(
                     )
                 }
                 else -> {
+                    // The server's reason when it gave one.
+                    val failed = stringResource(R.string.wikis_revision_compare_failed)
                     Text(
-                        text = stringResource(R.string.wikis_revision_compare_failed),
+                        text = compareError?.messageOrFallback(failed) ?: failed,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )

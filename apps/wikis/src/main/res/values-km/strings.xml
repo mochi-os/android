@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ស្វែងរកវិគី</string>
     <string name="wikis_find_no_results">រកមិនឃើញ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ដែលបានណែនាំ</string>
-    <string name="wikis_join_title">ចម្លង wiki</string>
-    <string name="wikis_join_or_id">ឬបញ្ចូល ID ដោយផ្ទាល់</string>
-    <string name="wikis_join_id_label">លេខសម្គាល់អង្គភាព wiki</string>
-    <string name="wikis_join_submit">ចម្លង wiki</string>
     <string name="wikis_create_title">បង្កើតវិគី</string>
     <string name="wikis_create_name_label">ឈ្មោះ</string>
     <string name="wikis_create_privacy_label">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរកវិគី</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ការកែប្រែថ្មីៗកាត់ឆ្លងគ្រប់ទំព័រនៅក្នុង wiki នេះ។</string>
     <string name="wikis_changes_empty">មិនទាន់មានការផ្លាស់ប្តូរ</string>
     <string name="wikis_search_empty_query">បញ្ចូលពាក្យស្វែងរក</string>
-    <string name="wikis_redirects_title">ការបញ្ជូនបន្ត</string>
-    <string name="wikis_redirects_add">បន្ថែម</string>
     <string name="wikis_redirects_empty">មិនមាន redirect ដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="wikis_redirect_create_title">បង្កើតការបញ្ជូនបន្ត</string>
     <string name="wikis_redirect_create_action">បង្កើត</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">ឯកសារភ្ជាប់</string>
     <string name="wikis_attachments_upload">បង្ហោះឯកសារ</string>
     <string name="wikis_attachments_uploading">កំពុងបង្ហោះ...</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">បានផ្ទុកឡើង %s ឯកសារ</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">បរាជ័យក្នុងការផ្ទុកឡើងឯកសារ</string>
     <string name="wikis_attachments_search_clear">សម្អាតការស្វែងរក</string>
     <string name="wikis_attachments_filter_all">ឯកសារទាំងអស់</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
     <string name="wikis_access_revoke_success">បានដកការចូលប្រើ</string>
     <string name="wikis_access_revoke_failed">បរាជ័យក្នុងការដកការចូលដំណើរការ</string>
+    <string name="wikis_rss_revoke_failed">បរាជ័យក្នុងការដកហូតការចូលប្រើ RSS</string>
+    <string name="wikis_access_search_failed">បរាជ័យក្នុងការស្វែងរកអ្នកប្រើ</string>
+    <string name="wikis_replica_unknown">មិនស្គាល់</string>
     <string name="wikis_replicas_empty_title">មិនទាន់មានច្បាប់ចម្លង</string>
     <string name="wikis_replicas_empty_message">នៅពេល wiki ផ្សេងទៀតចម្លង wiki នេះ ពួកវានឹងបង្ហាញនៅទីនេះ។</string>
     <string name="wikis_replicas_never_synced">មិនដែល</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវ %1$s មែនទេ?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ស្វែងរកតាមឈ្មោះ ID ស្នាមម្រាមដៃ ឬ URL</string>
-    <string name="wikis_join_search_button">ស្វែងរក wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">កំពុងព្យាយាមម្តងទៀតដោយគ្មានម៉ាស៊ីនមេដែលបានស្នើ…</string>
     <string name="wikis_comments_title_template">%1$s - មតិយោបល់</string>
     <string name="wikis_comment_form_placeholder_new">សរសេរមតិយោបល់</string>
     <string name="wikis_comment_form_placeholder_reply">សរសេរការឆ្លើយតប</string>
     <string name="wikis_comment_form_send">ផ្ញើ</string>
     <string name="wikis_comment_form_remove_attachment">ដកឯកសារភ្ជាប់ចេញ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">សរសេរមាតិការបស់អ្នកនៅទីនេះដោយប្រើ Markdown</string>
     <string name="wikis_insert_dialog_empty">មិនទាន់មានឯកសារភ្ជាប់ទេ។ ផ្ទុកឯកសារឡើងដើម្បីចាប់ផ្តើម។</string>
     <string name="wikis_delete_page_message">អ្នកកំពុងលុបទំព័រ “%1$s” (%2$s)។ សកម្មភាពនេះអាចត្រឡប់វិញបានដោយស្តារពីប្រវត្តិ។</string>
     <string name="wikis_delete_page_success">បានលុបទំព័រ</string>
     <string name="wikis_revert_page_title">ត្រឡប់ទំព័រវិញ</string>
     <string name="wikis_revert_page_message">អ្នកកំពុងត្រឡប់ %1$s ទៅកំណែ %2$s។ នេះនឹងបង្កើតការកែសម្រួលថ្មីជាមួយមាតិកាពីកំណែ %2$s។</string>
-    <string name="wikis_revert_page_default_comment">បានត្រឡប់ទៅកំណែ %1$s</string>
     <string name="wikis_revert_page_success">បានត្រឡប់ទៅកំណែ %1$s</string>
     <string name="wikis_rename_page_renaming">កំពុងប្តូរឈ្មោះ…</string>
     <string name="wikis_rename_page_success">បានប្តូរឈ្មោះទំព័រ</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">បានធ្វើសមកាលកម្មចុងក្រោយ៖ %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">នេះនឹងបញ្ឈប់ការផ្ញើបច្ចុប្បន្នភាពទៅ “%1$s”។ ពួកគេអាចចម្លងម្តងទៀតបើចង់។</string>
     <string name="wikis_replicas_removed_success">បានដកច្បាប់ចម្លងចេញ</string>
-    <string name="wikis_load_more">ផ្ទុកបន្ថែម</string>
     <string name="wikis_access_change_level">កម្រិតការចូលប្រើ</string>
     <string name="wikis_access_subject_anyone">អ្នកណាក៏បាន</string>
     <string name="wikis_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>

@@ -40,25 +40,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.IdentityRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
-import org.mochios.wikis.navigation.WikisApp
 
 @Composable
 fun SettingsTab(
-    navController: NavController,
     parentViewModel: WikiSettingsViewModel,
     onWikiDeleted: () -> Unit,
     viewModel: SettingsTabViewModel = hiltViewModel(),
@@ -70,7 +67,7 @@ fun SettingsTab(
     // Scaffold's SnackbarHost picks them up.
     LaunchedEffect(Unit) {
         viewModel.snackbar.collect { msg ->
-            parentViewModel.emit(msg.messageRes, *msg.args.toTypedArray())
+            parentViewModel.emit(msg.messageRes, msg.args, msg.error)
         }
     }
 
@@ -78,12 +75,19 @@ fun SettingsTab(
         viewModel.deleted.collect { onWikiDeleted() }
     }
 
-    if (state.isLoading && state.settings.home.isEmpty() && parentState.wiki == null) {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center,
-        ) {
-            CircularProgressIndicator()
+    // Until the settings arrive there is nothing to show: the defaults the
+    // tab starts with read as the wiki's own values.
+    if (!state.loaded) {
+        val error = state.error
+        if (error != null && !state.isLoading) {
+            ErrorState(error = error, onRetry = viewModel::load)
+        } else {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center,
+            ) {
+                CircularProgressIndicator()
+            }
         }
         return
     }
@@ -114,13 +118,14 @@ fun SettingsTab(
             )
         }
 
-        // Subscription — only for replica wikis (those with a source set).
-        val source = state.settings.source
+        // Subscription — only for replica wikis (those with a source set). The
+        // wiki's information says which it is, and the settings screen shows
+        // no tab until that has arrived.
+        val source = wikiInfo?.source
         if (!source.isNullOrBlank()) {
             SubscriptionSection(
                 source = source,
                 isSyncing = state.isSyncing,
-                onOpenSource = { navController.navigate(WikisApp.wikiHome(source)) },
                 onSync = { viewModel.sync() },
             )
         }
@@ -256,7 +261,6 @@ private fun IdentitySection(
 private fun SubscriptionSection(
     source: String,
     isSyncing: Boolean,
-    onOpenSource: () -> Unit,
     onSync: () -> Unit,
 ) {
     Section(
@@ -270,13 +274,10 @@ private fun SubscriptionSection(
             }
         },
     ) {
+        // The source wiki's entity id, copied with a tap as the Entity ID row
+        // is: the replica here is another entity, so no route here opens it.
         IdentityRow(label = stringResource(R.string.wikis_settings_field_source)) {
-            MochiTextButton(onClick = onOpenSource) {
-                Text(
-                    text = source,
-                    style = MaterialTheme.typography.bodyMedium,
-                )
-            }
+            DataChip(value = source, truncate = Truncate.MIDDLE)
         }
     }
 }

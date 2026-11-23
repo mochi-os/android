@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ဝီကီများ ရှာ</string>
     <string name="wikis_find_no_results">wiki များ မတွေ့ပါ</string>
     <string name="wikis_find_recommended_section">အကြံပြု wiki များ</string>
-    <string name="wikis_join_title">wiki ကို ပုံတူပွား</string>
-    <string name="wikis_join_or_id">သို့မဟုတ် ID ကို တိုက်ရိုက်ထည့်ပါ</string>
-    <string name="wikis_join_id_label">Wiki အရာ ID</string>
-    <string name="wikis_join_submit">wiki ကို ပုံတူပွား</string>
     <string name="wikis_create_title">wiki ဖန်တီးမည်</string>
     <string name="wikis_create_name_label">အမည်</string>
     <string name="wikis_create_privacy_label">မည်သူမဆို wiki ကို ရှာဖွေခွင့်ပြုမည်</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ဤ wiki ရှိ စာမျက်နှာအားလုံး၏ လတ်တလော ပြင်ဆင်မှုများ။</string>
     <string name="wikis_changes_empty">ပြောင်းလဲမှုများ မရှိသေးပါ</string>
     <string name="wikis_search_empty_query">ရှာဖွေရေး စကားလုံး ထည့်ပါ</string>
-    <string name="wikis_redirects_title">Redirect များ</string>
-    <string name="wikis_redirects_add">ထည့်မည်</string>
     <string name="wikis_redirects_empty">redirect များ မသတ်မှတ်ထားပါ</string>
     <string name="wikis_redirect_create_title">လမ်းကြောင်းလွှဲ ဖန်တီးမည်</string>
     <string name="wikis_redirect_create_action">ဖန်တီးမည်</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">ပူးတွဲဖိုင်များ</string>
     <string name="wikis_attachments_upload">ဖိုင်များ အပ်လုဒ် လုပ်မည်</string>
     <string name="wikis_attachments_uploading">Upload လုပ်နေသည်…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">ဖိုင် %s ခု အပ်လုဒ်လုပ်ပြီးပါပြီ</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ဖိုင်များ တင်၍ မရပါ</string>
     <string name="wikis_attachments_search_clear">ရှာဖွေမှု ရှင်းမည်</string>
     <string name="wikis_attachments_filter_all">ဖိုင်အားလုံး</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
     <string name="wikis_access_revoke_success">ဝင်ရောက်ခွင့် ဖယ်ရှားပြီး</string>
     <string name="wikis_access_revoke_failed">ဝင်ရောက်ခွင့် ဖယ်ရှား၍ မရပါ</string>
+    <string name="wikis_rss_revoke_failed">RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ</string>
+    <string name="wikis_access_search_failed">အသုံးပြုသူများ ရှာ၍ မရပါ</string>
+    <string name="wikis_replica_unknown">မသိရသော</string>
     <string name="wikis_replicas_empty_title">replica များ မရှိသေးပါ</string>
     <string name="wikis_replicas_empty_message">အခြား wiki များ ဤ wiki ကို ပွားယူသောအခါ ဤနေရာတွင် ပေါ်လာပါမည်။</string>
     <string name="wikis_replicas_never_synced">ဘယ်တော့မှ မဟုတ်</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">%1$s မှ စာရင်းသွင်းမှု ရပ်တန့်လိုသည်မှာ သေချာပါသလား။</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">အမည်၊ ID၊ လက်ဗွေ သို့မဟုတ် URL ဖြင့် ရှာရန်</string>
-    <string name="wikis_join_search_button">wiki များ ရှာရန်…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">အကြံပြုထားသော ဆာဗာမပါဘဲ ပြန်ကြိုးစားနေသည်…</string>
     <string name="wikis_comments_title_template">%1$s - မှတ်ချက်များ</string>
     <string name="wikis_comment_form_placeholder_new">မှတ်ချက်ရေးရန်</string>
     <string name="wikis_comment_form_placeholder_reply">ပြန်စာ ရေးရန်</string>
     <string name="wikis_comment_form_send">ပို့</string>
     <string name="wikis_comment_form_remove_attachment">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">သင့်အကြောင်းအရာကို ဤနေရာတွင် Markdown ဖြင့် ရေးပါ</string>
     <string name="wikis_insert_dialog_empty">ပူးတွဲဖိုင်များ မရှိသေးပါ။ စတင်ရန် ဖိုင်တစ်ခု တင်ပါ။</string>
     <string name="wikis_delete_page_message">သင်သည် “%1$s” (%2$s) စာမျက်နှာကို ဖျက်တော့မည်။ ဤလုပ်ဆောင်ချက်ကို မှတ်တမ်းမှ ပြန်လည်ရယူခြင်းဖြင့် ပြန်ပြင်နိုင်သည်။</string>
     <string name="wikis_delete_page_success">စာမျက်နှာ ဖျက်ပြီးပါပြီ</string>
     <string name="wikis_revert_page_title">စာမျက်နှာ ပြန်ပြင်</string>
     <string name="wikis_revert_page_message">သင်သည် %1$s ကို ဗားရှင်း %2$s သို့ ပြန်ပြောင်းတော့မည်။ ၎င်းသည် ဗားရှင်း %2$s ၏ အကြောင်းအရာဖြင့် ပြင်ဆင်မှုအသစ် ဖန်တီးပါမည်။</string>
-    <string name="wikis_revert_page_default_comment">ဗားရှင်း %1$s သို့ ပြန်ပြောင်းပြီး</string>
     <string name="wikis_revert_page_success">ဗားရှင်း %1$s သို့ ပြန်ပြောင်းပြီး</string>
     <string name="wikis_rename_page_renaming">အမည်ပြောင်းနေသည်…</string>
     <string name="wikis_rename_page_success">စာမျက်နှာ အမည်ပြောင်းပြီးပါပြီ</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">နောက်ဆုံး ထပ်တူပြုခဲ့သည်: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ဤသည် “%1$s” သို့ အပ်ဒိတ်များ ပို့ခြင်းကို ရပ်တန့်မည်။ လိုအပ်ပါက ၎င်းတို့ ပြန်လည်ကူးယူနိုင်သည်။</string>
     <string name="wikis_replicas_removed_success">မိတ္တူ ဖယ်ရှားပြီးပါပြီ</string>
-    <string name="wikis_load_more">ထပ်တင်</string>
     <string name="wikis_access_change_level">ဝင်ရောက်ခွင့်အဆင့်</string>
     <string name="wikis_access_subject_anyone">မည်သူမဆို</string>
     <string name="wikis_access_subject_authenticated">အတည်ပြုပြီး အသုံးပြုသူများ</string>

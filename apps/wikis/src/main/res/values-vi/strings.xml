@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Tìm wiki</string>
     <string name="wikis_find_no_results">Không tìm thấy wiki nào</string>
     <string name="wikis_find_recommended_section">Wiki được đề xuất</string>
-    <string name="wikis_join_title">Sao chép wiki</string>
-    <string name="wikis_join_or_id">Hoặc nhập trực tiếp ID</string>
-    <string name="wikis_join_id_label">ID thực thể wiki</string>
-    <string name="wikis_join_submit">Sao chép wiki</string>
     <string name="wikis_create_title">Tạo wiki</string>
     <string name="wikis_create_name_label">Tên</string>
     <string name="wikis_create_privacy_label">Cho phép mọi người tìm kiếm wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Các chỉnh sửa gần đây trên tất cả trang trong wiki này.</string>
     <string name="wikis_changes_empty">Chưa có thay đổi</string>
     <string name="wikis_search_empty_query">Nhập từ khoá tìm kiếm</string>
-    <string name="wikis_redirects_title">Chuyển hướng</string>
-    <string name="wikis_redirects_add">Thêm</string>
     <string name="wikis_redirects_empty">Chưa cấu hình chuyển hướng</string>
     <string name="wikis_redirect_create_title">Tạo chuyển hướng</string>
     <string name="wikis_redirect_create_action">Tạo</string>
@@ -144,6 +138,9 @@
     <string name="wikis_attachments_title">Tệp đính kèm</string>
     <string name="wikis_attachments_upload">Tải lên tệp</string>
     <string name="wikis_attachments_uploading">Đang tải lên…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">Đã tải lên %s tệp</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Không tải tệp lên được</string>
     <string name="wikis_attachments_search_clear">Xóa tìm kiếm</string>
     <string name="wikis_attachments_filter_all">Tất cả tệp</string>
@@ -209,6 +206,9 @@
     <string name="wikis_access_set_success">Đã cập nhật truy cập</string>
     <string name="wikis_access_revoke_success">Đã gỡ truy cập</string>
     <string name="wikis_access_revoke_failed">Không xoá quyền truy cập được</string>
+    <string name="wikis_rss_revoke_failed">Không thể thu hồi quyền truy cập RSS</string>
+    <string name="wikis_access_search_failed">Không thể tìm kiếm người dùng</string>
+    <string name="wikis_replica_unknown">Không rõ</string>
     <string name="wikis_replicas_empty_title">Chưa có bản sao</string>
     <string name="wikis_replicas_empty_message">Khi các wiki khác nhân bản wiki này, chúng sẽ xuất hiện ở đây.</string>
     <string name="wikis_replicas_never_synced">Không bao giờ</string>
@@ -230,22 +230,18 @@
     <string name="wikis_unsubscribe_confirm_message">Bạn có chắc muốn ngừng đăng ký %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS của wiki</string>
     <string name="wikis_find_search_placeholder">Tìm theo tên, ID, dấu vân tay hoặc URL</string>
-    <string name="wikis_join_search_button">Tìm kiếm wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Đang thử lại không dùng máy chủ được đề xuất…</string>
     <string name="wikis_comments_title_template">%1$s - Bình luận</string>
     <string name="wikis_comment_form_placeholder_new">Viết bình luận</string>
     <string name="wikis_comment_form_placeholder_reply">Viết phản hồi</string>
     <string name="wikis_comment_form_send">Gửi</string>
     <string name="wikis_comment_form_remove_attachment">Xóa tệp đính kèm</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Viết nội dung của bạn ở đây bằng Markdown</string>
     <string name="wikis_insert_dialog_empty">Chưa có tệp đính kèm. Tải lên tệp để bắt đầu.</string>
     <string name="wikis_delete_page_message">Bạn sắp xóa trang \"%1$s\" (%2$s). Hành động này có thể được hoàn tác bằng cách khôi phục từ lịch sử.</string>
     <string name="wikis_delete_page_success">Đã xóa trang</string>
     <string name="wikis_revert_page_title">Hoàn nguyên trang</string>
     <string name="wikis_revert_page_message">Bạn sắp khôi phục %1$s về phiên bản %2$s. Điều này sẽ tạo bản sửa đổi mới với nội dung của phiên bản %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Đã khôi phục về phiên bản %1$s</string>
     <string name="wikis_revert_page_success">Đã khôi phục về phiên bản %1$s</string>
     <string name="wikis_rename_page_renaming">Đang đổi tên…</string>
     <string name="wikis_rename_page_success">Đã đổi tên trang</string>
@@ -276,7 +272,6 @@
     <string name="wikis_replicas_col_synced">Đồng bộ lần cuối: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Điều này sẽ ngừng gửi cập nhật đến \"%1$s\". Họ có thể sao chép lại nếu muốn.</string>
     <string name="wikis_replicas_removed_success">Đã xóa bản sao</string>
-    <string name="wikis_load_more">Tải thêm</string>
     <string name="wikis_access_change_level">Cấp độ truy cập</string>
     <string name="wikis_access_subject_anyone">Bất kỳ ai</string>
     <string name="wikis_access_subject_authenticated">Người dùng đã xác thực</string>

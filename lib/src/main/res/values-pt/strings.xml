@@ -20,6 +20,8 @@
     <string name="common_clear_search">Limpar pesquisa</string>
     <string name="drawer_open">Abrir menu</string>
     <string name="common_cancel">Cancelar</string>
+    <string name="common_discard_title">Descartar alterações?</string>
+    <string name="common_discard">Descartar</string>
     <string name="common_filter">Filtrar</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Remover filtro</string>

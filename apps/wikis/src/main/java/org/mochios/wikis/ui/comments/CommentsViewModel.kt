@@ -32,6 +32,7 @@ import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.components.WikiInfoLoader
 import org.mochios.wikis.ui.page.wikiUpdateNamed
 import java.io.File
 import javax.inject.Inject
@@ -59,16 +60,23 @@ data class CommentsUiState(
     val replyingTo: String? = null,
     /** Working draft for the active reply textarea. */
     val replyDraft: String = "",
+    /**
+     * Files picked for the comment being written, kept until the server has
+     * the comment so a refused one keeps them.
+     */
+    val files: List<Uri> = emptyList(),
+    /** Whether a comment is on its way to the server. */
+    val isSending: Boolean = false,
 )
 
 sealed interface CommentsEvent {
-    data class Toast(val message: String) : CommentsEvent
     data class Error(val error: MochiError) : CommentsEvent
 }
 
 /**
  * ViewModel for [CommentsScreen]. Reads `wikiId` and `page` from
- * [SavedStateHandle] and loads wiki info, page and comments in parallel.
+ * [SavedStateHandle]; loads the wiki's information and then the comments in
+ * [load], and the page's title beside them.
  */
 @HiltViewModel
 class CommentsViewModel @Inject constructor(
@@ -100,11 +108,21 @@ class CommentsViewModel @Inject constructor(
     /** The pending or in-flight comments load; cancelled when a newer one starts. */
     private var commentsJob: Job? = null
 
+    private val information = WikiInfoLoader(
+        fetch = { repository.getInfo(wikiId) },
+        loaded = { response ->
+            _uiState.value = _uiState.value.copy(
+                wiki = response.wiki,
+                permissions = response.permissions ?: WikiPermissions(),
+            )
+            watch(response.wiki?.fingerprint ?: wikiId)
+        },
+    )
+
     init {
         loadIdentity()
-        loadInfo()
         loadPage()
-        loadComments()
+        load()
     }
 
     override fun onCleared() {
@@ -153,24 +171,6 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
-    private fun loadInfo() {
-        viewModelScope.launch {
-            try {
-                val response = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = response.wiki,
-                    permissions = response.permissions ?: WikiPermissions(),
-                )
-                watch(response.wiki?.fingerprint ?: wikiId)
-            } catch (e: Exception) {
-                // Non-fatal: the screen still renders, just without a fully
-                // populated WikiContextValue — the comment refresh below will
-                // surface the real error.
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     private fun loadPage() {
         viewModelScope.launch {
             try {
@@ -188,12 +188,17 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
-    /** Load the thread with the full-screen spinner: on open, and from Retry. */
-    fun loadComments() {
+    /**
+     * The wiki's information, unless it is already held, then the thread, with
+     * the full-screen spinner: on open, and from Retry, so one retry restores
+     * both.
+     */
+    fun load() {
         commentsJob?.cancel()
         commentsJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                information.ensure()
                 val response = repository.getComments(wikiId, slug)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -220,7 +225,7 @@ class CommentsViewModel @Inject constructor(
      */
     private fun refreshComments() {
         if (_uiState.value.comments.isEmpty() && _uiState.value.error != null) {
-            loadComments()
+            load()
             return
         }
         commentsJob?.cancel()
@@ -242,25 +247,47 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
-    /** Stages any picked attachments, then posts the comment. */
-    fun createComment(body: String, parent: String? = null, uris: List<Uri>? = null) {
+    /** Adds picked files to the comment being written, each once. */
+    fun addFiles(uris: List<Uri>) {
+        val files = _uiState.value.files
+        _uiState.value = _uiState.value.copy(files = files + uris.filterNot { uri -> uri in files })
+    }
+
+    /** Takes a picked file off the comment being written. */
+    fun removeFile(uri: Uri) {
+        _uiState.value = _uiState.value.copy(files = _uiState.value.files - uri)
+    }
+
+    /**
+     * Stages the picked files, then posts the comment. [onSent] runs once the
+     * server has it, so the composer keeps its words until then, and keeps
+     * them, with the picked files, when it is refused.
+     */
+    fun createComment(body: String, parent: String? = null, onSent: () -> Unit = {}) {
         val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
-        val picked = uris.orEmpty()
+        if (trimmed.isEmpty() || _uiState.value.isSending) return
+        val picked = _uiState.value.files
+        _uiState.value = _uiState.value.copy(isSending = true)
         viewModelScope.launch {
-            tracker.track(picked) {
-                try {
+            try {
+                tracker.track(picked) {
                     val files = repository.stageFiles(picked)
                     try {
                         repository.createComment(wikiId, slug, trimmed, parent, files.ifEmpty { null }, tracker)
-                        if (parent != null) cancelReply()
-                        refreshComments()
                     } finally {
                         repository.discardStaged(files)
                     }
-                } catch (e: Exception) {
-                    _events.send(CommentsEvent.Error(e.toMochiError()))
                 }
+                _uiState.value = _uiState.value.copy(files = _uiState.value.files - picked.toSet())
+                if (parent != null) cancelReply()
+                onSent()
+                refreshComments()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _events.send(CommentsEvent.Error(e.toMochiError()))
+            } finally {
+                _uiState.value = _uiState.value.copy(isSending = false)
             }
         }
     }
@@ -268,13 +295,20 @@ class CommentsViewModel @Inject constructor(
     /** The picked file's real name, for labelling a draft attachment. */
     suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
-    fun editComment(id: String, body: String) {
+    /**
+     * Edits a comment's body. [onSaved] runs once the server has the edit, so
+     * the edit box stays open, with what was typed, when it is refused.
+     */
+    fun editComment(id: String, body: String, onSaved: () -> Unit = {}) {
         val trimmed = body.trim()
         if (trimmed.isEmpty()) return
         viewModelScope.launch {
             try {
                 repository.editComment(wikiId, slug, id, trimmed)
+                onSaved()
                 refreshComments()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _events.send(CommentsEvent.Error(e.toMochiError()))
             }
@@ -313,12 +347,12 @@ class CommentsViewModel @Inject constructor(
     }
 
     /**
-     * Submit the current reply draft as a reply under [parentId]. Files are
-     * the optional list of attachments picked through the reply form.
+     * Submit the current reply draft, with the picked files, as a reply under
+     * [parentId]; [onSent] as for [createComment].
      */
-    fun submitReply(parentId: String, uris: List<Uri>? = null) {
+    fun submitReply(parentId: String, onSent: () -> Unit = {}) {
         val draft = _uiState.value.replyDraft
-        createComment(body = draft, parent = parentId, uris = uris)
+        createComment(body = draft, parent = parentId, onSent = onSent)
     }
 }
 

@@ -5,8 +5,8 @@
 
 package org.mochios.wikis.model
 
+/** A person the user search found: their identity id and name. */
 data class User(
     val id: String = "",
     val name: String = "",
-    val fingerprint: String? = null,
 )

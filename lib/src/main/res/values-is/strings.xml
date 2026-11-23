@@ -20,6 +20,8 @@
     <string name="common_clear_search">Hreinsa leit</string>
     <string name="drawer_open">Opna valmynd</string>
     <string name="common_cancel">Hætta við</string>
+    <string name="common_discard_title">Henda breytingum?</string>
+    <string name="common_discard">Henda</string>
     <string name="common_filter">Sía</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Fjarlægja síu</string>

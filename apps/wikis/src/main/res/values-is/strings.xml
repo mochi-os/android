@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Finna wiki</string>
     <string name="wikis_find_no_results">Engin wiki fundust</string>
     <string name="wikis_find_recommended_section">Wiki sem mælt er með</string>
-    <string name="wikis_join_title">Afrita wiki</string>
-    <string name="wikis_join_or_id">Eða sláðu inn auðkenni beint</string>
-    <string name="wikis_join_id_label">Auðkenni wiki-einingar</string>
-    <string name="wikis_join_submit">Afrita wiki</string>
     <string name="wikis_create_title">Búa til wiki</string>
     <string name="wikis_create_name_label">Nafn</string>
     <string name="wikis_create_privacy_label">Leyfa öllum að leita að wikinu</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Nýlegar breytingar á öllum síðum þessa wiki.</string>
     <string name="wikis_changes_empty">Engar breytingar ennþá</string>
     <string name="wikis_search_empty_query">Sláðu inn leitarorð</string>
-    <string name="wikis_redirects_title">Áframsendingar</string>
-    <string name="wikis_redirects_add">Bæta við</string>
     <string name="wikis_redirects_empty">Engar áframsendingar stilltar</string>
     <string name="wikis_redirect_create_title">Búa til áframsendingu</string>
     <string name="wikis_redirect_create_action">Búa til</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Viðhengi</string>
     <string name="wikis_attachments_upload">Hlaða upp skrám</string>
     <string name="wikis_attachments_uploading">Hleður upp…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s skrá hlaðið inn</item>
+        <item quantity="other">%s skrám hlaðið inn</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Tókst ekki að hlaða upp skrám</string>
     <string name="wikis_attachments_search_clear">Hreinsa leit</string>
     <string name="wikis_attachments_filter_all">Allar skrár</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Aðgangur uppfærður</string>
     <string name="wikis_access_revoke_success">Aðgangur fjarlægður</string>
     <string name="wikis_access_revoke_failed">Tókst ekki að fjarlægja aðgang</string>
+    <string name="wikis_rss_revoke_failed">Ekki tókst að afturkalla RSS-aðgang</string>
+    <string name="wikis_access_search_failed">Mistókst að leita að notendum</string>
+    <string name="wikis_replica_unknown">Óþekkt</string>
     <string name="wikis_replicas_empty_title">Engin afrit ennþá</string>
     <string name="wikis_replicas_empty_message">Þegar önnur wiki endurtaka þetta wiki birtast þau hér.</string>
     <string name="wikis_replicas_never_synced">Aldrei</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Ertu viss um að þú viljir segja upp áskrift að %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Leita eftir nafni, auðkenni, fingrafari eða vefslóð</string>
-    <string name="wikis_join_search_button">Leita að wiki-um…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Reyni aftur án ráðlagða netþjónsins…</string>
     <string name="wikis_comments_title_template">%1$s - Athugasemdir</string>
     <string name="wikis_comment_form_placeholder_new">Skrifaðu athugasemd</string>
     <string name="wikis_comment_form_placeholder_reply">Skrifaðu svar</string>
     <string name="wikis_comment_form_send">Senda</string>
     <string name="wikis_comment_form_remove_attachment">Fjarlægja viðhengi</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skrifaðu efnið þitt hér með Markdown</string>
     <string name="wikis_insert_dialog_empty">Engin viðhengi enn. Hlaðið upp skrá til að byrja.</string>
     <string name="wikis_delete_page_message">Þú ert að fara að eyða síðunni „%1$s“ (%2$s). Hægt er að afturkalla þessa aðgerð með því að endurheimta úr ferlinum.</string>
     <string name="wikis_delete_page_success">Síðu eytt</string>
     <string name="wikis_revert_page_title">Bakfæra síðu</string>
     <string name="wikis_revert_page_message">Þú ert að fara að færa %1$s til baka í útgáfu %2$s. Þetta býr til nýja endurskoðun með efninu úr útgáfu %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Fært til baka í útgáfu %1$s</string>
     <string name="wikis_revert_page_success">Fært til baka í útgáfu %1$s</string>
     <string name="wikis_rename_page_renaming">Endurnefni…</string>
     <string name="wikis_rename_page_success">Síða endurnefnd</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Síðast samstillt: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Þetta stöðvar sendingu uppfærslna til „%1$s“. Þeir geta afritað aftur ef þeir vilja.</string>
     <string name="wikis_replicas_removed_success">Afrit fjarlægt</string>
-    <string name="wikis_load_more">Hlaða meiru</string>
     <string name="wikis_access_change_level">Aðgangsstig</string>
     <string name="wikis_access_subject_anyone">Hver sem er</string>
     <string name="wikis_access_subject_authenticated">Auðkenndir notendur</string>

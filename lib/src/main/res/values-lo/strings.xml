@@ -20,6 +20,8 @@
     <string name="common_clear_search">ລ້າງການຄົ້ນຫາ</string>
     <string name="drawer_open">ເປີດເມນູ</string>
     <string name="common_cancel">ຍົກເລີກ</string>
+    <string name="common_discard_title">ຖິ້ມການປ່ຽນແປງບໍ?</string>
+    <string name="common_discard">ຖິ້ມ</string>
     <string name="common_filter">ຕົວກອງ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ລົບຕົວກອງ</string>

@@ -28,11 +28,13 @@ import org.mochios.android.share.Shared
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
+import org.mochios.wikis.R
 import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.components.WikiInfoLoader
 import javax.inject.Inject
 
 sealed class PageViewEvent {
@@ -54,6 +56,16 @@ sealed class PageViewEvent {
 
     /** Display a transient error toast (already localised). */
     data class ShowError(val error: MochiError) : PageViewEvent()
+
+    /**
+     * Say [messageRes], formatted with [args]; for a failure, the server's own
+     * reason in [error] where it sent one.
+     */
+    data class Notice(
+        val messageRes: Int,
+        val args: List<Any> = emptyList(),
+        val error: MochiError? = null,
+    ) : PageViewEvent()
 
     /** The page is gone; the screen showing it has to leave. */
     object Deleted : PageViewEvent()
@@ -123,8 +135,22 @@ class PageViewModel @Inject constructor(
     @Volatile
     private var gone = false
 
+    /**
+     * The wiki and what the reader may do in it, asked for with the page until
+     * it arrives. Its arrival opens the wiki's live updates.
+     */
+    private val information = WikiInfoLoader(
+        fetch = { repository.getInfo(wikiId) },
+        loaded = { response ->
+            _uiState.value = _uiState.value.copy(
+                wiki = response.wiki,
+                permissions = response.permissions ?: WikiPermissions(),
+            )
+            watch(response.wiki?.fingerprint ?: wikiId)
+        },
+    )
+
     init {
-        loadInfo()
         loadPage()
     }
 
@@ -253,28 +279,17 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    fun loadInfo() {
-        viewModelScope.launch {
-            try {
-                val response = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = response.wiki,
-                    permissions = response.permissions ?: WikiPermissions(),
-                )
-                watch(response.wiki?.fingerprint ?: wikiId)
-            } catch (e: Exception) {
-                // Don't surface as a hard error — the page-body load will
-                // surface the real error if there is one. Capture for
-                // diagnostics only.
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
+    /**
+     * Load the wiki's information, until it has arrived, and then the page:
+     * the screen's load and its Retry, so an information request that failed
+     * is asked again rather than leaving the page without its permissions or
+     * its live updates.
+     */
     fun loadPage() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, notFound = false, error = null)
             try {
+                information.ensure()
                 val response = repository.getPage(wikiId, slug)
                 show(response)
             } catch (e: Exception) {
@@ -377,9 +392,59 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    fun updatePageTags(tags: List<String>) {
+    /** The page's slug as loaded, which a redirect may have made other than the route's. */
+    private fun pageSlug(): String = _uiState.value.page?.slug?.takeIf { value -> value.isNotBlank() } ?: slug
+
+    /** Show [tags] as the page's, on the page as it stands by then. */
+    private fun showTags(tags: List<String>) {
         val current = _uiState.value.page ?: return
         _uiState.value = _uiState.value.copy(page = current.copy(tags = tags))
+    }
+
+    /**
+     * Tag the page. The chip appears once the server has taken it, among the
+     * tags shown by then, which a reload may have changed meanwhile.
+     */
+    fun addTag(tag: String) {
+        if (_uiState.value.page == null) return
+        val target = pageSlug()
+        viewModelScope.launch {
+            try {
+                repository.addTag(wikiId, target, tag)
+                showTags((_uiState.value.page?.tags.orEmpty() + tag).distinct())
+                _events.emit(PageViewEvent.Notice(R.string.wikis_tag_manager_added, listOf(tag)))
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _events.emit(PageViewEvent.Notice(R.string.wikis_tag_manager_add_failed, error = e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Untag the page. The chip goes on the tap and comes back, with the
+     * error, if the server refuses, in its old place among the tags shown by
+     * then.
+     */
+    fun removeTag(tag: String) {
+        val before = _uiState.value.page?.tags ?: return
+        val target = pageSlug()
+        showTags(before.filterNot { other -> other.equals(tag, ignoreCase = true) })
+        viewModelScope.launch {
+            try {
+                repository.removeTag(wikiId, target, tag)
+                _events.emit(PageViewEvent.Notice(R.string.wikis_tag_manager_removed, listOf(tag)))
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                val latest = _uiState.value.page?.tags.orEmpty()
+                if (latest.none { other -> other.equals(tag, ignoreCase = true) }) {
+                    val order = before.withIndex().associate { (index, other) -> other.lowercase() to index }
+                    showTags((latest + tag).sortedBy { other -> order[other.lowercase()] ?: Int.MAX_VALUE })
+                }
+                _events.emit(PageViewEvent.Notice(R.string.wikis_tag_manager_remove_failed, error = e.toMochiError()))
+            }
+        }
     }
 }
 

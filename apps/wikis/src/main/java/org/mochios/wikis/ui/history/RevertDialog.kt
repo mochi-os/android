@@ -30,10 +30,13 @@ import org.mochios.wikis.R
  * the history list and the revision view, so the question reads the same from
  * either.
  *
+ * The comment starts empty: left so, the server records its own note of the
+ * revert, which every reader sees in their own language.
+ *
  * @param slug The page being restored.
  * @param version The revision to restore.
  * @param isReverting Whether the revert is in flight.
- * @param onConfirm Called with the edit comment to record.
+ * @param onConfirm Called with the edit comment to record, empty for none.
  * @param onDismiss Called when the question is dropped.
  */
 @Composable
@@ -44,8 +47,7 @@ internal fun RevertDialog(
     onConfirm: (String) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    val defaultComment = stringResource(R.string.wikis_revert_page_default_comment, version.toString())
-    var comment by remember(version) { mutableStateOf(defaultComment) }
+    var comment by remember(version) { mutableStateOf("") }
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
@@ -68,7 +70,7 @@ internal fun RevertDialog(
             }
         },
         confirmText = stringResource(R.string.wikis_revert_page_confirm),
-        onConfirm = { onConfirm(comment) },
+        onConfirm = { onConfirm(comment.trim()) },
         confirmEnabled = !isReverting,
         confirmLoading = isReverting,
         destructive = true,

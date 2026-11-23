@@ -33,8 +33,8 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.launch
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
-import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
@@ -136,7 +136,7 @@ fun RenamePageDialog(
                             val renamedCount = r.renamed.size.coerceAtLeast(1)
                             onRenamed(trimmed, renamedCount, r.updatedLinks)
                         } catch (e: Exception) {
-                            val msg = e.toMochiError().userMessage().ifEmpty { failedFallback }
+                            val msg = e.toMochiError().messageOrFallback(failedFallback)
                             Toast.makeText(context, msg, Toast.LENGTH_LONG).show()
                         } finally {
                             isSubmitting = false

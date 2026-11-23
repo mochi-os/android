@@ -54,8 +54,6 @@ class PageMenuShortcutTest {
             PageOverflowMenu(
                 expanded = true,
                 onDismiss = { dismissed = true },
-                wikiId = "w1",
-                slug = "home",
                 permissions = WikiPermissions(view = true),
                 commentCount = 0,
                 canUnsubscribe = false,

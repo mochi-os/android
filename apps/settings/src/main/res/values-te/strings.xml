@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">తెలియని థీమ్</string>
     <string name="system_documents_modified">సవరించబడింది</string>
-    <string name="system_documents_discard_title">మార్పులను విస్మరించాలా?</string>
-    <string name="system_documents_discard">విస్మరించు</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s విజయవంతం</item>
         <item quantity="other">%1$s విజయవంతం</item>

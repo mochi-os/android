@@ -44,10 +44,6 @@
     <string name="wikis_find_title">উইকি খুঁজুন</string>
     <string name="wikis_find_no_results">কোনো উইকি পাওয়া যায়নি</string>
     <string name="wikis_find_recommended_section">সুপারিশকৃত উইকি</string>
-    <string name="wikis_join_title">উইকি রেপ্লিকেট করুন</string>
-    <string name="wikis_join_or_id">অথবা সরাসরি আইডি লিখুন</string>
-    <string name="wikis_join_id_label">Wiki এনটিটি ID</string>
-    <string name="wikis_join_submit">উইকি রেপ্লিকেট করুন</string>
     <string name="wikis_create_title">wiki তৈরি করুন</string>
     <string name="wikis_create_name_label">নাম</string>
     <string name="wikis_create_privacy_label">যেকেউ wiki খুঁজতে অনুমতি দিন</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">এই উইকির সমস্ত পৃষ্ঠা জুড়ে সাম্প্রতিক সম্পাদনা।</string>
     <string name="wikis_changes_empty">এখনও কোনো পরিবর্তন নেই</string>
     <string name="wikis_search_empty_query">একটি অনুসন্ধান শব্দ লিখুন</string>
-    <string name="wikis_redirects_title">রিডাইরেক্ট</string>
-    <string name="wikis_redirects_add">যোগ করুন</string>
     <string name="wikis_redirects_empty">কোনো রিডাইরেক্ট কনফিগার করা নেই</string>
     <string name="wikis_redirect_create_title">রিডাইরেক্ট তৈরি করুন</string>
     <string name="wikis_redirect_create_action">তৈরি করুন</string>
@@ -143,6 +137,10 @@
     <string name="wikis_attachments_title">অ্যাটাচমেন্ট</string>
     <string name="wikis_attachments_upload">ফাইল আপলোড করুন</string>
     <string name="wikis_attachments_uploading">আপলোড করা হচ্ছে…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ফাইল আপলোড হয়েছে</item>
+        <item quantity="other">%s ফাইল আপলোড হয়েছে</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ফাইল আপলোড করতে ব্যর্থ</string>
     <string name="wikis_attachments_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
     <string name="wikis_attachments_filter_all">সব ফাইল</string>
@@ -208,6 +206,9 @@
     <string name="wikis_access_set_success">অ্যাক্সেস আপডেট হয়েছে</string>
     <string name="wikis_access_revoke_success">অ্যাক্সেস সরানো হয়েছে</string>
     <string name="wikis_access_revoke_failed">অ্যাক্সেস সরাতে ব্যর্থ</string>
+    <string name="wikis_rss_revoke_failed">RSS অ্যাক্সেস প্রত্যাহার করা ব্যর্থ হয়েছে</string>
+    <string name="wikis_access_search_failed">ব্যবহারকারী অনুসন্ধান করতে ব্যর্থ</string>
+    <string name="wikis_replica_unknown">অজানা</string>
     <string name="wikis_replicas_empty_title">এখনও কোনো রেপ্লিকা নেই</string>
     <string name="wikis_replicas_empty_message">অন্যান্য wiki যখন এই wiki রেপ্লিকেট করে, তারা এখানে দেখা যাবে।</string>
     <string name="wikis_replicas_never_synced">কখনই না</string>
@@ -228,22 +229,18 @@
     <string name="wikis_unsubscribe_confirm_message">আপনি কি নিশ্চিত যে %1$s থেকে সাবস্ক্রিপশন বাতিল করতে চান?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন</string>
-    <string name="wikis_join_search_button">wikis খুঁজুন…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">সাজেস্টেড সার্ভার ছাড়া আবার চেষ্টা করছে…</string>
     <string name="wikis_comments_title_template">%1$s - মন্তব্য</string>
     <string name="wikis_comment_form_placeholder_new">একটি মন্তব্য লিখুন</string>
     <string name="wikis_comment_form_placeholder_reply">একটি উত্তর লিখুন</string>
     <string name="wikis_comment_form_send">পাঠান</string>
     <string name="wikis_comment_form_remove_attachment">সংযুক্তি সরান</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Markdown ব্যবহার করে এখানে আপনার বিষয়বস্তু লিখুন</string>
     <string name="wikis_insert_dialog_empty">এখনো কোনো সংযুক্তি নেই। শুরু করতে একটি ফাইল আপলোড করুন।</string>
     <string name="wikis_delete_page_message">আপনি পৃষ্ঠা „%1$s\" (%2$s) মুছে ফেলতে চলেছেন। এই ক্রিয়াটি ইতিহাস থেকে পুনরুদ্ধার করে পূর্বাবস্থায় ফেরানো যেতে পারে।</string>
     <string name="wikis_delete_page_success">পৃষ্ঠা মুছে ফেলা হয়েছে</string>
     <string name="wikis_revert_page_title">পৃষ্ঠা ফিরিয়ে আনুন</string>
     <string name="wikis_revert_page_message">আপনি %1$s কে সংস্করণ %2$s এ ফিরিয়ে আনতে চলেছেন। এটি সংস্করণ %2$s এর বিষয়বস্তু সহ একটি নতুন সংশোধন তৈরি করবে।</string>
-    <string name="wikis_revert_page_default_comment">সংস্করণ %1$s এ ফিরিয়ে আনা হয়েছে</string>
     <string name="wikis_revert_page_success">সংস্করণ %1$s এ ফিরিয়ে আনা হয়েছে</string>
     <string name="wikis_rename_page_renaming">নাম পরিবর্তন হচ্ছে…</string>
     <string name="wikis_rename_page_success">পৃষ্ঠার নাম পরিবর্তন হয়েছে</string>
@@ -274,7 +271,6 @@
     <string name="wikis_replicas_col_synced">শেষ সিঙ্ক: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">এটি „%1$s\" এ আপডেট পাঠানো বন্ধ করবে। তারা চাইলে আবার রেপ্লিকেট করতে পারে।</string>
     <string name="wikis_replicas_removed_success">রেপ্লিকা সরানো হয়েছে</string>
-    <string name="wikis_load_more">আরও লোড করুন</string>
     <string name="wikis_access_change_level">অ্যাক্সেস লেভেল</string>
     <string name="wikis_access_subject_anyone">যে কেউ</string>
     <string name="wikis_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>

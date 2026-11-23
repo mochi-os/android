@@ -27,6 +27,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.api.OwnedAddress
+import org.mochios.android.ui.components.AnonymousImage
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
@@ -35,8 +36,11 @@ import org.mochios.wikis.ui.attachments.AttachmentsUiState
 import org.mochios.wikis.ui.attachments.AttachmentsViewMode
 import org.mochios.wikis.ui.comments.CommentAttachments
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.MarkdownContent
 import org.mochios.wikis.ui.components.WikiContextValue
+import org.mochios.wikis.ui.components.attachmentMarkdown
 import org.mochios.wikis.ui.components.lightboxImages
+import org.mochios.wikis.ui.components.rewriteAttachmentUrls
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -157,12 +161,17 @@ class WikiAttachmentsTest {
     // NullRequestData; any of them is an attachment shown broken.
     private fun blank(request: String) = request.isEmpty() || request == "/" || "NullRequestData" in request
 
-    // No attachment without an address is on screen, and a plain one is.
-    private fun assertHidden() {
+    // No attachment without an address is on screen, and a plain one is. The
+    // gallery a comment draws its images with puts a failed image's reason in
+    // its place, and no image loads here, so there the plain one is known to
+    // be shown by its request alone (assertEscaped).
+    private fun assertHidden(named: Boolean = true) {
         for (name in images.take(4).map { it.name }) {
             rule.onAllNodes(hasText(name) or hasContentDescription(name), useUnmergedTree = true).assertCountEquals(0)
         }
-        assertTrue(rule.onAllNodes(hasText("a1.png") or hasContentDescription("a1.png"), useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty())
+        if (named) {
+            assertTrue(rule.onAllNodes(hasText("a1.png") or hasContentDescription("a1.png"), useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty())
+        }
     }
 
     /** Every attachment request is a plain one's escaped address, and each was asked for. */
@@ -178,7 +187,7 @@ class WikiAttachmentsTest {
     @Test
     fun `a comment asks for no attachment an id points elsewhere`() {
         assertEscaped(shown { CommentAttachments(attachments = images) })
-        assertHidden()
+        assertHidden(named = false)
     }
 
     private fun body(mode: AttachmentsViewMode) = shown {
@@ -200,5 +209,63 @@ class WikiAttachmentsTest {
     fun `the attachments list asks for no attachment an id points elsewhere`() {
         assertEscaped(body(AttachmentsViewMode.LIST))
         assertHidden()
+    }
+
+    @Test
+    fun `a page body's image is this wiki's attachment, asked with a credential, or another's, asked without`() {
+        assertEquals(OwnedAddress.of("/wikis/w1/-/attachments/a1/thumbnail"), wiki.image("attachments/a1/thumbnail"))
+        assertEquals(OwnedAddress.of("/wikis/w1/-/attachments/a1"), wiki.image("${base}attachments/a1"))
+        assertEquals(OwnedAddress.of("/wikis/w1/-/attachments/a1"), wiki.image("/other/-/attachments/a1"))
+        assertNull(wiki.image("https://example.com/p.png"))
+        // The wiki's own address, but not an attachment: an action the page's author chose.
+        assertNull(wiki.image("${base}delete"))
+        assertNull(wiki.image("https://server/settings/-/x"))
+        assertNull(wiki.image("/settings/-/x"))
+        assertNull(wiki.image("attachments/../../settings/-/x"))
+        assertNull(wiki.image("attachments/.."))
+    }
+
+    @Test
+    fun `a page loads its own pictures, markdown and HTML alike, with a credential, and others' without`() {
+        val requests = ConcurrentLinkedQueue<Any>()
+        SingletonImageLoader.setUnsafe(
+            ImageLoader.Builder(RuntimeEnvironment.getApplication()).components {
+                add(Interceptor { chain ->
+                    requests.add(chain.request.data)
+                    ErrorResult(null, chain.request, IllegalStateException("no images in tests"))
+                })
+            }.build()
+        )
+        shown {
+            MarkdownContent(
+                content = "![plan](attachments/a1/thumbnail)\n\n![p](https://example.com/p.png)\n\nSee <img src=\"attachments/a2\"> here",
+            )
+        }
+        val made = requests.toList()
+        assertTrue("THE POINT: the page's own picture is asked as the wiki's own: $made", OwnedAddress.of("/wikis/w1/-/attachments/a1/thumbnail") in made)
+        assertTrue("an HTML picture of the wiki's is its own too: $made", OwnedAddress.of("/wikis/w1/-/attachments/a2") in made)
+        assertTrue("another host's picture goes without a credential: $made", AnonymousImage("https://example.com/p.png") in made)
+    }
+
+    @Test
+    fun `an attachment's markdown escapes its name and shows a picture's thumbnail`() {
+        assertEquals(
+            "![plan \\[v2\\] a\\\\b.png](attachments/a1/thumbnail)",
+            attachmentMarkdown(Attachment(id = "a1", name = "plan [v2] a\\b.png", type = "image/png")),
+        )
+        assertEquals("[notes \\[1\\].pdf](attachments/a%3F2)", attachmentMarkdown(Attachment(id = "a?2", name = "notes [1].pdf", type = "application/pdf")))
+    }
+
+    @Test
+    fun `a page's attachment links resolve with a bracket in their names, escaped or balanced`() {
+        val resolve: (String) -> String = { url -> wiki.resolveAttachmentUrl(url) ?: url }
+        assertEquals(
+            "![plan \\[v2\\].png](${base}attachments/a1/thumbnail)",
+            rewriteAttachmentUrls("![plan \\[v2\\].png](attachments/a1/thumbnail)", resolve),
+        )
+        assertEquals(
+            "[plan [v2].pdf](${base}attachments/a2) and [x](${base}attachments/a3)",
+            rewriteAttachmentUrls("[plan [v2].pdf](attachments/a2) and [x](attachments/a3)", resolve),
+        )
     }
 }

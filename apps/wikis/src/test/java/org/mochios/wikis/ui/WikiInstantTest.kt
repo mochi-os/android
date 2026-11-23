@@ -25,13 +25,10 @@ import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Downloads
 import org.mochios.android.files.FileStore
-import org.mochios.wikis.R
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.repository.WikisRepository
 import org.mochios.wikis.ui.attachments.AttachmentsEvent
 import org.mochios.wikis.ui.attachments.AttachmentsViewModel
-import org.mochios.wikis.ui.components.TagManagerSnackbar
-import org.mochios.wikis.ui.components.TagManagerViewModel
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
@@ -43,9 +40,9 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
 /**
- * Removing a tag and editing an attachment's caption, as the web has them:
- * each shows on the tap, before the server answers, and goes back with the
- * error if the server refuses.
+ * Editing an attachment's caption, as the web has it: it shows on the tap,
+ * before the server answers, and goes back with the error if the server
+ * refuses. The page's tags are PageTagsTest's.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
@@ -77,10 +74,6 @@ class WikiInstantTest {
                     "/wikis/w1/-/info" -> ok("""{"wiki": {"id": "w1", "fingerprint": "wfp", "name": "Wiki"}, "permissions": {}}""")
                     "/wikis/w1/-/attachment/list" ->
                         ok("""{"attachments": [{"id": "a1", "name": "one.png", "caption": "Old"}, {"id": "a2", "name": "two.png", "caption": ""}]}""")
-                    "/wikis/w1/-/pages/home/tag/remove" -> {
-                        writes.add(path)
-                        answer("{}")
-                    }
                     "/wikis/w1/-/attachment/update" -> {
                         writes.add(path)
                         answer("""{"attachment": {"id": "a1", "name": "one.png", "caption": "New"}}""")
@@ -123,13 +116,6 @@ class WikiInstantTest {
         }
     }
 
-    private fun tags(): Pair<TagManagerViewModel, MutableList<TagManagerSnackbar>> {
-        val model = TagManagerViewModel(SavedStateHandle(), repository)
-        val said = mutableListOf<TagManagerSnackbar>()
-        jobs += CoroutineScope(Dispatchers.Main).launch { model.snackbar.collect { said += it } }
-        return model to said
-    }
-
     private fun attachments(): Pair<AttachmentsViewModel, MutableList<AttachmentsEvent>> {
         val model = AttachmentsViewModel(SavedStateHandle(mapOf("wikiId" to "w1", "page" to "home")), repository, session, Downloads(context, FileStore(context)))
         val events = mutableListOf<AttachmentsEvent>()
@@ -139,30 +125,6 @@ class WikiInstantTest {
     }
 
     private fun AttachmentsViewModel.caption(id: String) = uiState.value.attachments.single { it.id == id }.caption
-
-    @Test
-    fun `a removed tag's chip goes on the tap, and back in its place with the error when refused`() {
-        val (model, said) = tags()
-        model.remove("w1", "home", listOf("alpha", "beta", "gamma"), "beta")
-        assertEquals(listOf("alpha", "gamma"), model.uiState.value.lastUpdated)
-        until { writes.contains("/wikis/w1/-/pages/home/tag/remove") }
-
-        refuse = true
-        gate.countDown()
-        until { said.isNotEmpty() }
-        assertEquals(R.string.wikis_tag_manager_remove_failed, said.single().messageRes)
-        assertEquals(listOf("alpha", "beta", "gamma"), model.uiState.value.lastUpdated)
-    }
-
-    @Test
-    fun `an accepted removal stays gone and says so`() {
-        val (model, said) = tags()
-        model.remove("w1", "home", listOf("alpha", "beta"), "beta")
-        gate.countDown()
-        until { said.isNotEmpty() }
-        assertEquals(R.string.wikis_tag_manager_removed, said.single().messageRes)
-        assertEquals(listOf("alpha"), model.uiState.value.lastUpdated)
-    }
 
     @Test
     fun `a caption shows as the editor closes, and goes back with the error when refused`() {

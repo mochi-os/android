@@ -20,6 +20,8 @@
     <string name="common_clear_search">Εκκαθάριση αναζήτησης</string>
     <string name="drawer_open">Άνοιγμα μενού</string>
     <string name="common_cancel">Ακύρωση</string>
+    <string name="common_discard_title">Απόρριψη αλλαγών;</string>
+    <string name="common_discard">Απόρριψη</string>
     <string name="common_filter">Φίλτρο</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Αφαίρεση φίλτρου</string>

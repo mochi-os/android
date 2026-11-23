@@ -20,6 +20,8 @@
     <string name="common_clear_search">ရှာဖွေမှု ရှင်းမည်</string>
     <string name="drawer_open">မီနူးကို ဖွင့်</string>
     <string name="common_cancel">မလုပ်တော့ပါ</string>
+    <string name="common_discard_title">အပြောင်းအလဲများကို ဖျက်ပစ်မလား။</string>
+    <string name="common_discard">ဖျက်ပစ်ရန်</string>
     <string name="common_filter">စိစစ်</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>

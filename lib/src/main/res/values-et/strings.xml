@@ -20,6 +20,8 @@
     <string name="common_clear_search">Tühjenda otsing</string>
     <string name="drawer_open">Ava menüü</string>
     <string name="common_cancel">Tühista</string>
+    <string name="common_discard_title">Kas loobuda muudatustest?</string>
+    <string name="common_discard">Loobu</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Eemalda filter</string>

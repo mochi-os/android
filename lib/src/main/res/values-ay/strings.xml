@@ -20,6 +20,8 @@
     <string name="common_clear_search">Thaqhawi q\'umachaña</string>
     <string name="drawer_open">Menú jist\'arma</string>
     <string name="common_cancel">Jaytaña</string>
+    <string name="common_discard_title">¿Mayjt\'awinaka jaqsuñati?</string>
+    <string name="common_discard">Jaqsuña</string>
     <string name="common_filter">Filtro</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Filtro apsuña</string>

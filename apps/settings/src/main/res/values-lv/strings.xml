@@ -410,8 +410,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nezināma tēma</string>
     <string name="system_documents_modified">Mainīts</string>
-    <string name="system_documents_discard_title">Atmest izmaiņas?</string>
-    <string name="system_documents_discard">Atmest</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="zero">%1$s veiksmīgi</item>
         <item quantity="one">%1$s veiksmīgs</item>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Jwenn wiki</string>
     <string name="wikis_find_no_results">Pa gen wiki ki jwenn</string>
     <string name="wikis_find_recommended_section">Wiki rekòmande</string>
-    <string name="wikis_join_title">Replike wiki</string>
-    <string name="wikis_join_or_id">Oswa antre ID dirèkteman</string>
-    <string name="wikis_join_id_label">ID antite wiki</string>
-    <string name="wikis_join_submit">Replike wiki</string>
     <string name="wikis_create_title">Kreye wiki</string>
     <string name="wikis_create_name_label">Non</string>
     <string name="wikis_create_privacy_label">Pèmèt nenpòt moun chèche wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Modifikasyon resan nan tout paj nan wiki sa a.</string>
     <string name="wikis_changes_empty">Poko gen chanjman</string>
     <string name="wikis_search_empty_query">Antre yon tèm rechèch</string>
-    <string name="wikis_redirects_title">Redireksyon</string>
-    <string name="wikis_redirects_add">Ajoute</string>
     <string name="wikis_redirects_empty">Pa gen redireksyon konfigire</string>
     <string name="wikis_redirect_create_title">Kreye redireksyon</string>
     <string name="wikis_redirect_create_action">Kreye</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Atachman yo</string>
     <string name="wikis_attachments_upload">Telechaje fichye yo</string>
     <string name="wikis_attachments_uploading">Ap telechaje…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fichye telechaje</item>
+        <item quantity="other">%s fichye telechaje</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Echwe pou telechaje fichye</string>
     <string name="wikis_attachments_search_clear">Efase rechèch</string>
     <string name="wikis_attachments_filter_all">Tout fichye</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Aksè mete ajou</string>
     <string name="wikis_access_revoke_success">Aksè retire</string>
     <string name="wikis_access_revoke_failed">Echwe pou retire aksè</string>
+    <string name="wikis_rss_revoke_failed">Echwe pou retire aksè RSS</string>
+    <string name="wikis_access_search_failed">Echwe pou chèche itilizatè</string>
+    <string name="wikis_replica_unknown">Enkoni</string>
     <string name="wikis_replicas_empty_title">Poko gen replika</string>
     <string name="wikis_replicas_empty_message">Lè lòt wikis replike wiki sa, yo pral parèt isit la.</string>
     <string name="wikis_replicas_never_synced">Janmen</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Èske ou sèten ou vle dezabòne nan %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Chèche pa non, ID, anprent oswa URL</string>
-    <string name="wikis_join_search_button">Chèche wiki yo…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">N ap eseye ankò san sèvè yo te sijere a…</string>
     <string name="wikis_comments_title_template">%1$s - Kòmantè</string>
     <string name="wikis_comment_form_placeholder_new">Ekri yon kòmantè</string>
     <string name="wikis_comment_form_placeholder_reply">Ekri yon repons</string>
     <string name="wikis_comment_form_send">Voye</string>
     <string name="wikis_comment_form_remove_attachment">Retire pyès jwenti</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ekri kontni ou isit la ak Markdown</string>
     <string name="wikis_insert_dialog_empty">Poko gen okenn atachman. Telechaje yon fichye pou kòmanse.</string>
     <string name="wikis_delete_page_message">Ou sou pwen efase paj “%1$s” (%2$s). Ou ka defèt aksyon sa a lè ou restore soti nan istwa a.</string>
     <string name="wikis_delete_page_success">Paj efase</string>
     <string name="wikis_revert_page_title">Retounen paj la</string>
     <string name="wikis_revert_page_message">Ou sou pwen retounen %1$s nan vèsyon %2$s. Sa a ap kreye yon nouvo revizyon ak kontni vèsyon %2$s la.</string>
-    <string name="wikis_revert_page_default_comment">Retounen nan vèsyon %1$s</string>
     <string name="wikis_revert_page_success">Retounen nan vèsyon %1$s</string>
     <string name="wikis_rename_page_renaming">Ap rebatize…</string>
     <string name="wikis_rename_page_success">Paj la rebatize</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Dènye senkronizasyon: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Sa a ap sispann voye mizajou bay “%1$s”. Yo ka replike ankò si yo vle.</string>
     <string name="wikis_replicas_removed_success">Replika retire</string>
-    <string name="wikis_load_more">Chaje plis</string>
     <string name="wikis_access_change_level">Nivo aksè</string>
     <string name="wikis_access_subject_anyone">Nenpòt moun</string>
     <string name="wikis_access_subject_authenticated">Itilizatè ki otantifye</string>

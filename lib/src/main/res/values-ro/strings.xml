@@ -20,6 +20,8 @@
     <string name="common_clear_search">Golește căutarea</string>
     <string name="drawer_open">Deschide meniul</string>
     <string name="common_cancel">Anulează</string>
+    <string name="common_discard_title">Renunți la modificări?</string>
+    <string name="common_discard">Renunță</string>
     <string name="common_filter">Filtrează</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Elimină filtrul</string>

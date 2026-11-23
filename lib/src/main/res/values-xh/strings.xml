@@ -20,6 +20,8 @@
     <string name="common_clear_search">Cima ukukhangela</string>
     <string name="drawer_open">Vula imenyu</string>
     <string name="common_cancel">Rhoxisa</string>
+    <string name="common_discard_title">Lahla utshintsho?</string>
+    <string name="common_discard">Lahla</string>
     <string name="common_filter">Hluza</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Susa isihluzi</string>

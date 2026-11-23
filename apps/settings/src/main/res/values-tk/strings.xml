@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Näbelli tema</string>
     <string name="system_documents_modified">Üýtgedildi</string>
-    <string name="system_documents_discard_title">Üýtgeşmeler taşlansynmy?</string>
-    <string name="system_documents_discard">Taşla</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s şowly</item>
         <item quantity="other">%1$s şowly</item>

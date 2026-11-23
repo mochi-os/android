@@ -59,7 +59,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
-import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.DiscardDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -70,6 +70,7 @@ import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.rememberDiscardGuard
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 import androidx.compose.runtime.CompositionLocalProvider
@@ -138,7 +139,13 @@ fun PageEditorScreen(
             }
         }
     }
-    BackHandler(enabled = viewModel.isNew) { leaveEditor() }
+    // Back and the top bar's arrow both ask before dropping unsaved edits. A
+    // new page's back always goes through here, to land where leaveEditor
+    // says rather than on whatever the stack holds beneath.
+    val unsaved = unsaved(viewModel.isNew, state)
+    val guard = rememberDiscardGuard()
+    val leave: () -> Unit = { guard.request(unsaved, leaveEditor) }
+    BackHandler(enabled = viewModel.isNew || unsaved, onBack = leave)
 
     var savedCursor by remember { mutableStateOf(0) }
     var insertDialogOpen by remember { mutableStateOf(false) }
@@ -209,7 +216,7 @@ fun PageEditorScreen(
                     )
                 },
                 navigationIcon = {
-                    MochiIconButton(onClick = leaveEditor) {
+                    MochiIconButton(onClick = leave) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(org.mochios.android.R.string.common_back),
@@ -397,6 +404,8 @@ fun PageEditorScreen(
             )
         },
     )
+
+    DiscardDialog(guard)
 
     if (showDeleteDialog) {
         // Deleting asks over the editor rather than sending the writer to a

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>
-    <string name="wikis_join_title">Yi kwafin wiki</string>
-    <string name="wikis_join_or_id">Ko shigar da ID kai tsaye</string>
-    <string name="wikis_join_id_label">ID na mahaɗin Wiki</string>
-    <string name="wikis_join_submit">Yi kwafin wiki</string>
     <string name="wikis_create_title">Ƙirƙira wiki</string>
     <string name="wikis_create_name_label">Suna</string>
     <string name="wikis_create_privacy_label">Ba kowa damar nemo wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Gyare-gyare na kwanan nan a duk shafuka na wannan wiki.</string>
     <string name="wikis_changes_empty">Babu canje-canje tukuna</string>
     <string name="wikis_search_empty_query">Shigar da kalmar bincike</string>
-    <string name="wikis_redirects_title">Karkatarwa</string>
-    <string name="wikis_redirects_add">Ƙara</string>
     <string name="wikis_redirects_empty">Ba a saita redirects ba</string>
     <string name="wikis_redirect_create_title">Ƙirƙira redirect</string>
     <string name="wikis_redirect_create_action">Ƙirƙira</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Haɗawa</string>
     <string name="wikis_attachments_upload">Loda fayiloli</string>
     <string name="wikis_attachments_uploading">Ana lodawa…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">an loda fayil %s</item>
+        <item quantity="other">an loda fayiloli %s</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">An gaza upload fayiloli</string>
     <string name="wikis_attachments_search_clear">Share bincike</string>
     <string name="wikis_attachments_filter_all">Duk fayiloli</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">An sabunta damar shiga</string>
     <string name="wikis_access_revoke_success">An cire damar shiga</string>
     <string name="wikis_access_revoke_failed">An gaza cire izini</string>
+    <string name="wikis_rss_revoke_failed">An kasa janye damar shiga RSS</string>
+    <string name="wikis_access_search_failed">Nemo masu amfani ya gaza</string>
+    <string name="wikis_replica_unknown">Ba a sani ba</string>
     <string name="wikis_replicas_empty_title">Babu replicas tukuna</string>
     <string name="wikis_replicas_empty_message">Lokacin da wasu wikis suka kwafi wannan wiki, za su bayyana a nan.</string>
     <string name="wikis_replicas_never_synced">Babu lokaci</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Ka tabbata kana son dakatar da biyan kuɗin %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Nemi ta suna, ID, sawun yatsa, ko URL</string>
-    <string name="wikis_join_search_button">Nemi wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Ana sake gwadawa ba tare da uwar garken da aka ba da shawara ba…</string>
     <string name="wikis_comments_title_template">%1$s - Sharhi</string>
     <string name="wikis_comment_form_placeholder_new">Rubuta sharhi</string>
     <string name="wikis_comment_form_placeholder_reply">Rubuta amsa</string>
     <string name="wikis_comment_form_send">Aika</string>
     <string name="wikis_comment_form_remove_attachment">Cire haɗe</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Rubuta abun cikinka a nan ta amfani da Markdown</string>
     <string name="wikis_insert_dialog_empty">Babu abin haɗe tukuna. Loda fayil don farawa.</string>
     <string name="wikis_delete_page_message">Kana gab da share shafin “%1$s” (%2$s). Ana iya soke wannan aikin ta hanyar dawo da shi daga tarihi.</string>
     <string name="wikis_delete_page_success">An share shafi</string>
     <string name="wikis_revert_page_title">Mayar da shafi</string>
     <string name="wikis_revert_page_message">Kana gab da mayar da %1$s zuwa sigar %2$s. Wannan zai ƙirƙiri sabon bita da abun ciki daga sigar %2$s.</string>
-    <string name="wikis_revert_page_default_comment">An mayar zuwa sigar %1$s</string>
     <string name="wikis_revert_page_success">An mayar zuwa sigar %1$s</string>
     <string name="wikis_rename_page_renaming">Ana sake suna…</string>
     <string name="wikis_rename_page_success">An sake sunan shafi</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Daidaitawa ta ƙarshe: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Wannan zai dakatar da aika sabuntawa zuwa “%1$s”. Za su iya sake kwafi idan suna so.</string>
     <string name="wikis_replicas_removed_success">An cire kwafi</string>
-    <string name="wikis_load_more">Saukar da ƙari</string>
     <string name="wikis_access_change_level">Matakin shiga</string>
     <string name="wikis_access_subject_anyone">Kowa</string>
     <string name="wikis_access_subject_authenticated">Masu amfani da aka tantance</string>

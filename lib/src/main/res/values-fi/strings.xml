@@ -20,6 +20,8 @@
     <string name="common_clear_search">Tyhjennä haku</string>
     <string name="drawer_open">Avaa valikko</string>
     <string name="common_cancel">Peruuta</string>
+    <string name="common_discard_title">Hylätäänkö muutokset?</string>
+    <string name="common_discard">Hylkää</string>
     <string name="common_filter">Suodata</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Poista suodatin</string>

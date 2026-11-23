@@ -20,6 +20,8 @@
     <string name="common_clear_search">لټون پاک کړئ</string>
     <string name="drawer_open">مینو خلاص کړئ</string>
     <string name="common_cancel">لغوه کول</string>
+    <string name="common_discard_title">بدلونونه ړنګ شي؟</string>
+    <string name="common_discard">ړنګول</string>
     <string name="common_filter">فلټر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">فلټر لرې کړئ</string>

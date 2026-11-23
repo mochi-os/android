@@ -28,14 +28,13 @@ import org.mochios.wikis.ui.redirects.RedirectsViewModel
 @Composable
 fun RedirectsTab(
     parentViewModel: WikiSettingsViewModel,
-    @Suppress("UNUSED_PARAMETER") tabViewModel: RedirectsTabViewModel = hiltViewModel(),
     redirectsViewModel: RedirectsViewModel = hiltViewModel(),
 ) {
     var showAddDialog by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         redirectsViewModel.snackbar.collect { msg ->
-            parentViewModel.emit(msg.messageRes, *msg.args.toTypedArray())
+            parentViewModel.emit(msg.messageRes, msg.args, msg.error)
         }
     }
 

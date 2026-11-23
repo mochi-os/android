@@ -20,6 +20,8 @@
     <string name="common_clear_search">Išvalyti paiešką</string>
     <string name="drawer_open">Atidaryti meniu</string>
     <string name="common_cancel">Atšaukti</string>
+    <string name="common_discard_title">Atmesti pakeitimus?</string>
+    <string name="common_discard">Atmesti</string>
     <string name="common_filter">Filtras</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Pašalinti filtrą</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">Burahin ang paghahanap</string>
     <string name="drawer_open">Buksan ang menu</string>
     <string name="common_cancel">Kanselahin</string>
+    <string name="common_discard_title">Itapon ang mga pagbabago?</string>
+    <string name="common_discard">Itapon</string>
     <string name="common_filter">I-filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Tanggalin ang filter</string>

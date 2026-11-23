@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -29,7 +30,7 @@ import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
-import java.io.File
+import org.mochios.wikis.ui.components.WikiInfoLoader
 import javax.inject.Inject
 
 /**
@@ -76,6 +77,9 @@ data class AttachmentsUiState(
 sealed interface AttachmentsEvent {
     data class Toast(val message: String) : AttachmentsEvent
     data class Error(val error: MochiError) : AttachmentsEvent
+
+    /** The server took the [count] files of an upload. */
+    data class Uploaded(val count: Int) : AttachmentsEvent
 }
 
 /**
@@ -109,39 +113,41 @@ class AttachmentsViewModel @Inject constructor(
     private val _events = Channel<AttachmentsEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
 
+    private val information = WikiInfoLoader(
+        fetch = { repository.getInfo(wikiId) },
+        loaded = { response ->
+            _uiState.value = _uiState.value.copy(
+                wiki = response.wiki,
+                permissions = response.permissions ?: WikiPermissions(),
+            )
+        },
+    )
+
+    /** The pending or in-flight [load]; cancelled when a newer one starts. */
+    private var loadJob: Job? = null
+
     init {
-        loadInfo()
-        loadAttachments()
+        load()
     }
 
-    private fun loadInfo() {
-        viewModelScope.launch {
-            try {
-                val response = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = response.wiki,
-                    permissions = response.permissions ?: WikiPermissions(),
-                )
-            } catch (e: Exception) {
-                // Non-fatal: the attachments load below will surface the real
-                // error if both fail. The screen renders an inline retry once
-                // [uiState.error] is set and the list is empty.
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    /** Initial / retry load of the attachments list. */
-    fun loadAttachments() {
-        viewModelScope.launch {
+    /**
+     * The wiki's information, unless it is already held, then the attachments:
+     * on open, and from Retry, so one retry restores both.
+     */
+    fun load() {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                information.ensure()
                 val list = repository.getAttachments(wikiId, slug)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     attachments = list,
                     error = null,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -208,12 +214,12 @@ class AttachmentsViewModel @Inject constructor(
 
     /**
      * Upload files picked by the system picker. Staging keeps each file's real
-     * name, which is what the server records.
+     * name, which is what the server records. Once the server has them,
+     * [AttachmentsEvent.Uploaded] says how many went.
      */
     fun uploadAttachments(
         uris: List<Uri>,
         uploadFailed: String,
-        uploadSuccess: String,
     ) {
         if (uris.isEmpty()) return
         viewModelScope.launch {
@@ -227,7 +233,7 @@ class AttachmentsViewModel @Inject constructor(
                             isUploading = false,
                             attachments = mergeAttachments(_uiState.value.attachments, uploaded),
                         )
-                        _events.send(AttachmentsEvent.Toast(uploadSuccess))
+                        _events.send(AttachmentsEvent.Uploaded(uris.size))
                     } finally {
                         repository.discardStaged(tempFiles)
                     }

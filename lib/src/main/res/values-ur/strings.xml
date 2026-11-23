@@ -20,6 +20,8 @@
     <string name="common_clear_search">تلاش صاف کریں</string>
     <string name="drawer_open">مینو کھولیں</string>
     <string name="common_cancel">منسوخ کریں</string>
+    <string name="common_discard_title">تبدیلیاں رد کریں؟</string>
+    <string name="common_discard">رد کریں</string>
     <string name="common_filter">فلٹر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">فلٹر ہٹائیں</string>

@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nomaʼlum mavzu</string>
     <string name="system_documents_modified">Oʻzgartirilgan</string>
-    <string name="system_documents_discard_title">Oʻzgarishlar tashlab yuborilsinmi?</string>
-    <string name="system_documents_discard">Tashlab yuborish</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s muvaffaqiyatli</item>
         <item quantity="other">%1$s muvaffaqiyatli</item>

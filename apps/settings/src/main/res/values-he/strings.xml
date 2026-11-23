@@ -412,8 +412,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ערכת נושא לא ידועה</string>
     <string name="system_documents_modified">שונה</string>
-    <string name="system_documents_discard_title">למחוק את השינויים?</string>
-    <string name="system_documents_discard">מחיקה</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s הצליח</item>
         <item quantity="two">%1$s הצליחו</item>

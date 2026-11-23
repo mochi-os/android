@@ -20,6 +20,8 @@
     <string name="common_clear_search">ล้างการค้นหา</string>
     <string name="drawer_open">เปิดเมนู</string>
     <string name="common_cancel">ยกเลิก</string>
+    <string name="common_discard_title">ละทิ้งการเปลี่ยนแปลงใช่ไหม?</string>
+    <string name="common_discard">ละทิ้ง</string>
     <string name="common_filter">กรอง</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ลบตัวกรอง</string>

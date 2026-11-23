@@ -20,6 +20,8 @@
     <string name="common_clear_search">Тоза кардани ҷустуҷӯ</string>
     <string name="drawer_open">Кушодани меню</string>
     <string name="common_cancel">Бекор кардан</string>
+    <string name="common_discard_title">Тағйирот партофта шаванд?</string>
+    <string name="common_discard">Партофтан</string>
     <string name="common_filter">Филтр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Филтрро тоза кардан</string>

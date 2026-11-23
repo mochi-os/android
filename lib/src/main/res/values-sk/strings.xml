@@ -20,6 +20,8 @@
     <string name="common_clear_search">Vymazať vyhľadávanie</string>
     <string name="drawer_open">Otvoriť menu</string>
     <string name="common_cancel">Zrušiť</string>
+    <string name="common_discard_title">Zahodiť zmeny?</string>
+    <string name="common_discard">Zahodiť</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Odstrániť filter</string>

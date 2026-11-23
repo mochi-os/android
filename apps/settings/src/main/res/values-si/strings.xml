@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">නොදන්නා තේමාව</string>
     <string name="system_documents_modified">වෙනස් කළ</string>
-    <string name="system_documents_discard_title">වෙනස්කම් ඉවත ලන්නද?</string>
-    <string name="system_documents_discard">ඉවත ලන්න</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s සාර්ථකයි</item>
         <item quantity="other">%1$s සාර්ථකයි</item>

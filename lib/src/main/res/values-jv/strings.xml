@@ -20,6 +20,8 @@
     <string name="common_clear_search">Resiki panggolékan</string>
     <string name="drawer_open">Bukak menu</string>
     <string name="common_cancel">Batal</string>
+    <string name="common_discard_title">Buwang owahan?</string>
+    <string name="common_discard">Buwang</string>
     <string name="common_filter">Saring</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Busak saringan</string>

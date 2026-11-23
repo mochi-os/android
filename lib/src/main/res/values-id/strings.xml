@@ -20,6 +20,8 @@
     <string name="common_clear_search">Bersihkan pencarian</string>
     <string name="drawer_open">Buka menu</string>
     <string name="common_cancel">Batal</string>
+    <string name="common_discard_title">Buang perubahan?</string>
+    <string name="common_discard">Buang</string>
     <string name="common_filter">Saring</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Hapus filter</string>

@@ -415,8 +415,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Неизвестная тема</string>
     <string name="system_documents_modified">Изменён</string>
-    <string name="system_documents_discard_title">Не сохранять изменения?</string>
-    <string name="system_documents_discard">Не сохранять</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s успешно</item>
         <item quantity="few">%1$s успешно</item>

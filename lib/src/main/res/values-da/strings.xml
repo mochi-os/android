@@ -20,6 +20,8 @@
     <string name="common_clear_search">Ryd søgning</string>
     <string name="drawer_open">Åbn menu</string>
     <string name="common_cancel">Annuller</string>
+    <string name="common_discard_title">Kassér ændringer?</string>
+    <string name="common_discard">Kassér</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Fjern filter</string>

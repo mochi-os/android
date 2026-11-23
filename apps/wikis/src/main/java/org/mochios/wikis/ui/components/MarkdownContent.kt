@@ -31,6 +31,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -62,13 +63,18 @@ import org.commonmark.node.AbstractVisitor
 import org.commonmark.node.FencedCodeBlock
 import org.commonmark.node.Heading
 import org.commonmark.node.Image
+import org.commonmark.node.Link
 import org.commonmark.node.Node
 import org.commonmark.node.Text
 import org.commonmark.parser.Parser
+import org.mochios.android.api.OwnedAddress
+import org.mochios.android.model.Attachment as MochiAttachment
 import org.mochios.android.ui.components.ClickableLinkTextView
 import org.mochios.android.ui.components.CoilImagesPlugin
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.ui.components.UnopenedFileDialog
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.LINKED_ADDRESSES
 import org.mochios.android.util.isMailUrl
 import org.mochios.android.util.linkUri
@@ -84,7 +90,8 @@ data class TocHeading(val id: String, val text: String, val level: Int)
  * Wiki-flavoured markdown renderer over the lib Markwon stack: TOC anchors
  * (H2..H4), attachment URL rewriting against [LocalWikiContext], red styling
  * for [missingLinks], internal page links through [onInternalLink], image taps
- * into the lightbox, external links in a Custom Tab.
+ * into the lightbox, a link to any other of the wiki's attachments into the
+ * device's viewer, external links in a Custom Tab.
  */
 @Composable
 fun MarkdownContent(
@@ -102,6 +109,9 @@ fun MarkdownContent(
     // Lightbox state — set to (urls, index) when the user taps an image,
     // cleared on dismiss.
     var lightbox by remember { mutableStateOf<Pair<List<String>, Int>?>(null) }
+    // A linked file no app on the device could open, offered to save or share.
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
+    val scope = rememberCoroutineScope()
 
     // Walk the markdown AST once per `content` change. This is used for
     // *both* heading extraction and image-URL collection — cheaper than
@@ -114,8 +124,10 @@ fun MarkdownContent(
         val headings = extractHeadings(doc)
         val imageUrls = lightboxImages(wiki, extractImageUrls(doc))
 
-        ParsedDocument(headings = headings, imageUrls = imageUrls)
+        ParsedDocument(headings = headings, imageUrls = imageUrls, labels = attachmentLabels(wiki, doc))
     }
+    // The link resolver outlives a change of content; it reads the latest.
+    val currentParsed by rememberUpdatedState(parsed)
 
     // Push headings up to the caller's TableOfContents host. Using
     // DisposableEffect (not LaunchedEffect) lets the caller treat the
@@ -167,7 +179,10 @@ fun MarkdownContent(
             // one. Matches HtmlContent, which every other body is drawn with.
             .usePlugin(SoftBreakAddsNewLinePlugin.create())
             .usePlugin(HtmlPlugin.create())
-            .usePlugin(CoilImagesPlugin.create(context))
+            // This wiki's own attachments load with the reader's credential,
+            // as the wiki serves them only to those who may read it; every
+            // other image the page names loads without one.
+            .usePlugin(CoilImagesPlugin.create(context) { destination -> wiki.image(destination) })
             .usePlugin(TablePlugin.create(context))
             .usePlugin(StrikethroughPlugin.create())
             .usePlugin(TaskListPlugin.create(context))
@@ -185,11 +200,23 @@ fun MarkdownContent(
                     builder.linkResolver(WikiLinkResolver(
                         wiki = wiki,
                         onInternalLink = onInternalLink,
-                        onImageLink = { resolvedUrl ->
-                            val imageUrls = parsed.imageUrls
-                            val idx = imageUrls.indexOf(resolvedUrl)
+                        onAttachmentLink = { resolvedUrl ->
+                            val document = currentParsed
+                            val full = stripVariant(resolvedUrl)
+                            val idx = document.imageUrls.indexOf(full)
                             if (idx >= 0) {
-                                lightbox = imageUrls to idx
+                                lightbox = document.imageUrls to idx
+                            } else {
+                                // A file, or an image the page links rather
+                                // than shows: the device's own viewer, fetched
+                                // with the reader's credential. The link's text
+                                // names it, and its extension picks the viewer.
+                                val id = wiki.identify(full)
+                                val address = wiki.local(full) as? OwnedAddress
+                                if (id != null && address != null) {
+                                    val attachment = MochiAttachment(id = id, name = document.labels[full].orEmpty())
+                                    openAttachment(scope, context, address, attachment) { file -> unopened = file }
+                                }
                             }
                         },
                     ))
@@ -303,6 +330,10 @@ fun MarkdownContent(
             initialIndex = lightboxState.second,
             onDismiss = { lightbox = null },
         )
+    }
+
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
     }
 
     // TODO: trailing external-link icon after http(s) links. Needs an ImageSpan
@@ -513,6 +544,8 @@ private fun installImageTapInterceptor(
 private data class ParsedDocument(
     val headings: List<TocHeading>,
     val imageUrls: List<String>,
+    /** Each linked attachment's text, by its full-size address ([attachmentLabels]). */
+    val labels: Map<String, String>,
 )
 
 internal sealed class MarkdownSegment {
@@ -706,13 +739,43 @@ internal fun lightboxImages(wiki: WikiContextValue, urls: List<String>): List<St
 private fun stripThumbnail(url: String): String =
     if (url.endsWith("/thumbnail")) url.removeSuffix("/thumbnail") else url
 
+/** Drop a trailing `/thumbnail` or `/preview` segment, for the file itself. */
+private fun stripVariant(url: String): String = stripThumbnail(url).removeSuffix("/preview")
+
+/**
+ * The text of each link in [root] to one of [wiki]'s own attachments, by the
+ * attachment's full-size address: the name a linked file is opened under.
+ */
+internal fun attachmentLabels(wiki: WikiContextValue, root: Node): Map<String, String> {
+    val labels = mutableMapOf<String, String>()
+    root.accept(object : AbstractVisitor() {
+        override fun visit(link: Link) {
+            val resolved = link.destination?.let { destination -> wiki.resolveAttachmentUrl(destination) }
+            if (resolved != null && wiki.identify(resolved) != null) {
+                labels.putIfAbsent(stripVariant(resolved), nodeText(link).trim())
+            }
+            super.visit(link)
+        }
+    })
+    return labels
+}
+
+/**
+ * Link text, `[`, then any run of escaped characters, characters other than a
+ * bracket or backslash, and bracketed runs of the same one level deep, then
+ * `]`: what CommonMark reads as link text, so a name holding a bracket,
+ * escaped as [escapeLabel] writes it or balanced as older pages have it, is
+ * matched whole.
+ */
+private const val LINK_TEXT = "\\[((?:\\\\.|[^\\\\\\[\\]]|\\[(?:\\\\.|[^\\\\\\[\\]])*])*)]"
+
 /**
  * Rewrite every `![alt](url)` / `[text](url)` through [resolve]; non-attachment
  * URLs pass through. Rewriting the source once is cheaper than hooking
  * Markwon's rendering twice.
  */
 internal fun rewriteAttachmentUrls(content: String, resolve: (String) -> String): String {
-    val linkRe = Regex("(!?)\\[([^]]*)]\\(([^)\\s]+)(\\s+\"[^\"]*\")?\\)")
+    val linkRe = Regex("(!?)$LINK_TEXT\\(([^)\\s]+)(\\s+\"[^\"]*\")?\\)")
     // Backtick spans are code, not links: `![a](b)` is meant to be read, not
     // resolved. Split on them and rewrite only what falls outside.
     val codeSpan = Regex("`+[^`]*`+")
@@ -770,13 +833,15 @@ internal fun linkSlug(link: String): String {
 }
 
 /**
- * Routes link taps: relative slugs to [onInternalLink], attachment URLs to
- * [onImageLink] for the lightbox, everything else to a Chrome Custom Tab.
+ * Routes link taps: relative slugs to [onInternalLink], this wiki's own
+ * attachments to [onAttachmentLink] - the lightbox for an image the page
+ * shows, the device's viewer for anything else - and everything else to a
+ * Chrome Custom Tab.
  */
 private class WikiLinkResolver(
     private val wiki: WikiContextValue,
     private val onInternalLink: (String) -> Unit,
-    private val onImageLink: (String) -> Unit,
+    private val onAttachmentLink: (String) -> Unit,
 ) : LinkResolver {
     override fun resolve(view: View, link: String) {
         if (isInternalRelative(link)) {
@@ -790,12 +855,13 @@ private class WikiLinkResolver(
         val resolved = wiki.resolveAttachmentUrl(link) ?: return
 
         // For `[![](img)](resolved)` the LinkSpan targets the outer URL; if it
-        // is an attachment, hand it to onImageLink so the host can open the
-        // lightbox at that image.
-        if (resolved.contains("/attachments/")) {
-            onImageLink(resolved)
+        // is one of this wiki's attachments, the host opens it.
+        if (wiki.identify(resolved) != null) {
+            onAttachmentLink(resolved)
             return
         }
+        // Any other attachments path is not this wiki's, and is not asked with
+        // the reader's credential: it opens, as any other link does, outside.
 
         // The link text is peer-authored page content: only web and e-mail
         // addresses may leave the app. Anything else — tel:, intent:, another

@@ -44,10 +44,6 @@
     <string name="wikis_find_title">Cari wiki</string>
     <string name="wikis_find_no_results">Tiada wiki dijumpai</string>
     <string name="wikis_find_recommended_section">Wiki disyorkan</string>
-    <string name="wikis_join_title">Replikakan wiki</string>
-    <string name="wikis_join_or_id">Atau masukkan ID secara terus</string>
-    <string name="wikis_join_id_label">ID entiti wiki</string>
-    <string name="wikis_join_submit">Replikakan wiki</string>
     <string name="wikis_create_title">Cipta wiki</string>
     <string name="wikis_create_name_label">Nama</string>
     <string name="wikis_create_privacy_label">Benarkan sesiapa sahaja mencari wiki</string>
@@ -115,8 +111,6 @@
     <string name="wikis_changes_subtitle">Suntingan terkini di semua halaman dalam wiki ini.</string>
     <string name="wikis_changes_empty">Tiada perubahan lagi</string>
     <string name="wikis_search_empty_query">Masukkan istilah carian</string>
-    <string name="wikis_redirects_title">Lencongan</string>
-    <string name="wikis_redirects_add">Tambah</string>
     <string name="wikis_redirects_empty">Tiada lencongan dikonfigurasikan</string>
     <string name="wikis_redirect_create_title">Cipta pengalihan</string>
     <string name="wikis_redirect_create_action">Cipta</string>
@@ -143,6 +137,9 @@
     <string name="wikis_attachments_title">Lampiran</string>
     <string name="wikis_attachments_upload">Muat naik fail</string>
     <string name="wikis_attachments_uploading">Memuat naik…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="other">%s fail dimuat naik</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Gagal memuat naik fail</string>
     <string name="wikis_attachments_search_clear">Kosongkan carian</string>
     <string name="wikis_attachments_filter_all">Semua fail</string>
@@ -208,6 +205,9 @@
     <string name="wikis_access_set_success">Akses dikemas kini</string>
     <string name="wikis_access_revoke_success">Akses dialih keluar</string>
     <string name="wikis_access_revoke_failed">Gagal mengalih keluar akses</string>
+    <string name="wikis_rss_revoke_failed">Gagal menarik balik akses RSS</string>
+    <string name="wikis_access_search_failed">Gagal mencari pengguna</string>
+    <string name="wikis_replica_unknown">Tidak diketahui</string>
     <string name="wikis_replicas_empty_title">Tiada replika lagi</string>
     <string name="wikis_replicas_empty_message">Apabila wiki lain mereplikasi wiki ini, ia akan dipaparkan di sini.</string>
     <string name="wikis_replicas_never_synced">Tidak pernah</string>
@@ -228,22 +228,18 @@
     <string name="wikis_unsubscribe_confirm_message">Adakah anda pasti mahu berhenti melanggan %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_find_search_placeholder">Cari mengikut nama, ID, cap jari atau URL</string>
-    <string name="wikis_join_search_button">Cari wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Mencuba semula tanpa pelayan yang disarankan…</string>
     <string name="wikis_comments_title_template">%1$s - Komen</string>
     <string name="wikis_comment_form_placeholder_new">Tulis komen</string>
     <string name="wikis_comment_form_placeholder_reply">Tulis jawapan</string>
     <string name="wikis_comment_form_send">Hantar</string>
     <string name="wikis_comment_form_remove_attachment">Buang lampiran</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tulis kandungan anda di sini menggunakan Markdown</string>
     <string name="wikis_insert_dialog_empty">Tiada lampiran lagi. Muat naik fail untuk mula.</string>
     <string name="wikis_delete_page_message">Anda akan memadam halaman „%1$s\" (%2$s). Tindakan ini boleh dibatalkan dengan memulihkan daripada sejarah.</string>
     <string name="wikis_delete_page_success">Halaman dipadam</string>
     <string name="wikis_revert_page_title">Pulihkan halaman</string>
     <string name="wikis_revert_page_message">Anda akan memulihkan %1$s ke versi %2$s. Ini akan mencipta revisi baru dengan kandungan versi %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Dipulihkan ke versi %1$s</string>
     <string name="wikis_revert_page_success">Dipulihkan ke versi %1$s</string>
     <string name="wikis_rename_page_renaming">Menukar nama…</string>
     <string name="wikis_rename_page_success">Nama halaman ditukar</string>
@@ -274,7 +270,6 @@
     <string name="wikis_replicas_col_synced">Penyegerakan terakhir: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ini akan menghentikan penghantaran kemas kini ke „%1$s\". Mereka boleh meniru semula jika mahu.</string>
     <string name="wikis_replicas_removed_success">Replika dibuang</string>
-    <string name="wikis_load_more">Muatkan lagi</string>
     <string name="wikis_access_change_level">Tahap akses</string>
     <string name="wikis_access_subject_anyone">Sesiapa sahaja</string>
     <string name="wikis_access_subject_authenticated">Pengguna disahkan</string>

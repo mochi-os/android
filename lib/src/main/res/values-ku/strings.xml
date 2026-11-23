@@ -20,6 +20,8 @@
     <string name="common_clear_search">Lêgerînê paqij bike</string>
     <string name="drawer_open">Menûyê veke</string>
     <string name="common_cancel">Betal bike</string>
+    <string name="common_discard_title">Guhertin bên avêtin?</string>
+    <string name="common_discard">Bavêje</string>
     <string name="common_filter">Parzûna</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Parzûnê rake</string>

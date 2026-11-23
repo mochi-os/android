@@ -420,8 +420,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Téama anaithnid</string>
     <string name="system_documents_modified">Athraithe</string>
-    <string name="system_documents_discard_title">An gcuirfear na hathruithe i leataobh?</string>
-    <string name="system_documents_discard">Cuir i leataobh</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s rathúil</item>
         <item quantity="two">%1$s rathúil</item>

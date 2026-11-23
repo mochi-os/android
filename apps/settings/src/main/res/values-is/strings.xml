@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Óþekkt þema</string>
     <string name="system_documents_modified">Breytt</string>
-    <string name="system_documents_discard_title">Henda breytingum?</string>
-    <string name="system_documents_discard">Henda</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s tókst</item>
         <item quantity="other">%1$s tókust</item>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
     <string name="wikis_find_recommended_section">سپارښتل شوي wikis</string>
-    <string name="wikis_join_title">wiki نقل کړئ</string>
-    <string name="wikis_join_or_id">یا ID مستقیماً دننه کړئ</string>
-    <string name="wikis_join_id_label">د Wiki ادارې ID</string>
-    <string name="wikis_join_submit">wiki نقل کړئ</string>
     <string name="wikis_create_title">ویکي جوړ کړئ</string>
     <string name="wikis_create_name_label">نوم</string>
     <string name="wikis_create_privacy_label">هر چا ته اجازه ورکړئ چې د ویکي لټون وکړي</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">په دې wiki کې د ټولو پاڼو په اوږدو کې وروستي ترمیمونه.</string>
     <string name="wikis_changes_empty">تر اوسه هیڅ بدلونونه نشته</string>
     <string name="wikis_search_empty_query">د لټون اصطلاح دننه کړئ</string>
-    <string name="wikis_redirects_title">بیرته لارښوونې</string>
-    <string name="wikis_redirects_add">اضافه کړئ</string>
     <string name="wikis_redirects_empty">هیڅ بیرته لارښوونې نه دي تنظیم شوي</string>
     <string name="wikis_redirect_create_title">بیاهدایت جوړ کړئ</string>
     <string name="wikis_redirect_create_action">جوړ کړئ</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">ضمیمې</string>
     <string name="wikis_attachments_upload">فایلونه اپلوډ کړئ</string>
     <string name="wikis_attachments_uploading">اپلوډ کیږي…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s فایل پورته شو</item>
+        <item quantity="other">%s فایلونه پورته شول</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">د فایلونو اپلوډ پاتې راغلل</string>
     <string name="wikis_attachments_search_clear">لټون پاک کړئ</string>
     <string name="wikis_attachments_filter_all">ټول فایلونه</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">لاسرسی نوی شو</string>
     <string name="wikis_access_revoke_success">لاسرسی لرې شو</string>
     <string name="wikis_access_revoke_failed">د لاسرسي لیرې کولو پاتې راغلل</string>
+    <string name="wikis_rss_revoke_failed">د RSS لاسرسي بیرته اخیستل ناکام شول</string>
+    <string name="wikis_access_search_failed">د کاروونکو د لټون پاتې راغلل</string>
+    <string name="wikis_replica_unknown">نامعلوم</string>
     <string name="wikis_replicas_empty_title">تر اوسه هیڅ نقلونه نشته</string>
     <string name="wikis_replicas_empty_message">کله چې نور wikiګان دا wiki نقل کوي، دلته به ښکاره شي.</string>
     <string name="wikis_replicas_never_synced">هیڅکله</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s له ګډون ووځئ؟</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">د نوم، ID، ګوتنښې یا URL له مخې ولټوئ</string>
-    <string name="wikis_join_search_button">د wiki لټون…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">د وړاندیز شوي سرور پرته بیا هڅه کیږي…</string>
     <string name="wikis_comments_title_template">%1$s - تبصرې</string>
     <string name="wikis_comment_form_placeholder_new">څرګندونه ولیکئ</string>
     <string name="wikis_comment_form_placeholder_reply">ځواب ولیکئ</string>
     <string name="wikis_comment_form_send">لیږل</string>
     <string name="wikis_comment_form_remove_attachment">ضمیمه لرې کړئ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">خپله منځپانګه دلته د Markdown په کارولو ولیکئ</string>
     <string name="wikis_insert_dialog_empty">تر اوسه ضمیمې نشته. د پیل کولو لپاره فایل پورته کړئ.</string>
     <string name="wikis_delete_page_message">تاسو د “%1$s” (%2$s) پاڼې ړنګولو ته چمتو یاست. دا کړنه له تاریخچې څخه د بیا رغولو له لارې بیرته اخیستل کیدی شي.</string>
     <string name="wikis_delete_page_success">پاڼه ړنګه شوه</string>
     <string name="wikis_revert_page_title">پاڼه بیرته راګرځول</string>
     <string name="wikis_revert_page_message">تاسو %1$s بیرته نسخې %2$s ته ګرځوئ. دا به د نسخې %2$s منځپانګې سره نوې بیاکتنه جوړه کړي.</string>
-    <string name="wikis_revert_page_default_comment">بیرته نسخې %1$s ته وګرځېد</string>
     <string name="wikis_revert_page_success">بیرته نسخې %1$s ته وګرځېد</string>
     <string name="wikis_rename_page_renaming">نوم بدلیږي…</string>
     <string name="wikis_rename_page_success">د پاڼې نوم بدل شو</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">وروستۍ همغږي: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">دا به “%1$s” ته د تازه معلوماتو لېږل ودروي. که وغواړي بیا کاپي کولی شي.</string>
     <string name="wikis_replicas_removed_success">نقل لرې شو</string>
-    <string name="wikis_load_more">نور بار کړئ</string>
     <string name="wikis_access_change_level">د لاسرسي کچه</string>
     <string name="wikis_access_subject_anyone">هر څوک</string>
     <string name="wikis_access_subject_authenticated">تصدیق شوي کارنان</string>

@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">نامعلوم تھیم</string>
     <string name="system_documents_modified">ترمیم شدہ</string>
-    <string name="system_documents_discard_title">تبدیلیاں رد کریں؟</string>
-    <string name="system_documents_discard">رد کریں</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s کامیاب</item>
         <item quantity="other">%1$s کامیاب</item>

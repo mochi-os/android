@@ -47,6 +47,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiButton
@@ -87,7 +88,7 @@ fun FindWikisScreen(
                     launch { snackbarHostState.showSnackbar(retryMsg) }
                 }
                 is FindEvent.SubscribeFailed -> {
-                    val msg = event.error.userMessage().ifBlank { failedFallback }
+                    val msg = event.error.messageOrFallback(failedFallback)
                     snackbarHostState.showSnackbar(msg)
                 }
             }

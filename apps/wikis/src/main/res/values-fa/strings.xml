@@ -45,10 +45,6 @@
     <string name="wikis_find_title">یافتن ویکی‌ها</string>
     <string name="wikis_find_no_results">ویکی‌ای یافت نشد</string>
     <string name="wikis_find_recommended_section">ویکی‌های توصیه‌شده</string>
-    <string name="wikis_join_title">تکثیر ویکی</string>
-    <string name="wikis_join_or_id">یا شناسه را مستقیماً وارد کنید</string>
-    <string name="wikis_join_id_label">شناسه موجودیت ویکی</string>
-    <string name="wikis_join_submit">تکثیر ویکی</string>
     <string name="wikis_create_title">ساخت ویکی</string>
     <string name="wikis_create_name_label">نام</string>
     <string name="wikis_create_privacy_label">همه بتوانند ویکی را جست‌وجو کنند</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ویرایش‌های اخیر در تمام صفحات این ویکی.</string>
     <string name="wikis_changes_empty">هنوز تغییری وجود ندارد</string>
     <string name="wikis_search_empty_query">یک عبارت جستجو وارد کنید</string>
-    <string name="wikis_redirects_title">تغییر مسیرها</string>
-    <string name="wikis_redirects_add">افزودن</string>
     <string name="wikis_redirects_empty">هیچ تغییر مسیری پیکربندی نشده است</string>
     <string name="wikis_redirect_create_title">ساخت تغییر مسیر</string>
     <string name="wikis_redirect_create_action">ساختن</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">پیوست‌ها</string>
     <string name="wikis_attachments_upload">بارگذاری فایل‌ها</string>
     <string name="wikis_attachments_uploading">در حال بارگذاری…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s فایل بارگذاری شد</item>
+        <item quantity="other">%s فایل بارگذاری شد</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">بارگذاری فایل‌ها ناموفق بود</string>
     <string name="wikis_attachments_search_clear">پاک کردن جست‌وجو</string>
     <string name="wikis_attachments_filter_all">همهٔ فایل‌ها</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">دسترسی به‌روزرسانی شد</string>
     <string name="wikis_access_revoke_success">دسترسی حذف شد</string>
     <string name="wikis_access_revoke_failed">حذف دسترسی ناموفق بود</string>
+    <string name="wikis_rss_revoke_failed">ابطال دسترسی RSS ناموفق بود</string>
+    <string name="wikis_access_search_failed">جستجوی کاربران ناموفق بود</string>
+    <string name="wikis_replica_unknown">ناشناخته</string>
     <string name="wikis_replicas_empty_title">هنوز نسخه تکثیرشده‌ای وجود ندارد</string>
     <string name="wikis_replicas_empty_message">وقتی ویکی‌های دیگر این ویکی را تکثیر کنند، در اینجا ظاهر می‌شوند.</string>
     <string name="wikis_replicas_never_synced">هرگز</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک %1$s را قطع کنید؟</string>
     <string name="wikis_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_find_search_placeholder">جستجو بر اساس نام، شناسه، اثر انگشت یا URL</string>
-    <string name="wikis_join_search_button">جستجوی ویکی‌ها…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">تلاش مجدد بدون سرور پیشنهادی…</string>
     <string name="wikis_comments_title_template">%1$s - نظرات</string>
     <string name="wikis_comment_form_placeholder_new">نظر بنویسید</string>
     <string name="wikis_comment_form_placeholder_reply">پاسخ بنویسید</string>
     <string name="wikis_comment_form_send">ارسال</string>
     <string name="wikis_comment_form_remove_attachment">حذف پیوست</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">محتوای خود را اینجا با Markdown بنویسید</string>
     <string name="wikis_insert_dialog_empty">هنوز پیوستی وجود ندارد. یک فایل آپلود کنید تا شروع کنید.</string>
     <string name="wikis_delete_page_message">شما در حال حذف صفحه «%1$s» (%2$s) هستید. این عمل را می‌توان با بازیابی از تاریخچه لغو کرد.</string>
     <string name="wikis_delete_page_success">صفحه حذف شد</string>
     <string name="wikis_revert_page_title">بازگردانی صفحه</string>
     <string name="wikis_revert_page_message">شما در حال بازگردانی %1$s به نسخه %2$s هستید. این یک ویرایش جدید با محتوای نسخه %2$s ایجاد می‌کند.</string>
-    <string name="wikis_revert_page_default_comment">به نسخه %1$s بازگردانده شد</string>
     <string name="wikis_revert_page_success">به نسخه %1$s بازگردانده شد</string>
     <string name="wikis_rename_page_renaming">در حال تغییر نام…</string>
     <string name="wikis_rename_page_success">نام صفحه تغییر کرد</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">آخرین همگام‌سازی: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">این ارسال به‌روزرسانی‌ها به «%1$s» را متوقف می‌کند. در صورت تمایل می‌توانند دوباره تکثیر کنند.</string>
     <string name="wikis_replicas_removed_success">تکثیر حذف شد</string>
-    <string name="wikis_load_more">بارگذاری بیشتر</string>
     <string name="wikis_access_change_level">سطح دسترسی</string>
     <string name="wikis_access_subject_anyone">هر کسی</string>
     <string name="wikis_access_subject_authenticated">کاربران احراز هویت‌شده</string>

@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">نامعلوم ښکارندوی</string>
     <string name="system_documents_modified">بدل شوی</string>
-    <string name="system_documents_discard_title">بدلونونه ړنګ شي؟</string>
-    <string name="system_documents_discard">ړنګول</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s بریالی</item>
         <item quantity="other">%1$s بریالي</item>

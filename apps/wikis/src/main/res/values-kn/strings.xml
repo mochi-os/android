@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ವಿಕಿಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="wikis_find_no_results">ಯಾವುದೇ wiki ಗಳು ಸಿಗಲಿಲ್ಲ</string>
     <string name="wikis_find_recommended_section">ಶಿಫಾರಸು ಮಾಡಲಾದ wiki ಗಳು</string>
-    <string name="wikis_join_title">wiki ಅನ್ನು ರೆಪ್ಲಿಕೇಟ್ ಮಾಡಿ</string>
-    <string name="wikis_join_or_id">ಅಥವಾ ID ಯನ್ನು ನೇರವಾಗಿ ನಮೂದಿಸಿ</string>
-    <string name="wikis_join_id_label">ವಿಕಿ ಎಂಟಿಟಿ ID</string>
-    <string name="wikis_join_submit">wiki ಅನ್ನು ರೆಪ್ಲಿಕೇಟ್ ಮಾಡಿ</string>
     <string name="wikis_create_title">ವಿಕಿ ರಚಿಸಿ</string>
     <string name="wikis_create_name_label">ಹೆಸರು</string>
     <string name="wikis_create_privacy_label">ಯಾರಾದರೂ ವಿಕಿ ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ಈ wiki ಯಲ್ಲಿನ ಎಲ್ಲಾ ಪುಟಗಳಲ್ಲಿನ ಇತ್ತೀಚಿನ ಎಡಿಟ್‌ಗಳು.</string>
     <string name="wikis_changes_empty">ಇನ್ನೂ ಯಾವುದೇ ಬದಲಾವಣೆಗಳಿಲ್ಲ</string>
     <string name="wikis_search_empty_query">ಹುಡುಕಾಟ ಪದವನ್ನು ನಮೂದಿಸಿ</string>
-    <string name="wikis_redirects_title">ರಿಡೈರೆಕ್ಟ್‌ಗಳು</string>
-    <string name="wikis_redirects_add">ಸೇರಿಸಿ</string>
     <string name="wikis_redirects_empty">ಯಾವುದೇ ರಿಡೈರೆಕ್ಟ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="wikis_redirect_create_title">ಮರುನಿರ್ದೇಶನ ರಚಿಸಿ</string>
     <string name="wikis_redirect_create_action">ರಚಿಸಿ</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">ಲಗತ್ತುಗಳು</string>
     <string name="wikis_attachments_upload">ಫೈಲ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="wikis_attachments_uploading">ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಆಗಿದೆ</item>
+        <item quantity="other">%s ಫೈಲ್‌ಗಳು ಅಪ್‌ಲೋಡ್ ಆಗಿವೆ</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ಫೈಲ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_attachments_search_clear">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="wikis_attachments_filter_all">ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="wikis_access_revoke_success">ಪ್ರವೇಶ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="wikis_access_revoke_failed">ಪ್ರವೇಶ ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="wikis_rss_revoke_failed">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="wikis_access_search_failed">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="wikis_replica_unknown">ಅಜ್ಞಾತ</string>
     <string name="wikis_replicas_empty_title">ಇನ್ನೂ ಯಾವುದೇ ರೆಪ್ಲಿಕಾಗಳಿಲ್ಲ</string>
     <string name="wikis_replicas_empty_message">ಇತರ ವಿಕಿಗಳು ಈ ವಿಕಿಯನ್ನು ಪ್ರತಿಕೃತಿ ಮಾಡಿದಾಗ, ಅವು ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.</string>
     <string name="wikis_replicas_never_synced">ಎಂದಿಗೂ ಇಲ್ಲ</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">ನೀವು %1$s ನಿಂದ ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಲು ಖಚಿತವೇ?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ URL ಮೂಲಕ ಹುಡುಕಿ</string>
-    <string name="wikis_join_search_button">wiki ಗಳನ್ನು ಹುಡುಕಿ…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">ಸೂಚಿಸಿದ ಸರ್ವರ್ ಇಲ್ಲದೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="wikis_comments_title_template">%1$s - ಕಾಮೆಂಟ್‌ಗಳು</string>
     <string name="wikis_comment_form_placeholder_new">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ</string>
     <string name="wikis_comment_form_placeholder_reply">ಪ್ರತ್ಯುತ್ತರ ಬರೆಯಿರಿ</string>
     <string name="wikis_comment_form_send">ಕಳುಹಿಸಿ</string>
     <string name="wikis_comment_form_remove_attachment">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ನಿಮ್ಮ ವಿಷಯವನ್ನು ಇಲ್ಲಿ Markdown ಬಳಸಿ ಬರೆಯಿರಿ</string>
     <string name="wikis_insert_dialog_empty">ಇನ್ನೂ ಲಗತ್ತುಗಳಿಲ್ಲ. ಪ್ರಾರಂಭಿಸಲು ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="wikis_delete_page_message">ನೀವು “%1$s” (%2$s) ಪುಟವನ್ನು ಅಳಿಸಲಿದ್ದೀರಿ. ಇತಿಹಾಸದಿಂದ ಮರುಸ್ಥಾಪಿಸುವ ಮೂಲಕ ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಬಹುದು.</string>
     <string name="wikis_delete_page_success">ಪುಟ ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="wikis_revert_page_title">ಪುಟ ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="wikis_revert_page_message">ನೀವು %1$s ಅನ್ನು ಆವೃತ್ತಿ %2$s ಗೆ ಹಿಂತಿರುಗಿಸಲಿದ್ದೀರಿ. ಇದು ಆವೃತ್ತಿ %2$s ರ ವಿಷಯದೊಂದಿಗೆ ಹೊಸ ಪರಿಷ್ಕರಣೆಯನ್ನು ರಚಿಸುತ್ತದೆ.</string>
-    <string name="wikis_revert_page_default_comment">ಆವೃತ್ತಿ %1$s ಗೆ ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ</string>
     <string name="wikis_revert_page_success">ಆವೃತ್ತಿ %1$s ಗೆ ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ</string>
     <string name="wikis_rename_page_renaming">ಮರುಹೆಸರಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="wikis_rename_page_success">ಪುಟವನ್ನು ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">ಕೊನೆಯ ಸಿಂಕ್: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ಇದು “%1$s” ಗೆ ನವೀಕರಣಗಳನ್ನು ಕಳುಹಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. ಬಯಸಿದರೆ ಅವರು ಮತ್ತೆ ಪ್ರತಿಕೃತಿ ಮಾಡಬಹುದು.</string>
     <string name="wikis_replicas_removed_success">ರೆಪ್ಲಿಕಾ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
-    <string name="wikis_load_more">ಇನ್ನಷ್ಟು ಲೋಡ್ ಮಾಡಿ</string>
     <string name="wikis_access_change_level">ಪ್ರವೇಶ ಮಟ್ಟ</string>
     <string name="wikis_access_subject_anyone">ಯಾರಾದರೂ</string>
     <string name="wikis_access_subject_authenticated">ದೃಢೀಕೃತ ಬಳಕೆದಾರರು</string>

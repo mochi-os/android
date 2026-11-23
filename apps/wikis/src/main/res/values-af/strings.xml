@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Vind wikis</string>
     <string name="wikis_find_no_results">Geen wikis gevind nie</string>
     <string name="wikis_find_recommended_section">Aanbevole wikis</string>
-    <string name="wikis_join_title">Repliseer wiki</string>
-    <string name="wikis_join_or_id">Of voer ID direk in</string>
-    <string name="wikis_join_id_label">Wiki entiteit-ID</string>
-    <string name="wikis_join_submit">Repliseer wiki</string>
     <string name="wikis_create_title">Skep wiki</string>
     <string name="wikis_create_name_label">Naam</string>
     <string name="wikis_create_privacy_label">Laat enigiemand toe om vir wiki te soek</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Onlangse wysigings oor alle bladsye in hierdie wiki.</string>
     <string name="wikis_changes_empty">Nog geen veranderinge nie</string>
     <string name="wikis_search_empty_query">Tik \'n soekterm in</string>
-    <string name="wikis_redirects_title">Herleidings</string>
-    <string name="wikis_redirects_add">Voeg by</string>
     <string name="wikis_redirects_empty">Geen herleidings gekonfigureer nie</string>
     <string name="wikis_redirect_create_title">Skep herleiding</string>
     <string name="wikis_redirect_create_action">Skep</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Aanhangsels</string>
     <string name="wikis_attachments_upload">Laai lêers op</string>
     <string name="wikis_attachments_uploading">Laai op…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s lêer opgelaai</item>
+        <item quantity="other">%s lêers opgelaai</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Kon nie lêers oplaai nie</string>
     <string name="wikis_attachments_search_clear">Maak soektog skoon</string>
     <string name="wikis_attachments_filter_all">Alle lêers</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Toegang opgedateer</string>
     <string name="wikis_access_revoke_success">Toegang verwyder</string>
     <string name="wikis_access_revoke_failed">Kon nie toegang verwyder nie</string>
+    <string name="wikis_rss_revoke_failed">Kon nie RSS-toegang herroep nie</string>
+    <string name="wikis_access_search_failed">Kon nie gebruikers soek nie</string>
+    <string name="wikis_replica_unknown">Onbekend</string>
     <string name="wikis_replicas_empty_title">Nog geen replikas nie</string>
     <string name="wikis_replicas_empty_message">Wanneer ander wiki\'s hierdie wiki repliseer, sal hulle hier verskyn.</string>
     <string name="wikis_replicas_never_synced">Nooit</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Is jy seker jy wil van %1$s uitteken?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Soek op naam, ID, vingerafdruk of URL</string>
-    <string name="wikis_join_search_button">Soek wiki’s…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Probeer weer sonder die voorgestelde bediener…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentare</string>
     <string name="wikis_comment_form_placeholder_new">Skryf \'n kommentaar</string>
     <string name="wikis_comment_form_placeholder_reply">Skryf ’n antwoord</string>
     <string name="wikis_comment_form_send">Stuur</string>
     <string name="wikis_comment_form_remove_attachment">Verwyder aanhangsel</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skryf jou inhoud hier met Markdown</string>
     <string name="wikis_insert_dialog_empty">Nog geen aanhegsels nie. Laai ’n lêer op om te begin.</string>
     <string name="wikis_delete_page_message">Jy is op die punt om die bladsy “%1$s” (%2$s) te skrap. Hierdie handeling kan ongedaan gemaak word deur uit die geskiedenis te herstel.</string>
     <string name="wikis_delete_page_success">Bladsy geskrap</string>
     <string name="wikis_revert_page_title">Herstel bladsy</string>
     <string name="wikis_revert_page_message">Jy is op die punt om %1$s na weergawe %2$s terug te keer. Dit sal ’n nuwe hersiening met die inhoud van weergawe %2$s skep.</string>
-    <string name="wikis_revert_page_default_comment">Teruggekeer na weergawe %1$s</string>
     <string name="wikis_revert_page_success">Teruggekeer na weergawe %1$s</string>
     <string name="wikis_rename_page_renaming">Hernoem tans…</string>
     <string name="wikis_rename_page_success">Bladsy hernoem</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Laas gesinkroniseer: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dit sal ophou om opdaterings na “%1$s” te stuur. Hulle kan weer repliseer as hulle wil.</string>
     <string name="wikis_replicas_removed_success">Replika verwyder</string>
-    <string name="wikis_load_more">Laai meer</string>
     <string name="wikis_access_change_level">Toegangsvlak</string>
     <string name="wikis_access_subject_anyone">Enigiemand</string>
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>

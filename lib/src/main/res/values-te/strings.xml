@@ -20,6 +20,8 @@
     <string name="common_clear_search">శోధనను క్లియర్ చేయండి</string>
     <string name="drawer_open">మెనుని ఓపెన్ చేయండి</string>
     <string name="common_cancel">రద్దు చేయండి</string>
+    <string name="common_discard_title">మార్పులను విస్మరించాలా?</string>
+    <string name="common_discard">విస్మరించు</string>
     <string name="common_filter">ఫిల్టర్</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ఫిల్టర్ తొలగించు</string>

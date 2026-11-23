@@ -63,6 +63,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
+import org.mochios.android.api.messageOrFallback
+import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -89,6 +91,7 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikiDrawer
+import org.mochios.wikis.ui.router.RememberWikiList
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -113,8 +116,11 @@ fun WikiListScreen(
     val rssReplaceLabel = stringResource(R.string.wikis_rss_replace)
     val rssFailedMessage = stringResource(R.string.wikis_rss_failed)
     val revokedMessage = stringResource(R.string.wikis_rss_revoked)
-    val revokeFailedMessage = stringResource(R.string.wikis_access_revoke_failed)
+    val revokeFailedMessage = stringResource(R.string.wikis_rss_revoke_failed)
     val clipboardLabel = stringResource(R.string.wikis_clipboard_label_rss)
+
+    // The list is the all-wikis view: shown, it is what the next launch opens.
+    RememberWikiList()
 
     // Side-effect events from the ViewModel: toast strings + open-wiki
     // navigation. Kept here so the NavController stays out of ViewModel scope.
@@ -234,13 +240,12 @@ fun WikiListScreen(
                                                 showOverflow = false
                                                 rssSubmenuOpen = false
                                                 drawerScope.launch {
-                                                    val result = viewModel.revokeRssAccess()
                                                     snackbarHostState.showSnackbar(
-                                                        if (result.isSuccess) {
-                                                            revokedMessage
-                                                        } else {
-                                                            revokeFailedMessage
-                                                        },
+                                                        revokeMessage(
+                                                            viewModel.revokeRssAccess().exceptionOrNull(),
+                                                            revoked = revokedMessage,
+                                                            failed = revokeFailedMessage,
+                                                        ),
                                                     )
                                                 }
                                             },
@@ -654,12 +659,20 @@ private fun SubscribableRow(
 }
 
 /**
+ * What revoking the all-wikis feed URLs says: that it was done, or why not -
+ * the server's reason where it sent one, else [failed].
+ */
+internal fun revokeMessage(failure: Throwable?, revoked: String, failed: String): String =
+    failure?.toMochiError()?.messageOrFallback(failed) ?: revoked
+
+/**
  * Copy the all-wikis feed URL, asking first when one was already issued. The
  * server keeps only the token's hash, so a replacement stops the URL already
  * handed out from resolving - which makes it the user's decision, not a silent
- * side effect of tapping Copy.
+ * side effect of tapping Copy. A failure says the server's reason where it
+ * sent one, else [failedMessage].
  */
-private suspend fun copyRss(
+internal suspend fun copyRss(
     mode: String,
     regenerate: Boolean,
     makeUrl: suspend (String, Boolean) -> Result<String?>,
@@ -694,8 +707,8 @@ private suspend fun copyRss(
             }
             copy(url, regenerate)
         },
-        onFailure = {
-            snackbar.showSnackbar(failedMessage)
+        onFailure = { failure ->
+            snackbar.showSnackbar(failure.toMochiError().messageOrFallback(failedMessage))
         },
     )
 }

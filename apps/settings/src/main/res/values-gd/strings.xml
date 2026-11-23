@@ -415,8 +415,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Ùrlar neo-aithnichte</string>
     <string name="system_documents_modified">Air atharrachadh</string>
-    <string name="system_documents_discard_title">A bheil thu airson na h-atharraichean a thilgeil air falbh?</string>
-    <string name="system_documents_discard">Tilg air falbh</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s soirbheachail</item>
         <item quantity="two">%1$s soirbheachail</item>

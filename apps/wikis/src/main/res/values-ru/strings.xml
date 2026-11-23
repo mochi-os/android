@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Найти вики</string>
     <string name="wikis_find_no_results">Wiki не найдены</string>
     <string name="wikis_find_recommended_section">Рекомендуемые wiki</string>
-    <string name="wikis_join_title">Реплицировать wiki</string>
-    <string name="wikis_join_or_id">Или введите ID напрямую</string>
-    <string name="wikis_join_id_label">ID сущности wiki</string>
-    <string name="wikis_join_submit">Реплицировать wiki</string>
     <string name="wikis_create_title">Создать вики</string>
     <string name="wikis_create_name_label">Название</string>
     <string name="wikis_create_privacy_label">Разрешить всем искать вики</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Недавние правки по всем страницам этой wiki.</string>
     <string name="wikis_changes_empty">Изменений пока нет</string>
     <string name="wikis_search_empty_query">Введите поисковый запрос</string>
-    <string name="wikis_redirects_title">Перенаправления</string>
-    <string name="wikis_redirects_add">Добавить</string>
     <string name="wikis_redirects_empty">Перенаправления не настроены</string>
     <string name="wikis_redirect_create_title">Создать редирект</string>
     <string name="wikis_redirect_create_action">Создать</string>
@@ -144,6 +138,12 @@
     <string name="wikis_attachments_title">Вложения</string>
     <string name="wikis_attachments_upload">Загрузить файлы</string>
     <string name="wikis_attachments_uploading">Загрузка…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s файл загружен</item>
+        <item quantity="few">%s файла загружено</item>
+        <item quantity="many">%s файлов загружено</item>
+        <item quantity="other">%s файла загружено</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Не удалось загрузить файлы</string>
     <string name="wikis_attachments_search_clear">Очистить поиск</string>
     <string name="wikis_attachments_filter_all">Все файлы</string>
@@ -209,6 +209,9 @@
     <string name="wikis_access_set_success">Доступ обновлён</string>
     <string name="wikis_access_revoke_success">Доступ удалён</string>
     <string name="wikis_access_revoke_failed">Не удалось удалить доступ</string>
+    <string name="wikis_rss_revoke_failed">Не удалось отозвать доступ RSS</string>
+    <string name="wikis_access_search_failed">Не удалось найти пользователей</string>
+    <string name="wikis_replica_unknown">Неизвестно</string>
     <string name="wikis_replicas_empty_title">Реплик пока нет</string>
     <string name="wikis_replicas_empty_message">Когда другие wiki будут реплицировать эту wiki, они появятся здесь.</string>
     <string name="wikis_replicas_never_synced">Никогда</string>
@@ -230,22 +233,18 @@
     <string name="wikis_unsubscribe_confirm_message">Вы уверены, что хотите отписаться от %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS вики</string>
     <string name="wikis_find_search_placeholder">Поиск по названию, ID, отпечатку или URL</string>
-    <string name="wikis_join_search_button">Искать вики…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Повторная попытка без предложенного сервера…</string>
     <string name="wikis_comments_title_template">%1$s - Комментарии</string>
     <string name="wikis_comment_form_placeholder_new">Напишите комментарий</string>
     <string name="wikis_comment_form_placeholder_reply">Напишите ответ</string>
     <string name="wikis_comment_form_send">Отправить</string>
     <string name="wikis_comment_form_remove_attachment">Удалить вложение</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишите ваше содержимое здесь, используя Markdown</string>
     <string name="wikis_insert_dialog_empty">Пока нет вложений. Загрузите файл, чтобы начать.</string>
     <string name="wikis_delete_page_message">Вы собираетесь удалить страницу «%1$s» (%2$s). Это действие можно отменить, восстановив из истории.</string>
     <string name="wikis_delete_page_success">Страница удалена</string>
     <string name="wikis_revert_page_title">Откатить страницу</string>
     <string name="wikis_revert_page_message">Вы собираетесь откатить %1$s к версии %2$s. Это создаст новую редакцию с содержимым версии %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Откачено к версии %1$s</string>
     <string name="wikis_revert_page_success">Откачено к версии %1$s</string>
     <string name="wikis_rename_page_renaming">Переименование…</string>
     <string name="wikis_rename_page_success">Страница переименована</string>
@@ -276,7 +275,6 @@
     <string name="wikis_replicas_col_synced">Последняя синхронизация: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Это остановит отправку обновлений на «%1$s». Они могут реплицировать снова, если захотят.</string>
     <string name="wikis_replicas_removed_success">Реплика удалена</string>
-    <string name="wikis_load_more">Загрузить ещё</string>
     <string name="wikis_access_change_level">Уровень доступа</string>
     <string name="wikis_access_subject_anyone">Кто угодно</string>
     <string name="wikis_access_subject_authenticated">Аутентифицированные пользователи</string>

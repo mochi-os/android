@@ -401,8 +401,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">알 수 없는 테마</string>
     <string name="system_documents_modified">수정됨</string>
-    <string name="system_documents_discard_title">변경사항을 버릴까요?</string>
-    <string name="system_documents_discard">버리기</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">성공 %1$s건</item>
     </plurals>

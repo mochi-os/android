@@ -20,6 +20,8 @@
     <string name="common_clear_search">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
     <string name="drawer_open">ਮੇਨੂ ਖੋਲ੍ਹੋ</string>
     <string name="common_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="common_discard_title">ਕੀ ਤਬਦੀਲੀਆਂ ਛੱਡ ਦੇਣੀਆਂ ਹਨ?</string>
+    <string name="common_discard">ਛੱਡ ਦਿਓ</string>
     <string name="common_filter">ਫਿਲਟਰ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ਫਿਲਟਰ ਹਟਾਓ</string>

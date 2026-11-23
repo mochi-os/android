@@ -404,8 +404,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Jan uñt\'ata tema</string>
     <string name="system_documents_modified">Mayjt\'ayata</string>
-    <string name="system_documents_discard_title">¿Mayjt\'awinaka jaqsuñati?</string>
-    <string name="system_documents_discard">Jaqsuña</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s phuqhata</item>
         <item quantity="other">%1$s phuqhata</item>

@@ -8,10 +8,7 @@
     <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_join_id_hint">abc123</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_load_more">載入更多</string>
     <string name="wikis_access_change_level">更改存取層級</string>
     <string name="wikis_access_subject_anyone">任何人</string>
     <string name="wikis_access_subject_authenticated">已驗證用戶</string>
@@ -60,4 +57,5 @@
     <string name="wikis_access_anyone_desc">包括匿名用戶</string>
     <string name="wikis_access_selected">已選擇:%1$s</string>
     <string name="wikis_rss_replace">取代</string>
+    <string name="wikis_access_search_failed">搜尋用戶失敗</string>
 </resources>

@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temë e panjohur</string>
     <string name="system_documents_modified">I modifikuar</string>
-    <string name="system_documents_discard_title">T\'i hedhësh ndryshimet?</string>
-    <string name="system_documents_discard">Hidh</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s e suksesshme</item>
         <item quantity="other">%1$s të suksesshme</item>

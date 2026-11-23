@@ -76,6 +76,7 @@ import org.mochios.forums.navigation.forumsNavGraph
 import org.mochios.people.navigation.PeopleApp
 import org.mochios.people.navigation.peopleNavGraph
 import org.mochios.wikis.navigation.WikisApp
+import org.mochios.wikis.navigation.openWikis
 import org.mochios.wikis.navigation.wikisNavGraph
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.navigation.chessNavGraph
@@ -259,7 +260,6 @@ open class MainActivity : ComponentActivity() {
                             wikisNavGraph(
                                 navController,
                                 onOpenNotifications = openNotifications,
-                                onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             chessNavGraph(
                                 navController,
@@ -888,7 +888,8 @@ open class MainActivity : ComponentActivity() {
                 }
             }
             "wikis" -> {
-                navController.openAppHome(WikisApp.HOME)
+                // The wiki list, in place of the router when the app started there.
+                navController.openWikis()
                 // Its builders refuse a part that cannot be one segment.
                 val wiki = id?.takeIf { part -> segment(part) != null }
                 if (wiki != null) {
@@ -1025,7 +1026,7 @@ open class MainActivity : ComponentActivity() {
         "crm" -> CrmsApp.HOME
         "people" -> PeopleApp.HOME
         "settings" -> SettingsApp.HOME
-        "wikis" -> WikisApp.HOME
+        "wikis" -> WikisApp.ROUTER
         "chess" -> ChessApp.HOME
         "go" -> GoApp.HOME
         "words" -> WordsApp.HOME

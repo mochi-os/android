@@ -415,8 +415,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nieznany motyw</string>
     <string name="system_documents_modified">Zmodyfikowany</string>
-    <string name="system_documents_discard_title">Odrzucić zmiany?</string>
-    <string name="system_documents_discard">Odrzuć</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s udana</item>
         <item quantity="few">%1$s udane</item>

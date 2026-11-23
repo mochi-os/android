@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Намери wiki-та</string>
     <string name="wikis_find_no_results">Не са намерени wiki</string>
     <string name="wikis_find_recommended_section">Препоръчани wiki</string>
-    <string name="wikis_join_title">Реплицирай wiki</string>
-    <string name="wikis_join_or_id">Или въведете ID директно</string>
-    <string name="wikis_join_id_label">ID на обект на wiki</string>
-    <string name="wikis_join_submit">Реплицирай wiki</string>
     <string name="wikis_create_title">Създай wiki</string>
     <string name="wikis_create_name_label">Име</string>
     <string name="wikis_create_privacy_label">Позволи на всеки да търси wiki-то</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Скорошни редакции на всички страници в тази wiki.</string>
     <string name="wikis_changes_empty">Все още няма промени</string>
     <string name="wikis_search_empty_query">Въведете дума за търсене</string>
-    <string name="wikis_redirects_title">Пренасочвания</string>
-    <string name="wikis_redirects_add">Добави</string>
     <string name="wikis_redirects_empty">Няма конфигурирани пренасочвания</string>
     <string name="wikis_redirect_create_title">Създай пренасочване</string>
     <string name="wikis_redirect_create_action">Създай</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Прикачени файлове</string>
     <string name="wikis_attachments_upload">Качи файлове</string>
     <string name="wikis_attachments_uploading">Качване…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s качен файл</item>
+        <item quantity="other">%s качени файла</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Неуспешно качване на файлове</string>
     <string name="wikis_attachments_search_clear">Изчисти търсенето</string>
     <string name="wikis_attachments_filter_all">Всички файлове</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Достъпът е обновен</string>
     <string name="wikis_access_revoke_success">Достъпът е премахнат</string>
     <string name="wikis_access_revoke_failed">Неуспешно премахване на достъп</string>
+    <string name="wikis_rss_revoke_failed">Неуспешно отменяне на достъпа до RSS</string>
+    <string name="wikis_access_search_failed">Неуспешно търсене на потребители</string>
+    <string name="wikis_replica_unknown">Неизвестно</string>
     <string name="wikis_replicas_empty_title">Все още няма реплики</string>
     <string name="wikis_replicas_empty_message">Когато други wiki репликират това wiki, те ще се появят тук.</string>
     <string name="wikis_replicas_never_synced">Никога</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Сигурни ли сте, че искате да отмените абонамента от %1$s?</string>
     <string name="wikis_clipboard_label_rss">RSS URL на wiki</string>
     <string name="wikis_find_search_placeholder">Търсене по име, ID, отпечатък или URL</string>
-    <string name="wikis_join_search_button">Търсене на wiki…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Опит отново без предложения сървър…</string>
     <string name="wikis_comments_title_template">%1$s - Коментари</string>
     <string name="wikis_comment_form_placeholder_new">Напишете коментар</string>
     <string name="wikis_comment_form_placeholder_reply">Напишете отговор</string>
     <string name="wikis_comment_form_send">Изпрати</string>
     <string name="wikis_comment_form_remove_attachment">Премахване на прикачения файл</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишете съдържанието си тук с Markdown</string>
     <string name="wikis_insert_dialog_empty">Още няма прикачени файлове. Качете файл, за да започнете.</string>
     <string name="wikis_delete_page_message">На път сте да изтриете страницата „%1$s\" (%2$s). Това действие може да бъде отменено чрез възстановяване от историята.</string>
     <string name="wikis_delete_page_success">Страницата е изтрита</string>
     <string name="wikis_revert_page_title">Върни страницата</string>
     <string name="wikis_revert_page_message">На път сте да възстановите %1$s до версия %2$s. Това ще създаде нова ревизия със съдържанието на версия %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Възстановено до версия %1$s</string>
     <string name="wikis_revert_page_success">Възстановено до версия %1$s</string>
     <string name="wikis_rename_page_renaming">Преименуване…</string>
     <string name="wikis_rename_page_success">Страницата е преименувана</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Последна синхронизация: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Това ще спре изпращането на актуализации към „%1$s\". Могат да репликират отново, ако искат.</string>
     <string name="wikis_replicas_removed_success">Репликата е премахната</string>
-    <string name="wikis_load_more">Зареди още</string>
     <string name="wikis_access_change_level">Ниво на достъп</string>
     <string name="wikis_access_subject_anyone">Всеки</string>
     <string name="wikis_access_subject_authenticated">Удостоверени потребители</string>

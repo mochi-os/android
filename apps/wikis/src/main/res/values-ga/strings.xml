@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Aimsigh viceaí</string>
     <string name="wikis_find_no_results">Níor aimsíodh aon wiki</string>
     <string name="wikis_find_recommended_section">Wikis mholta</string>
-    <string name="wikis_join_title">Macasamhlaigh wiki</string>
-    <string name="wikis_join_or_id">Nó cuir aitheantas isteach go díreach</string>
-    <string name="wikis_join_id_label">Aitheantas aonáin wiki</string>
-    <string name="wikis_join_submit">Macasamhlaigh wiki</string>
     <string name="wikis_create_title">Cruthaigh wiki</string>
     <string name="wikis_create_name_label">Ainm</string>
     <string name="wikis_create_privacy_label">Ceadaigh d\'aon duine cuardach do wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Eagarthóireachtaí le déanaí ar gach leathanach sa wiki seo.</string>
     <string name="wikis_changes_empty">Níl aon athrú fós</string>
     <string name="wikis_search_empty_query">Iontráil téarma cuardaigh</string>
-    <string name="wikis_redirects_title">Atreoruithe</string>
-    <string name="wikis_redirects_add">Cuir leis</string>
     <string name="wikis_redirects_empty">Níl aon atreorú cumraithe</string>
     <string name="wikis_redirect_create_title">Cruthaigh atreorú</string>
     <string name="wikis_redirect_create_action">Cruthaigh</string>
@@ -144,6 +138,13 @@
     <string name="wikis_attachments_title">Ceangaltáin</string>
     <string name="wikis_attachments_upload">Uaslódáil comhaid</string>
     <string name="wikis_attachments_uploading">Á uaslódáil…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s chomhad uaslódáilte</item>
+        <item quantity="two">%s chomhad uaslódáilte</item>
+        <item quantity="few">%s chomhad uaslódáilte</item>
+        <item quantity="many">%s gcomhad uaslódáilte</item>
+        <item quantity="other">%s comhad uaslódáilte</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Theip ar uaslódáil comhad</string>
     <string name="wikis_attachments_search_clear">Glan cuardach</string>
     <string name="wikis_attachments_filter_all">Gach comhad</string>
@@ -209,6 +210,9 @@
     <string name="wikis_access_set_success">Rochtain nuashonraithe</string>
     <string name="wikis_access_revoke_success">Rochtain bainte</string>
     <string name="wikis_access_revoke_failed">Theip ar bhaint rochtana</string>
+    <string name="wikis_rss_revoke_failed">Theip ar rochtain RSS a chúlghairm</string>
+    <string name="wikis_access_search_failed">Theip ar chuardach úsáideoirí</string>
+    <string name="wikis_replica_unknown">Anaithnid</string>
     <string name="wikis_replicas_empty_title">Níl aon mhacasamhail fós</string>
     <string name="wikis_replicas_empty_message">Nuair a dhéanann wikis eile macasamhlú ar an wiki seo, beidh siad le feiceáil anseo.</string>
     <string name="wikis_replicas_never_synced">Riamh</string>
@@ -230,22 +234,18 @@
     <string name="wikis_unsubscribe_confirm_message">An bhfuil tú cinnte gur mian leat díliostáil ó %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Cuardaigh de réir ainm, ID, méarloirg nó URL</string>
-    <string name="wikis_join_search_button">Cuardaigh wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Ag atriail gan an freastalaí molta…</string>
     <string name="wikis_comments_title_template">%1$s - Nótaí tráchta</string>
     <string name="wikis_comment_form_placeholder_new">Scríobh tuairim</string>
     <string name="wikis_comment_form_placeholder_reply">Scríobh freagra</string>
     <string name="wikis_comment_form_send">Seol</string>
     <string name="wikis_comment_form_remove_attachment">Bain ceangaltán</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Scríobh d’ábhar anseo le Markdown</string>
     <string name="wikis_insert_dialog_empty">Níl aon cheangaltán ann fós. Uaslódáil comhad chun tosú.</string>
     <string name="wikis_delete_page_message">Tá tú ar tí an leathanach “%1$s” (%2$s) a scriosadh. Is féidir an gníomh seo a chur ar ais tríd an stair a athchóiriú.</string>
     <string name="wikis_delete_page_success">Leathanach scriosta</string>
     <string name="wikis_revert_page_title">Fill an leathanach</string>
     <string name="wikis_revert_page_message">Tá tú ar tí %1$s a aisiompú go leagan %2$s. Cruthóidh sé seo leasú nua leis an ábhar ó leagan %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Aisiompaithe go leagan %1$s</string>
     <string name="wikis_revert_page_success">Aisiompaithe go leagan %1$s</string>
     <string name="wikis_rename_page_renaming">Á athainmniú…</string>
     <string name="wikis_rename_page_success">Leathanach athainmnithe</string>
@@ -276,7 +276,6 @@
     <string name="wikis_replicas_col_synced">Sioncronaithe go deireanach: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Cuirfidh sé seo stop le nuashonruithe a sheoladh chuig “%1$s”. Is féidir leo macasamhlú arís más mian leo.</string>
     <string name="wikis_replicas_removed_success">Macasamhail bainte</string>
-    <string name="wikis_load_more">Luchtaigh tuilleadh</string>
     <string name="wikis_access_change_level">Leibhéal rochtana</string>
     <string name="wikis_access_subject_anyone">Aon duine</string>
     <string name="wikis_access_subject_authenticated">Úsáideoirí fíordheimhnithe</string>

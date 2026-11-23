@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wiki-лерди табуу</string>
     <string name="wikis_find_no_results">Wiki табылган жок</string>
     <string name="wikis_find_recommended_section">Сунушталган wiki-лер</string>
-    <string name="wikis_join_title">Wiki-ди репликалоо</string>
-    <string name="wikis_join_or_id">Же ID-ни түз эле киргизиңиз</string>
-    <string name="wikis_join_id_label">Wiki субъект ID</string>
-    <string name="wikis_join_submit">Wiki-ди репликалоо</string>
     <string name="wikis_create_title">Wiki түзүү</string>
     <string name="wikis_create_name_label">Аты</string>
     <string name="wikis_create_privacy_label">Wikiди издөөгө ар кимге уруксат берүү</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Бул wiki-нин бардык барактарындагы акыркы оңдоолор.</string>
     <string name="wikis_changes_empty">Өзгөрүүлөр азырынча жок</string>
     <string name="wikis_search_empty_query">Издөө сөзүн киргизиңиз</string>
-    <string name="wikis_redirects_title">Кайра багыттоолор</string>
-    <string name="wikis_redirects_add">Кошуу</string>
     <string name="wikis_redirects_empty">Кайра багыттоолор конфигурацияланган эмес</string>
     <string name="wikis_redirect_create_title">Багытталуу түзүү</string>
     <string name="wikis_redirect_create_action">Түзүү</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Тиркемелер</string>
     <string name="wikis_attachments_upload">Файлдарды жүктөө</string>
     <string name="wikis_attachments_uploading">Жүктөлүүдө…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s файл жүктөлдү</item>
+        <item quantity="other">%s файл жүктөлдү</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Файлдарды жүктөө ишке ашкан жок</string>
     <string name="wikis_attachments_search_clear">Издөөнү тазалоо</string>
     <string name="wikis_attachments_filter_all">Бардык файлдар</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Жетки жаңыланды</string>
     <string name="wikis_access_revoke_success">Жетки алынып салынды</string>
     <string name="wikis_access_revoke_failed">Жетишүүнү алып салуу ишке ашкан жок</string>
+    <string name="wikis_rss_revoke_failed">RSS мүмкүнчүлүгүн кайтарып алуу ишке ашкан жок</string>
+    <string name="wikis_access_search_failed">Колдонуучуларды издөө ишке ашкан жок</string>
+    <string name="wikis_replica_unknown">Белгисиз</string>
     <string name="wikis_replicas_empty_title">Репликалар азырынча жок</string>
     <string name="wikis_replicas_empty_message">Башка wiki\'лер бул wiki\'ни көчүргөндө, алар бул жерде пайда болот.</string>
     <string name="wikis_replicas_never_synced">Эч качан</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">%1$s\'тен жазылууну жокко чыгаргыңыз келгенине ишенесизби?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Аты, ID, манжа изи же URL боюнча издөө</string>
-    <string name="wikis_join_search_button">Wiki\'лерди издөө…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Сунушталган серверсиз кайра аракет кылынууда…</string>
     <string name="wikis_comments_title_template">%1$s - Комментарийлер</string>
     <string name="wikis_comment_form_placeholder_new">Пикир жазыңыз</string>
     <string name="wikis_comment_form_placeholder_reply">Жооп жазыңыз</string>
     <string name="wikis_comment_form_send">Жөнөтүү</string>
     <string name="wikis_comment_form_remove_attachment">Тиркемени алып салуу</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Мазмунуңузду бул жерге Markdown менен жазыңыз</string>
     <string name="wikis_insert_dialog_empty">Азырынча тиркемелер жок. Баштоо үчүн файл жүктөңүз.</string>
     <string name="wikis_delete_page_message">Сиз “%1$s” (%2$s) барагын өчүрүүгө даярсыз. Бул аракетти тарыхтан калыбына келтирүү менен кайтарууга болот.</string>
     <string name="wikis_delete_page_success">Барак жок кылынды</string>
     <string name="wikis_revert_page_title">Баракты кайтаруу</string>
     <string name="wikis_revert_page_message">Сиз %1$s\'ти %2$s версиясына кайтаргалы жатасыз. Бул %2$s версиясынын мазмуну менен жаңы редакция түзөт.</string>
-    <string name="wikis_revert_page_default_comment">%1$s версиясына кайтарылды</string>
     <string name="wikis_revert_page_success">%1$s версиясына кайтарылды</string>
     <string name="wikis_rename_page_renaming">Аты өзгөртүлүүдө…</string>
     <string name="wikis_rename_page_success">Барактын аты өзгөртүлдү</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Акыркы синхрондоо: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Бул “%1$s” дарегине жаңылыктарды жөнөтүүнү токтотот. Кааласа, алар кайра көчүрө алат.</string>
     <string name="wikis_replicas_removed_success">Реплика алынып салынды</string>
-    <string name="wikis_load_more">Дагы жүктөө</string>
     <string name="wikis_access_change_level">Жетки деңгээли</string>
     <string name="wikis_access_subject_anyone">Каалаган адам</string>
     <string name="wikis_access_subject_authenticated">Аутентификацияланган колдонуучулар</string>

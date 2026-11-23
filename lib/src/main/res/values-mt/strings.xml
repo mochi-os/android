@@ -20,6 +20,8 @@
     <string name="common_clear_search">Naddaf it-tiftix</string>
     <string name="drawer_open">Iftaħ menu</string>
     <string name="common_cancel">Ikkanċella</string>
+    <string name="common_discard_title">Tarmi l-bidliet?</string>
+    <string name="common_discard">Armi</string>
     <string name="common_filter">Iffiltra</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Neħħi l-filtru</string>

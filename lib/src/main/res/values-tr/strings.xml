@@ -20,6 +20,8 @@
     <string name="common_clear_search">Aramayı temizle</string>
     <string name="drawer_open">Menüyü aç</string>
     <string name="common_cancel">İptal</string>
+    <string name="common_discard_title">Değişiklikler atılsın mı?</string>
+    <string name="common_discard">At</string>
     <string name="common_filter">Filtrele</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Filtreyi kaldır</string>

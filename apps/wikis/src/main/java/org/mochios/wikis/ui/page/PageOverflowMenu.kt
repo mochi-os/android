@@ -68,13 +68,10 @@ private const val DEFAULT_HOME = "home"
  * that expands its three modes in place — the same shape the wiki list's
  * overflow uses. Callbacks fire on tap; the caller collapses the menu itself.
  */
-@Suppress("UNUSED_PARAMETER")
 @Composable
 fun PageOverflowMenu(
     expanded: Boolean,
     onDismiss: () -> Unit,
-    wikiId: String,
-    slug: String,
     permissions: WikiPermissions,
     commentCount: Int,
     canUnsubscribe: Boolean,
@@ -96,9 +93,6 @@ fun PageOverflowMenu(
     // Share for the page itself; null while there is no page to share.
     onSharePage: (() -> Unit)? = null,
 ) {
-    // [wikiId] and [slug] are accepted on the contract so callers can pass
-    // the same set as web's overflow, but every callback is already pre-bound
-    // by the host — the menu itself doesn't navigate from these arguments.
     // [shortcut] is what "Add to home screen" pins, from [pageShortcut], when
     // the user holds the wiki; null for a wiki only browsed.
 

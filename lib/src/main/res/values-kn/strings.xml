@@ -20,6 +20,8 @@
     <string name="common_clear_search">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="drawer_open">ಮೆನು ತೆರೆಯಿರಿ</string>
     <string name="common_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="common_discard_title">ಬದಲಾವಣೆಗಳನ್ನು ತಿರಸ್ಕರಿಸಬೇಕೇ?</string>
+    <string name="common_discard">ತಿರಸ್ಕರಿಸಿ</string>
     <string name="common_filter">ಫಿಲ್ಟರ್</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ</string>

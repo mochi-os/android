@@ -43,10 +43,6 @@
     <string name="wikis_find_title">Wiki\'s zoeken</string>
     <string name="wikis_find_no_results">Geen wiki\'s gevonden</string>
     <string name="wikis_find_recommended_section">Aanbevolen wiki\'s</string>
-    <string name="wikis_join_title">Wiki repliceren</string>
-    <string name="wikis_join_or_id">Of voer ID rechtstreeks in</string>
-    <string name="wikis_join_id_label">Wiki entiteits-ID</string>
-    <string name="wikis_join_submit">Wiki repliceren</string>
     <string name="wikis_create_title">Wiki aanmaken</string>
     <string name="wikis_create_name_label">Naam</string>
     <string name="wikis_create_privacy_label">Iedereen toestaan om naar de wiki te zoeken</string>
@@ -114,8 +110,6 @@
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
     <string name="wikis_changes_empty">Nog geen wijzigingen</string>
     <string name="wikis_search_empty_query">Voer een zoekterm in</string>
-    <string name="wikis_redirects_title">Redirects</string>
-    <string name="wikis_redirects_add">Toevoegen</string>
     <string name="wikis_redirects_empty">Geen redirects geconfigureerd</string>
     <string name="wikis_redirect_create_title">Omleiding aanmaken</string>
     <string name="wikis_redirect_create_action">Aanmaken</string>
@@ -215,9 +209,6 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_pageview_version">v%1$s</string>
-    <string name="wikis_join_id_hint">abc123</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_load_more">Meer laden</string>
     <string name="wikis_access_change_level">Toegangsniveau</string>
     <string name="wikis_access_subject_anyone">Iedereen</string>
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>

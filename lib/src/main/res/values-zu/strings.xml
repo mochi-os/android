@@ -20,6 +20,8 @@
     <string name="common_clear_search">Sula usesho</string>
     <string name="drawer_open">Vula imenyu</string>
     <string name="common_cancel">Khansela</string>
+    <string name="common_discard_title">Lahla izinguquko?</string>
+    <string name="common_discard">Lahla</string>
     <string name="common_filter">Hlunga</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Susa isihlungi</string>

@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -25,13 +24,18 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.wikis.R
 
 /**
- * Compose surface for new comments and in-thread replies. Send stays enabled
- * when files are queued, so attachment-only posts work.
+ * Compose surface for new comments and in-thread replies. The server requires
+ * a body, so Send needs text whatever files are picked. The text and the
+ * picked [files] stay until the server has the comment: [onSubmit] is handed
+ * what to run once it does.
  */
 @Composable
 fun CommentForm(
-    onSubmit: (body: String, files: List<Uri>?) -> Unit,
+    onSubmit: (body: String, sent: () -> Unit) -> Unit,
     resolveFileName: suspend (Uri) -> String,
+    files: List<Uri>,
+    onAddFiles: (List<Uri>) -> Unit,
+    onRemoveFile: (Uri) -> Unit,
     initialText: String = "",
     onCancel: (() -> Unit)? = null,
     placeholder: String = stringResource(R.string.wikis_comment_form_placeholder_new),
@@ -44,13 +48,14 @@ fun CommentForm(
     windowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
     showDivider: Boolean = true,
     banner: (@Composable () -> Unit)? = null,
+    /** Whether a comment is on its way; the bar takes nothing more until it lands. */
+    isSending: Boolean = false,
     /** The files of a comment being sent, shown until it is in. */
     upload: Upload? = null,
 ) {
     val focusRequester = remember { FocusRequester() }
 
     var body by remember(initialText) { mutableStateOf(initialText) }
-    val files = remember { mutableStateListOf<Uri>() }
 
     // Whenever the caller seeds a new value (e.g. quote-on-select drops a
     // freshly-quoted draft into the reply textarea), reset the local field.
@@ -65,15 +70,15 @@ fun CommentForm(
     fun handleSubmit() {
         val trimmed = body.trim()
         // The server requires a body: `comment/create` answers 400
-        // comment_body_is_required for an empty one, so an attachment-only
-        // comment cannot be posted. Refusing here keeps the picked files in the
-        // draft instead of clearing them for a comment that never went out.
+        // comment_body_is_required for an empty one.
         if (trimmed.isBlank()) return
-        val attachments = if (files.isNotEmpty()) files.toList() else null
-        onSubmit(trimmed, attachments)
-        body = ""
-        files.clear()
-        onTextChange?.invoke("")
+        onSubmit(trimmed) {
+            // Text typed while the comment was on its way is a new draft.
+            if (body.trim() == trimmed) {
+                body = ""
+                onTextChange?.invoke("")
+            }
+        }
     }
 
     ComposeBar(
@@ -84,16 +89,18 @@ fun CommentForm(
         },
         onSend = { handleSubmit() },
         placeholder = placeholder,
+        isSending = isSending,
         sendLabel = stringResource(R.string.wikis_comment_form_send),
         attachments = ComposeBarAttachments(
-            pending = files.toList(),
-            onAdd = { uris -> files.addAll(uris) },
-            onRemove = { uri -> files.remove(uri) },
+            pending = files,
+            onAdd = onAddFiles,
+            onRemove = onRemoveFile,
             resolveFileName = resolveFileName,
             addLabel = stringResource(R.string.wikis_comment_form_attach),
             fallbackLabel = stringResource(R.string.wikis_comment_form_attach),
             removeLabel = stringResource(R.string.wikis_comment_form_remove_attachment),
         ),
+        requireText = true,
         focusRequester = focusRequester,
         windowInsets = windowInsets,
         showDivider = showDivider,

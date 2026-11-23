@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,14 +22,18 @@ import org.mochios.wikis.model.RevisionDetail
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.components.WikiInfoLoader
 import javax.inject.Inject
 
 data class RevisionViewUiState(
     val isLoading: Boolean = true,
     val revision: RevisionDetail? = null,
     val currentVersion: Int = 0,
+    /** The revision before this one, to compare against; 0 when there is none. */
+    val previous: Int = 0,
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
+    /** Why the wiki's information or the revision would not load. */
     val error: MochiError? = null,
     /** Compare-changes mode: when on, the body shows a line diff against the
      *  previous revision instead of the rendered markdown. Mirrors web's
@@ -35,13 +41,18 @@ data class RevisionViewUiState(
     val showDiff: Boolean = false,
     val previousRevision: RevisionDetail? = null,
     val previousLoading: Boolean = false,
+    /** Why the previous revision would not load for the comparison. */
+    val compareError: MochiError? = null,
     /** A revert asked for from this screen, and how it went. The failure is
      *  its own field: [error] stands for a revision that would not load, and
      *  the screen reads the two differently. */
     val isReverting: Boolean = false,
     val reverted: Boolean = false,
     val revertError: MochiError? = null,
-)
+) {
+    /** Whether there is an earlier revision to compare this one with. */
+    val hasPrevious: Boolean get() = previous > 0
+}
 
 @HiltViewModel
 class RevisionViewModel @Inject constructor(
@@ -60,36 +71,46 @@ class RevisionViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(RevisionViewUiState())
     val uiState: StateFlow<RevisionViewUiState> = _uiState.asStateFlow()
 
+    private val information = WikiInfoLoader(
+        fetch = { repository.getInfo(wikiId) },
+        loaded = { response ->
+            _uiState.value = _uiState.value.copy(
+                wiki = response.wiki,
+                permissions = response.permissions ?: WikiPermissions(),
+            )
+        },
+    )
+
+    /** The pending or in-flight [load]; cancelled when a newer one starts. */
+    private var loadJob: Job? = null
+
     init {
-        loadInfo()
-        loadRevision()
+        load()
     }
 
-    fun loadInfo() {
-        viewModelScope.launch {
-            try {
-                val response = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = response.wiki,
-                    permissions = response.permissions ?: WikiPermissions(),
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun loadRevision() {
-        viewModelScope.launch {
+    /**
+     * The wiki's information, unless it is already held, then the revision:
+     * on open, and from Retry, so one retry restores both.
+     */
+    fun load() {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                information.ensure()
                 val response = repository.getRevision(wikiId, slug, version)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     revision = response.revision,
                     currentVersion = response.version.current,
+                    // A server that predates the field says nothing of the
+                    // revision before, and the one before is then taken to be
+                    // the version below.
+                    previous = response.version.previous ?: (version - 1).coerceAtLeast(0),
                     error = null,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -103,7 +124,8 @@ class RevisionViewModel @Inject constructor(
      * Put this revision back as the page's current version. The page is the
      * one being viewed, so the caller sends the reader there once it lands.
      *
-     * @param comment The edit comment recorded against the revert.
+     * @param comment The edit comment recorded against the revert; empty for
+     *   the server's own note, which each reader sees in their language.
      */
     fun revert(comment: String) {
         viewModelScope.launch {
@@ -125,23 +147,31 @@ class RevisionViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(revertError = null)
     }
 
+    /**
+     * Switch between the rendered page and a diff against the previous
+     * revision, reading that revision the first time it is wanted, and again
+     * after a failure.
+     */
     fun toggleDiff() {
         val showing = !_uiState.value.showDiff
         _uiState.value = _uiState.value.copy(showDiff = showing)
-        if (showing && version > 1 &&
-            _uiState.value.previousRevision == null &&
-            !_uiState.value.previousLoading
-        ) {
+        val state = _uiState.value
+        if (showing && state.hasPrevious && state.previousRevision == null && !state.previousLoading) {
             viewModelScope.launch {
-                _uiState.value = _uiState.value.copy(previousLoading = true)
+                _uiState.value = _uiState.value.copy(previousLoading = true, compareError = null)
                 try {
-                    val resp = repository.getRevision(wikiId, slug, version - 1)
+                    val resp = repository.getRevision(wikiId, slug, state.previous)
                     _uiState.value = _uiState.value.copy(
                         previousRevision = resp.revision,
                         previousLoading = false,
                     )
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(previousLoading = false)
+                    _uiState.value = _uiState.value.copy(
+                        previousLoading = false,
+                        compareError = e.toMochiError(),
+                    )
                 }
             }
         }

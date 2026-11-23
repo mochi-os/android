@@ -20,6 +20,8 @@
     <string name="common_clear_search">Efase rechèch</string>
     <string name="drawer_open">Ouvri meni</string>
     <string name="common_cancel">Anile</string>
+    <string name="common_discard_title">Jete chanjman yo?</string>
+    <string name="common_discard">Jete</string>
     <string name="common_filter">Filtre</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Retire filt la</string>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wikikunata tariy</string>
     <string name="wikis_find_no_results">Mana wikikuna tarisqachu</string>
     <string name="wikis_find_recommended_section">Recomendasqa wikikuna</string>
-    <string name="wikis_join_title">Wikita replicay</string>
-    <string name="wikis_join_or_id">Utaq IDta directamente churay</string>
-    <string name="wikis_join_id_label">Wiki entidad ID</string>
-    <string name="wikis_join_submit">Wikita replicay</string>
     <string name="wikis_create_title">Wiki kamariy</string>
     <string name="wikis_create_name_label">Suti</string>
     <string name="wikis_create_privacy_label">Pipas wikita maskananpaq saqiy</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Kay wikipi llapan páginakunapi ñaqha hukchaykuna.</string>
     <string name="wikis_changes_empty">Manaraq hukchaykuna kanchu</string>
     <string name="wikis_search_empty_query">Maskay rimayta qillqay</string>
-    <string name="wikis_redirects_title">Redireccionkuna</string>
-    <string name="wikis_redirects_add">Yapay</string>
     <string name="wikis_redirects_empty">Mana redireccionkuna wakichisqachu</string>
     <string name="wikis_redirect_create_title">Redirección kamariy</string>
     <string name="wikis_redirect_create_action">Kamariy</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Adjuntokuna</string>
     <string name="wikis_attachments_upload">Archivokunata wichachiy</string>
     <string name="wikis_attachments_uploading">Wichachichkan…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s archivo wichachisqa</item>
+        <item quantity="other">%s archivokuna wichachisqa</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Mana archivokunata wichachiyta atinchu</string>
     <string name="wikis_attachments_search_clear">Maskayta pichay</string>
     <string name="wikis_attachments_filter_all">Llapan archivokuna</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Yaykuy musuqchasqa</string>
     <string name="wikis_access_revoke_success">Yaykuy qichusqa</string>
     <string name="wikis_access_revoke_failed">Mana yaykuyta qichuyta atinchu</string>
+    <string name="wikis_rss_revoke_failed">RSS yaykuyta mana qichuyta atikurqanchu</string>
+    <string name="wikis_access_search_failed">Mana apaykachaqkunata maskayta atinchu</string>
+    <string name="wikis_replica_unknown">Mana riqsisqa</string>
     <string name="wikis_replicas_empty_title">Manaraq réplicakuna kanchu</string>
     <string name="wikis_replicas_empty_message">Huk wikikuna kay wikita replicaspa, kaypi rikurinqaku.</string>
     <string name="wikis_replicas_never_synced">Mana hayk\'aqpas</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">¿Cheqaqchu %1$s-manta suscripcionta qichuyta munanki?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Sutiwan, ID-wan, ruk\'ana unanchawan utaq URL-wan maskay</string>
-    <string name="wikis_join_search_button">Wikikunata maskay…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Yuyaychasqa servidorta mana llamk\'achispa kutimanta ruwachkan…</string>
     <string name="wikis_comments_title_template">%1$s - Comentariokuna</string>
     <string name="wikis_comment_form_placeholder_new">Huk comentariota qillqay</string>
     <string name="wikis_comment_form_placeholder_reply">Huk kutichiyta qillqay</string>
     <string name="wikis_comment_form_send">Apachiy</string>
     <string name="wikis_comment_form_remove_attachment">Adjuntota qichuy</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Contenidoykita Markdownwan kaypi qillqay</string>
     <string name="wikis_insert_dialog_empty">Manaraq adjuntokuna kanchu. Qallarinaykipaq huk archivota wichachiy.</string>
     <string name="wikis_delete_page_message">\"%1$s\" (%2$s) páginata wischuyta munachkanki. Kay ruwayqa historiamanta kutichipuspa kutichiy atikun.</string>
     <string name="wikis_delete_page_success">Página wischusqa</string>
     <string name="wikis_revert_page_title">Páginata kutichipuy</string>
     <string name="wikis_revert_page_message">%1$s-ta %2$s versionman kutichipuyta munachkanki. Kayqa %2$s versionpa contenidonwan musuq revisionta kamarinqa.</string>
-    <string name="wikis_revert_page_default_comment">%1$s versionman kutichipusqa</string>
     <string name="wikis_revert_page_success">%1$s versionman kutichipusqa</string>
     <string name="wikis_rename_page_renaming">Sutinta hukchachkan…</string>
     <string name="wikis_rename_page_success">Páginapa sutin hukchasqa</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Qhipa sincronizasqa: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Kayqa “%1$s”-man musuqchaykunata apachiyta sayachinqa. Munaspankuqa kutimanta replicayta atinku.</string>
     <string name="wikis_replicas_removed_success">Réplica qichusqa</string>
-    <string name="wikis_load_more">Aswan cargay</string>
     <string name="wikis_access_change_level">Yaykuy patachanta tikray</string>
     <string name="wikis_access_subject_anyone">Pipas</string>
     <string name="wikis_access_subject_authenticated">Autenticasqa apaykachaqkuna</string>

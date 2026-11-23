@@ -47,17 +47,15 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.UploadFiles
-import org.mochios.android.util.segment
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.attachmentMarkdown
 import org.mochios.wikis.ui.components.attachmentPath
 
 /**
- * Attachment picker for the editor. Inserts
- * `![name](attachments/<id>/thumbnail)` for images and
- * `[name](attachments/<id>)` otherwise at [cursor], reporting the new cursor
- * via [onInserted].
+ * Attachment picker for the editor. Inserts [attachmentMarkdown] for the
+ * picked attachment at [cursor], reporting the new cursor via [onInserted].
  */
 @Composable
 fun InsertAttachmentDialog(
@@ -160,7 +158,7 @@ fun InsertAttachmentDialog(
                                         attachmentPath(ctx.baseURL, attachment.id, "thumbnail")
                                     },
                                     onClick = {
-                                        val snippet = buildSnippet(attachment)
+                                        val snippet = attachmentMarkdown(attachment)
                                         val nextCursor = viewModel.insertAtCursor(snippet, cursor)
                                         onInserted(nextCursor)
                                     },
@@ -226,13 +224,3 @@ private fun AttachmentTile(
 
 /** Convenience extension matching the web `isImage(attachment.type)` helper. */
 private val Attachment.isImage: Boolean get() = type.startsWith("image/")
-
-/** Build the markdown snippet to splice into the body for the picked attachment. */
-private fun buildSnippet(attachment: Attachment): String {
-    val url = "attachments/" + segment(attachment.id).orEmpty()
-    return if (attachment.isImage) {
-        "![${attachment.name}]($url/thumbnail)"
-    } else {
-        "[${attachment.name}]($url)"
-    }
-}

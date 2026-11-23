@@ -26,7 +26,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mochios.settings.R
 import org.mochios.settings.api.SystemDocument
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -94,7 +93,7 @@ class SystemDocumentsLeaveTest {
         rule.waitForIdle()
     }
 
-    private fun asking() = rule.onNodeWithText(text(R.string.system_documents_discard_title))
+    private fun asking() = rule.onNodeWithText(text(MochiR.string.common_discard_title))
 
     /** The system back used to leave at once and drop the edit. */
     @Test
@@ -106,7 +105,7 @@ class SystemDocumentsLeaveTest {
         assertEquals(0, passed)
         asking().assertExists()
 
-        rule.onNodeWithText(text(R.string.system_documents_discard)).performClick()
+        rule.onNodeWithText(text(MochiR.string.common_discard)).performClick()
         rule.waitForIdle()
         assertEquals(1, left)
         asking().assertDoesNotExist()

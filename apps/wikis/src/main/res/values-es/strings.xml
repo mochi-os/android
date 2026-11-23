@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Buscar wikis</string>
     <string name="wikis_find_no_results">No se encontraron wikis</string>
     <string name="wikis_find_recommended_section">Wikis recomendados</string>
-    <string name="wikis_join_title">Replicar wiki</string>
-    <string name="wikis_join_or_id">O introduce el ID directamente</string>
-    <string name="wikis_join_id_label">ID de entidad del wiki</string>
-    <string name="wikis_join_submit">Replicar wiki</string>
     <string name="wikis_create_title">Crear wiki</string>
     <string name="wikis_create_name_label">Nombre</string>
     <string name="wikis_create_privacy_label">Permitir a cualquiera buscar el wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Ediciones recientes en todas las páginas de este wiki.</string>
     <string name="wikis_changes_empty">Aún no hay cambios</string>
     <string name="wikis_search_empty_query">Introduce un término de búsqueda</string>
-    <string name="wikis_redirects_title">Redirecciones</string>
-    <string name="wikis_redirects_add">Añadir</string>
     <string name="wikis_redirects_empty">No hay redirecciones configuradas</string>
     <string name="wikis_redirect_create_title">Crear redirección</string>
     <string name="wikis_redirect_create_action">Crear</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Adjuntos</string>
     <string name="wikis_attachments_upload">Subir ficheros</string>
     <string name="wikis_attachments_uploading">Subiendo…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s archivo subido</item>
+        <item quantity="other">%s archivos subidos</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Error al subir los archivos</string>
     <string name="wikis_attachments_search_clear">Borrar búsqueda</string>
     <string name="wikis_attachments_filter_all">Todos los ficheros</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Acceso actualizado</string>
     <string name="wikis_access_revoke_success">Acceso eliminado</string>
     <string name="wikis_access_revoke_failed">Error al quitar el acceso</string>
+    <string name="wikis_rss_revoke_failed">No se pudo revocar el acceso RSS</string>
+    <string name="wikis_access_search_failed">No se pudieron buscar usuarios</string>
+    <string name="wikis_replica_unknown">Desconocido</string>
     <string name="wikis_replicas_empty_title">Aún no hay réplicas</string>
     <string name="wikis_replicas_empty_message">Cuando otros wikis repliquen este wiki, aparecerán aquí.</string>
     <string name="wikis_replicas_never_synced">Nunca</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">¿Seguro que quieres anular la suscripción a %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Buscar por nombre, ID, huella o URL</string>
-    <string name="wikis_join_search_button">Buscar wikis…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Reintentando sin el servidor sugerido…</string>
     <string name="wikis_comments_title_template">%1$s - Comentarios</string>
     <string name="wikis_comment_form_placeholder_new">Escribe un comentario</string>
     <string name="wikis_comment_form_placeholder_reply">Escribe una respuesta</string>
     <string name="wikis_comment_form_send">Enviar</string>
     <string name="wikis_comment_form_remove_attachment">Quitar adjunto</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Escribe tu contenido aquí usando Markdown</string>
     <string name="wikis_insert_dialog_empty">Aún no hay adjuntos. Sube un archivo para empezar.</string>
     <string name="wikis_delete_page_message">Estás a punto de eliminar la página «%1$s» (%2$s). Esta acción se puede deshacer restaurando desde el historial.</string>
     <string name="wikis_delete_page_success">Página eliminada</string>
     <string name="wikis_revert_page_title">Revertir página</string>
     <string name="wikis_revert_page_message">Estás a punto de revertir %1$s a la versión %2$s. Esto creará una nueva revisión con el contenido de la versión %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Revertido a la versión %1$s</string>
     <string name="wikis_revert_page_success">Revertido a la versión %1$s</string>
     <string name="wikis_rename_page_renaming">Renombrando…</string>
     <string name="wikis_rename_page_success">Página renombrada</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Última sincronización: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Esto detendrá el envío de actualizaciones a «%1$s». Pueden volver a replicar si lo desean.</string>
     <string name="wikis_replicas_removed_success">Réplica eliminada</string>
-    <string name="wikis_load_more">Cargar más</string>
     <string name="wikis_access_change_level">Nivel de acceso</string>
     <string name="wikis_access_subject_anyone">Cualquiera</string>
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>

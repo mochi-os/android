@@ -29,10 +29,21 @@ import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.AccessSubjectRule
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.wikis.R
+import org.mochios.wikis.model.User
 import org.mochios.android.R as MochiR
 
 private val ACCESS_LEVEL_KEYS = listOf("edit", "view", "none")
+
+/**
+ * Searched people as the access dialog offers them: granted by their identity
+ * id, the subject the server matches a reader's rules on, and named by their
+ * name or, without one, their fingerprint.
+ */
+@Composable
+internal fun accessCandidates(users: List<User>): List<AccessCandidate> =
+    users.map { user -> AccessCandidate(user.id, personName(user.name, fingerprint(user.id))) }
 
 @Composable
 private fun wikiAccessLevelLabel(level: String): String = when (level) {
@@ -62,7 +73,7 @@ fun AccessTab(
     // Scaffold's SnackbarHost surfaces them.
     LaunchedEffect(Unit) {
         viewModel.snackbar.collect { msg ->
-            parentViewModel.emit(msg.messageRes, *msg.args.toTypedArray())
+            parentViewModel.emit(msg.messageRes, msg.args, msg.error)
         }
     }
 
@@ -70,6 +81,12 @@ fun AccessTab(
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
         }
+        return
+    }
+    // A failed load is not a wiki without rules.
+    val error = state.error
+    if (error != null && state.subjects.isEmpty()) {
+        ErrorState(error = error, onRetry = viewModel::load)
         return
     }
 
@@ -111,11 +128,7 @@ fun AccessTab(
                 authenticatedDesc = stringResource(R.string.wikis_access_authenticated_desc),
                 selected = { name -> resources.getString(R.string.wikis_access_selected, name) }
             ),
-            // The fingerprint is the subject the server knows a person by,
-            // where one is resolved.
-            users = state.userSearchResults.map { user ->
-                AccessCandidate(user.fingerprint ?: user.id, personName(user.name, user.fingerprint ?: fingerprint(user.id)))
-            },
+            users = accessCandidates(state.userSearchResults),
             groups = state.groups.map { group ->
                 AccessCandidate("@${group.id}", group.name, group.id)
             },

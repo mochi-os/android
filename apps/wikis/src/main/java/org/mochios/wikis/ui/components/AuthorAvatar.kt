@@ -14,22 +14,12 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.util.segment
 
 /**
- * Standard avatar tier set. Pick by intent rather than pixels — these mirror
- * web's `AVATAR_SIZES` in `lib/web/src/components/entity-avatar.tsx`:
+ * The avatar tiers the wiki draws, picked by intent rather than pixels; they
+ * mirror web's `AVATAR_SIZES` in `lib/web/src/components/entity-avatar.tsx`:
  *   xs  - inline next to text (history rows, recent-changes rows)
- *   sm  - sidebar items, list rows
- *   md  - member lists, table cells, search-result rows
- *   lg  - dense feature list rows
- *   xl  - page header
- *   xxl - profile hero
  */
 enum class AvatarSize(val px: Dp) {
     XS(20.dp),
-    SM(28.dp),
-    MD(32.dp),
-    LG(40.dp),
-    XL(48.dp),
-    XXL(80.dp),
 }
 
 /**
@@ -48,12 +38,7 @@ fun AuthorAvatar(
     val wiki = LocalWikiContext.current
         ?: error("AuthorAvatar requires LocalWikiContext")
     val base = wiki.path
-    // styleUrl is computed for parity with web (page-history.tsx /
-    // changes-list.tsx) — the lib EntityAvatar will read it once accent
-    // fetching lands on Android; until then it's reserved for that wiring.
-    @Suppress("UNUSED_VARIABLE")
     // An id no segment can carry has the placeholder.
-    val styleUrl = segment(revisionId)?.let { "${base}revision/$it/asset/style" }
     val src = segment(revisionId)?.let { OwnedAddress.of("${base}revision/$it/asset/avatar") }
 
     EntityAvatar(

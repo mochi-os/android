@@ -20,6 +20,8 @@
     <string name="common_clear_search">پاک کردن جست‌وجو</string>
     <string name="drawer_open">باز کردن منو</string>
     <string name="common_cancel">لغو</string>
+    <string name="common_discard_title">تغییرات دور انداخته شود؟</string>
+    <string name="common_discard">دور انداختن</string>
     <string name="common_filter">فیلتر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">حذف فیلتر</string>

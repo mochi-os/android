@@ -20,6 +20,8 @@
     <string name="common_clear_search">Glan cuardach</string>
     <string name="drawer_open">Oscail roghchlár</string>
     <string name="common_cancel">Cealaigh</string>
+    <string name="common_discard_title">An gcuirfear na hathruithe i leataobh?</string>
+    <string name="common_discard">Cuir i leataobh</string>
     <string name="common_filter">Scag</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Bain scagaire</string>

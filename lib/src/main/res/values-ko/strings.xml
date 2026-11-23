@@ -20,6 +20,8 @@
     <string name="common_clear_search">검색 지우기</string>
     <string name="drawer_open">메뉴 열기</string>
     <string name="common_cancel">취소</string>
+    <string name="common_discard_title">변경사항을 버릴까요?</string>
+    <string name="common_discard">버리기</string>
     <string name="common_filter">필터</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">필터 제거</string>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wiki\'s zoeken</string>
     <string name="wikis_find_no_results">Geen wiki\'s gevonden</string>
     <string name="wikis_find_recommended_section">Aanbevolen wiki\'s</string>
-    <string name="wikis_join_title">Wiki repliceren</string>
-    <string name="wikis_join_or_id">Of voer ID rechtstreeks in</string>
-    <string name="wikis_join_id_label">Wiki-entiteits-ID</string>
-    <string name="wikis_join_submit">Wiki repliceren</string>
     <string name="wikis_create_title">Wiki aanmaken</string>
     <string name="wikis_create_name_label">Naam</string>
     <string name="wikis_create_privacy_label">Iedereen toestaan te zoeken naar wiki</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
     <string name="wikis_changes_empty">Nog geen wijzigingen</string>
     <string name="wikis_search_empty_query">Voer een zoekterm in</string>
-    <string name="wikis_redirects_title">Omleidingen</string>
-    <string name="wikis_redirects_add">Toevoegen</string>
     <string name="wikis_redirects_empty">Geen redirects geconfigureerd</string>
     <string name="wikis_redirect_create_title">Omleiding aanmaken</string>
     <string name="wikis_redirect_create_action">Aanmaken</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Bijlagen</string>
     <string name="wikis_attachments_upload">Bestanden uploaden</string>
     <string name="wikis_attachments_uploading">Uploaden…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s bestand geüpload</item>
+        <item quantity="other">%s bestanden geüpload</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Bestanden uploaden mislukt</string>
     <string name="wikis_attachments_search_clear">Zoekopdracht wissen</string>
     <string name="wikis_attachments_filter_all">Alle bestanden</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Toegang bijgewerkt</string>
     <string name="wikis_access_revoke_success">Toegang verwijderd</string>
     <string name="wikis_access_revoke_failed">Toegang verwijderen mislukt</string>
+    <string name="wikis_rss_revoke_failed">Kan RSS-toegang niet intrekken</string>
+    <string name="wikis_access_search_failed">Gebruikers konden niet worden gezocht</string>
+    <string name="wikis_replica_unknown">Onbekend</string>
     <string name="wikis_replicas_empty_title">Nog geen replica\'s</string>
     <string name="wikis_replicas_empty_message">Wanneer andere wiki\'s deze wiki repliceren, verschijnen ze hier.</string>
     <string name="wikis_replicas_never_synced">Nooit</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Weet je zeker dat je %1$s wilt afzeggen?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Zoek op naam, ID, vingerafdruk of URL</string>
-    <string name="wikis_join_search_button">Wikis zoeken…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Opnieuw proberen zonder de voorgestelde server…</string>
     <string name="wikis_comments_title_template">%1$s - Opmerkingen</string>
     <string name="wikis_comment_form_placeholder_new">Schrijf een opmerking</string>
     <string name="wikis_comment_form_placeholder_reply">Schrijf een antwoord</string>
     <string name="wikis_comment_form_send">Verzenden</string>
     <string name="wikis_comment_form_remove_attachment">Bijlage verwijderen</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Schrijf hier je inhoud met Markdown</string>
     <string name="wikis_insert_dialog_empty">Nog geen bijlagen. Upload een bestand om te beginnen.</string>
     <string name="wikis_delete_page_message">Je staat op het punt de pagina \"%1$s\" (%2$s) te verwijderen. Deze actie kan ongedaan worden gemaakt door te herstellen uit de geschiedenis.</string>
     <string name="wikis_delete_page_success">Pagina verwijderd</string>
     <string name="wikis_revert_page_title">Pagina terugdraaien</string>
     <string name="wikis_revert_page_message">Je staat op het punt %1$s te herstellen naar versie %2$s. Dit creëert een nieuwe revisie met de inhoud van versie %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Hersteld naar versie %1$s</string>
     <string name="wikis_revert_page_success">Hersteld naar versie %1$s</string>
     <string name="wikis_rename_page_renaming">Naam wijzigen…</string>
     <string name="wikis_rename_page_success">Pagina hernoemd</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Laatst gesynchroniseerd: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dit stopt het versturen van updates naar \"%1$s\". Ze kunnen opnieuw repliceren als ze willen.</string>
     <string name="wikis_replicas_removed_success">Replica verwijderd</string>
-    <string name="wikis_load_more">Meer laden</string>
     <string name="wikis_access_change_level">Toegangsniveau</string>
     <string name="wikis_access_subject_anyone">Iedereen</string>
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>

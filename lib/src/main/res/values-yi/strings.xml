@@ -20,6 +20,8 @@
     <string name="common_clear_search">רייניקן זוכן</string>
     <string name="drawer_open">עפֿן מעניו</string>
     <string name="common_cancel">אָפּזאָגן</string>
+    <string name="common_discard_title">אַװעקװאַרפֿן די ענדערונגען?</string>
+    <string name="common_discard">אַװעקװאַרפֿן</string>
     <string name="common_filter">פֿילטער</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">אַראָפּנעמען פֿילטער</string>

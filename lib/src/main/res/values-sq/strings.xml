@@ -20,6 +20,8 @@
     <string name="common_clear_search">Pastro kërkimin</string>
     <string name="drawer_open">Hap menynë</string>
     <string name="common_cancel">Anulo</string>
+    <string name="common_discard_title">T\'i hedhësh ndryshimet?</string>
+    <string name="common_discard">Hidh</string>
     <string name="common_filter">Filtro</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Hiq filtrin</string>

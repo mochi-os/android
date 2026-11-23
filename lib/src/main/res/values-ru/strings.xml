@@ -20,6 +20,8 @@
     <string name="common_clear_search">Очистить поиск</string>
     <string name="drawer_open">Открыть меню</string>
     <string name="common_cancel">Отмена</string>
+    <string name="common_discard_title">Не сохранять изменения?</string>
+    <string name="common_discard">Не сохранять</string>
     <string name="common_filter">Фильтр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Убрать фильтр</string>

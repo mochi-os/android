@@ -405,8 +405,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Hindi kilalang tema</string>
     <string name="system_documents_modified">Binago</string>
-    <string name="system_documents_discard_title">Itapon ang mga pagbabago?</string>
-    <string name="system_documents_discard">Itapon</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s nagtagumpay</item>
         <item quantity="other">%1$s nagtagumpay</item>

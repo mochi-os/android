@@ -17,8 +17,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.History
@@ -42,12 +40,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.api.userMessage
+import org.mochios.android.format.personName
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.LoadMoreButton
+import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.util.fingerprint
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Change
 import org.mochios.wikis.navigation.WikisApp
@@ -88,19 +88,17 @@ fun ChangesListScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
+            val error = state.error
             when {
-                state.isLoading && state.changes.isEmpty() -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
-                }
-                state.error != null && state.changes.isEmpty() -> {
+                // The wiki's information or the first page failed: one retry
+                // asks for whichever is missing.
+                error != null && (wikiInfo == null || state.changes.isEmpty()) -> {
                     ErrorState(
-                        error = state.error!!,
-                        onRetry = viewModel::loadChanges,
+                        error = error,
+                        onRetry = viewModel::load,
                     )
                 }
-                wikiInfo == null -> {
+                wikiInfo == null || state.isLoading && state.changes.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
@@ -116,7 +114,7 @@ fun ChangesListScreen(
                         ChangesBody(
                             changes = state.changes,
                             hasMore = state.hasMore,
-                            isLoadingMore = state.isLoadingMore,
+                            load = state.load,
                             onLoadMore = { viewModel.loadMore() },
                             onOpenPage = { slug ->
                                 navController.navigate(
@@ -135,7 +133,7 @@ fun ChangesListScreen(
 internal fun ChangesBody(
     changes: List<Change>,
     hasMore: Boolean,
-    isLoadingMore: Boolean,
+    load: LoadState,
     onLoadMore: () -> Unit,
     onOpenPage: (String) -> Unit,
 ) {
@@ -154,51 +152,45 @@ internal fun ChangesBody(
 
         HorizontalDivider()
 
-        if (changes.isEmpty()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(top = 48.dp),
-                contentAlignment = Alignment.TopCenter,
-            ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Icon(
-                        Icons.Default.History,
-                        contentDescription = null,
-                        modifier = Modifier.size(48.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    Text(
-                        text = stringResource(R.string.wikis_changes_empty),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(vertical = 4.dp),
-            ) {
-                items(changes, key = { it.id.ifEmpty { it.slug + "/" + it.version } }) { change ->
-                    ChangeRow(
-                        change = change,
-                        avatar = avatars[change.author] ?: change.id,
-                        onClick = { onOpenPage(change.slug) },
-                    )
-                    HorizontalDivider()
-                }
-                if (hasMore) {
-                    item(key = "load-more") {
-                        LoadMoreButton(
-                            label = stringResource(R.string.wikis_load_more),
-                            isLoading = isLoadingMore,
-                            onClick = onLoadMore,
+        // The next page is asked for as the end of the list comes into view;
+        // one that fails stands as the list's last row, with Retry.
+        InfiniteList(
+            items = changes,
+            load = load,
+            hasMore = hasMore,
+            onLoadMore = onLoadMore,
+            contentPadding = PaddingValues(vertical = 4.dp),
+            key = { change -> change.id.ifEmpty { change.slug + "/" + change.version } },
+            emptyContent = {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(top = 48.dp),
+                    contentAlignment = Alignment.TopCenter,
+                ) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Icon(
+                            Icons.Default.History,
+                            contentDescription = null,
+                            modifier = Modifier.size(48.dp),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        Text(
+                            text = stringResource(R.string.wikis_changes_empty),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                 }
-            }
+            },
+        ) { change ->
+            ChangeRow(
+                change = change,
+                avatar = avatars[change.author] ?: change.id,
+                onClick = { onOpenPage(change.slug) },
+            )
+            HorizontalDivider()
         }
     }
 }
@@ -248,7 +240,7 @@ private fun ChangeRow(
                 )
                 Spacer(Modifier.width(6.dp))
                 Text(
-                    text = change.name.ifBlank { change.author.take(8) },
+                    text = personName(change.name, fingerprint(change.author)),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,

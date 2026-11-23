@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Wikik keresése</string>
     <string name="wikis_find_no_results">Nem találhatók wikik</string>
     <string name="wikis_find_recommended_section">Ajánlott wikik</string>
-    <string name="wikis_join_title">Wiki replikálása</string>
-    <string name="wikis_join_or_id">Vagy adja meg közvetlenül az azonosítót</string>
-    <string name="wikis_join_id_label">Wiki entitás-azonosító</string>
-    <string name="wikis_join_submit">Wiki replikálása</string>
     <string name="wikis_create_title">Wiki létrehozása</string>
     <string name="wikis_create_name_label">Név</string>
     <string name="wikis_create_privacy_label">Bárki kereshet a wikire</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Friss szerkesztések a wiki összes oldalán.</string>
     <string name="wikis_changes_empty">Még nincsenek változások</string>
     <string name="wikis_search_empty_query">Adjon meg egy keresési kifejezést</string>
-    <string name="wikis_redirects_title">Átirányítások</string>
-    <string name="wikis_redirects_add">Hozzáadás</string>
     <string name="wikis_redirects_empty">Nincsenek beállított átirányítások</string>
     <string name="wikis_redirect_create_title">Átirányítás létrehozása</string>
     <string name="wikis_redirect_create_action">Létrehozás</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Mellékletek</string>
     <string name="wikis_attachments_upload">Fájlok feltöltése</string>
     <string name="wikis_attachments_uploading">Feltöltés…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s fájl feltöltve</item>
+        <item quantity="other">%s fájl feltöltve</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Nem sikerült feltölteni a fájlokat</string>
     <string name="wikis_attachments_search_clear">Keresés törlése</string>
     <string name="wikis_attachments_filter_all">Összes fájl</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Hozzáférés frissítve</string>
     <string name="wikis_access_revoke_success">Hozzáférés eltávolítva</string>
     <string name="wikis_access_revoke_failed">Nem sikerült eltávolítani a hozzáférést</string>
+    <string name="wikis_rss_revoke_failed">Az RSS-hozzáférés visszavonása sikertelen</string>
+    <string name="wikis_access_search_failed">A felhasználók keresése sikertelen</string>
+    <string name="wikis_replica_unknown">Ismeretlen</string>
     <string name="wikis_replicas_empty_title">Még nincsenek replikák</string>
     <string name="wikis_replicas_empty_message">Ha más wikik replikálják ezt a wikit, itt jelennek meg.</string>
     <string name="wikis_replicas_never_synced">Soha</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Biztosan le szeretne iratkozni a következőről: %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Keresés név, ID, ujjlenyomat vagy URL alapján</string>
-    <string name="wikis_join_search_button">Wiki keresése…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Újrapróbálkozás a javasolt szerver nélkül…</string>
     <string name="wikis_comments_title_template">%1$s - Megjegyzések</string>
     <string name="wikis_comment_form_placeholder_new">Megjegyzés írása</string>
     <string name="wikis_comment_form_placeholder_reply">Válasz írása</string>
     <string name="wikis_comment_form_send">Küldés</string>
     <string name="wikis_comment_form_remove_attachment">Melléklet eltávolítása</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Írja ide tartalmát Markdown használatával</string>
     <string name="wikis_insert_dialog_empty">Még nincsenek mellékletek. Töltsön fel egy fájlt a kezdéshez.</string>
     <string name="wikis_delete_page_message">A „%1$s\" oldalt (%2$s) készül törölni. Ez a művelet visszavonható az előzményekből történő visszaállítással.</string>
     <string name="wikis_delete_page_success">Oldal törölve</string>
     <string name="wikis_revert_page_title">Oldal visszaállítása</string>
     <string name="wikis_revert_page_message">A(z) %1$s-t a(z) %2$s verzióra készül visszaállítani. Ezzel új verzió jön létre a(z) %2$s verzió tartalmával.</string>
-    <string name="wikis_revert_page_default_comment">Visszaállítva a(z) %1$s verzióra</string>
     <string name="wikis_revert_page_success">Visszaállítva a(z) %1$s verzióra</string>
     <string name="wikis_rename_page_renaming">Átnevezés…</string>
     <string name="wikis_rename_page_success">Oldal átnevezve</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Utolsó szinkronizálás: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ez leállítja a frissítések küldését a következőre: „%1$s\". Újra replikálhatnak, ha szeretnék.</string>
     <string name="wikis_replicas_removed_success">Replika eltávolítva</string>
-    <string name="wikis_load_more">Továbbiak betöltése</string>
     <string name="wikis_access_change_level">Hozzáférési szint</string>
     <string name="wikis_access_subject_anyone">Bárki</string>
     <string name="wikis_access_subject_authenticated">Bejelentkezett felhasználók</string>

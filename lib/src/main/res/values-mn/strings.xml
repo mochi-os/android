@@ -20,6 +20,8 @@
     <string name="common_clear_search">Хайлтыг цэвэрлэх</string>
     <string name="drawer_open">Цэс нээх</string>
     <string name="common_cancel">Цуцлах</string>
+    <string name="common_discard_title">Өөрчлөлтийг хаях уу?</string>
+    <string name="common_discard">Хаях</string>
     <string name="common_filter">Шүүлтүүр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Шүүлтүүр устгах</string>

@@ -20,6 +20,8 @@
     <string name="common_clear_search">Մաքրել որոնումը</string>
     <string name="drawer_open">Բացել մենյուն</string>
     <string name="common_cancel">Չեղարկել</string>
+    <string name="common_discard_title">Հրաժարվե՞լ փոփոխություններից։</string>
+    <string name="common_discard">Հրաժարվել</string>
     <string name="common_filter">Զտել</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Հեռացնել զտիչը</string>

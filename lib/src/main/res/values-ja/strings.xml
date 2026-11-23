@@ -20,6 +20,8 @@
     <string name="common_clear_search">検索をクリア</string>
     <string name="drawer_open">メニューを開く</string>
     <string name="common_cancel">キャンセル</string>
+    <string name="common_discard_title">変更を破棄しますか？</string>
+    <string name="common_discard">破棄</string>
     <string name="common_filter">フィルター</string>
     <string name="common_filter_chip">%1$s:%2$s</string>
     <string name="common_filter_remove">フィルターを削除</string>

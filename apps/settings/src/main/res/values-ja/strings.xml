@@ -401,8 +401,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">不明なテーマ</string>
     <string name="system_documents_modified">変更済み</string>
-    <string name="system_documents_discard_title">変更を破棄しますか？</string>
-    <string name="system_documents_discard">破棄</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">成功 %1$s</item>
     </plurals>

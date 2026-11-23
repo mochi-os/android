@@ -20,6 +20,8 @@
     <string name="common_clear_search">Embopotĩ jeheka</string>
     <string name="drawer_open">Eipe\'a menú</string>
     <string name="common_cancel">Heja</string>
+    <string name="common_discard_title">¿Remboykese umi ñemoambue?</string>
+    <string name="common_discard">Mboyke</string>
     <string name="common_filter">Mbogua</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Embogue mbogua</string>

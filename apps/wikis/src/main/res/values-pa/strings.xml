@@ -45,10 +45,6 @@
     <string name="wikis_find_title">ਵਿੱਕੀ ਲੱਭੋ</string>
     <string name="wikis_find_no_results">ਕੋਈ ਵਿਕੀ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="wikis_find_recommended_section">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀਆਂ ਵਿਕੀਆਂ</string>
-    <string name="wikis_join_title">ਵਿਕੀ ਰੈਪਲੀਕੇਟ ਕਰੋ</string>
-    <string name="wikis_join_or_id">ਜਾਂ ID ਸਿੱਧਾ ਦਰਜ ਕਰੋ</string>
-    <string name="wikis_join_id_label">Wiki ਇਕਾਈ ID</string>
-    <string name="wikis_join_submit">ਵਿਕੀ ਰੈਪਲੀਕੇਟ ਕਰੋ</string>
     <string name="wikis_create_title">ਵਿਕੀ ਬਣਾਓ</string>
     <string name="wikis_create_name_label">ਨਾਮ</string>
     <string name="wikis_create_privacy_label">ਕਿਸੇ ਨੂੰ ਵੀ ਵਿਕੀ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">ਇਸ ਵਿਕੀ ਦੇ ਸਾਰੇ ਪੇਜਾਂ ਵਿੱਚ ਹਾਲੀਆ ਸੋਧਾਂ।</string>
     <string name="wikis_changes_empty">ਅਜੇ ਕੋਈ ਬਦਲਾਅ ਨਹੀਂ</string>
     <string name="wikis_search_empty_query">ਖੋਜ ਸ਼ਬਦ ਦਰਜ ਕਰੋ</string>
-    <string name="wikis_redirects_title">ਰੀਡਾਇਰੈਕਟ</string>
-    <string name="wikis_redirects_add">ਜੋੜੋ</string>
     <string name="wikis_redirects_empty">ਕੋਈ ਰੀਡਾਇਰੈਕਟ ਕੌਨਫਿਗਰ ਨਹੀਂ</string>
     <string name="wikis_redirect_create_title">ਰੀਡਾਇਰੈਕਟ ਬਣਾਓ</string>
     <string name="wikis_redirect_create_action">ਬਣਾਓ</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">ਅਟੈਚਮੈਂਟਾਂ</string>
     <string name="wikis_attachments_upload">ਫਾਈਲਾਂ ਅਪਲੋਡ ਕਰੋ</string>
     <string name="wikis_attachments_uploading">ਅੱਪਲੋਡ ਕਰ ਰਿਹਾ ਹੈ…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s ਫਾਈਲ ਅੱਪਲੋਡ ਕੀਤੀ</item>
+        <item quantity="other">%s ਫਾਈਲਾਂ ਅੱਪਲੋਡ ਕੀਤੀਆਂ</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">ਫਾਈਲਾਂ ਅੱਪਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_attachments_search_clear">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
     <string name="wikis_attachments_filter_all">ਸਾਰੀਆਂ ਫਾਈਲਾਂ</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
     <string name="wikis_access_revoke_success">ਪਹੁੰਚ ਹਟਾਈ ਗਈ</string>
     <string name="wikis_access_revoke_failed">ਪਹੁੰਚ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="wikis_rss_revoke_failed">RSS ਪਹੁੰਚ ਵਾਪਸ ਲੈਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="wikis_access_search_failed">ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ ਖੋਜਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="wikis_replica_unknown">ਅਣਜਾਣ</string>
     <string name="wikis_replicas_empty_title">ਅਜੇ ਕੋਈ ਰੈਪਲਿਕਾ ਨਹੀਂ</string>
     <string name="wikis_replicas_empty_message">ਜਦੋਂ ਹੋਰ wikis ਇਸ wiki ਨੂੰ ਰੈਪਲੀਕੇਟ ਕਰਨਗੀਆਂ, ਉਹ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।</string>
     <string name="wikis_replicas_never_synced">ਕਦੇ ਨਹੀਂ</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ %1$s ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ਨਾਮ, ID, ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਂ URL ਦੁਆਰਾ ਖੋਜੋ</string>
-    <string name="wikis_join_search_button">wiki ਖੋਜੋ…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">ਸੁਝਾਏ ਸਰਵਰ ਤੋਂ ਬਿਨਾਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="wikis_comments_title_template">%1$s - ਟਿੱਪਣੀਆਂ</string>
     <string name="wikis_comment_form_placeholder_new">ਟਿੱਪਣੀ ਲਿਖੋ</string>
     <string name="wikis_comment_form_placeholder_reply">ਜਵਾਬ ਲਿਖੋ</string>
     <string name="wikis_comment_form_send">ਭੇਜੋ</string>
     <string name="wikis_comment_form_remove_attachment">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ਆਪਣੀ ਸਮੱਗਰੀ ਇੱਥੇ Markdown ਵਰਤ ਕੇ ਲਿਖੋ</string>
     <string name="wikis_insert_dialog_empty">ਹਾਲੇ ਕੋਈ ਅਟੈਚਮੈਂਟ ਨਹੀਂ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ।</string>
     <string name="wikis_delete_page_message">ਤੁਸੀਂ “%1$s” (%2$s) ਪੰਨਾ ਮਿਟਾਉਣ ਵਾਲੇ ਹੋ। ਇਤਿਹਾਸ ਤੋਂ ਬਹਾਲ ਕਰਕੇ ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।</string>
     <string name="wikis_delete_page_success">ਪੰਨਾ ਮਿਟਾਇਆ ਗਿਆ</string>
     <string name="wikis_revert_page_title">ਪੇਜ ਵਾਪਸ ਕਰੋ</string>
     <string name="wikis_revert_page_message">ਤੁਸੀਂ %1$s ਨੂੰ ਸੰਸਕਰਣ %2$s ਉੱਤੇ ਵਾਪਸ ਕਰਨ ਵਾਲੇ ਹੋ। ਇਸ ਨਾਲ ਸੰਸਕਰਣ %2$s ਦੀ ਸਮੱਗਰੀ ਵਾਲਾ ਨਵਾਂ ਸੰਸ਼ੋਧਨ ਬਣੇਗਾ।</string>
-    <string name="wikis_revert_page_default_comment">ਸੰਸਕਰਣ %1$s ਉੱਤੇ ਵਾਪਸ ਕੀਤਾ</string>
     <string name="wikis_revert_page_success">ਸੰਸਕਰਣ %1$s ਉੱਤੇ ਵਾਪਸ ਕੀਤਾ</string>
     <string name="wikis_rename_page_renaming">ਨਾਮ ਬਦਲਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="wikis_rename_page_success">ਪੰਨੇ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">ਆਖਰੀ ਵਾਰ ਸਿੰਕ ਕੀਤਾ: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ਇਹ “%1$s” ਨੂੰ ਅੱਪਡੇਟ ਭੇਜਣਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ। ਜੇ ਚਾਹੁਣ ਤਾਂ ਉਹ ਦੁਬਾਰਾ ਨਕਲ ਕਰ ਸਕਦੇ ਹਨ।</string>
     <string name="wikis_replicas_removed_success">ਰੈਪਲੀਕਾ ਹਟਾਈ ਗਈ</string>
-    <string name="wikis_load_more">ਹੋਰ ਲੋਡ ਕਰੋ</string>
     <string name="wikis_access_change_level">ਪਹੁੰਚ ਪੱਧਰ</string>
     <string name="wikis_access_subject_anyone">ਕੋਈ ਵੀ</string>
     <string name="wikis_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>

@@ -45,10 +45,6 @@
     <string name="wikis_find_title">Etsi wikejä</string>
     <string name="wikis_find_no_results">Wikejä ei löytynyt</string>
     <string name="wikis_find_recommended_section">Suositellut wikit</string>
-    <string name="wikis_join_title">Kopioi wiki</string>
-    <string name="wikis_join_or_id">Tai syötä tunnus suoraan</string>
-    <string name="wikis_join_id_label">Wikin entiteetin tunnus</string>
-    <string name="wikis_join_submit">Kopioi wiki</string>
     <string name="wikis_create_title">Luo wiki</string>
     <string name="wikis_create_name_label">Nimi</string>
     <string name="wikis_create_privacy_label">Salli kenen tahansa etsiä wikiä</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">Viimeaikaiset muokkaukset kaikilla tämän wikin sivuilla.</string>
     <string name="wikis_changes_empty">Ei vielä muutoksia</string>
     <string name="wikis_search_empty_query">Anna hakusana</string>
-    <string name="wikis_redirects_title">Uudelleenohjaukset</string>
-    <string name="wikis_redirects_add">Lisää</string>
     <string name="wikis_redirects_empty">Uudelleenohjauksia ei ole määritetty</string>
     <string name="wikis_redirect_create_title">Luo uudelleenohjaus</string>
     <string name="wikis_redirect_create_action">Luo</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">Liitteet</string>
     <string name="wikis_attachments_upload">Lataa tiedostot</string>
     <string name="wikis_attachments_uploading">Ladataan…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s tiedosto ladattu</item>
+        <item quantity="other">%s tiedostoa ladattu</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">Tiedostojen lähetys epäonnistui</string>
     <string name="wikis_attachments_search_clear">Tyhjennä haku</string>
     <string name="wikis_attachments_filter_all">Kaikki tiedostot</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">Käyttöoikeus päivitetty</string>
     <string name="wikis_access_revoke_success">Käyttöoikeus poistettu</string>
     <string name="wikis_access_revoke_failed">Pääsyn poisto epäonnistui</string>
+    <string name="wikis_rss_revoke_failed">RSS-käyttöoikeuden mitätöinti epäonnistui</string>
+    <string name="wikis_access_search_failed">Käyttäjien hakeminen epäonnistui</string>
+    <string name="wikis_replica_unknown">Tuntematon</string>
     <string name="wikis_replicas_empty_title">Ei vielä kopioita</string>
     <string name="wikis_replicas_empty_message">Kun muut wikit replikoivat tämän wikin, ne näkyvät täällä.</string>
     <string name="wikis_replicas_never_synced">Ei koskaan</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">Haluatko varmasti peruuttaa tilauksen %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wikin RSS-URL</string>
     <string name="wikis_find_search_placeholder">Etsi nimellä, ID:llä, sormenjäljellä tai URL:lla</string>
-    <string name="wikis_join_search_button">Etsi wikejä…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">Yritetään uudelleen ilman ehdotettua palvelinta…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentit</string>
     <string name="wikis_comment_form_placeholder_new">Kirjoita kommentti</string>
     <string name="wikis_comment_form_placeholder_reply">Kirjoita vastaus</string>
     <string name="wikis_comment_form_send">Lähetä</string>
     <string name="wikis_comment_form_remove_attachment">Poista liite</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Kirjoita sisältösi tähän Markdownin avulla</string>
     <string name="wikis_insert_dialog_empty">Ei vielä liitteitä. Lataa tiedosto aloittaaksesi.</string>
     <string name="wikis_delete_page_message">Olet poistamassa sivua \"%1$s\" (%2$s). Tämä toimenpide voidaan kumota palauttamalla historiasta.</string>
     <string name="wikis_delete_page_success">Sivu poistettu</string>
     <string name="wikis_revert_page_title">Palauta sivu</string>
     <string name="wikis_revert_page_message">Olet palauttamassa %1$s versioon %2$s. Tämä luo uuden version, jonka sisältö on versiosta %2$s.</string>
-    <string name="wikis_revert_page_default_comment">Palautettu versioon %1$s</string>
     <string name="wikis_revert_page_success">Palautettu versioon %1$s</string>
     <string name="wikis_rename_page_renaming">Nimetään uudelleen…</string>
     <string name="wikis_rename_page_success">Sivu nimetty uudelleen</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">Viimeisin synkronointi: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tämä lopettaa päivitysten lähettämisen kohteeseen \"%1$s\". He voivat replikoida uudelleen halutessaan.</string>
     <string name="wikis_replicas_removed_success">Replika poistettu</string>
-    <string name="wikis_load_more">Lataa lisää</string>
     <string name="wikis_access_change_level">Käyttöoikeustaso</string>
     <string name="wikis_access_subject_anyone">Kuka tahansa</string>
     <string name="wikis_access_subject_authenticated">Kirjautuneet käyttäjät</string>

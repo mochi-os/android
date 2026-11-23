@@ -20,6 +20,8 @@
     <string name="common_clear_search">Очисти претрагу</string>
     <string name="drawer_open">Отвори мени</string>
     <string name="common_cancel">Откажи</string>
+    <string name="common_discard_title">Одбацити измене?</string>
+    <string name="common_discard">Одбаци</string>
     <string name="common_filter">Филтер</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Уклони филтер</string>

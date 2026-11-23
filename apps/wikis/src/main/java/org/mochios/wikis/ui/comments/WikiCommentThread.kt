@@ -32,6 +32,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
+import org.mochios.android.format.personName
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.CommentActions
@@ -39,6 +40,7 @@ import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.util.fingerprint
 import org.mochios.android.util.segment
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
@@ -47,9 +49,10 @@ import org.mochios.android.ui.components.addressByAuthor
 
 /**
  * Renders one [WikiComment] and its descendants, indenting each child by 16dp.
- * Reply always seeds blank: Android has no equivalent of
- * `window.getSelection()` over the Markwon-rendered body, so `selectedText` is
- * always null.
+ * Reply hands over the text selected in the comment's body, if any, which the
+ * reply then quotes, as the web does with `window.getSelection()`; with
+ * nothing selected the reply starts blank. Edit hands over what to run once
+ * the server has the edit, so a refused one keeps the edit box open.
  */
 @Composable
 fun WikiCommentThread(
@@ -57,7 +60,7 @@ fun WikiCommentThread(
     currentUserId: String?,
     isOwner: Boolean,
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
-    onEdit: ((commentId: String, body: String) -> Unit)?,
+    onEdit: ((commentId: String, body: String, saved: () -> Unit) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
     // One comment per author across the thread, the first each has
@@ -80,7 +83,7 @@ fun WikiCommentThread(
     val hasChildren = comment.children.isNotEmpty()
 
     val timeAgo = format.formatTimestamp(comment.created)
-    val displayName = comment.name.ifBlank { comment.author.orEmpty() }
+    val displayName = personName(comment.name, fingerprint(comment.author))
 
     val avatarSrc = wiki?.let { ctx ->
         segment(avatars[comment.author] ?: comment.id)?.let { OwnedAddress.of("/wikis/${ctx.wikiId}/-/comment/$it/asset/avatar") }
@@ -218,8 +221,7 @@ fun WikiCommentThread(
                             onCancel = { editing = false },
                             onSave = {
                                 if (editBody.isNotBlank()) {
-                                    onEdit?.invoke(comment.id, editBody.trim())
-                                    editing = false
+                                    onEdit?.invoke(comment.id, editBody.trim()) { editing = false }
                                 }
                             },
                         )

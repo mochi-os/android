@@ -45,10 +45,6 @@
     <string name="wikis_find_title">وڪيز ڳوليو</string>
     <string name="wikis_find_no_results">ڪي wikis نه مليون</string>
     <string name="wikis_find_recommended_section">تجويز ڪيل wikis</string>
-    <string name="wikis_join_title">wiki نقل ڪريو</string>
-    <string name="wikis_join_or_id">يا سڌو ID داخل ڪريو</string>
-    <string name="wikis_join_id_label">Wiki ادارو ID</string>
-    <string name="wikis_join_submit">wiki نقل ڪريو</string>
     <string name="wikis_create_title">wiki ٺاهيو</string>
     <string name="wikis_create_name_label">نالو</string>
     <string name="wikis_create_privacy_label">ڪنهن کي به wiki ڳولڻ جي اجازت ڏيو</string>
@@ -116,8 +112,6 @@
     <string name="wikis_changes_subtitle">هن wiki جي سمورن صفحن تي تازيون ترميمون.</string>
     <string name="wikis_changes_empty">اڃا ڪا تبديلي نه آهي</string>
     <string name="wikis_search_empty_query">ڳولا جي اصطلاح داخل ڪريو</string>
-    <string name="wikis_redirects_title">ريڊائريڪٽ</string>
-    <string name="wikis_redirects_add">شامل ڪريو</string>
     <string name="wikis_redirects_empty">ڪي ريڊائريڪٽ ترتيب نه ڏنا ويا</string>
     <string name="wikis_redirect_create_title">ريڊائريڪٽ ٺاهيو</string>
     <string name="wikis_redirect_create_action">ٺاهيو</string>
@@ -144,6 +138,10 @@
     <string name="wikis_attachments_title">ڳنڍيل فائلون</string>
     <string name="wikis_attachments_upload">فائلون اپ لوڊ ڪريو</string>
     <string name="wikis_attachments_uploading">اپ لوڊ ٿي رهيو آھي…</string>
+    <plurals name="wikis_attachments_uploaded">
+        <item quantity="one">%s فائل اپلوڊ ٿي</item>
+        <item quantity="other">%s فائلون اپلوڊ ٿيون</item>
+    </plurals>
     <string name="wikis_attachments_upload_failed">فائلون اپ لوڊ ڪرڻ ۾ ناڪام</string>
     <string name="wikis_attachments_search_clear">ڳولا صاف ڪريو</string>
     <string name="wikis_attachments_filter_all">سڀ فائلون</string>
@@ -209,6 +207,9 @@
     <string name="wikis_access_set_success">رسائي اپڊيٽ ڪئي وئي</string>
     <string name="wikis_access_revoke_success">رسائي هٽائي وئي</string>
     <string name="wikis_access_revoke_failed">رسائي هٽائڻ ۾ ناڪام</string>
+    <string name="wikis_rss_revoke_failed">RSS رسائي واپس وٺڻ ۾ ناڪام</string>
+    <string name="wikis_access_search_failed">صارف ڳولڻ ۾ ناڪام</string>
+    <string name="wikis_replica_unknown">اڻڄاتل</string>
     <string name="wikis_replicas_empty_title">اڃا ڪي ريپليڪاز نه آهن</string>
     <string name="wikis_replicas_empty_message">جڏھن ٻيون wikis ھن wiki کي نقل ڪن ٿيون، اھي ھتي ظاھر ٿينديون.</string>
     <string name="wikis_replicas_never_synced">ڪڏهن به نه</string>
@@ -230,22 +231,18 @@
     <string name="wikis_unsubscribe_confirm_message">ڇا اوھان کي پڪ آھي ته %1$s کان سبسڪرپشن ختم ڪرڻ چاھيو ٿا؟</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">نالي، ID، فنگر پرنٽ يا URL ذريعي ڳوليو</string>
-    <string name="wikis_join_search_button">wiki ڳوليو…</string>
-    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_subscribe_502_retry">تجويز ڪيل سرور کان سواءِ ٻيهر ڪوشش ٿي رهي آھي…</string>
     <string name="wikis_comments_title_template">%1$s - تبصرا</string>
     <string name="wikis_comment_form_placeholder_new">تبصرو لکو</string>
     <string name="wikis_comment_form_placeholder_reply">جواب لکو</string>
     <string name="wikis_comment_form_send">موڪليو</string>
     <string name="wikis_comment_form_remove_attachment">اٽيچمينٽ هٽايو</string>
-    <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">پنھنجو مواد ھتي Markdown استعمال ڪري لکو</string>
     <string name="wikis_insert_dialog_empty">اڃا ڪا منسلڪ فائل ناهي. شروع ڪرڻ لاءِ فائل اپلوڊ ڪريو.</string>
     <string name="wikis_delete_page_message">اوھان “%1$s” (%2$s) صفحو ڊاھڻ وارا آھيو. ھي عمل تاريخ مان بحال ڪري واپس ڪري سگھجي ٿو.</string>
     <string name="wikis_delete_page_success">صفحو ختم ڪيو ويو</string>
     <string name="wikis_revert_page_title">صفحو واپس آڻيو</string>
     <string name="wikis_revert_page_message">اوھان %1$s کي نسخو %2$s ڏانھن واپس ڪرڻ وارا آھيو. ھي نسخو %2$s جي مواد سان نئون نظرثاني ٺاھيندو.</string>
-    <string name="wikis_revert_page_default_comment">نسخو %1$s ڏانھن واپس ڪيو ويو</string>
     <string name="wikis_revert_page_success">نسخو %1$s ڏانھن واپس ڪيو ويو</string>
     <string name="wikis_rename_page_renaming">نالو تبديل ٿي رهيو آهي…</string>
     <string name="wikis_rename_page_success">صفحي جو نالو تبديل ٿيو</string>
@@ -276,7 +273,6 @@
     <string name="wikis_replicas_col_synced">آخري سنڪ: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">ھي “%1$s” ڏانھن تازه ڪاريون موڪلڻ بند ڪندو. جيڪڏھن چاھين ته ٻيھر نقل ڪري سگھن ٿا.</string>
     <string name="wikis_replicas_removed_success">ريپليڪا هٽايو ويو</string>
-    <string name="wikis_load_more">وڌيڪ لوڊ ڪريو</string>
     <string name="wikis_access_change_level">رسائي جي سطح</string>
     <string name="wikis_access_subject_anyone">ڪوبه</string>
     <string name="wikis_access_subject_authenticated">تصديق ٿيل صارف</string>

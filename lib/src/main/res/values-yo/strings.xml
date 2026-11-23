@@ -20,6 +20,8 @@
     <string name="common_clear_search">Pa àwárí rẹ́</string>
     <string name="drawer_open">Ṣí ìtòlẹ́sẹẹsẹ</string>
     <string name="common_cancel">Fagilé</string>
+    <string name="common_discard_title">Sọ àwọn àyípadà nù?</string>
+    <string name="common_discard">Sọ nù</string>
     <string name="common_filter">Yọ́</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Yọ àyàn kúrò</string>

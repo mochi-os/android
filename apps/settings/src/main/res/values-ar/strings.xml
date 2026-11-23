@@ -425,8 +425,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">سمة غير معروفة</string>
     <string name="system_documents_modified">معدَّل</string>
-    <string name="system_documents_discard_title">تجاهل التغييرات؟</string>
-    <string name="system_documents_discard">تجاهل</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="zero">%1$s ناجحة</item>
         <item quantity="one">%1$s ناجحة</item>

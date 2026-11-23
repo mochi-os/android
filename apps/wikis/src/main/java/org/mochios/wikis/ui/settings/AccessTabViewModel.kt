@@ -44,6 +44,7 @@ data class AccessSubject(
 data class AccessTabUiState(
     val isLoading: Boolean = true,
     val subjects: List<AccessSubject> = emptyList(),
+    /** Why the rules could not be loaded; an action's failure goes to the snackbar instead. */
     val error: MochiError? = null,
     val userSearchResults: List<User> = emptyList(),
     val groups: List<Group> = emptyList(),
@@ -82,10 +83,14 @@ internal fun groupAccessRules(rules: List<AccessRule>): List<AccessSubject> {
     )
 }
 
-/** Snackbar message dispatched by [AccessTabViewModel]. */
+/**
+ * Snackbar message dispatched by [AccessTabViewModel]: [messageRes] with
+ * [args]; for a failure, the server's reason in [error] where it sent one.
+ */
 data class AccessTabSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
@@ -138,8 +143,7 @@ class AccessTabViewModel @Inject constructor(
                 load()
             } catch (e: Exception) {
                 onDone(false)
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-                _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_set_failed))
+                _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_set_failed, error = e.toMochiError()))
             }
         }
     }
@@ -154,8 +158,7 @@ class AccessTabViewModel @Inject constructor(
                 load()
             } catch (e: Exception) {
                 onDone(false)
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-                _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_revoke_failed))
+                _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_revoke_failed, error = e.toMochiError()))
             }
         }
     }
@@ -176,8 +179,10 @@ class AccessTabViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(userSearchResults = results)
             } catch (e: CancellationException) {
                 throw e
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                // Said, not shown as no match: the people may well exist.
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+                _snackbar.emit(AccessTabSnackbar(R.string.wikis_access_search_failed, error = e.toMochiError()))
             }
         }
     }

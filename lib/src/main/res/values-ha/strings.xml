@@ -20,6 +20,8 @@
     <string name="common_clear_search">Share bincike</string>
     <string name="drawer_open">Buɗe menu</string>
     <string name="common_cancel">Soke</string>
+    <string name="common_discard_title">A watsar da canje-canjen?</string>
+    <string name="common_discard">Watsar</string>
     <string name="common_filter">Tacewa</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Cire matatar</string>

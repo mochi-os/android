@@ -7,7 +7,6 @@ package org.mochios.wikis.ui.attachments
 
 import android.content.Context
 import android.net.Uri
-import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
@@ -71,6 +70,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -81,6 +81,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -90,7 +91,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.DownloadRequest
@@ -98,7 +98,6 @@ import org.mochios.android.files.MIME_BINARY
 import org.mochios.android.files.Upload
 import org.mochios.android.files.rememberDownloadSaver
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.model.Attachment as MochiAttachment
 import org.mochios.android.model.FileKind
 import org.mochios.android.model.fileKindOf
 import org.mochios.android.ui.components.AttachmentCaptionDialog
@@ -123,8 +122,12 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.segment
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
+import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.attachmentMarkdown
 import org.mochios.wikis.ui.components.attachmentPath
+import org.mochios.wikis.ui.components.library
+import org.mochios.wikis.ui.components.openAttachment
 import org.mochios.wikis.ui.components.WikiContextValue
 
 /**
@@ -148,19 +151,33 @@ fun AttachmentsScreen(
     }
 
     // Forward ViewModel events onto the snackbar host.
+    val resources = LocalResources.current
+    val format = LocalFormat.current
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is AttachmentsEvent.Toast -> snackbarHostState.showSnackbar(event.message)
                 is AttachmentsEvent.Error -> snackbarHostState.showSnackbar(event.error.userMessage())
+                is AttachmentsEvent.Uploaded -> snackbarHostState.showSnackbar(
+                    resources.getQuantityString(
+                        R.plurals.wikis_attachments_uploaded,
+                        event.count,
+                        format.formatNumber(event.count),
+                    )
+                )
             }
         }
     }
 
+    // Uploading, captioning and deleting are the editors' (the server refuses
+    // them to anyone else); copying the embed link and saving a file are
+    // every reader's.
+    val canEdit = state.permissions.edit
+    val currentCanEdit by rememberUpdatedState(canEdit)
+
     // System multi-file picker — same contract as InsertAttachmentDialog uses,
     // so consistent with the in-editor upload flow.
     val uploadFailedMsg = stringResource(R.string.wikis_attachments_upload_failed)
-    val uploadingMsg = stringResource(R.string.wikis_attachments_uploading)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents(),
     ) { uris ->
@@ -168,7 +185,6 @@ fun AttachmentsScreen(
             viewModel.uploadAttachments(
                 uris = uris,
                 uploadFailed = uploadFailedMsg,
-                uploadSuccess = uploadingMsg,
             )
         }
     }
@@ -186,6 +202,7 @@ fun AttachmentsScreen(
                 isDraggedOver = false
             }
             override fun onDrop(event: DragAndDropEvent): Boolean {
+                if (!currentCanEdit) return false
                 val clip = event.toAndroidDragEvent().clipData ?: return false
                 val uris = mutableListOf<Uri>()
                 for (i in 0 until clip.itemCount) {
@@ -196,7 +213,6 @@ fun AttachmentsScreen(
                 viewModel.uploadAttachments(
                     uris = uris,
                     uploadFailed = uploadFailedMsg,
-                    uploadSuccess = uploadingMsg,
                 )
                 return true
             }
@@ -213,8 +229,9 @@ fun AttachmentsScreen(
         },
         bottomBar = {
             // Held back until the wiki has loaded, so the bar does not offer an
-            // upload over a spinner or an error the retry has yet to clear.
-            if (state.wiki != null) {
+            // upload over a spinner or an error the retry has yet to clear,
+            // and shown only to those who may upload.
+            if (state.wiki != null && canEdit) {
                 UploadBar(
                     isUploading = state.isUploading,
                     upload = upload,
@@ -232,7 +249,7 @@ fun AttachmentsScreen(
                         // Accept any drag event that carries at least one URI in
                         // its ClipData — covers file pickers + Photos + Drive.
                         val clip = event.toAndroidDragEvent().clipData
-                        clip != null && (0 until clip.itemCount).any { i ->
+                        currentCanEdit && clip != null && (0 until clip.itemCount).any { i ->
                             clip.getItemAt(i).uri != null
                         }
                     },
@@ -246,16 +263,14 @@ fun AttachmentsScreen(
                 ),
         ) {
             val wikiInfo = state.wiki
+            val error = state.error
             when {
-                state.isLoading && state.attachments.isEmpty() && wikiInfo == null -> {
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator()
-                    }
+                // The wiki's information or the list failed: one retry asks
+                // for whichever is missing.
+                error != null && (wikiInfo == null || state.attachments.isEmpty()) -> {
+                    ErrorState(error = error, onRetry = viewModel::load)
                 }
-                wikiInfo == null && state.error != null && state.attachments.isEmpty() -> {
-                    ErrorState(error = state.error!!, onRetry = { viewModel.loadAttachments() })
-                }
-                wikiInfo == null -> {
+                wikiInfo == null || state.isLoading && state.attachments.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
@@ -280,7 +295,7 @@ fun AttachmentsScreen(
                             onRefresh = viewModel::refresh,
                             onRequestDelete = viewModel::requestDelete,
                             onRequestCaption = viewModel::requestCaption,
-                            onRetry = viewModel::loadAttachments,
+                            onRetry = viewModel::load,
                         )
                     }
                 }
@@ -517,6 +532,7 @@ internal fun AttachmentsBody(
                         baseURL = baseURL,
                         onDownload = onDownload,
                         deletingId = state.deletingId,
+                        permissions = state.permissions,
                         onOpenImageAt = { id ->
                             val idx = imageAttachments.indexOfFirst { it.id == id }
                             if (idx >= 0) lightboxIndex = idx
@@ -531,6 +547,7 @@ internal fun AttachmentsBody(
                         baseURL = baseURL,
                         onDownload = onDownload,
                         deletingId = state.deletingId,
+                        permissions = state.permissions,
                         onOpenImageAt = { id ->
                             val idx = imageAttachments.indexOfFirst { it.id == id }
                             if (idx >= 0) lightboxIndex = idx
@@ -743,6 +760,7 @@ private fun AttachmentsGrid(
     baseURL: String,
     onDownload: (Attachment) -> Unit,
     deletingId: String?,
+    permissions: WikiPermissions,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
     onRequestCaption: (Attachment) -> Unit,
@@ -762,6 +780,7 @@ private fun AttachmentsGrid(
                 attachment = attachment,
                 baseURL = baseURL,
                 isDeleting = deletingId == attachment.id,
+                permissions = permissions,
                 onOpen = {
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
@@ -792,6 +811,7 @@ private fun AttachmentsList(
     baseURL: String,
     onDownload: (Attachment) -> Unit,
     deletingId: String?,
+    permissions: WikiPermissions,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
     onRequestCaption: (Attachment) -> Unit,
@@ -809,6 +829,7 @@ private fun AttachmentsList(
                 attachment = attachment,
                 baseURL = baseURL,
                 isDeleting = deletingId == attachment.id,
+                permissions = permissions,
                 onOpen = {
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
@@ -842,6 +863,7 @@ private fun AttachmentGridCell(
     attachment: Attachment,
     baseURL: String,
     isDeleting: Boolean,
+    permissions: WikiPermissions,
     onOpen: () -> Unit,
     onDownload: () -> Unit,
     onRequestDelete: () -> Unit,
@@ -853,7 +875,7 @@ private fun AttachmentGridCell(
     val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
     var menuOpen by remember { mutableStateOf(false) }
     val copyEmbed = {
-        copier.copy(buildMarkdown(attachment), label = "markdown", message = copiedMessage)
+        copier.copy(attachmentMarkdown(attachment), label = "markdown", message = copiedMessage)
     }
 
     Surface(
@@ -906,8 +928,8 @@ private fun AttachmentGridCell(
                         onDismissRequest = { menuOpen = false },
                         onCopyEmbed = copyEmbed,
                         onDownload = onDownload,
-                        onRequestDelete = onRequestDelete,
-                        onRequestCaption = onRequestCaption,
+                        onRequestDelete = onRequestDelete.takeIf { permissions.delete },
+                        onRequestCaption = onRequestCaption.takeIf { permissions.edit },
                     )
                 }
             }
@@ -943,6 +965,7 @@ private fun AttachmentListRow(
     attachment: Attachment,
     baseURL: String,
     isDeleting: Boolean,
+    permissions: WikiPermissions,
     onOpen: () -> Unit,
     onDownload: () -> Unit,
     onRequestDelete: () -> Unit,
@@ -956,7 +979,7 @@ private fun AttachmentListRow(
     val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
     var menuOpen by remember { mutableStateOf(false) }
     val copyEmbed = {
-        copier.copy(buildMarkdown(attachment), label = "markdown", message = copiedMessage)
+        copier.copy(attachmentMarkdown(attachment), label = "markdown", message = copiedMessage)
     }
 
     Row(
@@ -1029,8 +1052,8 @@ private fun AttachmentListRow(
                 onDismissRequest = { menuOpen = false },
                 onCopyEmbed = copyEmbed,
                 onDownload = onDownload,
-                onRequestDelete = onRequestDelete,
-                onRequestCaption = onRequestCaption,
+                onRequestDelete = onRequestDelete.takeIf { permissions.delete },
+                onRequestCaption = onRequestCaption.takeIf { permissions.edit },
             )
         }
     }
@@ -1046,8 +1069,8 @@ private fun AttachmentListRow(
  * @param onDismissRequest Called when the menu should close.
  * @param onCopyEmbed Put the page markdown for this file on the clipboard.
  * @param onDownload Save the file to the device.
- * @param onRequestDelete Ask to delete the attachment.
- * @param onRequestCaption Ask to write or rewrite the caption.
+ * @param onRequestDelete Ask to delete the attachment; null for a reader who may not.
+ * @param onRequestCaption Ask to write or rewrite the caption; null for a reader who may not.
  */
 @Composable
 private fun AttachmentActionsMenu(
@@ -1056,8 +1079,8 @@ private fun AttachmentActionsMenu(
     onDismissRequest: () -> Unit,
     onCopyEmbed: () -> Unit,
     onDownload: () -> Unit,
-    onRequestDelete: () -> Unit,
-    onRequestCaption: () -> Unit,
+    onRequestDelete: (() -> Unit)?,
+    onRequestCaption: (() -> Unit)?,
 ) {
     MochiDropdownMenu(
         expanded = expanded,
@@ -1079,7 +1102,7 @@ private fun AttachmentActionsMenu(
             },
             leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
         )
-        if (isImage(attachment.type)) {
+        if (onRequestCaption != null && isImage(attachment.type)) {
             MochiDropdownMenuItem(
                 text = {
                     Text(
@@ -1096,15 +1119,17 @@ private fun AttachmentActionsMenu(
                 leadingIcon = { Icon(Icons.Outlined.ClosedCaption, contentDescription = null) },
             )
         }
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_attachments_delete)) },
-            onClick = {
-                onDismissRequest()
-                onRequestDelete()
-            },
-            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-            destructive = true,
-        )
+        if (onRequestDelete != null) {
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.wikis_attachments_delete)) },
+                onClick = {
+                    onDismissRequest()
+                    onRequestDelete()
+                },
+                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                destructive = true,
+            )
+        }
     }
 }
 
@@ -1164,15 +1189,6 @@ private fun AttachmentPreview(
 /** Mirror of web's `isImage(type)` helper. */
 private fun isImage(mime: String): Boolean = mime.startsWith("image/")
 
-private fun buildMarkdown(attachment: Attachment): String {
-    val url = "attachments/" + segment(attachment.id).orEmpty()
-    return if (isImage(attachment.type)) {
-        "![${attachment.name}]($url)"
-    } else {
-        "[${attachment.name}]($url)"
-    }
-}
-
 private fun filterAndSort(
     attachments: List<Attachment>,
     searchQuery: String,
@@ -1206,16 +1222,8 @@ private fun downloadRequest(attachment: Attachment) = DownloadRequest(
 )
 
 /**
- * Show a file the app has no viewer of its own for. The bytes are fetched
- * through the authenticated asset client, cached, and handed to whatever app
- * on the device can display them - the same route a file in a chat message
- * takes. Downloading is the menu's own entry; this only borrows a viewer.
- *
- * @param scope Scope the fetch runs in, cancelled with the screen.
- * @param context Context the viewer is launched from.
- * @param baseURL The wiki's asset base, which the attachment id hangs off.
- * @param attachment The file to show.
- * @param onNoApp Called with the cached copy when no app on the device can open it.
+ * Show a file the app has no viewer of its own for: [attachment] of the wiki
+ * at [baseURL]. See [openAttachment].
  */
 private fun previewInViewer(
     scope: CoroutineScope,
@@ -1224,38 +1232,8 @@ private fun previewInViewer(
     attachment: Attachment,
     onNoApp: (AttachmentOpener.UnopenedFile) -> Unit,
 ) {
-    Toast.makeText(
-        context,
-        context.getString(MochiR.string.common_opening_file),
-        Toast.LENGTH_SHORT,
-    ).show()
-    scope.launch {
-        val mochiAttachment = MochiAttachment(
-            id = attachment.id,
-            name = attachment.name,
-            size = attachment.size,
-            type = attachment.type,
-            created = attachment.created,
-            caption = attachment.caption,
-        )
-        val result = AttachmentOpener.open(
-            context,
-            attachmentPath(baseURL, attachment.id) ?: "",
-            mochiAttachment,
-        )
-        if (result == AttachmentOpener.OpenResult.NO_APP) {
-            onNoApp(AttachmentOpener.unopened(context, mochiAttachment))
-        }
-        val message = when (result) {
-            AttachmentOpener.OpenResult.NO_APP -> null
-            AttachmentOpener.OpenResult.FAILED -> MochiR.string.common_file_open_failed
-            AttachmentOpener.OpenResult.UNAVAILABLE -> MochiR.string.common_attachment_unavailable
-            AttachmentOpener.OpenResult.OPENED -> null
-        }
-        if (message != null) {
-            Toast.makeText(context, context.getString(message), Toast.LENGTH_SHORT).show()
-        }
-    }
+    val address = attachmentPath(baseURL, attachment.id) ?: return
+    openAttachment(scope, context, address, attachment.library(), onNoApp)
 }
 
 

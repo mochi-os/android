@@ -26,13 +26,16 @@ import javax.inject.Inject
 data class ReplicasTabUiState(
     val isLoading: Boolean = true,
     val replicas: List<Replica> = emptyList(),
+    /** Why the list could not be loaded; a removal's failure goes to the snackbar instead. */
     val error: MochiError? = null,
     val isRemoving: Boolean = false,
 )
 
+/** [messageRes] with [args]; for a failure, the server's reason in [error] where it sent one. */
 data class ReplicasTabSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
@@ -83,11 +86,8 @@ class ReplicasTabViewModel @Inject constructor(
                 _snackbar.emit(ReplicasTabSnackbar(R.string.wikis_replicas_removed_success))
                 load()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isRemoving = false,
-                    error = e.toMochiError(),
-                )
-                _snackbar.emit(ReplicasTabSnackbar(R.string.wikis_replicas_remove_failed))
+                _uiState.value = _uiState.value.copy(isRemoving = false)
+                _snackbar.emit(ReplicasTabSnackbar(R.string.wikis_replicas_remove_failed, error = e.toMochiError()))
             }
         }
     }

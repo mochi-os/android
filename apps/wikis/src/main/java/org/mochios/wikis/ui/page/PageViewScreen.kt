@@ -69,6 +69,8 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -95,10 +97,9 @@ import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.wikis.ui.components.WikiDrawerViewModel
 import org.mochios.wikis.ui.components.WikiNavDrawer
 import org.mochios.wikis.ui.dialog.RenamePageDialog
+import org.mochios.wikis.ui.router.RememberWikiPage
+import org.mochios.wikis.ui.router.WIKIS_FEATURE
 import org.mochios.android.R as MochiR
-
-/** Feature key shared with the WikisRouter for [LastViewedStore.set] / .get(). */
-const val WIKIS_FEATURE = "wikis"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -119,6 +120,7 @@ fun PageViewScreen(
     val rssExistsMsg = stringResource(R.string.wikis_rss_exists)
     val rssReplaceLabel = stringResource(R.string.wikis_rss_replace)
     val deletedMsg = stringResource(R.string.wikis_delete_page_success)
+    val renamedMsg = stringResource(R.string.wikis_rename_page_success)
     val rssRevokedMsg = stringResource(MochiR.string.rss_revoked)
 
     // Declared ahead of the event collector below, which closes the dialog when
@@ -131,15 +133,13 @@ fun PageViewScreen(
         navController.openCanonical(viewModel.wikiId, viewModel.slug, state.page?.slug)
     }
 
-    // Persist the last-viewed wiki and page so a fresh launch lands back here.
-    LaunchedEffect(viewModel.wikiId, viewModel.slug) {
-        if (viewModel.wikiId.isNotBlank() && viewModel.slug.isNotBlank()) {
-            LastViewedStore.set(context, WIKIS_FEATURE, viewModel.wikiId)
-            LastViewedStore.set(
-                context,
-                "${WIKIS_FEATURE}_page_${viewModel.wikiId}",
-                viewModel.slug,
-            )
+    // The wiki and page WikisRouter opens at the next launch.
+    RememberWikiPage(viewModel.wikiId, viewModel.slug)
+
+    // A wiki that no longer answers is not opened at the next launch.
+    LaunchedEffect(state.error) {
+        if (state.error is MochiError.NotFoundError && state.wiki == null) {
+            LastViewedStore.drop(context, WIKIS_FEATURE, viewModel.wikiId)
         }
     }
 
@@ -183,6 +183,10 @@ fun PageViewScreen(
                 is PageViewEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMsg)
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
+                }
+                is PageViewEvent.Notice -> {
+                    val text = resources.getString(event.messageRes, *event.args.toTypedArray())
+                    snackbar.showSnackbar(event.error?.messageOrFallback(text) ?: text)
                 }
                 PageViewEvent.Deleted -> {
                     showDeleteDialog = false
@@ -296,8 +300,6 @@ fun PageViewScreen(
                             PageOverflowMenu(
                                 expanded = menuExpanded,
                                 onDismiss = { menuExpanded = false },
-                                wikiId = viewModel.wikiId,
-                                slug = viewModel.slug,
                                 permissions = state.permissions,
                                 commentCount = state.commentCount,
                                 canUnsubscribe = canUnsubscribe,
@@ -430,10 +432,7 @@ fun PageViewScreen(
                         state.page != null -> {
                             PageBody(
                                 page = state.page!!,
-                                wikiId = viewModel.wikiId,
-                                slug = viewModel.slug,
                                 canEdit = state.permissions.edit,
-                                snackbarHost = snackbar,
                                 missingLinks = state.missingLinks,
                                 onInternalLink = { slug ->
                                     navController.navigate(
@@ -445,9 +444,8 @@ fun PageViewScreen(
                                         WikisApp.tagPages(viewModel.wikiId, tag)
                                     )
                                 },
-                                onTagsChanged = { newTags ->
-                                    viewModel.updatePageTags(newTags)
-                                },
+                                onTagAdd = viewModel::addTag,
+                                onTagRemove = viewModel::removeTag,
                             )
                         }
                     }
@@ -540,31 +538,35 @@ fun PageViewScreen(
         onDismiss = { showRenameDialog = false },
         onRenamed = { newSlug, _, _ ->
             showRenameDialog = false
-            // Web's toast appends a "Renamed N pages, updated M links" count via
-            // plurals, but those plurals aren't localized (default catalog only);
-            // use the fully localized success string so non-English users don't
-            // get an English toast.
-            scope.launch {
-                snackbar.showSnackbar(resources.getString(R.string.wikis_rename_page_success))
-            }
-            navController.navigate(WikisApp.pageView(viewModel.wikiId, newSlug)) {
-                popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }
-            }
+            // A toast, not the snackbar: this screen goes with the old name and
+            // would take a snackbar of its own down with it.
+            Toast.makeText(context, renamedMsg, Toast.LENGTH_SHORT).show()
+            navController.openRenamed(viewModel.wikiId, viewModel.slug, newSlug)
         },
     )
+}
+
+/**
+ * Replaces page [renamed] of wiki [wikiId] with the page under its new name
+ * [slug]. The old entry's view model holds the old name and nothing refreshes
+ * it, so left on the stack Back would return to a page whose every action
+ * answers "not found".
+ */
+internal fun NavController.openRenamed(wikiId: String, renamed: String, slug: String) {
+    navigate(WikisApp.pageView(wikiId, slug)) {
+        popUpTo(WikisApp.pageView(wikiId, renamed)) { inclusive = true }
+    }
 }
 
 @Composable
 private fun PageBody(
     page: WikiPage,
-    wikiId: String,
-    slug: String,
     canEdit: Boolean,
-    snackbarHost: SnackbarHostState,
     missingLinks: List<String>,
     onInternalLink: (slug: String) -> Unit,
     onTagTap: (tag: String) -> Unit,
-    onTagsChanged: (List<String>) -> Unit,
+    onTagAdd: (tag: String) -> Unit,
+    onTagRemove: (tag: String) -> Unit,
 ) {
     val headings = remember { mutableStateOf(emptyList<TocHeading>()) }
     val scrollState = rememberScrollState()
@@ -642,12 +644,10 @@ private fun PageBody(
 
         PageFooter(
             page = page,
-            wikiId = wikiId,
-            slug = slug,
             canEdit = canEdit,
-            snackbarHost = snackbarHost,
             onTagTap = onTagTap,
-            onTagsChanged = onTagsChanged,
+            onTagAdd = onTagAdd,
+            onTagRemove = onTagRemove,
         )
     }
 }
@@ -679,12 +679,10 @@ internal fun computeActiveHeading(
 @Composable
 private fun PageFooter(
     page: WikiPage,
-    wikiId: String,
-    slug: String,
     canEdit: Boolean,
-    snackbarHost: SnackbarHostState,
     onTagTap: (tag: String) -> Unit,
-    onTagsChanged: (List<String>) -> Unit,
+    onTagAdd: (tag: String) -> Unit,
+    onTagRemove: (tag: String) -> Unit,
 ) {
     Surface(
         tonalElevation = 1.dp,
@@ -697,13 +695,11 @@ private fun PageFooter(
                 .padding(horizontal = 12.dp, vertical = 8.dp),
         ) {
             TagManager(
-                wikiId = wikiId,
-                slug = slug,
                 tags = page.tags,
                 canEdit = canEdit,
                 onTagClick = onTagTap,
-                onTagsChanged = onTagsChanged,
-                snackbarHostState = snackbarHost,
+                onAdd = onTagAdd,
+                onRemove = onTagRemove,
             )
 
             Spacer(Modifier.height(8.dp))

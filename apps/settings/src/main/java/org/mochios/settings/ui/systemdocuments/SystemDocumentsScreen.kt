@@ -53,7 +53,9 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.DiscardDialog
+import org.mochios.android.ui.components.DiscardGuard
+import org.mochios.android.ui.components.rememberDiscardGuard
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -155,7 +157,7 @@ internal fun SystemDocumentsEditor(
         mutableStateOf(document?.body.orEmpty())
     }
     val dirty = document != null && draft != document.body
-    val guard = remember { SwitchGuard() }
+    val guard = rememberDiscardGuard()
 
     BackHandler(enabled = dirty) { guard.request(true, onBack) }
 
@@ -201,40 +203,9 @@ internal fun SystemDocumentsEditor(
         }
     }
 
-    if (guard.pending != null) {
-        MochiAlertDialog(
-            onDismissRequest = guard::keep,
-            title = stringResource(R.string.system_documents_discard_title),
-            confirmText = stringResource(R.string.system_documents_discard),
-            onConfirm = guard::discard,
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
-    }
-}
-
-/**
- * Holds a tab or language switch, or leaving the screen, that would drop
- * unsaved edits until the user discards them or keeps editing.
- */
-internal class SwitchGuard {
-    var pending by mutableStateOf<(() -> Unit)?>(null)
-        private set
-
-    /** Run [action] now, or, when [dirty], hold it for [discard]. */
-    fun request(dirty: Boolean, action: () -> Unit) {
-        if (dirty) pending = action else action()
-    }
-
-    fun discard() {
-        val action = pending
-        pending = null
-        action?.invoke()
-    }
-
-    fun keep() {
-        pending = null
-    }
+    // A tab or language switch, or leaving the screen, waits here while it
+    // would drop unsaved edits.
+    DiscardDialog(guard)
 }
 
 @Composable
@@ -246,7 +217,7 @@ private fun Content(
     draft: String,
     onDraftChange: (String) -> Unit,
     dirty: Boolean,
-    guard: SwitchGuard,
+    guard: DiscardGuard,
     onTabChange: (DocumentKind) -> Unit,
     onLanguageChange: (String) -> Unit,
     onOpen: (name: String, language: String) -> Unit,

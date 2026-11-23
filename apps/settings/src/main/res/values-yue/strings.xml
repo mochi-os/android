@@ -403,8 +403,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">未知主題</string>
     <string name="system_documents_modified">已修改</string>
-    <string name="system_documents_discard_title">要唔要捨棄變更？</string>
-    <string name="system_documents_discard">捨棄</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="other">%1$s 個成功</item>
     </plurals>

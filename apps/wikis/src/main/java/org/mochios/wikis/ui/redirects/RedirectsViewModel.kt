@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
 import org.mochios.wikis.repository.WikisRepository
@@ -26,14 +27,17 @@ import javax.inject.Inject
 data class RedirectsUiState(
     val isLoading: Boolean = true,
     val redirects: List<Redirect> = emptyList(),
+    /** Why the list could not be loaded; an action's failure goes to the snackbar instead. */
     val error: MochiError? = null,
     /** The source of the redirect being deleted; its confirmation stays open until the server answers. */
     val deleting: String? = null,
 )
 
+/** [messageRes] with [args]; for a failure, the server's reason in [error] where it sent one. */
 data class RedirectsSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
@@ -58,7 +62,9 @@ class RedirectsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val list = repository.getRedirects(wikiId)
+                // The server leaves the order to the client, which lists them
+                // by source, as the web does.
+                val list = repository.getRedirects(wikiId).sortedWith(compareBy(NaturalCompare) { redirect -> redirect.source })
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     redirects = list,
@@ -88,8 +94,7 @@ class RedirectsViewModel @Inject constructor(
                 _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_created_success))
                 load()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-                _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_create_failed))
+                _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_create_failed, error = e.toMochiError()))
             }
         }
     }
@@ -110,8 +115,8 @@ class RedirectsViewModel @Inject constructor(
                 )
                 load()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(deleting = null, error = e.toMochiError())
-                _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_delete_failed))
+                _uiState.value = _uiState.value.copy(deleting = null)
+                _snackbar.emit(RedirectsSnackbar(R.string.wikis_redirect_delete_failed, error = e.toMochiError()))
             }
         }
     }

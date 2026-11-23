@@ -42,6 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
@@ -61,9 +62,8 @@ fun WikiSettingsScreen(
 
     LaunchedEffect(Unit) {
         viewModel.snackbar.collect { msg ->
-            snackbarHostState.showSnackbar(
-                resources.getString(msg.messageRes, *msg.args.toTypedArray()),
-            )
+            val text = resources.getString(msg.messageRes, *msg.args.toTypedArray())
+            snackbarHostState.showSnackbar(msg.error?.messageOrFallback(text) ?: text)
         }
     }
 
@@ -139,7 +139,6 @@ fun WikiSettingsScreen(
 
                 when (activeTabKey) {
                     SettingsTabKey.Settings -> SettingsTab(
-                        navController = navController,
                         parentViewModel = viewModel,
                         onWikiDeleted = {
                             navController.navigate(WikisApp.HOME) {

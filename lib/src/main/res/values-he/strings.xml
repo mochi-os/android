@@ -20,6 +20,8 @@
     <string name="common_clear_search">נקה חיפוש</string>
     <string name="drawer_open">פתח תפריט</string>
     <string name="common_cancel">ביטול</string>
+    <string name="common_discard_title">למחוק את השינויים?</string>
+    <string name="common_discard">מחיקה</string>
     <string name="common_filter">סינון</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">הסרת מסנן</string>

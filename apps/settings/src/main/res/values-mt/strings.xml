@@ -420,8 +420,6 @@
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema mhux magħrufa</string>
     <string name="system_documents_modified">Modifikat</string>
-    <string name="system_documents_discard_title">Tarmi l-bidliet?</string>
-    <string name="system_documents_discard">Armi</string>
     <plurals name="system_status_holepunch_succeeded">
         <item quantity="one">%1$s irnexxa</item>
         <item quantity="two">%1$s irnexxew</item>

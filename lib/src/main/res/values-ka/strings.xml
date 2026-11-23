@@ -20,6 +20,8 @@
     <string name="common_clear_search">ძიების გასუფთავება</string>
     <string name="drawer_open">მენიუს გახსნა</string>
     <string name="common_cancel">გაუქმება</string>
+    <string name="common_discard_title">გადავაგდოთ ცვლილებები?</string>
+    <string name="common_discard">გადაგდება</string>
     <string name="common_filter">ფილტრი</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">ფილტრის წაშლა</string>
