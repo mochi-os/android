@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Geen itemtipes kan nog geskep word nie. Skep eers die vereiste ouer-items.</string>
     <string name="projects_create_blocked_no_options">Kan nie skep nie: %1$s is verpligtend maar het geen opsies om uit te kies nie. Voeg opsies by in Ontwerp.</string>
     <string name="projects_attachment_remove">Verwyder aanhangsel</string>
-    <string name="projects_create_allow_public">Laat enigiemand toe om die projek te bekyk en kommentaar te lewer</string>
+    <string name="projects_create_allow_public">Laat enigiemand toe om die projek te bekyk</string>
     <string name="projects_request_delete_title">Verwyder saamsmeltversoek</string>
     <string name="projects_request_delete_message">Is jy seker jy wil hierdie saamsmeltversoek verwyder?</string>
     <string name="projects_board_delete_column_title">Verwyder kolom</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Kon nie aanheg nie: %1$s</string>
     <string name="projects_activity_unknown">Onbekend</string>
+    <string name="projects_create_allow_search">Laat enigiemand toe om vir projek te soek</string>
 </resources>

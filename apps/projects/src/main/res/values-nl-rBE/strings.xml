@@ -297,7 +297,7 @@
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet u zeker dat u de optie \"%1$s\" wilt verwijderen?</string>
     <string name="projects_create_object_no_types">Er kunnen nog geen itemtypes aangemaakt worden. Maak eerst de vereiste bovenliggende items aan.</string>
-    <string name="projects_create_allow_public">Iedereen toestaan om het project te bekijken en erop te reageren</string>
+    <string name="projects_create_allow_public">Iedereen toestaan om het project te bekijken</string>
     <string name="projects_request_delete_title">Merge request verwijderen</string>
     <string name="projects_request_delete_message">Weet u zeker dat u deze merge request wilt verwijderen?</string>
     <string name="projects_board_delete_column_title">Kolom verwijderen</string>
@@ -308,4 +308,5 @@
         <item quantity="other">Weet u zeker dat u \"%1$s\" en de %2$s items eronder wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</item>
     </plurals>
     <string name="projects_activity_unknown">Onbekend</string>
+    <string name="projects_create_allow_search">Iedereen toestaan om naar het project te zoeken</string>
 </resources>

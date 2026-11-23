@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Conto %1$s</string>
     <string name="crm_option_delete_title">Hapus pilihan</string>
     <string name="crm_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
-    <string name="crm_create_public">Idinkeun saha waé ningali jeung mairan CRM</string>
+    <string name="crm_create_public">Idinkeun saha waé ningali CRM</string>
     <string name="crm_board_delete_column">Hapus kolom</string>
     <string name="crm_board_delete_column_message">Anjeun yakin hayang ngahapus kolom \"%1$s\"? Ieu teu bisa dibalikeun.</string>
     <string name="crm_object_delete_named">Anjeun yakin hayang ngahapus \"%1$s\"? Aksi ieu teu bisa dibalikeun.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Kolot</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Kelas</string>
+    <string name="crm_create_allow_search">Idinkeun saha waé néangan CRM</string>
 </resources>

@@ -321,7 +321,8 @@
     <string name="projects_create_object_no_types">暫時未可以建立任何項目類型。請先建立所需嘅父項目。</string>
     <string name="projects_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
     <string name="projects_attachment_remove">移除附件</string>
-    <string name="projects_create_allow_public">允許任何人睇項目同留言</string>
+    <string name="projects_create_allow_public">允許任何人睇項目</string>
+    <string name="projects_create_allow_search">允許任何人搜尋項目</string>
     <string name="projects_create_attachments_failed">附加唔到：%1$s</string>
     <string name="projects_object_delete_named">你確定要刪除「%1$s」？呢個動作冇得還原。</string>
     <string name="projects_request_delete_title">刪除合併請求</string>

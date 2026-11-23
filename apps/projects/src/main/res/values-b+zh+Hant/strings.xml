@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">尚無法建立任何項目類型。請先建立所需的父項目。</string>
     <string name="projects_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
     <string name="projects_attachment_remove">移除附件</string>
-    <string name="projects_create_allow_public">允許任何人檢視專案並留言</string>
+    <string name="projects_create_allow_public">允許任何人檢視專案</string>
     <string name="projects_request_delete_title">刪除合併請求</string>
     <string name="projects_request_delete_message">您確定要刪除此合併請求嗎?</string>
     <string name="projects_board_delete_column_title">刪除欄位</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">無法附加：%1$s</string>
     <string name="projects_activity_unknown">未知</string>
+    <string name="projects_create_allow_search">允許任何人搜尋專案</string>
 </resources>

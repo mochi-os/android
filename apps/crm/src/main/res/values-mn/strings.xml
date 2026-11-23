@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Жишээ %1$s</string>
     <string name="crm_option_delete_title">Сонголтыг устгах</string>
     <string name="crm_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
-    <string name="crm_create_public">Хэнд ч CRM-ийг харах, сэтгэгдэл бичих боломж олгох</string>
+    <string name="crm_create_public">Хэнд ч CRM-ийг харах боломж олгох</string>
     <string name="crm_board_delete_column">Багана устгах</string>
     <string name="crm_board_delete_column_message">\"%1$s\" баганыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
     <string name="crm_object_delete_named">\"%1$s\"-г устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Эх</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Анги</string>
+    <string name="crm_create_allow_search">Хэн ч CRM-ийг хайх боломжтой</string>
 </resources>

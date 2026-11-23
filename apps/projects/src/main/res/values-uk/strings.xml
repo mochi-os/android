@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Жоден тип елемента ще не можна створити. Спершу створіть необхідні батьківські елементи.</string>
     <string name="projects_create_blocked_no_options">Не вдалося створити: %1$s обов\'язковий, але не має варіантів вибору. Додайте варіанти в Дизайні.</string>
     <string name="projects_attachment_remove">Видалити вкладення</string>
-    <string name="projects_create_allow_public">Дозволити всім переглядати й коментувати проєкт</string>
+    <string name="projects_create_allow_public">Дозволити всім переглядати проєкт</string>
     <string name="projects_request_delete_title">Видалити запит на злиття</string>
     <string name="projects_request_delete_message">Ви впевнені, що хочете видалити цей запит на злиття?</string>
     <string name="projects_board_delete_column_title">Видалити стовпець</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Не вдалося прикріпити: %1$s</string>
     <string name="projects_activity_unknown">Невідомо</string>
+    <string name="projects_create_allow_search">Дозволити всім шукати проєкт</string>
 </resources>

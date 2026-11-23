@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
     <string name="projects_create_blocked_no_options">Не може да се създаде: %1$s е задължително, но няма опции за избор. Добавете опции в Дизайн.</string>
     <string name="projects_attachment_remove">Премахване на прикачения файл</string>
-    <string name="projects_create_allow_public">Позволи на всеки да преглежда и коментира проекта</string>
+    <string name="projects_create_allow_public">Позволи на всеки да преглежда проекта</string>
     <string name="projects_request_delete_title">Изтрий заявката за сливане</string>
     <string name="projects_request_delete_message">Сигурни ли сте, че искате да изтриете тази заявка за сливане?</string>
     <string name="projects_board_delete_column_title">Изтрий колоната</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Неуспешно прикачване: %1$s</string>
     <string name="projects_activity_unknown">Неизвестно</string>
+    <string name="projects_create_allow_search">Позволи на всеки да търси проекта</string>
 </resources>

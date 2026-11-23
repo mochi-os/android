@@ -150,9 +150,7 @@ fun BoardView(
 
     // Only show top-level objects — those whose parent the view doesn't show,
     // so they have no card to nest inside.
-    val filteredObjects = classObjects.filter { obj ->
-        obj.parent.isBlank() || obj.parent !in classObjectIds
-    }
+    val filteredObjects = topLevelObjects(objects, view)
 
     if (columnOptions.isEmpty()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -178,7 +176,7 @@ fun BoardView(
     // Card drag-drop state shared across all columns. Re-keyed when the
     // column field changes so a leftover registration doesn't survive a view
     // switch.
-    val cardDragState = rememberDragState()
+    val cardDragState = rememberCardDragState()
 
     // Column-reorder state. Long-press a column header and drag horizontally
     // to reorder. Mirrors the web's reorder-mode column rail but driven by
@@ -623,8 +621,9 @@ private fun BoardColumn(
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
-            // Swimlane mode. Drop positions are column-scoped, not lane-scoped:
-            // the server's rank_move_key has no row dimension.
+            // Swimlane mode. A drop on a card goes directly after or before
+            // that card and takes its lane; a drop on a lane's heading goes
+            // to the column's end in that lane.
             val columnOrder = sortedObjects
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -762,6 +761,9 @@ private fun BoardColumn(
                             people = people,
                             borderFieldId = borderFieldId,
                             childrenByParent = childrenByParent,
+                            // A drop on the card moves the dragged one into
+                            // this column, which names the field it sets.
+                            columnFieldId = columnFieldId,
                             cardDragState = cardDragState,
                             cardIndexInColumn = sortedObjects.indexOfFirst { candidate ->
                                 candidate.id == obj.id

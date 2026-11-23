@@ -275,7 +275,7 @@
     <string name="crm_design_sample">نمونه %1$s</string>
     <string name="crm_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="crm_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
-    <string name="crm_create_public">هر چا ته اجازه ورکړئ چې CRM وګوري او پر هغې تبصره وکړي</string>
+    <string name="crm_create_public">هر چا ته اجازه ورکړئ چې CRM وګوري</string>
     <string name="crm_board_delete_column">کالم ړنګ کړئ</string>
     <string name="crm_board_delete_column_message">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" کالم ړنګ کړئ؟ دا نشي بیرته اخیستل کیدلی.</string>
     <string name="crm_object_delete_named">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">مور</string>
     <string name="crm_export_csv_id">پېژندنه</string>
     <string name="crm_export_csv_class">ټولګی</string>
+    <string name="crm_create_allow_search">هر چا ته اجازه ورکړئ چې د CRM لټون وکړي</string>
 </resources>

@@ -5,13 +5,23 @@
 
 package org.mochios.crm.ui.board
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performTouchInput
 import androidx.lifecycle.SavedStateHandle
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -21,6 +31,10 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DragState
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.CrmServer
 import org.mochios.crm.R
@@ -38,7 +52,7 @@ import org.mochios.android.R as MochiR
  * The board and the tree offer what the user's access lets them do, as the
  * web does: the design's columns to those who may change the design, moving,
  * creating and deleting objects to those who may write, and to a viewer
- * neither.
+ * neither. A card the writer drops another on takes it wherever it lands.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
@@ -186,5 +200,62 @@ class AccessGatingTest {
         rule.onNodeWithContentDescription(context.getString(MochiR.string.common_more_options)).performClick()
         rule.waitForIdle()
         assertTrue(offered(context.getString(MochiR.string.common_delete)))
+    }
+
+    @Test
+    fun `a card takes a drop anywhere on it, its middle too`() {
+        lateinit var state: DragState
+        var dropped: Pair<String, DragEdge>? = null
+        rule.setContent {
+            state = rememberCardDragState()
+            Box(
+                Modifier
+                    .size(200.dp)
+                    .dropTarget(state, "column", DropOrientation.OnOnly) { _, edge -> dropped = "column" to edge }
+            ) {
+                Box(
+                    Modifier
+                        .size(200.dp, 60.dp)
+                        .testTag("card")
+                        .dropTarget(state, "card", DropOrientation.Vertical, setOf(DragEdge.Top, DragEdge.Bottom)) { _, edge ->
+                            dropped = "card" to edge
+                        }
+                )
+            }
+        }
+        rule.waitForIdle()
+        val card = rule.onNodeWithTag("card").fetchSemanticsNode().boundsInRoot
+        for ((fraction, edge) in listOf(0.4f to DragEdge.Top, 0.6f to DragEdge.Bottom)) {
+            dropped = null
+            state.startDrag("source", Offset(card.center.x, card.top + card.height * fraction))
+            state.endDrag()
+            assertEquals("THE POINT: the card's middle is its own, not the column's", "card" to edge, dropped)
+        }
+    }
+
+    @Test
+    fun `a card dropped on another on a board without lanes names the column field`() {
+        server.data("c1/-/objects", """{"objects": [
+            {"id": "a", "class": "company", "parent": "", "rank": "a0", "values": {"name": "Acme", "stage": "lead"}},
+            {"id": "b", "class": "company", "parent": "", "rank": "a1", "values": {"name": "Bolt", "stage": "lead"}}], "watched": []}""")
+        board("write")
+        until("both cards") { rule.onAllNodesWithText("Bolt").fetchSemanticsNodes().isNotEmpty() }
+        val bolt = rule.onNodeWithText("Bolt").fetchSemanticsNode().boundsInRoot
+        rule.onRoot().performTouchInput {
+            down(bolt.center)
+            advanceEventTime(viewConfiguration.longPressTimeoutMillis + 100)
+            moveBy(Offset(0f, 4f))
+        }
+        rule.mainClock.advanceTimeBy(1_000)
+        rule.waitForIdle()
+        val acme = rule.onNodeWithText("Acme").fetchSemanticsNode().boundsInRoot
+        rule.onRoot().performTouchInput {
+            moveTo(Offset(acme.center.x, acme.top + 1f))
+            up()
+        }
+        until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/b/move").single().json()
+        assertEquals("THE POINT: the column's field, which a value needs, or the server refuses the move", "stage", move.get("field").asString)
+        assertEquals("lead", move.get("value").asString)
     }
 }

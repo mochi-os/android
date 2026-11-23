@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
     <string name="projects_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
     <string name="projects_attachment_remove">Fjarlægja viðhengi</string>
-    <string name="projects_create_allow_public">Leyfa öllum að skoða verkefnið og gera athugasemdir við það</string>
+    <string name="projects_create_allow_public">Leyfa öllum að skoða verkefnið</string>
     <string name="projects_request_delete_title">Eyða Merge Request</string>
     <string name="projects_request_delete_message">Ertu viss um að þú viljir eyða þessum Merge Request?</string>
     <string name="projects_board_delete_column_title">Eyða dálki</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ekki tókst að hengja við: %1$s</string>
     <string name="projects_activity_unknown">Óþekkt</string>
+    <string name="projects_create_allow_search">Leyfa öllum að leita að verkefninu</string>
 </resources>

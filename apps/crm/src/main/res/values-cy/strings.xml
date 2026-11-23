@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Sampl %1$s</string>
     <string name="crm_option_delete_title">Dileu opsiwn</string>
     <string name="crm_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
-    <string name="crm_create_public">Caniatáu i unrhyw un weld y CRM a rhoi sylwadau arno</string>
+    <string name="crm_create_public">Caniatáu i unrhyw un weld y CRM</string>
     <string name="crm_board_delete_column">Dileu colofn</string>
     <string name="crm_board_delete_column_message">Ydych chi\'n siŵr eich bod am ddileu\'r golofn \"%1$s\"? Ni ellir dadwneud hyn.</string>
     <string name="crm_object_delete_named">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\"? Ni ellir dadwneud y weithred hon.</string>
@@ -298,4 +298,5 @@
     <string name="crm_export_csv_parent">Rhiant</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Dosbarth</string>
+    <string name="crm_create_allow_search">Caniatáu i unrhyw un chwilio am CRM</string>
 </resources>

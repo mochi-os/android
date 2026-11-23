@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">अभी तक कोई आइटम प्रकार नहीं बनाया जा सकता। पहले आवश्यक पैरेंट आइटम बनाएँ।</string>
     <string name="projects_create_blocked_no_options">बना नहीं सकते: %1$s आवश्यक है लेकिन इसमें चुनने के लिए कोई विकल्प नहीं है। डिज़ाइन में विकल्प जोड़ें।</string>
     <string name="projects_attachment_remove">अनुलग्नक हटाएं</string>
-    <string name="projects_create_allow_public">किसी को भी प्रोजेक्ट देखने और उस पर टिप्पणी करने की अनुमति दें</string>
+    <string name="projects_create_allow_public">किसी को भी प्रोजेक्ट देखने की अनुमति दें</string>
     <string name="projects_request_delete_title">मर्ज रिक्वेस्ट हटाएँ</string>
     <string name="projects_request_delete_message">क्या आप इस मर्ज रिक्वेस्ट को हटाना चाहते हैं?</string>
     <string name="projects_board_delete_column_title">कॉलम हटाएँ</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">अटैच नहीं किया जा सका: %1$s</string>
     <string name="projects_activity_unknown">अज्ञात</string>
+    <string name="projects_create_allow_search">किसी को भी प्रोजेक्ट खोजने की अनुमति दें</string>
 </resources>

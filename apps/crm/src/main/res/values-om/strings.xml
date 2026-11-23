@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Fakkeenya %1$s</string>
     <string name="crm_option_delete_title">Filannoo haqi</string>
     <string name="crm_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
-    <string name="crm_create_public">Eenyu iyyuu CRM akka ilaalu fi irratti yaada kennu hayyami</string>
+    <string name="crm_create_public">Eenyu iyyuu CRM akka ilaalu hayyami</string>
     <string name="crm_board_delete_column">Tarjaa haqi</string>
     <string name="crm_board_delete_column_message">Tarjaa \"%1$s\" haquu mirkanaa\'oo dha? Kun deebi\'uu hin danda\'u.</string>
     <string name="crm_object_delete_named">\"%1$s\" haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Maatii</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Kilaasii</string>
+    <string name="crm_create_allow_search">Eenyu iyyuu CRM barbaaduu hayyami</string>
 </resources>

@@ -80,8 +80,11 @@ class CreateProjectViewModel @Inject constructor(
     /** Whether the prefix was typed, which stops it following the name. */
     var prefixEdited by mutableStateOf(false)
 
-    /** Public: anyone may view the project and every signed-in person comment. Off at first. */
+    /** Public: the directory lists the project; who may view it is [readable]'s. Off at first. */
     var allowSearch by mutableStateOf(false)
+
+    /** Anyone may view the project; off, it is for its members alone. Off at first. */
+    var readable by mutableStateOf(false)
 
     /** The template picked; none is preselected. */
     var selectedTemplate by mutableStateOf<String?>(null)
@@ -157,6 +160,7 @@ class CreateProjectViewModel @Inject constructor(
         name: String,
         prefix: String,
         privacy: String,
+        readable: Boolean,
         template: String?,
         backupJson: String?,
         backupArchive: Uri? = null
@@ -170,6 +174,7 @@ class CreateProjectViewModel @Inject constructor(
                     description = null,
                     prefix = prefix.ifBlank { null },
                     privacy = privacy,
+                    readable = readable,
                     template = if (importing) TEMPLATE_BLANK else template
                 )
                 val newProjectId = project.fingerprint.ifEmpty { project.id }

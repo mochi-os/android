@@ -31,12 +31,15 @@ private fun JsonObject.jsonString(key: String): String? =
 
 /**
  * @property name The name typed, or the picked backup's until changed.
- * @property privacy "private", or "public", which lets everyone view the CRM
- *   and every signed-in person comment on it.
+ * @property privacy "private", or "public", which lists the CRM in the
+ *   directory and does nothing else.
+ * @property readable Whether anyone may view the CRM; off, it is for its
+ *   members alone.
  */
 data class CreateCrmUiState(
     val name: String = "",
     val privacy: String = "private",
+    val readable: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val backupPrefill: BackupPrefill? = null,
@@ -114,6 +117,11 @@ class CreateCrmViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(privacy = privacy)
     }
 
+    /** Whether anyone may view the CRM. */
+    fun setReadable(readable: Boolean) {
+        _uiState.value = _uiState.value.copy(readable = readable)
+    }
+
     /** The screen has shown the unreadable-backup notice. */
     fun consumeBackupReadFailed() {
         _uiState.value = _uiState.value.copy(backupReadFailed = false)
@@ -127,7 +135,7 @@ class CreateCrmViewModel @Inject constructor(
     /**
      * Creates a CRM, then restores [backupJson] into it when one was picked.
      */
-    fun createCrm(name: String, privacy: String, backupJson: String?, backupArchive: Uri? = null) {
+    fun createCrm(name: String, privacy: String, readable: Boolean, backupJson: String?, backupArchive: Uri? = null) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true, error = null)
             val importing = !backupJson.isNullOrBlank()
@@ -135,7 +143,8 @@ class CreateCrmViewModel @Inject constructor(
                 val created = repository.createCrm(
                     name = name,
                     description = null,
-                    privacy = privacy
+                    privacy = privacy,
+                    readable = readable
                 )
                 val newCrmId = created.fingerprint.ifEmpty { created.id }
                 if (importing) {

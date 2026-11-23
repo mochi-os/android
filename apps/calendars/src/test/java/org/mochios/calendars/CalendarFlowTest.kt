@@ -99,6 +99,15 @@ class CalendarFlowTest {
     /** Holds the calendars list's answer until released. */
     @Volatile private var hold: CountDownLatch? = null
 
+    /** Holds the stored event's read until released, or with [lost], refuses it; [refusals] refuses only that many reads. */
+    @Volatile private var reading: CountDownLatch? = null
+    @Volatile private var lost = false
+    @Volatile private var refusals = 0
+
+    /** Whether a write is kept, so the next read of the event answers what it wrote, and what it wrote. */
+    @Volatile private var keeping = false
+    @Volatile private var kept: String? = null
+
     /** Whether every events listing answers slowly, so a newer load overtakes it. */
     @Volatile private var slow = false
     @Volatile private var last = 0L
@@ -123,7 +132,12 @@ class CalendarFlowTest {
                         ok("""{"preferences": {"view": "list"}}""")
                     }
                     "-/events/bounds" -> ok("""{"first": 0, "last": $last, "endless": false}""")
-                    "-/events/get" -> ok(stored())
+                    "-/events/get" -> {
+                        reading?.await(10, TimeUnit.SECONDS)
+                        val refused = refusals > 0
+                        if (refused) refusals--
+                        if (lost || refused) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""") else ok(stored())
+                    }
                     "-/calendars/rename", "-/calendars/colour", "-/calendars/delete" ->
                         if (refusing) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""") else ok("{}")
                     "-/link/revoke" -> ok("""{"revoked": $revocable}""")
@@ -132,6 +146,7 @@ class CalendarFlowTest {
                         written = body
                         if (body.contains("\"etag\":\"v$version\"")) {
                             version++
+                            if (keeping) kept = com.google.gson.JsonParser.parseString(body).asJsonObject.get("components").toString()
                             ok(stored()).setBodyDelay(300, java.util.concurrent.TimeUnit.MILLISECONDS)
                         } else {
                             MockResponse().setResponseCode(412).setBody("""{"error": "changed"}""")
@@ -149,7 +164,7 @@ class CalendarFlowTest {
                         failing -> MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         holding in query.split(",") -> ok(
                             """{"instances": [{"event": "e1", "calendar": "$holding", "summary": "Stand-up",
-                                "start": $start, "finish": ${start + 3_600}}], "truncated": false}""",
+                                "start": $start, "finish": ${start + 3_600}, "recurring": $weekly}], "truncated": false}""",
                         )
                         else -> ok("""{"instances": [], "truncated": false}""")
                     }.apply {
@@ -179,7 +194,9 @@ class CalendarFlowTest {
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
 
-    private fun stored() = """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "recurring": $weekly, "components": [
+    private fun stored() = kept?.let { components ->
+        """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "recurring": $weekly, "components": $components}}"""
+    } ?: """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "recurring": $weekly, "components": [
         {"name": "VEVENT", "properties": [
             {"name": "UID", "params": {}, "value": "uid-1"},
             {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
@@ -551,6 +568,39 @@ class CalendarFlowTest {
         assertEquals(3, version)
     }
 
+    @Test
+    fun `a dropped block shows where it landed before the move is written`() {
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        val instance = model.uiState.value.instances.single()
+        model.move(instance, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ALL)
+        val shown = model.uiState.value.instances.single()
+        assertEquals("THE POINT: at the new time while the stored event is still being read", start + 3_600, shown.start)
+        assertEquals(start + 7_200, shown.finish)
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        assertEquals(CalendarEvent.Moved, said.single())
+    }
+
+    @Test
+    fun `a move that cannot be written goes back to where the server has it`() {
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        lost = true
+        val instance = model.uiState.value.instances.single()
+        model.move(instance, Moved.Whole(LocalDate.of(2026, 10, 7)), org.mochios.calendars.ui.editor.Scope.ALL)
+        assertTrue("drawn all day where it was dropped", model.uiState.value.instances.single().allday)
+        until { said.isNotEmpty() }
+        assertTrue(said.single() is CalendarEvent.Failed)
+        until { !model.uiState.value.instances.single().allday }
+        assertEquals("THE POINT: the range is read again, which puts it back", start, model.uiState.value.instances.single().start)
+    }
+
     /**
      * A drag of an occurrence "This event" moved before moves its override
      * again, found by the occurrence it replaces, rather than adding another.
@@ -617,6 +667,238 @@ class CalendarFlowTest {
         // 11:15 to 12:15 on Friday, the default hour long, by the London clock.
         assertTrue(written, written.contains("20261009T111500"))
         assertTrue(written, written.contains("20261009T121500"))
+    }
+
+    @Test
+    fun `a bar dropped in the grid on the day the clocks go back is drawn where it will be written`() {
+        whole = true
+        // Nothing listed, so the bar is the only occurrence drawn.
+        holding = "c9"
+        val model = model()
+        val said = said(model)
+        reading = CountDownLatch(1)
+        // London's clocks go back at 02:00 on Sunday 25 October.
+        val midnight = LocalDate.of(2026, 10, 24).atStartOfDay(java.time.ZoneOffset.UTC).toEpochSecond()
+        val instance = org.mochios.calendars.model.Instance(
+            event = "e1", calendar = "c1", start = midnight, finish = midnight + 86_400, allday = true, date = "2026-10-24",
+        )
+        model.move(instance, Moved.Timed(LocalDate.of(2026, 10, 25), 11.25f), org.mochios.calendars.ui.editor.Scope.ALL)
+        assertEquals(
+            "THE POINT: 11:15 by the London clock, where the write puts it",
+            LocalDate.of(2026, 10, 25).atTime(11, 15).atZone(london).toEpochSecond(),
+            model.uiState.value.instances.single().start,
+        )
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        // The stored bar is on another day; the write reads the same clock time.
+        assertTrue(written, written.contains("T111500"))
+    }
+
+    @Test
+    fun `all events dragged across the clock change keeps the series at its time of day`() {
+        weekly = true
+        val model = model()
+        val said = said(model)
+        // Saturday 24 October 10:00 in summer time to Sunday 25 October 10:00
+        // in winter time: a day on by the clock, 25 hours by the watch.
+        val saturday = LocalDate.of(2026, 10, 24).atTime(10, 0).atZone(london).toEpochSecond()
+        val sunday = LocalDate.of(2026, 10, 25).atTime(10, 0).atZone(london).toEpochSecond()
+        val instance = org.mochios.calendars.model.Instance(
+            event = "e1", calendar = "c1", start = saturday, finish = saturday + 3_600, recurring = true,
+        )
+        model.move(instance, sunday, sunday + 3_600, org.mochios.calendars.ui.editor.Scope.ALL)
+        until { said.isNotEmpty() }
+        assertEquals(CalendarEvent.Moved, said.single())
+        // The series began Monday 5 October 10:00, so it now begins Tuesday 6 October 10:00.
+        assertTrue("THE POINT: a day on, still at 10:00: $written", written.contains("\"value\":\"20261006T100000\""))
+        assertFalse("not 11:00 to 12:00, 25 hours on: $written", written.contains("20261006T120000"))
+    }
+
+    @Test
+    fun `an occurrence moved with this event is drawn as the override of the occurrence it was`() {
+        weekly = true
+        val model = model()
+        val said = said(model)
+        reading = CountDownLatch(1)
+        val listed = model.uiState.value.instances.single()
+        assertTrue(listed.recurring)
+        model.move(listed, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ONE)
+        val shown = model.uiState.value.instances.single()
+        assertEquals(start + 3_600, shown.start)
+        assertTrue("THE POINT: an override, as the write makes it", shown.exception)
+        assertEquals("of the occurrence it was", start, shown.occurrence)
+        assertFalse("a second drag may take it", shown.readonly)
+        reading?.countDown()
+        until { said.isNotEmpty() }
+    }
+
+    @Test
+    fun `occurrences moved with this and following or all events are read-only until listed again`() {
+        weekly = true
+        val model = model()
+        val said = said(model)
+        val kinds = listOf(org.mochios.calendars.ui.editor.Scope.FOLLOWING, org.mochios.calendars.ui.editor.Scope.ALL)
+        for ((index, scope) in kinds.withIndex()) {
+            until { !model.uiState.value.instances.single().readonly }
+            reading = CountDownLatch(1)
+            model.move(model.uiState.value.instances.single(), start + 3_600, start + 7_200, scope)
+            val shown = model.uiState.value.instances.single()
+            assertEquals(start + 3_600, shown.start)
+            assertTrue("THE POINT: $scope gives it a place in the series only a new listing names", shown.readonly)
+            reading?.countDown()
+            until { said.size == index + 1 }
+        }
+    }
+
+    @Test
+    fun `an occurrence moved with this event and dragged again before it is listed again moves its override`() {
+        weekly = true
+        keeping = true
+        val model = model()
+        val said = said(model)
+        reading = CountDownLatch(1)
+        // Monday 5 October's 10:00 to 11:00, then, before that is written, on to 12:00.
+        model.move(model.uiState.value.instances.single(), start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ONE)
+        model.move(model.uiState.value.instances.single(), start + 7_200, start + 10_800, org.mochios.calendars.ui.editor.Scope.ONE)
+        reading?.countDown()
+        until { said.size == 2 }
+        assertEquals(listOf(CalendarEvent.Moved, CalendarEvent.Moved), said)
+        assertTrue(written, written.contains("\"value\":\"20261005T100000\""))
+        assertTrue(written, written.contains("\"value\":\"20261005T120000\""))
+        assertFalse("THE POINT: no override of an 11:00 the series does not have: $written", written.contains("20261005T110000"))
+    }
+
+    @Test
+    fun `a move that fails shows where the server has it, though the range cannot be read again`() {
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        lost = true
+        failing = true
+        val instance = model.uiState.value.instances.single()
+        model.move(instance, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ALL)
+        assertEquals("drawn where it was dropped", start + 3_600, model.uiState.value.instances.single().start)
+        until { said.isNotEmpty() }
+        assertTrue(said.single() is CalendarEvent.Failed)
+        assertEquals("THE POINT: where the server last listed it", start, model.uiState.value.instances.single().start)
+    }
+
+    /**
+     * A drag made from where a first move drew the event, queued behind that
+     * move, whose write is then refused: [first] moves [listed], or the
+     * occurrence the range lists, and [then] drags what it drew. Answers
+     * what the second move wrote.
+     */
+    private fun queued(
+        listed: org.mochios.calendars.model.Instance? = null,
+        first: (CalendarViewModel, org.mochios.calendars.model.Instance) -> Unit,
+        then: (CalendarViewModel, org.mochios.calendars.model.Instance) -> Unit,
+    ): String {
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        refusals = 1
+        first(model, listed ?: model.uiState.value.instances.single())
+        then(model, model.uiState.value.instances.single())
+        reading?.countDown()
+        until { said.size == 2 }
+        assertTrue(said.first() is CalendarEvent.Failed)
+        assertEquals(CalendarEvent.Moved, said.last())
+        return written
+    }
+
+    /**
+     * The DTSTART [written] gives the component that replaces an occurrence
+     * on [replaced], the day a RECURRENCE-ID value begins with, or with none
+     * the master's.
+     */
+    private fun begins(written: String, replaced: String? = null): String? {
+        val components = com.google.gson.JsonParser.parseString(written).asJsonObject.getAsJsonArray("components")
+        val value = { component: com.google.gson.JsonObject, name: String ->
+            component.getAsJsonArray("properties").map { it.asJsonObject }
+                .firstOrNull { it.get("name").asString == name }?.get("value")?.asString
+        }
+        return components.map { it.asJsonObject }
+            .firstOrNull { component ->
+                val recurrence = value(component, "RECURRENCE-ID")
+                if (replaced == null) recurrence == null else recurrence?.startsWith(replaced) == true
+            }
+            ?.let { component -> value(component, "DTSTART") }
+    }
+
+    @Test
+    fun `a block dragged again behind a move that fails is written where it was dropped`() {
+        val written = queued(
+            first = { model, instance -> model.move(instance, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ALL) },
+            then = { model, instance -> model.move(instance, start + 7_200, start + 10_800, org.mochios.calendars.ui.editor.Scope.ALL) },
+        )
+        assertEquals("THE POINT: 12:00, where it was dropped, not an hour on from where the server has it", "20261005T120000", begins(written))
+    }
+
+    @Test
+    fun `an occurrence dragged again with this event behind a move that fails is written where it was dropped`() {
+        weekly = true
+        val written = queued(
+            first = { model, instance -> model.move(instance, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ONE) },
+            then = { model, instance -> model.move(instance, start + 7_200, start + 10_800, org.mochios.calendars.ui.editor.Scope.ONE) },
+        )
+        assertEquals("THE POINT: the override of the 5th at 12:00, where it was dropped", "20261005T120000", begins(written, "20261005"))
+    }
+
+    @Test
+    fun `a chip dragged again behind a move that fails is written on the day it was dropped on`() {
+        val written = queued(
+            first = { model, instance -> model.move(instance, LocalDate.of(2026, 10, 6), org.mochios.calendars.ui.editor.Scope.ALL) },
+            then = { model, instance -> model.move(instance, LocalDate.of(2026, 10, 8), org.mochios.calendars.ui.editor.Scope.ALL) },
+        )
+        assertEquals("THE POINT: Thursday the 8th, where it was dropped", "20261008T100000", begins(written))
+    }
+
+    @Test
+    fun `a block dropped in the band again behind a move that fails is written from the day it was dropped on`() {
+        val written = queued(
+            first = { model, instance -> model.move(instance, Moved.Whole(LocalDate.of(2026, 10, 6)), org.mochios.calendars.ui.editor.Scope.ALL) },
+            then = { model, instance -> model.move(instance, Moved.Whole(LocalDate.of(2026, 10, 8)), org.mochios.calendars.ui.editor.Scope.ALL) },
+        )
+        assertEquals("THE POINT: from Thursday the 8th", "20261008", begins(written))
+    }
+
+    @Test
+    fun `a bar dropped in the grid behind a move that fails is written on the day it was dropped on`() {
+        whole = true
+        val midnight = LocalDate.of(2026, 10, 8).atStartOfDay(java.time.ZoneOffset.UTC).toEpochSecond()
+        val bar = org.mochios.calendars.model.Instance(
+            event = "e1", calendar = "c1", start = midnight, finish = midnight + 86_400, allday = true, date = "2026-10-08",
+        )
+        val written = queued(
+            listed = bar,
+            first = { model, instance -> model.move(instance, LocalDate.of(2026, 10, 9), org.mochios.calendars.ui.editor.Scope.ALL) },
+            then = { model, instance -> model.move(instance, Moved.Timed(LocalDate.of(2026, 10, 11), 11.25f), org.mochios.calendars.ui.editor.Scope.ALL) },
+        )
+        assertEquals("THE POINT: 11:15 on Sunday the 11th, where it was dropped", "20261011T111500", begins(written))
+    }
+
+    @Test
+    fun `a listing that lands while the move is written keeps it where it was dropped, and one after lets it go`() {
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.isNotEmpty() }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        val instance = model.uiState.value.instances.single()
+        model.move(instance, start + 3_600, start + 7_200, org.mochios.calendars.ui.editor.Scope.ALL)
+        val before = listings().size
+        model.load(reset = false)
+        until { listings().size >= before + 3 }
+        settle()
+        assertEquals("THE POINT: the listing from before the write does not take it back", start + 3_600, model.uiState.value.instances.single().start)
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        // This server does not move it, so the listing read since says where it is.
+        until { model.uiState.value.instances.single().start == start }
     }
 
     // ---- calendar actions ----

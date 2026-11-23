@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
     <string name="projects_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>
     <string name="projects_attachment_remove">Odstrani prilogo</string>
-    <string name="projects_create_allow_public">Dovoli vsem ogled in komentiranje projekta</string>
+    <string name="projects_create_allow_public">Dovoli vsem ogled projekta</string>
     <string name="projects_request_delete_title">Izbriši zahtevo za združitev</string>
     <string name="projects_request_delete_message">Ali ste prepričani, da želite izbrisati to zahtevo za združitev?</string>
     <string name="projects_board_delete_column_title">Izbriši stolpec</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ni bilo mogoče priložiti: %1$s</string>
     <string name="projects_activity_unknown">Neznano</string>
+    <string name="projects_create_allow_search">Dovoli vsem iskanje projekta</string>
 </resources>

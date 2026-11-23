@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Sýnishorn %1$s</string>
     <string name="crm_option_delete_title">Eyða valkosti</string>
     <string name="crm_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
-    <string name="crm_create_public">Leyfa öllum að skoða CRM og gera athugasemdir við það</string>
+    <string name="crm_create_public">Leyfa öllum að skoða CRM</string>
     <string name="crm_board_delete_column">Eyða dálki</string>
     <string name="crm_board_delete_column_message">Ertu viss um að þú viljir eyða dálknum „%1$s“? Þessu er ekki hægt að afturkalla.</string>
     <string name="crm_object_delete_named">Ertu viss um að þú viljir eyða „%1$s“? Þessari aðgerð er ekki hægt að afturkalla.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Foreldri</string>
     <string name="crm_export_csv_id">Auðkenni</string>
     <string name="crm_export_csv_class">Flokkur</string>
+    <string name="crm_create_allow_search">Leyfa öllum að leita að CRM</string>
 </resources>

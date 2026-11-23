@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Nimûne %1$s</string>
     <string name="crm_option_delete_title">Vebijêrkê jê bibe</string>
     <string name="crm_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
-    <string name="crm_create_public">Destûr bide her kesî ku CRM bibîne û şîrove li ser bike</string>
+    <string name="crm_create_public">Destûr bide her kesî ku CRM bibîne</string>
     <string name="crm_board_delete_column">Stûnê jê bibe</string>
     <string name="crm_board_delete_column_message">Tu bawer î ku dixwazî stûna \"%1$s\" jê bibî? Ev nikare were vegerandin.</string>
     <string name="crm_object_delete_named">Tu bawer î ku dixwazî \"%1$s\" jê bibî? Ev kar nikare were vegerandin.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Dêûbav</string>
     <string name="crm_export_csv_id">Nasname</string>
     <string name="crm_export_csv_class">Pol</string>
+    <string name="crm_create_allow_search">Destûr bide her kesî ku li CRM bigere</string>
 </resources>

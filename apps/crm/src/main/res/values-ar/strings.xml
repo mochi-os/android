@@ -275,7 +275,7 @@
     <string name="crm_design_sample">عينة %1$s</string>
     <string name="crm_option_delete_title">حذف الخيار</string>
     <string name="crm_option_delete_message">هل أنت متأكد أنك تريد حذف الخيار \"%1$s\"؟</string>
-    <string name="crm_create_public">السماح لأي شخص بعرض CRM والتعليق عليه</string>
+    <string name="crm_create_public">السماح لأي شخص بعرض CRM</string>
     <string name="crm_board_delete_column">حذف العمود</string>
     <string name="crm_board_delete_column_message">هل أنت متأكد من حذف العمود \"%1$s\"؟ لا يمكن التراجع عن ذلك.</string>
     <string name="crm_object_delete_named">هل أنت متأكد من حذف \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
@@ -298,4 +298,5 @@
     <string name="crm_export_csv_parent">الأصل</string>
     <string name="crm_export_csv_id">المعرّف</string>
     <string name="crm_export_csv_class">فئة</string>
+    <string name="crm_create_allow_search">السماح لأي شخص بالبحث عن CRM</string>
 </resources>

@@ -304,7 +304,7 @@
     <string name="projects_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nenhum tipo de item pode ser criado ainda. Crie primeiro os itens pais obrigatórios.</string>
     <string name="projects_attachment_remove">Remover anexo</string>
-    <string name="projects_create_allow_public">Permitir que qualquer pessoa visualize e comente o projeto</string>
+    <string name="projects_create_allow_public">Permitir que qualquer pessoa visualize o projeto</string>
     <string name="projects_request_delete_title">Excluir merge request</string>
     <string name="projects_request_delete_message">Tem certeza de que deseja excluir este merge request?</string>
     <string name="projects_board_delete_column_title">Excluir coluna</string>
@@ -315,4 +315,5 @@
         <item quantity="other">Tem certeza de que deseja excluir \"%1$s\" e os %2$s itens abaixo dele? Esta ação não pode ser desfeita.</item>
     </plurals>
     <string name="projects_activity_unknown">Desconhecido</string>
+    <string name="projects_create_allow_search">Permitir que qualquer pessoa pesquise o projeto</string>
 </resources>

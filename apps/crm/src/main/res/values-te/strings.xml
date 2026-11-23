@@ -275,7 +275,7 @@
     <string name="crm_design_sample">నమూనా %1$s</string>
     <string name="crm_option_delete_title">ఎంపికను తొలగించండి</string>
     <string name="crm_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
-    <string name="crm_create_public">CRMను ఎవరైనా చూడటానికి మరియు దానిపై వ్యాఖ్యానించడానికి అనుమతించండి</string>
+    <string name="crm_create_public">CRMను ఎవరైనా చూడటానికి అనుమతించండి</string>
     <string name="crm_board_delete_column">కాలమ్‌ను తొలగించండి</string>
     <string name="crm_board_delete_column_message">మీరు \"%1$s\" కాలమ్‌ను తొలగించాలనుకుంటున్నారా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="crm_object_delete_named">మీరు \"%1$s\"ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">పేరెంట్</string>
     <string name="crm_export_csv_id">ఐడీ</string>
     <string name="crm_export_csv_class">తరగతి</string>
+    <string name="crm_create_allow_search">CRM కోసం ఎవరైనా శోధించడానికి అనుమతించండి</string>
 </resources>

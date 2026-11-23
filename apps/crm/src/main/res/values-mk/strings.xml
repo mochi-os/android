@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Примерок %1$s</string>
     <string name="crm_option_delete_title">Избриши опција</string>
     <string name="crm_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
-    <string name="crm_create_public">Дозволи на секого да го прегледува и коментира CRM</string>
+    <string name="crm_create_public">Дозволи на секого да го прегледува CRM</string>
     <string name="crm_board_delete_column">Избриши колона</string>
     <string name="crm_board_delete_column_message">Сигурен ли си дека сакаш да ја избришеш колоната „%1$s“? Не може да се врати.</string>
     <string name="crm_object_delete_named">Сигурен ли си дека сакаш да го избришеш „%1$s“? Оваа акција не може да се врати.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Родител</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Класа</string>
+    <string name="crm_create_allow_search">Дозволи на секого да пребарува CRM</string>
 </resources>

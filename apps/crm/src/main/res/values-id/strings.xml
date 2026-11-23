@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Contoh %1$s</string>
     <string name="crm_option_delete_title">Hapus opsi</string>
     <string name="crm_option_delete_message">Apakah Anda yakin ingin menghapus opsi \"%1$s\"?</string>
-    <string name="crm_create_public">Izinkan siapa saja melihat dan mengomentari CRM</string>
+    <string name="crm_create_public">Izinkan siapa saja melihat CRM</string>
     <string name="crm_board_delete_column">Hapus kolom</string>
     <string name="crm_board_delete_column_message">Apakah Anda yakin ingin menghapus kolom \"%1$s\"? Ini tidak dapat dibatalkan.</string>
     <string name="crm_object_delete_named">Apakah Anda yakin ingin menghapus \"%1$s\"? Tindakan ini tidak dapat dibatalkan.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Induk</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Kelas</string>
+    <string name="crm_create_allow_search">Izinkan siapa saja mencari CRM</string>
 </resources>

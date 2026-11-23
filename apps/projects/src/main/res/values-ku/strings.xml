@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="projects_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
     <string name="projects_attachment_remove">Pêvekê rake</string>
-    <string name="projects_create_allow_public">Destûr bide her kesî ku projeyê bibîne û şîrove li ser bike</string>
+    <string name="projects_create_allow_public">Destûr bide her kesî ku projeyê bibîne</string>
     <string name="projects_request_delete_title">Daxwaza hevkirinê jê bibe</string>
     <string name="projects_request_delete_message">Tu bawer î ku dixwazî vê daxwaza hevkirinê jê bibî?</string>
     <string name="projects_board_delete_column_title">Stûnê jê bibe</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nehat pêvekirin: %1$s</string>
     <string name="projects_activity_unknown">Nediyar</string>
+    <string name="projects_create_allow_search">Destûr bide her kesî ku li proje bigere</string>
 </resources>

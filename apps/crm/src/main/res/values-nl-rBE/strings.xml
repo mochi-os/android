@@ -236,7 +236,7 @@
     <string name="crm_export_csv">CSV exporteren</string>
     <string name="crm_option_delete_title">Optie verwijderen</string>
     <string name="crm_option_delete_message">Weet u zeker dat u de optie \"%1$s\" wilt verwijderen?</string>
-    <string name="crm_create_public">Iedereen toestaan om het CRM te bekijken en erop te reageren</string>
+    <string name="crm_create_public">Iedereen toestaan om het CRM te bekijken</string>
     <string name="crm_board_delete_column">Kolom verwijderen</string>
     <string name="crm_board_delete_column_message">Weet u zeker dat u de kolom \"%1$s\" wilt verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
     <string name="crm_object_delete_named">Weet u zeker dat u \"%1$s\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
@@ -247,4 +247,5 @@
     <string name="crm_export_csv_parent">Bovenliggend</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klasse</string>
+    <string name="crm_create_allow_search">Iedereen toestaan om naar CRM te zoeken</string>
 </resources>

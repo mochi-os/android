@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Sampall %1$s</string>
     <string name="crm_option_delete_title">Sguab às roghainn</string>
     <string name="crm_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
-    <string name="crm_create_public">Ceadaich do dhuine sam bith an CRM fhaicinn agus beachdan a chur ris</string>
+    <string name="crm_create_public">Ceadaich do dhuine sam bith an CRM fhaicinn</string>
     <string name="crm_board_delete_column">Sguab às colbh</string>
     <string name="crm_board_delete_column_message">A bheil thu cinnteach gu bheil thu airson an colbh \"%1$s\" a sguabadh às? Cha ghabh seo a thilleadh.</string>
     <string name="crm_object_delete_named">A bheil thu cinnteach gu bheil thu airson \"%1$s\" a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</string>
@@ -294,4 +294,5 @@
     <string name="crm_export_csv_parent">Pàrant</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clas</string>
+    <string name="crm_create_allow_search">Ceadaich do dhuine sam bith CRM a lorg</string>
 </resources>

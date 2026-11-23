@@ -277,7 +277,7 @@
     <string name="crm_design_sample">Mostra %1$s</string>
     <string name="crm_option_delete_title">Suprimeix l\'opció</string>
     <string name="crm_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
-    <string name="crm_create_public">Permet que qualsevol vegi i comenti el CRM</string>
+    <string name="crm_create_public">Permet que qualsevol vegi el CRM</string>
     <string name="crm_board_delete_column">Suprimeix la columna</string>
     <string name="crm_board_delete_column_message">Segur que vols suprimir la columna «%1$s»? Això no es pot desfer.</string>
     <string name="crm_object_delete_named">Segur que vols suprimir «%1$s»? Aquesta acció no es pot desfer.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Pare</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Classe</string>
+    <string name="crm_create_allow_search">Permet que qualsevol cerqui el CRM</string>
 </resources>

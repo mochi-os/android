@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Nie można jeszcze utworzyć żadnych typów elementów. Najpierw utwórz wymagane elementy nadrzędne.</string>
     <string name="projects_create_blocked_no_options">Nie można utworzyć: %1$s jest wymagane, ale nie ma opcji do wyboru. Dodaj opcje w Projekcie.</string>
     <string name="projects_attachment_remove">Usuń załącznik</string>
-    <string name="projects_create_allow_public">Zezwól każdemu na przeglądanie i komentowanie projektu</string>
+    <string name="projects_create_allow_public">Zezwól każdemu na przeglądanie projektu</string>
     <string name="projects_request_delete_title">Usuń żądanie scalenia</string>
     <string name="projects_request_delete_message">Czy na pewno chcesz usunąć to żądanie scalenia?</string>
     <string name="projects_board_delete_column_title">Usuń kolumnę</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nie udało się dołączyć: %1$s</string>
     <string name="projects_activity_unknown">Nieznany</string>
+    <string name="projects_create_allow_search">Zezwól każdemu na wyszukiwanie projektu</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Belum ada jenis item yang dapat dibuat. Buat item induk yang diperlukan terlebih dahulu.</string>
     <string name="projects_create_blocked_no_options">Tidak dapat membuat: %1$s wajib diisi tetapi tidak memiliki pilihan. Tambahkan pilihan di Desain.</string>
     <string name="projects_attachment_remove">Hapus lampiran</string>
-    <string name="projects_create_allow_public">Izinkan siapa saja melihat dan mengomentari proyek</string>
+    <string name="projects_create_allow_public">Izinkan siapa saja melihat proyek</string>
     <string name="projects_request_delete_title">Hapus merge request</string>
     <string name="projects_request_delete_message">Apakah Anda yakin ingin menghapus merge request ini?</string>
     <string name="projects_board_delete_column_title">Hapus kolom</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Tidak dapat melampirkan: %1$s</string>
     <string name="projects_activity_unknown">Tidak diketahui</string>
+    <string name="projects_create_allow_search">Izinkan siapa saja mencari proyek</string>
 </resources>

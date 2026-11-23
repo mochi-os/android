@@ -62,6 +62,7 @@ import java.io.File
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.temporal.ChronoUnit
 import javax.inject.Inject
@@ -328,6 +329,7 @@ class CalendarViewModel @Inject constructor(
             return
         }
         loading?.cancel()
+        val read = ++reads
         loading = viewModelScope.launch {
             val state = _uiState.value
             _uiState.value = state.copy(
@@ -344,7 +346,7 @@ class CalendarViewModel @Inject constructor(
                     // page around the anchor, so it says "No events" rather
                     // than waiting on a read that never comes.
                     _uiState.value = _uiState.value.copy(
-                        instances = emptyList(),
+                        instances = land(emptyList(), read),
                         truncated = false,
                         bounds = Bounds(),
                         earliest = 0,
@@ -355,9 +357,9 @@ class CalendarViewModel @Inject constructor(
                         fetched = state.anchor.takeIf { state.view == CalendarsSection.LIST },
                     )
                 } else if (state.view == CalendarsSection.LIST) {
-                    pages(state, reset, shown)
+                    pages(state, reset, shown, read)
                 } else {
-                    periods(state, shown)
+                    periods(state, shown, read)
                 }
                 answer()
             } catch (e: kotlinx.coroutines.CancellationException) {
@@ -447,9 +449,10 @@ class CalendarViewModel @Inject constructor(
      * neighbours arrive; a neighbour that fails to load is read again when it
      * is paged to, and never turns the view into an error. Only [calendars],
      * the ones shown, are read, so hidden ones never take a share of the most
-     * the server will list.
+     * the server will list. [read] is the listing this is, which lets go of
+     * the moves written before it was asked for once the whole of it is in.
      */
-    private suspend fun periods(state: CalendarUiState, calendars: List<String>) {
+    private suspend fun periods(state: CalendarUiState, calendars: List<String>, read: Int) {
         // With events shown in their own zones, a day's occurrences can
         // begin or end up to a day away by the user's clock, so each range
         // reaches a day each side.
@@ -457,11 +460,11 @@ class CalendarViewModel @Inject constructor(
         val (start, finish) = range(state)
         val (shown, truncated) =
             repository.listEvents(start - margin, finish + margin, calendars, zone.id)
-        val kept = _uiState.value.instances.filter { instance ->
+        val kept = arrived.filter { instance ->
             instance.finish <= start - margin || instance.start >= finish + margin
         }
         _uiState.value = _uiState.value.copy(
-            instances = ordered(distinct(shown + kept)),
+            instances = land(distinct(shown + kept)),
             truncated = truncated,
             bounds = Bounds(),
             earliest = 0,
@@ -490,13 +493,13 @@ class CalendarViewModel @Inject constructor(
         }
         // Both read: they replace what was kept. One failed: what was kept
         // stays, with whichever did arrive added.
-        val read = around.filterNotNull().flatten()
+        val neighbours = around.filterNotNull().flatten()
         val instances = if (around.all { neighbour -> neighbour != null }) {
-            shown + read
+            shown + neighbours
         } else {
-            shown + kept + read
+            shown + kept + neighbours
         }
-        _uiState.value = _uiState.value.copy(instances = ordered(distinct(instances)))
+        _uiState.value = _uiState.value.copy(instances = land(distinct(instances), read))
     }
 
     /** [instances] with each occurrence once, as overlapping reads list it in each. */
@@ -507,30 +510,32 @@ class CalendarViewModel @Inject constructor(
      * The list view's pages: how far the shown calendars reach, and each page
      * held, all asked for at once rather than one after another, so a new
      * day waits on one round trip. A page is a quarter, so even the whole cap's worth is read a
-     * page at a time — the server lists at most a year in one call.
+     * page at a time — the server lists at most a year in one call. [read]
+     * is the listing this is, as [periods] takes it.
      */
     private suspend fun pages(
         state: CalendarUiState,
         reset: Boolean,
         shown: List<String>,
+        read: Int,
     ) = coroutineScope {
         val first = if (reset) 0 else state.earliest
         val last = if (reset) 0 else state.latest
         val bounding = async {
             runCatching { repository.eventBounds(shown) }.getOrDefault(Bounds())
         }
-        val reads = (first..last).map { index ->
+        val requests = (first..last).map { index ->
             async {
                 val span = page(state.anchor, index, zone)
                 repository.listEvents(span.start, span.finish, shown, zone.id)
             }
         }
-        val listed = reads.awaitAll()
+        val answers = requests.awaitAll()
         val bounds = bounding.await()
-        val gathered = listed.flatMap { (instances, _) -> instances }
-        val truncated = listed.any { (_, cut) -> cut }
+        val gathered = answers.flatMap { (instances, _) -> instances }
+        val truncated = answers.any { (_, cut) -> cut }
         _uiState.value = _uiState.value.copy(
-            instances = ordered(gathered.distinctBy { it.event to it.start }),
+            instances = land(gathered.distinctBy { it.event to it.start }, read),
             truncated = truncated,
             bounds = bounds,
             earliest = first,
@@ -603,10 +608,10 @@ class CalendarViewModel @Inject constructor(
                     }
                     // Merged rather than appended: a multi-day occurrence
                     // reaches into both pages and the server lists it in each.
-                    val merged = ordered((now.instances + instances).distinctBy { it.event to it.start })
-                    val grew = merged.size > now.instances.size
+                    val merged = (arrived + instances).distinctBy { it.event to it.start }
+                    val grew = merged.size > arrived.size
                     _uiState.value = now.copy(
-                        instances = merged,
+                        instances = land(merged),
                         truncated = now.truncated || truncated,
                         earliest = if (forward) now.earliest else index,
                         latest = if (forward) index else now.latest,
@@ -879,18 +884,52 @@ class CalendarViewModel @Inject constructor(
      * moves by as far as the occurrence did, so a whole series shifts
      * rather than jumping onto the occurrence, and takes the new length.
      */
-    fun move(instance: Instance, start: Long, finish: Long, scope: Scope) = rewrite(instance, scope) { form ->
-        val begins = instant(form, zone.id) + (start - instance.start)
-        form.copy(allday = false, start = begins, finish = begins + (finish - start))
+    fun move(instance: Instance, start: Long, finish: Long, scope: Scope) {
+        val own = zoneOf(instance.zone?.start, zone)
+        val shift = ChronoUnit.MINUTES.between(local(instance.start, own), local(start, own))
+        // A start the drop did not land on moves by as far by the clock, so
+        // a series shifted across a clock change keeps its time of day.
+        val moved = { begins: Long ->
+            if (begins == instance.start) start else local(begins, own).plusMinutes(shift).atZone(own).toEpochSecond()
+        }
+        val shown = preview(instance, scope) { occurrence ->
+            val begins = moved(occurrence.start)
+            occurrence.copy(start = begins, finish = begins + (finish - start), allday = false, date = null)
+        }
+        val single = alone(instance, scope)
+        rewrite(instance, scope, shown) { form ->
+            val begins = if (single) start else moved(instant(form, zone.id))
+            form.copy(allday = false, start = begins, finish = begins + (finish - start))
+        }
     }
+
+    /**
+     * Whether a move takes one occurrence alone: an event that does not
+     * repeat, or "This event". That one is written where it was dropped,
+     * wherever the stored event now has it, rather than moved by as far as
+     * the drag went: a drag queued behind a move whose write then failed was
+     * made from where that move drew it, not from where the server holds it.
+     */
+    private fun alone(instance: Instance, scope: Scope) = !instance.recurring || scope == Scope.ONE
+
+    /** The day [form] begins on read in [zone], an all-day form's own date, as [whole] and [clocked] read it. */
+    private fun opens(form: EventForm, zone: ZoneId): LocalDate =
+        Instant.ofEpochSecond(form.start).atZone(if (form.allday) ZoneOffset.UTC else zone).toLocalDate()
 
     /**
      * A chip dragged onto another day in the month and multiweek views: the
      * occurrence's first day is now [day], and the stored event moves by as
      * many days, each end keeping its clock reading.
      */
-    fun move(instance: Instance, day: LocalDate, scope: Scope) = rewrite(instance, scope) { form ->
-        advanced(form, ChronoUnit.DAYS.between(day(instance), day))
+    fun move(instance: Instance, day: LocalDate, scope: Scope) {
+        val days = ChronoUnit.DAYS.between(day(instance), day)
+        val shown = if (days != 0L) preview(instance, scope) { occurrence -> shifted(occurrence, days) } else null
+        val single = alone(instance, scope)
+        rewrite(instance, scope, shown) { form ->
+            // The form's first day read where the views draw it, as day() reads the occurrence's.
+            val drawn = if (zones) zoneOf(form.zone.start, zone) else zone
+            advanced(form, if (single) ChronoUnit.DAYS.between(opens(form, drawn), day) else days)
+        }
     }
 
     /**
@@ -904,17 +943,133 @@ class CalendarViewModel @Inject constructor(
         when (moved) {
             is Moved.Time -> move(instance, moved.start, moved.finish, scope)
             is Moved.Days -> move(instance, moved.first, scope)
-            is Moved.Whole -> rewrite(instance, scope) { form ->
-                // The form's first day read in the zone the views put the
-                // occurrence on its days in, so the shift lands where it was dropped.
-                val zone = if (zones) zoneOf(form.zone.start, this.zone) else this.zone
-                whole(form, ChronoUnit.DAYS.between(first, moved.first), ChronoUnit.DAYS.between(first, finish(instance)) + 1, zone)
+            is Moved.Whole -> {
+                val days = ChronoUnit.DAYS.between(first, moved.first)
+                val span = ChronoUnit.DAYS.between(first, finish(instance)) + 1
+                val shown = preview(instance, scope) { occurrence ->
+                    val opens = day(occurrence).plusDays(days)
+                    val begins = opens.atStartOfDay(zone).toEpochSecond()
+                    occurrence.copy(allday = true, date = opens.toString(), start = begins, finish = begins + span * 86_400, zone = null)
+                }
+                val single = alone(instance, scope)
+                rewrite(instance, scope, shown) { form ->
+                    // The form's first day read in the zone the views put the
+                    // occurrence on its days in, so the shift lands where it was dropped.
+                    val zone = if (zones) zoneOf(form.zone.start, this.zone) else this.zone
+                    whole(form, if (single) ChronoUnit.DAYS.between(opens(form, zone), moved.first) else days, span, zone)
+                }
             }
-            is Moved.Timed -> rewrite(instance, scope) { form ->
+            is Moved.Timed -> {
+                val days = ChronoUnit.DAYS.between(first, moved.day)
                 val length = 60L * maxOf(15, _uiState.value.preferences.duration)
-                clocked(form, ChronoUnit.DAYS.between(first, moved.day), moved.hours, length, zone)
+                val shown = preview(instance, scope) { occurrence ->
+                    // By the clock, as the write reads the hours, so a day
+                    // the clocks change on draws it where it will land.
+                    val begins = at(day(occurrence).plusDays(days), moved.hours, zone)
+                    occurrence.copy(allday = false, date = null, start = begins, finish = begins + length)
+                }
+                val single = alone(instance, scope)
+                rewrite(instance, scope, shown) { form ->
+                    clocked(form, if (single) ChronoUnit.DAYS.between(opens(form, zone), moved.day) else days, moved.hours, length, zone)
+                }
             }
         }
+    }
+
+    /**
+     * A move drawn where it put its occurrences, laid over every listing that
+     * lands until its write settles: [covers] picks the listed occurrences it
+     * replaces and [placed] is what it draws instead. [since] is how many
+     * listings had been asked for when its write began, and [written] says
+     * the write was answered; a listing asked for after both holds the move
+     * itself, and the preview goes.
+     */
+    private class Preview(val covers: (Instance) -> Boolean, val placed: List<Instance>) {
+        var since = Int.MAX_VALUE
+        var written = false
+    }
+
+    /** The moves being written, in the order they were made. */
+    private val previews = mutableListOf<Preview>()
+
+    /** The occurrences as the server last listed them, before [previews] are laid over them. */
+    private var arrived: List<Instance> = emptyList()
+
+    /** How many listings of the range have been asked for. */
+    private var reads = 0
+
+    /** [instances] with every move still being written laid over them, in drawing order. */
+    private fun overlaid(instances: List<Instance>): List<Instance> =
+        ordered(distinct(previews.fold(instances) { shown, preview -> shown.filterNot(preview.covers) + preview.placed }))
+
+    /**
+     * A listing has landed: what the server listed, with the moves still
+     * being written drawn over it. With [read], the listing it was, a move
+     * written before that listing was asked for is in it, and lets go.
+     */
+    private fun land(instances: List<Instance>, read: Int? = null): List<Instance> {
+        arrived = instances
+        if (read != null) previews.removeAll { preview -> preview.written && read > preview.since }
+        return overlaid(instances)
+    }
+
+    /**
+     * The occurrences a move covers drawn where it puts them, from the drop,
+     * until its write settles: the grid lets go of the dragged block there,
+     * and [rewriting] reads the stored event before it writes, so until the
+     * range is read again the old place would show. [place] gives an
+     * occurrence as the move leaves it. Each carries the identity the server
+     * will give it, so a second drag before the range is read again finds it:
+     * "This event" on a series makes an override of the occurrence it was,
+     * and "This and following" and "All events" give the occurrences a place
+     * in the series that only a fresh listing names, so they are read-only
+     * until it comes.
+     */
+    private fun preview(instance: Instance, scope: Scope, place: (Instance) -> Instance): Preview {
+        val covers = { occurrence: Instance ->
+            occurrence.event == instance.event && (
+                !instance.recurring || occurrence.start == instance.start ||
+                    (scope == Scope.ONE && occurrence.occurrence == instance.occurrence) ||
+                    scope == Scope.ALL || (scope == Scope.FOLLOWING && occurrence.start >= instance.start)
+                )
+        }
+        val state = _uiState.value
+        // An event that does not repeat has the one occurrence, which moves.
+        val moving = if (instance.recurring) (state.instances.filter(covers) + instance).distinctBy { it.start } else listOf(instance)
+        val placed = moving.map { occurrence ->
+            val moved = place(occurrence)
+            when {
+                !instance.recurring -> moved
+                scope == Scope.ONE -> moved.copy(exception = true, replaced = if (occurrence.moved) null else occurrence.occurrence)
+                else -> moved.copy(readonly = true)
+            }
+        }
+        val shown = Preview(covers, placed)
+        previews += shown
+        _uiState.value = state.copy(instances = overlaid(arrived))
+        return shown
+    }
+
+    /** The wall-clock reading of the moment [seconds] in [zone]. */
+    private fun local(seconds: Long, zone: ZoneId) = Instant.ofEpochSecond(seconds).atZone(zone).toLocalDateTime()
+
+    /**
+     * An occurrence moved [days] days: an all-day one by whole days, a timed
+     * one by its wall-clock days in the zone each end was written in.
+     */
+    private fun shifted(occurrence: Instance, days: Long): Instance {
+        if (occurrence.allday) {
+            return occurrence.copy(
+                start = occurrence.start + days * 86_400,
+                finish = occurrence.finish + days * 86_400,
+                date = occurrence.date?.let { runCatching { LocalDate.parse(it).plusDays(days).toString() }.getOrNull() },
+            )
+        }
+        val end = { seconds: Long, named: String? ->
+            val own = zoneOf(named, zone)
+            local(seconds, own).plusDays(days).atZone(own).toEpochSecond()
+        }
+        return occurrence.copy(start = end(occurrence.start, occurrence.zone?.start), finish = end(occurrence.finish, occurrence.zone?.finish))
     }
 
     /**
@@ -924,18 +1079,41 @@ class CalendarViewModel @Inject constructor(
      * starts from is the whole series' master, one occurrence's own override
      * or, failing one, the master moved onto the occurrence, so a change by
      * a day or an hour lands where the occurrence is rather than where the
-     * series began. Every write says what it did, with a way back.
+     * series began. Every write says what it did, with a way back. [shown]
+     * is the move's preview, which stands until the write settles.
      */
-    private fun rewrite(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
+    private fun rewrite(instance: Instance, scope: Scope, shown: Preview?, change: (EventForm) -> EventForm) {
         viewModelScope.launch {
-            writing.withLock { rewriting(instance, scope, change) }
+            val written = writing.withLock {
+                shown?.since = reads
+                rewriting(instance, scope, change)
+            }
+            settle(shown, written)
+            if (!written) load(reset = false)
         }
     }
 
-    private suspend fun rewriting(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
+    /**
+     * A move's write has settled. Written, its preview stands until a
+     * listing asked for since lands, so nothing snaps back meanwhile; not,
+     * it goes at once, and the occurrences show where the server last listed
+     * them, whether or not the range can be read again.
+     */
+    private fun settle(shown: Preview?, written: Boolean) {
+        shown ?: return
+        if (written) {
+            shown.written = true
+        } else {
+            previews.remove(shown)
+            _uiState.value = _uiState.value.copy(instances = overlaid(arrived))
+        }
+    }
+
+    /** Whether the move was written; a write announces itself, which reads the range again. */
+    private suspend fun rewriting(instance: Instance, scope: Scope, change: (EventForm) -> EventForm): Boolean {
         try {
             val event = repository.getEvent(instance.event)
-            val master = event.master() ?: return
+            val master = event.master() ?: return false
             val user = zone.id
             // The occurrence as the server lists it, an override's the one it
             // replaces, and as the event's tree names it.
@@ -965,7 +1143,7 @@ class CalendarViewModel @Inject constructor(
                         restore(kept.etag)
                     }
                     _events.tryEmit(CalendarEvent.Moved)
-                    return
+                    return true
                 }
                 chosen = Scope.ALL
             }
@@ -980,11 +1158,13 @@ class CalendarViewModel @Inject constructor(
             val written = repository.updateEvent(event.id, event.etag, null, components)
             undo = { restore(written.etag) }
             _events.tryEmit(CalendarEvent.Moved)
+            return true
         } catch (_: EventChangedException) {
             _events.tryEmit(CalendarEvent.Changed)
         } catch (e: Exception) {
             _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
         }
+        return false
     }
 
     /** Puts the last move back: a split's new event goes, and the old one is restored. */

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
     <string name="projects_create_blocked_no_options">Yaratib bo\'lmaydi: %1$s talab qilinadi, lekin tanlash uchun variantlari yo\'q. Dizaynda variantlar qo\'shing.</string>
     <string name="projects_attachment_remove">Biriktirmani olib tashlash</string>
-    <string name="projects_create_allow_public">Hammaga loyihani koʻrish va unga izoh qoldirishga ruxsat berish</string>
+    <string name="projects_create_allow_public">Hammaga loyihani koʻrishga ruxsat berish</string>
     <string name="projects_request_delete_title">Birlashtirish soʻrovini oʻchirish</string>
     <string name="projects_request_delete_message">Bu birlashtirish soʻrovini oʻchirmoqchimisiz?</string>
     <string name="projects_board_delete_column_title">Ustunni oʻchirish</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Biriktirib boʻlmadi: %1$s</string>
     <string name="projects_activity_unknown">Nomaʼlum</string>
+    <string name="projects_create_allow_search">Hammaga loyihani qidirishga ruxsat berish</string>
 </resources>

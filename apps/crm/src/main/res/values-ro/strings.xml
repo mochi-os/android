@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Exemplu %1$s</string>
     <string name="crm_option_delete_title">Șterge opțiunea</string>
     <string name="crm_option_delete_message">Sigur dorești să ștergi opțiunea \"%1$s\"?</string>
-    <string name="crm_create_public">Permite oricui să vadă și să comenteze CRM-ul</string>
+    <string name="crm_create_public">Permite oricui să vadă CRM-ul</string>
     <string name="crm_board_delete_column">Șterge coloana</string>
     <string name="crm_board_delete_column_message">Sigur vrei să ștergi coloana „%1$s”? Această acțiune nu poate fi anulată.</string>
     <string name="crm_object_delete_named">Sigur vrei să ștergi „%1$s”? Această acțiune nu poate fi anulată.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Părinte</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clasă</string>
+    <string name="crm_create_allow_search">Permite oricui să caute CRM-ul</string>
 </resources>

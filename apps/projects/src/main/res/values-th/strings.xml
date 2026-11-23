@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
     <string name="projects_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>
     <string name="projects_attachment_remove">ลบไฟล์แนบ</string>
-    <string name="projects_create_allow_public">อนุญาตให้ใครก็ได้ดูและแสดงความคิดเห็นในโครงการ</string>
+    <string name="projects_create_allow_public">อนุญาตให้ใครก็ได้ดูโครงการ</string>
     <string name="projects_request_delete_title">ลบคำขอผสาน</string>
     <string name="projects_request_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบคำขอผสานนี้?</string>
     <string name="projects_board_delete_column_title">ลบคอลัมน์</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ไม่สามารถแนบได้: %1$s</string>
     <string name="projects_activity_unknown">ไม่ทราบ</string>
+    <string name="projects_create_allow_search">อนุญาตให้ใครก็ได้ค้นหาโครงการ</string>
 </resources>

@@ -69,6 +69,7 @@ import org.mochios.android.ui.components.fieldDisplay
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.ui.`object`.DeleteObjectDialog
+import org.mochios.projects.ui.project.Placement
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.projects.util.HIERARCHY_ROOT
 import org.mochios.projects.util.parentAllowed
@@ -132,7 +133,13 @@ fun TreeRow(
                 state = dragState,
                 itemId = obj.id,
                 orientation = DropOrientation.Vertical,
-                acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom, DragEdge.On),
+                // A sort other than the manual one draws no place beside a
+                // row, so only a drop on it is offered, as on the web.
+                acceptedEdges = if (viewModel.placement() == Placement.None) {
+                    setOf(DragEdge.On)
+                } else {
+                    setOf(DragEdge.Top, DragEdge.Bottom, DragEdge.On)
+                },
                 accept = acceptDrop,
                 onDrop = { sourceId, edge -> onDragDrop(sourceId, edge) }
             )

@@ -87,11 +87,31 @@ class RequestBodiesTest {
     }
 
     @Test
-    fun `a top-level reorder sends an empty scope`() {
-        runBlocking { repository.moveObject("p1", "o1", field = "", rank = 2, scopeParent = "") }
+    fun `a reorder names the object it was dropped after, and only that one`() {
+        runBlocking { repository.moveObject("p1", "o1", field = "", after = "o2", before = "o3") }
         val sent = body("p1/-/objects/o1/move")
-        assertEquals("", sent["scope"]?.asString)
+        assertEquals("o2", sent["after"]?.asString)
+        assertFalse("THE POINT: the server places by one neighbour, so before is left out", sent.has("before"))
         assertFalse("an untouched value is left out, so the server keeps it", sent.has("value"))
+        assertFalse("a reorder names no parent", sent.has("parent"))
+        assertFalse("nor a clear", sent.has("clear"))
+    }
+
+    @Test
+    fun `a move to the column for no value says to clear it`() {
+        runBlocking { repository.moveObject("p1", "o1", field = "status", value = "", after = "o2", clear = true) }
+        val sent = body("p1/-/objects/o1/move")
+        assertEquals("THE POINT: as the server reads a flag", "true", sent["clear"]?.asString)
+        assertEquals("status", sent["field"]?.asString)
+        assertEquals("", sent["value"]?.asString)
+    }
+
+    @Test
+    fun `a drop at the top names the object it went above`() {
+        runBlocking { repository.moveObject("p1", "o1", field = "status", value = "todo", before = "o3") }
+        val sent = body("p1/-/objects/o1/move")
+        assertEquals("o3", sent["before"]?.asString)
+        assertFalse(sent.has("after"))
     }
 
     @Test

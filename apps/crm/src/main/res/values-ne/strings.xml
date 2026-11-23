@@ -275,7 +275,7 @@
     <string name="crm_design_sample">नमूना %1$s</string>
     <string name="crm_option_delete_title">विकल्प मेटाउनुहोस्</string>
     <string name="crm_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
-    <string name="crm_create_public">जोसुकैलाई CRM हेर्न र त्यसमा टिप्पणी गर्न अनुमति दिनुहोस्</string>
+    <string name="crm_create_public">जोसुकैलाई CRM हेर्न अनुमति दिनुहोस्</string>
     <string name="crm_board_delete_column">स्तम्भ मेटाउनुहोस्</string>
     <string name="crm_board_delete_column_message">के तपाईं \"%1$s\" स्तम्भ मेटाउन निश्चित हुनुहुन्छ? यो फिर्ता गर्न सकिँदैन।</string>
     <string name="crm_object_delete_named">के तपाईं \"%1$s\" मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">अभिभावक</string>
     <string name="crm_export_csv_id">आईडी</string>
     <string name="crm_export_csv_class">वर्ग</string>
+    <string name="crm_create_allow_search">जोसुकैलाई CRM खोज्न अनुमति दिनुहोस्</string>
 </resources>

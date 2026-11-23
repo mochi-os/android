@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Shembull %1$s</string>
     <string name="crm_option_delete_title">Fshi opsionin</string>
     <string name="crm_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
-    <string name="crm_create_public">Lejo këdo ta shohë dhe ta komentojë CRM-në</string>
+    <string name="crm_create_public">Lejo këdo ta shohë CRM-në</string>
     <string name="crm_board_delete_column">Fshi kolonën</string>
     <string name="crm_board_delete_column_message">Je i sigurt që do të fshish kolonën \"%1$s\"? Kjo nuk mund të zhbëhet.</string>
     <string name="crm_object_delete_named">Je i sigurt që do të fshish \"%1$s\"? Ky veprim nuk mund të zhbëhet.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Prindi</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klasa</string>
+    <string name="crm_create_allow_search">Lejo këdo të kërkojë për CRM</string>
 </resources>

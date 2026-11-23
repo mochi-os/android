@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Kampjun %1$s</string>
     <string name="crm_option_delete_title">Ħassar għażla</string>
     <string name="crm_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
-    <string name="crm_create_public">Ippermetti lil kulħadd jara CRM u jikkummenta fuqu</string>
+    <string name="crm_create_public">Ippermetti lil kulħadd jara CRM</string>
     <string name="crm_board_delete_column">Ħassar kolonna</string>
     <string name="crm_board_delete_column_message">Żgur trid tħassar il-kolonna \"%1$s\"? Dan ma jistax jiġi ndirizzat.</string>
     <string name="crm_object_delete_named">Żgur trid tħassar \"%1$s\"? Din l-azzjoni ma tistax tiġi ndirizzata.</string>
@@ -296,4 +296,5 @@
     <string name="crm_export_csv_parent">Ġenitur</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klassi</string>
+    <string name="crm_create_allow_search">Ippermetti lil kulħadd ifittex CRM</string>
 </resources>

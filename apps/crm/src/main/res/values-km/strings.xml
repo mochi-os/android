@@ -275,7 +275,7 @@
     <string name="crm_design_sample">គំរូ %1$s</string>
     <string name="crm_option_delete_title">លុបជម្រើស</string>
     <string name="crm_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
-    <string name="crm_create_public">អនុញ្ញាតឱ្យអ្នកណាក៏អាចមើល និងផ្តល់មតិយោបល់លើ CRM</string>
+    <string name="crm_create_public">អនុញ្ញាតឱ្យអ្នកណាក៏អាចមើល CRM</string>
     <string name="crm_board_delete_column">លុបជួរឈរ</string>
     <string name="crm_board_delete_column_message">តើអ្នកប្រាកដថាចង់លុបជួរឈរ \"%1$s\" មែនទេ? វាមិនអាចបញ្ច្រាសបានទេ។</string>
     <string name="crm_object_delete_named">តើអ្នកប្រាកដថាចង់លុប \"%1$s\" មែនទេ? សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">មេ</string>
     <string name="crm_export_csv_id">លេខសម្គាល់</string>
     <string name="crm_export_csv_class">ថ្នាក់</string>
+    <string name="crm_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរក CRM</string>
 </resources>

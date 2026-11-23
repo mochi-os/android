@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
     <string name="projects_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
     <string name="projects_attachment_remove">Хавсралт хасах</string>
-    <string name="projects_create_allow_public">Хэнд ч төслийг харах, сэтгэгдэл бичих боломж олгох</string>
+    <string name="projects_create_allow_public">Хэнд ч төслийг харах боломж олгох</string>
     <string name="projects_request_delete_title">Нэгтгэх хүсэлт устгах</string>
     <string name="projects_request_delete_message">Энэ нэгтгэх хүсэлтийг устгахдаа итгэлтэй байна уу?</string>
     <string name="projects_board_delete_column_title">Багана устгах</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Хавсаргаж чадсангүй: %1$s</string>
     <string name="projects_activity_unknown">Үл мэдэгдэх</string>
+    <string name="projects_create_allow_search">Хэн ч төсөл хайх боломжтой</string>
 </resources>

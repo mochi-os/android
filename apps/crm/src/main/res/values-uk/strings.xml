@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Зразок %1$s</string>
     <string name="crm_option_delete_title">Видалити варіант</string>
     <string name="crm_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>
-    <string name="crm_create_public">Дозволити всім переглядати й коментувати CRM</string>
+    <string name="crm_create_public">Дозволити всім переглядати CRM</string>
     <string name="crm_board_delete_column">Видалити стовпець</string>
     <string name="crm_board_delete_column_message">Ви впевнені, що хочете видалити стовпець \"%1$s\"? Цю дію не можна скасувати.</string>
     <string name="crm_object_delete_named">Ви впевнені, що хочете видалити \"%1$s\"? Цю дію не можна скасувати.</string>
@@ -294,4 +294,5 @@
     <string name="crm_export_csv_parent">Батьківський</string>
     <string name="crm_export_csv_id">Ідентифікатор</string>
     <string name="crm_export_csv_class">Клас</string>
+    <string name="crm_create_allow_search">Дозволити всім шукати CRM</string>
 </resources>

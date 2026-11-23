@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Primjer %1$s</string>
     <string name="crm_option_delete_title">Obriši opciju</string>
     <string name="crm_option_delete_message">Jeste li sigurni da želite obrisati opciju \"%1$s\"?</string>
-    <string name="crm_create_public">Dozvoli svima da pregledaju i komentarišu CRM</string>
+    <string name="crm_create_public">Dozvoli svima da pregledaju CRM</string>
     <string name="crm_board_delete_column">Obriši kolonu</string>
     <string name="crm_board_delete_column_message">Jeste li sigurni da želite obrisati kolonu \"%1$s\"? Ovo se ne može poništiti.</string>
     <string name="crm_object_delete_named">Jeste li sigurni da želite obrisati \"%1$s\"? Ova radnja se ne može poništiti.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Nadređeni</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klasa</string>
+    <string name="crm_create_allow_search">Dozvoli svima da pretražuju CRM</string>
 </resources>

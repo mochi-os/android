@@ -275,7 +275,7 @@
     <string name="crm_design_sample">ตัวอย่าง %1$s</string>
     <string name="crm_option_delete_title">ลบตัวเลือก</string>
     <string name="crm_option_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบตัวเลือก \"%1$s\"</string>
-    <string name="crm_create_public">อนุญาตให้ใครก็ได้ดูและแสดงความคิดเห็นใน CRM</string>
+    <string name="crm_create_public">อนุญาตให้ใครก็ได้ดู CRM</string>
     <string name="crm_board_delete_column">ลบคอลัมน์</string>
     <string name="crm_board_delete_column_message">คุณแน่ใจหรือไม่ว่าต้องการลบคอลัมน์\"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
     <string name="crm_object_delete_named">คุณแน่ใจหรือไม่ว่าต้องการลบ\"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">แม่</string>
     <string name="crm_export_csv_id">รหัส</string>
     <string name="crm_export_csv_class">คลาส</string>
+    <string name="crm_create_allow_search">อนุญาตให้ใครก็ได้ค้นหา CRM</string>
 </resources>

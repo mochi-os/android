@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
     <string name="projects_create_blocked_no_options">Δεν είναι δυνατή η δημιουργία: το %1$s απαιτείται αλλά δεν έχει επιλογές. Προσθέστε επιλογές στη Σχεδίαση.</string>
     <string name="projects_attachment_remove">Αφαίρεση συνημμένου</string>
-    <string name="projects_create_allow_public">Να επιτρέπεται σε όλους η προβολή του έργου και ο σχολιασμός του</string>
+    <string name="projects_create_allow_public">Να επιτρέπεται σε όλους η προβολή του έργου</string>
     <string name="projects_request_delete_title">Διαγραφή αιτήματος συγχώνευσης</string>
     <string name="projects_request_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το αίτημα συγχώνευσης;</string>
     <string name="projects_board_delete_column_title">Διαγραφή στήλης</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Δεν ήταν δυνατή η επισύναψη: %1$s</string>
     <string name="projects_activity_unknown">Άγνωστο</string>
+    <string name="projects_create_allow_search">Να επιτρέπεται σε όλους η αναζήτηση έργου</string>
 </resources>

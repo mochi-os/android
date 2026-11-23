@@ -322,7 +322,7 @@
     <string name="projects_create_object_no_types">Još se ne mogu kreirati nikakvi tipovi stavki. Prvo kreirajte potrebne nadređene stavke.</string>
     <string name="projects_create_blocked_no_options">Nije moguće stvoriti: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
     <string name="projects_attachment_remove">Ukloni privitak</string>
-    <string name="projects_create_allow_public">Dopusti svima da pregledavaju i komentiraju projekt</string>
+    <string name="projects_create_allow_public">Dopusti svima da pregledavaju projekt</string>
     <string name="projects_request_delete_title">Obriši zahtjev za spajanje</string>
     <string name="projects_request_delete_message">Jeste li sigurni da želite obrisati ovaj zahtjev za spajanje?</string>
     <string name="projects_board_delete_column_title">Obriši stupac</string>
@@ -335,4 +335,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nije moguće priložiti: %1$s</string>
     <string name="projects_activity_unknown">Nepoznato</string>
+    <string name="projects_create_allow_search">Dopusti svima pretraživanje projekta</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Samfuri %1$s</string>
     <string name="crm_option_delete_title">Goge zaɓi</string>
     <string name="crm_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
-    <string name="crm_create_public">Ba kowa damar duba CRM da yin sharhi a kansa</string>
+    <string name="crm_create_public">Ba kowa damar duba CRM</string>
     <string name="crm_board_delete_column">Goge column</string>
     <string name="crm_board_delete_column_message">Ka tabbata kana son goge column ɗin \"%1$s\"? Ba za a iya juya wannan ba.</string>
     <string name="crm_object_delete_named">Ka tabbata kana son goge \"%1$s\"? Ba za a iya juya wannan aiki ba.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Iyaye</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Aji</string>
+    <string name="crm_create_allow_search">Ba kowa damar nemo CRM</string>
 </resources>

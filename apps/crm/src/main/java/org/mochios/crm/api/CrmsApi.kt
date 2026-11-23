@@ -87,6 +87,13 @@ data class WatcherListResponse(val watching: Boolean = false)
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
 data class SuccessResponse(val success: Boolean = false)
+
+// `objects/{object}/move`: every key the move wrote, the moved object's and
+// any a neighbour that shared its anchor's took.
+data class MoveResponse(val success: Boolean = false, val ranks: List<MovedRank>? = null)
+
+// One key a move wrote; [updated] is the moved object's new time, on its row only.
+data class MovedRank(val id: String = "", val rank: String = "", val updated: Long? = null)
 data class UserSearchResponse(@SerializedName("results") val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 
@@ -126,15 +133,20 @@ data class UpdateCrmRequest(val name: String? = null, val description: String? =
 // JSON body of `objects/{object}/update`; "" moves the object to the top level.
 data class UpdateObjectRequest(val parent: String)
 
-// JSON body of `objects/{object}/move`. `scope` names the parent whose
-// children the rank counts among, "" for the top level; `row` is the lane as
-// a JSON object in a string.
+// JSON body of `objects/{object}/move`. `after` names the object it was
+// dropped directly after, or `before` the one directly before when none was
+// above it; with neither, a move to another column goes to its end. `row` is
+// the lane as a JSON object in a string; `parent` moves it into that object's
+// children in the same move.
 data class MoveObjectRequest(
     val field: String? = null,
+    // Empty keeps the column; `clear` "true" empties it.
     val value: String? = null,
-    val rank: Int? = null,
+    val after: String? = null,
+    val before: String? = null,
     val row: String? = null,
-    val scope: String? = null
+    val parent: String? = null,
+    val clear: String? = null,
 )
 
 // JSON body of `views/{view}/update`; "" clears a setting.
@@ -215,7 +227,10 @@ interface CrmsApi {
     suspend fun createCrm(
         @Field("name") name: String,
         @Field("description") description: String?,
+        // Whether the directory lists the CRM, and nothing else.
         @Field("privacy") privacy: String,
+        // "true" lets anyone view it; "false" keeps it for its members.
+        @Field("readable") readable: String,
         @Field("template") template: String? // contract-ok: templates applied via design-import, not create
     ): Response<ApiResponse<CrmCreateResponse>>
 
@@ -327,7 +342,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
         @Body body: MoveObjectRequest
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<MoveResponse>>
 
     @POST("{crmId}/-/objects/{objectId}/values/{fieldId}")
     suspend fun setValue(

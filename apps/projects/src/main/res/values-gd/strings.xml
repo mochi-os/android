@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
     <string name="projects_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
     <string name="projects_attachment_remove">Thoir air falbh an ceanglachan</string>
-    <string name="projects_create_allow_public">Ceadaich do dhuine sam bith am pròiseact fhaicinn agus beachdan a chur ris</string>
+    <string name="projects_create_allow_public">Ceadaich do dhuine sam bith am pròiseact fhaicinn</string>
     <string name="projects_request_delete_title">Sguab às iarrtas co-aonaidh</string>
     <string name="projects_request_delete_message">A bheil thu cinnteach gu bheil thu airson an t-iarrtas co-aonaidh seo a sguabadh às?</string>
     <string name="projects_board_delete_column_title">Sguab às colbh</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Cha b\' urrainn a cheangal ris: %1$s</string>
     <string name="projects_activity_unknown">Neo-aithnichte</string>
+    <string name="projects_create_allow_search">Ceadaich do dhuine sam bith pròiseact a lorg</string>
 </resources>

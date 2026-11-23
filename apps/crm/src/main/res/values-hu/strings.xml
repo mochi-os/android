@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Minta %1$s</string>
     <string name="crm_option_delete_title">Beállítás törlése</string>
     <string name="crm_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
-    <string name="crm_create_public">Bárki megtekintheti és kommentálhatja a CRM-et</string>
+    <string name="crm_create_public">Bárki megtekintheti a CRM-et</string>
     <string name="crm_board_delete_column">Oszlop törlése</string>
     <string name="crm_board_delete_column_message">Biztosan törli a(z) „%1$s” oszlopot? Ez nem vonható vissza.</string>
     <string name="crm_object_delete_named">Biztosan törli a következőt: „%1$s”? Ez a művelet nem vonható vissza.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Szülő</string>
     <string name="crm_export_csv_id">Azonosító</string>
     <string name="crm_export_csv_class">Osztály</string>
+    <string name="crm_create_allow_search">Bárki kereshet a CRM-re</string>
 </resources>

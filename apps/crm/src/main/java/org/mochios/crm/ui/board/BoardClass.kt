@@ -7,8 +7,19 @@ package org.mochios.crm.ui.board
 
 import org.mochios.android.ui.components.board.boardClass
 import org.mochios.crm.model.CrmDetails
+import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.FieldOption
+
+/**
+ * The objects [view]'s board lays out as cards of their own: those of its
+ * classes whose parent it does not show, so they have no card to nest inside.
+ */
+fun topLevelObjects(objects: List<CrmObject>, view: CrmView): List<CrmObject> {
+    val shown = objects.filter { obj -> view.classes.isEmpty() || obj.objectClass in view.classes }
+    val ids = shown.mapTo(HashSet(shown.size)) { obj -> obj.id }
+    return shown.filter { obj -> obj.parent.isBlank() || obj.parent !in ids }
+}
 
 /**
  * The class [view]'s board keeps its columns in, by the rule every client

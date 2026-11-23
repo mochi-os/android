@@ -27,6 +27,7 @@ import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
+import org.mochios.projects.ui.project.Placement
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.projects.util.reparentAllowed
 
@@ -99,8 +100,11 @@ fun TreeView(
 }
 
 /**
- * Turns a tree drop into a move or reparent. Sibling reorders pass
- * `scope` so the server renumbers ranks within that subtree only.
+ * Turns a tree drop into a move or reparent. A drop on a row's middle puts
+ * the source under it; one on its top or bottom edge puts it directly above
+ * or below that row, among the row's siblings, naming the row it went beside
+ * and, when the parent changes, the new parent in the same move. The edges
+ * place only under a manual sort, the one that draws the order they place by.
  */
 internal fun handleTreeDrop(
     sourceId: String,
@@ -129,31 +133,19 @@ internal fun handleTreeDrop(
             }
         }
         DragEdge.Top, DragEdge.Bottom -> {
-            // Insert as sibling of the target under target's parent.
+            // Directly above or below the target, among its parent's children:
+            // the new parent, when it changes, goes in the same move. Another
+            // sort draws no place to go, so an edge does nothing there.
+            if (viewModel.placement() == Placement.None) return
             val newParent = targetNode.obj.parent
-            if (sourceObj.parent != newParent) {
-                // Cross-parent: reparent only, the server appends. A follow-up
-                // rank update would race the reparent and land against the
-                // wrong parent.
-                if (reparentAllowed(sourceObj, newParent, allObjects, hierarchy)) {
-                    viewModel.reparentObject(sourceId, newParent)
-                }
-                return
-            }
-            // Same-parent reorder, among the top level too: the move goes as
-            // JSON, where an empty scope arrives as the top level.
-            val siblings = allObjects
-                .filter { it.parent == newParent && it.id != sourceId }
-                .sortedBy { it.rank }
-            val targetIndex = siblings.indexOfFirst { it.id == targetNode.obj.id }
-            if (targetIndex < 0) return
-            val rank = if (edge == DragEdge.Top) targetIndex + 1 else targetIndex + 2
-            viewModel.moveObject(
+            val reparent = sourceObj.parent != newParent
+            if (reparent && !reparentAllowed(sourceObj, newParent, allObjects, hierarchy)) return
+            viewModel.moveBeside(
                 objectId = sourceId,
+                target = targetNode.obj.id,
+                below = edge == DragEdge.Bottom,
                 field = "",
-                value = null,
-                rank = rank,
-                scopeParent = newParent,
+                parent = newParent.takeIf { reparent },
             )
         }
         else -> { /* Start/End not used in vertical tree */ }

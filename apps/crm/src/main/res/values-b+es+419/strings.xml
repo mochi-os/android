@@ -268,7 +268,7 @@
     <string name="crm_design_sample">Ejemplo %1$s</string>
     <string name="crm_option_delete_title">Eliminar opción</string>
     <string name="crm_option_delete_message">¿Seguro que quieres eliminar la opción \"%1$s\"?</string>
-    <string name="crm_create_public">Permitir a cualquier persona ver y comentar el CRM</string>
+    <string name="crm_create_public">Permitir a cualquier persona ver el CRM</string>
     <string name="crm_board_delete_column">Eliminar columna</string>
     <string name="crm_board_delete_column_message">¿Seguro que quieres eliminar la columna \"%1$s\"? Esto no se puede deshacer.</string>
     <string name="crm_object_delete_named">¿Seguro que quieres eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
@@ -283,4 +283,5 @@
     <string name="crm_export_csv_parent">Principal</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clase</string>
+    <string name="crm_create_allow_search">Permitir a cualquier persona buscar el CRM</string>
 </resources>

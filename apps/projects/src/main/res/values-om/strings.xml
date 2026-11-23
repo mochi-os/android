@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
     <string name="projects_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
     <string name="projects_attachment_remove">Maxxansaa haqi</string>
-    <string name="projects_create_allow_public">Eenyu iyyuu pirojektii akka ilaalu fi irratti yaada kennu hayyami</string>
+    <string name="projects_create_allow_public">Eenyu iyyuu pirojektii akka ilaalu hayyami</string>
     <string name="projects_request_delete_title">Iyyannoo daddabarsaa haqi</string>
     <string name="projects_request_delete_message">Iyyannoo daddabarsaa kana haquu mirkanaa\'oo dha?</string>
     <string name="projects_board_delete_column_title">Tarjaa haqi</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Hidhuu hin danda\'amne: %1$s</string>
     <string name="projects_activity_unknown">Hin beekamu</string>
+    <string name="projects_create_allow_search">Eenyu iyyuu pirojektii barbaaduu hayyami</string>
 </resources>

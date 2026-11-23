@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
     <string name="projects_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>
     <string name="projects_attachment_remove">დანართის ამოღება</string>
-    <string name="projects_create_allow_public">ნებისმიერს პროექტის ნახვისა და კომენტირების ნება დართე</string>
+    <string name="projects_create_allow_public">ნებისმიერს პროექტის ნახვის ნება დართე</string>
     <string name="projects_request_delete_title">შერწყმის მოთხოვნის წაშლა</string>
     <string name="projects_request_delete_message">დარწმუნებული ხართ, რომ გსურთ ამ შერწყმის მოთხოვნის წაშლა?</string>
     <string name="projects_board_delete_column_title">სვეტის წაშლა</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">მიმაგრება ვერ მოხერხდა: %1$s</string>
     <string name="projects_activity_unknown">უცნობი</string>
+    <string name="projects_create_allow_search">ნებისმიერს პროექტის ძიების ნება დართე</string>
 </resources>

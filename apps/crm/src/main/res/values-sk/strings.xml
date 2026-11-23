@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Ukážka %1$s</string>
     <string name="crm_option_delete_title">Odstrániť možnosť</string>
     <string name="crm_option_delete_message">Naozaj chcete odstrániť možnosť \"%1$s\"?</string>
-    <string name="crm_create_public">Povoliť komukoľvek zobraziť a komentovať CRM</string>
+    <string name="crm_create_public">Povoliť komukoľvek zobraziť CRM</string>
     <string name="crm_board_delete_column">Odstrániť stĺpec</string>
     <string name="crm_board_delete_column_message">Naozaj chcete odstrániť stĺpec „%1$s“? Túto akciu nemožno vrátiť späť.</string>
     <string name="crm_object_delete_named">Naozaj chcete odstrániť „%1$s“? Túto akciu nemožno vrátiť späť.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Rodič</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Trieda</string>
+    <string name="crm_create_allow_search">Povoliť komukoľvek vyhľadávať CRM</string>
 </resources>

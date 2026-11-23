@@ -106,13 +106,19 @@ data class CreateObjectRequest(
 // Body of `objects/{object}/update`; "" for [parent] moves it to the top level.
 data class UpdateObjectRequest(val parent: String?)
 
-// Body of `objects/{object}/move`; "" for [scope] reorders among the top level.
+// Body of `objects/{object}/move`: `after` names the object it was dropped
+// directly after, or `before` the one directly before when none was above it;
+// with neither, a move to another column goes to its end. `parent` moves it
+// into that object's children in the same move. An empty `value` keeps the
+// column, and `clear` "true" empties it.
 data class MoveObjectRequest(
     val field: String?,
     val value: String?,
-    val rank: Int?,
+    val after: String?,
+    val before: String?,
     val row: String?,
-    val scope: String?,
+    val parent: String?,
+    val clear: String? = null,
 )
 
 // Body of `classes/{class}/hierarchy/set`: the parents comma-separated, as the
@@ -189,6 +195,13 @@ data class RepositoryListResponse(val repositories: List<Repository> = emptyList
 data class BranchListResponse(val branches: List<Branch> = emptyList())
 data class SuccessResponse(val success: Boolean = false)
 
+// `objects/{object}/move`: every key the move wrote, the moved object's and
+// any a neighbour that shared its anchor's took.
+data class MoveResponse(val success: Boolean = false, val ranks: List<MovedRank>? = null)
+
+// One key a move wrote; [updated] is the moved object's new time, on its row only.
+data class MovedRank(val id: String = "", val rank: String = "", val updated: Long? = null)
+
 // `-/repositories/{repository}/merge`: [recorded] when the server also marked
 // the merge request it was given merged; absent from a server that does not
 // take one, or when recording it failed after the merge.
@@ -221,7 +234,10 @@ interface ProjectsApi {
         @Field("name") name: String,
         @Field("description") description: String?,
         @Field("prefix") prefix: String?,
+        // Whether the directory lists the project, and nothing else.
         @Field("privacy") privacy: String,
+        // "true" lets anyone view it; "false" keeps it for its members.
+        @Field("readable") readable: String,
         @Field("template") template: String?
     ): Response<ApiResponse<ProjectCreateResponse>>
 
@@ -377,7 +393,7 @@ interface ProjectsApi {
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Body body: MoveObjectRequest
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<MoveResponse>>
 
     @POST("{projectId}/-/objects/{objectId}/values/{fieldId}")
     suspend fun setValue(

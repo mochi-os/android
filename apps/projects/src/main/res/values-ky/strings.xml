@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
     <string name="projects_create_blocked_no_options">Түзүү мүмкүн эмес: %1$s милдеттүү, бирок тандоо варианттары жок. Дизайнда варианттарды кошуңуз.</string>
     <string name="projects_attachment_remove">Тиркемени алып салуу</string>
-    <string name="projects_create_allow_public">Ар кимге долбоорду көрүүгө жана ага комментарий жазууга уруксат берүү</string>
+    <string name="projects_create_allow_public">Ар кимге долбоорду көрүүгө уруксат берүү</string>
     <string name="projects_request_delete_title">Бириктирүү сурамын жок кылуу</string>
     <string name="projects_request_delete_message">Бул бириктирүү сурамын жок кылууну каалайсызбы?</string>
     <string name="projects_board_delete_column_title">Тилкени жок кылуу</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Тиркөө мүмкүн болгон жок: %1$s</string>
     <string name="projects_activity_unknown">Белгисиз</string>
+    <string name="projects_create_allow_search">Долбоорду издөөгө ар кимге уруксат берүү</string>
 </resources>

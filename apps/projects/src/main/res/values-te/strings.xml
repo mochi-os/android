@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
     <string name="projects_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
     <string name="projects_attachment_remove">జోడింపును తీసివేయండి</string>
-    <string name="projects_create_allow_public">ప్రాజెక్ట్‌ను ఎవరైనా చూడటానికి మరియు దానిపై వ్యాఖ్యానించడానికి అనుమతించండి</string>
+    <string name="projects_create_allow_public">ప్రాజెక్ట్‌ను ఎవరైనా చూడటానికి అనుమతించండి</string>
     <string name="projects_request_delete_title">మెర్జ్ రిక్వెస్ట్‌ను తొలగించండి</string>
     <string name="projects_request_delete_message">మీరు ఈ మెర్జ్ రిక్వెస్ట్‌ను తొలగించాలనుకుంటున్నారా?</string>
     <string name="projects_board_delete_column_title">కాలమ్‌ను తొలగించండి</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">జతచేయడం సాధ్యపడలేదు: %1$s</string>
     <string name="projects_activity_unknown">తెలియదు</string>
+    <string name="projects_create_allow_search">ప్రాజెక్ట్ కోసం ఎవరైనా శోధించడానికి అనుమతించండి</string>
 </resources>

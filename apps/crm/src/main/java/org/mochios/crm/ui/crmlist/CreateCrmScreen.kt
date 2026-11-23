@@ -49,10 +49,10 @@ fun CreateCrmScreen(
     val upload by viewModel.upload.collectAsState()
 
     // The form is the view model's, so a rotation or a theme change keeps it.
-    // Public lets everyone view the CRM and every signed-in person comment on
-    // it, so it starts off and says so.
+    // Search lists the CRM in the directory; view lets anyone read it. Both
+    // start off.
     val name = uiState.name
-    val allowPublic = uiState.privacy == "public"
+    val allowSearch = uiState.privacy == "public"
     val context = LocalContext.current
     val backup = uiState.backupPrefill
 
@@ -92,7 +92,7 @@ fun CreateCrmScreen(
         error = uiState.error,
         onBack = onBack,
         onSubmit = {
-            viewModel.createCrm(name, uiState.privacy, backup?.json, backup?.archive)
+            viewModel.createCrm(name, uiState.privacy, uiState.readable, backup?.json, backup?.archive)
         }
     ) { padding ->
         CreateEntityForm(padding) {
@@ -106,9 +106,14 @@ fun CreateCrmScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             LabeledSwitchRow(
-                label = stringResource(R.string.crm_create_public),
-                checked = allowPublic,
+                label = stringResource(R.string.crm_create_allow_search),
+                checked = allowSearch,
                 onCheckedChange = { checked -> viewModel.setPrivacy(if (checked) "public" else "private") }
+            )
+            LabeledSwitchRow(
+                label = stringResource(R.string.crm_create_public),
+                checked = uiState.readable,
+                onCheckedChange = { checked -> viewModel.setReadable(checked) }
             )
 
             Spacer(modifier = Modifier.height(16.dp))

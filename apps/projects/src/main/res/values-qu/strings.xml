@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Manaraq ima item layatapas kamariyta atikunchu. Ñawpaqta necesitasqa tayta itemkunata kamariy.</string>
     <string name="projects_create_blocked_no_options">Manam kamariyta atinchu: %1$s necesitakun ichaqa manam akllanan kanchu. Diseño nisqapi akllanakunata yapay.</string>
     <string name="projects_attachment_remove">Adjuntota qichuy</string>
-    <string name="projects_create_allow_public">Pipas proyectota qhawananpaq hinaspa comentananpaq saqiy</string>
+    <string name="projects_create_allow_public">Pipas proyectota qhawananpaq saqiy</string>
     <string name="projects_request_delete_title">Hukllachana mañakuyta wischuy</string>
     <string name="projects_request_delete_message">¿Kay hukllachana mañakuyta wischuyta munankichu?</string>
     <string name="projects_board_delete_column_title">Columna wischuy</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Mana k\'askachiyta atikurqanchu: %1$s</string>
     <string name="projects_activity_unknown">Mana riqsisqa</string>
+    <string name="projects_create_allow_search">Pipas proyectota maskananpaq saqiy</string>
 </resources>

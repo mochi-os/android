@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Aucun type d\'élément ne peut encore être créé. Créez d\'abord les éléments parents requis.</string>
     <string name="projects_create_blocked_no_options">Impossible de créer : %1$s est obligatoire mais n\'a aucune option à choisir. Ajoutez des options dans Conception.</string>
     <string name="projects_attachment_remove">Supprimer la pièce jointe</string>
-    <string name="projects_create_allow_public">Autoriser tout le monde à voir et commenter le projet</string>
+    <string name="projects_create_allow_public">Autoriser tout le monde à voir le projet</string>
     <string name="projects_request_delete_title">Supprimer la merge request</string>
     <string name="projects_request_delete_message">Voulez-vous vraiment supprimer cette merge request ?</string>
     <string name="projects_board_delete_column_title">Supprimer la colonne</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Impossible de joindre : %1$s</string>
     <string name="projects_activity_unknown">Inconnu</string>
+    <string name="projects_create_allow_search">Autoriser tout le monde à rechercher le projet</string>
 </resources>

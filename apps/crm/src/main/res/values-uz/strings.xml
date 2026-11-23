@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Namuna %1$s</string>
     <string name="crm_option_delete_title">Variantni oʻchirish</string>
     <string name="crm_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
-    <string name="crm_create_public">Hammaga CRM ni koʻrish va unga izoh qoldirishga ruxsat berish</string>
+    <string name="crm_create_public">Hammaga CRM ni koʻrishga ruxsat berish</string>
     <string name="crm_board_delete_column">Ustunni oʻchirish</string>
     <string name="crm_board_delete_column_message">\"%1$s\" ustunini oʻchirmoqchimisiz? Buni qaytarib boʻlmaydi.</string>
     <string name="crm_object_delete_named">\"%1$s\" ni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Ota</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Sinf</string>
+    <string name="crm_create_allow_search">Hammaga CRM ni qidirishga ruxsat berish</string>
 </resources>

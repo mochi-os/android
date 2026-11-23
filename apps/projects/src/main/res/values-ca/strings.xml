@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
     <string name="projects_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
     <string name="projects_attachment_remove">Elimina l\'adjunt</string>
-    <string name="projects_create_allow_public">Permet que qualsevol vegi i comenti el projecte</string>
+    <string name="projects_create_allow_public">Permet que qualsevol vegi el projecte</string>
     <string name="projects_request_delete_title">Suprimeix la sol·licitud de fusió</string>
     <string name="projects_request_delete_message">Segur que vols suprimir aquesta sol·licitud de fusió?</string>
     <string name="projects_board_delete_column_title">Suprimeix la columna</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">No s\'ha pogut adjuntar: %1$s</string>
     <string name="projects_activity_unknown">Desconegut</string>
+    <string name="projects_create_allow_search">Permet que qualsevol cerqui el projecte</string>
 </resources>

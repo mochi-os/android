@@ -69,6 +69,7 @@ import org.mochios.crm.ui.board.fieldShown
 import org.mochios.crm.ui.`object`.DeleteObjectDialog
 import org.mochios.crm.ui.`object`.descendantCount
 import org.mochios.crm.ui.crm.CrmViewModel
+import org.mochios.crm.ui.crm.Placement
 import org.mochios.crm.util.HIERARCHY_ROOT
 import org.mochios.crm.util.parentAllowed
 import org.mochios.crm.util.parentTargets
@@ -138,7 +139,13 @@ fun TreeRow(
                 state = dragState,
                 itemId = obj.id,
                 orientation = DropOrientation.Vertical,
-                acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom, DragEdge.On),
+                // A sort other than the manual one draws no place beside a
+                // row, so only a drop on it is offered, as on the web.
+                acceptedEdges = if (viewModel.placement() == Placement.None) {
+                    setOf(DragEdge.On)
+                } else {
+                    setOf(DragEdge.Top, DragEdge.Bottom, DragEdge.On)
+                },
                 accept = acceptDrop,
                 onDrop = { sourceId, edge -> onDragDrop(sourceId, edge) }
             )

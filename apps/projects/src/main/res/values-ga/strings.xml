@@ -324,7 +324,7 @@
     <string name="projects_create_object_no_types">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
     <string name="projects_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
     <string name="projects_attachment_remove">Bain ceangaltán</string>
-    <string name="projects_create_allow_public">Ceadaigh d\'aon duine an tionscadal a fheiceáil agus nótaí tráchta a chur air</string>
+    <string name="projects_create_allow_public">Ceadaigh d\'aon duine an tionscadal a fheiceáil</string>
     <string name="projects_request_delete_title">Scrios iarratas cumaisc</string>
     <string name="projects_request_delete_message">An bhfuil tú cinnte gur mian leat an t-iarratas cumaisc seo a scriosadh?</string>
     <string name="projects_board_delete_column_title">Scrios colún</string>
@@ -339,4 +339,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Theip ar cheangal: %1$s</string>
     <string name="projects_activity_unknown">Anaithnid</string>
+    <string name="projects_create_allow_search">Ceadaigh d\'aon duine cuardach do thionscadal</string>
 </resources>

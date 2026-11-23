@@ -320,7 +320,7 @@
     <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
     <string name="projects_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
     <string name="projects_attachment_remove">ដកឯកសារភ្ជាប់ចេញ</string>
-    <string name="projects_create_allow_public">អនុញ្ញាតឱ្យអ្នកណាក៏អាចមើល និងផ្តល់មតិយោបល់លើគម្រោង</string>
+    <string name="projects_create_allow_public">អនុញ្ញាតឱ្យអ្នកណាក៏អាចមើលគម្រោង</string>
     <string name="projects_request_delete_title">លុបការស្នើសុំបញ្ចូល</string>
     <string name="projects_request_delete_message">តើអ្នកប្រាកដថាចង់លុបការស្នើសុំបញ្ចូលនេះមែនទេ?</string>
     <string name="projects_board_delete_column_title">លុបជួរឈរ</string>
@@ -331,4 +331,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">មិនអាចភ្ជាប់បានទេ៖ %1$s</string>
     <string name="projects_activity_unknown">មិនស្គាល់</string>
+    <string name="projects_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរកគម្រោង</string>
 </resources>

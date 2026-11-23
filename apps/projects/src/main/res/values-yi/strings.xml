@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
     <string name="projects_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
     <string name="projects_attachment_remove">אַראָפּנעמען בײַלאַגע</string>
-    <string name="projects_create_allow_public">דערלויבן עמעצן צו זען דעם פּראָיעקט און קאָמענטירן אויף אים</string>
+    <string name="projects_create_allow_public">דערלויבן עמעצן צו זען דעם פּראָיעקט</string>
     <string name="projects_request_delete_title">אויסמעקן צונויפֿשמעלצונג בקשה</string>
     <string name="projects_request_delete_message">זענט איר זיכער איר ווילט אויסמעקן דעם צונויפֿשמעלצונג בקשה?</string>
     <string name="projects_board_delete_column_title">אויסמעקן זײַל</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">מען האָט נישט געקענט צוהענקען: %1$s</string>
     <string name="projects_activity_unknown">אומבאַקאַנט</string>
+    <string name="projects_create_allow_search">דערלויבן עמעצן צו זוכן פֿאַר פּראָיעקט</string>
 </resources>

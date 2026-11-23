@@ -90,6 +90,7 @@ fun CreateProjectScreen(
     // The prefix auto-tracks the name until the user edits it by hand.
     var prefixEdited by viewModel::prefixEdited
     var allowSearch by viewModel::allowSearch
+    var readable by viewModel::readable
     var selectedTemplate by viewModel::selectedTemplate
     val backupJson = viewModel.backupJson
     val backupName = viewModel.backupName
@@ -175,6 +176,7 @@ fun CreateProjectScreen(
                     name,
                     prefix,
                     privacy,
+                    readable,
                     if (usesTemplate) selectedTemplate else null,
                     backupJson,
                     backupArchive
@@ -187,6 +189,7 @@ fun CreateProjectScreen(
                 name = name,
                 prefix = prefix,
                 allowSearch = allowSearch,
+                readable = readable,
                 backupName = backupName,
                 enabled = !uiState.isCreating,
                 onNameChange = { value ->
@@ -200,6 +203,7 @@ fun CreateProjectScreen(
                     prefix = prefixFromName(value)
                 },
                 onAllowSearchChange = { checked -> allowSearch = checked },
+                onReadableChange = { checked -> readable = checked },
                 onPickBackup = { backupPicker.launch(arrayOf(MIME_ZIP, MIME_JSON)) },
                 modifier = Modifier
                     .fillMaxSize()
@@ -236,17 +240,19 @@ fun CreateProjectScreen(
     }
 }
 
-/** Step one: the name, prefix, privacy toggle and the optional backup import. */
+/** Step one: the name, prefix, the search and view switches and the optional backup import. */
 @Composable
 private fun DetailsStep(
     name: String,
     prefix: String,
     allowSearch: Boolean,
+    readable: Boolean,
     backupName: String?,
     enabled: Boolean,
     onNameChange: (String) -> Unit,
     onPrefixChange: (String) -> Unit,
     onAllowSearchChange: (Boolean) -> Unit,
+    onReadableChange: (Boolean) -> Unit,
     onPickBackup: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -277,9 +283,14 @@ private fun DetailsStep(
         Spacer(modifier = Modifier.height(16.dp))
 
         LabeledSwitchRow(
-            label = stringResource(R.string.projects_create_allow_public),
+            label = stringResource(R.string.projects_create_allow_search),
             checked = allowSearch,
             onCheckedChange = onAllowSearchChange
+        )
+        LabeledSwitchRow(
+            label = stringResource(R.string.projects_create_allow_public),
+            checked = readable,
+            onCheckedChange = onReadableChange
         )
 
         Spacer(modifier = Modifier.height(16.dp))

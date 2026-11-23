@@ -112,19 +112,24 @@ class FormKeptTest {
     }
 
     @Test
-    fun `the new CRM's name and switch stay when its screen is built again`() {
+    fun `the new CRM's name and switches stay when its screen is built again`() {
         val model = CreateCrmViewModel(server.repository())
+        // The listing switch, then who may view, in the order the form shows them.
+        val search = { rule.onAllNodes(isToggleable())[0] }
+        val view = { rule.onAllNodes(isToggleable())[1] }
         rule.setContent { if (shown) CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = model) }
         rule.waitForIdle()
-        rule.onNode(isToggleable()).performClick()
+        search().performClick()
+        view().performClick()
         rule.onNode(hasSetTextAction()).performTextReplacement("Leads")
         rule.waitForIdle()
         rebuild()
         assertTrue(offered("Leads"))
-        rule.onNode(isToggleable()).assertIsOn()
+        search().assertIsOn()
+        view().assertIsOn()
         rule.onNodeWithText(context.getString(R.string.crm_create_action)).performClick()
         until("the create") { server.of("-/create").isNotEmpty() }
         val body = server.of("-/create").single().body
-        assertTrue(body, body.contains("privacy=public") && body.contains("name=Leads"))
+        assertTrue(body, body.contains("privacy=public") && body.contains("readable=true") && body.contains("name=Leads"))
     }
 }

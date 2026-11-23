@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
     <string name="projects_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
     <string name="projects_attachment_remove">Yọ àsomọ́ kúrò</string>
-    <string name="projects_create_allow_public">Jẹ́ kí ẹnikẹ́ni wo iṣẹ́ àkànṣe náà kí ó sì sọ àsọyé lórí rẹ̀</string>
+    <string name="projects_create_allow_public">Jẹ́ kí ẹnikẹ́ni wo iṣẹ́ àkànṣe náà</string>
     <string name="projects_request_delete_title">Pa ìbéèrè merge rẹ́</string>
     <string name="projects_request_delete_message">Ṣé o dájú pé o fẹ́ pa ìbéèrè merge yìí rẹ́?</string>
     <string name="projects_board_delete_column_title">Pa ọ̀wọ́n rẹ́</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">A kò lè so pọ̀: %1$s</string>
     <string name="projects_activity_unknown">Aláìmọ̀</string>
+    <string name="projects_create_allow_search">Jẹ́ kí ẹnikẹ́ni wá iṣẹ́ àkànṣe</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Nessun tipo di elemento può essere creato per ora. Crea prima gli elementi padre richiesti.</string>
     <string name="projects_create_blocked_no_options">Impossibile creare: %1$s è obbligatorio ma non ha opzioni tra cui scegliere. Aggiungi opzioni in Progettazione.</string>
     <string name="projects_attachment_remove">Rimuovi allegato</string>
-    <string name="projects_create_allow_public">Consenti a chiunque di visualizzare e commentare il progetto</string>
+    <string name="projects_create_allow_public">Consenti a chiunque di visualizzare il progetto</string>
     <string name="projects_request_delete_title">Elimina richiesta di merge</string>
     <string name="projects_request_delete_message">Sei sicuro di voler eliminare questa richiesta di merge?</string>
     <string name="projects_board_delete_column_title">Elimina colonna</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Impossibile allegare: %1$s</string>
     <string name="projects_activity_unknown">Sconosciuto</string>
+    <string name="projects_create_allow_search">Consenti a chiunque di cercare il progetto</string>
 </resources>

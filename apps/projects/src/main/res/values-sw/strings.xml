@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Hakuna aina za vipengele zinazoweza kuundwa bado. Unda vipengele vya mzazi vinavyohitajika kwanza.</string>
     <string name="projects_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
     <string name="projects_attachment_remove">Ondoa kiambatisho</string>
-    <string name="projects_create_allow_public">Ruhusu mtu yeyote kuona mradi na kutoa maoni juu yake</string>
+    <string name="projects_create_allow_public">Ruhusu mtu yeyote kuona mradi</string>
     <string name="projects_request_delete_title">Futa ombi la kuunganisha</string>
     <string name="projects_request_delete_message">Una uhakika unataka kufuta ombi hili la kuunganisha?</string>
     <string name="projects_board_delete_column_title">Futa safu</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Imeshindwa kuambatisha: %1$s</string>
     <string name="projects_activity_unknown">Haijulikani</string>
+    <string name="projects_create_allow_search">Ruhusu mtu yeyote kutafuta mradi</string>
 </resources>

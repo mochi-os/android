@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ainda não é possível criar tipos de item. Crie primeiro os itens pai necessários.</string>
     <string name="projects_create_blocked_no_options">Não é possível criar: %1$s é obrigatório mas não tem opções para escolher. Adicione opções em Design.</string>
     <string name="projects_attachment_remove">Remover anexo</string>
-    <string name="projects_create_allow_public">Permitir que qualquer pessoa veja e comente o projeto</string>
+    <string name="projects_create_allow_public">Permitir que qualquer pessoa veja o projeto</string>
     <string name="projects_request_delete_title">Eliminar pedido de integração</string>
     <string name="projects_request_delete_message">Tem a certeza de que pretende eliminar este pedido de integração?</string>
     <string name="projects_board_delete_column_title">Eliminar coluna</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Não foi possível anexar: %1$s</string>
     <string name="projects_activity_unknown">Desconhecido</string>
+    <string name="projects_create_allow_search">Permitir que qualquer pessoa pesquise o projeto</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
     <string name="projects_create_blocked_no_options">બનાવી શકાતું નથી: %1$s જરૂરી છે પણ પસંદ કરવા માટે કોઈ વિકલ્પ નથી. ડિઝાઇનમાં વિકલ્પો ઉમેરો.</string>
     <string name="projects_attachment_remove">જોડાણ દૂર કરો</string>
-    <string name="projects_create_allow_public">કોઈને પણ પ્રોજેક્ટ જોવાની અને તેના પર ટિપ્પણી કરવાની મંજૂરી આપો</string>
+    <string name="projects_create_allow_public">કોઈને પણ પ્રોજેક્ટ જોવાની મંજૂરી આપો</string>
     <string name="projects_request_delete_title">મર્જ વિનંતી કાઢી નાખો</string>
     <string name="projects_request_delete_message">શું તમે ખરેખર આ મર્જ વિનંતી કાઢી નાખવા માંગો છો?</string>
     <string name="projects_board_delete_column_title">કૉલમ કાઢી નાખો</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">જોડી શકાયું નથી: %1$s</string>
     <string name="projects_activity_unknown">અજાણ્યું</string>
+    <string name="projects_create_allow_search">કોઈને પણ પ્રોજેક્ટ શોધવાની મંજૂરી આપો</string>
 </resources>

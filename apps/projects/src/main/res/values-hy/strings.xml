@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
     <string name="projects_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>
     <string name="projects_attachment_remove">Հեռացնել կցորդը</string>
-    <string name="projects_create_allow_public">Թույլատրել բոլորին դիտել նախագիծը և մեկնաբանել այն</string>
+    <string name="projects_create_allow_public">Թույլատրել բոլորին դիտել նախագիծը</string>
     <string name="projects_request_delete_title">Ջնջել միաձուլման հարցումը</string>
     <string name="projects_request_delete_message">Վստա՞հ եք, որ ուզում եք ջնջել այս միաձուլման հարցումը։</string>
     <string name="projects_board_delete_column_title">Ջնջել սյունակը</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Չհաջողվեց կցել: %1$s</string>
     <string name="projects_activity_unknown">Անհայտ</string>
+    <string name="projects_create_allow_search">Թույլատրել բոլորին որոնել նախագիծ</string>
 </resources>

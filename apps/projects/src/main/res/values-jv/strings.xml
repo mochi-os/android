@@ -320,7 +320,7 @@
     <string name="projects_create_object_no_types">Durung ana jenis item sing bisa digawé. Gawé item induk sing dibutuhaké luwih dhisik.</string>
     <string name="projects_create_blocked_no_options">Ora bisa nggawe: %1$s wajib nanging ora duwe pilihan. Tambahake pilihan ing Desain.</string>
     <string name="projects_attachment_remove">Cabut lampiran</string>
-    <string name="projects_create_allow_public">Idini sapa waé ndelok lan menehi komentar ing proyek</string>
+    <string name="projects_create_allow_public">Idini sapa waé ndelok proyek</string>
     <string name="projects_request_delete_title">Busak panjaluk merge</string>
     <string name="projects_request_delete_message">Sampéyan yakin arep mbusak panjaluk merge iki?</string>
     <string name="projects_board_delete_column_title">Busak kolom</string>
@@ -331,4 +331,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ora bisa nglampirké: %1$s</string>
     <string name="projects_activity_unknown">Ora dimangerteni</string>
+    <string name="projects_create_allow_search">Idini sapa waé nggolèki proyek</string>
 </resources>

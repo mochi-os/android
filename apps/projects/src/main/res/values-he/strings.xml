@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים.</string>
     <string name="projects_create_blocked_no_options">לא ניתן ליצור: %1$s נדרש אך אין לו אפשרויות לבחירה. הוסף אפשרויות בעיצוב.</string>
     <string name="projects_attachment_remove">הסרת קובץ מצורף</string>
-    <string name="projects_create_allow_public">אפשר לכולם לצפות בפרויקט ולהגיב עליו</string>
+    <string name="projects_create_allow_public">אפשר לכולם לצפות בפרויקט</string>
     <string name="projects_request_delete_title">מחק בקשת מיזוג</string>
     <string name="projects_request_delete_message">האם אתה בטוח שברצונך למחוק בקשת מיזוג זו?</string>
     <string name="projects_board_delete_column_title">מחק עמודה</string>
@@ -336,4 +336,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">לא ניתן היה לצרף: %1$s</string>
     <string name="projects_activity_unknown">לא ידוע</string>
+    <string name="projects_create_allow_search">אפשר לכולם לחפש את הפרויקט</string>
 </resources>

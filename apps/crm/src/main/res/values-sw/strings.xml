@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Sampuli %1$s</string>
     <string name="crm_option_delete_title">Futa chaguo</string>
     <string name="crm_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
-    <string name="crm_create_public">Ruhusu mtu yeyote kuona CRM na kutoa maoni juu yake</string>
+    <string name="crm_create_public">Ruhusu mtu yeyote kuona CRM</string>
     <string name="crm_board_delete_column">Futa safu</string>
     <string name="crm_board_delete_column_message">Una uhakika unataka kufuta safu ya \"%1$s\"? Hili haliwezi kutenduliwa.</string>
     <string name="crm_object_delete_named">Una uhakika unataka kufuta \"%1$s\"? Kitendo hiki hakiwezi kutenduliwa.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Mzazi</string>
     <string name="crm_export_csv_id">Kitambulisho</string>
     <string name="crm_export_csv_class">Darasa</string>
+    <string name="crm_create_allow_search">Ruhusu mtu yeyote kutafuta CRM</string>
 </resources>

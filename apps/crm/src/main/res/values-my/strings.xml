@@ -275,7 +275,7 @@
     <string name="crm_design_sample">နမူနာ %1$s</string>
     <string name="crm_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
     <string name="crm_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>
-    <string name="crm_create_public">မည်သူမဆို CRM ကို ကြည့်ရှုပြီး မှတ်ချက်ပေးခွင့်ပြုမည်</string>
+    <string name="crm_create_public">မည်သူမဆို CRM ကို ကြည့်ရှုခွင့်ပြုမည်</string>
     <string name="crm_board_delete_column">ကော်လံ ဖျက်မည်</string>
     <string name="crm_board_delete_column_message">\"%1$s\" ကော်လံကို ဖျက်မှာသေချာပါသလား? ပြန်လည်ပြုပြင်၍မရပါ။</string>
     <string name="crm_object_delete_named">\"%1$s\" ကို ဖျက်မှာသေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">မိဘ</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">အတန်းအစား</string>
+    <string name="crm_create_allow_search">မည်သူမဆို CRM ကို ရှာဖွေခွင့်ပြုမည်</string>
 </resources>

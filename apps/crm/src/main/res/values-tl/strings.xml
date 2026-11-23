@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Halimbawa %1$s</string>
     <string name="crm_option_delete_title">I-delete ang option</string>
     <string name="crm_option_delete_message">Sigurado ka bang gusto mong tanggalin ang option na \"%1$s\"?</string>
-    <string name="crm_create_public">Payagan ang sinuman na tingnan at magkomento sa CRM</string>
+    <string name="crm_create_public">Payagan ang sinuman na tingnan ang CRM</string>
     <string name="crm_board_delete_column">I-delete ang column</string>
     <string name="crm_board_delete_column_message">Sigurado ka bang gusto mong i-delete ang column na \"%1$s\"? Hindi na ito maibabalik.</string>
     <string name="crm_object_delete_named">Sigurado ka bang gusto mong i-delete ang \"%1$s\"? Hindi na ito maibabalik.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Magulang</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klase</string>
+    <string name="crm_create_allow_search">Payagan ang sinuman na maghanap ng CRM</string>
 </resources>

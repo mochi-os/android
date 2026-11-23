@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala.</string>
     <string name="projects_create_blocked_no_options">Ayikwazi ukwenza: %1$s iyafuneka kodwa ayinakho ukhetho. Yongeza ukhetho kuYilo.</string>
     <string name="projects_attachment_remove">Susa isiqhotyoshelwa</string>
-    <string name="projects_create_allow_public">Vumela nabani na ukuba abone iprojekthi kwaye aphawule ngayo</string>
+    <string name="projects_create_allow_public">Vumela nabani na ukuba abone iprojekthi</string>
     <string name="projects_request_delete_title">Cima isicelo sokudibanisa</string>
     <string name="projects_request_delete_message">Uqinisekile ufuna ukucima esi sicelo sokudibanisa?</string>
     <string name="projects_board_delete_column_title">Cima ikholamu</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Akukwazekanga ukuqhoboshela: %1$s</string>
     <string name="projects_activity_unknown">Akwaziwa</string>
+    <string name="projects_create_allow_search">Vumela nabani na ukukhangela iprojekthi</string>
 </resources>

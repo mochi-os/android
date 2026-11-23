@@ -7,6 +7,7 @@ package org.mochios.projects.ui.projectlist
 
 import android.os.Looper
 import androidx.compose.ui.test.junit4.StateRestorationTester
+import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -41,9 +42,10 @@ import java.util.concurrent.TimeUnit
 import org.mochios.android.R as MochiR
 
 /**
- * A new project is private unless its creator says otherwise, and the
- * template it must be made from is never skipped: a failed fetch of them is
- * shown with a retry.
+ * A new project is unlisted and for its members unless its creator says
+ * otherwise, one switch listing it and another letting anyone view it, and
+ * the template it must be made from is never skipped: a failed fetch of them
+ * is shown with a retry.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
@@ -108,16 +110,46 @@ class CreateProjectTest {
 
     private fun created(): List<String> = asked.filter { (path, _) -> path == "-/create" }.map { (_, body) -> body }
 
-    @Test
-    fun `a new project is private unless asked otherwise`() {
+    // The form's two switches in the order it shows them: the listing, then
+    // who may view. A row's label and switch are not one node, so the label
+    // cannot pick its switch.
+    private fun listing() = rule.onAllNodes(isToggleable())[0]
+    private fun viewing() = rule.onAllNodes(isToggleable())[1]
+
+    /** Creates from the shown form with the two switches as given. */
+    private fun create(search: Boolean, view: Boolean): String {
         show()
+        listing().assertIsOff()
+        viewing().assertIsOff()
+        if (search) listing().performClick()
+        if (view) viewing().performClick()
         rule.onNodeWithText(context.getString(R.string.projects_create_next)).performClick()
         rule.onNodeWithText("Kanban board").performClick()
         rule.onNodeWithText(context.getString(R.string.projects_create_action)).performClick()
         until { created().isNotEmpty() }
-        val body = created().single()
+        return created().single()
+    }
+
+    @Test
+    fun `a new project is private unless asked otherwise`() {
+        val body = create(search = false, view = false)
         assertTrue("THE POINT: private: $body", body.contains("privacy=private"))
+        assertTrue("THE POINT: members only: $body", body.contains("readable=false"))
         assertTrue(body.contains("template=kanban"))
+    }
+
+    @Test
+    fun `the search switch lists the project and lets no one in`() {
+        val body = create(search = true, view = false)
+        assertTrue(body, body.contains("privacy=public"))
+        assertTrue("THE POINT: listing grants nothing: $body", body.contains("readable=false"))
+    }
+
+    @Test
+    fun `the view switch lets anyone view the project, unlisted`() {
+        val body = create(search = false, view = true)
+        assertTrue(body, body.contains("privacy=private"))
+        assertTrue("THE POINT: anyone may view: $body", body.contains("readable=true"))
     }
 
     @Test
@@ -133,7 +165,8 @@ class CreateProjectTest {
         tester.setContent { CreateProjectScreen(onBack = {}, onCreated = {}, viewModel = model) }
         rule.waitForIdle()
         rule.onNodeWithText(context.getString(R.string.projects_create_name)).performTextInput("Website")
-        rule.onNode(isToggleable()).performClick()
+        listing().performClick()
+        viewing().performClick()
         rule.onNodeWithText(context.getString(R.string.projects_create_next)).performClick()
         rule.onNodeWithText("Kanban board").performClick()
         rule.waitForIdle()
@@ -144,13 +177,17 @@ class CreateProjectTest {
         until { created().isNotEmpty() }
         val body = created().single()
         assertTrue("THE POINT: the name typed: $body", body.contains("name=Website"))
-        assertTrue("the switch as set", body.contains("privacy=public"))
+        assertTrue("the search switch as set", body.contains("privacy=public"))
+        assertTrue("the view switch as set", body.contains("readable=true"))
         assertTrue("the template picked", body.contains("template=kanban"))
     }
 
     @Test
-    fun `the switch says it lets anyone view and comment`() {
+    fun `the switches say what they do`() {
         show()
+        assertEquals("Allow anyone to search for project", context.getString(R.string.projects_create_allow_search))
+        assertEquals("Allow anyone to view project", context.getString(R.string.projects_create_allow_public))
+        rule.onNodeWithText(context.getString(R.string.projects_create_allow_search)).assertExists()
         rule.onNodeWithText(context.getString(R.string.projects_create_allow_public)).assertExists()
     }
 

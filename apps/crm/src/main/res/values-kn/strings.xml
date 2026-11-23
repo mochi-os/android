@@ -275,7 +275,7 @@
     <string name="crm_design_sample">ಮಾದರಿ %1$s</string>
     <string name="crm_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
     <string name="crm_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
-    <string name="crm_create_public">ಯಾರಾದರೂ CRM ವೀಕ್ಷಿಸಲು ಮತ್ತು ಅದರ ಮೇಲೆ ಕಾಮೆಂಟ್ ಮಾಡಲು ಅನುಮತಿಸಿ</string>
+    <string name="crm_create_public">ಯಾರಾದರೂ CRM ವೀಕ್ಷಿಸಲು ಅನುಮತಿಸಿ</string>
     <string name="crm_board_delete_column">ಕಾಲಮ್ ಅಳಿಸಿ</string>
     <string name="crm_board_delete_column_message">\"%1$s\" ಕಾಲಮ್ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಇದನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="crm_object_delete_named">\"%1$s\" ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">ಪೋಷಕ</string>
     <string name="crm_export_csv_id">ಐಡಿ</string>
     <string name="crm_export_csv_class">ವರ್ಗ</string>
+    <string name="crm_create_allow_search">ಯಾರಾದರೂ CRM ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
 </resources>

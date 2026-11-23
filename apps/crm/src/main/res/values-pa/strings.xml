@@ -275,7 +275,7 @@
     <string name="crm_design_sample">ਨਮੂਨਾ %1$s</string>
     <string name="crm_option_delete_title">ਵਿਕਲਪ ਮਿਟਾਓ</string>
     <string name="crm_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
-    <string name="crm_create_public">ਕਿਸੇ ਨੂੰ ਵੀ CRM ਵੇਖਣ ਅਤੇ ਉਸ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="crm_create_public">ਕਿਸੇ ਨੂੰ ਵੀ CRM ਵੇਖਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="crm_board_delete_column">ਕਾਲਮ ਮਿਟਾਓ</string>
     <string name="crm_board_delete_column_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਕਾਲਮ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="crm_object_delete_named">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">ਪੇਰੈਂਟ</string>
     <string name="crm_export_csv_id">ਆਈਡੀ</string>
     <string name="crm_export_csv_class">ਕਲਾਸ</string>
+    <string name="crm_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ CRM ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Janiraw kuna item tipos luraskaspati. Nayraqat wakisir awki itemanak luram.</string>
     <string name="projects_create_blocked_no_options">Janiw lurañjamäkiti: %1$s wakisiwa ukampis janiw ajlliñatak opcionanakapax utjkiti. Diseño ukan opcionanak yapxatam.</string>
     <string name="projects_attachment_remove">Adjunto apsuña</string>
-    <string name="projects_create_allow_public">Khitirus proyecto uñakipañapataki ukat comentañapataki iyawsaña</string>
+    <string name="projects_create_allow_public">Khitirus proyecto uñakipañapataki iyawsaña</string>
     <string name="projects_request_delete_title">Mayachthapiñ mayiwi chhaqtayaña</string>
     <string name="projects_request_delete_message">¿Chiqpach aka mayachthapiñ mayiwi chhaqtayañ muntati?</string>
     <string name="projects_board_delete_column_title">Columna chhaqtayaña</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Janiw apkatañ atkänti: %1$s</string>
     <string name="projects_activity_unknown">Jan uñt\'ata</string>
+    <string name="projects_create_allow_search">Khitirus proyecto thaqhañ iyawsaña</string>
 </resources>

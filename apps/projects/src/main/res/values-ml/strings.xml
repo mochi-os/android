@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">ഇതുവരെ ഒരു ഇന തരവും സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ പാരന്റ് ഇനങ്ങൾ ആദ്യം സൃഷ്ടിക്കുക.</string>
     <string name="projects_create_blocked_no_options">സൃഷ്ടിക്കാനാകില്ല: %1$s ആവശ്യമാണ്, പക്ഷേ തിരഞ്ഞെടുക്കാൻ ഓപ്ഷനുകളില്ല. ഡിസൈനിൽ ഓപ്ഷനുകൾ ചേർക്കുക.</string>
     <string name="projects_attachment_remove">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
-    <string name="projects_create_allow_public">ആർക്കും പ്രോജക്റ്റ് കാണാനും അതിൽ അഭിപ്രായം പറയാനും അനുവദിക്കുക</string>
+    <string name="projects_create_allow_public">ആർക്കും പ്രോജക്റ്റ് കാണാൻ അനുവദിക്കുക</string>
     <string name="projects_request_delete_title">മെർജ് റിക്വസ്റ്റ് ഇല്ലാതാക്കുക</string>
     <string name="projects_request_delete_message">ഈ മെർജ് റിക്വസ്റ്റ് ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
     <string name="projects_board_delete_column_title">കോളം ഇല്ലാതാക്കുക</string>
@@ -335,4 +335,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">അറ്റാച്ച് ചെയ്യാനായില്ല: %1$s</string>
     <string name="projects_activity_unknown">അജ്ഞാതം</string>
+    <string name="projects_create_allow_search">ആർക്കും പ്രോജക്റ്റ് തിരയാൻ അനുവദിക്കുക</string>
 </resources>

@@ -320,7 +320,7 @@
     <string name="projects_create_object_no_types">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
     <string name="projects_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
     <string name="projects_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
-    <string name="projects_create_allow_public">ອະນຸຍາດໃຫ້ໃຜກໍຕາມເບິ່ງ ແລະ ສະແດງຄຳເຫັນໃນໂຄງການ</string>
+    <string name="projects_create_allow_public">ອະນຸຍາດໃຫ້ໃຜກໍຕາມເບິ່ງໂຄງການ</string>
     <string name="projects_request_delete_title">ລົບຄຳຮ້ອງລວມ</string>
     <string name="projects_request_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຄຳຮ້ອງລວມນີ້?</string>
     <string name="projects_board_delete_column_title">ລົບຖັນ</string>
@@ -331,4 +331,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ບໍ່ສາມາດແນບໄດ້: %1$s</string>
     <string name="projects_activity_unknown">ບໍ່ຮູ້ຈັກ</string>
+    <string name="projects_create_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາໂຄງການ</string>
 </resources>

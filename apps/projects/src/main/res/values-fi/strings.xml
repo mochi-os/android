@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Mitään kohdetyyppiä ei voi vielä luoda. Luo ensin vaaditut yläkohteet.</string>
     <string name="projects_create_blocked_no_options">Ei voi luoda: %1$s on pakollinen, mutta sillä ei ole valittavia vaihtoehtoja. Lisää vaihtoehtoja Suunnittelussa.</string>
     <string name="projects_attachment_remove">Poista liite</string>
-    <string name="projects_create_allow_public">Salli kenen tahansa katsella ja kommentoida projektia</string>
+    <string name="projects_create_allow_public">Salli kenen tahansa katsella projektia</string>
     <string name="projects_request_delete_title">Poista yhdistämispyyntö</string>
     <string name="projects_request_delete_message">Haluatko varmasti poistaa tämän yhdistämispyynnön?</string>
     <string name="projects_board_delete_column_title">Poista sarake</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Liittäminen epäonnistui: %1$s</string>
     <string name="projects_activity_unknown">Tuntematon</string>
+    <string name="projects_create_allow_search">Salli kenen tahansa etsiä projektia</string>
 </resources>

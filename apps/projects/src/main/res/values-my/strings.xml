@@ -320,7 +320,7 @@
     <string name="projects_create_object_no_types">အရာ အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော မိဘ အရာ များကို ဦးစွာဖန်တီးပါ။</string>
     <string name="projects_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>
     <string name="projects_attachment_remove">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
-    <string name="projects_create_allow_public">မည်သူမဆို ပရောဂျက် ကို ကြည့်ရှုပြီး မှတ်ချက်ပေးခွင့်ပြုမည်</string>
+    <string name="projects_create_allow_public">မည်သူမဆို ပရောဂျက် ကို ကြည့်ရှုခွင့်ပြုမည်</string>
     <string name="projects_request_delete_title">ပေါင်းစည်းမှုတောင်းဆိုချက် ဖျက်မည်</string>
     <string name="projects_request_delete_message">ဤပေါင်းစည်းမှုတောင်းဆိုချက်ကို ဖျက်မှာသေချာပါသလား?</string>
     <string name="projects_board_delete_column_title">ကော်လံ ဖျက်မည်</string>
@@ -331,4 +331,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ပူးတွဲ၍ မရပါ: %1$s</string>
     <string name="projects_activity_unknown">မသိရသော</string>
+    <string name="projects_create_allow_search">မည်သူမဆို ပရောဂျက် ကို ရှာဖွေခွင့်ပြုမည်</string>
 </resources>

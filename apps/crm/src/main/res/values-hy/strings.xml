@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Նմուշ %1$s</string>
     <string name="crm_option_delete_title">Ջնջել տարբերակը</string>
     <string name="crm_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
-    <string name="crm_create_public">Թույլատրել բոլորին դիտել CRM-ը և մեկնաբանել այն</string>
+    <string name="crm_create_public">Թույլատրել բոլորին դիտել CRM-ը</string>
     <string name="crm_board_delete_column">Ջնջել սյունակը</string>
     <string name="crm_board_delete_column_message">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s» սյունակը։ Սա հնարավոր չէ հետարկել։</string>
     <string name="crm_object_delete_named">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը։ Այս գործողությունը հնարավոր չէ հետարկել։</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Ծնող</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Դաս</string>
+    <string name="crm_create_allow_search">Թույլատրել բոլորին որոնել CRM</string>
 </resources>

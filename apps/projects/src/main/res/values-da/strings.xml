@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ingen emnetyper kan oprettes endnu. Opret først de nødvendige overordnede emner.</string>
     <string name="projects_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
     <string name="projects_attachment_remove">Fjern vedhæftning</string>
-    <string name="projects_create_allow_public">Tillad alle at se og kommentere projektet</string>
+    <string name="projects_create_allow_public">Tillad alle at se projektet</string>
     <string name="projects_request_delete_title">Slet merge request</string>
     <string name="projects_request_delete_message">Er du sikker på, at du vil slette denne merge request?</string>
     <string name="projects_board_delete_column_title">Slet kolonne</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Kunne ikke vedhæfte: %1$s</string>
     <string name="projects_activity_unknown">Ukendt</string>
+    <string name="projects_create_allow_search">Tillad alle at søge efter projekt</string>
 </resources>

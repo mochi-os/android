@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
     <string name="projects_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>
     <string name="projects_attachment_remove">Pašalinti priedą</string>
-    <string name="projects_create_allow_public">Leisti bet kam peržiūrėti ir komentuoti projektą</string>
+    <string name="projects_create_allow_public">Leisti bet kam peržiūrėti projektą</string>
     <string name="projects_request_delete_title">Ištrinti sujungimo užklausą</string>
     <string name="projects_request_delete_message">Ar tikrai norite ištrinti šią sujungimo užklausą?</string>
     <string name="projects_board_delete_column_title">Ištrinti stulpelį</string>
@@ -336,4 +336,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nepavyko pridėti: %1$s</string>
     <string name="projects_activity_unknown">Nežinoma</string>
+    <string name="projects_create_allow_search">Leisti bet kam ieškoti projekto</string>
 </resources>

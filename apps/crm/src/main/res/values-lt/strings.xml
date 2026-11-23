@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Pavyzdys %1$s</string>
     <string name="crm_option_delete_title">Ištrinti parinktį</string>
     <string name="crm_option_delete_message">Ar tikrai norite ištrinti parinktį \"%1$s\"?</string>
-    <string name="crm_create_public">Leisti bet kam peržiūrėti ir komentuoti CRM</string>
+    <string name="crm_create_public">Leisti bet kam peržiūrėti CRM</string>
     <string name="crm_board_delete_column">Ištrinti stulpelį</string>
     <string name="crm_board_delete_column_message">Ar tikrai norite ištrinti stulpelį „%1$s“? Šio veiksmo atšaukti negalima.</string>
     <string name="crm_object_delete_named">Ar tikrai norite ištrinti „%1$s“? Šio veiksmo atšaukti negalima.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Tėvas</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klasė</string>
+    <string name="crm_create_allow_search">Leisti bet kam ieškoti CRM</string>
 </resources>

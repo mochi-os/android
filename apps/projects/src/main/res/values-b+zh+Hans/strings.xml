@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">尚无可创建的条目类型。请先创建所需的父级条目。</string>
     <string name="projects_create_blocked_no_options">无法创建：%1$s 为必填项，但没有可选选项。请在设计中添加选项。</string>
     <string name="projects_attachment_remove">移除附件</string>
-    <string name="projects_create_allow_public">允许任何人查看和评论项目</string>
+    <string name="projects_create_allow_public">允许任何人查看项目</string>
     <string name="projects_request_delete_title">删除合并请求</string>
     <string name="projects_request_delete_message">确定要删除此合并请求吗?</string>
     <string name="projects_board_delete_column_title">删除列</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">无法附加：%1$s</string>
     <string name="projects_activity_unknown">未知</string>
+    <string name="projects_create_allow_search">允许任何人搜索项目</string>
 </resources>

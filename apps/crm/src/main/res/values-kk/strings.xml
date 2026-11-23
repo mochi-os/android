@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Үлгі %1$s</string>
     <string name="crm_option_delete_title">Опцияны жою</string>
     <string name="crm_option_delete_message">\"%1$s\" опциясын жойғыңыз келетініне сенімдісіз бе?</string>
-    <string name="crm_create_public">Кез келгенге CRM көруге және оған пікір қалдыруға рұқсат ету</string>
+    <string name="crm_create_public">Кез келгенге CRM көруге рұқсат ету</string>
     <string name="crm_board_delete_column">Бағанды жою</string>
     <string name="crm_board_delete_column_message">\"%1$s\" бағанын жойғыңыз келетініне сенімдісіз бе? Бұны қайтару мүмкін емес.</string>
     <string name="crm_object_delete_named">\"%1$s\" жойылғанына сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Ата-ана</string>
     <string name="crm_export_csv_id">Идентификатор</string>
     <string name="crm_export_csv_class">Сынып</string>
+    <string name="crm_create_allow_search">Кез келгенге CRM іздеуге рұқсат ету</string>
 </resources>

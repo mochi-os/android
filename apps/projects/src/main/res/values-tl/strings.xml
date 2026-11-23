@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item.</string>
     <string name="projects_create_blocked_no_options">Hindi makagawa: kailangan ang %1$s ngunit walang mapagpipiliang opsyon. Magdagdag ng opsyon sa Disenyo.</string>
     <string name="projects_attachment_remove">Alisin ang attachment</string>
-    <string name="projects_create_allow_public">Payagan ang sinuman na tingnan at magkomento sa project</string>
+    <string name="projects_create_allow_public">Payagan ang sinuman na tingnan ang project</string>
     <string name="projects_request_delete_title">I-delete ang merge request</string>
     <string name="projects_request_delete_message">Sigurado ka bang gusto mong i-delete ang merge request na ito?</string>
     <string name="projects_board_delete_column_title">I-delete ang column</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Hindi ma-attach: %1$s</string>
     <string name="projects_activity_unknown">Hindi alam</string>
+    <string name="projects_create_allow_search">Payagan ang sinuman na maghanap ng project</string>
 </resources>

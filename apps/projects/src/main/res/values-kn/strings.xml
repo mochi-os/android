@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
     <string name="projects_create_blocked_no_options">ರಚಿಸಲಾಗುವುದಿಲ್ಲ: %1$s ಅಗತ್ಯವಿದೆ ಆದರೆ ಆಯ್ಕೆ ಮಾಡಲು ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ. ವಿನ್ಯಾಸದಲ್ಲಿ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ.</string>
     <string name="projects_attachment_remove">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
-    <string name="projects_create_allow_public">ಯಾರಾದರೂ ಪ್ರಾಜೆಕ್ಟ್ ವೀಕ್ಷಿಸಲು ಮತ್ತು ಅದರ ಮೇಲೆ ಕಾಮೆಂಟ್ ಮಾಡಲು ಅನುಮತಿಸಿ</string>
+    <string name="projects_create_allow_public">ಯಾರಾದರೂ ಪ್ರಾಜೆಕ್ಟ್ ವೀಕ್ಷಿಸಲು ಅನುಮತಿಸಿ</string>
     <string name="projects_request_delete_title">ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್ ಅಳಿಸಿ</string>
     <string name="projects_request_delete_message">ಈ ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ?</string>
     <string name="projects_board_delete_column_title">ಕಾಲಮ್ ಅಳಿಸಿ</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
     <string name="projects_activity_unknown">ಅಜ್ಞಾತ</string>
+    <string name="projects_create_allow_search">ಯಾರಾದರೂ ಪ್ರಾಜೆಕ್ಟ್ ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
 </resources>

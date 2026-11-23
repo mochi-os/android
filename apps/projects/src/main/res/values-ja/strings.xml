@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
     <string name="projects_create_blocked_no_options">作成できません: %1$s は必須ですが、選択肢がありません。デザインで選択肢を追加してください。</string>
     <string name="projects_attachment_remove">添付を削除</string>
-    <string name="projects_create_allow_public">誰でもプロジェクトを閲覧してコメントできるようにする</string>
+    <string name="projects_create_allow_public">誰でもプロジェクトを閲覧できるようにする</string>
     <string name="projects_request_delete_title">マージリクエストを削除</string>
     <string name="projects_request_delete_message">このマージリクエストを削除しますか？</string>
     <string name="projects_board_delete_column_title">カラムを削除</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">添付できませんでした：%1$s</string>
     <string name="projects_activity_unknown">不明</string>
+    <string name="projects_create_allow_search">誰でもプロジェクトを検索できるようにする</string>
 </resources>

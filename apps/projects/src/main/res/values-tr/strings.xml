@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Henüz oluşturulabilecek öge türü yok. Önce gerekli üst ögeleri oluşturun.</string>
     <string name="projects_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>
     <string name="projects_attachment_remove">Eki kaldır</string>
-    <string name="projects_create_allow_public">Herkesin projeyi görüntülemesine ve yorum yapmasına izin ver</string>
+    <string name="projects_create_allow_public">Herkesin projeyi görüntülemesine izin ver</string>
     <string name="projects_request_delete_title">Merge request\'i sil</string>
     <string name="projects_request_delete_message">Bu merge request\'i silmek istediğinizden emin misiniz?</string>
     <string name="projects_board_delete_column_title">Sütunu sil</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Eklenemedi: %1$s</string>
     <string name="projects_activity_unknown">Bilinmiyor</string>
+    <string name="projects_create_allow_search">Herkesin projeyi aramasına izin ver</string>
 </resources>

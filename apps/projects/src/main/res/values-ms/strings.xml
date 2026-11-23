@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
     <string name="projects_create_blocked_no_options">Tidak boleh dicipta: %1$s diperlukan tetapi tiada pilihan. Tambah pilihan dalam Reka bentuk.</string>
     <string name="projects_attachment_remove">Buang lampiran</string>
-    <string name="projects_create_allow_public">Benarkan sesiapa sahaja melihat dan mengulas projek</string>
+    <string name="projects_create_allow_public">Benarkan sesiapa sahaja melihat projek</string>
     <string name="projects_request_delete_title">Padam permintaan gabungan</string>
     <string name="projects_request_delete_message">Adakah anda pasti mahu memadam permintaan gabungan ini?</string>
     <string name="projects_board_delete_column_title">Padam lajur</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Tidak dapat melampirkan: %1$s</string>
     <string name="projects_activity_unknown">Tidak diketahui</string>
+    <string name="projects_create_allow_search">Benarkan sesiapa sahaja mencari projek</string>
 </resources>

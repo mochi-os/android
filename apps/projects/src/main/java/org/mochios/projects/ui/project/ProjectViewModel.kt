@@ -41,7 +41,8 @@ import org.mochios.android.share.Shared
 import org.mochios.projects.ui.board.allOptions
 import org.mochios.projects.ui.board.boardClass
 import org.mochios.projects.ui.board.boardOptions
-import org.mochios.projects.ui.board.dropRank
+import org.mochios.projects.ui.board.topLevelObjects
+import org.mochios.projects.api.MovedRank
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.lib.CollapsedColumnsStore
 import org.mochios.projects.model.FieldOption
@@ -87,6 +88,14 @@ data class ProjectUiState(
     /** Project members, for resolving user-field display names on cards. */
     val people: List<org.mochios.projects.model.Person> = emptyList(),
 )
+
+/**
+ * How a drop on the board or the tree goes beside the object it lands on, by
+ * the sort the view is drawn in: by key, by key upside down under a
+ * descending manual sort, or not at all under any other sort, which draws
+ * the objects by a field and never shows their keys.
+ */
+enum class Placement { Ascending, Descending, None }
 
 /** The saved-state key that records the route's object as opened. */
 private const val INITIAL_OPENED = "initialOpened"
@@ -713,23 +722,174 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Moves [objectId] directly [after] one object, or directly [before] one
+     * when nothing is above it; into column [value] of [field], lane
+     * [rowValue] of [rowField], and the children of [parent] when given. An
+     * empty [value] keeps the column, and [clear] empties it.
+     * It is drawn there at once, takes the keys the server wrote when it
+     * answers, and goes back to where it was when the move fails.
+     */
     fun moveObject(
         objectId: String,
         field: String? = null,
         value: String? = null,
-        rank: Int? = null,
+        after: String? = null,
+        before: String? = null,
         rowField: String? = null,
         rowValue: String? = null,
-        scopeParent: String? = null,
+        parent: String? = null,
+        clear: Boolean = false,
     ) {
+        val previous = place(objectId, field, value, after, before, rowField, rowValue, parent, clear)
         viewModelScope.launch {
             try {
-                repository.moveObject(projectId, objectId, field, value, rank, rowField, rowValue, scopeParent)
+                rerank(repository.moveObject(projectId, objectId, field, value, after, before, rowField, rowValue, parent, clear))
                 refreshObjects()
             } catch (e: Exception) {
+                previous?.let(::restore)
                 _actionFailed.tryEmit(e.toMochiError())
+                refreshObjects()
             }
         }
+    }
+
+    /**
+     * Draws [objectId] where a move puts it before the server answers: its
+     * column, lane and parent changed, and, beside [after] or [before], that
+     * object's key and the place next to it in the list, which a sort by key
+     * keeps, since a tie keeps its order. Answers the object as it was, or
+     * null when the list does not hold it.
+     */
+    private fun place(
+        objectId: String,
+        field: String?,
+        value: String?,
+        after: String?,
+        before: String?,
+        rowField: String?,
+        rowValue: String?,
+        parent: String?,
+        clear: Boolean,
+    ): ProjectObject? {
+        val objects = _uiState.value.objects
+        val previous = objects.firstOrNull { obj -> obj.id == objectId } ?: return null
+        var values = previous.values
+        // An empty value keeps the object's own, as the server does, and a
+        // clear empties it.
+        if (!field.isNullOrBlank() && clear) values = values + (field to "")
+        else if (!field.isNullOrBlank() && !value.isNullOrEmpty()) values = values + (field to value)
+        if (!rowField.isNullOrBlank()) values = values + (rowField to rowValue.orEmpty())
+        var moved = previous.copy(values = values, parent = parent ?: previous.parent)
+        val anchor = (after ?: before)?.let { id -> objects.firstOrNull { obj -> obj.id == id && id != objectId } }
+        val placed = if (anchor == null) {
+            objects.map { obj -> if (obj.id == objectId) moved else obj }
+        } else {
+            moved = moved.copy(rank = anchor.rank)
+            val others = objects.filter { obj -> obj.id != objectId }.toMutableList()
+            others.add(others.indexOf(anchor) + if (after != null) 1 else 0, moved)
+            others
+        }
+        _uiState.value = _uiState.value.copy(objects = placed)
+        return previous
+    }
+
+    /** The keys a move wrote, given to the objects that hold them. */
+    private fun rerank(ranks: List<MovedRank>) {
+        if (ranks.isEmpty()) return
+        val keys = ranks.associateBy { rank -> rank.id }
+        _uiState.value = _uiState.value.copy(
+            objects = _uiState.value.objects.map { obj ->
+                val key = keys[obj.id] ?: return@map obj
+                obj.copy(rank = key.rank, updated = key.updated ?: obj.updated)
+            }
+        )
+    }
+
+    /** Puts an object a failed move drew elsewhere back as it was. */
+    private fun restore(previous: ProjectObject) {
+        _uiState.value = _uiState.value.copy(
+            objects = _uiState.value.objects.map { obj -> if (obj.id == previous.id) previous else obj }
+        )
+    }
+
+    /**
+     * How a drop goes beside the object it lands on, by the view's sort:
+     * only a manual sort shows the keys a drop places by.
+     */
+    fun placement(): Placement = when {
+        getActiveSortField() != "rank" -> Placement.None
+        getActiveSortDirection() == "desc" -> Placement.Descending
+        else -> Placement.Ascending
+    }
+
+    /**
+     * Moves [objectId] dropped on [target], directly [below] it or above it
+     * as the view draws it, into column [value] of [field], lane [rowValue]
+     * of [rowField] and the children of [parent] when given. A descending
+     * manual sort draws the keys upside down, so below is before. Any other
+     * sort shows no place to go, so only the column, lane and parent change,
+     * and a drop that changes none of them writes nothing. An empty [value]
+     * is the column for no value, which clears a value the board draws a
+     * column for.
+     */
+    fun moveBeside(
+        objectId: String,
+        target: String,
+        below: Boolean,
+        field: String? = null,
+        value: String? = null,
+        rowField: String? = null,
+        rowValue: String? = null,
+        parent: String? = null,
+    ) {
+        val clear = clears(objectId, field, value)
+        when (placement()) {
+            Placement.Ascending -> moveObject(
+                objectId, field, value,
+                after = target.takeIf { below }, before = target.takeUnless { below },
+                rowField = rowField, rowValue = rowValue, parent = parent, clear = clear,
+            )
+            Placement.Descending -> moveObject(
+                objectId, field, value,
+                after = target.takeUnless { below }, before = target.takeIf { below },
+                rowField = rowField, rowValue = rowValue, parent = parent, clear = clear,
+            )
+            Placement.None -> if (clear || changes(objectId, field, value, rowField, rowValue, parent)) {
+                moveObject(objectId, field, value, rowField = rowField, rowValue = rowValue, parent = parent, clear = clear)
+            }
+        }
+    }
+
+    /** Whether a move without a place changes [objectId]'s column, lane or parent. */
+    private fun changes(objectId: String, field: String?, value: String?, rowField: String?, rowValue: String?, parent: String?): Boolean {
+        val obj = _uiState.value.objects.firstOrNull { candidate -> candidate.id == objectId } ?: return true
+        return (!field.isNullOrBlank() && !value.isNullOrEmpty() && obj.stringValue(field) != value) ||
+            (rowField != null && obj.stringValue(rowField) != rowValue.orEmpty()) ||
+            (parent != null && parent != obj.parent)
+    }
+
+    /** The values of [field] the active board draws a column for. */
+    private fun boardColumns(field: String): Set<String> =
+        getBoardOptions(getActiveView(), field).map { option -> option.id }.toSet()
+
+    /**
+     * The column of [field] the active board draws [obj] in, of [columns]:
+     * its value when the board draws a column for it, else "", the column
+     * for no value.
+     */
+    fun boardColumn(obj: ProjectObject, field: String, columns: Set<String> = boardColumns(field)): String =
+        obj.stringValue(field).takeIf { value -> value in columns }.orEmpty()
+
+    /**
+     * Whether a move of [objectId] into column [value] of [field] clears the
+     * field: a move to the column for no value from a column with one. An
+     * empty value alone keeps the column, as a reorder sends it.
+     */
+    private fun clears(objectId: String, field: String?, value: String?): Boolean {
+        if (field.isNullOrBlank() || !value.isNullOrEmpty()) return false
+        val obj = _uiState.value.objects.firstOrNull { candidate -> candidate.id == objectId } ?: return false
+        return boardColumn(obj, field).isNotEmpty()
     }
 
     /**
@@ -941,34 +1101,89 @@ class ProjectViewModel @Inject constructor(
 
     /**
      * The objects a card dropped into column [value] of [field] is placed
-     * among, as the server ranks them: every object holding that value, at any
-     * depth and of any class, except [moved], in rank order. An empty [value]
-     * keeps the moved object's own, as the server does.
+     * among: every object the board draws in that column, at any depth and of
+     * any class, except [moved], in rank order. An empty [value] keeps the
+     * moved object's own column, as the server does, unless [clear] moves it
+     * to the column for no value, which also holds every value the board
+     * draws no column for.
      */
-    fun rankedColumn(field: String, value: String, moved: String): List<String> {
+    fun rankedColumn(field: String, value: String, moved: String, clear: Boolean = false): List<String> {
         val objects = _uiState.value.objects
-        val target = value.ifBlank { objects.firstOrNull { obj -> obj.id == moved }?.stringValue(field).orEmpty() }
+        val columns = boardColumns(field)
+        val target = if (clear) "" else value.ifBlank { objects.firstOrNull { obj -> obj.id == moved }?.let { obj -> boardColumn(obj, field, columns) }.orEmpty() }
         return objects
-            .filter { obj -> obj.id != moved && obj.stringValue(field) == target }
+            .filter { obj -> obj.id != moved && boardColumn(obj, field, columns) == target }
             .sortedBy { obj -> obj.rank }
             .map { obj -> obj.id }
     }
 
     /**
-     * The 1-based position for [moved] dropped above or [below] the card
-     * [target] in column [value] of [field], counted among the column as the
-     * server ranks it, not as the board shows it: the board holds only the
-     * top-level cards of the view's classes, in the view's sort.
-     */
-    fun dropPosition(field: String, value: String, target: String, moved: String, below: Boolean): Int =
-        dropRank(rankedColumn(field, value, moved), target, moved, below)
-
-    /**
-     * Moves [objectId] to the end of column [value] of [field], and into lane
-     * [rowValue] of [rowField] when given.
+     * Moves [objectId] to the end of column [value] of [field] as the board
+     * draws it, past every object the column holds, and into lane [rowValue]
+     * of [rowField] when given: after the last key, or before the first under
+     * a descending manual sort. Under any other sort the column and lane
+     * change alone, and a drop that changes neither writes nothing. An empty
+     * [value] is the column for no value, which clears a value the board
+     * draws a column for.
      */
     fun moveToEnd(objectId: String, field: String, value: String, rowField: String? = null, rowValue: String? = null) {
-        moveObject(objectId, field, value, COLUMN_END, rowField, rowValue)
+        val clear = clears(objectId, field, value)
+        val column = rankedColumn(field, value, objectId, clear)
+        when (placement()) {
+            Placement.Ascending -> moveObject(objectId, field, value, after = column.lastOrNull(), rowField = rowField, rowValue = rowValue, clear = clear)
+            Placement.Descending -> moveObject(objectId, field, value, before = column.firstOrNull(), rowField = rowField, rowValue = rowValue, clear = clear)
+            Placement.None -> if (clear || changes(objectId, field, value, rowField, rowValue, null)) {
+                moveObject(objectId, field, value, rowField = rowField, rowValue = rowValue, clear = clear)
+            }
+        }
+    }
+
+    /**
+     * Moves [objectId] to the top of column [value] of [field] as the board
+     * draws it, above every object the column holds: before the first key, or
+     * after the last under a descending manual sort. Under any other sort the
+     * column changes alone, and a move that changes nothing writes nothing.
+     * An empty [value] is the column for no value, as in [moveToEnd].
+     */
+    fun moveToTop(objectId: String, field: String, value: String) {
+        val clear = clears(objectId, field, value)
+        val column = rankedColumn(field, value, objectId, clear)
+        when (placement()) {
+            Placement.Ascending -> moveObject(objectId, field, value, before = column.firstOrNull(), clear = clear)
+            Placement.Descending -> moveObject(objectId, field, value, after = column.lastOrNull(), clear = clear)
+            Placement.None -> if (clear || changes(objectId, field, value, null, null, null)) {
+                moveObject(objectId, field, value, clear = clear)
+            }
+        }
+    }
+
+    /**
+     * The cards the Move sheet offers to put [objectId] after: the others the
+     * board draws in its column, and in its lane when the view has lanes, in
+     * the order the board draws them. None under a sort by a field, which
+     * draws no place to go.
+     */
+    fun movePlaces(objectId: String): List<ProjectObject> {
+        if (placement() == Placement.None) return emptyList()
+        val view = getActiveView() ?: return emptyList()
+        val columnField = view.columns.takeIf { field -> field.isNotBlank() } ?: return emptyList()
+        val rowField = view.rows.takeIf { field -> field.isNotBlank() }
+        val shown = topLevelObjects(_uiState.value.objects, view)
+        val moved = shown.firstOrNull { obj -> obj.id == objectId } ?: return emptyList()
+        // A value no column or lane is drawn for sits in the board's unset one.
+        val columns = getBoardOptions(view, columnField).map { option -> option.id }.toSet()
+        val rows = rowField?.let { field -> getBoardOptions(view, field).map { option -> option.id }.toSet() }.orEmpty()
+        val cell = { obj: ProjectObject ->
+            obj.stringValue(columnField).takeIf { value -> value in columns }.orEmpty() to
+                rowField?.let { field -> obj.stringValue(field).takeIf { value -> value in rows } }.orEmpty()
+        }
+        val own = cell(moved)
+        val visible = getVisibleObjectIds()
+        return sortObjects(
+            shown.filter { obj ->
+                obj.id != objectId && cell(obj) == own && (visible == null || obj.id in visible)
+            }
+        )
     }
 
     /**
@@ -1079,10 +1294,14 @@ class ProjectViewModel @Inject constructor(
         val field = getActiveSortField()
         val multiplier = if (getActiveSortDirection() == "desc") -1 else 1
         // rank is a fractional-index text key whose ASCII (binary) order is the
-        // intended order (#53), so compare the keys as strings — matching the
+        // intended order, so compare the keys as strings — matching the
         // web's rankCompare. The remaining built-ins are still numeric.
+        // Descending is the ascending order upside down, ties included, so a
+        // moved card drawn beside the object whose key it holds for now
+        // shows on the side the drop put it.
         if (field == "rank") {
-            return objects.sortedWith(Comparator { a, b -> a.rank.compareTo(b.rank) * multiplier })
+            val ascending = objects.sortedWith(Comparator { a, b -> a.rank.compareTo(b.rank) })
+            return if (multiplier < 0) ascending.asReversed() else ascending
         }
         val numericFields = setOf("number", "created", "updated")
         return if (field in numericFields) {
@@ -1153,13 +1372,6 @@ class ProjectViewModel @Inject constructor(
 
     private companion object {
         const val MAX_WARM_ROUNDS = 60
-
-        /**
-         * A drop position past every object of a column: the server clamps
-         * it to the end and ranks the card after every other, however many
-         * objects the column holds that the board does not show.
-         */
-        const val COLUMN_END = Int.MAX_VALUE
 
         /** Frames that change the items alone. */
         val OBJECT_FRAMES = setOf(

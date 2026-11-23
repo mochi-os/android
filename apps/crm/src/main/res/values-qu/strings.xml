@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Rikch\'ana %1$s</string>
     <string name="crm_option_delete_title">Akllana wischuy</string>
     <string name="crm_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata wischuyta munanki?</string>
-    <string name="crm_create_public">Pipas CRM-ta qhawananpaq hinaspa comentananpaq saqiy</string>
+    <string name="crm_create_public">Pipas CRM-ta qhawananpaq saqiy</string>
     <string name="crm_board_delete_column">Columna wischuy</string>
     <string name="crm_board_delete_column_message">\"%1$s\" columna-ta wischuyta munanki? Kayqa mana kutichipuy atinmanchu.</string>
     <string name="crm_object_delete_named">\"%1$s\"-ta wischuyta munanki? Kay ruway mana kutichipuy atinmanchu.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Tayta</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clase</string>
+    <string name="crm_create_allow_search">Pipas CRM-ta maskananpaq saqiy</string>
 </resources>

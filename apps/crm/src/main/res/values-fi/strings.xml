@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Esimerkki %1$s</string>
     <string name="crm_option_delete_title">Poista vaihtoehto</string>
     <string name="crm_option_delete_message">Haluatko varmasti poistaa vaihtoehdon \"%1$s\"?</string>
-    <string name="crm_create_public">Salli kenen tahansa katsella ja kommentoida CRM:ää</string>
+    <string name="crm_create_public">Salli kenen tahansa katsella CRM:ää</string>
     <string name="crm_board_delete_column">Poista sarake</string>
     <string name="crm_board_delete_column_message">Haluatko varmasti poistaa sarakkeen \"%1$s\"? Tätä ei voi kumota.</string>
     <string name="crm_object_delete_named">Haluatko varmasti poistaa kohteen \"%1$s\"? Tätä toimintoa ei voi kumota.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Yläkohde</string>
     <string name="crm_export_csv_id">Tunnus</string>
     <string name="crm_export_csv_class">Luokka</string>
+    <string name="crm_create_allow_search">Salli kenen tahansa etsiä CRM:ää</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Paraugs %1$s</string>
     <string name="crm_option_delete_title">Dzēst opciju</string>
     <string name="crm_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
-    <string name="crm_create_public">Ļaut jebkuram skatīt un komentēt CRM</string>
+    <string name="crm_create_public">Ļaut jebkuram skatīt CRM</string>
     <string name="crm_board_delete_column">Dzēst kolonnu</string>
     <string name="crm_board_delete_column_message">Vai tiešām vēlies dzēst kolonnu \"%1$s\"? To nevar atsaukt.</string>
     <string name="crm_object_delete_named">Vai tiešām vēlies dzēst \"%1$s\"? Šo darbību nevar atsaukt.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">Vecāks</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klase</string>
+    <string name="crm_create_allow_search">Ļaut jebkuram meklēt CRM</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Näidis %1$s</string>
     <string name="crm_option_delete_title">Kustuta valik</string>
     <string name="crm_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
-    <string name="crm_create_public">Luba kõigil CRM-i vaadata ja kommenteerida</string>
+    <string name="crm_create_public">Luba kõigil CRM-i vaadata</string>
     <string name="crm_board_delete_column">Kustuta veerg</string>
     <string name="crm_board_delete_column_message">Kas oled kindel, et soovid kustutada veeru \"%1$s\"? Seda ei saa tagasi võtta.</string>
     <string name="crm_object_delete_named">Kas oled kindel, et soovid kustutada \"%1$s\"? Seda toimingut ei saa tagasi võtta.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Vanem</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klass</string>
+    <string name="crm_create_allow_search">Luba kõigil otsida CRM-i</string>
 </resources>

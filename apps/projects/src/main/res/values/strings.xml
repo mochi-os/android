@@ -20,7 +20,8 @@
     <string name="projects_create_description">Description</string>
     <string name="projects_create_prefix">Prefix</string>
     <string name="projects_create_prefix_hint">Used for readable IDs like %1$s-1, %1$s-2</string>
-    <string name="projects_create_allow_public">Allow anyone to view and comment on project</string>
+    <string name="projects_create_allow_search">Allow anyone to search for project</string>
+    <string name="projects_create_allow_public">Allow anyone to view project</string>
     <string name="projects_create_import_backup">Import from backup (optional)</string>
     <string name="projects_create_upload_json">Upload .json file</string>
     <string name="projects_create_template_none">None</string>

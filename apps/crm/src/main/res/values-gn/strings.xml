@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Techapyrã %1$s</string>
     <string name="crm_option_delete_title">Hundi opción</string>
     <string name="crm_option_delete_message">¿Añetehápe reipota embogue jeporavorã \"%1$s\"?</string>
-    <string name="crm_create_public">Eipysyrõ opavavépe ohecha CRM ha ohai comentario hese</string>
+    <string name="crm_create_public">Eipysyrõ opavavépe ohecha CRM</string>
     <string name="crm_board_delete_column">Hundi columna</string>
     <string name="crm_board_delete_column_message">Añetehápe ehundise \"%1$s\" columna? Kóva ndaikatumo\'ãi oñembojevy.</string>
     <string name="crm_object_delete_named">Añetehápe ehundise \"%1$s\"? Ko tembiapo ndaikatumo\'ãi oñembojevy.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Sy/ru</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clase</string>
+    <string name="crm_create_allow_search">Eipysyrõ opavavépe oheka CRM</string>
 </resources>

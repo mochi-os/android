@@ -275,7 +275,7 @@
     <string name="crm_design_sample">नमूना %1$s</string>
     <string name="crm_option_delete_title">विकल्प मेटाईं</string>
     <string name="crm_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
-    <string name="crm_create_public">केहू के CRM देखे आ ओपर टिप्पणी करे के अनुमति दीं</string>
+    <string name="crm_create_public">केहू के CRM देखे के अनुमति दीं</string>
     <string name="crm_board_delete_column">कॉलम मेटाईं</string>
     <string name="crm_board_delete_column_message">का रउआ \"%1$s\" कॉलम के मेटावे चाहत बानी? ई वापस ना हो सकेला।</string>
     <string name="crm_object_delete_named">का रउआ \"%1$s\" के मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">मूल</string>
     <string name="crm_export_csv_id">आईडी</string>
     <string name="crm_export_csv_class">वर्ग</string>
+    <string name="crm_create_allow_search">केहू के CRM खोजे के अनुमति दीं</string>
 </resources>

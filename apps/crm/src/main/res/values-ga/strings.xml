@@ -277,7 +277,7 @@
     <string name="crm_design_sample">Sampla %1$s</string>
     <string name="crm_option_delete_title">Scrios rogha</string>
     <string name="crm_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
-    <string name="crm_create_public">Ceadaigh d\'aon duine an CRM a fheiceáil agus nótaí tráchta a chur air</string>
+    <string name="crm_create_public">Ceadaigh d\'aon duine an CRM a fheiceáil</string>
     <string name="crm_board_delete_column">Scrios colún</string>
     <string name="crm_board_delete_column_message">An bhfuil tú cinnte gur mian leat an colún \"%1$s\" a scriosadh? Ní féidir é seo a chealú.</string>
     <string name="crm_object_delete_named">An bhfuil tú cinnte gur mian leat \"%1$s\" a scriosadh? Ní féidir an gníomh seo a chealú.</string>
@@ -298,4 +298,5 @@
     <string name="crm_export_csv_parent">Tuismitheoir</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Rang</string>
+    <string name="crm_create_allow_search">Ceadaigh d\'aon duine cuardach do CRM</string>
 </resources>

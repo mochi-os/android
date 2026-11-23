@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
     <string name="projects_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>
     <string name="projects_attachment_remove">Cire haɗe</string>
-    <string name="projects_create_allow_public">Ba kowa damar duba project da yin sharhi a kansa</string>
+    <string name="projects_create_allow_public">Ba kowa damar duba project</string>
     <string name="projects_request_delete_title">Goge merge request</string>
     <string name="projects_request_delete_message">Ka tabbata kana son goge wannan merge request?</string>
     <string name="projects_board_delete_column_title">Goge column</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ba a iya haɗawa ba: %1$s</string>
     <string name="projects_activity_unknown">Ba a sani ba</string>
+    <string name="projects_create_allow_search">Ba kowa damar nemo project</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Nusga %1$s</string>
     <string name="crm_option_delete_title">Wariant pozmak</string>
     <string name="crm_option_delete_message">\"%1$s\" wariantyny pozmak isleýändigiňize ynanýarsyňyzmy?</string>
-    <string name="crm_create_public">Islendik adama CRM-i görmäge we oňa teswir ýazmaga rugsat bermek</string>
+    <string name="crm_create_public">Islendik adama CRM-i görmäge rugsat bermek</string>
     <string name="crm_board_delete_column">Sütüni pozmak</string>
     <string name="crm_board_delete_column_message">\"%1$s\" sütünini pozmak isleýändigiňize ynamlymy? Bu yzyna gaýtarylyp bilinmez.</string>
     <string name="crm_object_delete_named">\"%1$s\" pozmak isleýändigiňize ynamlymy? Bu hereket yzyna gaýtarylyp bilinmez.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Ene-ata</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klass</string>
+    <string name="crm_create_allow_search">Islendik adamyň CRM gözlemegine rugsat bermek</string>
 </resources>

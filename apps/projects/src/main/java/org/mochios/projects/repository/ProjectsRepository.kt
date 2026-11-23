@@ -29,6 +29,7 @@ import org.mochios.android.files.UploadTracker
 import org.mochios.projects.api.CreateObjectRequest
 import org.mochios.projects.api.HierarchyRequest
 import org.mochios.projects.api.MoveObjectRequest
+import org.mochios.projects.api.MovedRank
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.api.SubscribeRequest
@@ -151,9 +152,10 @@ class ProjectsRepository @Inject constructor(
         description: String? = null,
         prefix: String? = null,
         privacy: String = "private",
+        readable: Boolean = false,
         template: String? = null
     ): Project {
-        val r = api.createProject(name, description, prefix, privacy, template).unwrap()
+        val r = api.createProject(name, description, prefix, privacy, readable.toString(), template).unwrap()
         // Prefer the nested project when the backend sends one; otherwise build
         // it from the flat id and fingerprint. Only the identity comes back
         // here — callers reload the list for the rest.
@@ -326,21 +328,24 @@ class ProjectsRepository @Inject constructor(
         api.deleteObject(projectId, objectId).unwrap()
     }
 
+    /** Moves an object and answers every key the move wrote. */
     suspend fun moveObject(
         projectId: String,
         objectId: String,
         field: String? = null,
         value: String? = null,
-        rank: Int? = null,
+        after: String? = null,
+        before: String? = null,
         rowField: String? = null,
         rowValue: String? = null,
-        scopeParent: String? = null,
-    ) {
+        parent: String? = null,
+        clear: Boolean = false,
+    ): List<MovedRank> {
         val row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() }
-        api.moveObject(
+        return api.moveObject(
             projectId, objectId,
-            MoveObjectRequest(field, value, rank, row, scopeParent)
-        ).unwrap()
+            MoveObjectRequest(field, value, after, if (after == null) before else null, row, parent, clear = "true".takeIf { clear })
+        ).unwrap().ranks.orEmpty()
     }
 
     suspend fun setValue(projectId: String, objectId: String, fieldId: String, value: String) {

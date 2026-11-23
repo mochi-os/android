@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Пакуль нельга стварыць тыпы элементаў. Спачатку стварыце патрэбныя бацькоўскія элементы.</string>
     <string name="projects_create_blocked_no_options">Немагчыма стварыць: %1$s абавязковы, але не мае варыянтаў выбару. Дадайце варыянты ў Дызайне.</string>
     <string name="projects_attachment_remove">Выдаліць укладанне</string>
-    <string name="projects_create_allow_public">Дазволіць усім праглядаць і каментаваць праект</string>
+    <string name="projects_create_allow_public">Дазволіць усім праглядаць праект</string>
     <string name="projects_request_delete_title">Выдаліць запыт зліцця</string>
     <string name="projects_request_delete_message">Вы ўпэўнены, што хочаце выдаліць гэты запыт зліцця?</string>
     <string name="projects_board_delete_column_title">Выдаліць слупок</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Не ўдалося прымацаваць: %1$s</string>
     <string name="projects_activity_unknown">Невядома</string>
+    <string name="projects_create_allow_search">Дазволіць усім шукаць праект</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
     <string name="projects_create_blocked_no_options">امکان ایجاد نیست: %1$s الزامی است اما گزینه‌ای برای انتخاب ندارد. در طرح گزینه اضافه کنید.</string>
     <string name="projects_attachment_remove">حذف پیوست</string>
-    <string name="projects_create_allow_public">همه بتوانند پروژه را ببینند و درباره آن نظر بدهند</string>
+    <string name="projects_create_allow_public">همه بتوانند پروژه را ببینند</string>
     <string name="projects_request_delete_title">حذف درخواست ادغام</string>
     <string name="projects_request_delete_message">آیا از حذف این درخواست ادغام مطمئن هستید؟</string>
     <string name="projects_board_delete_column_title">حذف ستون</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">پیوست کردن ممکن نشد: %1$s</string>
     <string name="projects_activity_unknown">ناشناخته</string>
+    <string name="projects_create_allow_search">همه بتوانند پروژه را جست‌وجو کنند</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Echantiyon %1$s</string>
     <string name="crm_option_delete_title">Efase opsyon</string>
     <string name="crm_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
-    <string name="crm_create_public">Pèmèt nenpòt moun wè CRM nan epi fè kòmantè sou li</string>
+    <string name="crm_create_public">Pèmèt nenpòt moun wè CRM nan</string>
     <string name="crm_board_delete_column">Efase kolòn</string>
     <string name="crm_board_delete_column_message">Èske ou sèten ou vle efase kolòn \"%1$s\" la? Sa a pa ka anile.</string>
     <string name="crm_object_delete_named">Èske ou sèten ou vle efase \"%1$s\"? Aksyon sa a pa ka anile.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Paran</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klas</string>
+    <string name="crm_create_allow_search">Pèmèt nenpòt moun chèche CRM</string>
 </resources>

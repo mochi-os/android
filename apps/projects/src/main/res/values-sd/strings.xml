@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
     <string name="projects_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
     <string name="projects_attachment_remove">اٽيچمينٽ هٽايو</string>
-    <string name="projects_create_allow_public">ڪنهن کي به پروجيڪٽ ڏسڻ ۽ ان تي تبصرو ڪرڻ جي اجازت ڏيو</string>
+    <string name="projects_create_allow_public">ڪنهن کي به پروجيڪٽ ڏسڻ جي اجازت ڏيو</string>
     <string name="projects_request_delete_title">مرج درخواست ختم ڪريو</string>
     <string name="projects_request_delete_message">ڇا توهان پڪ سان هي مرج درخواست ختم ڪرڻ چاهيو ٿا؟</string>
     <string name="projects_board_delete_column_title">ڪالم ختم ڪريو</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ڳنڍي نه سگهيا: %1$s</string>
     <string name="projects_activity_unknown">اڻڄاتل</string>
+    <string name="projects_create_allow_search">ڪنهن کي به پروجيڪٽ ڳولڻ جي اجازت ڏيو</string>
 </resources>

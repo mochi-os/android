@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
     <string name="projects_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>
     <string name="projects_attachment_remove">ඇමුණුම ඉවත් කරන්න</string>
-    <string name="projects_create_allow_public">ව්‍යාපෘතිය බැලීමට සහ එයට අදහස් දැක්වීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="projects_create_allow_public">ව්‍යාපෘතිය බැලීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
     <string name="projects_request_delete_title">ඒකාබද්ධ කිරීමේ ඉල්ලීම මකන්න</string>
     <string name="projects_request_delete_message">ඔබට මෙම ඒකාබද්ධ කිරීමේ ඉල්ලීම මැකීමට අවශ්‍ය බව විශ්වාසද?</string>
     <string name="projects_board_delete_column_title">තීරුව මකන්න</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ඇමිණීමට නොහැකි විය: %1$s</string>
     <string name="projects_activity_unknown">නොදන්නා</string>
+    <string name="projects_create_allow_search">ව්‍යාපෘතිය සොයා ගැනීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
 </resources>

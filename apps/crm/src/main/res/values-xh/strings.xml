@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Isampulu %1$s</string>
     <string name="crm_option_delete_title">Cima ukhetho</string>
     <string name="crm_option_delete_message">Uqinisekile ukuba ufuna ukucima ukhetho \"%1$s\"?</string>
-    <string name="crm_create_public">Vumela nabani na ukuba abone iCRM kwaye aphawule ngayo</string>
+    <string name="crm_create_public">Vumela nabani na ukuba abone iCRM</string>
     <string name="crm_board_delete_column">Cima ikholamu</string>
     <string name="crm_board_delete_column_message">Uqinisekile ufuna ukucima ikholamu \"%1$s\"? Oku akunakubuyiswa.</string>
     <string name="crm_object_delete_named">Uqinisekile ufuna ukucima \"%1$s\"? Esi senzo asinakubuyiswa.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Umzali</string>
     <string name="crm_export_csv_id">Isazisi</string>
     <string name="crm_export_csv_class">Iklasi</string>
+    <string name="crm_create_allow_search">Vumela nabani na ukukhangela iCRM</string>
 </resources>

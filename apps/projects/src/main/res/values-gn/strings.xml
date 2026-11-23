@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ndaikatúi oñemoheñói gueteri item peteĩchagua. Emoheñói raẽ umi item ru/sy oñeikotevẽva.</string>
     <string name="projects_create_blocked_no_options">Ndaikatúi oñemoheñói: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>
     <string name="projects_attachment_remove">Embogue adjunto</string>
-    <string name="projects_create_allow_public">Eipysyrõ opavavépe ohecha proyecto ha ohai comentario hese</string>
+    <string name="projects_create_allow_public">Eipysyrõ opavavépe ohecha proyecto</string>
     <string name="projects_request_delete_title">Hundi ñembojuaju jerure</string>
     <string name="projects_request_delete_message">Añetehápe ehundise ko ñembojuaju jerure?</string>
     <string name="projects_board_delete_column_title">Hundi columna</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ndaikatúi oñembojuaju: %1$s</string>
     <string name="projects_activity_unknown">Ojekuaa\'ỹva</string>
+    <string name="projects_create_allow_search">Eipysyrõ opavavépe oheka proyecto</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
     <string name="projects_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
     <string name="projects_attachment_remove">संलग्नक हटाउनुहोस्</string>
-    <string name="projects_create_allow_public">जोसुकैलाई परियोजना हेर्न र त्यसमा टिप्पणी गर्न अनुमति दिनुहोस्</string>
+    <string name="projects_create_allow_public">जोसुकैलाई परियोजना हेर्न अनुमति दिनुहोस्</string>
     <string name="projects_request_delete_title">मर्ज अनुरोध मेटाउनुहोस्</string>
     <string name="projects_request_delete_message">के तपाईं यो मर्ज अनुरोध मेटाउन निश्चित हुनुहुन्छ?</string>
     <string name="projects_board_delete_column_title">स्तम्भ मेटाउनुहोस्</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">एट्याच गर्न सकिएन: %1$s</string>
     <string name="projects_activity_unknown">अज्ञात</string>
+    <string name="projects_create_allow_search">जोसुकैलाई परियोजना खोज्न अनुमति दिनुहोस्</string>
 </resources>

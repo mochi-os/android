@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
     <string name="projects_create_blocked_no_options">Эҷод кардан ғайриимкон: %1$s ҳатмист, аммо имконоти интихоб надорад. Дар Тарҳ имконот илова кунед.</string>
     <string name="projects_attachment_remove">Хориҷ кардани замима</string>
-    <string name="projects_create_allow_public">Иҷозат додан, ки ҳар кас лоиҳаро бинад ва ба он шарҳ нависад</string>
+    <string name="projects_create_allow_public">Иҷозат додан, ки ҳар кас лоиҳаро бинад</string>
     <string name="projects_request_delete_title">Нест кардани дархости муттаҳидсозӣ</string>
     <string name="projects_request_delete_message">Шумо мутмаин ҳастед, ки мехоҳед ин дархости муттаҳидсозиро нест кунед?</string>
     <string name="projects_board_delete_column_title">Нест кардани сутун</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Замима карда нашуд: %1$s</string>
     <string name="projects_activity_unknown">Номаълум</string>
+    <string name="projects_create_allow_search">Иҷозат додан, ки ҳар кас лоиҳаро ҷустуҷӯ кунад</string>
 </resources>

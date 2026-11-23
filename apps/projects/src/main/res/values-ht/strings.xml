@@ -320,7 +320,7 @@
     <string name="projects_create_object_no_types">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
     <string name="projects_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>
     <string name="projects_attachment_remove">Retire pyès jwenti</string>
-    <string name="projects_create_allow_public">Pèmèt nenpòt moun wè pwojè a epi fè kòmantè sou li</string>
+    <string name="projects_create_allow_public">Pèmèt nenpòt moun wè pwojè a</string>
     <string name="projects_request_delete_title">Efase demand merge</string>
     <string name="projects_request_delete_message">Èske ou sèten ou vle efase demand merge sa a?</string>
     <string name="projects_board_delete_column_title">Efase kolòn</string>
@@ -331,4 +331,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Pa t kapab tache: %1$s</string>
     <string name="projects_activity_unknown">Enkoni</string>
+    <string name="projects_create_allow_search">Pèmèt nenpòt moun chèche pwojè</string>
 </resources>

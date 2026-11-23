@@ -322,7 +322,7 @@
     <string name="projects_create_object_no_types">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
     <string name="projects_create_blocked_no_options">Nevar izveidot: %1$s ir obligāts, taču tam nav izvēles iespēju. Pievienojiet opcijas Dizainā.</string>
     <string name="projects_attachment_remove">Noņemt pielikumu</string>
-    <string name="projects_create_allow_public">Ļaut jebkuram skatīt un komentēt projektu</string>
+    <string name="projects_create_allow_public">Ļaut jebkuram skatīt projektu</string>
     <string name="projects_request_delete_title">Dzēst sapludināšanas pieprasījumu</string>
     <string name="projects_request_delete_message">Vai tiešām vēlies dzēst šo sapludināšanas pieprasījumu?</string>
     <string name="projects_board_delete_column_title">Dzēst kolonnu</string>
@@ -335,4 +335,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Neizdevās pievienot: %1$s</string>
     <string name="projects_activity_unknown">Nezināms</string>
+    <string name="projects_create_allow_search">Ļaut jebkuram meklēt projektu</string>
 </resources>

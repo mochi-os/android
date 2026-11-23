@@ -6,16 +6,13 @@
 package org.mochios.projects.ui.board
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -26,7 +23,6 @@ import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.foundation.border
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -61,6 +57,7 @@ import org.mochios.android.ui.components.dnd.DropOrientation
 import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.android.ui.components.FieldChoice
 import org.mochios.android.ui.components.FieldValue
 import org.mochios.android.ui.components.fieldDisplay
@@ -153,22 +150,17 @@ fun BoardCard(
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                 onDrop = { sourceId, edge ->
-                    val rank = viewModel.dropPosition(
-                        field = columnFieldId,
-                        value = targetColumnId,
-                        target = obj.id,
-                        moved = sourceId,
-                        below = edge == DragEdge.Bottom,
-                    )
+                    // Directly below or above this card, as the board shows it.
                     // rowField/rowValue carry the lane. Without them the server
                     // leaves the row value untouched (projects.star only writes
                     // it under `if row_field:` on the decoded `row`), so a cross-lane drag was a
                     // no-op and the refresh put the card back where it started.
-                    viewModel.moveObject(
+                    viewModel.moveBeside(
                         objectId = sourceId,
+                        target = obj.id,
+                        below = edge == DragEdge.Bottom,
                         field = columnFieldId,
                         value = targetColumnId,
-                        rank = rank,
                         rowField = rowFieldId,
                         rowValue = if (rowFieldId != null) targetRowId else null,
                     )
@@ -364,20 +356,11 @@ private fun countDeepChildren(parentId: String, childrenByParent: Map<String, Li
 }
 
 /**
- * 1-based server position for a dragged card. [columnObjects] must be the
- * column as the server ranks it ([ProjectViewModel.rankedColumn]): every
- * object holding the value, children and other classes included, in rank
- * order, never one swimlane or the board's sort. The source is excluded
- * because the server ranks without it.
+ * The drag state the board's cards share. A card takes a drop anywhere on
+ * it, above or below by the half the pointer is in, as the web decides by
+ * the card's midpoint: a card takes no drop "on" it, so a middle zone for
+ * one let a release there fall through to the column, which sent the card
+ * to the column's end.
  */
-internal fun dropRank(
-    columnObjects: List<String>,
-    targetId: String,
-    sourceId: String,
-    below: Boolean,
-): Int {
-    val others = columnObjects.filter { it != sourceId }
-    val index = others.indexOf(targetId)
-    if (index < 0) return others.size + 1
-    return if (below) index + 2 else index + 1
-}
+@Composable
+internal fun rememberCardDragState(): DragState = rememberDragState(onZoneFraction = 0f)

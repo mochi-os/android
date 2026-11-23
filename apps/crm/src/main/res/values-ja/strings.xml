@@ -275,7 +275,7 @@
     <string name="crm_design_sample">サンプル %1$s</string>
     <string name="crm_option_delete_title">オプションを削除</string>
     <string name="crm_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>
-    <string name="crm_create_public">誰でも CRM を閲覧してコメントできるようにする</string>
+    <string name="crm_create_public">誰でも CRM を閲覧できるようにする</string>
     <string name="crm_board_delete_column">カラムを削除</string>
     <string name="crm_board_delete_column_message">「%1$s」カラムを削除しますか？この操作は取り消せません。</string>
     <string name="crm_object_delete_named">「%1$s」を削除しますか？この操作は取り消せません。</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">親</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">クラス</string>
+    <string name="crm_create_allow_search">誰でも CRM を検索できるようにする</string>
 </resources>

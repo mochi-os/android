@@ -35,7 +35,8 @@ import org.robolectric.annotation.Config
 
 /**
  * The CRM list says when an unsubscribe or a pull fails over it, and a new
- * CRM starts private, its switch saying what public grants.
+ * CRM starts unlisted and for its members, one switch listing it and another
+ * letting anyone view it.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
@@ -90,12 +91,19 @@ class CrmListTest {
         assertEquals(2, model.uiState.value.crm.size)
     }
 
-    private fun create(public: Boolean): String {
+    // The form's two switches in the order it shows them: the listing, then
+    // who may view. A row's label and switch are not one node, so the label
+    // cannot pick its switch.
+    private fun listing() = rule.onAllNodes(isToggleable())[0]
+    private fun viewing() = rule.onAllNodes(isToggleable())[1]
+
+    private fun create(search: Boolean, view: Boolean): String {
         rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = CreateCrmViewModel(server.repository())) }
         rule.waitForIdle()
-        assertTrue(rule.onAllNodesWithText(context.getString(R.string.crm_create_public)).fetchSemanticsNodes().isNotEmpty())
-        rule.onNode(isToggleable()).assertIsOff()
-        if (public) rule.onNode(isToggleable()).performClick()
+        listing().assertIsOff()
+        viewing().assertIsOff()
+        if (search) listing().performClick()
+        if (view) viewing().performClick()
         rule.onNode(hasSetTextAction()).performTextReplacement("Leads")
         rule.onNodeWithText(context.getString(R.string.crm_create_action)).performClick()
         until("the create") { server.of("-/create").isNotEmpty() }
@@ -103,14 +111,33 @@ class CrmListTest {
     }
 
     @Test
-    fun `a new CRM is private unless the switch is turned on`() {
-        val body = create(public = false)
+    fun `a new CRM is unlisted and for its members unless a switch is turned on`() {
+        val body = create(search = false, view = false)
         assertTrue(body, body.contains("privacy=private"))
+        assertTrue("THE POINT: members only: $body", body.contains("readable=false"))
     }
 
     @Test
-    fun `the switch turned on makes it public`() {
-        val body = create(public = true)
+    fun `the search switch lists it and lets no one in`() {
+        val body = create(search = true, view = false)
         assertTrue(body, body.contains("privacy=public"))
+        assertTrue("THE POINT: listing grants nothing: $body", body.contains("readable=false"))
+    }
+
+    @Test
+    fun `the view switch lets anyone view it, unlisted`() {
+        val body = create(search = false, view = true)
+        assertTrue(body, body.contains("privacy=private"))
+        assertTrue("THE POINT: anyone may view: $body", body.contains("readable=true"))
+    }
+
+    @Test
+    fun `the switches say what they do`() {
+        rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = CreateCrmViewModel(server.repository())) }
+        rule.waitForIdle()
+        assertEquals("Allow anyone to search for CRM", context.getString(R.string.crm_create_allow_search))
+        assertEquals("Allow anyone to view CRM", context.getString(R.string.crm_create_public))
+        assertTrue(rule.onAllNodesWithText(context.getString(R.string.crm_create_allow_search)).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(rule.onAllNodesWithText(context.getString(R.string.crm_create_public)).fetchSemanticsNodes().isNotEmpty())
     }
 }

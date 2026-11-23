@@ -275,7 +275,7 @@
     <string name="crm_design_sample">નમૂનો %1$s</string>
     <string name="crm_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="crm_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>
-    <string name="crm_create_public">કોઈને પણ CRM જોવાની અને તેના પર ટિપ્પણી કરવાની મંજૂરી આપો</string>
+    <string name="crm_create_public">કોઈને પણ CRM જોવાની મંજૂરી આપો</string>
     <string name="crm_board_delete_column">કૉલમ કાઢી નાખો</string>
     <string name="crm_board_delete_column_message">શું તમે ખરેખર \"%1$s\" કૉલમ કાઢી નાખવા માંગો છો? આ પૂર્વવત્ કરી શકાતું નથી.</string>
     <string name="crm_object_delete_named">શું તમે ખરેખર \"%1$s\" કાઢી નાખવા માંગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">પેરન્ટ</string>
     <string name="crm_export_csv_id">આઈડી</string>
     <string name="crm_export_csv_class">વર્ગ</string>
+    <string name="crm_create_allow_search">કોઈને પણ CRM શોધવાની મંજૂરી આપો</string>
 </resources>

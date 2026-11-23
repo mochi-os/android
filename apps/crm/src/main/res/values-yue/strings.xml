@@ -279,7 +279,8 @@
     <string name="crm_create_blocked_no_parents">而家仲未可以建立任何項目類型。請先建立所需嘅上層項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
     <string name="crm_design_sample">範例 %1$s</string>
-    <string name="crm_create_public">允許任何人睇 CRM 同留言</string>
+    <string name="crm_create_public">允許任何人睇 CRM</string>
+    <string name="crm_create_allow_search">允許任何人搜尋 CRM</string>
     <string name="crm_object_delete_named">你確定要刪除「%1$s」？呢個動作冇得還原。</string>
     <string name="crm_board_delete_column">刪除欄</string>
     <string name="crm_board_delete_column_message">你確定要刪除「%1$s」欄？呢個冇得還原。</string>

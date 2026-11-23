@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Nümunə %1$s</string>
     <string name="crm_option_delete_title">Variantı sil</string>
     <string name="crm_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
-    <string name="crm_create_public">Hər kəsə CRM-ə baxmağa və şərh yazmağa icazə ver</string>
+    <string name="crm_create_public">Hər kəsə CRM-ə baxmağa icazə ver</string>
     <string name="crm_board_delete_column">Sütunu sil</string>
     <string name="crm_board_delete_column_message">\"%1$s\" sütununu silmək istədiyinizə əminsiniz? Bu geri qaytarıla bilməz.</string>
     <string name="crm_object_delete_named">\"%1$s\" silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Əsas</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Sinif</string>
+    <string name="crm_create_allow_search">Hər kəsə CRM axtarmağa icazə ver</string>
 </resources>

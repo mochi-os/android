@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
     <string name="projects_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>
     <string name="projects_attachment_remove">Kendu eranskina</string>
-    <string name="projects_create_allow_public">Baimendu edonori proiektua ikustea eta iruzkintzea</string>
+    <string name="projects_create_allow_public">Baimendu edonori proiektua ikustea</string>
     <string name="projects_request_delete_title">Ezabatu fusio eskaera</string>
     <string name="projects_request_delete_message">Ziur al zaude fusio eskaera hau ezabatu nahi duzula?</string>
     <string name="projects_board_delete_column_title">Ezabatu zutabea</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Ezin izan da erantsi: %1$s</string>
     <string name="projects_activity_unknown">Ezezaguna</string>
+    <string name="projects_create_allow_search">Baimendu edonori proiektua bilatzea</string>
 </resources>

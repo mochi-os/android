@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Үлгү %1$s</string>
     <string name="crm_option_delete_title">Тандоону жок кылуу</string>
     <string name="crm_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
-    <string name="crm_create_public">Ар кимге CRMди көрүүгө жана ага комментарий жазууга уруксат берүү</string>
+    <string name="crm_create_public">Ар кимге CRMди көрүүгө уруксат берүү</string>
     <string name="crm_board_delete_column">Тилкени жок кылуу</string>
     <string name="crm_board_delete_column_message">\"%1$s\" тилкесин жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="crm_object_delete_named">\"%1$s\" жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Ата-эне</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Класс</string>
+    <string name="crm_create_allow_search">CRMди издөөгө ар кимге уруксат берүү</string>
 </resources>

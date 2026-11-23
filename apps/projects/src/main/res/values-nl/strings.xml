@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan.</string>
     <string name="projects_create_blocked_no_options">Kan niet maken: %1$s is vereist maar heeft geen opties om uit te kiezen. Voeg opties toe in Ontwerp.</string>
     <string name="projects_attachment_remove">Bijlage verwijderen</string>
-    <string name="projects_create_allow_public">Iedereen toestaan het project te bekijken en erop te reageren</string>
+    <string name="projects_create_allow_public">Iedereen toestaan het project te bekijken</string>
     <string name="projects_request_delete_title">Merge request verwijderen</string>
     <string name="projects_request_delete_message">Weet je zeker dat je deze merge request wilt verwijderen?</string>
     <string name="projects_board_delete_column_title">Kolom verwijderen</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Bijvoegen mislukt: %1$s</string>
     <string name="projects_activity_unknown">Onbekend</string>
+    <string name="projects_create_allow_search">Iedereen toestaan te zoeken naar project</string>
 </resources>

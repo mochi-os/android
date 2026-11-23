@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
     <string name="projects_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
     <string name="projects_attachment_remove">ضمیمه لرې کړئ</string>
-    <string name="projects_create_allow_public">هر چا ته اجازه ورکړئ چې پروژه وګوري او پر هغې تبصره وکړي</string>
+    <string name="projects_create_allow_public">هر چا ته اجازه ورکړئ چې پروژه وګوري</string>
     <string name="projects_request_delete_title">د یوځای کولو غوښتنه ړنګه کړئ</string>
     <string name="projects_request_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا د یوځای کولو غوښتنه ړنګه کړئ؟</string>
     <string name="projects_board_delete_column_title">کالم ړنګ کړئ</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ضمیمه کول ونشول: %1$s</string>
     <string name="projects_activity_unknown">نامعلوم</string>
+    <string name="projects_create_allow_search">هر چا ته اجازه ورکړئ چې د پروژې لټون وکړي</string>
 </resources>

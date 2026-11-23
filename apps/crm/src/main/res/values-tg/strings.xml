@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Намуна %1$s</string>
     <string name="crm_option_delete_title">Нест кардани имкон</string>
     <string name="crm_option_delete_message">Шумо мутмаин ҳастед, ки мехоҳед имкони \"%1$s\"-ро нест кунед?</string>
-    <string name="crm_create_public">Иҷозат додан, ки ҳар кас CRM-ро бинад ва ба он шарҳ нависад</string>
+    <string name="crm_create_public">Иҷозат додан, ки ҳар кас CRM-ро бинад</string>
     <string name="crm_board_delete_column">Нест кардани сутун</string>
     <string name="crm_board_delete_column_message">Шумо мутмаин ҳастед, ки мехоҳед сутуни \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
     <string name="crm_object_delete_named">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Волидайн</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Синф</string>
+    <string name="crm_create_allow_search">Иҷозат додан, ки ҳар кас CRM-ро ҷустуҷӯ кунад</string>
 </resources>

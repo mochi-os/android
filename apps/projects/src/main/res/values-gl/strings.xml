@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Aínda non se poden crear tipos de elementos. Crea primeiro os elementos pai requiridos.</string>
     <string name="projects_create_blocked_no_options">Non se pode crear: %1$s é obrigatorio pero non ten opcións para escoller. Engade opcións en Deseño.</string>
     <string name="projects_attachment_remove">Eliminar anexo</string>
-    <string name="projects_create_allow_public">Permitir que calquera vexa e comente o proxecto</string>
+    <string name="projects_create_allow_public">Permitir que calquera vexa o proxecto</string>
     <string name="projects_request_delete_title">Eliminar solicitude de fusión</string>
     <string name="projects_request_delete_message">Seguro que queres eliminar esta solicitude de fusión?</string>
     <string name="projects_board_delete_column_title">Eliminar columna</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Non se puido anexar: %1$s</string>
     <string name="projects_activity_unknown">Descoñecido</string>
+    <string name="projects_create_allow_search">Permitir que calquera busque o proxecto</string>
 </resources>

@@ -277,7 +277,7 @@
     <string name="crm_design_sample">Contoh %1$s</string>
     <string name="crm_option_delete_title">Padam pilihan</string>
     <string name="crm_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
-    <string name="crm_create_public">Benarkan sesiapa sahaja melihat dan mengulas CRM</string>
+    <string name="crm_create_public">Benarkan sesiapa sahaja melihat CRM</string>
     <string name="crm_board_delete_column">Padam lajur</string>
     <string name="crm_board_delete_column_message">Adakah anda pasti mahu memadam lajur \"%1$s\"? Ini tidak boleh dibatalkan.</string>
     <string name="crm_object_delete_named">Adakah anda pasti mahu memadam \"%1$s\"? Tindakan ini tidak boleh dibatalkan.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Induk</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Kelas</string>
+    <string name="crm_create_allow_search">Benarkan sesiapa sahaja mencari CRM</string>
 </resources>

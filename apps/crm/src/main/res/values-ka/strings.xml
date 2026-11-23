@@ -275,7 +275,7 @@
     <string name="crm_design_sample">ნიმუში %1$s</string>
     <string name="crm_option_delete_title">ვარიანტის წაშლა</string>
     <string name="crm_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
-    <string name="crm_create_public">ნებისმიერს CRM-ის ნახვისა და კომენტირების ნება დართე</string>
+    <string name="crm_create_public">ნებისმიერს CRM-ის ნახვის ნება დართე</string>
     <string name="crm_board_delete_column">სვეტის წაშლა</string>
     <string name="crm_board_delete_column_message">დარწმუნებული ხართ, რომ გსურთ „%1$s“ სვეტის წაშლა? ეს შეუქცევადია.</string>
     <string name="crm_object_delete_named">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის წაშლა? მოქმედება შეუქცევადია.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">მშობელი</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">კლასი</string>
+    <string name="crm_create_allow_search">ნებისმიერს CRM-ის ძიების ნება დართე</string>
 </resources>

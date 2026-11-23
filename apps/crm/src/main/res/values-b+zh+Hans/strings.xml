@@ -275,7 +275,7 @@
     <string name="crm_design_sample">示例 %1$s</string>
     <string name="crm_option_delete_title">删除选项</string>
     <string name="crm_option_delete_message">确定要删除选项 \"%1$s\" 吗?</string>
-    <string name="crm_create_public">允许任何人查看和评论 CRM</string>
+    <string name="crm_create_public">允许任何人查看 CRM</string>
     <string name="crm_board_delete_column">删除列</string>
     <string name="crm_board_delete_column_message">确定要删除列 \"%1$s\" 吗?此操作无法撤销。</string>
     <string name="crm_object_delete_named">确定要删除 \"%1$s\" 吗?此操作无法撤销。</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">父级</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">类</string>
+    <string name="crm_create_allow_search">允许任何人搜索 CRM</string>
 </resources>

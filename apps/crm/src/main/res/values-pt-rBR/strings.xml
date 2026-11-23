@@ -243,7 +243,7 @@
     <string name="crm_export_csv">Exportar CSV</string>
     <string name="crm_option_delete_title">Excluir opção</string>
     <string name="crm_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
-    <string name="crm_create_public">Permitir que qualquer pessoa visualize e comente o CRM</string>
+    <string name="crm_create_public">Permitir que qualquer pessoa visualize o CRM</string>
     <string name="crm_board_delete_column">Excluir coluna</string>
     <string name="crm_board_delete_column_message">Tem certeza de que deseja excluir a coluna \"%1$s\"? Isto não pode ser desfeito.</string>
     <string name="crm_object_delete_named">Tem certeza de que deseja excluir \"%1$s\"? Esta ação não pode ser desfeita.</string>
@@ -254,4 +254,5 @@
     <string name="crm_export_csv_parent">Pai</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Classe</string>
+    <string name="crm_create_allow_search">Permitir que qualquer pessoa pesquise o CRM</string>
 </resources>

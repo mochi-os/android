@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>
     <string name="projects_create_blocked_no_options">Kan inte skapa: %1$s krävs men har inga alternativ att välja mellan. Lägg till alternativ i Design.</string>
     <string name="projects_attachment_remove">Ta bort bilaga</string>
-    <string name="projects_create_allow_public">Tillåt alla att visa och kommentera projektet</string>
+    <string name="projects_create_allow_public">Tillåt alla att visa projektet</string>
     <string name="projects_request_delete_title">Ta bort sammanslagningsförfrågan</string>
     <string name="projects_request_delete_message">Är du säker på att du vill ta bort denna sammanslagningsförfrågan?</string>
     <string name="projects_board_delete_column_title">Ta bort kolumn</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Kunde inte bifoga: %1$s</string>
     <string name="projects_activity_unknown">Okänd</string>
+    <string name="projects_create_allow_search">Tillåt alla att söka efter projekt</string>
 </resources>

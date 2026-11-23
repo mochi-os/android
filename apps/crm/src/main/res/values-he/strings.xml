@@ -275,7 +275,7 @@
     <string name="crm_design_sample">דוגמה %1$s</string>
     <string name="crm_option_delete_title">מחק אפשרות</string>
     <string name="crm_option_delete_message">האם אתה בטוח שברצונך למחוק את האפשרות \"%1$s\"?</string>
-    <string name="crm_create_public">אפשר לכולם לצפות ב-CRM ולהגיב עליו</string>
+    <string name="crm_create_public">אפשר לכולם לצפות ב-CRM</string>
     <string name="crm_board_delete_column">מחק עמודה</string>
     <string name="crm_board_delete_column_message">האם אתה בטוח שברצונך למחוק את העמודה \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
     <string name="crm_object_delete_named">האם אתה בטוח שברצונך למחוק את \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
@@ -292,4 +292,5 @@
     <string name="crm_export_csv_parent">אב</string>
     <string name="crm_export_csv_id">מזהה</string>
     <string name="crm_export_csv_class">מחלקה</string>
+    <string name="crm_create_allow_search">אפשר לכולם לחפש את ה-CRM</string>
 </resources>

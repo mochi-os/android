@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Δείγμα %1$s</string>
     <string name="crm_option_delete_title">Διαγραφή επιλογής</string>
     <string name="crm_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
-    <string name="crm_create_public">Να επιτρέπεται σε όλους η προβολή του CRM και ο σχολιασμός του</string>
+    <string name="crm_create_public">Να επιτρέπεται σε όλους η προβολή του CRM</string>
     <string name="crm_board_delete_column">Διαγραφή στήλης</string>
     <string name="crm_board_delete_column_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε τη στήλη \"%1$s\"; Αυτό δεν μπορεί να αναιρεθεί.</string>
     <string name="crm_object_delete_named">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Γονικό</string>
     <string name="crm_export_csv_id">Αναγνωριστικό</string>
     <string name="crm_export_csv_class">Κλάση</string>
+    <string name="crm_create_allow_search">Να επιτρέπεται σε όλους η αναζήτηση CRM</string>
 </resources>

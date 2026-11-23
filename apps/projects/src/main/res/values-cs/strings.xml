@@ -322,7 +322,7 @@
     <string name="projects_create_object_no_types">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
     <string name="projects_create_blocked_no_options">Nelze vytvořit: %1$s je povinné, ale nemá žádné možnosti k výběru. Přidejte možnosti v Návrhu.</string>
     <string name="projects_attachment_remove">Odebrat přílohu</string>
-    <string name="projects_create_allow_public">Povolit komukoli zobrazit projekt a komentovat ho</string>
+    <string name="projects_create_allow_public">Povolit komukoli zobrazit projekt</string>
     <string name="projects_request_delete_title">Smazat merge request</string>
     <string name="projects_request_delete_message">Opravdu chcete smazat tento merge request?</string>
     <string name="projects_board_delete_column_title">Smazat sloupec</string>
@@ -335,4 +335,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nepodařilo se připojit: %1$s</string>
     <string name="projects_activity_unknown">Neznámý</string>
+    <string name="projects_create_allow_search">Povolit komukoli vyhledávat projekt</string>
 </resources>

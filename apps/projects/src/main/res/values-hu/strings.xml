@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
     <string name="projects_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
     <string name="projects_attachment_remove">Melléklet eltávolítása</string>
-    <string name="projects_create_allow_public">Bárki megtekintheti és kommentálhatja a projektet</string>
+    <string name="projects_create_allow_public">Bárki megtekintheti a projektet</string>
     <string name="projects_request_delete_title">Egyesítési kérés törlése</string>
     <string name="projects_request_delete_message">Biztosan törli ezt az egyesítési kérést?</string>
     <string name="projects_board_delete_column_title">Oszlop törlése</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Nem sikerült csatolni: %1$s</string>
     <string name="projects_activity_unknown">Ismeretlen</string>
+    <string name="projects_create_allow_search">Bárki kereshet a projektre</string>
 </resources>

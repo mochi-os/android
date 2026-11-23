@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Uñacht\'äwi %1$s</string>
     <string name="crm_option_delete_title">Opción chhaqtayaña</string>
     <string name="crm_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>
-    <string name="crm_create_public">Khitirus CRM uñakipañapataki ukat comentañapataki iyawsaña</string>
+    <string name="crm_create_public">Khitirus CRM uñakipañapataki iyawsaña</string>
     <string name="crm_board_delete_column">Columna chhaqtayaña</string>
     <string name="crm_board_delete_column_message">Chiqpach \"%1$s\" columna chhaqtayaña munta? Akax janiw kutt\'ayañjamäkiti.</string>
     <string name="crm_object_delete_named">Chiqpach \"%1$s\" chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Awki</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Clase</string>
+    <string name="crm_create_allow_search">Khitirus CRM thaqhañ iyawsaña</string>
 </resources>

@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Exempel %1$s</string>
     <string name="crm_option_delete_title">Ta bort alternativ</string>
     <string name="crm_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
-    <string name="crm_create_public">Tillåt alla att visa och kommentera CRM</string>
+    <string name="crm_create_public">Tillåt alla att visa CRM</string>
     <string name="crm_board_delete_column">Ta bort kolumn</string>
     <string name="crm_board_delete_column_message">Är du säker på att du vill ta bort kolumnen \"%1$s\"? Detta kan inte ångras.</string>
     <string name="crm_object_delete_named">Är du säker på att du vill ta bort \"%1$s\"? Denna åtgärd kan inte ångras.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">Överordnad</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Klass</string>
+    <string name="crm_create_allow_search">Tillåt alla att söka efter CRM</string>
 </resources>

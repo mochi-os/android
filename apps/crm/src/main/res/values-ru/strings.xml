@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Образец %1$s</string>
     <string name="crm_option_delete_title">Удалить вариант</string>
     <string name="crm_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>
-    <string name="crm_create_public">Разрешить всем просматривать и комментировать CRM</string>
+    <string name="crm_create_public">Разрешить всем просматривать CRM</string>
     <string name="crm_board_delete_column">Удалить колонку</string>
     <string name="crm_board_delete_column_message">Вы уверены, что хотите удалить колонку «%1$s»? Это необратимо.</string>
     <string name="crm_object_delete_named">Вы уверены, что хотите удалить «%1$s»? Это действие необратимо.</string>
@@ -294,4 +294,5 @@
     <string name="crm_export_csv_parent">Родитель</string>
     <string name="crm_export_csv_id">Идентификатор</string>
     <string name="crm_export_csv_class">Класс</string>
+    <string name="crm_create_allow_search">Разрешить всем искать CRM</string>
 </resources>

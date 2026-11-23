@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
     <string name="projects_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>
     <string name="projects_attachment_remove">Eemalda manus</string>
-    <string name="projects_create_allow_public">Luba kõigil projekti vaadata ja kommenteerida</string>
+    <string name="projects_create_allow_public">Luba kõigil projekti vaadata</string>
     <string name="projects_request_delete_title">Kustuta liitmistaotlus</string>
     <string name="projects_request_delete_message">Kas oled kindel, et soovid selle liitmistaotluse kustutada?</string>
     <string name="projects_board_delete_column_title">Kustuta veerg</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Manustamine ebaõnnestus: %1$s</string>
     <string name="projects_activity_unknown">Tundmatu</string>
+    <string name="projects_create_allow_search">Luba kõigil otsida projekti</string>
 </resources>

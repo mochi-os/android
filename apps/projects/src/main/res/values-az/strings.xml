@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
     <string name="projects_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
     <string name="projects_attachment_remove">Qoşmanı sil</string>
-    <string name="projects_create_allow_public">Hər kəsə layihəyə baxmağa və şərh yazmağa icazə ver</string>
+    <string name="projects_create_allow_public">Hər kəsə layihəyə baxmağa icazə ver</string>
     <string name="projects_request_delete_title">Birləşmə sorğusunu sil</string>
     <string name="projects_request_delete_message">Bu birləşmə sorğusunu silmək istədiyinizə əminsiniz?</string>
     <string name="projects_board_delete_column_title">Sütunu sil</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Qoşmaq mümkün olmadı: %1$s</string>
     <string name="projects_activity_unknown">Naməlum</string>
+    <string name="projects_create_allow_search">Hər kəsə layihə axtarmağa icazə ver</string>
 </resources>

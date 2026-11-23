@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
     <string name="projects_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
     <string name="projects_attachment_remove">Xóa tệp đính kèm</string>
-    <string name="projects_create_allow_public">Cho phép mọi người xem và bình luận dự án</string>
+    <string name="projects_create_allow_public">Cho phép mọi người xem dự án</string>
     <string name="projects_request_delete_title">Xóa yêu cầu hợp nhất</string>
     <string name="projects_request_delete_message">Bạn có chắc muốn xóa yêu cầu hợp nhất này?</string>
     <string name="projects_board_delete_column_title">Xóa cột</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Không thể đính kèm: %1$s</string>
     <string name="projects_activity_unknown">Không rõ</string>
+    <string name="projects_create_allow_search">Cho phép mọi người tìm kiếm dự án</string>
 </resources>

@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
     <string name="projects_create_blocked_no_options">Ayikwazi ukudala: %1$s iyadingeka kodwa ayinazo izinketho. Engeza izinketho kuMklamo.</string>
     <string name="projects_attachment_remove">Khipha okunamathiselwe</string>
-    <string name="projects_create_allow_public">Vumela noma ngubani ukuthi abuke iprojekthi futhi aphawule ngayo</string>
+    <string name="projects_create_allow_public">Vumela noma ngubani ukuthi abuke iprojekthi</string>
     <string name="projects_request_delete_title">Susa isicelo sokuhlanganisa</string>
     <string name="projects_request_delete_message">Uqinisekile ufuna ukususa lesi sicelo sokuhlanganisa?</string>
     <string name="projects_board_delete_column_title">Susa ikholomu</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Akukwazekanga ukunamathisela: %1$s</string>
     <string name="projects_activity_unknown">Akwaziwa</string>
+    <string name="projects_create_allow_search">Vumela noma ngubani ukuthi asesheshe iprojekthi</string>
 </resources>

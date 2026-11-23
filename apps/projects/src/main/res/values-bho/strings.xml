@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
     <string name="projects_create_blocked_no_options">बनावल ना जा सकल: %1$s जरूरी बा बाकिर एकरा में चुने खातिर कवनो विकल्प नइखे। डिज़ाइन में विकल्प जोड़ीं।</string>
     <string name="projects_attachment_remove">संलग्नक हटाईं</string>
-    <string name="projects_create_allow_public">केहू के परियोजना देखे आ ओपर टिप्पणी करे के अनुमति दीं</string>
+    <string name="projects_create_allow_public">केहू के परियोजना देखे के अनुमति दीं</string>
     <string name="projects_request_delete_title">मर्ज अनुरोध मेटाईं</string>
     <string name="projects_request_delete_message">का रउआ एह मर्ज अनुरोध के मेटावे चाहत बानी?</string>
     <string name="projects_board_delete_column_title">कॉलम मेटाईं</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">संलग्न ना हो सकल: %1$s</string>
     <string name="projects_activity_unknown">अनजान</string>
+    <string name="projects_create_allow_search">केहू के परियोजना खोजे के अनुमति दीं</string>
 </resources>

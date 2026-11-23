@@ -30,6 +30,7 @@ import org.mochios.crm.api.CreateObjectRequest
 import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.api.HierarchyRequest
 import org.mochios.crm.api.MoveObjectRequest
+import org.mochios.crm.api.MovedRank
 import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
 import org.mochios.crm.api.UpdateClassRequest
@@ -141,9 +142,10 @@ class CrmsRepository @Inject constructor(
         name: String,
         description: String? = null,
         privacy: String = "private",
+        readable: Boolean = false,
         template: String? = null
     ): Crm {
-        val r = api.createCrm(name, description, privacy, template).unwrap()
+        val r = api.createCrm(name, description, privacy, readable.toString(), template).unwrap()
         // Prefer the nested crm when the backend sends one; otherwise build it
         // from the flat id and fingerprint. Only the identity comes back here —
         // callers reload the list for the rest.
@@ -285,27 +287,32 @@ class CrmsRepository @Inject constructor(
         api.deleteObject(crmId, objectId).unwrap()
     }
 
+    /** Moves an object and answers every key the move wrote. */
     suspend fun moveObject(
         crmId: String,
         objectId: String,
         field: String? = null,
         value: String? = null,
-        rank: Int? = null,
+        after: String? = null,
+        before: String? = null,
         rowField: String? = null,
         rowValue: String? = null,
-        scopeParent: String? = null,
-    ) {
-        api.moveObject(
+        parent: String? = null,
+        clear: Boolean = false,
+    ): List<MovedRank> {
+        return api.moveObject(
             crmId,
             objectId,
             MoveObjectRequest(
                 field = field,
                 value = value,
-                rank = rank,
+                after = after,
+                before = if (after == null) before else null,
                 row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
-                scope = scopeParent,
+                parent = parent,
+                clear = "true".takeIf { clear },
             )
-        ).unwrap()
+        ).unwrap().ranks.orEmpty()
     }
 
     suspend fun setValue(crmId: String, objectId: String, fieldId: String, value: String) {

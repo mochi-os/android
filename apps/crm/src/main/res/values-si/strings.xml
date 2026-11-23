@@ -275,7 +275,7 @@
     <string name="crm_design_sample">නියැදිය %1$s</string>
     <string name="crm_option_delete_title">විකල්පය මකන්න</string>
     <string name="crm_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
-    <string name="crm_create_public">CRM බැලීමට සහ එයට අදහස් දැක්වීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="crm_create_public">CRM බැලීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
     <string name="crm_board_delete_column">තීරුව මකන්න</string>
     <string name="crm_board_delete_column_message">ඔබට \"%1$s\" තීරුව මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය අහෝසි කළ නොහැක.</string>
     <string name="crm_object_delete_named">ඔබට \"%1$s\" මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">මව්</string>
     <string name="crm_export_csv_id">හැඳුනුම</string>
     <string name="crm_export_csv_class">පංතිය</string>
+    <string name="crm_create_allow_search">CRM සොයා ගැනීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
 </resources>

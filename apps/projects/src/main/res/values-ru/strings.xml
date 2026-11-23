@@ -323,7 +323,7 @@
     <string name="projects_create_object_no_types">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
     <string name="projects_create_blocked_no_options">Не удалось создать: %1$s обязателен, но не имеет вариантов для выбора. Добавьте варианты в Дизайне.</string>
     <string name="projects_attachment_remove">Удалить вложение</string>
-    <string name="projects_create_allow_public">Разрешить всем просматривать и комментировать проект</string>
+    <string name="projects_create_allow_public">Разрешить всем просматривать проект</string>
     <string name="projects_request_delete_title">Удалить запрос на объединение</string>
     <string name="projects_request_delete_message">Вы уверены, что хотите удалить этот запрос на объединение?</string>
     <string name="projects_board_delete_column_title">Удалить колонку</string>
@@ -337,4 +337,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Не удалось прикрепить: %1$s</string>
     <string name="projects_activity_unknown">Неизвестно</string>
+    <string name="projects_create_allow_search">Разрешить всем искать проект</string>
 </resources>

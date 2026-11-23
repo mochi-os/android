@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
     <string name="projects_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
     <string name="projects_attachment_remove">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
-    <string name="projects_create_allow_public">ਕਿਸੇ ਨੂੰ ਵੀ ਪ੍ਰੋਜੈਕਟ ਵੇਖਣ ਅਤੇ ਉਸ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="projects_create_allow_public">ਕਿਸੇ ਨੂੰ ਵੀ ਪ੍ਰੋਜੈਕਟ ਵੇਖਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="projects_request_delete_title">ਮਰਜ ਬੇਨਤੀ ਮਿਟਾਓ</string>
     <string name="projects_request_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਹ ਮਰਜ ਬੇਨਤੀ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="projects_board_delete_column_title">ਕਾਲਮ ਮਿਟਾਓ</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ਨੱਥੀ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ: %1$s</string>
     <string name="projects_activity_unknown">ਅਣਜਾਣ</string>
+    <string name="projects_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਪ੍ਰੋਜੈਕਟ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
 </resources>

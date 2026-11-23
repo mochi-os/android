@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Узор %1$s</string>
     <string name="crm_option_delete_title">Выдаліць опцыю</string>
     <string name="crm_option_delete_message">Вы ўпэўнены, што хочаце выдаліць опцыю \"%1$s\"?</string>
-    <string name="crm_create_public">Дазволіць усім праглядаць і каментаваць CRM</string>
+    <string name="crm_create_public">Дазволіць усім праглядаць CRM</string>
     <string name="crm_board_delete_column">Выдаліць слупок</string>
     <string name="crm_board_delete_column_message">Вы ўпэўнены, што хочаце выдаліць слупок \"%1$s\"? Гэта нельга адмяніць.</string>
     <string name="crm_object_delete_named">Вы ўпэўнены, што хочаце выдаліць \"%1$s\"? Гэтае дзеянне нельга адмяніць.</string>
@@ -294,4 +294,5 @@
     <string name="crm_export_csv_parent">Бацькоўскі</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Клас</string>
+    <string name="crm_create_allow_search">Дазволіць усім шукаць CRM</string>
 </resources>

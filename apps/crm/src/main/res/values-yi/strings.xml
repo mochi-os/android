@@ -275,7 +275,7 @@
     <string name="crm_design_sample">מוסטער %1$s</string>
     <string name="crm_option_delete_title">אויסמעקן אָפּציע</string>
     <string name="crm_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
-    <string name="crm_create_public">דערלויבן עמעצן צו זען דעם CRM און קאָמענטירן אויף אים</string>
+    <string name="crm_create_public">דערלויבן עמעצן צו זען דעם CRM</string>
     <string name="crm_board_delete_column">אויסמעקן זײַל</string>
     <string name="crm_board_delete_column_message">זענט איר זיכער איר ווילט אויסמעקן די \"%1$s\" זײַל? דאָס קען נישט ווערן אומגעקערט.</string>
     <string name="crm_object_delete_named">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\"? די אַקציע קען נישט ווערן אומגעקערט.</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">עלטער</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">קלאַס</string>
+    <string name="crm_create_allow_search">דערלויבן עמעצן צו זוכן פֿאַר CRM</string>
 </resources>

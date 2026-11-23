@@ -275,7 +275,7 @@
     <string name="crm_design_sample">نمونہ %1$s</string>
     <string name="crm_option_delete_title">آپشن حذف کریں</string>
     <string name="crm_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>
-    <string name="crm_create_public">کسی کو بھی CRM دیکھنے اور اس پر تبصرہ کرنے کی اجازت دیں</string>
+    <string name="crm_create_public">کسی کو بھی CRM دیکھنے کی اجازت دیں</string>
     <string name="crm_board_delete_column">کالم حذف کریں</string>
     <string name="crm_board_delete_column_message">کیا آپ واقعی \"%1$s\" کالم کو حذف کرنا چاہتے ہیں؟ یہ واپس نہیں لیا جا سکتا۔</string>
     <string name="crm_object_delete_named">کیا آپ واقعی \"%1$s\" کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</string>
@@ -290,4 +290,5 @@
     <string name="crm_export_csv_parent">پیرنٹ</string>
     <string name="crm_export_csv_id">آئی ڈی</string>
     <string name="crm_export_csv_class">کلاس</string>
+    <string name="crm_create_allow_search">کسی کو بھی CRM تلاش کرنے کی اجازت دیں</string>
 </resources>

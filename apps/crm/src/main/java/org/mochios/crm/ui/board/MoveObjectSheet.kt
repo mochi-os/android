@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -57,16 +56,17 @@ fun MoveObjectSheet(
     // straight back as the object's value, and another class's option is one
     // the server rejects.
     val columnOptions = viewModel.getOptionsForObject(obj.objectClass, columnFieldId)
-    val currentColumnValue = obj.stringValue(columnFieldId)
+    // The column the board draws it in: a value it draws no column for is in
+    // the one for no value, which a move among its cards keeps.
+    val currentColumnValue = viewModel.boardColumn(obj, columnFieldId)
     val rowFieldId = activeView.rows.takeIf { it.isNotBlank() }
     val rowOptions = rowFieldId?.let { fieldId ->
         viewModel.getOptionsForObject(obj.objectClass, fieldId)
     } ?: emptyList()
     val currentRowValue = rowFieldId?.let { obj.stringValue(it) } ?: ""
 
-    // The column as the server ranks it, without this object, for reordering.
-    val columnObjects = viewModel.rankOrder(columnFieldId, currentColumnValue)
-        .filter { other -> other.id != obj.id }
+    // The cards beside it on the board, in the order the board draws them.
+    val columnObjects = viewModel.movePlaces(obj.id)
     val untitled = stringResource(R.string.crm_untitled)
 
     MochiBottomSheet(
@@ -87,7 +87,7 @@ fun MoveObjectSheet(
                             .fillMaxWidth()
                             .clickable {
                                 if (!isSelected) {
-                                    viewModel.moveObject(obj.id, columnFieldId, option.id, 0)
+                                    viewModel.moveToTop(obj.id, columnFieldId, option.id)
                                 }
                                 onDismiss()
                             }
@@ -179,7 +179,7 @@ fun MoveObjectSheet(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    viewModel.moveObject(obj.id, columnFieldId, currentColumnValue, 0)
+                                    viewModel.moveToTop(obj.id, columnFieldId, currentColumnValue)
                                     onDismiss()
                                 }
                                 .padding(vertical = 12.dp, horizontal = 8.dp),
@@ -188,7 +188,7 @@ fun MoveObjectSheet(
                             Text(stringResource(R.string.crm_move_position_top), style = MaterialTheme.typography.bodyLarge)
                         }
                     }
-                    itemsIndexed(columnObjects, key = { _, it -> "after_${it.id}" }) { index, other ->
+                    items(columnObjects, key = { "after_${it.id}" }) { other ->
                         val otherTitleField = uiState.crmDetails?.classes?.find { it.id == other.objectClass }
                             ?.title?.takeIf { it.isNotBlank() }
                         val label = otherTitleField?.let { other.stringValue(it) }.orEmpty().ifBlank { untitled }
@@ -196,10 +196,7 @@ fun MoveObjectSheet(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    // 1-based drop slot to land just after this row:
-                                    // server inserts between others[pos-2] and
-                                    // others[pos-1], so "after index i" is pos = i + 2.
-                                    viewModel.moveObject(obj.id, columnFieldId, currentColumnValue, index + 2)
+                                    viewModel.moveBeside(obj.id, target = other.id, below = true, field = columnFieldId, value = currentColumnValue)
                                     onDismiss()
                                 }
                                 .padding(vertical = 12.dp, horizontal = 8.dp),

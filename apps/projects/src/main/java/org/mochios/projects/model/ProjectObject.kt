@@ -13,9 +13,10 @@ data class ProjectObject(
     @SerializedName("class") val objectClass: String = "",
     val number: Int = 0,
     val parent: String = "",
-    // Fractional-index text key (#53): an opaque, ASCII-sortable ordering key
-    // (e.g. "a0"), not a dense integer — compare/sort it as a string. Moves send
-    // an integer drop position (server computes the new key); see MoveObjectSheet.
+    // Fractional-index text key: an opaque, ASCII-sortable ordering key (e.g.
+    // "a0"), not a dense integer, so compare and sort it as a string. A move
+    // names the object it goes after or before and the server mints the new
+    // key; see ProjectViewModel.moveObject.
     val rank: String = "",
     val created: Long = 0,
     val updated: Long = 0,

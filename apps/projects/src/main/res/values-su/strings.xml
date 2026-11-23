@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>
     <string name="projects_create_blocked_no_options">Teu bisa nyieun: %1$s diperlukeun tapi teu boga pilihan. Tambahkeun pilihan dina Desain.</string>
     <string name="projects_attachment_remove">Cabut lampiran</string>
-    <string name="projects_create_allow_public">Idinkeun saha waé ningali jeung mairan proyék</string>
+    <string name="projects_create_allow_public">Idinkeun saha waé ningali proyék</string>
     <string name="projects_request_delete_title">Hapus pamundut merge</string>
     <string name="projects_request_delete_message">Anjeun yakin hayang ngahapus pamundut merge ieu?</string>
     <string name="projects_board_delete_column_title">Hapus kolom</string>
@@ -332,4 +332,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">Teu bisa ngalampirkeun: %1$s</string>
     <string name="projects_activity_unknown">Teu dipikanyaho</string>
+    <string name="projects_create_allow_search">Idinkeun saha waé néangan proyék</string>
 </resources>

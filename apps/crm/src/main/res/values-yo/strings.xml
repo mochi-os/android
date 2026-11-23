@@ -275,7 +275,7 @@
     <string name="crm_design_sample">Àpẹẹrẹ %1$s</string>
     <string name="crm_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="crm_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
-    <string name="crm_create_public">Jẹ́ kí ẹnikẹ́ni wo CRM náà kí ó sì sọ àsọyé lórí rẹ̀</string>
+    <string name="crm_create_public">Jẹ́ kí ẹnikẹ́ni wo CRM náà</string>
     <string name="crm_board_delete_column">Pa ọ̀wọ́n rẹ́</string>
     <string name="crm_board_delete_column_message">Ṣé o dájú pé o fẹ́ pa ọ̀wọ́n \"%1$s\" rẹ́? A kò lè yí èyí padà.</string>
     <string name="crm_object_delete_named">Ṣé o dájú pé o fẹ́ pa \"%1$s\" rẹ́? A kò lè yí ìṣe yìí padà.</string>
@@ -288,4 +288,5 @@
     <string name="crm_export_csv_parent">Òbí</string>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Kilaasi</string>
+    <string name="crm_create_allow_search">Jẹ́ kí ẹnikẹ́ni wá CRM</string>
 </resources>

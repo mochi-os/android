@@ -321,7 +321,7 @@
     <string name="projects_create_object_no_types">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
     <string name="projects_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
     <string name="projects_attachment_remove">አባሪውን ያስወግዱ</string>
-    <string name="projects_create_allow_public">ማንኛውም ሰው ፕሮጀክቱን እንዲያይ እና አስተያየት እንዲሰጥ ፍቀድ</string>
+    <string name="projects_create_allow_public">ማንኛውም ሰው ፕሮጀክቱን እንዲያይ ፍቀድ</string>
     <string name="projects_request_delete_title">የውህደት ጥያቄ ሰርዝ</string>
     <string name="projects_request_delete_message">ይህን የውህደት ጥያቄ መሰረዝ እንደምትፈልግ እርግጠኛ ነህ?</string>
     <string name="projects_board_delete_column_title">ዓምድ ሰርዝ</string>
@@ -333,4 +333,5 @@
     </plurals>
     <string name="projects_create_attachments_failed">ማያያዝ አልተቻለም፦ %1$s</string>
     <string name="projects_activity_unknown">ያልታወቀ</string>
+    <string name="projects_create_allow_search">ማንኛውም ሰው ፕሮጀክት እንዲፈልግ ፍቀድ</string>
 </resources>
