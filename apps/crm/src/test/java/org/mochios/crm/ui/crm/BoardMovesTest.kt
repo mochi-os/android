@@ -6,10 +6,15 @@
 package org.mochios.crm.ui.crm
 
 import android.content.Intent
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performSemanticsAction
+import androidx.compose.ui.test.performTouchInput
 import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
 import com.google.gson.JsonObject
@@ -17,6 +22,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import okhttp3.mockwebserver.MockResponse
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -38,6 +44,7 @@ import org.mochios.crm.lib.ActiveViewStore
 import org.mochios.crm.lib.CollapsedColumnsStore
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.settle
+import org.mochios.crm.ui.board.BoardView
 import org.mochios.crm.ui.board.MoveObjectSheet
 import org.mochios.crm.ui.tree.TreeNode
 import org.mochios.crm.ui.tree.handleTreeDrop
@@ -206,19 +213,22 @@ class BoardMovesTest {
         assertFalse(top.has("before"))
     }
 
+    // Vale, a gold company in the column for no value, above Umbra.
+    private val vale = """{"id": "v", "class": "company", "parent": "", "rank": "a5", "values": {"stage": "", "name": "Vale", "tier": "gold"}}"""
+
     @Test
-    fun `a drop on a lane of the column for no value clears the column and ends past the cards drawn there`() {
-        val model = named(lanes = true)
+    fun `a drop on a lane of the column for no value clears the column and ends past the cards drawn in that lane`() {
+        val model = named(lanes = true, extra = listOf(vale))
         model.moveToEnd("b", "stage", "", rowField = "tier", rowValue = "gold")
         until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
         val end = server.of("c1/-/objects/b/move").single().json()
         assertEquals("THE POINT: the move clears the stage, which an empty value alone keeps", "true", end.get("clear").asString)
         assertEquals("", end.get("value").asString)
-        assertEquals("THE POINT: after Umbra, the last card the column for no value holds", "u", end.get("after").asString)
+        assertEquals("THE POINT: after Vale, the last card of gold there, as the server takes a neighbour in the lane", "v", end.get("after").asString)
         model.setSortDirection("desc")
-        model.moveToEnd("d", "stage", "", rowField = "tier", rowValue = "silver")
+        model.moveToEnd("d", "stage", "", rowField = "tier", rowValue = "")
         until("the second move") { server.of("c1/-/objects/d/move").isNotEmpty() }
-        assertEquals("the bottom drawn is below Umbra, its lowest key", "u", server.of("c1/-/objects/d/move").single().json().get("before").asString)
+        assertEquals("the bottom of the lane for none is below Umbra, its lowest key", "u", server.of("c1/-/objects/d/move").single().json().get("before").asString)
     }
 
     // Stale, a company whose stage no column is drawn for, in the column for
@@ -293,11 +303,21 @@ class BoardMovesTest {
     @Test
     fun `a drop at the end of a column goes after every object it holds`() {
         val model = board()
-        model.moveToEnd("w", "stage", "lead", rowField = "status", rowValue = "closed")
+        model.moveToEnd("w", "stage", "lead")
         until("the move") { server.of("c1/-/objects/w/move").isNotEmpty() }
         val move = server.of("c1/-/objects/w/move").single().json()
         assertEquals("THE POINT: after d, the last object lead holds", "d", move.get("after").asString)
         assertEquals("lead", move.get("value").asString)
+        assertFalse(move.has("row"))
+    }
+
+    @Test
+    fun `a drop at the end of a column in another lane goes after the last object of that lane`() {
+        val model = board()
+        model.moveToEnd("w", "stage", "lead", rowField = "status", rowValue = "closed")
+        until("the move") { server.of("c1/-/objects/w/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/w/move").single().json()
+        assertEquals("THE POINT: after b, lead's last closed one, not d, which the server takes in no other lane", "b", move.get("after").asString)
         assertEquals("""{"field":"status","value":"closed"}""", move.get("row").asString)
     }
 
@@ -336,10 +356,17 @@ class BoardMovesTest {
     @Test
     fun `a move that fails puts the card back, though the reload fails too`() {
         val model = board()
-        server.refuse("c1/-/objects/w/move", "Refused", 500)
+        // Held until the drop is seen drawn: a refusal answered at once can
+        // resume the move before the call that made it returns.
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            MockResponse().setResponseCode(500).setBody("""{"error": "Refused"}""")
+        }
         server.refuse("c1/-/objects", "Down", 500)
         model.moveObject("w", "stage", "lead", after = "a")
         assertEquals("drawn where it was dropped", "lead", model.uiState.value.objects.first { obj -> obj.id == "w" }.stringValue("stage"))
+        answering.countDown()
         until("the failure") { failures.isNotEmpty() }
         val back = model.uiState.value.objects.first { obj -> obj.id == "w" }
         assertEquals("THE POINT: in its own column again", "won", back.stringValue("stage"))
@@ -440,6 +467,273 @@ class BoardMovesTest {
         val move = server.of("c1/-/objects/c1/move").single().json()
         assertEquals("THE POINT: the new parent and the place above b together", "", move.get("parent").asString)
         assertEquals("b", move.get("before").asString)
+    }
+
+    // ---- Both neighbours ----
+
+    @Test
+    fun `a card dropped between two others names both, as the board draws them`() {
+        val model = named()
+        server.refuse("c1/-/objects", "Down", 500)
+        rule.setContent {
+            val state by model.uiState.collectAsState()
+            BoardView(
+                objects = state.objects,
+                view = model.getActiveView(),
+                viewModel = model,
+                crmDetails = state.crmDetails,
+                people = emptyList(),
+                onObjectClick = {},
+                onStartCreate = {},
+            )
+        }
+        rule.waitForIdle()
+        val dyna = rule.onNodeWithText("Dyna").fetchSemanticsNode().boundsInRoot
+        rule.onRoot().performTouchInput {
+            down(dyna.center)
+            advanceEventTime(viewConfiguration.longPressTimeoutMillis + 100)
+            moveBy(Offset(0f, 4f))
+        }
+        rule.mainClock.advanceTimeBy(1_000)
+        rule.waitForIdle()
+        val bolt = rule.onNodeWithText("Bolt").fetchSemanticsNode().boundsInRoot
+        rule.onRoot().performTouchInput {
+            moveTo(Offset(bolt.center.x, bolt.top + 1f))
+            up()
+        }
+        until("the move") { server.of("c1/-/objects/d/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/d/move").single().json()
+        assertEquals("above Bolt", "b", move.get("before").asString)
+        assertEquals("THE POINT: and below Acme, the card drawn above the drop", "a", move.get("after").asString)
+        assertEquals("in the column named, which the server takes them in", "stage", move.get("field").asString)
+        assertEquals("THE POINT: with no value, which keeps the column it is in", "", move.get("value").asString)
+    }
+
+    @Test
+    fun `the Move sheet's After names the card drawn below it too`() {
+        val model = named()
+        server.refuse("c1/-/objects", "Down", 500)
+        val bolt = model.uiState.value.objects.first { obj -> obj.id == "b" }
+        rule.setContent { MoveObjectSheet(bolt, model, onDismiss = {}) }
+        rule.waitForIdle()
+        rule.onNodeWithText(context.getString(R.string.crm_move_after, "Acme")).performSemanticsAction(SemanticsActions.OnClick)
+        until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/b/move").single().json()
+        assertEquals("a", move.get("after").asString)
+        assertEquals("THE POINT: and before Dyna, drawn below Acme", "d", move.get("before").asString)
+    }
+
+    @Test
+    fun `under a descending manual sort tied cards are drawn in the server's order upside down, and a drop between them names both`() {
+        // Tide shares Bolt's key; the server lists Bolt, the newer, first.
+        val tide = """{"id": "t", "class": "company", "parent": "", "rank": "a2", "values": {"stage": "lead", "name": "Tide"}}"""
+        val model = named(extra = listOf(tide))
+        server.refuse("c1/-/objects", "Down", 500)
+        model.setSortDirection("desc")
+        assertEquals("THE POINT: the exact reverse of the server's order, ties too", listOf("x", "d", "t", "b", "a", "c1"), lead(model))
+        // Dropped below Tide as drawn, so above Bolt.
+        model.moveBeside("w", target = "t", below = true, field = "stage", value = "lead", other = "b")
+        until("the move") { server.of("c1/-/objects/w/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/w/move").single().json()
+        assertEquals("below Tide upside down is before it", "t", move.get("before").asString)
+        assertEquals("THE POINT: and after Bolt, which the server unties below Tide", "b", move.get("after").asString)
+        assertEquals("drawn between them at once", listOf("x", "d", "t", "w", "b", "a", "c1"), lead(model))
+    }
+
+    @Test
+    fun `a move is drawn beside its other neighbour when the first has left the column`() {
+        val model = named()
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        // Umbra, named after, is in no column; Bolt, named before, is in lead.
+        model.moveObject("w", "stage", "lead", after = "u", before = "b")
+        assertEquals("THE POINT: above Bolt, as the server places it", listOf("c1", "a", "w", "b", "d", "x"), lead(model))
+        answering.countDown()
+        until("the move") { server.of("c1/-/objects/w/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/w/move").single().json()
+        assertEquals("u", move.get("after").asString)
+        assertEquals("b", move.get("before").asString)
+    }
+
+    @Test
+    fun `a tree row dropped between two siblings names both`() {
+        val model = board()
+        val target = TreeNode(model.uiState.value.objects.first { it.id == "b" }, depth = 0, hasChildren = false, isExpanded = true)
+        handleTreeDrop(sourceId = "w", targetNode = target, edge = DragEdge.Top, viewModel = model)
+        until("the move") { server.of("c1/-/objects/w/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/w/move").single().json()
+        assertEquals("above b", "b", move.get("before").asString)
+        assertEquals("THE POINT: and below a, the sibling drawn above it", "a", move.get("after").asString)
+    }
+
+    // ---- The lane for none ----
+
+    // Vast's tier no lane is drawn for, so it is drawn in lead's lane for none, with Nil, which has none.
+    private val vast = """{"id": "v", "class": "company", "parent": "", "rank": "a5", "values": {"stage": "lead", "name": "Vast", "tier": "bronze"}}"""
+    private val nil = """{"id": "n", "class": "company", "parent": "", "rank": "a6", "values": {"stage": "lead", "name": "Nil"}}"""
+
+    @Test
+    fun `a card reordered in the lane for none keeps a tier no lane is drawn for`() {
+        val model = named(lanes = true, extra = listOf(vast, nil))
+        server.refuse("c1/-/objects", "Down", 500)
+        model.moveBeside("v", target = "n", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
+        until("the move") { server.of("c1/-/objects/v/move").isNotEmpty() }
+        assertEquals(
+            "THE POINT: it stays in the lane it is drawn in, so its own tier goes, which writes nothing, not \"\"",
+            """{"field":"tier","value":"bronze"}""",
+            server.of("c1/-/objects/v/move").single().json().get("row").asString,
+        )
+        assertEquals("bronze", model.uiState.value.objects.first { obj -> obj.id == "v" }.stringValue("tier"))
+        model.moveBeside("a", target = "n", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
+        until("the second move") { server.of("c1/-/objects/a/move").isNotEmpty() }
+        assertEquals("one from gold has its tier cleared", """{"field":"tier","value":""}""", server.of("c1/-/objects/a/move").single().json().get("row").asString)
+    }
+
+    @Test
+    fun `under a sort by a field a reorder in the lane for none writes nothing`() {
+        val model = named(lanes = true, extra = listOf(vast, nil))
+        model.setSortField("created")
+        model.moveBeside("v", target = "n", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
+        model.moveToEnd("v", "stage", "lead", rowField = "tier", rowValue = "")
+        settle()
+        assertTrue("THE POINT: nothing changes, so nothing goes", server.of("c1/-/objects/v/move").isEmpty())
+    }
+
+    // ---- What a move goes among ----
+
+    @Test
+    fun `a drop at the end of its own column on a board with lanes names the column and the lane it stays in`() {
+        val model = named(lanes = true)
+        server.refuse("c1/-/objects", "Down", 500)
+        // On the column's empty space, which names no lane.
+        model.moveToEnd("a", "stage", "lead")
+        until("the move") { moves("a").isNotEmpty() }
+        val move = moves("a").single()
+        assertEquals("stage", move.get("field").asString)
+        assertEquals("with no value, which keeps its column", "", move.get("value").asString)
+        assertEquals("THE POINT: and its own lane, which writes nothing", """{"field":"tier","value":"gold"}""", move.get("row").asString)
+        assertEquals("so the end is gold's, after Dyna, not Xavi", "d", move.get("after").asString)
+    }
+
+    @Test
+    fun `the Move sheet on a board with lanes names the column and the lane, changing only what was chosen`() {
+        val model = named(lanes = true)
+        server.refuse("c1/-/objects", "Down", 500)
+        val acme = model.uiState.value.objects.first { obj -> obj.id == "a" }
+        rule.setContent { MoveObjectSheet(acme, model, onDismiss = {}) }
+        rule.waitForIdle()
+        rule.onNodeWithText(context.getString(R.string.crm_move_after, "Dyna")).performSemanticsAction(SemanticsActions.OnClick)
+        until("the move") { moves("a").isNotEmpty() }
+        val after = moves("a").single()
+        assertEquals("stage", after.get("field").asString)
+        assertEquals("", after.get("value").asString)
+        assertEquals("THE POINT: in its own lane", """{"field":"tier","value":"gold"}""", after.get("row").asString)
+        rule.onNodeWithText("Silver").performSemanticsAction(SemanticsActions.OnClick)
+        until("the second move") { moves("a").size == 2 }
+        val lane = moves("a")[1]
+        assertEquals("THE POINT: a lane chosen names the column too, with no value", "stage", lane.get("field").asString)
+        assertEquals("", lane.get("value").asString)
+        assertEquals("""{"field":"tier","value":"silver"}""", lane.get("row").asString)
+    }
+
+    @Test
+    fun `a tree row reordered among its siblings names their parent as its scope`() {
+        // Cleo is a second contact under Acme, after Carol.
+        val cleo = """{"id": "c2", "class": "contact", "parent": "a", "rank": "Z5", "values": {"stage": "lead", "name": "Cleo"}}"""
+        val model = named(extra = listOf(cleo))
+        server.refuse("c1/-/objects", "Down", 500)
+        val bolt = TreeNode(model.uiState.value.objects.first { it.id == "b" }, depth = 0, hasChildren = false, isExpanded = true)
+        handleTreeDrop(sourceId = "w", targetNode = bolt, edge = DragEdge.Top, viewModel = model)
+        until("the move") { moves("w").isNotEmpty() }
+        assertEquals("THE POINT: the top level, as \"\"", "", moves("w").single().get("scope").asString)
+        assertFalse("its parent stays, so none goes", moves("w").single().has("parent"))
+        val carol = TreeNode(model.uiState.value.objects.first { it.id == "c1" }, depth = 1, hasChildren = false, isExpanded = true)
+        handleTreeDrop(sourceId = "c2", targetNode = carol, edge = DragEdge.Top, viewModel = model, drawn = model.uiState.value.objects)
+        until("the second move") { moves("c2").isNotEmpty() }
+        assertEquals("THE POINT: Acme's children", "a", moves("c2").single().get("scope").asString)
+        assertEquals("above Carol", "c1", moves("c2").single().get("before").asString)
+        assertFalse(moves("c2").single().has("parent"))
+    }
+
+    // ---- One move at a time ----
+
+    private fun moves(id: String) = server.of("c1/-/objects/$id/move").map { sent -> sent.json() }
+
+    @Test
+    fun `two quick moves of one card go one after the other, in the order made`() {
+        val model = named()
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        model.moveObject("w", "stage", "lead", after = "a")
+        model.moveObject("w", "stage", "", clear = true)
+        settle()
+        assertEquals("THE POINT: the second waits for the first's answer", 1, moves("w").size)
+        answering.countDown()
+        until("the second move") { moves("w").size == 2 }
+        assertEquals("lead", moves("w")[0].get("value").asString)
+        assertEquals("then the column for no value", "true", moves("w")[1].get("clear").asString)
+        settle()
+        assertEquals("", stage(model, "w"))
+    }
+
+    @Test
+    fun `a move waiting beside a card whose own move fails goes beside its other neighbour`() {
+        val model = named()
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            MockResponse().setResponseCode(500).setBody("""{"error": "Refused"}""")
+        }
+        model.moveObject("w", "stage", "lead", after = "a")
+        // Umbra dropped between Wren, drawn after Acme, and Bolt.
+        model.moveObject("u", "stage", "lead", after = "w", before = "b")
+        assertEquals(listOf("c1", "a", "w", "u", "b", "d", "x"), lead(model))
+        answering.countDown()
+        until("the second move") { moves("u").isNotEmpty() }
+        assertFalse("THE POINT: not beside Wren, which is back in won", moves("u").single().has("after"))
+        assertEquals("b", moves("u").single().get("before").asString)
+        until("the failure") { failures.isNotEmpty() }
+        settle()
+        assertEquals("won", stage(model, "w"))
+        assertEquals("and drawn where it goes, above Bolt", listOf("c1", "a", "u", "b", "d", "x"), lead(model))
+    }
+
+    @Test
+    fun `a move still waiting stays where it was dropped through a reload`() {
+        val model = named()
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        model.moveObject("w", "stage", "lead", after = "a")
+        model.refresh()
+        until("the reload") { !model.uiState.value.isRefreshing && server.of("c1/-/objects").size >= 2 }
+        settle()
+        assertEquals("THE POINT: the reload, which does not hold the move yet, is drawn under it", "lead", stage(model, "w"))
+        assertEquals(listOf("c1", "a", "w", "b", "d", "x"), lead(model))
+        answering.countDown()
+    }
+
+    @Test
+    fun `a row dropped on another takes the key the server gives it there`() {
+        val model = board()
+        server.refuse("c1/-/objects", "Down", 500)
+        server.data("c1/-/objects/c1/update", """{"success": true, "parent": "b", "ranks": [{"id": "c1", "rank": "a9", "updated": 77}], "updated": 77}""")
+        val target = TreeNode(model.uiState.value.objects.first { it.id == "b" }, depth = 0, hasChildren = false, isExpanded = true)
+        handleTreeDrop(sourceId = "c1", targetNode = target, edge = DragEdge.On, viewModel = model)
+        until("the key") { model.uiState.value.objects.first { obj -> obj.id == "c1" }.rank == "a9" }
+        val contact = model.uiState.value.objects.first { obj -> obj.id == "c1" }
+        assertEquals("THE POINT: under b, after its children, though the list cannot be read again", "b", contact.parent)
+        assertEquals(77L, contact.updated)
     }
 
     @Test

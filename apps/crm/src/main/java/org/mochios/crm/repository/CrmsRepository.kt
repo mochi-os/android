@@ -278,16 +278,25 @@ class CrmsRepository @Inject constructor(
         return response.`object`.copy(values = response.values)
     }
 
-    /** Moves [objectId] under [parent], or to the top level for "". */
-    suspend fun updateObject(crmId: String, objectId: String, parent: String) {
-        api.updateObject(crmId, objectId, UpdateObjectRequest(parent = parent)).unwrap()
-    }
+    /**
+     * Moves [objectId] under [parent], or to the top level for "". Answers
+     * the keys the change wrote: a new parent gives the object a key after
+     * its new siblings. A server that predates that answers none.
+     */
+    suspend fun updateObject(crmId: String, objectId: String, parent: String): List<MovedRank> =
+        api.updateObject(crmId, objectId, UpdateObjectRequest(parent = parent)).unwrap().ranks.orEmpty()
 
     suspend fun deleteObject(crmId: String, objectId: String) {
         api.deleteObject(crmId, objectId).unwrap()
     }
 
-    /** Moves an object and answers every key the move wrote. */
+    /**
+     * Moves an object and answers every key the move wrote. [after] and
+     * [before] are the objects it was dropped between, both sent: the server
+     * places it beside the first that is still where the move puts it: in
+     * column [field], lane [rowField] and the children of [scope] or
+     * [parent], so a move names what it goes among even when none changes.
+     */
     suspend fun moveObject(
         crmId: String,
         objectId: String,
@@ -299,6 +308,7 @@ class CrmsRepository @Inject constructor(
         rowValue: String? = null,
         parent: String? = null,
         clear: Boolean = false,
+        scope: String? = null,
     ): List<MovedRank> {
         return api.moveObject(
             crmId,
@@ -307,10 +317,11 @@ class CrmsRepository @Inject constructor(
                 field = field,
                 value = value,
                 after = after,
-                before = if (after == null) before else null,
+                before = before,
                 row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
                 parent = parent,
                 clear = "true".takeIf { clear },
+                scope = scope,
             )
         ).unwrap().ranks.orEmpty()
     }

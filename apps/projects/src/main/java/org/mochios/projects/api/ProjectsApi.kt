@@ -119,6 +119,9 @@ data class MoveObjectRequest(
     val row: String?,
     val parent: String?,
     val clear: String? = null,
+    // The parent whose children the object is placed among, "" for the top
+    // level, for a move that keeps its parent; a parent sent is its own.
+    val scope: String? = null,
 )
 
 // Body of `classes/{class}/hierarchy/set`: the parents comma-separated, as the
@@ -196,7 +199,8 @@ data class BranchListResponse(val branches: List<Branch> = emptyList())
 data class SuccessResponse(val success: Boolean = false)
 
 // `objects/{object}/move`: every key the move wrote, the moved object's and
-// any a neighbour that shared its anchor's took.
+// any a neighbour that shared its anchor's took. `objects/{object}/update`
+// answers the same for the key a new parent gave the object.
 data class MoveResponse(val success: Boolean = false, val ranks: List<MovedRank>? = null)
 
 // One key a move wrote; [updated] is the moved object's new time, on its row only.
@@ -380,7 +384,7 @@ interface ProjectsApi {
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Body body: UpdateObjectRequest
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<MoveResponse>>
 
     @POST("{projectId}/-/objects/{objectId}/delete")
     suspend fun deleteObject(

@@ -65,6 +65,7 @@ import org.mochios.projects.R
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.ui.project.drawnBeside
 import org.mochios.projects.util.objectTitle
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -86,6 +87,12 @@ fun BoardCard(
     targetColumnId: String = "",
     /** The lane this card sits in, sent as row_value so a drop changes lane. */
     targetRowId: String = "",
+    /**
+     * The ids of the cards drawn in this card's lane, or its column on a
+     * board without lanes, in the order drawn: a drop names the one on its
+     * far side as well as this card.
+     */
+    neighbours: List<String> = emptyList(),
     /** Opens the tapped card's object; a nested card names its own, not its parent's. */
     onOpen: (String) -> Unit
 ) {
@@ -150,19 +157,20 @@ fun BoardCard(
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                 onDrop = { sourceId, edge ->
-                    // Directly below or above this card, as the board shows it.
-                    // rowField/rowValue carry the lane. Without them the server
-                    // leaves the row value untouched (projects.star only writes
-                    // it under `if row_field:` on the decoded `row`), so a cross-lane drag was a
-                    // no-op and the refresh put the card back where it started.
+                    // Directly below or above this card, as the board shows it,
+                    // between it and the card drawn on the drop's far side.
+                    // rowField/rowValue carry the lane, which the view model
+                    // sends only when it is not the one the card is drawn in.
+                    val below = edge == DragEdge.Bottom
                     viewModel.moveBeside(
                         objectId = sourceId,
                         target = obj.id,
-                        below = edge == DragEdge.Bottom,
+                        below = below,
                         field = columnFieldId,
                         value = targetColumnId,
                         rowField = rowFieldId,
                         rowValue = if (rowFieldId != null) targetRowId else null,
+                        other = drawnBeside(neighbours, obj.id, below, sourceId),
                     )
                 }
             )

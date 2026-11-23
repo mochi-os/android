@@ -319,16 +319,25 @@ class ProjectsRepository @Inject constructor(
         return response.`object`.copy(values = response.values)
     }
 
-    /** Changes the object's parent; "" puts it at the top level. */
-    suspend fun updateObject(projectId: String, objectId: String, parent: String? = null) {
-        api.updateObject(projectId, objectId, UpdateObjectRequest(parent)).unwrap()
-    }
+    /**
+     * Changes the object's parent; "" puts it at the top level. Answers the
+     * keys the change wrote: a new parent gives the object a key after its
+     * new siblings. A server that predates that answers none.
+     */
+    suspend fun updateObject(projectId: String, objectId: String, parent: String? = null): List<MovedRank> =
+        api.updateObject(projectId, objectId, UpdateObjectRequest(parent)).unwrap().ranks.orEmpty()
 
     suspend fun deleteObject(projectId: String, objectId: String) {
         api.deleteObject(projectId, objectId).unwrap()
     }
 
-    /** Moves an object and answers every key the move wrote. */
+    /**
+     * Moves an object and answers every key the move wrote. [after] and
+     * [before] are the objects it was dropped between, both sent: the server
+     * places it beside the first that is still where the move puts it: in
+     * column [field], lane [rowField] and the children of [scope] or
+     * [parent], so a move names what it goes among even when none changes.
+     */
     suspend fun moveObject(
         projectId: String,
         objectId: String,
@@ -340,11 +349,12 @@ class ProjectsRepository @Inject constructor(
         rowValue: String? = null,
         parent: String? = null,
         clear: Boolean = false,
+        scope: String? = null,
     ): List<MovedRank> {
         val row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() }
         return api.moveObject(
             projectId, objectId,
-            MoveObjectRequest(field, value, after, if (after == null) before else null, row, parent, clear = "true".takeIf { clear })
+            MoveObjectRequest(field, value, after, before, row, parent, clear = "true".takeIf { clear }, scope = scope)
         ).unwrap().ranks.orEmpty()
     }
 

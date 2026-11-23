@@ -87,14 +87,35 @@ class RequestBodiesTest {
     }
 
     @Test
-    fun `a reorder names the object it was dropped after, and only that one`() {
+    fun `a new parent answers the key it gave the object, and an older server none`() {
+        answers = mapOf(
+            "p1/-/objects/o1/update" to """{"success": true, "updated": 5, "parent": "o2", "class": "task", "ranks": [{"id": "o1", "rank": "b0", "updated": 5}]}""",
+        )
+        val ranks = runBlocking { repository.updateObject("p1", "o1", parent = "o2") }
+        assertEquals("THE POINT: the key after its new siblings", listOf(MovedRank("o1", "b0", 5)), ranks)
+        answers = mapOf("p1/-/objects/o1/update" to """{"success": true}""")
+        assertEquals(emptyList<MovedRank>(), runBlocking { repository.updateObject("p1", "o1", parent = "o2") })
+    }
+
+    @Test
+    fun `a reorder names both objects it was dropped between`() {
         runBlocking { repository.moveObject("p1", "o1", field = "", after = "o2", before = "o3") }
         val sent = body("p1/-/objects/o1/move")
         assertEquals("o2", sent["after"]?.asString)
-        assertFalse("THE POINT: the server places by one neighbour, so before is left out", sent.has("before"))
+        assertEquals("THE POINT: the server places beside before when after has moved elsewhere", "o3", sent["before"]?.asString)
         assertFalse("an untouched value is left out, so the server keeps it", sent.has("value"))
         assertFalse("a reorder names no parent", sent.has("parent"))
         assertFalse("nor a clear", sent.has("clear"))
+    }
+
+    @Test
+    fun `a reorder among one parent's children names that parent as its scope, the top level as an empty string`() {
+        runBlocking { repository.moveObject("p1", "o1", field = "", after = "o2", scope = "") }
+        val top = body("p1/-/objects/o1/move")
+        assertEquals("THE POINT: the top level arrives as \"\"", "", top["scope"]?.asString)
+        assertFalse("its parent stays, so none goes", top.has("parent"))
+        runBlocking { repository.moveObject("p1", "o4", field = "", before = "o5", scope = "o9") }
+        assertEquals("o9", body("p1/-/objects/o4/move")["scope"]?.asString)
     }
 
     @Test

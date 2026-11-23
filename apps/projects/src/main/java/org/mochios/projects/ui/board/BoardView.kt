@@ -597,6 +597,7 @@ private fun BoardColumn(
                     // screen of bare lane headings under one hit is noise.
                     // Unfiltered, empty lanes still show as drop targets.
                     if (visibleIds != null && shownRowObjects.isEmpty()) return@forEach
+                    val laneIds = shownRowObjects.map { obj -> obj.id }
 
                     item(key = "header_${rowOption.id}") {
                         // The lane's own drop target. The column-level one below
@@ -648,6 +649,7 @@ private fun BoardColumn(
                             },
                             targetColumnId = option.id,
                             targetRowId = rowOption.id,
+                            neighbours = laneIds,
                             onOpen = onObjectClick
                         )
                     }
@@ -658,6 +660,7 @@ private fun BoardColumn(
 
                 // Unassigned row items
                 val shownUnassignedRow = unassignedRow.visible(visibleIds)
+                val unassignedIds = shownUnassignedRow.map { obj -> obj.id }
                 if (shownUnassignedRow.isNotEmpty()) {
                     item(key = "header_unassigned_row") {
                         Text(
@@ -680,7 +683,11 @@ private fun BoardColumn(
                                 candidate.id == obj.id
                             },
                             targetColumnId = option.id,
+                            // The lane for none, which holds every value no
+                            // lane is drawn for: a card drawn here keeps its
+                            // own, and one from a drawn lane has it cleared.
                             targetRowId = "",
+                            neighbours = unassignedIds,
                             onOpen = onObjectClick
                         )
                     }
@@ -690,6 +697,7 @@ private fun BoardColumn(
             // List mode. Double-tapping empty space below the cards creates
             // one; the tap zone sits behind the list so cards take precedence.
             val shownObjects = sortedObjects.visible(visibleIds)
+            val shownIds = shownObjects.map { obj -> obj.id }
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -725,6 +733,7 @@ private fun BoardColumn(
                                 candidate.id == obj.id
                             },
                             targetColumnId = option.id,
+                            neighbours = shownIds,
                             onOpen = onObjectClick
                         )
                     }

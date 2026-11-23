@@ -40,6 +40,7 @@ import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.ui.project.drawnBeside
 import org.mochios.projects.util.objectTitle
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -64,6 +65,7 @@ fun MoveObjectSheet(
 
     // The cards beside it on the board, in the order the board draws them.
     val columnObjects = viewModel.movePlaces(obj.id)
+    val columnIds = columnObjects.map { other -> other.id }
     val prefix = uiState.projectDetails?.project?.prefix ?: ""
 
     MochiBottomSheet(
@@ -135,7 +137,8 @@ fun MoveObjectSheet(
                                 .fillMaxWidth()
                                 .clickable {
                                     if (!isSelected) {
-                                        viewModel.moveObject(obj.id, rowField = rowFieldId, rowValue = option.id)
+                                        // In its own column, named with no value, which keeps it.
+                                        viewModel.moveObject(obj.id, field = columnFieldId, value = "", rowField = rowFieldId, rowValue = option.id)
                                     }
                                     onDismiss()
                                 }
@@ -191,7 +194,11 @@ fun MoveObjectSheet(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    viewModel.moveBeside(obj.id, target = other.id, below = true, field = columnFieldId, value = currentColumnValue)
+                                    // Between it and the card drawn below it.
+                                    viewModel.moveBeside(
+                                        obj.id, target = other.id, below = true, field = columnFieldId, value = currentColumnValue,
+                                        other = drawnBeside(columnIds, other.id, below = true, moved = obj.id),
+                                    )
                                     onDismiss()
                                 }
                                 .padding(vertical = 12.dp, horizontal = 8.dp),

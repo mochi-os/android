@@ -89,7 +89,8 @@ data class AccessResponse(val rules: List<AccessRule> = emptyList())
 data class SuccessResponse(val success: Boolean = false)
 
 // `objects/{object}/move`: every key the move wrote, the moved object's and
-// any a neighbour that shared its anchor's took.
+// any a neighbour that shared its anchor's took. `objects/{object}/update`
+// answers the same for the key a new parent gave the object.
 data class MoveResponse(val success: Boolean = false, val ranks: List<MovedRank>? = null)
 
 // One key a move wrote; [updated] is the moved object's new time, on its row only.
@@ -147,6 +148,9 @@ data class MoveObjectRequest(
     val row: String? = null,
     val parent: String? = null,
     val clear: String? = null,
+    // The parent whose children the object is placed among, "" for the top
+    // level, for a move that keeps its parent; a parent sent is its own.
+    val scope: String? = null,
 )
 
 // JSON body of `views/{view}/update`; "" clears a setting.
@@ -329,7 +333,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
         @Body body: UpdateObjectRequest
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<MoveResponse>>
 
     @POST("{crmId}/-/objects/{objectId}/delete")
     suspend fun deleteObject(

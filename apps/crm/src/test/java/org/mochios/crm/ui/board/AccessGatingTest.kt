@@ -255,7 +255,7 @@ class AccessGatingTest {
         }
         until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
         val move = server.of("c1/-/objects/b/move").single().json()
-        assertEquals("THE POINT: the column's field, which a value needs, or the server refuses the move", "stage", move.get("field").asString)
-        assertEquals("lead", move.get("value").asString)
+        assertEquals("THE POINT: the column's field, which the server takes the move's neighbours in", "stage", move.get("field").asString)
+        assertEquals("with no value, which keeps the column it is in", "", move.get("value").asString)
     }
 }

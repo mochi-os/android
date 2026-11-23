@@ -40,6 +40,7 @@ import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.crm.CrmViewModel
+import org.mochios.crm.ui.crm.drawnBeside
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -138,7 +139,8 @@ fun MoveObjectSheet(
                                 .fillMaxWidth()
                                 .clickable {
                                     if (!isSelected) {
-                                        viewModel.moveObject(obj.id, rowField = rowFieldId, rowValue = option.id)
+                                        // In its own column, named with no value, which keeps it.
+                                        viewModel.moveObject(obj.id, field = columnFieldId, value = "", rowField = rowFieldId, rowValue = option.id)
                                     }
                                     onDismiss()
                                 }
@@ -196,7 +198,11 @@ fun MoveObjectSheet(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    viewModel.moveBeside(obj.id, target = other.id, below = true, field = columnFieldId, value = currentColumnValue)
+                                    // Between it and the card drawn below it.
+                                    viewModel.moveBeside(
+                                        obj.id, target = other.id, below = true, field = columnFieldId, value = currentColumnValue,
+                                        other = drawnBeside(columnObjects.map { drawn -> drawn.id }, other.id, below = true, moved = obj.id),
+                                    )
                                     onDismiss()
                                 }
                                 .padding(vertical = 12.dp, horizontal = 8.dp),

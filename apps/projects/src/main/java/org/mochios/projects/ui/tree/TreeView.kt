@@ -29,6 +29,7 @@ import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 import org.mochios.projects.ui.project.Placement
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.ui.project.drawnBeside
 import org.mochios.projects.util.reparentAllowed
 
 data class TreeNode(
@@ -92,6 +93,7 @@ fun TreeView(
                         targetNode = node,
                         edge = edge,
                         viewModel = viewModel,
+                        drawn = objects,
                     )
                 }) else null
             )
@@ -103,14 +105,18 @@ fun TreeView(
  * Turns a tree drop into a move or reparent. A drop on a row's middle puts
  * the source under it; one on its top or bottom edge puts it directly above
  * or below that row, among the row's siblings, naming the row it went beside
- * and, when the parent changes, the new parent in the same move. The edges
- * place only under a manual sort, the one that draws the order they place by.
+ * and the sibling drawn on the drop's far side, with the parent whose
+ * children it goes among, and, when the parent changes, the new parent in the
+ * same move. The edges place only under a manual sort,
+ * the one that draws the order they place by. [drawn] is the tree's objects in
+ * the order it draws them.
  */
 internal fun handleTreeDrop(
     sourceId: String,
     targetNode: TreeNode,
     edge: DragEdge,
     viewModel: ProjectViewModel,
+    drawn: List<ProjectObject> = viewModel.getFilteredObjects(),
 ) {
     if (sourceId == targetNode.obj.id) return
     val descendants = viewModel.collectDescendants(sourceId)
@@ -124,8 +130,10 @@ internal fun handleTreeDrop(
 
     when (edge) {
         DragEdge.On -> {
-            // Reparent under the target. The server appends to the end of
-            // the new parent's children automatically.
+            // Reparent under the target. The update names no place, so the
+            // server gives the row a key after the new parent's children,
+            // answers it and tells subscribers; reparentObject draws it with
+            // that key.
             if (sourceObj.parent != targetNode.obj.id &&
                 reparentAllowed(sourceObj, targetNode.obj.id, allObjects, hierarchy)
             ) {
@@ -140,12 +148,19 @@ internal fun handleTreeDrop(
             val newParent = targetNode.obj.parent
             val reparent = sourceObj.parent != newParent
             if (reparent && !reparentAllowed(sourceObj, newParent, allObjects, hierarchy)) return
+            val below = edge == DragEdge.Bottom
+            // The target's siblings as the tree draws them: rows of its parent.
+            val siblings = drawn.filter { obj -> obj.parent == newParent }.map { obj -> obj.id }
             viewModel.moveBeside(
                 objectId = sourceId,
                 target = targetNode.obj.id,
-                below = edge == DragEdge.Bottom,
+                below = below,
                 field = "",
                 parent = newParent.takeIf { reparent },
+                other = drawnBeside(siblings, targetNode.obj.id, below, sourceId),
+                // The parent it goes among, which a move that keeps its own
+                // names no other way, so the server takes a neighbour only there.
+                scope = newParent,
             )
         }
         else -> { /* Start/End not used in vertical tree */ }
