@@ -80,17 +80,17 @@ interface ChessApi {
         @Path("game") game: String,
     ): Response<ApiResponse<ResignResponse>>
 
-    @POST("{game}/-/draw-offer")
+    @POST("{game}/-/draw/offer")
     suspend fun drawOffer(
         @Path("game") game: String,
     ): Response<ApiResponse<DrawOfferResponse>>
 
-    @POST("{game}/-/draw-accept")
+    @POST("{game}/-/draw/accept")
     suspend fun drawAccept(
         @Path("game") game: String,
     ): Response<ApiResponse<DrawOfferResponse>>
 
-    @POST("{game}/-/draw-decline")
+    @POST("{game}/-/draw/decline")
     suspend fun drawDecline(
         @Path("game") game: String,
     ): Response<ApiResponse<DrawOfferResponse>>

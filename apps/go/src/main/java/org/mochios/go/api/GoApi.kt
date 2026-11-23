@@ -72,22 +72,22 @@ interface GoApi {
         @Body body: PassRequest,
     ): Response<ApiResponse<MoveResponse>>
 
-    @POST("{gameId}/-/score-accept")
+    @POST("{gameId}/-/score/accept")
     suspend fun scoreAccept(@Path("gameId") gameId: String): Response<ApiResponse<ScoreResponse>>
 
-    @POST("{gameId}/-/score-resume")
+    @POST("{gameId}/-/score/resume")
     suspend fun scoreResume(@Path("gameId") gameId: String): Response<ApiResponse<ScoreResponse>>
 
     @POST("{gameId}/-/resign")
     suspend fun resign(@Path("gameId") gameId: String): Response<ApiResponse<ResignResponse>>
 
-    @POST("{gameId}/-/draw-offer")
+    @POST("{gameId}/-/draw/offer")
     suspend fun drawOffer(@Path("gameId") gameId: String): Response<ApiResponse<DrawOfferResponse>>
 
-    @POST("{gameId}/-/draw-accept")
+    @POST("{gameId}/-/draw/accept")
     suspend fun drawAccept(@Path("gameId") gameId: String): Response<ApiResponse<DrawOfferResponse>>
 
-    @POST("{gameId}/-/draw-decline")
+    @POST("{gameId}/-/draw/decline")
     suspend fun drawDecline(@Path("gameId") gameId: String): Response<ApiResponse<DrawOfferResponse>>
 
     @POST("{gameId}/-/delete")
