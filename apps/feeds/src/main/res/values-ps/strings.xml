@@ -91,7 +91,7 @@
     <string name="feeds_search_results">د لټون پایلې</string>
     <string name="feeds_unread_only">یوازې نه لوستل شوي</string>
     <string name="feeds_location_at">په %1$s کې</string>
-    <string name="feeds_travel_arrow">%1$s → %2$s</string>
+    <string name="feeds_travel_arrow">%1$s ← %2$s</string>
     <string name="feeds_travel_from">له %1$s څخه</string>
     <string name="feeds_travel_to">%1$s ته</string>
     <string name="feeds_view_post">لیکنه وګورئ</string>

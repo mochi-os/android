@@ -101,7 +101,7 @@
     <string name="feeds_search_results">ئەنجامەکانی گەڕان</string>
     <string name="feeds_unread_only">تەنها نەخوێندراوەکان</string>
     <string name="feeds_location_at">لە %1$s</string>
-    <string name="feeds_travel_arrow">%1$s → %2$s</string>
+    <string name="feeds_travel_arrow">%1$s ← %2$s</string>
     <string name="feeds_travel_from">لە %1$s</string>
     <string name="feeds_travel_to">بۆ %1$s</string>
     <string name="feeds_view_post">بینینی بابەت</string>

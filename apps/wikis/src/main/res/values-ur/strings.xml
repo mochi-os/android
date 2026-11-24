@@ -278,7 +278,7 @@
     <string name="wikis_revision_author">بذریعہ %1$s</string>
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
-    <string name="wikis_revision_changes_from">ورژن %1$s → %2$s سے تبدیلیاں</string>
+    <string name="wikis_revision_changes_from">ورژن %1$s ← %2$s سے تبدیلیاں</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s تبصرہ</item>
         <item quantity="other">%s تبصرے</item>

@@ -216,7 +216,7 @@
     <string name="reauth_signin_text">מעלדונגען זענען אָפּגעשטעלט ביז איר וועט זיך ווידער אַנמעלדן</string>
     <string name="oem_hint_title">בלייַבט דערגרייכבאַר אין הינטערגרונט</string>
     <string name="oem_hint_body">Mochi דאַרף לויפן אין הינטערגרונט כדי צו צושטעלן מעלדונגען. ביטע ערלויבט דאָס אויפן קומענדיגן עקראַן, אַנדערש קען אייער טעלעפאָן אָפּשטעלן מעלדונגען ווען דער עקראַן איז אויס.</string>
-    <string name="oem_hint_samsung_note">אויף סאַמסונג טעלעפאָנען, קוקט אויך אונטער איינשטעלונגען → גערעט זאָרג → שלאָפנדע אַפּליקאַציעס און נעמט אַוועק Mochi אויב עס שטייט דאָרט.</string>
+    <string name="oem_hint_samsung_note">אויף סאַמסונג טעלעפאָנען, קוקט אויך אונטער איינשטעלונגען ← גערעט זאָרג ← שלאָפנדע אַפּליקאַציעס און נעמט אַוועק Mochi אויב עס שטייט דאָרט.</string>
     <string name="oem_hint_allow">ערלויבט הינטערגרונט</string>
     <string name="oem_hint_dismiss">ווייַזט נישט נאָך אַ מאָל</string>
     <string name="about_title">Mochi קליענט</string>

@@ -90,7 +90,7 @@
     <string name="words_board_premium_name_start">शुरुआती खाना, शब्द के दोगुने अंक</string>
     <string name="words_board_square_empty">खाली खाना %1$s%2$s</string>
     <string name="words_board_square_empty_premium">खाली खाना %1$s%2$s, %3$s</string>
-    <string name="words_board_square_tile">%1$s पर %2$s%3$s</string>
-    <string name="words_board_square_pending">%1$s पर %2$s%3$s, हटाने के लिए क्लिक करें</string>
-    <string name="words_board_square_pending_premium">%1$s पर %2$s%3$s, %4$s, हटाने के लिए क्लिक करें</string>
+    <string name="words_board_square_tile">%2$s%3$s पर %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s पर %1$s, हटाने के लिए क्लिक करें</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s पर %1$s, %4$s, हटाने के लिए क्लिक करें</string>
 </resources>

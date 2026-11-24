@@ -87,7 +87,7 @@
     <string name="words_board_premium_name_start">শুরুর ঘর, শব্দের দ্বিগুণ স্কোর</string>
     <string name="words_board_square_empty">খালি ঘর %1$s%2$s</string>
     <string name="words_board_square_empty_premium">খালি ঘর %1$s%2$s, %3$s</string>
-    <string name="words_board_square_tile">%1$s এ %2$s%3$s</string>
-    <string name="words_board_square_pending">%1$s এ %2$s%3$s, সরাতে ক্লিক করুন</string>
-    <string name="words_board_square_pending_premium">%1$s এ %2$s%3$s, %4$s, সরাতে ক্লিক করুন</string>
+    <string name="words_board_square_tile">%2$s%3$s-এ %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s-এ %1$s, সরাতে ক্লিক করুন</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s-এ %1$s, %4$s, সরাতে ক্লিক করুন</string>
 </resources>

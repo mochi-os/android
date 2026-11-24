@@ -216,7 +216,7 @@
     <string name="reauth_signin_text">خبرتیاوې تر هغه ودرول شوې دي چې تاسو بیا ننوځئ</string>
     <string name="oem_hint_title">په شالید کې د رسېدو وړ پاتې شئ</string>
     <string name="oem_hint_body">د خبرتیاوو د رسولو لپاره Mochi باید په شالید کې فعال وي. مهرباني وکړئ په راتلونکي پرده کې دا اجازه ورکړئ، که نه نو کله چې پرده بنده وي ستاسو موبایل ممکن خبرتیاوې ودروي.</string>
-    <string name="oem_hint_samsung_note">د سامسنګ په موبایلونو کې، تنظیمات → د وسیلې پاملرنه → ویدې اپلیکیشنونه هم وګورئ او که Mochi پکې لیست شوی وي، یې لرې کړئ.</string>
+    <string name="oem_hint_samsung_note">د سامسنګ په موبایلونو کې، تنظیمات ← د وسیلې پاملرنه ← ویدې اپلیکیشنونه هم وګورئ او که Mochi پکې لیست شوی وي، یې لرې کړئ.</string>
     <string name="oem_hint_allow">د شالید اجازه ورکړئ</string>
     <string name="oem_hint_dismiss">بیا یې مه ښکاره کوئ</string>
     <string name="about_title">Mochi کلاینټ</string>

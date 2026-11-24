@@ -281,7 +281,7 @@
     <string name="wikis_revision_author">بر اساس %1$s</string>
     <string name="wikis_revision_show_page">نمایش صفحه</string>
     <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
-    <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$s → %2$s</string>
+    <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$s ← %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s نظر</item>
         <item quantity="other">%s نظر</item>

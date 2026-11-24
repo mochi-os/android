@@ -215,7 +215,7 @@
     <string name="reauth_signin_text">اطلاعات اس وقت تک روک دی گئی ہیں جب تک آپ دوبارہ سائن ان نہیں کرتے</string>
     <string name="oem_hint_title">پس منظر میں قابلِ رسائی رہیں</string>
     <string name="oem_hint_body">اطلاعات پہنچانے کے لیے Mochi کا پس منظر میں چلنا ضروری ہے۔ براہِ کرم اگلی سکرین پر اس کی اجازت دیں، ورنہ اسکرین بند ہونے پر آپ کا فون اطلاعات روک سکتا ہے۔</string>
-    <string name="oem_hint_samsung_note">Samsung فونز پر، سیٹنگز → ڈیوائس کی دیکھ بھال → سوئی ہوئی ایپس بھی دیکھیں اور اگر Mochi درج ہو تو اسے ہٹا دیں۔</string>
+    <string name="oem_hint_samsung_note">Samsung فونز پر، سیٹنگز ← ڈیوائس کی دیکھ بھال ← سوئی ہوئی ایپس بھی دیکھیں اور اگر Mochi درج ہو تو اسے ہٹا دیں۔</string>
     <string name="oem_hint_allow">پس منظر کی اجازت دیں</string>
     <string name="oem_hint_dismiss">دوبارہ نہ دکھائیں</string>
     <string name="about_label">متعلق</string>

@@ -90,7 +90,7 @@
     <string name="words_board_premium_name_start">ಆರಂಭಿಕ ಚೌಕ, ಪದದ ಎರಡು ಪಟ್ಟು ಅಂಕ</string>
     <string name="words_board_square_empty">ಖಾಲಿ ಚೌಕ %1$s%2$s</string>
     <string name="words_board_square_empty_premium">ಖಾಲಿ ಚೌಕ %1$s%2$s, %3$s</string>
-    <string name="words_board_square_tile">%1$s ರಲ್ಲಿ %2$s%3$s</string>
-    <string name="words_board_square_pending">%1$s ರಲ್ಲಿ %2$s%3$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
-    <string name="words_board_square_pending_premium">%1$s ರಲ್ಲಿ %2$s%3$s, %4$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="words_board_square_tile">%2$s%3$s ರಲ್ಲಿ %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s ರಲ್ಲಿ %1$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s ರಲ್ಲಿ %1$s, %4$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
 </resources>

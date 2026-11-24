@@ -285,7 +285,7 @@
     <string name="wikis_revision_author">حسب %1$s</string>
     <string name="wikis_revision_show_page">عرض الصفحة</string>
     <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
-    <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$s → %2$s</string>
+    <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$s ← %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="zero">%s تعليق</item>
         <item quantity="one">تعليق واحد</item>

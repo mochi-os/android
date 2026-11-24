@@ -281,7 +281,7 @@
     <string name="wikis_revision_author">%1$s جي ذريعي</string>
     <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
     <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
-    <string name="wikis_revision_changes_from">نسخي %1$s → %2$s کان تبديليون</string>
+    <string name="wikis_revision_changes_from">نسخي %1$s ← %2$s کان تبديليون</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s تبصرو</item>
         <item quantity="other">%s تبصرا</item>

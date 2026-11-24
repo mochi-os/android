@@ -90,7 +90,7 @@
     <string name="words_board_premium_name_start">શરૂઆતનું ખાનું, શબ્દના બે ગણા ગુણ</string>
     <string name="words_board_square_empty">ખાલી ખાનું %1$s%2$s</string>
     <string name="words_board_square_empty_premium">ખાલી ખાનું %1$s%2$s, %3$s</string>
-    <string name="words_board_square_tile">%1$s પર %2$s%3$s</string>
-    <string name="words_board_square_pending">%1$s પર %2$s%3$s, દૂર કરવા ક્લિક કરો</string>
-    <string name="words_board_square_pending_premium">%1$s પર %2$s%3$s, %4$s, દૂર કરવા ક્લિક કરો</string>
+    <string name="words_board_square_tile">%2$s%3$s પર %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s પર %1$s, દૂર કરવા ક્લિક કરો</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s પર %1$s, %4$s, દૂર કરવા ક્લિક કરો</string>
 </resources>

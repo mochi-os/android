@@ -216,7 +216,7 @@
     <string name="reauth_signin_text">اطلاع روڪيا ويا آھن جيستائين توھان وري سائن ان نه ڪندا</string>
     <string name="oem_hint_title">پس منظر ۾ پھچ ۾ رھو</string>
     <string name="oem_hint_body">اطلاع پھچائڻ لاءِ Mochi کي پس منظر ۾ ھلڻو پوندو. مھرباني ڪري ايندڙ اسڪرين تي ھن جي اجازت ڏيو، نه ته اسڪرين بند ٿيڻ تي توھان جو فون اطلاع روڪي سگھي ٿو.</string>
-    <string name="oem_hint_samsung_note">Samsung فونن تي، سيٽنگون → ڊيوائس جي سنڀال → سمهيل ايپس پڻ ڏسو ۽ جيڪڏھن Mochi لسٽ ٿيل آھي ته ان کي ھٽايو.</string>
+    <string name="oem_hint_samsung_note">Samsung فونن تي، سيٽنگون ← ڊيوائس جي سنڀال ← سمهيل ايپس پڻ ڏسو ۽ جيڪڏھن Mochi لسٽ ٿيل آھي ته ان کي ھٽايو.</string>
     <string name="oem_hint_allow">پس منظر جي اجازت ڏيو</string>
     <string name="oem_hint_dismiss">ٻيھر نه ڏيکاريو</string>
     <string name="about_title">Mochi ڪلائنٽ</string>

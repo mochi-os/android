@@ -281,7 +281,7 @@
     <string name="wikis_revision_author">بەپێی %1$s</string>
     <string name="wikis_revision_show_page">پیشاندانی لاپەڕە</string>
     <string name="wikis_revision_compare_failed">نەتوانرا وەشانی پێشوو بۆ بەراوردکردن بار بکرێت.</string>
-    <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$s → %2$s</string>
+    <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$s ← %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s لێدوان</item>
         <item quantity="other">%s لێدوان</item>

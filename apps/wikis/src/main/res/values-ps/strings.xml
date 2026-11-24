@@ -281,7 +281,7 @@
     <string name="wikis_revision_author">د %1$s له خوا</string>
     <string name="wikis_revision_show_page">پاڼه وښیه</string>
     <string name="wikis_revision_compare_failed">د پرتلې لپاره مخکینۍ نسخه نه شوه پورته کیدای.</string>
-    <string name="wikis_revision_changes_from">د نسخې له %1$s → %2$s بدلونونه</string>
+    <string name="wikis_revision_changes_from">د نسخې له %1$s ← %2$s بدلونونه</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s تبصره</item>
         <item quantity="other">%s تبصرې</item>

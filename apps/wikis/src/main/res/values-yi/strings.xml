@@ -281,7 +281,7 @@
     <string name="wikis_revision_author">לױט %1$s</string>
     <string name="wikis_revision_show_page">ווײַז בלאַט</string>
     <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
-    <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$s → %2$s</string>
+    <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$s ← %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%s קאָמענטאַר</item>
         <item quantity="other">%s קאָמענטאַרן</item>

@@ -214,7 +214,7 @@
     <string name="reauth_signin_text">ئاگادارکردنەوەکان وەستێنراون تا دووبارە دەچیتە ژوورەوە</string>
     <string name="oem_hint_title">لە پاشبنەمادا بەردەست بمێنەرەوە</string>
     <string name="oem_hint_body">Mochi دەبێت لە پاشبنەمادا کار بکات بۆ گەیاندنی ئاگادارکردنەوەکان. تکایە لە شاشەی داهاتوودا ڕێگە بدە، ئەگەرنا مۆبایلەکەت لەوانەیە کاتێک شاشە کوژاوەیە ئاگادارکردنەوەکان ڕابگرێت.</string>
-    <string name="oem_hint_samsung_note">لە مۆبایلی سامسۆنگدا، هەروەها سەیری ڕێکخستنەکان → چاودێری ئامێر → ئەپە نوستووەکان بکە و Mochi لاببە ئەگەر لە لیستەکەدا هەبوو.</string>
+    <string name="oem_hint_samsung_note">لە مۆبایلی سامسۆنگدا، هەروەها سەیری ڕێکخستنەکان ← چاودێری ئامێر ← ئەپە نوستووەکان بکە و Mochi لاببە ئەگەر لە لیستەکەدا هەبوو.</string>
     <string name="oem_hint_allow">ڕێگەدان بە پاشبنەما</string>
     <string name="oem_hint_dismiss">جارێکی تر پیشان مەدە</string>
     <string name="about_label">دەربارە</string>

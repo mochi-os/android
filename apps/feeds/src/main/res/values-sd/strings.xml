@@ -91,7 +91,7 @@
     <string name="feeds_search_results">ڳولا جا نتيجا</string>
     <string name="feeds_unread_only">صرف اڻ پڙهيل</string>
     <string name="feeds_location_at">%1$s تي</string>
-    <string name="feeds_travel_arrow">%1$s → %2$s</string>
+    <string name="feeds_travel_arrow">%1$s ← %2$s</string>
     <string name="feeds_travel_from">%1$s کان</string>
     <string name="feeds_travel_to">%1$s ڏانهن</string>
     <string name="feeds_view_post">پوسٽ ڏسو</string>
