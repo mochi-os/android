@@ -418,7 +418,7 @@
     <string name="networks_title">បណ្តាញ</string>
     <string name="networks_not_offered">ម៉ាស៊ីនមេនេះមិនផ្តល់បណ្តាញផ្សេងទៀតទេ។</string>
     <string name="networks_link">ភ្ជាប់គណនី</string>
-    <string name="networks_link_action">តំណ</string>
+    <string name="networks_link_action">ភ្ជាប់</string>
     <string name="networks_linked">បានភ្ជាប់គណនី</string>
     <string name="networks_link_denied">ម៉ាស៊ីនមេមិនបានអនុញ្ញាតការភ្ជាប់ទេ</string>
     <string name="networks_link_failed">មិនអាចភ្ជាប់គណនីបានទេ</string>

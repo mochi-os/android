@@ -428,7 +428,7 @@
     <string name="networks_title">Nätverk</string>
     <string name="networks_not_offered">Den här servern erbjuder inga andra nätverk.</string>
     <string name="networks_link">Länka ett konto</string>
-    <string name="networks_link_action">Länk</string>
+    <string name="networks_link_action">Länka</string>
     <string name="networks_linked">Kontot har länkats</string>
     <string name="networks_link_denied">Servern tillät inte länkningen</string>
     <string name="networks_link_failed">Det gick inte att länka kontot</string>

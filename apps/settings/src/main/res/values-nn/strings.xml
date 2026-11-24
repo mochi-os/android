@@ -430,7 +430,7 @@
     <string name="networks_title">Nettverk</string>
     <string name="networks_not_offered">Denne tenaren tilbyr ikkje andre nettverk.</string>
     <string name="networks_link">Kople til ein konto</string>
-    <string name="networks_link_action">Lenkje</string>
+    <string name="networks_link_action">Kople til</string>
     <string name="networks_linked">Konto kopla</string>
     <string name="networks_link_denied">Tenaren tillét ikkje koplinga</string>
     <string name="networks_link_failed">Klarte ikkje å kople til kontoen</string>

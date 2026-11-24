@@ -428,7 +428,7 @@
     <string name="networks_title">Hálózatok</string>
     <string name="networks_not_offered">Ez a kiszolgáló nem kínál más hálózatokat.</string>
     <string name="networks_link">Fiók összekapcsolása</string>
-    <string name="networks_link_action">Hivatkozás</string>
+    <string name="networks_link_action">Összekapcsolás</string>
     <string name="networks_linked">Fiók összekapcsolva</string>
     <string name="networks_link_denied">A kiszolgáló nem engedélyezte az összekapcsolást</string>
     <string name="networks_link_failed">Nem sikerült összekapcsolni a fiókot</string>

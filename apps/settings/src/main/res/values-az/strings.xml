@@ -428,7 +428,7 @@
     <string name="networks_title">Şəbəkələr</string>
     <string name="networks_not_offered">Bu server başqa şəbəkələr təklif etmir.</string>
     <string name="networks_link">Hesab əlaqələndir</string>
-    <string name="networks_link_action">Keçid</string>
+    <string name="networks_link_action">Əlaqələndir</string>
     <string name="networks_linked">Hesab bağlandı</string>
     <string name="networks_link_denied">Server əlaqələndirməyə icazə vermədi</string>
     <string name="networks_link_failed">Hesab əlaqələndirilə bilmədi</string>

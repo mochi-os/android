@@ -55,7 +55,7 @@
     <string name="market_checkout_address_name">Naam</string>
     <string name="market_checkout_address_postcode">Postcode</string>
     <string name="market_checkout_address_region">Regio</string>
-    <string name="market_checkout_delivery_download">Downloaden</string>
+    <string name="market_checkout_delivery_download">Download</string>
     <string name="market_checkout_delivery_method">Bezorgmethode</string>
     <string name="market_checkout_delivery_pickup">Afhalen</string>
     <string name="market_checkout_delivery_shipping">Verzending</string>
@@ -130,7 +130,7 @@
     <string name="market_filter_condition_refurbished">Gerefurbished</string>
     <string name="market_filter_condition_used">Gebruikt</string>
     <string name="market_filter_delivery">Bezorging</string>
-    <string name="market_filter_delivery_download">Downloaden</string>
+    <string name="market_filter_delivery_download">Download</string>
     <string name="market_filter_delivery_pickup">Afhalen</string>
     <string name="market_filter_delivery_shipping">Verzending</string>
     <string name="market_filter_price_max">Max</string>
@@ -572,7 +572,7 @@
     <string name="market_audit_listing_created">Advertentie aangemaakt</string>
     <string name="market_audit_listing_deleted">Advertentie verwijderd</string>
     <string name="market_audit_listing_published">Advertentie gepubliceerd</string>
-    <string name="market_audit_listing_rejected">Afgewezen door staf</string>
+    <string name="market_audit_listing_rejected">Afgewezen door medewerkers</string>
     <string name="market_audit_listing_relisted">Opnieuw geplaatst</string>
     <string name="market_audit_listing_removed">Verwijderd</string>
     <string name="market_audit_listing_warning">Waarschuwing afgegeven</string>

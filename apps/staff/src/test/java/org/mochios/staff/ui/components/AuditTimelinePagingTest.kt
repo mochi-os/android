@@ -5,6 +5,8 @@
 
 package org.mochios.staff.ui.components
 
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -72,7 +74,7 @@ class AuditTimelinePagingTest {
         model.load("order", "o1")
         server.until { !model.state.value.isLoading }
         rule.setContent {
-            val state = model.state.value
+            val state by model.state.collectAsState()
             AuditTimelineBody(state = state, onMore = model::loadMore)
         }
         val more = server.context.getString(R.string.staff_audit_load_more)

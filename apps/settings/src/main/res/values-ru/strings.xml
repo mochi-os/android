@@ -448,7 +448,7 @@
     <string name="networks_title">Сети</string>
     <string name="networks_not_offered">Этот сервер не предлагает других сетей.</string>
     <string name="networks_link">Связать аккаунт</string>
-    <string name="networks_link_action">Ссылка</string>
+    <string name="networks_link_action">Связать</string>
     <string name="networks_linked">Аккаунт связан</string>
     <string name="networks_link_denied">Сервер не разрешил связывание</string>
     <string name="networks_link_failed">Не удалось связать аккаунт</string>

@@ -34,6 +34,7 @@ import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.UnsavedEdits
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.projects.model.Activity
@@ -124,6 +125,9 @@ class ObjectDetailViewModel @Inject constructor(
 
     private var debounceJobs = mutableMapOf<String, Job>()
 
+    /** Edits the server may not have yet, which every read of the object keeps. */
+    private val unsaved = UnsavedEdits()
+
     // Auto-save runs on a scope deliberately NOT tied to viewModelScope: a
     // save scheduled just before the user leaves the screen must still
     // complete. viewModelScope would cancel it in onCleared().
@@ -175,8 +179,11 @@ class ObjectDetailViewModel @Inject constructor(
         currentProjectId = projectId
         currentObjectId = objectId
         // Only carry over the object being opened; a previous selection's
-        // detail would otherwise render until the fetch returns.
-        val carried = initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId }
+        // detail would otherwise render until the fetch returns. Its edits
+        // still waiting on their saves go over the copy opened from, which
+        // the board read before them, so typing on carries the earlier edit.
+        val carried = (initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId })
+            ?.let { obj -> withUnsaved(objectId, obj, emptySet()) }
         _uiState.value = ObjectDetailUiState(
             obj = carried,
             access = access,
@@ -201,13 +208,14 @@ class ObjectDetailViewModel @Inject constructor(
         loadLinks()
         loadSiblingObjects()
         loadPeople()
+        val sent = unsaved.waiting(objectId)
         loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(projectId, objectId)
                 // Cancellation is cooperative and the tab loaders below read the
                 // current ids, so re-check before writing anything.
                 if (currentProjectId != projectId || currentObjectId != objectId) return@launch
-                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched), isLoading = false)
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched, sent), isLoading = false)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -315,33 +323,29 @@ class ObjectDetailViewModel @Inject constructor(
     private fun loadObjectOnly() {
         val projectId = currentProjectId
         val objectId = currentObjectId
+        val sent = unsaved.waiting(objectId)
         viewModelScope.launch {
             try {
                 val fetched = repository.getObject(projectId, objectId)
                 // The sheet may have moved to another object while this was asked.
                 if (currentProjectId != projectId || currentObjectId != objectId) return@launch
-                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched))
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched, sent))
             } catch (_: Exception) { }
         }
     }
 
     /**
      * [fetched] as the sheet should show it: the server's values and parent,
-     * except where an edit of [objectId] is still waiting or being saved, which
-     * stays as the user left it - a refetch must not undo an edit the server
-     * has not yet had.
+     * except where an edit of [objectId] waited on its save when the read was
+     * sent, or waits now, which stays as the user left it - a read must not
+     * undo an edit the server had not yet had when it answered.
      */
-    private fun withUnsaved(objectId: String, fetched: ProjectObject): ProjectObject {
-        val shown = _uiState.value.obj?.takeIf { obj -> obj.id == objectId } ?: return fetched
-        val prefix = "$objectId/value_"
-        val unsaved = debounceJobs.keys.filter { key -> key.startsWith(prefix) }.map { key -> key.removePrefix(prefix) }
-        val values = if (unsaved.isEmpty()) fetched.values else fetched.values.toMutableMap().apply {
-            for (field in unsaved) {
-                if (field in shown.values) put(field, shown.values[field]) else remove(field)
-            }
-        }
-        val parent = if ("$objectId/parent" in debounceJobs) shown.parent else fetched.parent
-        return fetched.copy(values = values, parent = parent)
+    private fun withUnsaved(objectId: String, fetched: ProjectObject, sent: Set<String?>): ProjectObject {
+        val shown = _uiState.value.obj?.takeIf { obj -> obj.id == objectId }
+        return fetched.copy(
+            values = unsaved.values(objectId, fetched.values, shown?.values, sent),
+            parent = unsaved.parent(objectId, fetched.parent, shown?.parent, sent),
+        )
     }
 
     fun selectTab(index: Int) {
@@ -390,7 +394,7 @@ class ObjectDetailViewModel @Inject constructor(
                 }
             }
         }
-        scheduleSave(key, undo = undo) {
+        scheduleSave(key, undo = undo, edit = unsaved.value(objectId, fieldId, value)) {
             repository.setValue(projectId, objectId, fieldId, value)
         }
     }
@@ -883,7 +887,7 @@ class ObjectDetailViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(obj = now.copy(parent = before))
             }
         }
-        scheduleSave(key, delayMs = 0, undo = undo) {
+        scheduleSave(key, delayMs = 0, undo = undo, edit = unsaved.parent(objectId, newParent)) {
             repository.updateObject(projectId, objectId, parent = newParent)
         }
     }
@@ -937,6 +941,8 @@ class ObjectDetailViewModel @Inject constructor(
         key: String,
         delayMs: Long = 500,
         undo: (() -> Unit)? = null,
+        // The edit saved, which reads of the object keep until it answers.
+        edit: UnsavedEdits.Edit? = null,
         save: suspend () -> Unit,
     ) {
         debounceJobs[key]?.cancel()
@@ -957,6 +963,9 @@ class ObjectDetailViewModel @Inject constructor(
                 e.toMochiError()
             }
             activeSaves--
+            if (edit != null) {
+                if (failure == null) unsaved.saved(edit) else unsaved.refused(edit)
+            }
             if (failure != null) undo?.invoke()
             held.remove(key)
             if (failure != null) {

@@ -47,6 +47,15 @@ fun extractVideos(html: String): List<VideoInfo> {
 }
 
 /**
+ * The address the player's page is loaded at, which its frame names as the
+ * `Referer`: the app's id over https, as YouTube asks an app's embedded player
+ * to identify itself. A WebView page loaded at no address sends none, where
+ * the web's page sends its own origin under the same
+ * strict-origin-when-cross-origin policy the frame is given here.
+ */
+internal fun referrer(application: String): String = "https://${application.lowercase()}/"
+
+/**
  * Renders an embedded video player via WebView iframe.
  */
 @Composable
@@ -71,7 +80,7 @@ fun VideoEmbed(
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>body{margin:0;background:#000} iframe{width:100%;height:100%;border:none}</style>
         </head><body>
-        <iframe src="$embedUrl" allowfullscreen></iframe>
+        <iframe src="$embedUrl" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </body></html>
         """.trimIndent()
     }
@@ -113,7 +122,7 @@ fun VideoEmbed(
                     settings.javaScriptEnabled = true
                     settings.domStorageEnabled = true
                     settings.mediaPlaybackRequiresUserGesture = false
-                    loadDataWithBaseURL(null, html, "text/html", "UTF-8", null)
+                    loadDataWithBaseURL(referrer(context.packageName), html, "text/html", "UTF-8", null)
                     shown[0] = this
                 }
             },

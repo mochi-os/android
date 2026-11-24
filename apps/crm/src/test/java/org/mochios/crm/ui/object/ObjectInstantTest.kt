@@ -76,7 +76,9 @@ class ObjectInstantTest {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 val path = request.path.orEmpty().substringBefore("?")
                 return when {
-                    path == "/crm/p1/-/objects/o1" -> ok("""{"object": {"id": "o1", "crm": "p1", "parent": "x1"}}""")
+                    // The server answers an object's values beside it, always.
+                    path == "/crm/p1/-/objects/o1" ->
+                        ok("""{"object": {"id": "o1", "crm": "p1", "parent": "x1"}, "values": {"status": "open", "title": "Old"}}""")
                     path == "/crm/p1/-/objects/o1/watchers" -> ok("""{"watchers": [], "watching": false}""")
                     path.startsWith("/crm/p1/-/objects/o1/values/") ||
                         path == "/crm/p1/-/objects/o1/update" ||

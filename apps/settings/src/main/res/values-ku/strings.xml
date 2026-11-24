@@ -428,7 +428,7 @@
     <string name="networks_title">Tor</string>
     <string name="networks_not_offered">Ev server torên din pêşkêş nake.</string>
     <string name="networks_link">Hesabekî girê bide</string>
-    <string name="networks_link_action">Girêdan</string>
+    <string name="networks_link_action">Girê bide</string>
     <string name="networks_linked">Hesab hate girêdan</string>
     <string name="networks_link_denied">Serverê destûr neda girêdanê</string>
     <string name="networks_link_failed">Hesab nehat girêdan</string>

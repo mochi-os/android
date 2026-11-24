@@ -55,6 +55,13 @@ import java.util.concurrent.TimeUnit
  * wide, Robolectric's default, measures once, which is why the dialog tests
  * use it; so does a dialog that sizes its own window.
  *
+ * It is Robolectric's alone. On an Android 16 emulator 411 dp wide, and again
+ * at 360 dp, the access rule dialog (a MochiAlertDialog holding a
+ * MochiTextField, at the default size) rendered no frame in 5 s left alone
+ * with the field unfocused, and 10 with it focused: the cursor's blink. A
+ * dialog holding only text rendered none either. So dialogs keep the platform's
+ * width, and these tests the default display.
+ *
  * Every test bounds the wait for idle to a few seconds, so a dialog that
  * does not settle fails fast rather than spinning until the heap is gone.
  */

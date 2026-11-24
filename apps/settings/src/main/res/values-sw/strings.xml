@@ -428,7 +428,7 @@
     <string name="networks_title">Mitandao</string>
     <string name="networks_not_offered">Seva hii haitoi mitandao mingine.</string>
     <string name="networks_link">Unganisha akaunti</string>
-    <string name="networks_link_action">Kiungo</string>
+    <string name="networks_link_action">Unganisha</string>
     <string name="networks_linked">Akaunti imeunganishwa</string>
     <string name="networks_link_denied">Seva haikuruhusu muunganisho</string>
     <string name="networks_link_failed">Haikuweza kuunganisha akaunti</string>

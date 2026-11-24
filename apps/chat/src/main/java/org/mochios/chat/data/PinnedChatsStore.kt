@@ -32,8 +32,8 @@ class PinnedChatsStore @Inject constructor(
         chats.change { pins -> if (chat in pins) pins - chat else pins + chat }
     }
 
-    /** Drop the pins of chats the account's whole list, [listed], no longer has. */
-    fun prune(listed: Set<String>) = chats.prune(listed)
+    /** Drop the pins of chats [account]'s whole list, [listed], no longer has, while it is signed in. */
+    fun prune(listed: Set<String>, account: String?) = chats.prune(listed, account)
 
     private companion object {
         const val PREFS = "mochi_chat_pins"

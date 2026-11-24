@@ -76,6 +76,7 @@ import org.mochios.market.model.Order
 import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.disputeReasonLabel
@@ -166,7 +167,7 @@ fun PurchaseDetailScreen(
                         submitting = state.submitting,
                         onConfirm = { viewModel.confirmDelivery() },
                         onMessageSeller = {
-                            navController.navigate(
+                            navController.open(
                                 MarketApp.messageThread(detail.listing.id.toString(), "new"),
                             )
                         },

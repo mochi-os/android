@@ -77,6 +77,7 @@ import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
 import org.mochios.market.model.RemovalCheck
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.ui.components.ListingStatusBadge
 import org.mochios.market.ui.components.MarketLayout
@@ -119,7 +120,7 @@ fun MyListingsScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is MyListingsEvent.NavigateToEdit ->
-                    navController.navigate(MarketApp.listingEdit(event.listingId.toString()))
+                    navController.open(MarketApp.listingEdit(event.listingId.toString()))
                 is MyListingsEvent.Toast ->
                     snackbarHostState.showSnackbar(event.message)
                 MyListingsEvent.NotSeller ->
@@ -213,12 +214,12 @@ fun MyListingsScreen(
                         ListingRow(
                             listing = listing,
                             onClick = {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.listingDetail(listing.id, listing.title),
                                 )
                             },
                             onEdit = {
-                                navController.navigate(MarketApp.listingEdit(listing.id))
+                                navController.open(MarketApp.listingEdit(listing.id))
                             },
                             onDelete = { deleteCandidate = listing },
                             onRelist = { viewModel.relistListing(listing, relistFailedFallback) },

@@ -428,7 +428,7 @@
     <string name="networks_title">Тармактар</string>
     <string name="networks_not_offered">Бул сервер башка тармактарды сунуштабайт.</string>
     <string name="networks_link">Аккаунтту байланыштыруу</string>
-    <string name="networks_link_action">Шилтеме</string>
+    <string name="networks_link_action">Байланыштыруу</string>
     <string name="networks_linked">Аккаунт байланыштырылды</string>
     <string name="networks_link_denied">Сервер байланыштырууга уруксат берген жок</string>
     <string name="networks_link_failed">Аккаунтту байланыштыруу мүмкүн болбоду</string>

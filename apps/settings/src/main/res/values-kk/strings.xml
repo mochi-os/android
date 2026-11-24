@@ -428,7 +428,7 @@
     <string name="networks_title">Желілер</string>
     <string name="networks_not_offered">Бұл сервер басқа желілерді ұсынбайды.</string>
     <string name="networks_link">Тіркелгіні байланыстыру</string>
-    <string name="networks_link_action">Сілтеме</string>
+    <string name="networks_link_action">Байланыстыру</string>
     <string name="networks_linked">Тіркелгі байланыстырылды</string>
     <string name="networks_link_denied">Сервер байланыстыруға рұқсат бермеді</string>
     <string name="networks_link_failed">Тіркелгіні байланыстыру мүмкін болмады</string>

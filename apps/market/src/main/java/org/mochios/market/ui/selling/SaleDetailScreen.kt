@@ -80,6 +80,7 @@ import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.buying.WriteReviewForm
 import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.MarketStatusBadge
@@ -173,14 +174,14 @@ fun SaleDetailScreen(
                     },
                     onOpenBuyer = { account, fingerprint ->
                         if (account.isNotBlank()) {
-                            navController.navigate(MarketApp.publicProfile(account, fingerprint))
+                            navController.open(MarketApp.publicProfile(account, fingerprint))
                         }
                     },
                     // The seller opens (or reopens) the conversation with this
                     // order's buyer; the server needs the buyer named, since a
                     // seller has one conversation per buyer on a listing.
                     onMessageBuyer = {
-                        navController.navigate(
+                        navController.open(
                             MarketApp.messageThread(
                                 listingId = detail.listing.id.ifBlank { detail.order.listing },
                                 threadId = "new",

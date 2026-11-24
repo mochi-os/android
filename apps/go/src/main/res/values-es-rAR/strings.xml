@@ -5,20 +5,11 @@
     <string name="go_action_more">Abrí las acciones de la partida</string>
     <string name="go_action_open_chat">Abrí el panel del chat</string>
     <string name="go_delete_confirm">Eliminá</string>
-    <string name="go_delete_title">¿Eliminar la partida?</string>
     <string name="go_draw_accept">Aceptá</string>
     <string name="go_draw_decline">Rechazá</string>
     <string name="go_new_game_add_friends">Agregá amigos</string>
     <string name="go_resign_message">¿Estás seguro de que querés rendirte? %1$s va a ganar la partida.</string>
     <string name="go_status_resigned_self">Te rendiste — gana %1$s</string>
-    <string name="go_status_you_win">¡Ganaste!</string>
 
-    <string name="go_app_title">Go</string>
-    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
-    <string name="go_chat_title">Chat</string>
-    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
-    <string name="go_new_game_komi_label">Komi</string>
-    <string name="go_new_game_komi_field_label">Komi</string>
 
-    <string name="go_chat_player_passed">%1$s pasó</string>
 </resources>

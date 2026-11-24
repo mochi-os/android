@@ -39,7 +39,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -58,8 +57,6 @@ import androidx.navigation.NavController
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
@@ -72,6 +69,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.Reading
+import org.mochios.android.ui.components.collectPartAsState
 import org.mochios.android.websocket.REOPEN
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
@@ -81,6 +79,7 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.Message
 import org.mochios.market.model.photoAddress
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.dialog.CONVERSATION_REPORT_REASONS
 import org.mochios.market.ui.dialog.ReportListingDialog
 
@@ -90,16 +89,8 @@ fun MessageThreadScreen(
     navController: NavController,
     viewModel: MessageThreadViewModel = hiltViewModel(),
 ) {
-    val state by remember(viewModel) {
-        viewModel.state
-            .map { thread -> thread.copy(draft = "") }
-            .distinctUntilChanged()
-    }.collectAsState(initial = viewModel.state.value.copy(draft = ""))
-    val draft = remember(viewModel) {
-        viewModel.state
-            .map { thread -> thread.draft }
-            .distinctUntilChanged()
-    }.collectAsState(initial = viewModel.state.value.draft)
+    val state by viewModel.state.collectPartAsState { thread -> thread.copy(draft = "") }
+    val draft = viewModel.state.collectPartAsState { thread -> thread.draft }
     val listState = rememberLazyListState()
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -204,7 +195,7 @@ fun MessageThreadScreen(
                 photo = state.photo,
                 onClick = {
                     if (listingId.isNotBlank()) {
-                        navController.navigate(
+                        navController.open(
                             MarketApp.listingDetail(listingId, state.listing.title),
                         )
                     }

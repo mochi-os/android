@@ -428,7 +428,7 @@
     <string name="networks_title">ਨੈੱਟਵਰਕ</string>
     <string name="networks_not_offered">ਇਹ ਸਰਵਰ ਹੋਰ ਨੈੱਟਵਰਕ ਪੇਸ਼ ਨਹੀਂ ਕਰਦਾ।</string>
     <string name="networks_link">ਖਾਤਾ ਲਿੰਕ ਕਰੋ</string>
-    <string name="networks_link_action">ਲਿੰਕ</string>
+    <string name="networks_link_action">ਲਿੰਕ ਕਰੋ</string>
     <string name="networks_linked">ਖਾਤਾ ਲਿੰਕ ਹੋ ਗਿਆ</string>
     <string name="networks_link_denied">ਸਰਵਰ ਨੇ ਲਿੰਕ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ</string>
     <string name="networks_link_failed">ਖਾਤਾ ਲਿੰਕ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>

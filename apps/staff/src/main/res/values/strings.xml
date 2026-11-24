@@ -401,6 +401,7 @@
     <string name="staff_status_cancelled">Cancelled</string>
     <string name="staff_status_completed">Completed</string>
     <string name="staff_status_delivered">Delivered</string>
+    <string name="staff_status_denied">Appeal rejected</string>
     <string name="staff_status_dismissed">Dismissed</string>
     <string name="staff_status_disputed">Disputed</string>
     <string name="staff_status_draft">Draft</string>
@@ -425,6 +426,7 @@
     <string name="staff_status_support">Support</string>
     <string name="staff_status_suspended">Suspended</string>
     <string name="staff_status_unknown">Unknown</string>
+    <string name="staff_status_upheld">Appeal approved</string>
     <string name="staff_team_action_remove">Remove</string>
     <string name="staff_team_add_member">Add member</string>
     <string name="staff_team_added_by_label">Added by:</string>

@@ -6,6 +6,8 @@
 package org.mochios.projects.ui.`object`
 
 import android.os.Looper
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
@@ -37,6 +39,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.projects.R
@@ -234,6 +237,34 @@ class ObjectSheetTest {
     }
 
     @Test
+    fun `a read sent while a save waited keeps the edit, though the save answers first`() {
+        open()
+        model.setValue("title", "Typed")
+        until { writes.any { (path, _) -> path.endsWith("/values/title") } }
+        refetching = CountDownLatch(1)
+        live!!.send("""{"type": "values/update", "id": "o1"}""")
+        until { reads("/projects/p1/-/objects/o1") == 2 }
+        // The save answers while the read, served before it, is out.
+        saving.countDown()
+        until { model.uiState.value.saveStatus == SaveStatus.Saved }
+        refetching!!.countDown()
+        settle()
+        assertEquals("THE POINT: the read served before the save does not undo it", "Typed", value("title"))
+    }
+
+    @Test
+    fun `reopened before its save goes, the sheet shows the edit over the board's copy`() {
+        open()
+        model.setValue("title", "Typed")
+        model.close()
+        model.loadWithInitialObject("p1", "o1", ProjectObject(id = "o1", project = "p1", values = mapOf("status" to "open", "title" to "Old")), "owner")
+        assertEquals("THE POINT: the board's older copy does not hide the edit, so typing on keeps it", "Typed", value("title"))
+        until { reads("/projects/p1/-/objects/o1") == 2 }
+        settle()
+        assertEquals("nor does the read the reopening sends", "Typed", value("title"))
+    }
+
+    @Test
     fun `a refetch of one object does not land on the next`() {
         open()
         refetching = CountDownLatch(1)
@@ -319,8 +350,9 @@ class ObjectSheetTest {
         model.ensureRepositories()
         until { model.uiState.value.requests.isNotEmpty() && model.uiState.value.repositories.isNotEmpty() }
         rule.setContent {
+            val state by model.uiState.collectAsState()
             RequestsTab(
-                requests = model.uiState.value.requests,
+                requests = state.requests,
                 projectId = "p1",
                 viewModel = model,
                 onViewDiff = { _, _, _, _ -> },

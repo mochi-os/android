@@ -428,7 +428,7 @@
     <string name="networks_title">نيٽ ورڪس</string>
     <string name="networks_not_offered">هي سرور ٻيا نيٽ ورڪ پيش نٿو ڪري.</string>
     <string name="networks_link">اڪائونٽ ڳنڍيو</string>
-    <string name="networks_link_action">لنڪ</string>
+    <string name="networks_link_action">ڳنڍيو</string>
     <string name="networks_linked">اڪائونٽ ڳنڍيو ويو</string>
     <string name="networks_link_denied">سرور ڳنڍڻ جي اجازت نه ڏني</string>
     <string name="networks_link_failed">اڪائونٽ ڳنڍي نه سگهيو</string>

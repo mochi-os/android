@@ -670,7 +670,7 @@
         <item quantity="other">%1$s vendas</item>
     </plurals>
     <plurals name="market_purchase_download">
-        <item quantity="one">Transfira o seu ficheiro abaixo.</item>
+        <item quantity="one">Transfira o seu %1$s ficheiro abaixo.</item>
         <item quantity="other">Transfira os seus %1$s ficheiros abaixo.</item>
     </plurals>
     <plurals name="market_rating_reviews">

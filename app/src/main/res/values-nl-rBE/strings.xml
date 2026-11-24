@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Feeds</string>
-    <string name="launcher_chat">Mochi Chat</string>
-    <string name="launcher_forums">Mochi Forums</string>
-    <string name="launcher_crm">Mochi CRM</string>
     <string name="launcher_people">Mochi Personen</string>
-    <string name="launcher_settings">Mochi Instellingen</string>
-
-    <string name="launcher_go">Mochi Go</string>
-    <string name="launcher_staff">Mochi-personeel</string>
 
 
-    <string name="app_name">Mochi</string>
+
 
 </resources>

@@ -37,6 +37,8 @@ import org.osmdroid.views.overlay.MapEventsOverlay
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
 
 /**
  * The place picker against a geocoder that answers from the test: a failed
@@ -115,6 +117,89 @@ class PlacePickerTest {
         )
     }
 
+    /**
+     * A geocoder whose reverse lookup counts down [asked] and answers
+     * "Somewhere Else" once [answer] is counted down; searches answer [search].
+     */
+    private fun held(asked: CountDownLatch, answer: CountDownLatch, search: String = "[]"): NominatimService {
+        val client = OkHttpClient.Builder()
+            .addInterceptor { chain ->
+                val request = chain.request()
+                val reversing = request.url.encodedPath == "/reverse"
+                if (reversing) {
+                    asked.countDown()
+                    answer.await(5, TimeUnit.SECONDS)
+                }
+                val body = if (reversing) {
+                    """{"display_name":"Somewhere Else","name":"Somewhere Else","lat":"1","lon":"2","class":"place"}"""
+                } else {
+                    search
+                }
+                Response.Builder()
+                    .request(request)
+                    .protocol(Protocol.HTTP_1_1)
+                    .code(200)
+                    .message("")
+                    .body(body.toResponseBody("application/json".toMediaType()))
+                    .build()
+            }
+            .build()
+        return NominatimService(client)
+    }
+
+    private fun tapMap() {
+        rule.runOnUiThread {
+            val map = rule.activity.window.decorView.map()!!
+            val overlay = map.overlays.filterIsInstance<MapEventsOverlay>().single()
+            val tap = MotionEvent.obtain(0, 0, MotionEvent.ACTION_UP, map.width / 2f, map.height / 2f, 0)
+            overlay.onSingleTapConfirmed(tap, map)
+            tap.recycle()
+        }
+    }
+
+    @Test
+    fun `a name typed while the tap's lookup is out is not overwritten by its answer`() {
+        val picked = mutableListOf<PlaceData>()
+        val asked = CountDownLatch(1)
+        val answer = CountDownLatch(1)
+        rule.setContent { PlacePicker(place = null, onPlaceSelected = { place -> picked += place }, service = held(asked, answer)) }
+        rule.waitForIdle()
+        tapMap()
+        rule.waitUntil(5_000) {
+            rule.mainClock.advanceTimeBy(100)
+            asked.count == 0L
+        }
+        rule.onNode(hasSetTextAction()).performTextInput("Home")
+        answer.countDown()
+        Thread.sleep(500)
+        rule.waitForIdle()
+        assertEquals("THE POINT: the typed name stands", "Home", picked.last().name)
+        rule.onNodeWithText("Somewhere Else").assertDoesNotExist()
+    }
+
+    @Test
+    fun `a suggestion picked while the tap's lookup is out is not overwritten by its answer`() {
+        val picked = mutableListOf<PlaceData>()
+        val asked = CountDownLatch(1)
+        val answer = CountDownLatch(1)
+        val tallinn = """[{"display_name":"Tallinn, Estonia","name":"Tallinn","lat":"59.43","lon":"24.75","class":"boundary","osm_type":"relation","osm_id":"1"}]"""
+        rule.setContent {
+            PlacePicker(place = null, onPlaceSelected = { place -> picked += place }, service = held(asked, answer, tallinn))
+        }
+        rule.onNode(hasSetTextAction()).performTextInput("Tallinn")
+        waitFor("Tallinn, Estonia")
+        tapMap()
+        rule.waitUntil(5_000) {
+            rule.mainClock.advanceTimeBy(100)
+            asked.count == 0L
+        }
+        rule.onNodeWithText("Tallinn, Estonia").performClick()
+        answer.countDown()
+        Thread.sleep(500)
+        rule.waitForIdle()
+        assertEquals("THE POINT: the picked place stands", "Tallinn, Estonia", picked.last().name)
+    }
+
     private fun View.map(): MapView? = when (this) {
         is MapView -> this
         is ViewGroup -> (0 until childCount).firstNotNullOfOrNull { index -> getChildAt(index).map() }
@@ -138,13 +223,7 @@ class PlacePickerTest {
         later = true
         rule.waitForIdle()
 
-        rule.runOnUiThread {
-            val map = rule.activity.window.decorView.map()!!
-            val overlay = map.overlays.filterIsInstance<MapEventsOverlay>().single()
-            val tap = MotionEvent.obtain(0, 0, MotionEvent.ACTION_UP, map.width / 2f, map.height / 2f, 0)
-            overlay.onSingleTapConfirmed(tap, map)
-            tap.recycle()
-        }
+        tapMap()
         rule.waitForIdle()
 
         assertTrue("the first composition's callback is stale", first.isEmpty())

@@ -448,7 +448,7 @@
     <string name="networks_title">Мережі</string>
     <string name="networks_not_offered">Цей сервер не пропонує інших мереж.</string>
     <string name="networks_link">Пов\'язати обліковий запис</string>
-    <string name="networks_link_action">Посилання</string>
+    <string name="networks_link_action">Пов\'язати</string>
     <string name="networks_linked">Обліковий запис пов\'язано</string>
     <string name="networks_link_denied">Сервер не дозволив пов\'язування</string>
     <string name="networks_link_failed">Не вдалося пов\'язати обліковий запис</string>

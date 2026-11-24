@@ -428,7 +428,7 @@
     <string name="networks_title">నెట్‌వర్క్‌లు</string>
     <string name="networks_not_offered">ఈ సర్వర్ ఇతర నెట్‌వర్క్‌లను అందించదు.</string>
     <string name="networks_link">ఖాతాను లింక్ చేయండి</string>
-    <string name="networks_link_action">లింక్</string>
+    <string name="networks_link_action">లింక్ చేయండి</string>
     <string name="networks_linked">ఖాతా లింక్ అయింది</string>
     <string name="networks_link_denied">సర్వర్ లింక్‌ను అనుమతించలేదు</string>
     <string name="networks_link_failed">ఖాతాను లింక్ చేయలేకపోయింది</string>

@@ -440,7 +440,7 @@
     <string name="networks_title">Siete</string>
     <string name="networks_not_offered">Tento server neponúka iné siete.</string>
     <string name="networks_link">Prepojiť účet</string>
-    <string name="networks_link_action">Odkaz</string>
+    <string name="networks_link_action">Prepojiť</string>
     <string name="networks_linked">Účet prepojený</string>
     <string name="networks_link_denied">Server nepovolil prepojenie</string>
     <string name="networks_link_failed">Účet sa nepodarilo prepojiť</string>

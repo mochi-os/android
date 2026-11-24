@@ -428,7 +428,7 @@
     <string name="networks_title">Net</string>
     <string name="networks_not_offered">Þessi þjónn býður ekki upp á önnur net.</string>
     <string name="networks_link">Tengja reikning</string>
-    <string name="networks_link_action">Tengill</string>
+    <string name="networks_link_action">Tengja</string>
     <string name="networks_linked">Reikningur tengdur</string>
     <string name="networks_link_denied">Þjónninn leyfði ekki tenginguna</string>
     <string name="networks_link_failed">Ekki tókst að tengja reikninginn</string>

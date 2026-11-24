@@ -12,8 +12,10 @@ import android.webkit.MimeTypeMap
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.BufferedInputStream
 import java.io.File
+import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
+import java.io.OutputStream
 import java.time.LocalDate
 import java.util.zip.ZipInputStream
 import javax.inject.Inject
@@ -50,8 +52,7 @@ class FileStore @Inject constructor(
 
     suspend fun writeText(uri: Uri, text: String): Boolean = withContext(Dispatchers.IO) {
         try {
-            val stream = context.contentResolver.openOutputStream(uri)
-                ?: return@withContext false
+            val stream = openTruncated(uri) ?: return@withContext false
             stream.use { output -> output.write(text.toByteArray()) }
             true
         } catch (_: Exception) {
@@ -92,14 +93,49 @@ class FileStore @Inject constructor(
     suspend fun writeStream(uri: Uri, source: InputStream): Boolean =
         withContext(Dispatchers.IO) {
             try {
-                val stream = context.contentResolver.openOutputStream(uri)
-                    ?: return@withContext false
+                val stream = openTruncated(uri) ?: return@withContext false
                 stream.use { output -> source.copyTo(output) }
                 true
             } catch (_: Exception) {
                 false
             }
         }
+
+    /**
+     * The document at [uri] opened to be written from its start, emptied
+     * first: a provider opening it "w" may keep what lies past the new end,
+     * so a shorter file written over a longer one would keep the old one's
+     * tail. A provider that refuses "wt" is asked for "w".
+     */
+    private fun openTruncated(uri: Uri): OutputStream? = try {
+        context.contentResolver.openOutputStream(uri, "wt")
+    } catch (_: FileNotFoundException) {
+        context.contentResolver.openOutputStream(uri, "w")
+    } catch (_: IllegalArgumentException) {
+        context.contentResolver.openOutputStream(uri, "w")
+    } catch (_: UnsupportedOperationException) {
+        context.contentResolver.openOutputStream(uri, "w")
+    }
+
+    /**
+     * Whether the document at [uri] is known to hold nothing: what the save
+     * dialog makes for a new file, unlike one the user chose to replace.
+     * False when its size cannot be read.
+     */
+    suspend fun empty(uri: Uri): Boolean = withContext(Dispatchers.IO) {
+        try {
+            if (uri.scheme == "file") {
+                val file = uri.path?.let(::File) ?: return@withContext false
+                return@withContext file.isFile && file.length() == 0L
+            }
+            context.contentResolver.query(uri, arrayOf(OpenableColumns.SIZE), null, null, null)?.use { cursor ->
+                val index = cursor.getColumnIndex(OpenableColumns.SIZE)
+                index >= 0 && cursor.moveToFirst() && !cursor.isNull(index) && cursor.getLong(index) == 0L
+            } ?: false
+        } catch (_: Exception) {
+            false
+        }
+    }
 
     /**
      * Names an export after its subject, e.g. `acme-design-2026-07-28.json`; a

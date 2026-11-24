@@ -440,7 +440,7 @@
     <string name="networks_title">Tinklai</string>
     <string name="networks_not_offered">Šis serveris nesiūlo kitų tinklų.</string>
     <string name="networks_link">Susieti paskyrą</string>
-    <string name="networks_link_action">Nuoroda</string>
+    <string name="networks_link_action">Susieti</string>
     <string name="networks_linked">Paskyra susieta</string>
     <string name="networks_link_denied">Serveris neleido susieti</string>
     <string name="networks_link_failed">Nepavyko susieti paskyros</string>

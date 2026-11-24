@@ -428,7 +428,7 @@
     <string name="networks_title">নেটওয়ার্ক</string>
     <string name="networks_not_offered">এই সার্ভার অন্য কোনো নেটওয়ার্ক দেয় না।</string>
     <string name="networks_link">অ্যাকাউন্ট লিঙ্ক করুন</string>
-    <string name="networks_link_action">লিঙ্ক</string>
+    <string name="networks_link_action">লিঙ্ক করুন</string>
     <string name="networks_linked">অ্যাকাউন্ট যুক্ত হয়েছে</string>
     <string name="networks_link_denied">সার্ভার লিঙ্কের অনুমতি দেয়নি</string>
     <string name="networks_link_failed">অ্যাকাউন্ট লিঙ্ক করা যায়নি</string>

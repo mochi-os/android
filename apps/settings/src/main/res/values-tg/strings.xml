@@ -427,7 +427,7 @@
     <string name="networks_title">Шабакаҳо</string>
     <string name="networks_not_offered">Ин сервер шабакаҳои дигар пешниҳод намекунад.</string>
     <string name="networks_link">Пайваст кардани ҳисоб</string>
-    <string name="networks_link_action">Пайванд</string>
+    <string name="networks_link_action">Пайваст кардан</string>
     <string name="networks_linked">Ҳисоб пайваст шуд</string>
     <string name="networks_link_denied">Сервер пайвастро иҷозат надод</string>
     <string name="networks_link_failed">Ҳисобро пайваст карда натавонист</string>

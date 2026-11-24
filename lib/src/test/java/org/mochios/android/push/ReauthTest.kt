@@ -5,6 +5,7 @@
 
 package org.mochios.android.push
 
+import android.Manifest
 import android.app.Notification
 import android.app.NotificationManager
 import android.content.Context
@@ -42,6 +43,7 @@ class ReauthTest {
         Reauth.reportSuccess(context, "a 1")
         manager.cancelAll()
         shadowOf(manager).setNotificationsEnabled(true)
+        shadowOf(context).grantPermissions(Manifest.permission.POST_NOTIFICATIONS)
         context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE).edit().clear().commit()
     }
 
@@ -106,6 +108,26 @@ class ReauthTest {
         val stored = context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE)
             .getString("nonces", "").orEmpty()
         assertEquals(emptyList<Outstanding>(), noncesFromStored(stored))
+    }
+
+    /** From Android 13 the user allows each app's notifications, and has not allowed these. */
+    @Test
+    fun `a prompt the user has not allowed to post issues no nonce`() {
+        shadowOf(context).denyPermissions(Manifest.permission.POST_NOTIFICATIONS)
+        repeat(3) { Reauth.report401(context, "a1") }
+        assertEquals("THE POINT: not posted", 0, prompts().size)
+        val stored = context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE)
+            .getString("nonces", "").orEmpty()
+        assertEquals("nor holds a nonce", emptyList<Outstanding>(), noncesFromStored(stored))
+    }
+
+    /** Before Android 13 there is no permission to allow, and the platform's own check of it answers denied. */
+    @Test
+    @Config(sdk = [32])
+    fun `before Android 13 a dead session is told with no permission allowed`() {
+        shadowOf(context).denyPermissions(Manifest.permission.POST_NOTIFICATIONS)
+        repeat(3) { Reauth.report401(context, "a1") }
+        assertEquals("THE POINT: posted", 1, prompts().size)
     }
 
     /** The session coming back takes the prompt away, and its tap with it. */

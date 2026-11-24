@@ -3,29 +3,9 @@
 
     <string name="wikis_attachments_sort_size">Grösse</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
-    <string name="wikis_sidebar_header">Wikis</string>
-    <string name="wikis_pageview_version">v%1$s</string>
-    <string name="wikis_page_action_section_wiki">Wiki</string>
-    <string name="wikis_page_action_tags">Tags</string>
-    <string name="wikis_title">Wikis</string>
-    <string name="wikis_create_name_label">Name</string>
-    <string name="wikis_revision_version_badge">Version %1$s</string>
-    <string name="wikis_attachments_sort_name">Name</string>
-    <string name="wikis_settings_field_name">Name</string>
-    <string name="wikis_access_change_level">Zugriffsebene</string>
-    <string name="wikis_access_subject_anyone">Jeder</string>
     <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
 
-    <string name="wikis_comment_replying_to">Antwort an %1$s</string>
-    <string name="wikis_comment_clear_reply">Antwort abbrechen</string>
-    <string name="wikis_revision_author">nach %1$s</string>
-    <string name="wikis_redirect_created_label">Erstellt</string>
-    <string name="wikis_attachments_download">Herunterladen</string>
     <string name="wikis_access_tab_other">Andere</string>
-    <string name="wikis_access_select_rule">Regel auswählen</string>
     <string name="wikis_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="wikis_access_anyone_desc">Einschliesslich anonymer Benutzer</string>
-    <string name="wikis_access_selected">Ausgewählt: %1$s</string>
-    <string name="wikis_rss_replace">Ersetzen</string>
 </resources>

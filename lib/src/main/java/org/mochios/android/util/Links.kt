@@ -10,6 +10,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.text.util.Linkify
+import io.noties.markwon.MarkwonPlugin
+import io.noties.markwon.linkify.LinkifyPlugin
 import org.mochios.android.api.OwnedAddress
 import org.mochios.android.i18n.Flights
 import org.mochios.android.i18n.Maps
@@ -59,6 +61,14 @@ fun linkUri(url: String): Uri? = if (isWebUrl(url) || isMailUrl(url)) Uri.parse(
  * which nothing opens.
  */
 const val LINKED_ADDRESSES = Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES
+
+/**
+ * The Markwon plugin that links bare addresses in rendered Markdown, for the
+ * kinds [LINKED_ADDRESSES] names and no others. Every renderer takes it from
+ * here, beside the mask: a module reading the constant from this library's
+ * compiled classes sees only a number, not a combination of Linkify's flags.
+ */
+fun linkifyPlugin(): MarkwonPlugin = LinkifyPlugin.create(LINKED_ADDRESSES)
 
 /**
  * Whether an account's address on a profile is one the profile links: a web

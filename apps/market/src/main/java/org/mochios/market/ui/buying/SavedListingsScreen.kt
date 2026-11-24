@@ -60,6 +60,7 @@ import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
@@ -128,7 +129,7 @@ fun SavedListingsScreen(
                             listing = listing,
                             saved = true,
                             onClick = {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.listingDetail(listing.id.toString(), listing.title),
                                 )
                             },

@@ -244,7 +244,7 @@ class ObjectFixesTest {
         settle()
         assertTrue("THE POINT: the failure is kept", model.uiState.value.activityLoad is LoadState.Failed)
         rule.setContent {
-            val state = model.uiState.value
+            val state by model.uiState.collectAsState()
             ActivityTab(activity = state.activity, load = state.activityLoad, more = state.activityMore, onLoadMore = model::loadMoreActivity, fields = emptyList())
         }
         rule.waitForIdle()
@@ -456,7 +456,8 @@ class ObjectFixesTest {
     private fun properties(access: String) {
         open(access)
         rule.setContent {
-            PropertiesTab(obj = model.uiState.value.obj!!, projectDetails = details, viewModel = model, projectId = "p1")
+            val state by model.uiState.collectAsState()
+            PropertiesTab(obj = state.obj!!, projectDetails = details, viewModel = model, projectId = "p1")
         }
         rule.waitForIdle()
     }
@@ -509,11 +510,12 @@ class ObjectFixesTest {
     fun `a reader's sheet offers no copy or delete`() {
         open("view")
         rule.setContent {
+            val state by model.uiState.collectAsState()
             ObjectDetailSheet(
                 projectId = "p1",
                 objectId = "o1",
                 projectDetails = details.copy(project = details.project.copy(access = "view")),
-                initialObject = model.uiState.value.obj,
+                initialObject = state.obj,
                 onDismiss = {},
                 onDeleteObject = {},
                 onViewDiff = { _, _, _, _ -> },

@@ -66,7 +66,7 @@ object Reauth {
         ensureChannel(context)
         val nm = NotificationManagerCompat.from(context)
         // Before the nonce: a prompt that is never posted must not hold one.
-        if (!nm.areNotificationsEnabled()) return
+        if (!nm.areNotificationsEnabled() || !mayPostNotifications(context)) return
 
         // The tap is `mochi:reauth?account=<identity>&nonce=<nonce>` to the
         // home grid's activity, the app's launcher entry. The activity is

@@ -130,7 +130,8 @@ class AppBootstrapViewModel @Inject constructor(
             MochiAccount.accountsFlow(context).collect { accounts ->
                 when (val s = _stage.value) {
                     is AuthStage.Ready -> {
-                        // Cross-app logout: our bound identity vanished.
+                        // Cross-app logout: our bound identity vanished. One
+                        // listed whose session cannot be read is still there.
                         val boundId = sessionManager.getBoundIdentity()
                         if (boundId != null && accounts.none { it.identity == boundId }) {
                             unreadStore.stop()
@@ -198,7 +199,7 @@ class AppBootstrapViewModel @Inject constructor(
      */
     private suspend fun resign(identity: String): Boolean {
         val snap = MochiAccount.all(context).firstOrNull { account -> account.identity == identity } ?: return false
-        if (sessionManager.getBoundIdentity() != identity) adopt(snap)
+        if (sessionManager.getBoundIdentity() != identity && !adopt(snap)) return true
         bootstrap()
         return true
     }
@@ -206,8 +207,7 @@ class AppBootstrapViewModel @Inject constructor(
     /** User picked an account from the picker. */
     fun pickAccount(snap: MochiAccount.Snapshot) {
         viewModelScope.launch {
-            adopt(snap)
-            bootstrap()
+            if (adopt(snap)) bootstrap()
         }
     }
 
@@ -297,8 +297,7 @@ class AppBootstrapViewModel @Inject constructor(
         val boundIdentity = sessionManager.getBoundIdentity()
         val rebind = boundIdentity?.let { id -> accounts.firstOrNull { it.identity == id } }
         if (rebind != null) {
-            adopt(rebind)
-            bootstrap()
+            if (adopt(rebind)) bootstrap()
             return
         }
 
@@ -309,10 +308,24 @@ class AppBootstrapViewModel @Inject constructor(
         }
     }
 
-    private suspend fun adopt(snap: MochiAccount.Snapshot) {
+    /**
+     * Make [snap] the signed-in account, its session kept as the one minted
+     * for it. False for an account whose session cannot be read: the sign-in
+     * screen opens on its server instead, and the account stays on the device.
+     */
+    private suspend fun adopt(snap: MochiAccount.Snapshot): Boolean {
+        val session = snap.session
+        if (session == null) {
+            // The stage first: a server change drops the session held, and
+            // the observer above re-evaluates only from the signed-in stages.
+            _stage.value = AuthStage.NeedsLogin
+            sessionManager.setServerUrl(snap.server)
+            return false
+        }
         sessionManager.setServerUrl(snap.server)
-        sessionManager.saveSession(snap.session)
+        sessionManager.saveSession(session, snap.identity)
         sessionManager.setBoundAccount(snap.identity)
+        return true
     }
 
     private suspend fun bootstrap() {
@@ -439,6 +452,13 @@ class AppBootstrapViewModel @Inject constructor(
         val session = sessionManager.currentToken.first() ?: return
         val server = sessionManager.serverUrl.first()
         if (identity == null || identity.identity.isBlank()) return
+
+        // A session kept for one account and answering for another is stored
+        // under neither: that would hand the second account the first's.
+        if (!sessionManager.bindSession(session, identity.identity)) {
+            Log.w(TAG, "The session answers for another account than it was kept for; not publishing it")
+            return
+        }
 
         // Write the local binding before the best-effort AccountManager upsert:
         // an addAccountExplicitly failure must not leave boundIdentity empty.

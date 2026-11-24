@@ -428,7 +428,7 @@
     <string name="networks_title">Verkot</string>
     <string name="networks_not_offered">Tämä palvelin ei tarjoa muita verkkoja.</string>
     <string name="networks_link">Yhdistä tili</string>
-    <string name="networks_link_action">Linkki</string>
+    <string name="networks_link_action">Yhdistä</string>
     <string name="networks_linked">Tili yhdistetty</string>
     <string name="networks_link_denied">Palvelin ei sallinut yhdistämistä</string>
     <string name="networks_link_failed">Tiliä ei voitu yhdistää</string>

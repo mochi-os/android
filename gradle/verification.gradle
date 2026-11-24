@@ -1,0 +1,9 @@
+// Init script for `make verification`: every test task still resolves its
+// classpath, so the classpath's artefacts are recorded, but runs no test, so
+// a failing or slow test cannot end the run before the metadata is written.
+allprojects {
+    tasks.withType(Test).configureEach {
+        filter.includeTestsMatching("org.mochios.verification.None")
+        filter.failOnNoMatchingTests = false
+    }
+}

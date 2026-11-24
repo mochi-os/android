@@ -7,6 +7,9 @@ package org.mochios.android.ui.components
 
 import android.content.Context
 import android.text.Spanned
+import android.view.ActionMode
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.compose.material3.MaterialTheme
@@ -27,10 +30,9 @@ import io.noties.markwon.ext.tables.TableAwareMovementMethod
 import io.noties.markwon.ext.tables.TablePlugin
 import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
-import io.noties.markwon.linkify.LinkifyPlugin
 import org.mochios.android.R
-import org.mochios.android.util.LINKED_ADDRESSES
 import org.mochios.android.util.linkUri
+import org.mochios.android.util.linkifyPlugin
 
 @Composable
 fun HtmlContent(
@@ -41,7 +43,8 @@ fun HtmlContent(
     clampToBoundedHeight: Boolean = false,
     onClick: (() -> Unit)? = null,
     onImageLongPress: ((String) -> Unit)? = null,
-    onTextViewReady: ((TextView) -> Unit)? = null
+    onTextViewReady: ((TextView) -> Unit)? = null,
+    selectionAction: SelectionAction? = null,
 ) {
     val context = LocalContext.current
     val root = LocalView.current.rootView
@@ -68,10 +71,11 @@ fun HtmlContent(
                 textSize = 16f
                 setTextColor(textColor)
                 // Selectable so the user can long-press to pick text inside
-                // the rendered markdown — used by wikis' quote-on-select
-                // reply path, which reads the active selection at the moment
-                // Reply is tapped.
+                // the rendered markdown — used by the comments' quote-on-select
+                // reply, which reads the active selection at the moment Reply
+                // is tapped, or from the selection's own menu.
                 setTextIsSelectable(true)
+                customSelectionActionModeCallback = SelectionMenu(this)
             }
         },
         update = { textView ->
@@ -98,6 +102,7 @@ fun HtmlContent(
             textView.passThroughTouches = passThroughTouches
             textView.onImageLongPress = onImageLongPress
             textView.imageAltByUrl = altByUrl
+            view.selectionAction = selectionAction
             if (view.shownMarkdown !== spanned) {
                 markwon.setParsedMarkdown(textView, spanned)
                 view.shownMarkdown = if (truncated) null else spanned
@@ -109,6 +114,63 @@ fun HtmlContent(
         },
         modifier = modifier
     )
+}
+
+/**
+ * An item [HtmlContent] adds to its text selection's menu: [label], and
+ * [onSelected], handed the text selected when it is chosen. The menu floats
+ * above the selection, clear of the handles that hang below it over whatever
+ * the page draws under the body.
+ */
+class SelectionAction(val label: String, val onSelected: (String) -> Unit)
+
+/**
+ * The text selected in a body [HtmlContent] draws, for a Reply that quotes it
+ * as the web's Reply quotes `window.getSelection()`. Handed to the body
+ * through `onTextViewReady`, it reads the selection when asked.
+ */
+class BodySelection {
+    internal var view: TextView? = null
+
+    /** The text selected in the body now, or null when nothing is. */
+    fun text(): String? = view?.let(::selectedText)?.ifEmpty { null }
+}
+
+/**
+ * The text selected in [view], or "" when nothing is. An inline image is
+ * drawn over an object replacement character, which is not text: it goes, as
+ * the web's selection leaves an image out of the text it gives.
+ */
+private fun selectedText(view: TextView): String {
+    val from = view.selectionStart.coerceAtLeast(0)
+    val to = view.selectionEnd.coerceAtLeast(0)
+    return if (to > from) view.text.subSequence(from, to).toString().replace(OBJECT_REPLACEMENT, "") else ""
+}
+
+/** What a span drawing an image stands on in the text. */
+private const val OBJECT_REPLACEMENT = "￼"
+
+/** Puts [view]'s [ClickableLinkTextView.selectionAction], when it has one, in its selection's menu. */
+internal class SelectionMenu(private val view: ClickableLinkTextView) : ActionMode.Callback {
+
+    override fun onCreateActionMode(mode: ActionMode, menu: Menu): Boolean {
+        view.selectionAction?.let { action -> menu.add(Menu.NONE, R.id.html_content_selection_action, 0, action.label) }
+        return true
+    }
+
+    override fun onPrepareActionMode(mode: ActionMode, menu: Menu): Boolean = false
+
+    override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
+        if (item.itemId != R.id.html_content_selection_action) return false
+        val action = view.selectionAction ?: return false
+        val selected = selectedText(view)
+        // Read before the menu goes: ending it drops the selection.
+        mode.finish()
+        action.onSelected(selected)
+        return true
+    }
+
+    override fun onDestroyActionMode(mode: ActionMode) {}
 }
 
 /** A window's renderer, kept on its root view so every body in it shares one. */
@@ -143,7 +205,7 @@ private fun buildMarkwon(context: Context): Markwon =
         .usePlugin(TaskListPlugin.create(context))
         // Bare text is linked only for what the resolver below opens: a
         // phone number drawn as a link would take the tap and do nothing.
-        .usePlugin(LinkifyPlugin.create(LINKED_ADDRESSES))
+        .usePlugin(linkifyPlugin())
         // The body is peer-authored content; Markwon's default resolver
         // fires ACTION_VIEW on whatever scheme a link carries. Only web and
         // e-mail addresses may leave the app — tel:, intent:, file: and

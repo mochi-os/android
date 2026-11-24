@@ -59,6 +59,8 @@ class SessionManager internal constructor(
     companion object {
         private val KEY_SERVER_URL = stringPreferencesKey("server_url")
         private val KEY_SESSION_COOKIE = stringPreferencesKey("session_cookie")
+        // The identity the session signs in, once known: see bindSession.
+        private val KEY_SESSION_IDENTITY = stringPreferencesKey("session_identity")
         private val KEY_TOKEN_NAMES = stringSetPreferencesKey("token_names")
         private val KEY_THEME_HUE = stringPreferencesKey("theme_hue")
         private val KEY_THEME_CHROMA = stringPreferencesKey("theme_chroma")
@@ -82,6 +84,8 @@ class SessionManager internal constructor(
         // next binding.
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
+        // How each cached token was asked for: Token.form.
+        private const val FORM_PREFIX = "form_"
         private const val DEFAULT_SERVER_URL = "https://mochi-os.org"
         private const val KEYSTORE_ALIAS = "mochi.credentials"
 
@@ -169,9 +173,11 @@ class SessionManager internal constructor(
             changed = true
             for (app in prefs[KEY_TOKEN_NAMES].orEmpty()) {
                 prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
+                prefs.remove(stringPreferencesKey("$FORM_PREFIX$app"))
             }
             prefs.remove(KEY_TOKEN_NAMES)
             prefs.remove(KEY_SESSION_COOKIE)
+            prefs.remove(KEY_SESSION_IDENTITY)
             // The binding names an identity on the old server. Left in place, a
             // surviving AccountManager row is adopted and points us back at it.
             prefs.remove(KEY_BOUND_IDENTITY)
@@ -184,10 +190,44 @@ class SessionManager internal constructor(
         }
     }
 
-    suspend fun saveSession(cookie: String) {
+    /**
+     * Keep [cookie] as the session, minted for [identity] when that is known:
+     * an account switched to names its own, and a sign-in learns it from the
+     * identity read that follows ([bindSession]). A copy of the session held
+     * in memory from an earlier response goes: on the same server it would
+     * ride the next request in place of this one.
+     */
+    suspend fun saveSession(cookie: String, identity: String? = null) {
+        dataStore.edit { prefs ->
+            prefs[KEY_SESSION_COOKIE] = sealed.seal(cookie)
+            if (identity != null) prefs[KEY_SESSION_IDENTITY] = identity else prefs.remove(KEY_SESSION_IDENTITY)
+        }
+        cookieStore.replaceAll { _, cookies -> cookies.filterNot { held -> held.name == "session" }.toMutableList() }
+    }
+
+    /** The server's renewal of the session held: the same account's, so its identity stands. */
+    private suspend fun renewSession(cookie: String) {
         dataStore.edit { prefs ->
             prefs[KEY_SESSION_COOKIE] = sealed.seal(cookie)
         }
+    }
+
+    /**
+     * Bind the session held, [session] as it was read, to [identity], the
+     * account the server says it signs in. False when it was kept for another
+     * account, or has been replaced since it was read.
+     */
+    suspend fun bindSession(session: String, identity: String): Boolean {
+        var bound = false
+        dataStore.edit { prefs ->
+            val held = prefs[KEY_SESSION_COOKIE]?.let { sealed.open(it) }
+            if (held != session) return@edit
+            val owner = prefs[KEY_SESSION_IDENTITY]
+            if (owner != null && owner != identity) return@edit
+            prefs[KEY_SESSION_IDENTITY] = identity
+            bound = true
+        }
+        return bound
     }
 
     /** Identity (network-unique entity ID) this app is currently bound to. */
@@ -227,8 +267,15 @@ class SessionManager internal constructor(
 
     suspend fun getBoundIdentity(): String? = dataStore.data.first()[KEY_BOUND_IDENTITY]
 
+    /**
+     * [app]'s cached token, or null when none is held or the one held was
+     * asked for otherwise than [Token.form] says it is now: every reader then
+     * goes without it, and the next mint replaces it.
+     */
     suspend fun getToken(app: String): String? {
         val prefs = dataStore.data.first()
+        val form = prefs[stringPreferencesKey("$FORM_PREFIX$app")] ?: Token.legacy(app)
+        if (form != Token.form(app)) return null
         return prefs[stringPreferencesKey("$TOKEN_PREFIX$app")]?.let { sealed.open(it) }
     }
 
@@ -244,15 +291,22 @@ class SessionManager internal constructor(
         sealed.forget()
         dataStore.edit { prefs ->
             prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
+            prefs.remove(stringPreferencesKey("$FORM_PREFIX$app"))
             val names = prefs[KEY_TOKEN_NAMES]?.toMutableSet() ?: mutableSetOf()
             names.remove(app)
             prefs[KEY_TOKEN_NAMES] = names
         }
     }
 
-    suspend fun saveToken(app: String, jwt: String) {
+    /**
+     * Cache [jwt] as [app]'s token, asked for as [form] says ([Token.form]);
+     * null records none, as a token cached before forms were recorded has.
+     */
+    suspend fun saveToken(app: String, jwt: String, form: String? = Token.form(app)) {
         dataStore.edit { prefs ->
             prefs[stringPreferencesKey("$TOKEN_PREFIX$app")] = sealed.seal(jwt)
+            if (form != null) prefs[stringPreferencesKey("$FORM_PREFIX$app")] = form
+            else prefs.remove(stringPreferencesKey("$FORM_PREFIX$app"))
             val names = prefs[KEY_TOKEN_NAMES]?.toMutableSet() ?: mutableSetOf()
             names.add(app)
             prefs[KEY_TOKEN_NAMES] = names
@@ -500,7 +554,7 @@ class SessionManager internal constructor(
             if (sessionCookie != null) {
                 val held = getSessionCookieBlocking()
                 if (held != null && held != sessionCookie.value) {
-                    runBlocking { saveSession(sessionCookie.value) }
+                    runBlocking { renewSession(sessionCookie.value) }
                 }
             }
         }

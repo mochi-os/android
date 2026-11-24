@@ -419,7 +419,7 @@
     <string name="networks_title">網路</string>
     <string name="networks_not_offered">此伺服器不提供其他網路。</string>
     <string name="networks_link">連結帳戶</string>
-    <string name="networks_link_action">連結</string>
+    <string name="networks_link_action">連結帳戶</string>
     <string name="networks_linked">帳戶已連結</string>
     <string name="networks_link_denied">伺服器不允許連結</string>
     <string name="networks_link_failed">無法連結帳戶</string>

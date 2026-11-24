@@ -428,7 +428,7 @@
     <string name="networks_title">Hanyoyin sadarwa</string>
     <string name="networks_not_offered">Wannan sabar ba ta bayar da wasu hanyoyin sadarwa.</string>
     <string name="networks_link">Haɗa asusu</string>
-    <string name="networks_link_action">Hanyar haɗi</string>
+    <string name="networks_link_action">Haɗa</string>
     <string name="networks_linked">An haɗa asusu</string>
     <string name="networks_link_denied">Sabar ba ta ba da izinin haɗin ba</string>
     <string name="networks_link_failed">Ba a iya haɗa asusun ba</string>

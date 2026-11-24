@@ -19,6 +19,7 @@ import android.util.Log
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -29,6 +30,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeoutOrNull
 import okhttp3.Cookie
 import okhttp3.HttpUrl.Companion.toHttpUrl
@@ -43,8 +45,8 @@ import org.mochios.android.api.ApiClient
 import org.mochios.android.api.foreignClient
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.Token
 import org.mochios.android.auth.TokenApi
-import org.mochios.android.auth.TokenRequest
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.Mint
@@ -172,11 +174,14 @@ class PushService : Service() {
     }
 
     private fun connectOne(account: MochiAccount.Snapshot) {
+        // An account whose session cannot be read has nothing to open a
+        // channel with until it can be, or is signed in again.
+        val session = account.session ?: return
         // Claim the slot atomically before launching the coroutine. If a
         // concurrent reconcile() already claimed it, bail out so we don't end
         // up registering two callbacks against MochiWebSocket.subscribe and
         // dispatching every push twice.
-        val slot = channels.claim(account.identity, account.session) ?: return
+        val slot = channels.claim(account.identity, session) ?: return
 
         scope.launch {
             var registered = false
@@ -187,7 +192,7 @@ class PushService : Service() {
                 // while it cannot be reached, so a start with the network down
                 // still brings the channel up without the app being opened.
                 val token = firstToken(
-                    mint = { mint(account.identity, account.server, account.session) },
+                    mint = { mint(account.identity, account.server, session) },
                     held = { channels.holds(slot) },
                     pause = { attempt -> online.await(ladder(attempt)) },
                 )
@@ -211,7 +216,7 @@ class PushService : Service() {
                         account = identity,
                         token = token,
                         mint = {
-                            mint(account.identity, account.server, account.session).also { minted ->
+                            mint(account.identity, account.server, session).also { minted ->
                                 if (minted is Mint.Fresh) credentials[identity] = minted.token
                             }
                         },
@@ -242,30 +247,8 @@ class PushService : Service() {
      * found dead, [Mint.Later] for anything that may pass.
      */
     private suspend fun mint(identity: String, server: String, sessionCookie: String): Mint {
-        val httpUrl = (server.trimEnd('/') + "/").toHttpUrl()
-        val cookie = Cookie.Builder()
-            .domain(httpUrl.host)
-            .path("/")
-            .name("session")
-            .value(sessionCookie)
-            .secure()
-            .build()
-        // A one-shot client carrying just this cookie: the session must not
-        // reach the shared cookie jar, and the jar releases it only to this
-        // account's own origin. A redirect off that origin - or the
-        // bound-server retarget this client deliberately does not carry -
-        // would otherwise hand one server a working session for another.
-        val tempClient = client.newBuilder()
-            .cookieJar(object : okhttp3.CookieJar {
-                override fun saveFromResponse(url: okhttp3.HttpUrl, cookies: List<Cookie>) {}
-                override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> =
-                    if (isServerOrigin(url, server)) listOf(cookie) else emptyList()
-            })
-            .build()
-        val tokenApi = ApiClient.createRetrofit(server, tempClient, gson)
-            .create(TokenApi::class.java)
         return try {
-            val token = tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+            val token = mintPushToken(client, gson, server, sessionCookie)
             Reauth.reportSuccess(applicationContext, identity)
             if (token.isBlank()) Mint.Later else Mint.Fresh(token)
         } catch (e: Exception) {
@@ -324,70 +307,18 @@ class PushService : Service() {
 
     /**
      * Dispatch and ack everything queued at `/notifications/-/push/drain`,
-     * each time the account's socket opens. The ack is a separate POST, so a
-     * crash mid-drain leaves the rows for the next open.
+     * each time the account's socket opens, on the queue live pushes are
+     * delivered on.
      */
     private fun drainPending(server: String, token: String, identity: String) {
-        val url = server.trimEnd('/') + "/notifications/-/push/drain"
-        val request = Request.Builder()
-            .url(url)
-            .header("Authorization", "Bearer $token")
-            .post("".toRequestBody("application/x-www-form-urlencoded".toMediaType()))
-            .build()
-        runCatching {
-            client.newCall(request).execute().use { resp ->
-                if (!resp.isSuccessful) {
-                    Log.w(TAG, "/notifications/-/push/drain returned ${resp.code}")
-                    return@use
-                }
-                val raw = resp.body?.string().orEmpty()
-                val events = JSONObject(raw).optJSONArray("data") ?: return@use
-                if (events.length() == 0) return@use
-                Log.i(TAG, "Draining ${events.length()} queued event(s)")
-                val acks = org.json.JSONArray()
-                for (i in 0 until events.length()) {
-                    val ev = events.getJSONObject(i)
-                    val subId = ev.optString("subscription")
-                    val payload = ev.optString("payload")
-                    val account = ev.optString("account")
-                    val eventId = ev.optString("event")
-                    if (subId.isBlank() || payload.isBlank()) continue
-                    dispatchPush(subId, payload, identity)
-                    if (account.isNotBlank() && eventId.isNotBlank()) {
-                        acks.put(JSONObject().put("account", account).put("event", eventId))
-                    }
-                }
-                if (acks.length() > 0) {
-                    ackBatch(server, token, acks)
-                }
-            }
-        }.onFailure { Log.w(TAG, "Drain failed: ${it.message}") }
+        drainQueue(client, server, token, deliveries) { subId, payload -> dispatchPush(subId, payload, identity) }
     }
 
     private fun ackEvent(server: String, token: String, account: String, eventId: String) {
         val acks = org.json.JSONArray().put(
             JSONObject().put("account", account).put("event", eventId)
         )
-        ackBatch(server, token, acks)
-    }
-
-    private fun ackBatch(server: String, token: String, acks: org.json.JSONArray) {
-        val url = server.trimEnd('/') + "/notifications/-/push/ack"
-        val form = okhttp3.FormBody.Builder()
-            .add("events", acks.toString())
-            .build()
-        val request = Request.Builder()
-            .url(url)
-            .header("Authorization", "Bearer $token")
-            .post(form)
-            .build()
-        runCatching {
-            client.newCall(request).execute().use { resp ->
-                if (!resp.isSuccessful) {
-                    Log.w(TAG, "/notifications/-/push/ack returned ${resp.code}")
-                }
-            }
-        }.onFailure { Log.w(TAG, "Ack failed: ${it.message}") }
+        ackPushes(client, server, token, acks)
     }
 
     private fun extractTag(payload: String): String? = runCatching {
@@ -520,6 +451,108 @@ class PushService : Service() {
     }
 }
 
+/**
+ * [server]'s notifications token for the account whose session cookie is
+ * [session], asked for by the notifications service: core delivers a push only
+ * to a socket opened with that service's app's token, and the drains and acks
+ * go to the same app. Throws what the mint answers otherwise.
+ *
+ * Asked on a one-shot client built from [client] carrying just this cookie:
+ * the session must not reach the shared cookie jar, and the jar releases it
+ * only to this account's own origin. A redirect off that origin - or the
+ * bound-server retarget [client] deliberately does not carry - would otherwise
+ * hand one server a working session for another.
+ */
+internal suspend fun mintPushToken(client: OkHttpClient, gson: Gson, server: String, session: String): String {
+    val httpUrl = (server.trimEnd('/') + "/").toHttpUrl()
+    val cookie = Cookie.Builder()
+        .domain(httpUrl.host)
+        .path("/")
+        .name("session")
+        .value(session)
+        .secure()
+        .build()
+    val held = client.newBuilder()
+        .cookieJar(object : okhttp3.CookieJar {
+            override fun saveFromResponse(url: okhttp3.HttpUrl, cookies: List<Cookie>) {}
+            override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> =
+                if (isServerOrigin(url, server)) listOf(cookie) else emptyList()
+        })
+        .build()
+    val tokenApi = ApiClient.createRetrofit(server, held, gson).create(TokenApi::class.java)
+    return tokenApi.fetchToken(Token.request("notifications")).unwrapRaw().token
+}
+
+/**
+ * Fetch what [server] queued at `/notifications/-/push/drain` for [token],
+ * hand each push to [dispatch] on [deliveries], the queue live pushes are
+ * delivered on one at a time, and ack them once delivered. The ack is a
+ * separate POST, so a crash mid-drain leaves the rows for the next open.
+ */
+internal fun drainQueue(
+    client: OkHttpClient,
+    server: String,
+    token: String,
+    deliveries: CoroutineDispatcher,
+    dispatch: (subscription: String, payload: String) -> Unit,
+) {
+    val url = server.trimEnd('/') + "/notifications/-/push/drain"
+    val request = Request.Builder()
+        .url(url)
+        .header("Authorization", "Bearer $token")
+        .post("".toRequestBody("application/x-www-form-urlencoded".toMediaType()))
+        .build()
+    runCatching {
+        val queued = client.newCall(request).execute().use { resp ->
+            if (!resp.isSuccessful) {
+                Log.w(PushService.TAG, "/notifications/-/push/drain returned ${resp.code}")
+                return@runCatching
+            }
+            JSONObject(resp.body.string()).optJSONArray("data") ?: return@runCatching
+        }
+        if (queued.length() == 0) return@runCatching
+        Log.i(PushService.TAG, "Draining ${queued.length()} queued event(s)")
+        val acks = org.json.JSONArray()
+        // Waited for, so the ack follows the delivery and a second drain
+        // cannot read the rows before they are acked.
+        runBlocking(deliveries) {
+            for (i in 0 until queued.length()) {
+                val event = queued.getJSONObject(i)
+                val subId = event.optString("subscription")
+                val payload = event.optString("payload")
+                val account = event.optString("account")
+                val eventId = event.optString("event")
+                if (subId.isBlank() || payload.isBlank()) continue
+                dispatch(subId, payload)
+                if (account.isNotBlank() && eventId.isNotBlank()) {
+                    acks.put(JSONObject().put("account", account).put("event", eventId))
+                }
+            }
+        }
+        if (acks.length() > 0) ackPushes(client, server, token, acks)
+    }.onFailure { Log.w(PushService.TAG, "Drain failed: ${it.message}") }
+}
+
+/** Ack [acks], each an account and event, so [server] drops their queued rows. */
+internal fun ackPushes(client: OkHttpClient, server: String, token: String, acks: org.json.JSONArray) {
+    val url = server.trimEnd('/') + "/notifications/-/push/ack"
+    val form = okhttp3.FormBody.Builder()
+        .add("events", acks.toString())
+        .build()
+    val request = Request.Builder()
+        .url(url)
+        .header("Authorization", "Bearer $token")
+        .post(form)
+        .build()
+    runCatching {
+        client.newCall(request).execute().use { resp ->
+            if (!resp.isSuccessful) {
+                Log.w(PushService.TAG, "/notifications/-/push/ack returned ${resp.code}")
+            }
+        }
+    }.onFailure { Log.w(PushService.TAG, "Ack failed: ${it.message}") }
+}
+
 /** The push channel of one account: the ids to hand back when it leaves. */
 internal data class PushChannel(val subscription: String, val connection: String)
 
@@ -620,11 +653,19 @@ internal class Channels(private val drop: (PushChannel) -> Unit) {
         channel?.let(drop)
     }
 
-    /** The identities held that are gone from [accounts], or signed in again under another session. */
+    /**
+     * The identities held that are gone from [accounts], or signed in again
+     * under another session. One whose session cannot be read now keeps the
+     * channel it has.
+     */
     @Synchronized
     fun stale(accounts: List<MochiAccount.Snapshot>): List<String> {
-        val sessions = accounts.associate { account -> account.identity to account.session }
-        return slots.values.filter { slot -> sessions[slot.identity] != slot.session }.map { slot -> slot.identity }
+        val held = accounts.associateBy { account -> account.identity }
+        return slots.values.filter { slot ->
+            val account = held[slot.identity] ?: return@filter true
+            val session = account.session ?: return@filter false
+            session != slot.session
+        }.map { slot -> slot.identity }
     }
 
     /** Tear every channel down, and open no more. */

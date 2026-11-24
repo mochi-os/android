@@ -438,7 +438,7 @@
     <string name="networks_title">Tīkli</string>
     <string name="networks_not_offered">Šis serveris nepiedāvā citus tīklus.</string>
     <string name="networks_link">Saistīt kontu</string>
-    <string name="networks_link_action">Saite</string>
+    <string name="networks_link_action">Saistīt</string>
     <string name="networks_linked">Konts saistīts</string>
     <string name="networks_link_denied">Serveris neatļāva saistīšanu</string>
     <string name="networks_link_failed">Nevarēja saistīt kontu</string>

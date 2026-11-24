@@ -6,7 +6,12 @@
 package org.mochios.forums.ui.post
 
 import android.os.Looper
+import android.text.Selection
+import android.text.Spannable
+import android.view.View
+import android.view.ViewGroup
 import androidx.lifecycle.SavedStateHandle
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.hasScrollToIndexAction
 import androidx.compose.ui.test.hasSetTextAction
@@ -34,6 +39,7 @@ import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Assert.fail
@@ -44,6 +50,7 @@ import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.ClickableLinkTextView
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.forums.R
@@ -276,6 +283,82 @@ class PostScreenTest {
         wait { !model.uiState.value.isSending }
         rule.waitForIdle()
         rule.onAllNodesWithText("On the photo").assertCountEquals(0)
+    }
+
+    /** Every window's views: the screen's, and a dialog's such as the lightbox. */
+    private fun windows(): List<View> {
+        val global = Class.forName("android.view.WindowManagerGlobal")
+        val instance = global.getMethod("getInstance").invoke(null)
+        val views = global.getDeclaredField("mViews").apply { isAccessible = true }
+        @Suppress("UNCHECKED_CAST")
+        return (views.get(instance) as List<View>).toList()
+    }
+
+    private fun bodies(view: View): List<ClickableLinkTextView> = when (view) {
+        is ClickableLinkTextView -> listOf(view)
+        is ViewGroup -> (0 until view.childCount).flatMap { bodies(view.getChildAt(it)) }
+        else -> emptyList()
+    }
+
+    /** The bodies reading [words], in the order their windows opened. */
+    private fun bodies(words: String): List<ClickableLinkTextView> =
+        windows().flatMap { window -> bodies(window) }.filter { body -> body.text.toString() == words }
+
+    @Test
+    fun `Reply with text selected in a comment quotes it in the composer`() {
+        show()
+        val body = bodies("First comment").single()
+        rule.runOnUiThread { Selection.setSelection(body.text as Spannable, 0, 5) }
+        rule.onNodeWithContentDescription(text(R.string.forums_comment_reply)).performClick()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction()).assert(hasText("> First\n\n"))
+    }
+
+    @Test
+    fun `Reply quotes text selected anywhere on the page, the post's body included`() {
+        show()
+        val body = bodies("Words").single()
+        rule.runOnUiThread { Selection.setSelection(body.text as Spannable, 0, 5) }
+        rule.onNodeWithContentDescription(text(R.string.forums_comment_reply)).performClick()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction()).assert(hasText("> Words\n\n"))
+    }
+
+    @Test
+    fun `a second Reply replaces the first's quote rather than stacking another`() {
+        show()
+        val body = bodies("First comment").single()
+        rule.runOnUiThread { Selection.setSelection(body.text as Spannable, 0, 5) }
+        rule.onNodeWithContentDescription(text(R.string.forums_comment_reply)).performClick()
+        rule.waitForIdle()
+        rule.onNodeWithContentDescription(text(R.string.forums_comment_reply)).performClick()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction()).assert(hasText("> First\n\n"))
+    }
+
+    @Test
+    fun `Reply in a comment's selection menu quotes the selection in the composer`() {
+        show()
+        val action = bodies("First comment").single().selectionAction
+        assertNotNull("the body's selection menu offers Reply", action)
+        rule.runOnUiThread { action!!.onSelected("First") }
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction()).assert(hasText("> First\n\n"))
+    }
+
+    @Test
+    fun `Reply in the lightbox quotes the selection in the lightbox's composer`() {
+        anchored()
+        show()
+        rule.onNode(hasScrollToIndexAction()).performScrollToIndex(2)
+        rule.waitForIdle()
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.comment_anchor_open)).performClick()
+        rule.waitForIdle()
+        val action = bodies("About the photo").last().selectionAction
+        assertNotNull("the lightbox comment's selection menu offers Reply", action)
+        rule.runOnUiThread { action!!.onSelected("About") }
+        rule.waitForIdle()
+        rule.onAllNodes(hasSetTextAction()).onLast().assert(hasText("> About\n\n"))
     }
 
     /** Opens the comment's edit box and saves [words] in it. */

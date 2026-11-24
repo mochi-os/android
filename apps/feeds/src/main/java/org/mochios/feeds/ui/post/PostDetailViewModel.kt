@@ -22,6 +22,8 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
+import org.mochios.android.ui.components.quote
+import org.mochios.android.ui.components.quoteInto
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.UndoChain
 import org.mochios.android.websocket.MochiWebSocket
@@ -268,6 +270,19 @@ class PostDetailViewModel @Inject constructor(
         _replyingTo.value = commentId
     }
 
+    /** The quote the last Reply put at the head of the draft, which the next one replaces. */
+    private var replyQuote = ""
+
+    /**
+     * Replies to [commentId], with [selected], the text the user had selected
+     * on the page, quoted at the head of the draft as [quoteInto] has it.
+     */
+    fun startReply(commentId: String, selected: String?) {
+        _replyingTo.value = commentId
+        _commentText.value = quoteInto(_commentText.value, selected, replyQuote)
+        replyQuote = quote(selected)
+    }
+
     /**
      * Sends the draft. From the lightbox's comments panel, [anchor] is the
      * image the comment is about; a reply keeps its parent's context instead.
@@ -292,6 +307,7 @@ class PostDetailViewModel @Inject constructor(
                         tracker = commentTracker,
                     )
                     _commentText.value = ""
+                    replyQuote = ""
                     _commentAttachments.value = emptyList()
                     _replyingTo.value = null
                     // Inside the upload, so the files in flight give way to

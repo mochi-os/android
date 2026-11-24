@@ -9,9 +9,12 @@ import android.content.Intent
 import android.os.Looper
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.test.getBoundsInRoot
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.unit.dp
@@ -25,6 +28,9 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -110,6 +116,9 @@ class ProjectActionsTest {
     /** The status options of a task, as `{"id", "name"}` objects. */
     @Volatile private var options = """[{"id": "todo", "name": "To do", "rank": 1}, {"id": "doing", "name": "Doing", "rank": 2}, {"id": "done", "name": "Done", "rank": 3}]"""
 
+    /** The size options of a task. */
+    @Volatile private var sizes = """[{"id": "small", "name": "Small", "rank": 1}, {"id": "large", "name": "Large", "rank": 2}]"""
+
     /** The project's objects. */
     @Volatile private var objects = ""
 
@@ -126,6 +135,12 @@ class ProjectActionsTest {
 
     /** Whether the objects are listed; off, the listing fails, so a reload changes nothing. */
     @Volatile private var listing = true
+
+    /**
+     * Holds the next listing of the objects until released, which then
+     * answers them as they were when it was asked for.
+     */
+    @Volatile private var reading: CountDownLatch? = null
 
     private val asked = ConcurrentLinkedQueue<Pair<String, String>>()
     private val failures = mutableListOf<MochiError>()
@@ -167,6 +182,13 @@ class ProjectActionsTest {
                     return MockResponse().setBody("""{"data": $answer}""")
                 }
                 if (short.endsWith("/update")) return MockResponse().setBody("""{"data": $updated}""")
+                val held = reading
+                if (short == "p1/-/objects" && held != null) {
+                    reading = null
+                    val then = objects
+                    held.await(10, TimeUnit.SECONDS)
+                    return MockResponse().setBody("""{"data": {"objects": [$then], "watched": []}}""")
+                }
                 if (short == "p1/-/objects" && !listing) return MockResponse().setResponseCode(500).setBody("""{"error": "Down"}""")
                 val data = when (short) {
                     "p1/-/information" -> """{"project": {"id": "p1", "name": "Board", "prefix": "B", "access": "$access"},
@@ -174,7 +196,7 @@ class ProjectActionsTest {
                         "fields": {"task": [{"id": "title", "name": "Title", "fieldtype": "text", "rank": 1}, {"id": "status", "name": "Status", "fieldtype": "enumerated", "rank": 2},
                                 {"id": "size", "name": "Size", "fieldtype": "enumerated", "rank": 3}],
                             "bug": [{"id": "title", "name": "Title", "fieldtype": "text", "rank": 1}, {"id": "status", "name": "Status", "fieldtype": "enumerated", "rank": 2}]},
-                        "options": {"task": {"status": $options, "size": [{"id": "small", "name": "Small", "rank": 1}, {"id": "large", "name": "Large", "rank": 2}]},
+                        "options": {"task": {"status": $options, "size": $sizes},
                             "bug": {"status": $options}},
                         "views": [{"id": "v1", "name": "Board", "viewtype": "board", "columns": "status", "classes": ["task"], "filter": "status:todo"},
                             {"id": "v2", "name": "List", "viewtype": "list"},
@@ -471,13 +493,38 @@ class ProjectActionsTest {
         rule.onNodeWithText(context.getString(R.string.projects_move_position_top)).performSemanticsAction(SemanticsActions.OnClick)
         until { asked.any { (path, _) -> path == "p1/-/objects/s/move" } }
         val top = sent("p1/-/objects/s/move")
-        assertEquals("THE POINT: no option the server would refuse, but the column it is drawn in", "", top["value"]?.asString)
-        assertFalse("which it keeps", top.has("clear"))
+        assertFalse(
+            "THE POINT: the column it stays in is not named, so the server takes Unset, whose status is not Stale's, beside it",
+            top.has("field") || top.has("value"),
+        )
+        assertFalse("and it keeps its value", top.has("clear"))
         assertEquals("above Unset, the first card there", "u", top["before"]?.asString)
     }
 
     @Test
-    fun `a card dropped on another on a board without lanes names the column field`() {
+    fun `a card reordered in the column for no value is drawn beside a card whose value is not its own`() {
+        val model = unset()
+        answering = CountDownLatch(1)
+        // Unset dropped below Stale, which holds a status no column is drawn for.
+        model.moveBeside("u", target = "s", below = true, field = "status", value = "")
+        val none = model.sortObjects(model.uiState.value.objects.filter { obj -> obj.stringValue("status") !in setOf("todo", "doing", "done") })
+        assertEquals("THE POINT: below Stale at once, as the server places it", listOf("s", "u"), none.map { obj -> obj.id })
+        answering?.countDown()
+    }
+
+    @Test
+    fun `a card of a class without the column field is reordered without naming it`() {
+        // A note has no status field, so it is drawn in the column for no value.
+        objects = "$objects," + """{"id": "n", "project": "p1", "class": "note", "parent": "", "rank": "a8", "number": 8, "values": {"title": "Note"}}"""
+        val model = unset()
+        model.moveBeside("n", target = "u", below = true, field = "status", value = "")
+        until { asked.any { (path, _) -> path == "p1/-/objects/n/move" } }
+        assertFalse("THE POINT: named, the server refuses the move, the field not found", sent("p1/-/objects/n/move").has("field"))
+        assertEquals("u", sent("p1/-/objects/n/move")["after"]?.asString)
+    }
+
+    @Test
+    fun `a card dropped on another in its own column names no column`() {
         val model = project()
         listing = false
         board(model)
@@ -496,8 +543,8 @@ class ProjectActionsTest {
         }
         until { asked.any { (path, _) -> path == "p1/-/objects/b/move" } }
         val move = sent("p1/-/objects/b/move")
-        assertEquals("THE POINT: the column's field, which the server takes the move's neighbours in", "status", move["field"]?.asString)
-        assertEquals("with no value, which keeps the column it is in", "", move["value"]?.asString)
+        assertFalse("THE POINT: the column does not change, so it is not named", move.has("field") || move.has("value"))
+        assertEquals("above Alpha", "a", move["before"]?.asString)
     }
 
     // ---- The Move sheet ----
@@ -734,13 +781,16 @@ class ProjectActionsTest {
     @Test
     fun `a card reordered in the lane for none keeps a value no lane is drawn for`() {
         val model = lanes()
+        answering = CountDownLatch(1)
         model.moveBeside("v", target = "u", below = false, field = "status", value = "todo", rowField = "size", rowValue = "")
+        assertEquals("THE POINT: drawn above Unsized at once, as the server places it", listOf("a", "v", "u"), todo(model))
+        answering?.countDown()
         until { asked.any { (path, _) -> path == "p1/-/objects/v/move" } }
-        assertEquals(
-            "THE POINT: it stays in the lane it is drawn in, so its own value goes, which writes nothing, not \"\"",
-            """{"field":"size","value":"huge"}""",
-            sent("p1/-/objects/v/move")["row"]?.asString,
+        assertFalse(
+            "THE POINT: it stays in the lane it is drawn in, so no lane is named: its own would refuse Unsized beside it, and \"\" would clear it",
+            sent("p1/-/objects/v/move").has("row"),
         )
+        assertEquals("u", sent("p1/-/objects/v/move")["before"]?.asString)
         assertEquals("huge", model.uiState.value.objects.first { obj -> obj.id == "v" }.stringValue("size"))
     }
 
@@ -757,7 +807,7 @@ class ProjectActionsTest {
         val model = lanes()
         model.moveToEnd("a", "status", "todo", rowField = "size", rowValue = "small")
         until { asked.any { (path, _) -> path == "p1/-/objects/a/move" } }
-        assertEquals("THE POINT: the lane it is drawn in, its own", """{"field":"size","value":"small"}""", sent("p1/-/objects/a/move")["row"]?.asString)
+        assertFalse("THE POINT: the lane it is drawn in, its own, is not named", sent("p1/-/objects/a/move").has("row"))
         model.setSortField("number")
         model.moveBeside("v", target = "u", below = true, field = "status", value = "todo", rowField = "size", rowValue = "")
         settle()
@@ -797,20 +847,19 @@ class ProjectActionsTest {
     }
 
     @Test
-    fun `a drop at the end of its own column on a board with lanes names the column and the lane it stays in`() {
+    fun `a drop at the end of its own column on a board with lanes names neither, and ends in the lane it stays in`() {
         val model = laned()
         // On the column's empty space, which names no lane.
         model.moveToEnd("a", "status", "todo")
         until { asked.any { (path, _) -> path == "p1/-/objects/a/move" } }
         val move = sent("p1/-/objects/a/move")
-        assertEquals("status", move["field"]?.asString)
-        assertEquals("with no value, which keeps its column", "", move["value"]?.asString)
-        assertEquals("THE POINT: and its own lane, which writes nothing", """{"field":"size","value":"small"}""", move["row"]?.asString)
-        assertEquals("so the end is Small's, after Echo, not Kilo", "e", move["after"]?.asString)
+        assertFalse("THE POINT: the column does not change, so it is not named", move.has("field"))
+        assertFalse("THE POINT: nor does the lane", move.has("row"))
+        assertEquals("the end is Small's, after Echo, not Kilo", "e", move["after"]?.asString)
     }
 
     @Test
-    fun `the Move sheet on a board with lanes names the column and the lane, changing only what was chosen`() {
+    fun `the Move sheet on a board with lanes names only what was chosen`() {
         val model = laned()
         val alpha = model.uiState.value.objects.first { obj -> obj.id == "a" }
         rule.setContent { MoveObjectSheet(alpha, model, onDismiss = {}) }
@@ -818,14 +867,13 @@ class ProjectActionsTest {
         rule.onNodeWithText(context.getString(R.string.projects_move_after, "Echo")).performSemanticsAction(SemanticsActions.OnClick)
         until { moves("a").isNotEmpty() }
         val after = moves("a").single()
-        assertEquals("status", after["field"]?.asString)
-        assertEquals("", after["value"]?.asString)
-        assertEquals("THE POINT: in its own lane", """{"field":"size","value":"small"}""", after["row"]?.asString)
+        assertFalse("THE POINT: a place in its own column does not name it", after.has("field"))
+        assertFalse("THE POINT: nor its own lane", after.has("row"))
+        assertEquals("e", after["after"]?.asString)
         rule.onNodeWithText("Large").performSemanticsAction(SemanticsActions.OnClick)
         until { moves("a").size == 2 }
         val lane = moves("a")[1]
-        assertEquals("THE POINT: a lane chosen names the column too, with no value", "status", lane["field"]?.asString)
-        assertEquals("", lane["value"]?.asString)
+        assertFalse("THE POINT: a lane chosen names no column", lane.has("field") || lane.has("value"))
         assertEquals("""{"field":"size","value":"large"}""", lane["row"]?.asString)
     }
 
@@ -847,9 +895,170 @@ class ProjectActionsTest {
         assertFalse(moves("k").single().has("parent"))
     }
 
+    // ---- A tree whose parents a filter hides ----
+
+    /**
+     * The list with Epic filtered out: its stories, One and Two, are drawn at
+     * the top level between Top and Last, a bug the hierarchy lets go under
+     * Epic, beside Parent and its Kid. Answers the tree's rows in the order
+     * drawn.
+     */
+    private fun hidden(): Pair<ProjectViewModel, List<org.mochios.projects.model.ProjectObject>> {
+        objects = listOf(
+            item("e", "task", "todo", "a0", "Epic"),
+            item("s1", "bug", "todo", "a1", "One", parent = "e"),
+            item("t1", "task", "todo", "a2", "Top"),
+            item("s2", "bug", "todo", "a3", "Two", parent = "e"),
+            item("t2", "bug", "todo", "a4", "Last"),
+            item("p", "task", "todo", "a5", "Parent"),
+            item("k", "bug", "todo", "a6", "Kid", parent = "p"),
+        ).joinToString(",")
+        val model = project("v2")
+        listing = false
+        return model to model.uiState.value.objects.filter { obj -> obj.id != "e" }
+    }
+
+    private fun node(model: ProjectViewModel, id: String) =
+        TreeNode(model.uiState.value.objects.first { obj -> obj.id == id }, 0, hasChildren = false, isExpanded = true)
+
+    @Test
+    fun `a row dropped beside a row whose parent is hidden stays where it is in the tree, between the rows drawn there`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop("t2", node(model, "s1"), DragEdge.Bottom, model, drawn)
+        until { moves("t2").isNotEmpty() }
+        val move = moves("t2").single()
+        assertFalse("THE POINT: not put under Epic, which the tree does not draw", move.has("parent"))
+        assertEquals("after One", "s1", move["after"]?.asString)
+        assertEquals("THE POINT: and before Top, the row drawn below One, not Two, Epic's next", "t1", move["before"]?.asString)
+        assertFalse("THE POINT: the top level draws rows of two parents, so none is named", move.has("scope"))
+    }
+
+    @Test
+    fun `a row whose parent is hidden dropped beside a top-level row keeps its parent`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop("s2", node(model, "t1"), DragEdge.Top, model, drawn)
+        until { moves("s2").isNotEmpty() }
+        val move = moves("s2").single()
+        assertFalse("THE POINT: it is drawn at the top level already, so it stays under Epic", move.has("parent"))
+        assertFalse("THE POINT: and the top level, of two parents, names none", move.has("scope"))
+        assertEquals("t1", move["before"]?.asString)
+        assertEquals("One, drawn above Top", "s1", move["after"]?.asString)
+    }
+
+    @Test
+    fun `a row reordered after the last child of a hidden parent goes before the row drawn below, not to the end`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop("s1", node(model, "s2"), DragEdge.Bottom, model, drawn)
+        until { moves("s1").isNotEmpty() }
+        val move = moves("s1").single()
+        assertFalse("THE POINT: named, Epic's last child would be the scope's end, and One would jump past every key", move.has("scope"))
+        assertEquals("s2", move["after"]?.asString)
+        assertEquals("Last, drawn below Two", "t2", move["before"]?.asString)
+    }
+
+    @Test
+    fun `a row under a drawn parent dropped beside a row whose parent is hidden is refused`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop("k", node(model, "s1"), DragEdge.Top, model, drawn)
+        settle()
+        assertTrue("THE POINT: it would go under Epic, out of sight", moves("k").isEmpty())
+    }
+
+    @Test
+    fun `a row moved into a parent's children takes its board values at once, with its own children`() {
+        objects = listOf(
+            item("p", "task", "doing", "a0", "Parent", size = "large"),
+            item("q", "bug", "doing", "a1", "Kin", parent = "p"),
+            item("x", "bug", "todo", "a2", "Mover"),
+            item("y", "bug", "todo", "a3", "Under", parent = "x"),
+        ).joinToString(",")
+        val model = project("v2")
+        listing = false
+        answering = CountDownLatch(1)
+        handleTreeDrop("x", TreeNode(model.uiState.value.objects.first { obj -> obj.id == "q" }, 1, hasChildren = false, isExpanded = true), DragEdge.Bottom, model)
+        val drawn = model.uiState.value.objects.associateBy { obj -> obj.id }
+        assertEquals("p", drawn.getValue("x").parent)
+        assertEquals("THE POINT: Parent's status, before the server answers", "doing", drawn.getValue("x").stringValue("status"))
+        assertEquals("THE POINT: and its child's", "doing", drawn.getValue("y").stringValue("status"))
+        assertEquals("a bug has no size, so it takes none", "", drawn.getValue("x").stringValue("size"))
+        answering?.countDown()
+        until { moves("x").isNotEmpty() }
+        assertEquals("p", moves("x").single()["parent"]?.asString)
+    }
+
+    @Test
+    fun `a row dropped on another takes its new parent's board values with its children`() {
+        objects = listOf(
+            item("p", "task", "doing", "a0", "Parent"),
+            item("x", "bug", "todo", "a2", "Mover"),
+            item("y", "bug", "todo", "a3", "Under", parent = "x"),
+        ).joinToString(",")
+        val model = project("v2")
+        listing = false
+        updated = """{"success": true, "parent": "p", "ranks": [{"id": "x", "rank": "a1", "updated": 77}], "updated": 77}"""
+        handleTreeDrop("x", TreeNode(model.uiState.value.objects.first { obj -> obj.id == "p" }, 0, hasChildren = false, isExpanded = true), DragEdge.On, model)
+        until { model.uiState.value.objects.first { obj -> obj.id == "x" }.rank == "a1" }
+        val drawn = model.uiState.value.objects.associateBy { obj -> obj.id }
+        assertEquals("p", drawn.getValue("x").parent)
+        assertEquals("THE POINT: Parent's status, as the server gives it, though the list cannot be read again", "doing", drawn.getValue("x").stringValue("status"))
+        assertEquals("THE POINT: and its child's", "doing", drawn.getValue("y").stringValue("status"))
+    }
+
     // ---- One move at a time ----
 
     private fun moves(id: String) = asked.filter { (path, _) -> path == "p1/-/objects/$id/move" }.map { (_, body) -> JsonParser.parseString(body).asJsonObject }
+
+    @Test
+    fun `moves still waiting when the board closes are sent, in turn`() {
+        val store = ViewModelStore()
+        val model = ViewModelProvider(store, object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T = ProjectViewModel(
+                SavedStateHandle(mapOf("projectId" to "p1")),
+                repository,
+                socket,
+                session,
+                ActiveViewStore(context),
+                CollapsedColumnsStore(context),
+            ) as T
+        })[ProjectViewModel::class.java]
+        until { model.uiState.value.projectDetails != null && !model.uiState.value.isLoading }
+        model.setActiveView("v1")
+        settle()
+        listing = false
+        answering = CountDownLatch(1)
+        model.moveObject("h", "status", "todo", after = "a")
+        model.moveObject("g", "status", "todo", after = "h")
+        until { moves("h").isNotEmpty() }
+        // Back, while the first is still being written.
+        store.clear()
+        answering?.countDown()
+        until { moves("g").isNotEmpty() }
+        assertEquals("THE POINT: the second is sent once the first is answered, though the board has gone", "h", moves("g").single()["after"]?.asString)
+    }
+
+    @Test
+    fun `a list read while a move is answered lands without taking it back`() {
+        val model = project()
+        answering = CountDownLatch(1)
+        answer = """{"success": true, "ranks": [{"id": "h", "rank": "a0V", "updated": 99}], "updated": 99}"""
+        val read = CountDownLatch(1)
+        reading = read
+        model.moveObject("h", "status", "todo", after = "a")
+        until { moves("h").isNotEmpty() }
+        // A pull to refresh, read before the move is written.
+        model.refresh()
+        until { asked.count { (path, _) -> path == "p1/-/objects" } >= 2 }
+        answering?.countDown()
+        until { model.uiState.value.objects.first { obj -> obj.id == "h" }.rank == "a0V" }
+        // Every list read from now on fails, so only the stale one lands.
+        listing = false
+        read.countDown()
+        until { !model.uiState.value.isRefreshing }
+        settle()
+        assertEquals("THE POINT: the list read before the answer does not put it back in Doing", "todo", status(model, "h"))
+        assertEquals("a0V", model.uiState.value.objects.first { obj -> obj.id == "h" }.rank)
+    }
 
     @Test
     fun `two quick moves of one card go one after the other, in the order made`() {
@@ -995,10 +1204,12 @@ class ProjectActionsTest {
 
     private fun board(model: ProjectViewModel) {
         rule.setContent {
+            val state by model.uiState.collectAsState()
             BoardView(
-                objects = model.uiState.value.objects,
+                objects = state.objects,
                 view = model.getActiveView(),
                 viewModel = model,
+                projectDetails = state.projectDetails,
                 onObjectClick = {},
             )
         }
@@ -1058,6 +1269,40 @@ class ProjectActionsTest {
         board(project())
         menu()
         assertTrue(!offered())
+    }
+
+    // ---- A change to the project ----
+
+    /** [titles] as the board draws them, top to bottom. */
+    private fun drawn(vararg titles: String): List<String> =
+        titles.sortedBy { title -> rule.onNodeWithText(title).getBoundsInRoot().top.value }
+
+    /**
+     * The board's objects held as they were: a change to the project's
+     * details alone, the options a sort ranks by, reaches the board through
+     * the details the screen collects.
+     */
+    @Test
+    fun `a board sorted by a field sorts again when the field's options change`() {
+        objects = listOf(
+            item("a", "task", "todo", "a0", "Alpha", size = "large"),
+            item("b", "task", "todo", "a1", "Beta", size = "small"),
+        ).joinToString(",")
+        val model = project()
+        model.setSortField("field:size")
+        val held = model.uiState.value.objects
+        val view = model.getActiveView()
+        rule.setContent {
+            val state by model.uiState.collectAsState()
+            BoardView(objects = held, view = view, viewModel = model, projectDetails = state.projectDetails, onObjectClick = {})
+        }
+        rule.waitForIdle()
+        assertEquals("small first", listOf("Beta", "Alpha"), drawn("Alpha", "Beta"))
+        sizes = """[{"id": "small", "name": "Small", "rank": 2}, {"id": "large", "name": "Large", "rank": 1}]"""
+        model.refresh()
+        until { model.getOptionsForObject("task", "size").any { option -> option.id == "large" && option.rank == 1 } }
+        rule.waitForIdle()
+        assertEquals("THE POINT: large first, as the options now rank them", listOf("Alpha", "Beta"), drawn("Alpha", "Beta"))
     }
 
     // ---- Object delete ----

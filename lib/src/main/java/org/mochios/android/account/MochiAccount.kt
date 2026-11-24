@@ -56,12 +56,17 @@ object MochiAccount {
     private fun sessions(context: Context): SharedPreferences =
         context.applicationContext.getSharedPreferences(SESSIONS, Context.MODE_PRIVATE)
 
+    /**
+     * One account. [session] is null when none can be read: the keystore
+     * failed to open it, or none is held. The account is still on the device
+     * and is signed in again; only its removal is a sign-out.
+     */
     data class Snapshot(
         val identity: String,
         val name: String,
         val server: String,
         val fingerprint: String?,
-        val session: String
+        val session: String?
     )
 
     fun upsert(
@@ -208,7 +213,7 @@ object MochiAccount {
         }
     }
 
-    /** Every Mochi account on this device that we can read. */
+    /** Every Mochi account on this device, those whose session cannot be read among them. */
     fun all(context: Context): List<Snapshot> {
         return try {
             val am = AccountManager.get(context)
@@ -244,7 +249,10 @@ object MochiAccount {
 
     private fun snapshotOf(context: Context, am: AccountManager, account: Account): Snapshot? {
         val identity = identityOf(am, account)
-        val session = session(context, am, account, identity) ?: return null
+        // Listed even when its session cannot be read: a keystore error is
+        // not the account leaving the device, which the app would take for a
+        // sign-out elsewhere and sign out of too.
+        val session = session(context, am, account, identity)
         val server = am.getUserData(account, USER_DATA_SERVER) ?: return null
         val name = am.getUserData(account, USER_DATA_NAME).orEmpty()
         val fingerprint = am.getUserData(account, USER_DATA_FINGERPRINT)
@@ -257,7 +265,8 @@ object MochiAccount {
     }
 
     /**
-     * [identity]'s session, or null when none is held. An account written
+     * [identity]'s session, or null when none is held or it cannot be
+     * opened. An account written
      * before the sealed store kept it as its password: that one moves into the
      * store, and the password is cleared.
      */

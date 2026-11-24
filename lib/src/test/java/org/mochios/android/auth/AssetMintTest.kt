@@ -113,6 +113,16 @@ class AssetMintTest {
         assertNull(runBlocking { auth.asset("forums") })
     }
 
+    /** Every owned image asks: were the answer not held, each would wait on a mint of its own. */
+    @Test
+    fun `a server's answer of none is held like a token`() {
+        minted(null)
+        minted(null)
+        assertNull(runBlocking { auth.asset("feeds") })
+        assertNull(runBlocking { auth.asset("feeds") })
+        assertEquals("THE POINT: asked once", 1, server.requestCount)
+    }
+
     @Test
     fun `no asset token without a session`() {
         runBlocking { session.clearAll() }

@@ -31,6 +31,7 @@ import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListPadding
 import org.mochios.market.ui.components.MarketListPrice
@@ -83,7 +84,7 @@ fun MySalesScreen(
                         SaleRow(
                             order = order,
                             onClick = {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.saleDetail(order.id.toString()),
                                 )
                             },

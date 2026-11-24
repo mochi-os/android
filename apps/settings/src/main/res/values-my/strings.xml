@@ -418,7 +418,7 @@
     <string name="networks_title">ကွန်ရက်များ</string>
     <string name="networks_not_offered">ဤဆာဗာသည် အခြားကွန်ရက်များကို မပေးပါ။</string>
     <string name="networks_link">အကောင့် ချိတ်ဆက်မည်</string>
-    <string name="networks_link_action">လင့်ခ်</string>
+    <string name="networks_link_action">ချိတ်ဆက်မည်</string>
     <string name="networks_linked">အကောင့် ချိတ်ဆက်ပြီး</string>
     <string name="networks_link_denied">ဆာဗာက ချိတ်ဆက်မှုကို ခွင့်မပြုခဲ့ပါ</string>
     <string name="networks_link_failed">အကောင့် ချိတ်ဆက်၍ မရပါ</string>

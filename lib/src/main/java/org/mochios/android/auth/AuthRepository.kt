@@ -155,7 +155,7 @@ class AuthRepository @Inject constructor(
         }
         return runCatching {
             val session = sessionManager.currentToken.first()
-            val response = tokenApi.fetchToken(TokenRequest(Token.path(app))).unwrapRaw()
+            val response = tokenApi.fetchToken(Token.request(app)).unwrapRaw()
             sessionManager.saveToken(app, response.token)
             hold(app, session, response.asset)
             response.token
@@ -173,37 +173,38 @@ class AuthRepository @Inject constructor(
      */
     suspend fun asset(app: String): String? {
         val session = sessionManager.currentToken.first() ?: return null
-        held(app, session)?.let { return it }
+        held(app, session)?.let { held -> return held.token.ifEmpty { null } }
         return minting.computeIfAbsent(app) { Mutex() }.withLock {
-            held(app, session)?.let { return@withLock it }
+            held(app, session)?.let { held -> return@withLock held.token.ifEmpty { null } }
             val response = try {
-                tokenApi.fetchToken(TokenRequest(Token.path(app))).unwrapRaw()
+                tokenApi.fetchToken(Token.request(app)).unwrapRaw()
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) {
                 return@withLock null
             }
             hold(app, session, response.asset)
-            held(app, session)
+            held(app, session)?.token?.ifEmpty { null }
         }
     }
 
     /** [asset] for the asset client's threads, which have no coroutine. */
     fun assetBlocking(app: String): String? = runBlocking { asset(app) }
 
-    /** An asset token [app] holds for [session] with life left. */
-    private fun held(app: String, session: String): String? =
-        assets[app]
-            ?.takeIf { held -> held.session == session && Token.fresh(held.token, System.currentTimeMillis(), ASSET_MARGIN) }
-            ?.token
+    /** What [app] holds for [session] with life left: an asset token, or the answer that there is none. */
+    private fun held(app: String, session: String): HeldAsset? =
+        assets[app]?.takeIf { held -> held.session == session && held.until - System.currentTimeMillis() > ASSET_MARGIN }
 
     private fun hold(app: String, session: String?, asset: String) {
-        if (session == null || asset.isBlank()) return
-        assets[app] = HeldAsset(session, asset)
+        if (session == null) return
+        // A server that issues none answers the same until a token would have
+        // ended: asked again, every image of the app would wait on a mint.
+        val until = if (asset.isBlank()) System.currentTimeMillis() + ASSET_LIFETIME else Token.expiry(asset) ?: return
+        assets[app] = HeldAsset(session, asset.ifBlank { "" }, until)
     }
 
-    /** An asset token and the session it was minted for. */
-    private class HeldAsset(val session: String, val token: String)
+    /** An asset token, empty for none, the session it was minted for, and until when it stands. */
+    private class HeldAsset(val session: String, val token: String, val until: Long)
 
     private val assets = ConcurrentHashMap<String, HeldAsset>()
 
@@ -378,5 +379,8 @@ class AuthRepository @Inject constructor(
 
         /** How much life, in ms, a held asset token must have left to be used. */
         const val ASSET_MARGIN = 5L * 60 * 1000
+
+        /** How long, in ms, an asset token lives: how long an answer of none is held. */
+        const val ASSET_LIFETIME = 30L * 60 * 1000
     }
 }

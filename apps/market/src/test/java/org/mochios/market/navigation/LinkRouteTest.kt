@@ -120,6 +120,24 @@ class LinkRouteTest {
         assertEquals("market/account/a1", MarketApp.publicProfile("a1", ""))
     }
 
+    /** An id is one segment of its route: one that would name another route, or carry a query, is escaped or refused. */
+    @Test
+    fun `an id goes into its route as one segment`() {
+        assertEquals("market/listing/a%3Fb?title=T", MarketApp.listingDetail("a?b", "T"))
+        assertEquals(null, MarketApp.listingDetail("a/edit"))
+        assertEquals(null, MarketApp.listingEdit(".."))
+        assertEquals(null, MarketApp.checkout(""))
+        assertEquals("market/purchases/o%201", MarketApp.purchaseDetail("o 1"))
+        assertEquals(null, MarketApp.saleDetail("o/1"))
+        assertEquals(null, MarketApp.messageThread("l1", "t/x"))
+        assertEquals("market/messages/l%231/new", MarketApp.messageThread("l#1", "new"))
+        assertEquals(null, MarketApp.conversation("."))
+        assertEquals("market/account/x%3Fy", MarketApp.publicProfile("a1", "x?y"))
+        assertEquals(null, MarketApp.publicProfile("a/1"))
+        assertEquals("a link's listing that is not one segment opens the home alone", emptyList<String>(), routes("listings/.."))
+        assertEquals(listOf(MarketApp.SALES), routes("sales/.."))
+    }
+
     @Test
     fun `a link naming nothing opens the market home alone`() {
         assertEquals(emptyList<String>(), routes(""))

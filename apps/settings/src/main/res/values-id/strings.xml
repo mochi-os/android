@@ -419,7 +419,7 @@
     <string name="networks_title">Jaringan</string>
     <string name="networks_not_offered">Server ini tidak menawarkan jaringan lain.</string>
     <string name="networks_link">Tautkan akun</string>
-    <string name="networks_link_action">Tautan</string>
+    <string name="networks_link_action">Tautkan</string>
     <string name="networks_linked">Akun tertaut</string>
     <string name="networks_link_denied">Server tidak mengizinkan penautan</string>
     <string name="networks_link_failed">Tidak dapat menautkan akun</string>

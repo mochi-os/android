@@ -98,7 +98,8 @@ class CrmListTest {
     private fun viewing() = rule.onAllNodes(isToggleable())[1]
 
     private fun create(search: Boolean, view: Boolean): String {
-        rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = CreateCrmViewModel(server.repository())) }
+        val model = CreateCrmViewModel(server.repository())
+        rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = model) }
         rule.waitForIdle()
         listing().assertIsOff()
         viewing().assertIsOff()
@@ -133,7 +134,8 @@ class CrmListTest {
 
     @Test
     fun `the switches say what they do`() {
-        rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = CreateCrmViewModel(server.repository())) }
+        val model = CreateCrmViewModel(server.repository())
+        rule.setContent { CreateCrmScreen(onBack = {}, onCreated = {}, viewModel = model) }
         rule.waitForIdle()
         assertEquals("Allow anyone to search for CRM", context.getString(R.string.crm_create_allow_search))
         assertEquals("Allow anyone to view CRM", context.getString(R.string.crm_create_public))

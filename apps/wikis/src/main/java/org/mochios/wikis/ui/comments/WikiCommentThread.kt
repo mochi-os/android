@@ -6,7 +6,6 @@
 package org.mochios.wikis.ui.comments
 
 import org.mochios.android.api.OwnedAddress
-import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,6 +26,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -40,6 +40,8 @@ import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.SelectionAction
+import org.mochios.android.ui.components.windowSelection
 import org.mochios.android.util.fingerprint
 import org.mochios.android.util.segment
 import org.mochios.wikis.R
@@ -49,9 +51,11 @@ import org.mochios.android.ui.components.addressByAuthor
 
 /**
  * Renders one [WikiComment] and its descendants, indenting each child by 16dp.
- * Reply hands over the text selected in the comment's body, if any, which the
- * reply then quotes, as the web does with `window.getSelection()`; with
- * nothing selected the reply starts blank. Edit hands over what to run once
+ * Reply hands over the text selected on the page, in this comment's body or
+ * another's, which the reply then quotes, as the web does with
+ * `window.getSelection()`; with
+ * nothing selected the reply starts blank. The selection's menu offers the
+ * same Reply. Edit hands over what to run once
  * the server has the edit, so a refused one keeps the edit box open.
  */
 @Composable
@@ -74,9 +78,8 @@ fun WikiCommentThread(
     var editing by rememberSaveable(comment.id) { mutableStateOf(false) }
     var editBody by rememberSaveable(comment.id) { mutableStateOf("") }
     var deleting by remember { mutableStateOf(false) }
-    // Captured ref to the rendered comment-body TextView so the Reply
-    // button can read the user's active selection at tap time.
-    var bodyTextView by remember(comment.id) { mutableStateOf<TextView?>(null) }
+    // The Reply button reads the page's selection at tap time through it.
+    val view = LocalView.current
 
     val canEdit = currentUserId != null && comment.author == currentUserId
     val canDelete = (currentUserId != null && comment.author == currentUserId) || isOwner
@@ -92,6 +95,7 @@ fun WikiCommentThread(
     val totalDescendants = remember(comment) { countDescendants(comment) }
     val collapseLabel = stringResource(MochiR.string.common_collapse)
     val expandLabel = stringResource(MochiR.string.common_expand)
+    val replyLabel = stringResource(MochiR.string.comment_reply)
 
     Column(
         modifier = Modifier
@@ -229,7 +233,12 @@ fun WikiCommentThread(
                         HtmlContent(
                             html = comment.body,
                             modifier = Modifier.fillMaxWidth(),
-                            onTextViewReady = { tv -> bodyTextView = tv },
+                            // Reply in the selection's own menu as well: the
+                            // selection's handles hang over the actions row
+                            // below, and take a tap meant for its Reply.
+                            selectionAction = SelectionAction(replyLabel) { selected ->
+                                onStartReply(comment.id, selected)
+                            },
                         )
                     }
 
@@ -239,19 +248,7 @@ fun WikiCommentThread(
                     }
 
                     CommentActions(
-                        onReply = {
-                            val tv = bodyTextView
-                            val sel = tv?.let { view ->
-                                val from = view.selectionStart.coerceAtLeast(0)
-                                val to = view.selectionEnd.coerceAtLeast(0)
-                                if (to > from) {
-                                    view.text.subSequence(from, to).toString()
-                                } else {
-                                    null
-                                }
-                            }
-                            onStartReply(comment.id, sel)
-                        },
+                        onReply = { onStartReply(comment.id, windowSelection(view)) },
                         onEdit = if (canEdit && onEdit != null) {
                             {
                                 editing = true

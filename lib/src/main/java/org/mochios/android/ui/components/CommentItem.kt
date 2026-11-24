@@ -118,6 +118,10 @@ fun CommentItem(
     highlighted: Boolean = false,
     // A short mark after the name, such as the post author's in a forum.
     badge: String? = null,
+    // An item for the body's selection menu, such as a Reply that quotes the
+    // selection: the selection's handles hang over [actions] and take a tap
+    // meant for them.
+    selectionAction: SelectionAction? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     // Replies are indented and marked with a coloured vertical bar so nested
@@ -284,7 +288,8 @@ fun CommentItem(
             } else {
                 HtmlContent(
                     html = body,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    selectionAction = selectionAction,
                 )
 
                 if (attachments.isNotEmpty()) {

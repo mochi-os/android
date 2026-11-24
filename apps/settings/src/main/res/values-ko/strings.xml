@@ -419,7 +419,7 @@
     <string name="networks_title">네트워크</string>
     <string name="networks_not_offered">이 서버는 다른 네트워크를 제공하지 않습니다.</string>
     <string name="networks_link">계정 연결</string>
-    <string name="networks_link_action">링크</string>
+    <string name="networks_link_action">연결</string>
     <string name="networks_linked">계정이 연결되었습니다</string>
     <string name="networks_link_denied">서버가 연결을 허용하지 않았어요</string>
     <string name="networks_link_failed">계정을 연결할 수 없었어요</string>

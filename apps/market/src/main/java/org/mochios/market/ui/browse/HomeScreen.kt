@@ -90,6 +90,7 @@ import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -162,7 +163,7 @@ fun HomeScreen(
             onRetry = viewModel::retry,
             onListingClick = { listing ->
                 viewModel.viewListing(listing)
-                navController.navigate(
+                navController.open(
                     MarketApp.listingDetail(listing.id.toString(), listing.title),
                 )
             },

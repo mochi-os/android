@@ -448,7 +448,7 @@
     <string name="networks_title">Omrežja</string>
     <string name="networks_not_offered">Ta strežnik ne ponuja drugih omrežij.</string>
     <string name="networks_link">Poveži račun</string>
-    <string name="networks_link_action">Povezava</string>
+    <string name="networks_link_action">Poveži</string>
     <string name="networks_linked">Račun povezan</string>
     <string name="networks_link_denied">Strežnik ni dovolil povezave</string>
     <string name="networks_link_failed">Računa ni bilo mogoče povezati</string>

@@ -320,6 +320,26 @@ class ChatListMenuTest {
         assertTrue("c1" in model.pinned.value)
     }
 
+    /** One account's list, answered once another is signed in, is not that account's. */
+    @Test
+    fun `a list answered after a switch to another account drops none of its pins`() {
+        val pins = context.getSharedPreferences("mochi_chat_pins", android.content.Context.MODE_PRIVATE)
+        pins.edit().putStringSet("alice", setOf("c1")).putStringSet("bob", setOf("c9")).commit()
+        runBlocking { session.setBoundAccount("alice") }
+        until { model.pinned.value == setOf("c1") }
+        listGate = CountDownLatch(1)
+        val before = lists.get()
+        model.load()
+        until { lists.get() > before }
+        runBlocking { session.setBoundAccount("bob") }
+        until { model.pinned.value == setOf("c9") }
+        listGate!!.countDown()
+        listGate = null
+        until { !model.uiState.value.isLoading }
+        settleFor()
+        assertEquals("THE POINT: bob's pin stays", setOf("c9"), model.pinned.value)
+    }
+
     @Test
     fun `an invited chat is never shown with a dot`() {
         val invited = Chat(id = "c3", status = ChatStatus.INVITED)

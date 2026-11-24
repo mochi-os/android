@@ -23,6 +23,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -40,6 +41,8 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.SelectionAction
+import org.mochios.android.ui.components.windowSelection
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.feeds.model.Post
 import org.mochios.android.ui.components.ReactionBar
@@ -59,7 +62,9 @@ internal fun CommentItem(
     onEditTextChange: (String) -> Unit,
     onSaveEdit: () -> Unit,
     onCancelEdit: () -> Unit,
-    onReply: () -> Unit,
+    // Handed the text selected on the page, which the reply quotes, or null.
+    // Null where the reader may not comment, so there is no composer to reply in.
+    onReply: ((String?) -> Unit)?,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onReact: (String) -> Unit,
@@ -87,6 +92,9 @@ internal fun CommentItem(
     val anchor = comment.anchor
     val context = LocalContext.current
     val page = comment.page.orEmpty()
+    // Reply quotes what is selected on the page, in this body or another, as on the web.
+    val view = LocalView.current
+    val replyLabel = stringResource(MochiR.string.comment_reply)
     SharedCommentItem(
         name = comment.name,
         body = comment.text,
@@ -116,12 +124,13 @@ internal fun CommentItem(
         onToggleCollapse = onToggleCollapse,
         onCollapseParent = onCollapseParent,
         highlighted = highlighted,
+        selectionAction = onReply?.let { reply -> SelectionAction(replyLabel) { selected -> reply(selected) } },
     ) {
         // Reactions and the action icons share one row: the ReactionBar
         // (pills + add) followed by reply, edit for the comment's author, and
         // delete for its author or a manager of the feed.
         CommentActions(
-            onReply = onReply,
+            onReply = onReply?.let { reply -> { reply(windowSelection(view)) } },
             onShare = onShare,
             onEdit = onEdit.takeIf { isMine },
             onDelete = onDelete.takeIf { canManage || isMine },

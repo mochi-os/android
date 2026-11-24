@@ -50,6 +50,9 @@ class ObjectEditsTest {
     @Volatile private var status = "open"
     @Volatile private var parent = "x1"
 
+    /** Whether the server holds no values for o1, every one emptied. */
+    @Volatile private var emptied = false
+
     /** Holds the writes until released. */
     private val writes = CountDownLatch(1)
 
@@ -68,7 +71,8 @@ class ObjectEditsTest {
                 arrived.countDown()
                 held.await(5, TimeUnit.SECONDS)
             }
-            CrmServer.ok("""{"object": {"id": "o1", "crm": "p1", "parent": "$parent"}, "values": {"title": "$title", "status": "$status"}}""")
+            val values = if (emptied) "{}" else """{"title": "$title", "status": "$status"}"""
+            CrmServer.ok("""{"object": {"id": "o1", "crm": "p1", "parent": "$parent"}, "values": $values}""")
         }
         server.data("p1/-/objects/o2", """{"object": {"id": "o2", "crm": "p1", "parent": ""}, "values": {"title": "Second"}}""")
         val held: (okhttp3.mockwebserver.RecordedRequest) -> MockResponse = {
@@ -137,6 +141,47 @@ class ObjectEditsTest {
         held.countDown()
         settle()
         assertEquals("New", value("title"))
+    }
+
+    @Test
+    fun `the first read of an object keeps an edit made while it was out`() {
+        val held = CountDownLatch(1)
+        reads = held
+        model.loadWithInitialObject("p1", "o1", CrmObject(id = "o1", crm = "p1", parent = "x1", values = mapOf("title" to "Old", "status" to "open")))
+        until("the read") { arrived.count == 0L }
+        model.setValue("title", "New")
+        held.countDown()
+        settle()
+        assertEquals("THE POINT: the server's older copy does not undo the edit", "New", value("title"))
+    }
+
+    @Test
+    fun `reopened before its save goes, the sheet shows the edit over the board's copy`() {
+        model.setValue("title", "New")
+        model.close()
+        model.loadWithInitialObject("p1", "o1", CrmObject(id = "o1", crm = "p1", parent = "x1", values = mapOf("title" to "Old", "status" to "open")))
+        assertEquals("THE POINT: the board's older copy does not hide the edit, so typing on keeps it", "New", value("title"))
+        until("the reopening's read") { server.of("p1/-/objects/o1").size == 2 }
+        settle()
+        assertEquals("nor does the read the reopening sends", "New", value("title"))
+    }
+
+    @Test
+    fun `values emptied elsewhere show emptied after a frame`() {
+        emptied = true
+        frame("values/update")
+        until("the read") { server.of("p1/-/objects/o1").size == 2 }
+        settle()
+        assertEquals("THE POINT: the server's empty answer is shown", null to null, value("title") to value("status"))
+    }
+
+    @Test
+    fun `values emptied elsewhere show emptied on opening`() {
+        emptied = true
+        model.loadWithInitialObject("p1", "o1", CrmObject(id = "o1", crm = "p1", values = mapOf("title" to "Old")))
+        until("the opening's read") { server.of("p1/-/objects/o1").size == 2 }
+        settle()
+        assertNull("THE POINT: the board's copy does not stand in for the server's empty answer", value("title"))
     }
 
     @Test

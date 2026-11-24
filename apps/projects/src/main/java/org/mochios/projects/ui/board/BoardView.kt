@@ -74,6 +74,7 @@ import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
+import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 import org.mochios.projects.ui.project.ProjectViewModel
@@ -89,6 +90,8 @@ fun BoardView(
     objects: List<ProjectObject>,
     view: ProjectView?,
     viewModel: ProjectViewModel,
+    // Threaded to each column, which must not snapshot the flow itself.
+    projectDetails: ProjectDetails?,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
     onCreateObject: ((initialValues: Map<String, String>) -> Unit)? = null
@@ -211,6 +214,7 @@ fun BoardView(
             objects = columnObjects,
             visibleIds = visibleIds,
             viewModel = viewModel,
+            projectDetails = projectDetails,
             columnFieldId = columnFieldId,
             rowFieldId = rowFieldId,
             rowOptions = rowOptions,
@@ -314,6 +318,7 @@ private fun BoardColumn(
     objects: List<ProjectObject>,
     visibleIds: Set<String>?,
     viewModel: ProjectViewModel,
+    projectDetails: ProjectDetails?,
     columnFieldId: String,
     rowFieldId: String?,
     rowOptions: List<FieldOption>,
@@ -370,7 +375,10 @@ private fun BoardColumn(
     }
     val sortField = viewModel.getActiveSortField()
     val sortDirection = viewModel.getActiveSortDirection()
-    val details = viewModel.uiState.value.projectDetails
+    // The sort reads the fields and their options from the details, so a
+    // change to them sorts again: the details the screen collected, which
+    // redraw the column when they change.
+    val details = projectDetails
     val sortedObjects = remember(objects, sortField, sortDirection, details) {
         viewModel.sortObjects(objects)
     }

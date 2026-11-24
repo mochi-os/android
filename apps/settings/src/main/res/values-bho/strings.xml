@@ -428,7 +428,7 @@
     <string name="networks_title">नेटवर्क</string>
     <string name="networks_not_offered">ई सर्वर दोसर नेटवर्क ना देला।</string>
     <string name="networks_link">खाता जोड़ीं</string>
-    <string name="networks_link_action">लिंक</string>
+    <string name="networks_link_action">लिंक करीं</string>
     <string name="networks_linked">खाता जुड़ गइल</string>
     <string name="networks_link_denied">सर्वर लिंक के अनुमति ना दिहलस</string>
     <string name="networks_link_failed">खाता ना जुड़ सकल</string>

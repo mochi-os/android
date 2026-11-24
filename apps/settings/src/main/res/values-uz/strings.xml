@@ -428,7 +428,7 @@
     <string name="networks_title">Tarmoqlar</string>
     <string name="networks_not_offered">Bu server boshqa tarmoqlarni taklif qilmaydi.</string>
     <string name="networks_link">Hisobni bogʻlash</string>
-    <string name="networks_link_action">Havola</string>
+    <string name="networks_link_action">Bogʻlash</string>
     <string name="networks_linked">Hisob bogʻlandi</string>
     <string name="networks_link_denied">Server bogʻlanishga ruxsat bermadi</string>
     <string name="networks_link_failed">Hisobni bogʻlab boʻlmadi</string>

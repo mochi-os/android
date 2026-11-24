@@ -458,7 +458,7 @@
     <string name="networks_title">Netwerks</string>
     <string name="networks_not_offered">Dan is-server ma joffrix netwerks oħra.</string>
     <string name="networks_link">Illinkja kont</string>
-    <string name="networks_link_action">Ħolqa</string>
+    <string name="networks_link_action">Illinkja</string>
     <string name="networks_linked">Il-kont ġie llinkjat</string>
     <string name="networks_link_denied">Is-server ma ppermettiex ir-rabta</string>
     <string name="networks_link_failed">Ma setax jiġi llinkjat il-kont</string>

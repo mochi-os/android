@@ -429,7 +429,7 @@
     <string name="networks_title">Réseaux</string>
     <string name="networks_not_offered">Ce serveur ne propose pas d\'autres réseaux.</string>
     <string name="networks_link">Lier un compte</string>
-    <string name="networks_link_action">Lien</string>
+    <string name="networks_link_action">Lier</string>
     <string name="networks_linked">Compte lié</string>
     <string name="networks_link_denied">Le serveur n\'a pas autorisé la liaison</string>
     <string name="networks_link_failed">Impossible de lier le compte</string>

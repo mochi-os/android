@@ -438,7 +438,7 @@
     <string name="networks_title">Mreže</string>
     <string name="networks_not_offered">Ovaj server ne nudi druge mreže.</string>
     <string name="networks_link">Poveži račun</string>
-    <string name="networks_link_action">Veza</string>
+    <string name="networks_link_action">Poveži</string>
     <string name="networks_linked">Račun povezan</string>
     <string name="networks_link_denied">Server nije dozvolio povezivanje</string>
     <string name="networks_link_failed">Nije moguće povezati račun</string>

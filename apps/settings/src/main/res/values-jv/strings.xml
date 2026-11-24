@@ -418,7 +418,7 @@
     <string name="networks_title">Jaringan</string>
     <string name="networks_not_offered">Server iki ora nawakaké jaringan liya.</string>
     <string name="networks_link">Sambungaké akun</string>
-    <string name="networks_link_action">Tautan</string>
+    <string name="networks_link_action">Sambungaké</string>
     <string name="networks_linked">Akun wis kasambung</string>
     <string name="networks_link_denied">Server ora ngidini sambungan kuwi</string>
     <string name="networks_link_failed">Ora bisa nyambungaké akun</string>

@@ -419,7 +419,7 @@
     <string name="networks_title">เครือข่าย</string>
     <string name="networks_not_offered">เซิร์ฟเวอร์นี้ไม่มีเครือข่ายอื่นให้ใช้</string>
     <string name="networks_link">เชื่อมโยงบัญชี</string>
-    <string name="networks_link_action">ลิงก์</string>
+    <string name="networks_link_action">เชื่อมโยง</string>
     <string name="networks_linked">เชื่อมบัญชีแล้ว</string>
     <string name="networks_link_denied">เซิร์ฟเวอร์ไม่อนุญาตการเชื่อมโยง</string>
     <string name="networks_link_failed">เชื่อมโยงบัญชีไม่ได้</string>

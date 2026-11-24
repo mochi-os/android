@@ -77,6 +77,7 @@ import org.mochios.market.model.Listing
 import org.mochios.market.model.Review
 import org.mochios.market.model.userAvatarUrl
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.ListingCard
 import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
@@ -138,7 +139,7 @@ fun PublicProfileScreen(
                     accountId = profileIdentity(state.account!!, viewModel.accountId),
                     onLoadMore = viewModel::loadMoreReviews,
                     onOpenListing = { listing ->
-                        navController.navigate(MarketApp.listingDetail(listing.id, listing.title))
+                        navController.open(MarketApp.listingDetail(listing.id, listing.title))
                     },
                     modifier = Modifier.padding(padding),
                 )

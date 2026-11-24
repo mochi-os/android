@@ -428,7 +428,7 @@
     <string name="networks_title">பிணையங்கள்</string>
     <string name="networks_not_offered">இந்தச் சர்வர் வேறு பிணையங்களை வழங்கவில்லை.</string>
     <string name="networks_link">கணக்கை இணை</string>
-    <string name="networks_link_action">இணைப்பு</string>
+    <string name="networks_link_action">இணை</string>
     <string name="networks_linked">கணக்கு இணைக்கப்பட்டது</string>
     <string name="networks_link_denied">சர்வர் இணைப்பை அனுமதிக்கவில்லை</string>
     <string name="networks_link_failed">கணக்கை இணைக்க முடியவில்லை</string>

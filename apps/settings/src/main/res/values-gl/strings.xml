@@ -428,7 +428,7 @@
     <string name="networks_title">Redes</string>
     <string name="networks_not_offered">Este servidor non ofrece outras redes.</string>
     <string name="networks_link">Vincular unha conta</string>
-    <string name="networks_link_action">Ligazón</string>
+    <string name="networks_link_action">Vincular</string>
     <string name="networks_linked">Conta vinculada</string>
     <string name="networks_link_denied">O servidor non permitiu a vinculación</string>
     <string name="networks_link_failed">Non se puido vincular a conta</string>

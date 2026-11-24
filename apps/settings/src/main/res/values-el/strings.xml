@@ -428,7 +428,7 @@
     <string name="networks_title">Δίκτυα</string>
     <string name="networks_not_offered">Αυτός ο διακομιστής δεν προσφέρει άλλα δίκτυα.</string>
     <string name="networks_link">Σύνδεση λογαριασμού</string>
-    <string name="networks_link_action">Σύνδεσμος</string>
+    <string name="networks_link_action">Σύνδεση</string>
     <string name="networks_linked">Ο λογαριασμός συνδέθηκε</string>
     <string name="networks_link_denied">Ο διακομιστής δεν επέτρεψε τη σύνδεση</string>
     <string name="networks_link_failed">Δεν ήταν δυνατή η σύνδεση του λογαριασμού</string>

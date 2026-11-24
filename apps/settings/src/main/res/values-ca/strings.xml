@@ -429,7 +429,7 @@
     <string name="networks_title">Xarxes</string>
     <string name="networks_not_offered">Aquest servidor no ofereix altres xarxes.</string>
     <string name="networks_link">Vincula un compte</string>
-    <string name="networks_link_action">Enllaç</string>
+    <string name="networks_link_action">Vincula</string>
     <string name="networks_linked">Compte vinculat</string>
     <string name="networks_link_denied">El servidor no ha permès la vinculació</string>
     <string name="networks_link_failed">No s\'ha pogut vincular el compte</string>

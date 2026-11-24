@@ -428,7 +428,7 @@
     <string name="networks_title">नेटवर्क्स</string>
     <string name="networks_not_offered">हा सर्व्हर इतर नेटवर्क्स देत नाही.</string>
     <string name="networks_link">खाते लिंक करा</string>
-    <string name="networks_link_action">दुवा</string>
+    <string name="networks_link_action">लिंक करा</string>
     <string name="networks_linked">खाते लिंक झाले</string>
     <string name="networks_link_denied">सर्व्हरने लिंकला परवानगी दिली नाही</string>
     <string name="networks_link_failed">खाते लिंक करता आले नाही</string>

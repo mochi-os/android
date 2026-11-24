@@ -428,7 +428,7 @@
     <string name="networks_title">تۆڕەکان</string>
     <string name="networks_not_offered">ئەم ڕاژەکارە تۆڕی تر پێشکەش ناکات.</string>
     <string name="networks_link">هەژمارێک ببەستە</string>
-    <string name="networks_link_action">بەستەر</string>
+    <string name="networks_link_action">بەستن</string>
     <string name="networks_linked">هەژمار بەستراوە</string>
     <string name="networks_link_denied">ڕاژەکار ڕێگەی بە بەستنەکە نەدا</string>
     <string name="networks_link_failed">نەتوانرا هەژمارەکە ببەسترێت</string>

@@ -428,7 +428,7 @@
     <string name="networks_title">Uthungelwano</string>
     <string name="networks_not_offered">Le seva ayinikezeli olunye uthungelwano.</string>
     <string name="networks_link">Dibanisa i-akhawunti</string>
-    <string name="networks_link_action">Ikhonkco</string>
+    <string name="networks_link_action">Dibanisa</string>
     <string name="networks_linked">Iakhawunti idityanisiwe</string>
     <string name="networks_link_denied">Iseva ayivumelanga ukudibanisa</string>
     <string name="networks_link_failed">Ayikwazanga ukudibanisa i-akhawunti</string>

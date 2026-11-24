@@ -66,6 +66,14 @@ class StoredValuesTest {
     }
 
     @Test
+    fun `an appeal's decision badge reads as a status, as the web's does, not as the toast`() {
+        assertEquals(
+            org.mochios.staff.R.string.staff_status_upheld to org.mochios.staff.R.string.staff_status_denied,
+            staffStatusLabelRes("upheld") to staffStatusLabelRes("denied"),
+        )
+    }
+
+    @Test
     fun `values no row holds have no label`() {
         for (value in listOf("auto_approved", "soft_approved", "reviewed", "reviewing", "escalated", "hidden")) {
             assertNull("a label for $value", staffStatusLabelRes(value))

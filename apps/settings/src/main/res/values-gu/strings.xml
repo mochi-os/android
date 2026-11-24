@@ -428,7 +428,7 @@
     <string name="networks_title">નેટવર્ક્સ</string>
     <string name="networks_not_offered">આ સર્વર અન્ય નેટવર્ક ઓફર કરતું નથી.</string>
     <string name="networks_link">ખાતું લિંક કરો</string>
-    <string name="networks_link_action">લિંક</string>
+    <string name="networks_link_action">લિંક કરો</string>
     <string name="networks_linked">એકાઉન્ટ લિંક થયું</string>
     <string name="networks_link_denied">સર્વરે લિંકની મંજૂરી આપી નથી</string>
     <string name="networks_link_failed">ખાતું લિંક કરી શક્યા નહીં</string>

@@ -8,9 +8,11 @@ package org.mochios.market.navigation
 import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.segment
 import org.mochios.market.ui.account.AccountSettingsScreen
 import org.mochios.market.ui.account.PublicProfileScreen
 import org.mochios.market.ui.account.SellerSettingsScreen
@@ -78,28 +80,35 @@ object MarketApp {
     const val PROFILE_PATTERN = "market/account/{accountId}"
 
     // ---- Detail route builders ----
-    fun listingDetail(id: String, title: String? = null): String {
+    // Every id goes into its route as one segment (segment()): one holding a
+    // slash or a question mark would otherwise name another route, or carry
+    // a query of its own. Null for an id no segment can carry, which opens
+    // nothing ([open]).
+    fun listingDetail(id: String, title: String? = null): String? {
+        val part = segment(id) ?: return null
         val query = title?.takeIf { text -> text.isNotBlank() }?.let { text -> "?title=${Uri.encode(text)}" }
-        return "market/listing/$id${query.orEmpty()}"
+        return "market/listing/$part${query.orEmpty()}"
     }
-    fun listingEdit(id: String) = "market/listing/$id/edit"
+    fun listingEdit(id: String): String? = segment(id)?.let { part -> "market/listing/$part/edit" }
     // Title comes from CreateListingScreen; the editor seeds its state with it
     // and still creates the listing row lazily on first save.
     fun newListing(title: String) = "market/listings/new?title=" + Uri.encode(title)
-    fun checkout(listingId: String) = "market/checkout/$listingId"
-    fun purchaseDetail(orderId: String) = "market/purchases/$orderId"
-    fun saleDetail(orderId: String) = "market/sales/$orderId"
-    fun messageThread(listingId: String, threadId: String, buyer: String? = null): String {
+    fun checkout(listingId: String): String? = segment(listingId)?.let { part -> "market/checkout/$part" }
+    fun purchaseDetail(orderId: String): String? = segment(orderId)?.let { part -> "market/purchases/$part" }
+    fun saleDetail(orderId: String): String? = segment(orderId)?.let { part -> "market/sales/$part" }
+    fun messageThread(listingId: String, threadId: String, buyer: String? = null): String? {
+        val listing = segment(listingId) ?: return null
+        val thread = segment(threadId) ?: return null
         val query = buyer?.takeIf { id -> id.isNotBlank() }?.let { id -> "?buyer=${Uri.encode(id)}" }
-        return "market/messages/$listingId/$threadId${query.orEmpty()}"
+        return "market/messages/$listing/$thread${query.orEmpty()}"
     }
-    fun conversation(threadId: String) = "market/messages/$threadId"
+    fun conversation(threadId: String): String? = segment(threadId)?.let { part -> "market/messages/$part" }
     /**
      * An account's profile, addressed by the [fingerprint] where the
      * Comptroller sends one, else by its [accountId], which it accepts as well.
      */
-    fun publicProfile(accountId: String, fingerprint: String? = null) =
-        "market/account/${fingerprint?.takeIf { value -> value.isNotBlank() } ?: accountId}"
+    fun publicProfile(accountId: String, fingerprint: String? = null): String? =
+        segment(fingerprint?.takeIf { value -> value.isNotBlank() } ?: accountId)?.let { part -> "market/account/$part" }
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
     fun sellerSettings(state: String?, error: String?, errorDescription: String?): String {
@@ -139,7 +148,7 @@ object MarketApp {
                 "seller" -> listOf(
                     sellerSettings(query("state"), query("error"), query("error_description")),
                 )
-                else -> listOf(publicProfile(id))
+                else -> listOfNotNull(publicProfile(id))
             }
             else -> emptyList()
         }
@@ -148,10 +157,11 @@ object MarketApp {
     /**
      * An order's page, or the [list] it is in when the link names no order,
      * with the conversation [thread] names on top, so Back from it lands on
-     * the order. A thread that is not an id is left out.
+     * the order. A thread that is not an id is left out, and the list stands
+     * for an order whose id no route can carry.
      */
-    private fun order(id: String?, list: String, page: String, thread: String?): List<String> {
-        if (id == null) return listOf(list)
+    private fun order(id: String?, list: String, page: String?, thread: String?): List<String> {
+        if (id == null || page == null) return listOf(list)
         val conversation = thread?.takeIf { value -> value.matches(IDENTIFIER) }?.let { value -> conversation(value) }
         return listOfNotNull(page, conversation)
     }
@@ -175,6 +185,16 @@ object MarketApp {
 
     /** The shape of an id a link may carry into a route. */
     private val IDENTIFIER = Regex("[A-Za-z0-9]{1,64}")
+}
+
+/** Go to [route], one of [MarketApp]'s builders' answers: none, for an id no route can carry, goes nowhere. */
+fun NavController.open(route: String?) {
+    if (route != null) navigate(route)
+}
+
+/** [open] with the navigation's options. */
+fun NavController.open(route: String?, builder: NavOptionsBuilder.() -> Unit) {
+    if (route != null) navigate(route, builder)
 }
 
 /**

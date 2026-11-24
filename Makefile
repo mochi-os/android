@@ -21,9 +21,10 @@ packages = ../../packages/android
 
 # Generation time stamped into the manifest, and the release key that signs it:
 # the same key the server manifests carry, so one pinned public key verifies
-# every channel.
+# every channel. Kept outside the checkout, as core's Makefile keeps it;
+# `make release key=<path>` names another.
 generated := $(shell date +%s)
-key = ../../core/local/update-signing.key
+key = $(HOME)/.config/mochi/update-signing.key
 
 .PHONY: all apk clean locales release release-publish verification
 
@@ -49,8 +50,23 @@ locales:
 # the screenshots build run, and read the new entries in the file's diff
 # before committing it. Entries for versions no longer used are harmless. A
 # -sources or -javadoc jar an IDE fetches is trusted without one.
+#
+# It runs in an empty Gradle home made for the run, in one invocation that
+# must finish. Gradle records an artefact only when it reads it, and a warm
+# home answers from its cache without reading the files a cold build fetches
+# (a BOM's .module beside its .pom, the plugin version conflict resolution
+# replaces), so a run against a warm home - or a second run after one that
+# failed part-way - leaves those out, and every build in a new home (CI, a
+# release machine) then fails to configure. gradle/verification.gradle makes
+# the test tasks resolve their classpaths without running a test, and lint
+# runs its analysis only, so neither a failing test nor a lint finding can
+# end the run early.
+cache = build/verification
+
 verification:
-	./gradlew --write-verification-metadata sha256 :app:assembleDebug :app:assembleRelease testDebugUnitTest lintDebug
+	rm -rf $(cache)
+	GRADLE_USER_HOME=$(CURDIR)/$(cache) ./gradlew --write-verification-metadata sha256 --init-script gradle/verification.gradle help :app:assembleDebug :app:assembleRelease testDebugUnitTest lintAnalyzeDebug
+	rm -rf $(cache)
 
 clean:
 	./gradlew clean

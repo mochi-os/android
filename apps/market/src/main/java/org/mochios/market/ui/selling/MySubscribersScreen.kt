@@ -34,6 +34,7 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.buying.cancelNote
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListNote
@@ -89,7 +90,7 @@ fun MySubscribersScreen(
                             subscription = sub,
                             onClickBuyer = {
                                 if (sub.buyer.isNotEmpty()) {
-                                    navController.navigate(
+                                    navController.open(
                                         MarketApp.publicProfile(sub.buyer, sub.buyerFingerprint),
                                     )
                                 }

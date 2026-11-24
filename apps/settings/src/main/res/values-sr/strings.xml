@@ -438,7 +438,7 @@
     <string name="networks_title">Мреже</string>
     <string name="networks_not_offered">Овај сервер не нуди друге мреже.</string>
     <string name="networks_link">Повежи налог</string>
-    <string name="networks_link_action">Веза</string>
+    <string name="networks_link_action">Повежи</string>
     <string name="networks_linked">Налог је повезан</string>
     <string name="networks_link_denied">Сервер није дозволио повезивање</string>
     <string name="networks_link_failed">Повезивање налога није успело</string>

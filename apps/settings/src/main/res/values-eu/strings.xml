@@ -428,7 +428,7 @@
     <string name="networks_title">Sareak</string>
     <string name="networks_not_offered">Zerbitzari honek ez du beste sarerik eskaintzen.</string>
     <string name="networks_link">Estekatu kontu bat</string>
-    <string name="networks_link_action">Esteka</string>
+    <string name="networks_link_action">Estekatu</string>
     <string name="networks_linked">Kontua lotuta</string>
     <string name="networks_link_denied">Zerbitzariak ez du estekatzea onartu</string>
     <string name="networks_link_failed">Ezin izan da kontua estekatu</string>

@@ -428,7 +428,7 @@
     <string name="networks_title">نیٹ ورکس</string>
     <string name="networks_not_offered">یہ سرور دوسرے نیٹ ورکس پیش نہیں کرتا۔</string>
     <string name="networks_link">اکاؤنٹ منسلک کریں</string>
-    <string name="networks_link_action">لنک</string>
+    <string name="networks_link_action">منسلک کریں</string>
     <string name="networks_linked">اکاؤنٹ منسلک ہو گیا</string>
     <string name="networks_link_denied">سرور نے لنک کی اجازت نہیں دی</string>
     <string name="networks_link_failed">اکاؤنٹ منسلک نہیں ہو سکا</string>

@@ -259,6 +259,7 @@ fun StepUpDialog(
                                 enabled = !locked,
                                 keyboardOptions = KeyboardOptions(
                                     keyboardType = KeyboardType.Text,
+                                    autoCorrectEnabled = false,
                                     imeAction = ImeAction.Done,
                                 ),
                                 modifier = Modifier.fillMaxWidth(),

@@ -54,6 +54,7 @@ import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListNote
 import org.mochios.market.ui.components.MarketListPadding
@@ -131,14 +132,14 @@ fun MySubscriptionsScreen(
                         mutating = state.mutatingId == sub.id,
                         onTap = {
                             if (sub.listing.isNotBlank()) {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.listingDetail(sub.listing, sub.title),
                                 )
                             }
                         },
                         onResubscribe = {
                             if (sub.listing.isNotBlank()) {
-                                navController.navigate(MarketApp.checkout(sub.listing))
+                                navController.open(MarketApp.checkout(sub.listing))
                             }
                         },
                         onPause = { viewModel.pause(sub.id) },

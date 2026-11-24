@@ -482,4 +482,6 @@
     <string name="staff_payments_toast_refunded">ការទូទាត់ត្រូវបានសងវិញ</string>
     <string name="staff_payments_toast_refund_failed">មិនអាចសងការទូទាត់វិញបានទេ</string>
     <string name="staff_disputes_withdrawn">អ្នកទិញបានដកវិញ</string>
+    <string name="staff_status_denied">បណ្ដឹងឧទ្ធរណ៍ត្រូវបានច្រានចោល</string>
+    <string name="staff_status_upheld">បណ្ដឹងឧទ្ធរណ៍ត្រូវបានយល់ព្រម</string>
 </resources>

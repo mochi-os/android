@@ -33,6 +33,7 @@ import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import java.io.File
 import java.io.FilterInputStream
 import java.io.IOException
 import java.io.InputStream
@@ -63,18 +64,22 @@ class Downloads @Inject constructor(
     val running: StateFlow<Set<Uri>> = _running.asStateFlow()
 
     /**
-     * Streams the body [fetch] answers into [destination], named [name] in what
-     * the user is told. A failed transfer deletes the half-written document,
-     * which would otherwise look like the whole file.
+     * Fetches the body [fetch] answers into the cache, then writes it into
+     * [destination], named [name] in what the user is told. The document is
+     * written only once the whole file is in hand, so a failed fetch leaves a
+     * document the user chose to replace as it was. A failure deletes only
+     * the empty document the save dialog made, which would otherwise look
+     * like the file.
      */
     fun save(destination: Uri, name: String, fetch: suspend () -> ResponseBody): Job {
         _running.update { documents -> documents + destination }
         return scope.launch {
             show(context.getString(R.string.downloads_started, name))
+            val made = fileStore.empty(destination)
             val failure = try {
                 transfer(destination, fetch)
             } catch (e: CancellationException) {
-                discard(destination)
+                if (made) discard(destination)
                 throw e
             } finally {
                 _running.update { documents -> documents - destination }
@@ -82,13 +87,13 @@ class Downloads @Inject constructor(
             if (failure == null) {
                 show(context.getString(R.string.downloads_saved, name))
             } else {
-                discard(destination)
+                if (made) discard(destination)
                 show(context.getString(R.string.downloads_failed, name, failure.userMessage()))
             }
         }
     }
 
-    /** Null when the whole body was written, else why not. */
+    /** Null when the whole body was fetched into the cache and written to [destination], else why not. */
     private suspend fun transfer(destination: Uri, fetch: suspend () -> ResponseBody): MochiError? {
         val body = try {
             fetch()
@@ -98,12 +103,34 @@ class Downloads @Inject constructor(
             return e.toMochiError()
         }
         val source = Watched(body.byteStream())
-        val written = body.use { source.use { stream -> fileStore.writeStream(destination, stream) } }
-        return when {
-            written -> null
-            // The connection broke while the bytes came in, not the document.
-            source.failure != null -> MochiError.NetworkError(source.failure)
-            else -> MochiError.Local(R.string.common_file_save_failed)
+        val staged = try {
+            File.createTempFile("download", null, context.cacheDir)
+        } catch (_: IOException) {
+            body.close()
+            return MochiError.Local(R.string.common_file_save_failed)
+        }
+        try {
+            val fetched = body.use {
+                source.use { stream ->
+                    try {
+                        staged.outputStream().use { output -> stream.copyTo(output) }
+                        true
+                    } catch (_: IOException) {
+                        false
+                    }
+                }
+            }
+            if (!fetched) {
+                // The connection broke while the bytes came in, not the cache.
+                return source.failure?.let { failure -> MochiError.NetworkError(failure) }
+                    ?: MochiError.Local(R.string.common_file_save_failed)
+            }
+            val written = staged.inputStream().use { stream -> fileStore.writeStream(destination, stream) }
+            return if (written) null else MochiError.Local(R.string.common_file_save_failed)
+        } catch (_: IOException) {
+            return MochiError.Local(R.string.common_file_save_failed)
+        } finally {
+            staged.delete()
         }
     }
 

@@ -428,7 +428,7 @@
     <string name="networks_title">Torlar</string>
     <string name="networks_not_offered">Bu serwer başga torlary hödürlemeýär.</string>
     <string name="networks_link">Hasap baglamak</string>
-    <string name="networks_link_action">Salgy</string>
+    <string name="networks_link_action">Baglamak</string>
     <string name="networks_linked">Hasap baglanyldy</string>
     <string name="networks_link_denied">Serwer baglanyşyga rugsat bermedi</string>
     <string name="networks_link_failed">Hasaby baglap bolmady</string>

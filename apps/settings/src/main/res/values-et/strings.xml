@@ -428,7 +428,7 @@
     <string name="networks_title">Võrgud</string>
     <string name="networks_not_offered">See server ei paku teisi võrke.</string>
     <string name="networks_link">Seo konto</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Seo</string>
     <string name="networks_linked">Konto ühendatud</string>
     <string name="networks_link_denied">Server ei lubanud sidumist</string>
     <string name="networks_link_failed">Konto sidumine ebaõnnestus</string>

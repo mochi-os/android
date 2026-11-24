@@ -30,8 +30,8 @@ class UnreadChatsStore @Inject constructor(
 
     fun clear(chat: String) = chats.change { marks -> marks - chat }
 
-    /** Drop the marks of chats the account's whole list, [listed], no longer has. */
-    fun prune(listed: Set<String>) = chats.prune(listed)
+    /** Drop the marks of chats [account]'s whole list, [listed], no longer has, while it is signed in. */
+    fun prune(listed: Set<String>, account: String?) = chats.prune(listed, account)
 
     private companion object {
         const val PREFS = "mochi_chat_unread"

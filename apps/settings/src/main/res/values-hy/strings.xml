@@ -428,7 +428,7 @@
     <string name="networks_title">Ցանցեր</string>
     <string name="networks_not_offered">Այս սերվերը այլ ցանցեր չի առաջարկում։</string>
     <string name="networks_link">Կապել հաշիվ</string>
-    <string name="networks_link_action">Հղում</string>
+    <string name="networks_link_action">Կապել</string>
     <string name="networks_linked">Հաշիվը կապակցվեց</string>
     <string name="networks_link_denied">Սերվերը թույլ չտվեց կապակցումը</string>
     <string name="networks_link_failed">Չհաջողվեց կապել հաշիվը</string>

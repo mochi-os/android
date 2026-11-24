@@ -52,6 +52,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.ReviewCard
 
@@ -69,14 +70,14 @@ fun ReviewsScreen(
             when (event) {
                 is ReviewsEvent.Error -> snackbarHostState.showSnackbar(event.error.userMessage())
                 is ReviewsEvent.OpenListing ->
-                    navController.navigate(MarketApp.listingDetail(event.listingId, event.title))
+                    navController.open(MarketApp.listingDetail(event.listingId, event.title))
             }
         }
     }
 
     val openProfile = { account: String, fingerprint: String? ->
         if (account.isNotEmpty()) {
-            navController.navigate(MarketApp.publicProfile(account, fingerprint))
+            navController.open(MarketApp.publicProfile(account, fingerprint))
         }
     }
     val openListing = viewModel::openListing

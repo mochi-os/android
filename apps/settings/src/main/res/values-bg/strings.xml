@@ -428,7 +428,7 @@
     <string name="networks_title">Мрежи</string>
     <string name="networks_not_offered">Този сървър не предлага други мрежи.</string>
     <string name="networks_link">Свържи акаунт</string>
-    <string name="networks_link_action">Връзка</string>
+    <string name="networks_link_action">Свържи</string>
     <string name="networks_linked">Профилът е свързан</string>
     <string name="networks_link_denied">Сървърът не разреши свързването</string>
     <string name="networks_link_failed">Акаунтът не можа да бъде свързан</string>

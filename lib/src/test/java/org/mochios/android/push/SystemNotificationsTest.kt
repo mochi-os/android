@@ -5,6 +5,7 @@
 
 package org.mochios.android.push
 
+import android.Manifest
 import android.app.Notification
 import android.app.NotificationManager
 import android.content.Context
@@ -39,6 +40,7 @@ class SystemNotificationsTest {
     fun begin() {
         manager.cancelAll()
         shadowOf(manager).setNotificationsEnabled(true)
+        shadowOf(context).grantPermissions(Manifest.permission.POST_NOTIFICATIONS)
         context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE).edit().clear().commit()
     }
 

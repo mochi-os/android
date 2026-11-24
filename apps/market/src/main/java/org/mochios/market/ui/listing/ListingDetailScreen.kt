@@ -134,6 +134,7 @@ import org.mochios.market.model.Review
 import org.mochios.market.model.photoAddress
 import org.mochios.market.model.userAvatarUrl
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.rememberRemaining
 import org.mochios.market.ui.components.AuditHistoryCard
@@ -189,7 +190,7 @@ fun ListingDetailScreen(
     // Relisting hops to the editor with the new draft id.
     LaunchedEffect(viewModel) {
         viewModel.navigateToEdit.collect { newId ->
-            navController.navigate(MarketApp.listingEdit(newId.toString()))
+            navController.open(MarketApp.listingEdit(newId.toString()))
         }
     }
     LaunchedEffect(viewModel) {
@@ -355,7 +356,7 @@ fun ListingDetailScreen(
                             lightboxOpen = true
                         },
                         onSellerTap = {
-                            navController.navigate(MarketApp.publicProfile(seller.id, seller.fingerprint))
+                            navController.open(MarketApp.publicProfile(seller.id, seller.fingerprint))
                         },
                         onToggleSave = { viewModel.toggleSave() },
                         onReport = { reportOpen = true },
@@ -363,7 +364,7 @@ fun ListingDetailScreen(
                             if (isOwner) {
                                 navController.navigate(MarketApp.MESSAGES)
                             } else {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.messageThread(listing.id.toString(), "new"),
                                 )
                             }
@@ -385,7 +386,7 @@ fun ListingDetailScreen(
                                         scope.launch { snackbarHostState.showSnackbar(text) }
                                     },
                                     onInstantWin = {
-                                        navController.navigate(
+                                        navController.open(
                                             MarketApp.checkout(listing.id.toString()),
                                         )
                                     },
@@ -395,16 +396,16 @@ fun ListingDetailScreen(
                         onOffer = { offer ->
                             when (offer) {
                                 Offer.Bid -> bidOpen = true
-                                is Offer.Order -> navController.navigate(MarketApp.purchaseDetail(offer.id))
+                                is Offer.Order -> navController.open(MarketApp.purchaseDetail(offer.id))
                                 Offer.Subscribed -> navController.navigate(MarketApp.SUBSCRIPTIONS)
                                 is Offer.Buy, Offer.Pay, Offer.Subscribe ->
-                                    navController.navigate(MarketApp.checkout(listing.id))
+                                    navController.open(MarketApp.checkout(listing.id))
                                 is Offer.Opens, Offer.Ended, Offer.None -> Unit
                             }
                         },
                         onRelist = { viewModel.relistListing() },
                         onEdit = {
-                            navController.navigate(MarketApp.listingEdit(listing.id))
+                            navController.open(MarketApp.listingEdit(listing.id))
                         },
                         onDelete = { deleteOpen = true },
                         onClear = { viewModel.deleteListing() },

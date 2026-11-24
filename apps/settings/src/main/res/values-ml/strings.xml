@@ -428,7 +428,7 @@
     <string name="networks_title">നെറ്റ്‌വർക്കുകൾ</string>
     <string name="networks_not_offered">ഈ സെർവർ മറ്റ് നെറ്റ്‌വർക്കുകൾ നൽകുന്നില്ല.</string>
     <string name="networks_link">ഒരു അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
-    <string name="networks_link_action">ലിങ്ക്</string>
+    <string name="networks_link_action">ലിങ്ക് ചെയ്യുക</string>
     <string name="networks_linked">അക്കൗണ്ട് ലിങ്ക് ചെയ്തു</string>
     <string name="networks_link_denied">സെർവർ ലിങ്ക് അനുവദിച്ചില്ല</string>
     <string name="networks_link_failed">അക്കൗണ്ട് ലിങ്ക് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>

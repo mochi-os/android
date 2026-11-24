@@ -1,56 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_event_start">Iniciar</string>
-    <string name="calendars_scope_following">Este y los siguientes</string>
-    <string name="calendars_event_moved">Evento movido</string>
     <string name="calendars_event_changed">Este evento cambió en otro lugar.</string>
-    <string name="calendars_undo">Deshacer</string>
-    <string name="calendars_event_copy">Copiar</string>
-    <string name="calendars_scope_copy">Copiar este evento</string>
-    <string name="calendars_title_required">El título es obligatorio</string>
-    <string name="calendars_link_grant">Permitir el acceso al calendario</string>
-    <string name="calendars_subscribe_google_connect">No ha conectado ninguna cuenta de Google.</string>
-    <string name="calendars_subscribe_google_connect_action">Conectar Google</string>
-    <string name="calendars_grant_failed">No se concedió el acceso al calendario</string>
     <string name="calendars_span_day">%1$s, %2$s a %3$s</string>
-    <string name="calendars_polled_current">Calendario actualizado</string>
-    <string name="calendars_polled_synced">Calendario sincronizado</string>
-    <string name="calendars_link_revoke_title">¿Revocar la dirección del calendario?</string>
-    <string name="calendars_link_revoke_message">Los calendarios suscritos a esta dirección dejarán de actualizarse.</string>
-    <string name="calendars_event_colour_value">Valor del color</string>
     <string name="calendars_discard_title">¿Descartar el borrador?</string>
-    <string name="calendars_discard_message">Se perderán los cambios.</string>
-    <string name="calendars_discard">Descartar</string>
-    <string name="calendars_event_deleted">Evento eliminado</string>
-    <string name="calendars_link_replace_title">¿Reemplazar la dirección del calendario?</string>
-    <string name="calendars_list_unmatched">Sin coincidencias</string>
-    <string name="calendars_list_search_events">Buscar eventos</string>
-    <string name="calendars_rule_day">Todos los días</string>
     <plurals name="calendars_rule_days">
         <item quantity="one">Todos los días</item>
         <item quantity="many">Cada %1$s de días</item>
         <item quantity="other">Cada %1$s días</item>
     </plurals>
-    <string name="calendars_rule_week">Todas las semanas</string>
     <plurals name="calendars_rule_weeks">
         <item quantity="one">Todas las semanas</item>
         <item quantity="many">Cada %1$s de semanas</item>
         <item quantity="other">Cada %1$s semanas</item>
     </plurals>
-    <string name="calendars_rule_month">Todos los meses</string>
     <plurals name="calendars_rule_months">
         <item quantity="one">Todos los meses</item>
         <item quantity="many">Cada %1$s de meses</item>
         <item quantity="other">Cada %1$s meses</item>
     </plurals>
-    <string name="calendars_rule_year">Todos los años</string>
     <plurals name="calendars_rule_years">
         <item quantity="one">Todos los años</item>
         <item quantity="many">Cada %1$s de años</item>
         <item quantity="other">Cada %1$s años</item>
     </plurals>
     <string name="calendars_rule_on">el %1$s</string>
-    <string name="calendars_rule_once">una vez</string>
     <plurals name="calendars_rule_times">
         <item quantity="one">una vez</item>
         <item quantity="many">%1$s de veces</item>
@@ -59,8 +33,4 @@
     <string name="calendars_truncated">Hay demasiados eventos para mostrarlos todos. Elige un rango más corto.</string>
     <string name="calendars_link_none">Este calendario no tiene ninguna dirección para revocar</string>
     <string name="calendars_link_exists">Esta dirección del calendario ya fue emitida y no se puede mostrar de nuevo.</string>
-    <string name="calendars_location_map">Mostrar en el mapa</string>
-    <string name="calendars_location_flight">Seguir el vuelo</string>
-    <string name="calendars_preferences_week_numbers">Mostrar los números de semana</string>
-    <string name="calendars_poll_interrupted">La última descarga no terminó</string>
 </resources>

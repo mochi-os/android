@@ -339,8 +339,11 @@ private fun AccountMethods(
                 onValueChange = onUpdateCode,
                 label = { Text(stringResource(R.string.auth_verification_code)) },
                 singleLine = true,
+                // A mixed-case code: a keyboard correcting it as a word
+                // would change what was typed.
                 keyboardOptions = KeyboardOptions(
                     keyboardType = KeyboardType.Text,
+                    autoCorrectEnabled = false,
                     imeAction = ImeAction.Go
                 ),
                 keyboardActions = KeyboardActions(onGo = { onVerifyCode() }),
@@ -455,6 +458,7 @@ private fun MfaSection(
             enabled = !uiState.isLoading,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text,
+                autoCorrectEnabled = false,
                 imeAction = if (needsTotp) ImeAction.Next else ImeAction.Go
             ),
             keyboardActions = KeyboardActions(onGo = { onComplete() }),

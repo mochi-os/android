@@ -210,9 +210,15 @@ internal fun PlacePicker(
             }
     }
 
+    // The map tap's name lookup. A place picked or a name typed after the
+    // tap supersedes it, so it is cancelled rather than let its answer land
+    // over theirs.
+    val reverseJob = remember { arrayOfNulls<Job>(1) }
+
     // A picked suggestion is a new place: nothing the old one carried (its
     // country, state or city) describes it.
     fun selectSuggestion(s: NominatimPlace) {
+        reverseJob[0]?.cancel()
         suppressSearch = true
         nameText = s.displayName
         suggestions = emptyList()
@@ -223,7 +229,6 @@ internal fun PlacePicker(
         moveMarker(s.lat, s.lon, s.displayName, zoom = 14.0)
     }
 
-    val reverseJob = remember { arrayOfNulls<Job>(1) }
     val spacing = LocalSpacing.current
 
     Column(modifier = modifier) {
@@ -231,6 +236,7 @@ internal fun PlacePicker(
             MochiTextField(
                 value = nameText,
                 onValueChange = { newName ->
+                    reverseJob[0]?.cancel()
                     nameText = newName
                     onPlaceSelected(
                         (place ?: PlaceData()).copy(name = newName)

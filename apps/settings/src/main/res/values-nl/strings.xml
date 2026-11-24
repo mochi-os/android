@@ -428,7 +428,7 @@
     <string name="networks_title">Netwerken</string>
     <string name="networks_not_offered">Deze server biedt geen andere netwerken aan.</string>
     <string name="networks_link">Een account koppelen</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Koppelen</string>
     <string name="networks_linked">Account gekoppeld</string>
     <string name="networks_link_denied">De server stond het koppelen niet toe</string>
     <string name="networks_link_failed">Kan het account niet koppelen</string>

@@ -109,7 +109,7 @@ fun deliverPush(context: Context, content: ByteArray, account: String?) {
 fun deliverPush(context: Context, fields: Map<String, String>, account: String?) {
     val deps = EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
     SyncSignal.kind(fields)?.let { kind ->
-        SyncSignal.run(context, kind, deps.sessionManager())
+        SyncSignal.run(context, kind, account, deps.sessionManager())
         return
     }
     val push = pushOf(fields, account)
@@ -157,7 +157,10 @@ internal fun postPushNotification(
 
     val manager = NotificationManagerCompat.from(context)
     // Before the nonce: a notification that is never posted must not hold one.
-    if (!manager.areNotificationsEnabled()) return
+    if (!manager.areNotificationsEnabled() || !mayPostNotifications(context)) return
+    // Nor one on a channel the user has switched off, which the system drops.
+    val channel = notificationChannelFor(push.app, push.link)
+    if (manager.getNotificationChannelCompat(channel)?.importance == NotificationManagerCompat.IMPORTANCE_NONE) return
 
     val app = pushApp(push.app, push.link)
     val tag = push.tag.ifBlank { FALLBACK_TAG }
@@ -179,7 +182,7 @@ internal fun postPushNotification(
         putString(EXTRA_LINK, push.link)
         push.account?.let { putString(EXTRA_ACCOUNT, it) }
     }
-    val builder = NotificationCompat.Builder(context, notificationChannelFor(push.app, push.link))
+    val builder = NotificationCompat.Builder(context, channel)
         .setSmallIcon(notificationIconFor(app))
         .setContentTitle(push.title)
         .setContentText(push.body)

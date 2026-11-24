@@ -25,6 +25,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.ui.components.quoteInto
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
@@ -329,9 +330,7 @@ class CommentsViewModel @Inject constructor(
     // ---------------- reply textarea state ----------------
 
     fun requestStartReply(commentId: String, selectedText: String? = null) {
-        val draft = selectedText?.trim()?.takeIf { it.isNotEmpty() }?.let { sel ->
-            sel.lineSequence().joinToString("\n") { "> $it" } + "\n\n"
-        } ?: ""
+        val draft = quoteInto("", selectedText)
         _uiState.value = _uiState.value.copy(
             replyingTo = commentId,
             replyDraft = draft,

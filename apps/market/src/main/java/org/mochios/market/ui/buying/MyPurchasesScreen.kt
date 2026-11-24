@@ -42,6 +42,7 @@ import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListNote
 import org.mochios.market.ui.components.MarketListPadding
@@ -77,10 +78,10 @@ fun MyPurchasesScreen(
                     state = state,
                     onLoadMore = { viewModel.loadMore() },
                     onOrderClick = { id ->
-                        navController.navigate(MarketApp.purchaseDetail(id.toString()))
+                        navController.open(MarketApp.purchaseDetail(id.toString()))
                     },
                     onCompletePurchase = { listingId ->
-                        navController.navigate(MarketApp.checkout(listingId.toString()))
+                        navController.open(MarketApp.checkout(listingId.toString()))
                     },
                 )
             }

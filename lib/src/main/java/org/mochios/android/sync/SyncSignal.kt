@@ -23,10 +23,15 @@ object SyncSignal {
     /** The sync a push asks for, or null for an ordinary notification. */
     fun kind(fields: Map<String, String>): String? = fields["sync"]?.takeIf { it.isNotBlank() }
 
-    fun run(context: Context, kind: String, session: SessionManager) {
+    /**
+     * Run the [kind] sync for [account], the identity the push was delivered
+     * for, which may not be the signed-in one; FCM names none, being
+     * registered for the signed-in account alone.
+     */
+    fun run(context: Context, kind: String, account: String?, session: SessionManager) {
         val app = context.applicationContext
         scope.launch {
-            val identity = session.getBoundIdentity()
+            val identity = account?.takeIf { it.isNotBlank() } ?: session.getBoundIdentity()
             when (kind) {
                 "calendars" -> CalendarsSync.account(app, identity)?.let {
                     if (CalendarsSync.enabled(it)) CalendarsSync.request(it)

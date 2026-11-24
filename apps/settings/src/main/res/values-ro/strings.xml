@@ -438,7 +438,7 @@
     <string name="networks_title">Rețele</string>
     <string name="networks_not_offered">Acest server nu oferă alte rețele.</string>
     <string name="networks_link">Conectează un cont</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Conectează</string>
     <string name="networks_linked">Cont conectat</string>
     <string name="networks_link_denied">Serverul nu a permis conectarea</string>
     <string name="networks_link_failed">Contul nu a putut fi conectat</string>

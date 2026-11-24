@@ -428,7 +428,7 @@
     <string name="networks_title">Amanethiwekhi</string>
     <string name="networks_not_offered">Le seva ayinikezi amanye amanethiwekhi.</string>
     <string name="networks_link">Xhuma i-akhawunti</string>
-    <string name="networks_link_action">Isixhumanisi</string>
+    <string name="networks_link_action">Xhuma</string>
     <string name="networks_linked">I-akhawunti ixhunyiwe</string>
     <string name="networks_link_denied">Iseva ayizange ivumele ukuxhuma</string>
     <string name="networks_link_failed">Akukwazanga ukuxhuma i-akhawunti</string>

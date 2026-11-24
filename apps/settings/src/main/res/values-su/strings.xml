@@ -419,7 +419,7 @@
     <string name="networks_title">Jaringan</string>
     <string name="networks_not_offered">Server ieu henteu nyayogikeun jaringan séjén.</string>
     <string name="networks_link">Hubungkeun akun</string>
-    <string name="networks_link_action">Tumbu</string>
+    <string name="networks_link_action">Hubungkeun</string>
     <string name="networks_linked">Akun geus dihubungkeun</string>
     <string name="networks_link_denied">Server henteu ngidinan tumbu</string>
     <string name="networks_link_failed">Teu bisa ngahubungkeun akun</string>

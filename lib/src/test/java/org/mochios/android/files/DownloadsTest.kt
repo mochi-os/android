@@ -8,7 +8,9 @@ package org.mochios.android.files
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
+import android.database.MatrixCursor
 import android.net.Uri
+import android.provider.OpenableColumns
 import android.os.Bundle
 import android.os.Looper
 import android.os.ParcelFileDescriptor
@@ -70,16 +72,18 @@ class DownloadsTest {
         suspend fun file(@Path("name") name: String): Response<ResponseBody>
     }
 
-    /** A documents provider whose documents are files, which records each deletion. */
+    /**
+     * A documents provider whose documents are files, which records each
+     * deletion, reports each document's size, and opens a document as the
+     * mode asks: "w" without "t" keeps what lies past the new end.
+     */
     class Documents : ContentProvider() {
         override fun onCreate() = true
 
         private fun file(uri: Uri) = File(context!!.cacheDir, DocumentsContract.getDocumentId(uri))
 
-        override fun openFile(uri: Uri, mode: String): ParcelFileDescriptor = ParcelFileDescriptor.open(
-            file(uri),
-            ParcelFileDescriptor.MODE_WRITE_ONLY or ParcelFileDescriptor.MODE_CREATE or ParcelFileDescriptor.MODE_TRUNCATE,
-        )
+        override fun openFile(uri: Uri, mode: String): ParcelFileDescriptor =
+            ParcelFileDescriptor.open(file(uri), ParcelFileDescriptor.parseMode(mode))
 
         override fun call(method: String, arg: String?, extras: Bundle?): Bundle {
             if (method.endsWith("deleteDocument")) {
@@ -90,7 +94,11 @@ class DownloadsTest {
             return Bundle()
         }
 
-        override fun query(uri: Uri, projection: Array<out String>?, selection: String?, selectionArgs: Array<out String>?, sortOrder: String?): Cursor? = null
+        override fun query(uri: Uri, projection: Array<out String>?, selection: String?, selectionArgs: Array<out String>?, sortOrder: String?): Cursor? {
+            val file = file(uri)
+            if (!file.exists()) return null
+            return MatrixCursor(arrayOf(OpenableColumns.SIZE)).apply { addRow(arrayOf<Any>(file.length())) }
+        }
         override fun getType(uri: Uri): String? = null
         override fun insert(uri: Uri, values: ContentValues?): Uri? = null
         override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?) = 0
@@ -141,17 +149,29 @@ class DownloadsTest {
         assertTrue(downloads.running.value.isEmpty())
     }
 
+    /** The save dialog makes an empty document for a new file. */
     @Test
     fun `a refusal says why and leaves no document behind`() {
-        written("gone.zip").writeText("stale")
+        written("gone.zip").writeText("")
         server.enqueue(MockResponse().setResponseCode(404).setBody("""{"error": "Backup not found"}"""))
         finish(downloads.save(document("gone.zip"), "gone.zip") { api.file("gone.zip").unwrapRaw() })
         assertEquals(context.getString(R.string.downloads_failed, "gone.zip", "Backup not found"), ShadowToast.getTextOfLatestToast())
         assertFalse(written("gone.zip").exists())
     }
 
+    /** The user chose an existing document to replace. */
+    @Test
+    fun `a refusal leaves the document the user chose to replace as it was`() {
+        written("kept.zip").writeText("the user's own")
+        server.enqueue(MockResponse().setResponseCode(500).setBody("""{"error": "Server error"}"""))
+        finish(downloads.save(document("kept.zip"), "kept.zip") { api.file("kept.zip").unwrapRaw() })
+        assertEquals(context.getString(R.string.downloads_failed, "kept.zip", "Server error"), ShadowToast.getTextOfLatestToast())
+        assertEquals("THE POINT: not deleted", "the user's own", written("kept.zip").readText())
+    }
+
     @Test
     fun `a connection broken part way says so and leaves no half document`() {
+        written("half.zip").writeText("")
         server.enqueue(
             MockResponse().setBody(Buffer().write(bytes(2_000_000)))
                 .setSocketPolicy(SocketPolicy.DISCONNECT_DURING_RESPONSE_BODY)
@@ -160,6 +180,27 @@ class DownloadsTest {
         val network = context.getString(R.string.error_network)
         assertEquals(context.getString(R.string.downloads_failed, "half.zip", network), ShadowToast.getTextOfLatestToast())
         assertFalse(written("half.zip").exists())
+    }
+
+    @Test
+    fun `a connection broken part way leaves the document the user chose to replace as it was`() {
+        val own = bytes(3_000_000)
+        written("own.zip").writeBytes(own)
+        server.enqueue(
+            MockResponse().setBody(Buffer().write(Random(9).nextBytes(2_000_000)))
+                .setSocketPolicy(SocketPolicy.DISCONNECT_DURING_RESPONSE_BODY)
+        )
+        finish(downloads.save(document("own.zip"), "own.zip") { api.file("own.zip").unwrapRaw() })
+        assertArrayEquals("not written into until the whole file is in hand", own, written("own.zip").readBytes())
+    }
+
+    @Test
+    fun `a file written over a longer one keeps none of its tail`() {
+        written("short.zip").writeBytes(bytes(5_000))
+        val served = Random(3).nextBytes(100)
+        server.enqueue(MockResponse().setBody(Buffer().write(served)))
+        finish(downloads.save(document("short.zip"), "short.zip") { api.file("short.zip").unwrapRaw() })
+        assertArrayEquals(served, written("short.zip").readBytes())
     }
 
     @Test

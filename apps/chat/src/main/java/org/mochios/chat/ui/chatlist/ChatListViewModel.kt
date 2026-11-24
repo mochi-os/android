@@ -144,15 +144,19 @@ class ChatListViewModel @Inject constructor(
     /**
      * The list as the server has it, setting it in the state as it then is:
      * a search typed or a chip tapped meanwhile stays. A successful read is
-     * the account's whole list, so pins and marks of chats it no longer has
-     * are dropped.
+     * the whole list of the account signed in as it was sent, so pins and
+     * marks of chats it no longer has are dropped - unless another account
+     * has been signed in since, whose pins and marks it says nothing of.
      */
     private suspend fun read() {
         try {
+            val account = sessionManager.getBoundIdentity()
             val chats = repository.listChats()
             val listed = chats.map { chat -> chat.id }.toSet()
-            pinnedStore.prune(listed)
-            unreadStore.prune(listed)
+            if (sessionManager.getBoundIdentity() == account) {
+                pinnedStore.prune(listed, account)
+                unreadStore.prune(listed, account)
+            }
             _uiState.update { state -> state.copy(chats = chats, loaded = true, isLoading = false, error = null) }
         } catch (e: CancellationException) {
             throw e

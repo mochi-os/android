@@ -240,6 +240,13 @@ class CommentDraftTest {
     }
 
     @Test
+    fun `a reply with text selected starts from the selection quoted as the web quotes it`() {
+        val (model, _) = model()
+        model.requestStartReply("c1", " one\n\nthree ")
+        assertEquals("c1" to "> one\n> \n> three\n\n", model.uiState.value.replyingTo to model.uiState.value.replyDraft)
+    }
+
+    @Test
     fun `an edit keeps its box open until the server has it`() {
         var saved: (() -> Unit)? = null
         val wiki = WikiContextValue("w1", WikiInfo(id = "w1"), WikiPermissions(view = true, edit = true), "https://server")

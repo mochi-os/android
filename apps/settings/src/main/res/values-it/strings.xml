@@ -429,7 +429,7 @@
     <string name="networks_title">Reti</string>
     <string name="networks_not_offered">Questo server non offre altre reti.</string>
     <string name="networks_link">Collega un account</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Collega</string>
     <string name="networks_linked">Account collegato</string>
     <string name="networks_link_denied">Il server non ha consentito il collegamento</string>
     <string name="networks_link_failed">Impossibile collegare l\'account</string>

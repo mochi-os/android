@@ -396,7 +396,7 @@
     </plurals>
     <plurals name="feeds_boosted_times">
         <item quantity="one">Air a bhrosnachadh %s turas</item>
-        <item quantity="two">Air a bhrosnachadh dà thuras</item>
+        <item quantity="two">Air a bhrosnachadh %s thuras</item>
         <item quantity="few">Air a bhrosnachadh %s tursan</item>
         <item quantity="other">Air a bhrosnachadh %s turas</item>
     </plurals>

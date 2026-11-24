@@ -483,4 +483,6 @@
     <string name="staff_payments_toast_refunded">Pagamento reembolsado</string>
     <string name="staff_payments_toast_refund_failed">Não foi possível reembolsar o pagamento</string>
     <string name="staff_disputes_withdrawn">Retirada pelo comprador</string>
+    <string name="staff_status_denied">Recurso rejeitado</string>
+    <string name="staff_status_upheld">Recurso aprovado</string>
 </resources>

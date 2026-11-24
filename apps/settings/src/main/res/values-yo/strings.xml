@@ -419,7 +419,7 @@
     <string name="networks_title">Àwọn nẹ́tíwọ́kì</string>
     <string name="networks_not_offered">Sáfà yìí kò pèsè nẹ́tíwọ́kì mìíràn.</string>
     <string name="networks_link">So àkáǹtì kan pọ̀</string>
-    <string name="networks_link_action">Ọna asopọ</string>
+    <string name="networks_link_action">So pọ̀</string>
     <string name="networks_linked">A ti so àkàǹtì pọ̀</string>
     <string name="networks_link_denied">Sáfà kò gba ìsopọ̀ náà láàyè</string>
     <string name="networks_link_failed">Kò lè so àkáǹtì náà pọ̀</string>

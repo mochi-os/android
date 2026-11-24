@@ -64,9 +64,16 @@ internal class AccountChats(
         }
     }
 
-    /** Drop the ids of chats [listed], the account's whole list, no longer has. */
-    fun prune(listed: Set<String>) {
-        change { ids -> ids intersect listed }
+    /**
+     * Drop the ids of chats [listed], [account]'s whole list, no longer has.
+     * Nothing is dropped once another account is signed in: the list is not
+     * its.
+     */
+    fun prune(listed: Set<String>, account: String?) {
+        synchronized(lock) {
+            if (account != current) return
+            change { ids -> ids intersect listed }
+        }
     }
 
     private fun read(account: String?): Set<String> {

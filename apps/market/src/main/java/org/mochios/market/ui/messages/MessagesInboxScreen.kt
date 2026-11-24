@@ -35,6 +35,7 @@ import org.mochios.android.ui.components.LoadState
 import org.mochios.market.R
 import org.mochios.market.model.MarketThread
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListNote
 import org.mochios.market.ui.components.MarketListPadding
@@ -84,7 +85,7 @@ fun MessagesInboxScreen(
                             thread = thread,
                             identity = state.identity,
                             onClick = {
-                                navController.navigate(
+                                navController.open(
                                     MarketApp.messageThread(
                                         listingId = thread.listing.toString(),
                                         threadId = thread.id.toString(),

@@ -440,7 +440,7 @@
     <string name="networks_title">רשתות</string>
     <string name="networks_not_offered">השרת הזה אינו מציע רשתות אחרות.</string>
     <string name="networks_link">קשר חשבון</string>
-    <string name="networks_link_action">קישור</string>
+    <string name="networks_link_action">קשר</string>
     <string name="networks_linked">החשבון קושר</string>
     <string name="networks_link_denied">השרת לא איפשר את הקישור</string>
     <string name="networks_link_failed">לא ניתן היה לקשר את החשבון</string>

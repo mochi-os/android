@@ -428,7 +428,7 @@
     <string name="networks_title">Nettverk</string>
     <string name="networks_not_offered">Denne serveren tilbyr ikke andre nettverk.</string>
     <string name="networks_link">Koble til en konto</string>
-    <string name="networks_link_action">Lenke</string>
+    <string name="networks_link_action">Koble til</string>
     <string name="networks_linked">Konto koblet</string>
     <string name="networks_link_denied">Serveren tillot ikke koblingen</string>
     <string name="networks_link_failed">Kunne ikke koble til kontoen</string>

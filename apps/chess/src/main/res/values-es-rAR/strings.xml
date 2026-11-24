@@ -13,8 +13,5 @@
 
     <string name="chess_resign_message">¿Estás seguro de que querés rendirte? %1$s va a ganar la partida.</string>
     <string name="chess_status_resigned_you">Te rendiste — gana %1$s</string>
-    <string name="chess_move_played">%1$s jugó %2$s</string>
-    <string name="chess_chat_title">Chat</string>
-    <string name="chess_captured_multiplier">×%1$s</string>
 
 </resources>

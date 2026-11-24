@@ -51,6 +51,7 @@ object CalendarsMapping {
         Events.SYNC_DATA1,
         Events.SYNC_DATA2,
         Events.SYNC_DATA3,
+        Events.SYNC_DATA4,
         Events.TITLE,
         Events.EVENT_LOCATION,
         Events.DESCRIPTION,
@@ -79,6 +80,13 @@ object CalendarsMapping {
     const val UTC = "UTC"
 
     /**
+     * The column a floating event's rows keep the zone their times were read
+     * in: the phone may have moved on by the time one is edited, and its times
+     * are written back floating from that zone, not the phone's new one.
+     */
+    const val FLOATING = Events.SYNC_DATA4
+
+    /**
      * The property another client keeps a rich copy of the description in,
      * which Thunderbird and Outlook show in preference to `DESCRIPTION`.
      */
@@ -90,7 +98,8 @@ object CalendarsMapping {
      * The provider rows for a server event, master first. [calendar] is the
      * provider row id of the calendar the event belongs to. A floating time,
      * one that names no zone, is read in [floating], the phone's own zone,
-     * which the row then carries as its zone.
+     * which the row then carries as its zone and, in [FLOATING], as the zone
+     * it was read in.
      */
     fun rows(event: SyncedEvent, calendar: Long, floating: String = UTC): List<EventRow> {
         val events = event.components.filter { it.name.equals("VEVENT", ignoreCase = true) }
@@ -137,6 +146,9 @@ object CalendarsMapping {
         values[Events.ALL_DAY] = if (allday) 1 else 0
         val zone = zone(start, floating)
         values[Events.EVENT_TIMEZONE] = if (allday) UTC else zone
+        // Kept on an override whose series alone floats as well: it names its
+        // occurrence floating.
+        values[FLOATING] = if (floating(start) || floating(master?.property("DTSTART"))) floating else null
         val began = start?.let { moment(it, floating) } ?: 0L
         values[Events.DTSTART] = began
 
@@ -247,9 +259,11 @@ object CalendarsMapping {
      * rather than a component, which is how the phone's calendar app says one
      * occurrence of a recurring event is off.
      *
-     * A floating event, whose times name no zone, was read in [floating], the
-     * phone's own zone, and stays floating while its row is still in that
-     * zone; a zone picked on the phone pins it there.
+     * A floating event, whose times name no zone, was read in the zone its
+     * rows keep in [FLOATING], and stays floating while its row is still in
+     * that zone, wherever the phone is now; a zone picked on the phone pins
+     * it there. A row with no zone kept, one made on the phone or read before
+     * rows kept one, takes [floating], the phone's own zone now.
      */
     fun components(
         rows: List<EventRow>,
@@ -262,26 +276,33 @@ object CalendarsMapping {
         val kept = previous.firstOrNull { !it.exception() }
         // An override names its occurrence as the series' start does.
         val series = floating(kept?.property("DTSTART"))
+        // The occurrences were read in the series' zone, an override made on
+        // the phone included.
+        val within = read(master, floating)
 
         val excluded = overrides.filter { it.deleted }.mapNotNull { it.values[Events.ORIGINAL_INSTANCE_TIME] as? Long }
-        val out = mutableListOf(component(master, kept, excluded, floating, series))
+        val out = mutableListOf(component(master, kept, excluded, within, series))
         for (override in overrides.filterNot { it.deleted }) {
             val original = override.values[Events.ORIGINAL_INSTANCE_TIME] as? Long ?: continue
             val before = previous.firstOrNull {
-                it.exception() && it.property("RECURRENCE-ID")?.let { property -> moment(property, floating) } == original
+                it.exception() && it.property("RECURRENCE-ID")?.let { property -> moment(property, within) } == original
             }
-            out.add(component(override, before, emptyList(), floating, series))
+            out.add(component(override, before, emptyList(), read(override, within), series))
         }
         return out
     }
+
+    /** The zone [row]'s floating times were read in, kept in [FLOATING]; [otherwise] when it keeps none. */
+    private fun read(row: EventRow, otherwise: String): String =
+        (row.values[FLOATING] as? String)?.takeIf { it.isNotBlank() } ?: otherwise
 
     /**
      * One component from one row. [carried] is the same component as the
      * server last sent it, if any; its unmanaged properties and its
      * components other than `VALARM` are kept, since the phone has nowhere to
      * hold them and dropping them would lose them on the first edit. Its
-     * times stay floating where [carried]'s were and the row is still in the
-     * [floating] zone they were read in; [series] says the series' own start
+     * times stay floating where [carried]'s were and the row is still in
+     * [floating], the zone they were read in; [series] says the series' own start
      * floats, which an override's `RECURRENCE-ID` follows, and a new
      * override's times.
      */

@@ -103,6 +103,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -217,6 +218,7 @@ fun FeedScreen(
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
+    val resources = LocalResources.current
     val copier = rememberCopier()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -262,7 +264,7 @@ fun FeedScreen(
                 }
 
                 is FeedActionEvent.Done -> {
-                    Toast.makeText(context, context.getString(event.message), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, resources.getString(event.message), Toast.LENGTH_SHORT).show()
                 }
             }
         }

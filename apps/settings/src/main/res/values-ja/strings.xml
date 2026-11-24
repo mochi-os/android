@@ -419,7 +419,7 @@
     <string name="networks_title">ネットワーク</string>
     <string name="networks_not_offered">このサーバーは他のネットワークを提供していません。</string>
     <string name="networks_link">アカウントをリンク</string>
-    <string name="networks_link_action">リンク</string>
+    <string name="networks_link_action">リンクする</string>
     <string name="networks_linked">アカウントをリンクしました</string>
     <string name="networks_link_denied">サーバーがリンクを許可しませんでした</string>
     <string name="networks_link_failed">アカウントをリンクできませんでした</string>

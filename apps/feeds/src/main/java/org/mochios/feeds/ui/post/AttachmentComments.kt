@@ -111,7 +111,11 @@ internal fun AttachmentComments(
                     onEditTextChange = { viewModel.setEditCommentText(it) },
                     onSaveEdit = { viewModel.saveEditComment() },
                     onCancelEdit = { viewModel.cancelEditComment() },
-                    onReply = { viewModel.setReplyingTo(comment.id) },
+                    onReply = if (canComment) {
+                        { selected -> viewModel.startReply(comment.id, selected) }
+                    } else {
+                        null
+                    },
                     onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.text)) },
                     onDelete = { onDeleteComment(comment.id) },
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },

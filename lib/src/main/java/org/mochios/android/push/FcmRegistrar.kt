@@ -20,9 +20,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.auth.AuthRepository
-import org.unifiedpush.android.connector.data.PublicKeySet
-import org.unifiedpush.android.connector.keys.DefaultKeyManager
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
@@ -107,15 +104,54 @@ object FcmRegistrar {
     ): Outcome {
         val deps = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+        return registerWith(
+            context,
+            client,
+            server,
+            installationId,
+            token = { deps.authRepository().fetchToken("notifications").getOrNull() },
+            device = { deps.deviceStore().id() },
+            accepted = { account ->
+                // Keep the account id: sign-out hands it to
+                // `/notifications/-/accounts/remove` so the server stops pushing to
+                // this device. Keyed by identity, matching the UnifiedPush path.
+                val identity = deps.sessionManager().getBoundIdentity().orEmpty()
+                if (identity.isNotBlank()) deps.pushAccountStore().store(identity, account)
+            },
+        )
+    }
 
-        val keys = publicKeys(context)
+    /**
+     * [registerLocked] with its dependencies given: [token] mints the
+     * notifications app token, [device] is this phone's device id, [accepted]
+     * keeps the push account id the server answers with, and [keys] gives
+     * this device's Web Push keys.
+     *
+     * A device without keys does not register: the server would send its
+     * notifications through Google in the clear. [Outcome.FAILED] sends the
+     * caller to UnifiedPush, which unregisters this installation, so a
+     * registration an earlier build made without keys is retired too.
+     */
+    internal suspend fun registerWith(
+        context: Context,
+        client: OkHttpClient,
+        server: String,
+        installationId: String,
+        token: suspend () -> String?,
+        device: () -> String,
+        accepted: suspend (String) -> Unit,
+        keys: () -> FcmKeys.Public? = { publicKeys(context) },
+    ): Outcome {
+        val held = keys() ?: run {
+            Log.w(TAG, "FCM keys unavailable; not registering for FCM")
+            return Outcome.FAILED
+        }
 
         // The memo: an unchanged FID and keys were registered on an earlier
         // resume, or were refused and re-posting them would only be refused
         // again. The keys are part of it, so a build that first has them
         // registers them once over a memo of the FID alone.
-        val credential = if (keys == null) RegistrationMemo.fingerprint(installationId)
-        else RegistrationMemo.fingerprint(installationId, keys.auth, keys.pubKey)
+        val credential = RegistrationMemo.fingerprint(installationId, held.auth, held.p256dh)
         val store = RegistrationStore(context)
         val now = System.currentTimeMillis()
         when (RegistrationMemo.judge(now, server, PushTransport.TRANSPORT_FCM, credential, store.last(), store.refusal())) {
@@ -132,24 +168,18 @@ object FcmRegistrar {
 
         return try {
             val answer = postRegisterFcm(
-                deps.authRepository(),
                 client,
                 server,
+                token() ?: error("Could not mint notifications app token"),
                 installationId,
                 label = DeviceName.resolve(context),
-                device = deps.deviceStore().id(),
-                keys = keys,
+                device = device(),
+                keys = held,
             )
             val registration = Registration(server, PushTransport.TRANSPORT_FCM, credential, now)
             when {
                 answer.accepted -> {
-                    // Keep the account id: sign-out hands it to
-                    // `/notifications/-/accounts/remove` so the server stops pushing to
-                    // this device. Keyed by identity, matching the UnifiedPush path.
-                    val identity = deps.sessionManager().getBoundIdentity().orEmpty()
-                    if (answer.account != null && identity.isNotBlank()) {
-                        deps.pushAccountStore().store(identity, answer.account)
-                    }
+                    answer.account?.let { account -> accepted(account) }
                     store.success(registration)
                     Log.i(TAG, "Registered FCM installation")
                     Outcome.REGISTERED
@@ -173,16 +203,12 @@ object FcmRegistrar {
     }
 
     /**
-     * This device's Web Push keys for FCM, made on first use and kept in the
-     * UnifiedPush connector's key store under [FCM_KEYS]: the server seals
-     * every message to them, and [fcmFields] opens it. Null when the key
-     * store fails, and the device then registers without keys: plain messages
-     * rather than none.
+     * This device's Web Push keys for FCM ([FcmKeys]), made on first use: the
+     * server seals every message to them, and [fcmFields] opens it. Null when
+     * they cannot be stored, and the device then does not register for FCM.
      */
-    private fun publicKeys(context: Context): PublicKeySet? = try {
-        val manager = DefaultKeyManager(context)
-        if (!manager.exists(FCM_KEYS)) manager.generate(FCM_KEYS)
-        manager.getPublicKeySet(FCM_KEYS)
+    private fun publicKeys(context: Context): FcmKeys.Public? = try {
+        FcmKeys(context).public()
     } catch (e: Exception) {
         Log.w(TAG, "FCM keys unavailable: ${e.message}")
         null
@@ -195,7 +221,7 @@ object FcmRegistrar {
      */
     suspend fun disconnect(context: Context) {
         try {
-            DefaultKeyManager(context).delete(FCM_KEYS)
+            FcmKeys(context).delete()
         } catch (e: Exception) {
             Log.w(TAG, "FCM keys not deleted: ${e.message}")
         }
@@ -254,17 +280,15 @@ object FcmRegistrar {
         }
 
     /** The status the server answered, with the push account id when it accepted. */
-    private suspend fun postRegisterFcm(
-        authRepository: AuthRepository,
+    private fun postRegisterFcm(
         client: OkHttpClient,
         server: String,
+        appToken: String,
         installationId: String,
         label: String,
         device: String,
-        keys: PublicKeySet?,
+        keys: FcmKeys.Public,
     ): Answer {
-        val appToken = authRepository.fetchToken("notifications").getOrNull()
-            ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
         // The FID goes in `token` as well as `installation`: FCM's send API
         // accepts an FID in its `token` field while it moves to `fid`, so a
@@ -273,9 +297,11 @@ object FcmRegistrar {
             .put("token", installationId)
             .put("installation", installationId)
             .put("label", label)
-        // The keys the server seals messages to; a server that predates them
-        // ignores them and sends plain fields, which fcmFields still reads.
-        if (keys != null) json.put("auth", keys.auth).put("p256dh", keys.pubKey)
+            // The keys the server seals messages to; a server that predates
+            // them ignores them and sends plain fields, which fcmFields still
+            // reads.
+            .put("auth", keys.auth)
+            .put("p256dh", keys.p256dh)
         val body = json.toString().toRequestBody("application/json".toMediaType())
         // The Device header binds the push account to this device, so a later
         // registration from the same phone replaces it rather than adding to it.

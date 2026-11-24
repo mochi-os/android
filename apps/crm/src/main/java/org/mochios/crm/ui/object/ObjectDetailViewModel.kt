@@ -34,6 +34,7 @@ import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.UnsavedEdits
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.crm.model.Activity
@@ -120,6 +121,9 @@ class ObjectDetailViewModel @Inject constructor(
 
     private var debounceJobs = mutableMapOf<String, Job>()
 
+    /** Edits the server may not have yet, which every read of the object keeps. */
+    private val unsaved = UnsavedEdits()
+
     // Auto-save runs on a scope deliberately NOT tied to viewModelScope: a
     // save scheduled just before the user leaves the screen must still
     // complete. viewModelScope would cancel it in onCleared().
@@ -170,8 +174,11 @@ class ObjectDetailViewModel @Inject constructor(
         // Reset rather than copy: the previous selection's comments,
         // attachments, links and watchers would otherwise stay on screen while
         // the new object's header loads. Projects does the same. An object is
-        // carried over only when it is the one being opened.
-        val carried = initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId }
+        // carried over only when it is the one being opened, with its edits
+        // still waiting on their saves over the copy opened from, which the
+        // board read before them, so typing on carries the earlier edit.
+        val carried = (initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId })
+            ?.let { obj -> withUnsaved(objectId, obj, emptySet()) }
         _uiState.value = ObjectDetailUiState(
             obj = carried,
             access = access,
@@ -191,21 +198,14 @@ class ObjectDetailViewModel @Inject constructor(
         loadLinks()
         loadSiblingObjects()
         loadPeople()
+        val sent = unsaved.waiting(objectId)
         loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(crmId, objectId)
                 // Cancellation is cooperative and the tab loaders read the
                 // current ids, so re-check before writing anything.
                 if (currentCrmId != crmId || currentObjectId != objectId) return@launch
-                // Keep the values already on screen when the fetch carries
-                // none, so the fields do not blank out mid-load.
-                val existing = _uiState.value.obj
-                val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
-                    fetched.copy(values = existing.values)
-                } else {
-                    fetched
-                }
-                _uiState.value = _uiState.value.copy(obj = merged, isLoading = false)
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched, sent), isLoading = false)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -299,41 +299,37 @@ class ObjectDetailViewModel @Inject constructor(
     }
 
     /**
-     * Reads the open object again after a frame. A field with a save waiting
-     * out its debounce or in flight keeps what was typed, and so does a parent
-     * being saved: the server's copy is older. A save that answers while the
-     * read is out counts too, since the read may have been served before it.
-     * An answer for an object the sheet has left is dropped.
+     * Reads the open object again after a frame. An answer for an object the
+     * sheet has left is dropped.
      */
     private fun loadObjectOnly() {
         val crmId = currentCrmId
         val objectId = currentObjectId
-        val saving = debounceJobs.keys.toSet()
+        val sent = unsaved.waiting(objectId)
         viewModelScope.launch {
             try {
                 val fetched = repository.getObject(crmId, objectId)
-                val pending = saving + debounceJobs.keys
                 if (currentCrmId != crmId || currentObjectId != objectId) return@launch
-                val existing = _uiState.value.obj
-                if (existing == null || existing.id != objectId) {
-                    _uiState.value = _uiState.value.copy(obj = fetched)
-                    return@launch
-                }
-                val values = if (fetched.values.isEmpty() && existing.values.isNotEmpty()) {
-                    existing.values
-                } else {
-                    val merged = fetched.values.toMutableMap()
-                    for ((fieldId, value) in existing.values) {
-                        if ("$objectId/value_$fieldId" in pending) merged[fieldId] = value
-                    }
-                    merged
-                }
-                val parent = if ("$objectId/parent" in pending) existing.parent else fetched.parent
-                _uiState.value = _uiState.value.copy(obj = fetched.copy(values = values, parent = parent))
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched, sent))
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) { }
         }
+    }
+
+    /**
+     * [fetched] as the sheet should show it: the server's values and parent,
+     * emptied ones included, except where an edit of [objectId] waited on its
+     * save when the read was sent, or waits now, which stays as the user left
+     * it - a read must not undo an edit the server had not yet had when it
+     * answered.
+     */
+    private fun withUnsaved(objectId: String, fetched: CrmObject, sent: Set<String?>): CrmObject {
+        val shown = _uiState.value.obj?.takeIf { obj -> obj.id == objectId }
+        return fetched.copy(
+            values = unsaved.values(objectId, fetched.values, shown?.values, sent),
+            parent = unsaved.parent(objectId, fetched.parent, shown?.parent, sent),
+        )
     }
 
     fun selectTab(index: Int) {
@@ -382,7 +378,7 @@ class ObjectDetailViewModel @Inject constructor(
                 }
             }
         }
-        scheduleSave(key, undo = undo) {
+        scheduleSave(key, undo = undo, edit = unsaved.value(objectId, fieldId, value)) {
             repository.setValue(crmId, objectId, fieldId, value)
         }
     }
@@ -719,7 +715,7 @@ class ObjectDetailViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(obj = now.copy(parent = before))
             }
         }
-        scheduleSave(key, delayMs = 0, undo = undo) {
+        scheduleSave(key, delayMs = 0, undo = undo, edit = unsaved.parent(objectId, newParent)) {
             repository.updateObject(crmId, objectId, parent = newParent)
         }
     }
@@ -773,6 +769,8 @@ class ObjectDetailViewModel @Inject constructor(
         key: String,
         delayMs: Long = 500,
         undo: (() -> Unit)? = null,
+        // The edit saved, which reads of the object keep until it answers.
+        edit: UnsavedEdits.Edit? = null,
         save: suspend () -> Unit,
     ) {
         debounceJobs[key]?.cancel()
@@ -793,6 +791,9 @@ class ObjectDetailViewModel @Inject constructor(
                 e.toMochiError()
             }
             activeSaves--
+            if (edit != null) {
+                if (failure == null) unsaved.saved(edit) else unsaved.refused(edit)
+            }
             if (failure != null) undo?.invoke()
             held.remove(key)
             if (failure != null) {

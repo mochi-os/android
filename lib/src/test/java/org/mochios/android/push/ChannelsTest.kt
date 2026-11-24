@@ -24,7 +24,7 @@ class ChannelsTest {
     private val dropped = ConcurrentLinkedQueue<PushChannel>()
     private val channels = Channels { channel -> dropped.add(channel) }
 
-    private fun account(identity: String, session: String) =
+    private fun account(identity: String, session: String?) =
         MochiAccount.Snapshot(identity, "Name", "https://example.org", null, session)
 
     @Test
@@ -72,5 +72,13 @@ class ChannelsTest {
         channels.claim("x", "s1")
         channels.claim("y", "s1")
         assertEquals(listOf("x"), channels.stale(listOf(account("x", "s2"), account("y", "s1"))))
+    }
+
+    /** The keystore failing to open a session is not the account leaving. */
+    @Test
+    fun `an account whose session cannot be read keeps its channel, and one gone does not`() {
+        channels.claim("x", "s1")
+        channels.claim("y", "s1")
+        assertEquals(listOf("y"), channels.stale(listOf(account("x", null))))
     }
 }

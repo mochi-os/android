@@ -419,7 +419,7 @@
     <string name="networks_title">Rangkaian</string>
     <string name="networks_not_offered">Pelayan ini tidak menawarkan rangkaian lain.</string>
     <string name="networks_link">Pautkan akaun</string>
-    <string name="networks_link_action">Pautan</string>
+    <string name="networks_link_action">Pautkan</string>
     <string name="networks_linked">Akaun dipautkan</string>
     <string name="networks_link_denied">Pelayan tidak membenarkan pautan itu</string>
     <string name="networks_link_failed">Tidak dapat memautkan akaun</string>

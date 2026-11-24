@@ -428,7 +428,7 @@
     <string name="networks_title">नेटवर्कहरू</string>
     <string name="networks_not_offered">यो सर्भरले अन्य नेटवर्कहरू प्रदान गर्दैन।</string>
     <string name="networks_link">खाता लिङ्क गर्नुहोस्</string>
-    <string name="networks_link_action">लिङ्क</string>
+    <string name="networks_link_action">लिङ्क गर्नुहोस्</string>
     <string name="networks_linked">खाता लिंक भयो</string>
     <string name="networks_link_denied">सर्भरले लिङ्कलाई अनुमति दिएन</string>
     <string name="networks_link_failed">खाता लिङ्क गर्न सकिएन</string>

@@ -58,7 +58,6 @@ import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.image.AsyncDrawableSpan
-import io.noties.markwon.linkify.LinkifyPlugin
 import org.commonmark.node.AbstractVisitor
 import org.commonmark.node.FencedCodeBlock
 import org.commonmark.node.Heading
@@ -75,9 +74,9 @@ import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.UnopenedFileDialog
 import org.mochios.android.util.AttachmentOpener
-import org.mochios.android.util.LINKED_ADDRESSES
 import org.mochios.android.util.isMailUrl
 import org.mochios.android.util.linkUri
+import org.mochios.android.util.linkifyPlugin
 import java.text.Normalizer
 
 /**
@@ -191,7 +190,7 @@ fun MarkdownContent(
             // but it only adds spans where none exist, so it's safe. Only
             // what the resolver opens is linked: a phone number drawn as a
             // link would take the tap and do nothing.
-            .usePlugin(LinkifyPlugin.create(LINKED_ADDRESSES))
+            .usePlugin(linkifyPlugin())
             .usePlugin(object : AbstractMarkwonPlugin() {
                 override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
                     // LinkResolver fires for every `LinkSpan` click —

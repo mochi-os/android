@@ -75,6 +75,7 @@ import org.mochios.market.model.Listing
 import org.mochios.market.model.PricingModel
 import org.mochios.market.model.ShippingOption
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.RegionField
 import org.mochios.market.ui.components.rememberCountryChoices
 
@@ -114,7 +115,7 @@ fun CheckoutScreen(
                     }
                 }
                 is CheckoutEvent.OrderComplete -> {
-                    navController.navigate(MarketApp.purchaseDetail(event.orderId.toString())) {
+                    navController.open(MarketApp.purchaseDetail(event.orderId.toString())) {
                         popUpTo(MarketApp.CHECKOUT) { inclusive = true }
                     }
                 }

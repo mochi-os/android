@@ -428,7 +428,7 @@
     <string name="networks_title">ජාල</string>
     <string name="networks_not_offered">මෙම සේවාදායකය වෙනත් ජාල ලබා නොදේ.</string>
     <string name="networks_link">ගිණුමක් සම්බන්ධ කරන්න</string>
-    <string name="networks_link_action">සබැඳිය</string>
+    <string name="networks_link_action">සම්බන්ධ කරන්න</string>
     <string name="networks_linked">ගිණුම සම්බන්ධ කළා</string>
     <string name="networks_link_denied">සේවාදායකය සම්බන්ධ කිරීමට ඉඩ නොදුන්නේය</string>
     <string name="networks_link_failed">ගිණුම සම්බන්ධ කළ නොහැකි විය</string>

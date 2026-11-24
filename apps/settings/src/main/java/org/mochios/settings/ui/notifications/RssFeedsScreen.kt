@@ -44,7 +44,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -77,7 +77,7 @@ fun RssFeedsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
     val copier = rememberCopier()
     var creating by remember { mutableStateOf(false) }
     var renaming by remember { mutableStateOf<RssFeed?>(null) }
@@ -87,7 +87,7 @@ fun RssFeedsScreen(
         viewModel.events.collect { event ->
             snackbar.showSnackbar(
                 when (event) {
-                    is RssFeedsEvent.Done -> context.getString(event.message)
+                    is RssFeedsEvent.Done -> resources.getString(event.message)
                     is RssFeedsEvent.Failure -> event.error.userMessage()
                 },
             )

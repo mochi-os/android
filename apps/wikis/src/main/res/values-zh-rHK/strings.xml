@@ -4,58 +4,12 @@
     <string name="wikis_access_add_subject_label">用戶</string>
     <string name="wikis_access_tab_users">用戶</string>
 
-    <string name="launcher_wikis">Mochi Wikis</string>
-    <string name="wikis_pageview_version">v%1$s</string>
-    <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_access_change_level">更改存取層級</string>
-    <string name="wikis_access_subject_anyone">任何人</string>
     <string name="wikis_access_subject_authenticated">已驗證用戶</string>
 
-    <plurals name="wikis_page_action_comments">
-        <item quantity="other">%s 則留言</item>
-    </plurals>
-    <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%s 則回覆</item>
-        <item quantity="other">+%s 則更多回覆</item>
-    </plurals>
-    <plurals name="wikis_tags_count">
-        <item quantity="one">%s 個頁面</item>
-        <item quantity="other">%s 個頁面</item>
-    </plurals>
-    <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%s 個檔案</item>
-        <item quantity="other">%s 個檔案</item>
-    </plurals>
-    <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%s 張圖片</item>
-        <item quantity="other">%s 張圖片</item>
-    </plurals>
-    <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%s 個文件</item>
-        <item quantity="other">%s 個文件</item>
-    </plurals>
-    <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%s 個頁面有此標籤</item>
-        <item quantity="other">%s 個頁面有此標籤</item>
-    </plurals>
-    <plurals name="wikis_search_results_count">
-        <item quantity="one">找到 %1$s 個結果,查詢「%2$s」</item>
-        <item quantity="other">找到 %1$s 個結果,查詢「%2$s」</item>
-    </plurals>
     <string name="wikis_rss_revoke">撤銷存取權</string>
     <string name="wikis_rss_revoked">已撤銷 RSS 存取權</string>
-    <string name="wikis_comment_replying_to">正在回覆 %1$s</string>
-    <string name="wikis_comment_clear_reply">取消回覆</string>
-    <string name="wikis_revision_author">依 %1$s</string>
-    <string name="wikis_redirect_created_label">已建立</string>
-    <string name="wikis_attachments_download">下載</string>
-    <string name="wikis_access_tab_other">其他</string>
-    <string name="wikis_access_select_rule">選擇一條規則</string>
     <string name="wikis_access_authenticated_desc">任何已登入的用戶</string>
     <string name="wikis_access_anyone_desc">包括匿名用戶</string>
     <string name="wikis_access_selected">已選擇:%1$s</string>
-    <string name="wikis_rss_replace">取代</string>
     <string name="wikis_access_search_failed">搜尋用戶失敗</string>
 </resources>

@@ -448,7 +448,7 @@
     <string name="networks_title">Lìonraidhean</string>
     <string name="networks_not_offered">Chan eil am frithealaiche seo a\' tairgsinn lìonraidhean eile.</string>
     <string name="networks_link">Ceangail cunntas</string>
-    <string name="networks_link_action">Ceangal</string>
+    <string name="networks_link_action">Ceangail</string>
     <string name="networks_linked">Cunntas ceangailte</string>
     <string name="networks_link_denied">Cha do cheadaich am frithealaiche an ceangal</string>
     <string name="networks_link_failed">Cha b\' urrainn an cunntas a cheangal</string>

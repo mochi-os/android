@@ -213,7 +213,7 @@ class ProviderCalendarsStore(
                         Events.TITLE, Events.EVENT_LOCATION, Events.DESCRIPTION, Events.DURATION,
                         Events.EVENT_TIMEZONE, Events.EVENT_END_TIMEZONE, Events.RRULE, Events.RDATE,
                         Events.EXDATE, Events._SYNC_ID, Events.SYNC_DATA1, Events.SYNC_DATA2,
-                        Events.SYNC_DATA3, Events.ORIGINAL_SYNC_ID,
+                        Events.SYNC_DATA3, Events.SYNC_DATA4, Events.ORIGINAL_SYNC_ID,
                         -> cursor.getString(index)
                         else -> cursor.getLong(index)
                     }

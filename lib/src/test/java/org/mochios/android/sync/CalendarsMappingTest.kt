@@ -410,6 +410,47 @@ class CalendarsMappingTest {
     }
 
     @Test
+    fun `a floating event read in one zone goes back floating after the phone has moved to another`() {
+        val row = CalendarsMapping.rows(event(floating()), 7, YORK).single()
+        assertEquals("the row keeps the zone it was read in", YORK, row.values[CalendarsMapping.FLOATING])
+        // Edited on the phone, now in London, its row still in New York's zone.
+        val edited = EventRow(row.values + (Events.TITLE to "Yoga, moved"))
+        val back = CalendarsMapping.components(listOf(edited), listOf(floating()), LONDON).single()
+        assertEquals("THE POINT: no zone is pinned on it", property("DTSTART", "20260922T100000"), back.property("DTSTART"))
+        assertEquals(property("DTEND", "20260922T110000"), back.property("DTEND"))
+        // A zone picked on the phone still pins it there.
+        val moved = EventRow(row.values + (Events.EVENT_TIMEZONE to LONDON) + (Events.EVENT_END_TIMEZONE to LONDON))
+        val pinned = CalendarsMapping.components(listOf(moved), listOf(floating()), LONDON).single()
+        assertEquals(LONDON, pinned.property("DTSTART")!!.parameter("TZID"))
+    }
+
+    @Test
+    fun `a floating series' override still names its occurrence after the phone has moved`() {
+        val master = floating().let { it.copy(properties = it.properties + property("RRULE", "FREQ=WEEKLY")) }
+        val override = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("SUMMARY", "Yoga, late"),
+                property("RECURRENCE-ID", "20260929T100000"),
+                property("DTSTART", "20260929T140000"),
+                property("DTEND", "20260929T150000"),
+                property("X-KEPT", "carried"),
+            ),
+        )
+        val rows = CalendarsMapping.rows(event(master, override), 7, YORK)
+        assertEquals(YORK, rows[1].values[CalendarsMapping.FLOATING])
+        val back = CalendarsMapping.components(rows, listOf(master, override), LONDON)
+        assertEquals("THE POINT: the occurrence it replaces", property("RECURRENCE-ID", "20260929T100000"), back[1].property("RECURRENCE-ID"))
+        assertEquals(property("DTSTART", "20260929T140000"), back[1].property("DTSTART"))
+        assertEquals("the override is found, and what the phone cannot hold kept", "carried", back[1].value("X-KEPT"))
+    }
+
+    @Test
+    fun `a timed event keeps no zone it was read in, as it has no floating times`() {
+        assertNull(CalendarsMapping.rows(event(timed()), 7, YORK).single().values[CalendarsMapping.FLOATING])
+    }
+
+    @Test
     fun `a UTC date-time needs no zone and reads back the same`() {
         val stamped = CalendarsMapping.stamp("DTSTART", TEN, CalendarsMapping.UTC, allday = false)
         assertEquals("20260922T090000Z", stamped.value)

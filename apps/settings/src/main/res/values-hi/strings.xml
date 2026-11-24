@@ -428,7 +428,7 @@
     <string name="networks_title">नेटवर्क</string>
     <string name="networks_not_offered">यह सर्वर अन्य नेटवर्क उपलब्ध नहीं कराता।</string>
     <string name="networks_link">खाता लिंक करें</string>
-    <string name="networks_link_action">लिंक</string>
+    <string name="networks_link_action">लिंक करें</string>
     <string name="networks_linked">खाता लिंक हो गया</string>
     <string name="networks_link_denied">सर्वर ने लिंक की अनुमति नहीं दी</string>
     <string name="networks_link_failed">खाता लिंक नहीं किया जा सका</string>

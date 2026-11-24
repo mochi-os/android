@@ -5,12 +5,13 @@
 
 package org.mochios.android.push
 
+import android.Manifest
 import android.app.Notification
+import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import com.google.crypto.tink.apps.fixed_webpush.WebPushHybridDecrypt
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -23,8 +24,6 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
-import org.unifiedpush.android.connector.data.PublicKeySet
-import org.unifiedpush.android.connector.keys.KeyManager
 import java.util.Base64
 
 /**
@@ -46,6 +45,7 @@ class PushDeliveryTest {
     fun begin() {
         manager.cancelAll()
         shadowOf(manager).setNotificationsEnabled(true)
+        shadowOf(context).grantPermissions(Manifest.permission.POST_NOTIFICATIONS)
         context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE).edit().clear().commit()
     }
 
@@ -125,6 +125,40 @@ class PushDeliveryTest {
         assertEquals(emptyList<Outstanding>(), noncesFromStored(stored))
     }
 
+    @Test
+    fun `a push on a channel the user switched off posts nothing and issues no nonce`() {
+        manager.createNotificationChannel(NotificationChannel("chat", "Chat", NotificationManager.IMPORTANCE_NONE))
+        try {
+            post(push())
+            assertNull(posted("t1"))
+            val stored = context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE)
+                .getString("nonces", "").orEmpty()
+            assertEquals("THE POINT: no nonce held", emptyList<Outstanding>(), noncesFromStored(stored))
+        } finally {
+            manager.deleteNotificationChannel("chat")
+        }
+    }
+
+    /** From Android 13 the user allows each app's notifications, and has not allowed these. */
+    @Test
+    fun `a push the user has not allowed to post posts nothing and issues no nonce`() {
+        shadowOf(context).denyPermissions(Manifest.permission.POST_NOTIFICATIONS)
+        post(push())
+        assertNull("THE POINT: not posted", posted("t1"))
+        val stored = context.getSharedPreferences("mochi_notification_taps", Context.MODE_PRIVATE)
+            .getString("nonces", "").orEmpty()
+        assertEquals("nor holds a nonce", emptyList<Outstanding>(), noncesFromStored(stored))
+    }
+
+    /** Before Android 13 there is no permission to allow, and the platform's own check of it answers denied. */
+    @Test
+    @Config(sdk = [32])
+    fun `before Android 13 a push posts with no permission allowed`() {
+        shadowOf(context).denyPermissions(Manifest.permission.POST_NOTIFICATIONS)
+        post(push())
+        assertTrue("THE POINT: posted", posted("t1") != null)
+    }
+
     /** The two transports once disagreed: the UnifiedPush instance in one, "mochi" in the other. */
     @Test
     fun `a push with no tag posts under the one fallback tag`() {
@@ -142,25 +176,11 @@ class PushDeliveryTest {
     }
 
     /**
-     * The RFC 8291 example's receiving keys, opening a message as the
-     * connector's DefaultKeyManager does, with the same decrypt.
+     * The RFC 8291 example's receiving keys, opening a message with the
+     * decrypt [FcmKeys] opens one with; none when [held] is false.
      */
-    private class ExampleKeys(private val held: Boolean = true) : KeyManager {
-        override fun decrypt(instance: String, sealed: ByteArray): ByteArray? {
-            assertEquals(FCM_KEYS, instance)
-            if (!held) return null
-            return WebPushHybridDecrypt.Builder()
-                .withAuthSecret(decode(EXAMPLE_AUTH))
-                .withRecipientPublicKey(decode(EXAMPLE_P256DH))
-                .withRecipientPrivateKey(decode(EXAMPLE_PRIVATE))
-                .build()
-                .decrypt(sealed, null)
-        }
-
-        override fun generate(instance: String) = Unit
-        override fun getPublicKeySet(instance: String): PublicKeySet? = null
-        override fun exists(instance: String) = held
-        override fun delete(instance: String) = Unit
+    private fun exampleKeys(held: Boolean = true): (ByteArray) -> ByteArray? = { sealed ->
+        if (held) webPushOpen(sealed, decode(EXAMPLE_AUTH), decode(EXAMPLE_P256DH), decode(EXAMPLE_PRIVATE)) else null
     }
 
     private fun shown(notification: Notification, key: String) =
@@ -169,7 +189,7 @@ class PushDeliveryTest {
     /** What core seals: the same value core's fcm_test.go makes, so a change on either side fails one of them. */
     @Test
     fun `a sealed FCM message is opened and posted`() {
-        val fields = fcmFields(mapOf("encrypted" to SEALED), ExampleKeys())
+        val fields = fcmFields(mapOf("encrypted" to SEALED), exampleKeys())
         assertEquals("Meet at noon", fields?.get("body"))
         post(pushOf(fields!!, null)!!)
         val notification = posted("t1")!!
@@ -182,7 +202,7 @@ class PushDeliveryTest {
     @Test
     fun `a plain FCM message is posted as it came`() {
         val data = mapOf("title" to "Bob", "body" to "Hello", "link" to "/chat/c2", "tag" to "t2", "app" to published, "id" to "n2")
-        val fields = fcmFields(data, ExampleKeys())
+        val fields = fcmFields(data, exampleKeys())
         assertEquals(data, fields)
         post(pushOf(fields!!, null)!!)
         assertEquals("Hello", shown(posted("t2")!!, Notification.EXTRA_TEXT))
@@ -193,9 +213,9 @@ class PushDeliveryTest {
         val sealed = decode(SEALED)
         sealed[120] = (sealed[120].toInt() xor 1).toByte()
         val altered = Base64.getUrlEncoder().withoutPadding().encodeToString(sealed)
-        assertNull(fcmFields(mapOf("encrypted" to altered), ExampleKeys()))
-        assertNull("no keys held", fcmFields(mapOf("encrypted" to SEALED), ExampleKeys(held = false)))
-        assertNull("not base64", fcmFields(mapOf("encrypted" to "!!"), ExampleKeys()))
+        assertNull(fcmFields(mapOf("encrypted" to altered), exampleKeys()))
+        assertNull("no keys held", fcmFields(mapOf("encrypted" to SEALED), exampleKeys(held = false)))
+        assertNull("not base64", fcmFields(mapOf("encrypted" to "!!"), exampleKeys()))
     }
 
     @Test

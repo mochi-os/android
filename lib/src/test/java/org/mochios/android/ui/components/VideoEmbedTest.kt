@@ -83,6 +83,18 @@ class VideoEmbedTest {
     }
 
     @Test
+    fun `the player's page names the app, so the frame sends a referrer as the web's does`() {
+        compose.setContent { VideoEmbed(VideoInfo("youtube", "abc123")) }
+        compose.waitForIdle()
+        val loaded = shadowOf(webView()!!).lastLoadDataWithBaseURL
+        assertEquals("THE POINT: loaded at the app's id", "https://${compose.activity.packageName.lowercase()}/", loaded.baseUrl)
+        assertTrue(
+            "the frame keeps the origin the policy sends",
+            loaded.data.contains("""referrerpolicy="strict-origin-when-cross-origin""""),
+        )
+    }
+
+    @Test
     fun `another video gets a player of its own and ends the one before`() {
         var video by mutableStateOf(VideoInfo("youtube", "abc123"))
         compose.setContent { VideoEmbed(video) }

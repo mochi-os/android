@@ -428,7 +428,7 @@
     <string name="networks_title">Netzwerke</string>
     <string name="networks_not_offered">Dieser Server bietet keine anderen Netzwerke an.</string>
     <string name="networks_link">Konto verknüpfen</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Verknüpfen</string>
     <string name="networks_linked">Konto verknüpft</string>
     <string name="networks_link_denied">Der Server hat die Verknüpfung nicht erlaubt</string>
     <string name="networks_link_failed">Konto konnte nicht verknüpft werden</string>

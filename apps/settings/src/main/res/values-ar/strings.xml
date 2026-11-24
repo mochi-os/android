@@ -468,7 +468,7 @@
     <string name="networks_title">الشبكات</string>
     <string name="networks_not_offered">لا يوفّر هذا الخادم شبكات أخرى.</string>
     <string name="networks_link">ربط حساب</string>
-    <string name="networks_link_action">رابط</string>
+    <string name="networks_link_action">ربط</string>
     <string name="networks_linked">تم ربط الحساب</string>
     <string name="networks_link_denied">لم يسمح الخادم بالربط</string>
     <string name="networks_link_failed">تعذّر ربط الحساب</string>

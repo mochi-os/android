@@ -428,7 +428,7 @@
     <string name="networks_title">Mga network</string>
     <string name="networks_not_offered">Walang ibang network na inaalok ang server na ito.</string>
     <string name="networks_link">Mag-link ng account</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">I-link</string>
     <string name="networks_linked">Naka-link na ang account</string>
     <string name="networks_link_denied">Hindi pinayagan ng server ang pag-link</string>
     <string name="networks_link_failed">Hindi na-link ang account</string>

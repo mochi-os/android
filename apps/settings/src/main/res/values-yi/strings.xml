@@ -428,7 +428,7 @@
     <string name="networks_title">נעצן</string>
     <string name="networks_not_offered">דער סערווער שטעלט נישט צו קיין אַנדערע נעצן.</string>
     <string name="networks_link">פֿאַרבינדן אַ קאָנטע</string>
-    <string name="networks_link_action">לינק</string>
+    <string name="networks_link_action">פֿאַרבינדן</string>
     <string name="networks_linked">קאָנטע פֿאַרבונדן</string>
     <string name="networks_link_denied">דער סערווער האָט נישט דערלויבט די פֿאַרבינדונג</string>
     <string name="networks_link_failed">האָט נישט געקאָנט פֿאַרבינדן די קאָנטע</string>

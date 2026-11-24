@@ -15,7 +15,9 @@ label where a missing one would at least fall back to English); brand terms
 (Mochi, Stripe, OAuth, ... verbatim in Latin script wherever the English names
 them); placeholder syntax ({name} or ICU markup, which Android never
 substitutes); fallback awareness (a region catalogue judged against its
-parent); plural completeness (a quantity the language needs, which Android
+parent); inherited copies (a region catalogue holding the value its parent
+already supplies, which overrides nothing today and keeps a later correction to
+the parent from ever reaching it); plural completeness (a quantity the language needs, which Android
 silently serves from `other`); locale coverage (an empty locale directory, a
 locale the other modules carry and this one lacks, and keys the source has
 dropped); bare double quotes (the resource compiler takes an unescaped " as
@@ -77,38 +79,61 @@ def untranslatable(directory: Path) -> set[str]:
     return set(UNTRANSLATABLE_RE.findall(read_catalogues(directory)))
 
 
-# Region-qualified locales whose nearest localised catalogue is a script one
-# rather than a bare language one: there is no values-zh, so values-zh-rHK falls
-# through to values-b+zh+Hant. Cantonese is excluded on purpose - yue matches by
-# language, finds no zh catalogue, and falls through to English, so its gaps are
-# real.
-SCRIPT_PARENT = {
+# Region-qualified locales whose nearest parent is not their bare language, as
+# Android resolves them (its LocaleDataTables, built from CLDR's parentLocales):
+# a Chinese region falls to its script catalogue, there being no values-zh,
+# Macau to Hong Kong first, and Latin American Spanish to es-419 before es.
+# Every other region the client carries (de-CH, fr-CA, nl-BE, pt-BR, en-CA,
+# en-US) falls to its language. Cantonese is not here on purpose - yue matches
+# by language, finds no zh catalogue, and falls through to English, so its gaps
+# are real. A copy of ANDROID_PARENT in the monorepo's
+# claude/scripts/i18n_glossary.py, which this repository cannot import: change
+# the two together.
+LATIN_AMERICA = ("AR", "BO", "BR", "BZ", "CL", "CO", "CR", "CU", "DO", "EC", "GT",
+                 "HN", "MX", "NI", "PA", "PE", "PR", "PY", "SV", "US", "UY", "VE")
+PARENT = {
     "values-zh-rHK": "values-b+zh+Hant",
-    "values-zh-rMO": "values-b+zh+Hant",
+    "values-zh-rMO": "values-zh-rHK",
     "values-zh-rCN": "values-b+zh+Hans",
     "values-zh-rSG": "values-b+zh+Hans",
+    **{f"values-es-r{region}": "values-b+es+419" for region in LATIN_AMERICA},
 }
 
 
-def ancestors(qualifier: str, present: set[str]) -> list[str]:
-    """Localised catalogues Android would consult before falling back to values/.
-
-    Resolution walks language+region -> language -> default per resource, so a
-    key held only by values-de is what a de-CH reader sees. values/ is excluded:
-    reaching it means English, which is the gap this gate finds.
-    """
-    script = SCRIPT_PARENT.get(qualifier)
-    if script and script in present:
-        return [script]
+def parent_of(qualifier: str) -> str | None:
+    """The catalogue a values-* qualifier falls through to next, or None for
+    a full locale: values-es-rAR -> values-b+es+419 -> values-es. A script
+    qualifier (values-b+zh+Hans) has no language catalogue beneath it."""
+    if qualifier in PARENT:
+        return PARENT[qualifier]
     tag = qualifier[len("values-"):]
     if tag.startswith("b+"):
-        language = tag[2:].split("+")[0].lower()
-    elif "-r" in tag:
-        language = tag.split("-r")[0]
+        language, *rest = tag[2:].split("+")
+        regional = any(len(subtag) != 4 for subtag in rest)
     else:
-        return []
-    parent = f"values-{language}"
-    return [parent] if parent in present and parent != qualifier else []
+        language, _, region = tag.partition("-r")
+        regional = bool(region)
+    return f"values-{language.lower()}" if regional else None
+
+
+def ancestors(qualifier: str, present: set[str]) -> list[str]:
+    """Localised catalogues Android would consult before falling back to values/,
+    nearest first.
+
+    Resolution walks the region's parents per resource, so a key held only by
+    values-de is what a de-CH reader sees, and an es-AR reader is given
+    values-b+es+419 before values-es. A parent the module lacks is passed over
+    for the next. values/ is excluded: reaching it means English, which is the
+    gap this gate finds.
+    """
+    out, seen = [], {qualifier}
+    parent = parent_of(qualifier)
+    while parent and parent not in seen:
+        seen.add(parent)
+        if parent in present:
+            out.append(parent)
+        parent = parent_of(parent)
+    return out
 
 
 STRING_RE = re.compile(r'<string name="([^"]+)">(.*?)</string>', re.S)
@@ -323,7 +348,7 @@ def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
     present = {d.name for d in res.iterdir() if d.is_dir() and d.name.startswith("values")}
     problems = []
     for vd in sorted(res.iterdir()):
-        if not vd.is_dir() or not vd.name.startswith("values-"):
+        if not vd.is_dir() or not locale_qualifier(vd.name):
             continue
         if OVERLAY_RE.match(vd.name):
             continue
@@ -457,7 +482,8 @@ def check_overlays(module_dir: Path) -> list[str]:
     # spells it, or values-en-rUS reaches every English reader.
     neutral = load_strings(res / "values-en")
     for vd in sorted(res.iterdir()):
-        if not vd.is_dir() or not OVERLAY_RE.match(vd.name) or vd.name == "values-en":
+        if (not vd.is_dir() or not OVERLAY_RE.match(vd.name) or vd.name == "values-en"
+                or not locale_qualifier(vd.name)):
             continue
         for key, value in load_strings(vd).items():
             if key in english and value != english[key] and neutral.get(key) != english[key]:
@@ -478,11 +504,63 @@ def check_overlays(module_dir: Path) -> list[str]:
     return findings
 
 
+def check_copies(module_dir: Path) -> list[str]:
+    """Return findings for region catalogue values identical to what they inherit.
+
+    A region catalogue (values-nl-rBE, values-b+es+419, values-en-rUS) carries only
+    what its readers' wording does differently. A value equal to the one the
+    nearest ancestor holding the key supplies changes nothing a reader sees, but
+    it wins over that ancestor for good: reword the parent and the region keeps
+    the old text. Plurals are judged block by block, item for item.
+    """
+    res = module_dir / "src" / "main" / "res"
+    if not res.is_dir():
+        return []
+    present = {d.name for d in res.iterdir() if d.is_dir() and locale_qualifier(d.name)}
+    strings, plurals = {}, {}
+
+    def held(qualifier):
+        if qualifier not in strings:
+            strings[qualifier] = load_strings(res / qualifier)
+            plurals[qualifier] = load_plurals(res / qualifier)
+        return strings[qualifier], plurals[qualifier]
+
+    findings = []
+    for qualifier in sorted(present):
+        chain = ancestors(qualifier, present)
+        if not chain:
+            continue
+        own_strings, own_plurals = held(qualifier)
+        for table, index in ((own_strings, 0), (own_plurals, 1)):
+            for key, value in table.items():
+                for ancestor in chain:
+                    inherited = held(ancestor)[index]
+                    if key in inherited:
+                        if inherited[key] == value:
+                            findings.append(f"{qualifier} {key}: the same as {ancestor}, which it inherits; "
+                                            f"drop the copy so a correction there reaches it")
+                        break
+    return findings
+
+
 # values-* qualifiers that are NOT locales. Android's locale qualifier is a two
 # or three letter language, so most configuration qualifiers (night, land, v29,
-# hdpi) cannot be mistaken for one - but these three can, and a UI-mode
-# directory holding no strings is not a translation gap.
-NOT_LOCALE = {"tv", "car", "vr"}
+# hdpi) cannot be mistaken for one - but the UI modes tv, car and vr and the
+# HDR mode hdr can, and such a directory holding no strings is not a
+# translation gap.
+NOT_LOCALE = {"tv", "car", "vr", "hdr"}
+
+# A values-* directory named by a locale and nothing else: a language, with a
+# region (de-rCH) or in BCP 47's b+ form (b+es+419, b+zh+Hant). Any other
+# configuration qualifier (night, land, v31, sw600dp, hdpi), alone or beside a
+# locale (de-night), names a set of overrides for one configuration, not a
+# catalogue a locale's readers are owed whole.
+LOCALE_QUALIFIER_RE = re.compile(r"^values-(?:[a-z]{2,3}(?:-r[A-Z]{2})?|b\+[a-z]{2,3}(?:\+[A-Za-z0-9]{2,8})*)$")
+
+
+def locale_qualifier(qualifier: str) -> bool:
+    """Whether a values-* directory name is a locale's catalogue."""
+    return bool(LOCALE_QUALIFIER_RE.match(qualifier)) and language_of(qualifier) not in NOT_LOCALE
 
 
 def check_coverage(module_dir: Path) -> tuple[list[str], list[str]]:
@@ -497,13 +575,11 @@ def check_coverage(module_dir: Path) -> tuple[list[str], list[str]]:
     for vd in sorted(res.iterdir()):
         if not vd.is_dir() or not vd.name.startswith("values-"):
             continue
-        qualifier = vd.name[len("values-"):]
-        if language_of(vd.name) in NOT_LOCALE:
-            continue
         keys = load_keys(vd)
         if not keys:
-            silent.append(f"{vd.name}: no string resources at all"
-                          f"{' (empty directory)' if not catalogues(vd) else ''}")
+            if locale_qualifier(vd.name):
+                silent.append(f"{vd.name}: no string resources at all"
+                              f"{' (empty directory)' if not catalogues(vd) else ''}")
             continue
         if OVERLAY_RE.match(vd.name):
             continue
@@ -539,7 +615,7 @@ def full_locale(qualifier: str) -> bool:
     values/, so neither is owed by a module. A script one (values-b+zh+Hans)
     has no language catalogue beneath it, so it is.
     """
-    if OVERLAY_RE.match(qualifier):
+    if OVERLAY_RE.match(qualifier) or not locale_qualifier(qualifier):
         return False
     tag = qualifier[len("values-"):]
     if tag.startswith("b+"):
@@ -626,11 +702,12 @@ def main():
         absent = check_presence(module, expected, lone)
         arguments, placeholders, empties, lost = check_values(module)
         overlays = check_overlays(module)
+        copies = check_copies(module)
         plurals = check_plurals(module)
         silent, stale = check_coverage(module)
         quotes = check_quotes(module)
         decimals = check_decimals(module)
-        if not any((problems, absent, arguments, placeholders, empties, lost, overlays, plurals,
+        if not any((problems, absent, arguments, placeholders, empties, lost, overlays, copies, plurals,
                     silent, stale, quotes, decimals)):
             print(f"{module}: ok")
             continue
@@ -664,6 +741,11 @@ def main():
         if overlays:
             print(f"{module}: {len(overlays)} English overlay value(s) drifted", file=sys.stderr)
             for finding in overlays[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if copies:
+            print(f"{module}: {len(copies)} region value(s) copy what their parent already supplies",
+                  file=sys.stderr)
+            for finding in copies[:10]:
                 print(f"  {finding}", file=sys.stderr)
         if plurals:
             print(f"{module}: {len(plurals)} plural(s) missing a quantity the language needs", file=sys.stderr)

@@ -468,7 +468,7 @@
     <string name="networks_title">Rhwydweithiau</string>
     <string name="networks_not_offered">Nid yw\'r gweinydd hwn yn cynnig rhwydweithiau eraill.</string>
     <string name="networks_link">Cysylltu cyfrif</string>
-    <string name="networks_link_action">Dolen</string>
+    <string name="networks_link_action">Cysylltu</string>
     <string name="networks_linked">Cyfrif wedi\'i gysylltu</string>
     <string name="networks_link_denied">Ni chaniataodd y gweinydd y cysylltiad</string>
     <string name="networks_link_failed">Methwyd cysylltu\'r cyfrif</string>

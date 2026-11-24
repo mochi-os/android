@@ -485,4 +485,6 @@
     <string name="staff_payments_toast_refunded">Toʻlov qaytarildi</string>
     <string name="staff_payments_toast_refund_failed">Toʻlovni qaytarib boʻlmadi</string>
     <string name="staff_disputes_withdrawn">Xaridor qaytarib oldi</string>
+    <string name="staff_status_denied">Apellyatsiya rad etildi</string>
+    <string name="staff_status_upheld">Apellyatsiya tasdiqlandi</string>
 </resources>

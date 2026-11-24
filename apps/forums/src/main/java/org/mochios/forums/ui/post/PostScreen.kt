@@ -92,6 +92,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
@@ -134,13 +135,17 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton
 import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
+import org.mochios.android.ui.components.SelectionAction
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.commentRows
 import org.mochios.android.ui.components.findInThread
 import org.mochios.android.ui.components.mediumAddress
+import org.mochios.android.ui.components.quote
+import org.mochios.android.ui.components.quoteInto
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.ui.components.windowSelection
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
 import org.mochios.android.util.shareLink
@@ -177,6 +182,8 @@ fun PostScreen(
     // only the value carries a selection.
     val draftState = remember { mutableStateOf(TextFieldValue("")) }
     var draft by draftState
+    // The quote the last Reply put at the head of the draft, which the next one replaces.
+    var replyQuote by remember { mutableStateOf("") }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
     var showRemovePostConfirm by remember { mutableStateOf(false) }
@@ -247,8 +254,14 @@ fun PostScreen(
     // lightbox panel, so a comment behaves the same wherever it is drawn.
     val commentActions = CommentActions(
         onVote = viewModel::voteComment,
-        onReply = { comment ->
+        onReply = { comment, selected ->
             viewModel.setReplyTo(comment)
+            // The selection quoted as the web's Reply quotes it, in place of
+            // the last Reply's quote and ahead of anything typed, the caret at
+            // the end as Quote leaves it.
+            val text = quoteInto(draft.text, selected, replyQuote)
+            replyQuote = quote(selected)
+            if (text != draft.text) draft = TextFieldValue(text = text, selection = TextRange(text.length))
             focusComposer()
         },
         onEdit = { comment ->
@@ -303,7 +316,7 @@ fun PostScreen(
             actions = commentActions,
             canComment = uiState.canComment && !uiState.post.locked,
             replyTo = uiState.replyTo,
-            onClearReply = { viewModel.setReplyTo(null) },
+            onReplyTo = viewModel::setReplyTo,
             destination = uiState.forum.destination,
             isSending = uiState.isSending,
             upload = commentUpload,
@@ -1104,7 +1117,8 @@ internal fun PostHeader(
 /** What a comment can do, wherever it is drawn: the thread and the lightbox panel share one set. */
 private data class CommentActions(
     val onVote: (String, String) -> Unit,
-    val onReply: (ForumComment) -> Unit,
+    /** Replies to the comment, quoting the text selected on the page, if any. */
+    val onReply: (ForumComment, String?) -> Unit,
     val onEdit: (ForumComment) -> Unit,
     val onDelete: (ForumComment) -> Unit,
     val onApprove: (ForumComment) -> Unit,
@@ -1154,7 +1168,7 @@ private fun LazyListScope.commentsItems(
                 canModerate = canModerate,
                 isAuthor = isAuthor,
                 onVote = { vote -> actions.onVote(c.id, vote) },
-                onReply = { actions.onReply(c) },
+                onReply = { selected -> actions.onReply(c, selected) },
                 onEdit = { actions.onEdit(c) },
                 onDelete = { actions.onDelete(c) },
                 onApprove = { actions.onApprove(c) },
@@ -1199,7 +1213,8 @@ private fun AttachmentComments(
     actions: CommentActions,
     canComment: Boolean,
     replyTo: ForumComment?,
-    onClearReply: () -> Unit,
+    // Sets the comment the panel's composer replies to; null clears it.
+    onReplyTo: (ForumComment?) -> Unit,
     destination: Destination? = null,
     isSending: Boolean,
     upload: Upload?,
@@ -1218,6 +1233,8 @@ private fun AttachmentComments(
     // image starts a new comment, which is what the anchor means.
     val draftState = remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
     var draft by draftState
+    // The quote the last Reply put at the head of the draft, which the next one replaces.
+    var replyQuote by remember(attachmentId) { mutableStateOf("") }
     // Anchors live on top-level comments; a reply inherits its parent's context.
     val anchored = remember(comments, attachmentId) {
         comments.filter { comment -> comment.anchor == attachmentId }
@@ -1228,12 +1245,21 @@ private fun AttachmentComments(
     // Reply readies this panel's composer, not the one under the post behind it.
     val composerFocus = rememberReplyFocus(replyTo?.id)
     // Everything else a comment can do is the same here as below the post;
-    // only Quote differs, because it writes into a draft and this panel's is
-    // no longer the post screen's.
+    // only Quote and the quote a Reply carries differ, because they write into
+    // a draft and this panel's is no longer the post screen's.
     val panelActions = actions.copy(
         onQuote = { comment ->
             val text = quoteText(withoutQuote(comment.body), draft.text)
             draft = TextFieldValue(text = text, selection = TextRange(text.length))
+            composerFocus.requestFocus()
+        },
+        // The reply is set without the post screen's handler, which would
+        // take the quote out of that screen's own draft.
+        onReply = { comment, selected ->
+            onReplyTo(comment)
+            val text = quoteInto(draft.text, selected, replyQuote)
+            replyQuote = quote(selected)
+            if (text != draft.text) draft = TextFieldValue(text = text, selection = TextRange(text.length))
             composerFocus.requestFocus()
         },
     )
@@ -1288,7 +1314,7 @@ private fun AttachmentComments(
                                 ),
                                 preview = replied.body,
                                 cancelLabel = stringResource(R.string.forums_comment_clear_reply),
-                                onCancel = onClearReply,
+                                onCancel = { onReplyTo(null) },
                             )
                         }
                     }),
@@ -1337,7 +1363,8 @@ internal fun CommentCard(
     canModerate: Boolean,
     isAuthor: Boolean,
     onVote: (String) -> Unit,
-    onReply: () -> Unit,
+    // Handed the text selected in the body, which the reply quotes, or null.
+    onReply: (String?) -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onApprove: () -> Unit,
@@ -1363,6 +1390,9 @@ internal fun CommentCard(
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
+    // Reply quotes what is selected on the page, the post or any comment, as on the web.
+    val view = LocalView.current
+    val replyLabel = stringResource(R.string.forums_comment_reply)
     CommentItem(
         name = comment.name,
         body = comment.body,
@@ -1392,6 +1422,7 @@ internal fun CommentCard(
         onEditTextChange = onEditTextChange,
         onSaveEdit = onSaveEdit,
         onCancelEdit = onCancelEdit,
+        selectionAction = if (comment.canComment) SelectionAction(replyLabel) { selected -> onReply(selected) } else null,
     ) {
         PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's
@@ -1419,7 +1450,7 @@ internal fun CommentCard(
             },
         )
         if (comment.canComment) {
-            MochiIconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = { onReply(windowSelection(view)) }, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.AutoMirrored.Outlined.Reply,
                     contentDescription = stringResource(R.string.forums_comment_reply),

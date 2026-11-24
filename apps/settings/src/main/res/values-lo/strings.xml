@@ -418,7 +418,7 @@
     <string name="networks_title">ເຄືອຂ່າຍ</string>
     <string name="networks_not_offered">ເຊີບເວີນີ້ບໍ່ມີເຄືອຂ່າຍອື່ນໃຫ້.</string>
     <string name="networks_link">ເຊື່ອມຕໍ່ບັນຊີ</string>
-    <string name="networks_link_action">ລິ້ງ</string>
+    <string name="networks_link_action">ເຊື່ອມຕໍ່</string>
     <string name="networks_linked">ເຊື່ອມບັນຊີແລ້ວ</string>
     <string name="networks_link_denied">ເຊີບເວີບໍ່ອະນຸຍາດການເຊື່ອມຕໍ່</string>
     <string name="networks_link_failed">ບໍ່ສາມາດເຊື່ອມຕໍ່ບັນຊີໄດ້</string>

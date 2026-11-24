@@ -482,4 +482,6 @@
     <string name="staff_payments_toast_refunded">Pago kutichisqa</string>
     <string name="staff_payments_toast_refund_failed">Mana pagota kutichiyta atikurqanchu</string>
     <string name="staff_disputes_withdrawn">Rantiqmi kutichirqan</string>
+    <string name="staff_status_denied">Apelación mana chaskisqa</string>
+    <string name="staff_status_upheld">Apelación chaskisqa</string>
 </resources>

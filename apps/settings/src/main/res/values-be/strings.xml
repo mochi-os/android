@@ -448,7 +448,7 @@
     <string name="networks_title">Сеткі</string>
     <string name="networks_not_offered">Гэты сервер не прапануе іншых сетак.</string>
     <string name="networks_link">Звязаць уліковы запіс</string>
-    <string name="networks_link_action">Спасылка</string>
+    <string name="networks_link_action">Звязаць</string>
     <string name="networks_linked">Уліковы запіс звязаны</string>
     <string name="networks_link_denied">Сервер не дазволіў звязванне</string>
     <string name="networks_link_failed">Не ўдалося звязаць уліковы запіс</string>

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_detail_cancel">取消</string>
     <string name="words_detail_label_you">你</string>
 
     <string name="words_channel_name">Words 通知</string>
     <string name="words_channel_description">關於 Words 回合、換字及對局結果嘅通知。</string>
-    <string name="words_list_menu">選單</string>
     <string name="words_sidebar_active">進行中嘅對局</string>
-    <string name="words_sidebar_completed">已完成</string>
     <string name="words_sidebar_empty">尚未有對局。</string>
     <string name="words_sidebar_new_game">新對局</string>
     <string name="words_new_game_title">新對局</string>
     <string name="words_new_game_choose_opponents">揀選對手</string>
-    <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_language">語言</string>
     <string name="words_new_game_language_uk">英文（英式）</string>
     <string name="words_new_game_language_us">英文（美式）</string>
     <string name="words_new_game_start">開始對局</string>
@@ -28,17 +23,12 @@
     <string name="words_detail_status_game_over">對局結束</string>
     <string name="words_detail_status_opponent_resigned">對手認輸 — 你贏咗！</string>
     <string name="words_detail_status_you_resigned">你已認輸</string>
-    <string name="words_detail_player_fallback">玩家 %1$s</string>
     <string name="words_detail_action_shuffle">重洗字母架</string>
-    <string name="words_detail_action_pass">略過</string>
     <string name="words_detail_action_exchange">換字母</string>
     <string name="words_detail_action_cancel_exchange">取消換字母</string>
-    <string name="words_detail_action_resign">認輸</string>
     <string name="words_detail_action_rematch">再戰</string>
     <string name="words_detail_action_delete">刪除對局</string>
-    <string name="words_detail_action_open_chat">開啟聊天</string>
     <string name="words_detail_action_more">對局操作</string>
-    <string name="words_detail_chat_title">聊天</string>
     <string name="words_detail_recall">收回</string>
     <string name="words_detail_submit">提交</string>
     <string name="words_detail_exchange">換字母</string>
@@ -50,14 +40,10 @@
     <string name="words_detail_chat_player_played">%1$s 出咗 %2$s</string>
 
     <string name="words_detail_delete_title">刪除對局?</string>
-    <string name="words_detail_delete_message">此操作將永久刪除對局及其聊天記錄，且無法復原。</string>
-    <string name="words_detail_delete_confirm">刪除</string>
     <string name="words_detail_chat_passed">%1$s跳過咗回合</string>
     <string name="words_detail_chat_passed_over">%1$s跳過咗回合 — 遊戲結束</string>
     <string name="words_detail_chat_exchanged">%1$s換咗字粒</string>
     <string name="words_move_error_no_tiles">未放置任何字母</string>
-    <string name="words_move_error_out_of_bounds">放置超出棋盤範圍</string>
-    <string name="words_move_error_square_occupied">該格已被佔用</string>
     <string name="words_move_error_not_in_line">字母必須放喺同一行或同一列</string>
     <string name="words_move_error_not_contiguous">字母必須相連（不可有空格）</string>
     <string name="words_move_error_first_move_centre">第一步必須覆蓋中央方格</string>

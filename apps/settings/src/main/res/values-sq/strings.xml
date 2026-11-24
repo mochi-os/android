@@ -428,7 +428,7 @@
     <string name="networks_title">Rrjetet</string>
     <string name="networks_not_offered">Ky server nuk ofron rrjete të tjera.</string>
     <string name="networks_link">Lidh një llogari</string>
-    <string name="networks_link_action">Lidhje</string>
+    <string name="networks_link_action">Lidh</string>
     <string name="networks_linked">Llogaria u lidh</string>
     <string name="networks_link_denied">Serveri nuk e lejoi lidhjen</string>
     <string name="networks_link_failed">Llogaria nuk mund të lidhej</string>

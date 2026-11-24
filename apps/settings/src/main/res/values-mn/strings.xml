@@ -428,7 +428,7 @@
     <string name="networks_title">Сүлжээнүүд</string>
     <string name="networks_not_offered">Энэ сервер өөр сүлжээ санал болгодоггүй.</string>
     <string name="networks_link">Бүртгэл холбох</string>
-    <string name="networks_link_action">Холбоос</string>
+    <string name="networks_link_action">Холбох</string>
     <string name="networks_linked">Бүртгэл холбогдлоо</string>
     <string name="networks_link_denied">Сервер холболтыг зөвшөөрсөнгүй</string>
     <string name="networks_link_failed">Бүртгэлийг холбож чадсангүй</string>

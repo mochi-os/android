@@ -111,8 +111,8 @@ internal fun staffStatusLabelRes(key: String): Int? = when (key) {
     "rejected" -> R.string.staff_status_rejected
     "appealed" -> R.string.staff_status_appealed
     "warning" -> R.string.staff_audit_action_listing_warning
-    "upheld" -> R.string.staff_appeals_upheld_toast
-    "denied" -> R.string.staff_appeals_denied_toast
+    "upheld" -> R.string.staff_status_upheld
+    "denied" -> R.string.staff_status_denied
 
     // Order
     "paid" -> R.string.staff_status_paid

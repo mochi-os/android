@@ -428,7 +428,7 @@
     <string name="networks_title">Networkiiwwan</string>
     <string name="networks_not_offered">Sarvariin kun networkiiwwan biroo hin dhiyeessu.</string>
     <string name="networks_link">Akkaawuntii walitti hidhi</string>
-    <string name="networks_link_action">Hidhaa</string>
+    <string name="networks_link_action">Walitti hidhi</string>
     <string name="networks_linked">Herregi walqabsiifame</string>
     <string name="networks_link_denied">Sarvariin walitti hidhamuu hin heyyamne</string>
     <string name="networks_link_failed">Akkaawuntii walitti hidhuu hin dandeenye</string>

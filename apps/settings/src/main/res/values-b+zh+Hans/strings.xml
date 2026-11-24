@@ -419,7 +419,7 @@
     <string name="networks_title">网络</string>
     <string name="networks_not_offered">此服务器不提供其他网络。</string>
     <string name="networks_link">关联账户</string>
-    <string name="networks_link_action">链接</string>
+    <string name="networks_link_action">关联</string>
     <string name="networks_linked">账户已关联</string>
     <string name="networks_link_denied">服务器不允许关联</string>
     <string name="networks_link_failed">无法关联账户</string>

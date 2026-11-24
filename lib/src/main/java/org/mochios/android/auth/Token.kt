@@ -27,6 +27,33 @@ object Token {
     /** The path to ask the server for [app]'s token by: its name, unless [paths] says otherwise. */
     fun path(app: String): String = paths[app] ?: app
 
+    /**
+     * The service each app whose token no page uses is asked for by. The bell,
+     * the notifications screens, the push registrations and the push channel
+     * call only the notifications app. Asked for by path, the token is
+     * whichever app a domain's route covering that path serves: core sends no
+     * push to a socket opened with it, and a leaked one is that app's.
+     */
+    private val services = mapOf("notifications" to "notifications")
+
+    /**
+     * The mint request for [app]'s token: by its service where [services]
+     * names one, with its path beside it for a server that predates asking by
+     * service, and by its path otherwise.
+     */
+    fun request(app: String): TokenRequest = TokenRequest(path(app), services[app])
+
+    /**
+     * How [app]'s token is asked for ([request]), recorded with a cached one:
+     * a token held that was asked for another way is not used but minted
+     * again, so one asked for by path before [services] named its service
+     * does not stay in use for the year it lives.
+     */
+    fun form(app: String): String = services[app]?.let { service -> "service:$service" } ?: "path:${path(app)}"
+
+    /** The [form] of a token cached before forms were recorded: every token was asked for by its path. */
+    fun legacy(app: String): String = "path:${path(app)}"
+
     private val expiryClaim = Regex("\"exp\"\\s*:\\s*(\\d+)")
 
     /** The `exp` claim as epoch milliseconds, or null when the token does not carry a readable one. */

@@ -820,6 +820,7 @@ private fun ProjectContent(
                                     visibleIds = viewModel.getVisibleObjectIds(),
                                     view = activeView,
                                     viewModel = viewModel,
+                                    projectDetails = details,
                                     onObjectClick = { viewModel.selectObject(it) },
                                     onCreateObject = { initialValues ->
                                         createObject(null, initialValues)

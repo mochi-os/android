@@ -242,9 +242,9 @@ class StepUpDialogTest {
         assertEquals("proof", proof)
     }
 
+    /** The input type the keyboard is asked for when the emailed code's field is tapped. */
     @OptIn(ExperimentalComposeUiApi::class)
-    @Test
-    fun `the emailed code is typed on a text keyboard, since it holds letters`() {
+    private fun emailCodeInput(): Int {
         var inputType = 0
         rule.setContent {
             InterceptPlatformTextInput(
@@ -261,6 +261,17 @@ class StepUpDialogTest {
         rule.waitForIdle()
         rule.onNode(hasSetTextAction()).performClick()
         rule.waitForIdle()
-        assertEquals(InputType.TYPE_CLASS_TEXT, inputType and InputType.TYPE_MASK_CLASS)
+        return inputType
+    }
+
+    @Test
+    fun `the emailed code is typed on a text keyboard, since it holds letters`() {
+        assertEquals(InputType.TYPE_CLASS_TEXT, emailCodeInput() and InputType.TYPE_MASK_CLASS)
+    }
+
+    /** A keyboard correcting a mixed-case code as a word would change what was typed. */
+    @Test
+    fun `the emailed code is not corrected as it is typed`() {
+        assertEquals(0, emailCodeInput() and InputType.TYPE_TEXT_FLAG_AUTO_CORRECT)
     }
 }

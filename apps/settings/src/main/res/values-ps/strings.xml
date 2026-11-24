@@ -428,7 +428,7 @@
     <string name="networks_title">شبکې</string>
     <string name="networks_not_offered">دا سرور نورې شبکې نه وړاندې کوي.</string>
     <string name="networks_link">یو حساب وتړئ</string>
-    <string name="networks_link_action">لینک</string>
+    <string name="networks_link_action">وتړئ</string>
     <string name="networks_linked">حساب وتړل شو</string>
     <string name="networks_link_denied">سرور د تړلو اجازه ورنکړه</string>
     <string name="networks_link_failed">حساب ونه تړل شو</string>

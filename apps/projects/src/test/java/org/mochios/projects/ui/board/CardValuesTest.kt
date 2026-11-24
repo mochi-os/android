@@ -7,6 +7,8 @@ package org.mochios.projects.ui.board
 
 import android.os.Looper
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
@@ -190,10 +192,12 @@ class CardValuesTest {
     private fun board(model: ProjectViewModel) {
         rule.setContent {
             CompositionLocalProvider(LocalFormat provides format) {
+                val state by model.uiState.collectAsState()
                 BoardView(
-                    objects = model.uiState.value.objects,
+                    objects = state.objects,
                     view = model.getActiveView(),
                     viewModel = model,
+                    projectDetails = state.projectDetails,
                     onObjectClick = {},
                     onCreateObject = {},
                 )

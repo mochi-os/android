@@ -7,12 +7,12 @@ package org.mochios.feeds.ui.component
 
 import android.app.Activity
 import android.content.Intent
+import androidx.activity.compose.LocalActivity
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -122,7 +122,7 @@ class PostNetworksScreenTest {
     fun `a reader who does not manage the post opens its copies elsewhere from its menu`() {
         lateinit var activity: Activity
         rule.setContent {
-            activity = LocalContext.current as Activity
+            activity = requireNotNull(LocalActivity.current)
             Bar(copied, canManage = false)
         }
         rule.onAllNodesWithContentDescription("Edit").assertCountEquals(0)

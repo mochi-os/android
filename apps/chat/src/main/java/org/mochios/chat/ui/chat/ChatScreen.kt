@@ -99,6 +99,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.semantics.Role
@@ -121,7 +122,6 @@ import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.OwnedAddress
@@ -164,6 +164,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
+import org.mochios.android.ui.components.collectPartAsState
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.attachmentAddress
@@ -210,6 +211,7 @@ fun ChatScreen(
     listViewModel: ChatListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
+    val resources = LocalResources.current
     val drawerState = rememberDrawerState(
         if (chatId.isEmpty()) DrawerValue.Open else DrawerValue.Closed
     )
@@ -240,7 +242,7 @@ fun ChatScreen(
     LaunchedEffect(Unit) {
         listViewModel.events.collect { event ->
             val message = when (event) {
-                is ChatListEvent.Done -> context.getString(event.message)
+                is ChatListEvent.Done -> resources.getString(event.message)
                 is ChatListEvent.Failure -> event.error.userMessage()
             }
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
@@ -400,22 +402,10 @@ private fun ChatContent(
     onOpenNotifications: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
-    val uiState by remember(viewModel) {
-        viewModel.uiState
-            .map { state -> state.withoutDrafts() }
-            .distinctUntilChanged()
-    }.collectAsState(initial = viewModel.uiState.value.withoutDrafts())
+    val uiState by viewModel.uiState.collectPartAsState { state -> state.withoutDrafts() }
     // The composer's text: the edit's while one is under way, else the draft.
-    val draft = remember(viewModel) {
-        viewModel.uiState
-            .map { state -> state.composed() }
-            .distinctUntilChanged()
-    }.collectAsState(initial = viewModel.uiState.value.composed())
-    val threadDraft = remember(viewModel) {
-        viewModel.uiState
-            .map { state -> state.threadComposed() }
-            .distinctUntilChanged()
-    }.collectAsState(initial = viewModel.uiState.value.threadComposed())
+    val draft = viewModel.uiState.collectPartAsState { state -> state.composed() }
+    val threadDraft = viewModel.uiState.collectPartAsState { state -> state.threadComposed() }
     val upload by viewModel.upload.collectAsState()
 
     // A one-to-one conversation asks whether the other person is online while

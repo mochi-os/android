@@ -448,7 +448,7 @@
     <string name="networks_title">Sieci</string>
     <string name="networks_not_offered">Ten serwer nie oferuje innych sieci.</string>
     <string name="networks_link">Połącz konto</string>
-    <string name="networks_link_action">Link</string>
+    <string name="networks_link_action">Połącz</string>
     <string name="networks_linked">Konto połączono</string>
     <string name="networks_link_denied">Serwer nie zezwolił na połączenie</string>
     <string name="networks_link_failed">Nie udało się połączyć konta</string>

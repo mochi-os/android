@@ -427,7 +427,7 @@
     <string name="networks_title">Redkuna</string>
     <string name="networks_not_offered">Kay servidorqa mana huk redkunata qunchu.</string>
     <string name="networks_link">Cuentata t\'inkiy</string>
-    <string name="networks_link_action">T\'inki</string>
+    <string name="networks_link_action">T\'inkiy</string>
     <string name="networks_linked">Cuenta t\'inkichisqa</string>
     <string name="networks_link_denied">Servidorqa mana t\'inkiyta saqirqanchu</string>
     <string name="networks_link_failed">Cuentata t\'inkiyta mana atikurqanchu</string>

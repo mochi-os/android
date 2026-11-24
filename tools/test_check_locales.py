@@ -8,6 +8,7 @@
 
     python3 -B -m unittest discover -s tools -p 'test_*.py'
 """
+import importlib.util
 import os
 import shutil
 import subprocess
@@ -195,11 +196,152 @@ class Presence(Module):
                               ("es", "Guardar")):
             self.strings(f"values-{locale}", f'<string name="save">{value}</string>', module=self.other)
         self.strings("values-es", '<string name="save">Guardar</string>', module=self.module)
-        for locale, value in (("de-rCH", "Speichern"), ("b+es+419", "Guardar"), ("en-rUS", "Save"),
+        for locale, value in (("de-rCH", "Sichern"), ("b+es+419", "Salvar"), ("en-rUS", "Keep"),
                               ("en", "Save")):
             self.strings(f"values-{locale}", f'<string name="save">{value}</string>', module=self.module)
         result = run("--discover", self.root)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+
+class Copies(Module):
+    """A region catalogue holding the value its parent already supplies wins over
+    the parent for good, so a later correction there never reaches its readers."""
+
+    def setUp(self):
+        super().setUp()
+        self.strings("values", '<string name="save">Save</string>', '<string name="open">Open</string>',
+                     '<plurals name="files"><item quantity="one">%1$s file</item>'
+                     '<item quantity="other">%1$s files</item></plurals>')
+        self.strings("values-nl", '<string name="save">Opslaan</string>', '<string name="open">Openen</string>',
+                     '<plurals name="files"><item quantity="one">%1$s bestand</item>'
+                     '<item quantity="other">%1$s bestanden</item></plurals>')
+        self.strings("values-es", '<string name="save">Guardar</string>', '<string name="open">Abrir</string>',
+                     '<plurals name="files"><item quantity="one">%1$s archivo</item>'
+                     '<item quantity="other">%1$s archivos</item></plurals>')
+
+    def test_a_copy_of_the_parent_fails(self):
+        self.strings("values-nl-rBE", '<string name="save">Opslaan</string>')
+        result = run(self.module)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("values-nl-rBE save: the same as values-nl", result.stderr)
+
+    def test_a_copy_of_a_plural_fails(self):
+        self.strings("values-nl-rBE", '<plurals name="files"><item quantity="one">%1$s bestand</item>'
+                     '<item quantity="other">%1$s bestanden</item></plurals>')
+        result = run(self.module)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("values-nl-rBE files: the same as values-nl", result.stderr)
+
+    def test_a_plural_differing_in_one_item_passes(self):
+        self.strings("values-nl-rBE", '<plurals name="files"><item quantity="one">%1$s bestand</item>'
+                     '<item quantity="other">%1$s bestandjes</item></plurals>')
+        result = run(self.module)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_a_copy_is_judged_against_the_nearest_ancestor_holding_the_key(self):
+        # es-AR reads es-419 first: a copy of es-419 is a copy, and a value equal
+        # to es that differs from es-419 is the region's own wording.
+        self.strings("values-b+es+419", '<string name="save">Salvar</string>')
+        self.strings("values-es-rAR", '<string name="save">Salvar</string>', '<string name="open">Abrir</string>')
+        result = run(self.module)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("values-es-rAR save: the same as values-b+es+419", result.stderr)
+        self.assertIn("values-es-rAR open: the same as values-es", result.stderr)
+        self.strings("values-es-rAR", '<string name="save">Guardar</string>')
+        result = run(self.module)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_genuine_regional_wording_passes(self):
+        self.strings("values-nl-rBE", '<string name="save">Bewaren</string>')
+        result = run(self.module)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_a_full_locale_equal_to_another_is_not_a_copy(self):
+        # Only a region inherits: values-nl is not judged against anything.
+        self.strings("values-af", '<string name="save">Opslaan</string>', '<string name="open">Oop</string>',
+                     '<plurals name="files"><item quantity="one">%1$s lêer</item>'
+                     '<item quantity="other">%1$s lêers</item></plurals>')
+        result = run(self.module)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+
+class Configuration(Module):
+    """A values-* directory named by a configuration qualifier (night, v31,
+    land, sw600dp, hdr) or by a locale beside one (de-night) holds overrides
+    for that configuration, not a catalogue a locale's readers are owed whole,
+    so it is neither missing keys nor a locale serving English throughout."""
+
+    def setUp(self):
+        super().setUp()
+        self.strings("values", '<string name="save">Save</string>', '<string name="greeting">Hello %1$s</string>')
+        self.strings("values-fr", '<string name="save">Enregistrer</string>',
+                     '<string name="greeting">Bonjour %1$s</string>')
+
+    def resource(self, directory, name, text):
+        write(os.path.join(self.module, "src", "main", "res", directory, name), f"<resources>{text}</resources>\n")
+
+    def test_a_configuration_directory_is_not_a_locale(self):
+        self.resource("values-night", "colors.xml", '<color name="surface">#000000</color>')
+        self.resource("values-v31", "themes.xml", '<style name="Theme" parent="Base"/>')
+        self.resource("values-land", "dimens.xml", '<dimen name="gutter">24dp</dimen>')
+        self.resource("values-sw600dp", "dimens.xml", '<dimen name="gutter">32dp</dimen>')
+        self.resource("values-hdr", "colors.xml", '<color name="surface">#101010</color>')
+        self.resource("values-fr-night", "colors.xml", '<color name="surface">#000000</color>')
+        self.strings("values-land", '<string name="save">Save</string>')
+        result = run(self.module)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_a_configuration_directory_holding_strings_is_still_read(self):
+        """Its values are what that configuration shows: one dropping the
+        English's argument renders without it all the same."""
+        self.strings("values-land", '<string name="greeting">Hello</string>')
+        result = run(self.module)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("values-land greeting: %1$s absent", result.stderr)
+
+    def test_a_locale_directory_is_still_judged(self):
+        self.strings("values-de", '<string name="save">Speichern</string>')
+        result = run(self.module)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("values-de: 1 missing (greeting)", result.stderr)
+
+
+def load_checker():
+    spec = importlib.util.spec_from_file_location("check_locales", CHECKER)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class Ancestors(unittest.TestCase):
+    """The catalogues a region falls through to are Android's, from CLDR's
+    parent locales: es-AR reads es-419 before es, and zh-MO reads zh-HK before
+    the Traditional script catalogue."""
+
+    PRESENT = {"values", "values-es", "values-b+es+419", "values-es-rAR", "values-de", "values-de-rCH",
+               "values-b+zh+Hant", "values-zh-rHK", "values-zh-rMO", "values-pt", "values-pt-rBR"}
+
+    def setUp(self):
+        self.checker = load_checker()
+
+    def test_latin_american_spanish_reads_es_419_first(self):
+        self.assertEqual(["values-b+es+419", "values-es"], self.checker.ancestors("values-es-rAR", self.PRESENT))
+        self.assertEqual(["values-b+es+419", "values-es"], self.checker.ancestors("values-es-rMX", self.PRESENT))
+
+    def test_a_parent_the_module_lacks_is_passed_over(self):
+        present = self.PRESENT - {"values-b+es+419"}
+        self.assertEqual(["values-es"], self.checker.ancestors("values-es-rAR", present))
+
+    def test_macau_reads_hong_kong_first(self):
+        self.assertEqual(["values-zh-rHK", "values-b+zh+Hant"],
+                         self.checker.ancestors("values-zh-rMO", self.PRESENT))
+
+    def test_the_other_regions_read_their_language(self):
+        for qualifier, parents in (("values-de-rCH", ["values-de"]), ("values-pt-rBR", ["values-pt"]),
+                                   ("values-b+es+419", ["values-es"]), ("values-zh-rHK", ["values-b+zh+Hant"]),
+                                   ("values-de", []), ("values-b+zh+Hant", []), ("values-yue", [])):
+            with self.subTest(qualifier=qualifier):
+                self.assertEqual(parents, self.checker.ancestors(qualifier, self.PRESENT))
 
 
 class Floor(unittest.TestCase):

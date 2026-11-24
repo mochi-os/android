@@ -13,10 +13,12 @@ import android.text.TextUtils
 import android.text.style.ClickableSpan
 import android.util.AttributeSet
 import android.view.MotionEvent
+import android.view.View
 import android.view.ViewConfiguration
 import android.widget.TextView
 import io.noties.markwon.ext.tables.TableRowSpan
 import io.noties.markwon.image.AsyncDrawableSpan
+import java.lang.ref.WeakReference
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -33,6 +35,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
 
     /** Image URL (AsyncDrawable destination) -> its alt/title text. */
     var imageAltByUrl: Map<String, String> = emptyMap()
+
+    /** The item the text selection's menu offers beside the platform's own, if any; see [SelectionMenu]. */
+    var selectionAction: SelectionAction? = null
 
     /**
      * When true, no touch is consumed (onTouchEvent returns false) so drags and
@@ -79,6 +84,11 @@ class ClickableLinkTextView @JvmOverloads constructor(
             longPressFired = true
             onImageLongPress?.invoke(alt)
         }
+    }
+
+    override fun onSelectionChanged(selStart: Int, selEnd: Int) {
+        super.onSelectionChanged(selStart, selEnd)
+        if (selEnd > selStart) selectedLast = WeakReference(this)
     }
 
     override fun onMeasure(widthMeasure: Int, heightMeasureSpec: Int) {
@@ -296,4 +306,20 @@ class ClickableLinkTextView @JvmOverloads constructor(
         val text = cell.text as? Spanned ?: return null
         return text.getSpans(offset, offset, ClickableSpan::class.java).firstOrNull()
     }
+}
+
+/** The body text was last selected in, anywhere in the app; views run on the main thread only. */
+private var selectedLast: WeakReference<ClickableLinkTextView>? = null
+
+/**
+ * What is selected now in [view]'s window, as the web's Reply reads
+ * `window.getSelection()`: the selection in the body the user selected in
+ * last, wherever on the page it is - the post, the comment replied to or
+ * another - while that body is still drawn there and still holds it. Null
+ * when nothing is selected.
+ */
+fun windowSelection(view: View): String? {
+    val body = selectedLast?.get() ?: return null
+    if (!body.isAttachedToWindow || body.rootView !== view.rootView) return null
+    return BodySelection().also { selection -> selection.view = body }.text()
 }

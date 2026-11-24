@@ -44,6 +44,7 @@ import org.mochios.market.model.AuctionStatus
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.open
 import org.mochios.market.ui.components.BidStatusBadge
 import org.mochios.market.ui.components.auctionRemainingLabel
 import org.mochios.market.ui.components.MarketLayout
@@ -89,10 +90,10 @@ fun MyBidsScreen(
                         BidRow(
                             bid = bid,
                             onClick = { id, title ->
-                                navController.navigate(MarketApp.listingDetail(id, title))
+                                navController.open(MarketApp.listingDetail(id, title))
                             },
                             onCompletePurchase = { listingId ->
-                                navController.navigate(MarketApp.checkout(listingId.toString()))
+                                navController.open(MarketApp.checkout(listingId.toString()))
                             },
                         )
                     }

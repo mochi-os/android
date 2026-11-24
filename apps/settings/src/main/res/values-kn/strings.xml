@@ -428,7 +428,7 @@
     <string name="networks_title">ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="networks_not_offered">ಈ ಸರ್ವರ್ ಇತರ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಒದಗಿಸುವುದಿಲ್ಲ.</string>
     <string name="networks_link">ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಿ</string>
-    <string name="networks_link_action">ಲಿಂಕ್</string>
+    <string name="networks_link_action">ಲಿಂಕ್ ಮಾಡಿ</string>
     <string name="networks_linked">ಖಾತೆ ಲಿಂಕ್ ಆಗಿದೆ</string>
     <string name="networks_link_denied">ಸರ್ವರ್ ಲಿಂಕ್ ಅನ್ನು ಅನುಮತಿಸಲಿಲ್ಲ</string>
     <string name="networks_link_failed">ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>

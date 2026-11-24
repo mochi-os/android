@@ -405,7 +405,10 @@ private fun BoardColumn(
     }
     val sortField = viewModel.getActiveSortField()
     val sortDirection = viewModel.getActiveSortDirection()
-    val details = viewModel.uiState.value.crmDetails
+    // The sort reads the fields and their options from the details, so a
+    // change to them sorts again: the details the screen collected, which
+    // redraw the column when they change.
+    val details = crmDetails
     val sortedObjects = remember(objects, sortField, sortDirection, details) {
         viewModel.sortObjects(objects)
     }

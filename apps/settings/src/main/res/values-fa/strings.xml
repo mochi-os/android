@@ -428,7 +428,7 @@
     <string name="networks_title">شبکه‌ها</string>
     <string name="networks_not_offered">این سرور شبکهٔ دیگری ارائه نمی‌دهد.</string>
     <string name="networks_link">پیوند دادن حساب</string>
-    <string name="networks_link_action">پیوند</string>
+    <string name="networks_link_action">پیوند دادن</string>
     <string name="networks_linked">حساب پیوند داده شد</string>
     <string name="networks_link_denied">سرور اجازهٔ پیوند را نداد</string>
     <string name="networks_link_failed">پیوند دادن حساب ممکن نشد</string>

@@ -58,7 +58,7 @@ fun RequestNotificationPermission() {
     }
 
     LaunchedEffect(asked) {
-        if (!asked && !granted(context)) {
+        if (!asked && !mayPostNotifications(context)) {
             asked = true
             if (rationale()) {
                 explaining = true
@@ -100,7 +100,13 @@ fun RequestNotificationPermission() {
     }
 }
 
-private fun granted(context: Context) = ContextCompat.checkSelfPermission(
+/**
+ * Whether the user allows this client's notifications: POST_NOTIFICATIONS from
+ * Android 13. Earlier versions have no such permission, and ContextCompat
+ * answers for it there with whether the app's notifications are on, where the
+ * platform's own check would answer denied.
+ */
+internal fun mayPostNotifications(context: Context): Boolean = ContextCompat.checkSelfPermission(
     context,
     Manifest.permission.POST_NOTIFICATIONS,
 ) == PackageManager.PERMISSION_GRANTED

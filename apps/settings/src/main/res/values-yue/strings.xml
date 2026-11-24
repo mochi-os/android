@@ -427,7 +427,7 @@
     <string name="networks_title">網絡</string>
     <string name="networks_not_offered">呢個伺服器冇提供其他網絡。</string>
     <string name="networks_link">連結帳戶</string>
-    <string name="networks_link_action">連結</string>
+    <string name="networks_link_action">連結帳戶</string>
     <string name="networks_linked">帳戶已經連結</string>
     <string name="networks_link_denied">伺服器唔准連結</string>
     <string name="networks_link_failed">連結唔到帳戶</string>

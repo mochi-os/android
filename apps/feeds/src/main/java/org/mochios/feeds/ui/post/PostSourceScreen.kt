@@ -610,7 +610,11 @@ private fun PostSourceSheet(
                     onEditTextChange = { viewModel.setEditCommentText(it) },
                     onSaveEdit = { viewModel.saveEditComment() },
                     onCancelEdit = { viewModel.cancelEditComment() },
-                    onReply = { viewModel.setReplyingTo(comment.id) },
+                    onReply = if (permissions.comment) {
+                        { selected -> viewModel.startReply(comment.id, selected) }
+                    } else {
+                        null
+                    },
                     onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.text)) },
                     onDelete = { showDeleteCommentDialog(comment.id) },
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },

@@ -90,10 +90,23 @@ class ChatStoresTest {
         pins.toggle("gone")
         marks.mark("c1")
         marks.mark("gone")
-        pins.prune(setOf("c1", "c2"))
-        marks.prune(setOf("c1", "c2"))
+        pins.prune(setOf("c1", "c2"), "alice")
+        marks.prune(setOf("c1", "c2"), "alice")
         assertEquals(setOf("c1"), pins.pinned.value)
         assertEquals(setOf("c1"), marks.marked.value)
         assertEquals("kept so", setOf("c1"), PinnedChatsStore(context, session).pinned.value)
+    }
+
+    @Test
+    fun `another account's list drops nothing`() {
+        runBlocking { session.setBoundAccount("bob") }
+        val pins = PinnedChatsStore(context, session)
+        val marks = UnreadChatsStore(context, session)
+        pins.toggle("c9")
+        marks.mark("c9")
+        pins.prune(setOf("c1"), "alice")
+        marks.prune(setOf("c1"), "alice")
+        assertEquals("THE POINT: bob's pin stays", setOf("c9"), pins.pinned.value)
+        assertEquals(setOf("c9"), marks.marked.value)
     }
 }

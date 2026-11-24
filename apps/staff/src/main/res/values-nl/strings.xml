@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi-staf</string>
-    <string name="launcher_staff">Mochi-staf</string>
+    <string name="app_name">Medewerkers</string>
+    <string name="launcher_staff">Mochi Medewerkers</string>
     <string name="staff_accounts_action_ban_title">Account verbannen</string>
     <string name="staff_accounts_action_suspend_title">Account schorsen</string>
     <string name="staff_accounts_action_unban_title">Verbanning opheffen</string>
@@ -81,7 +81,7 @@
     <string name="staff_audit_action_listing_created">Advertentie aangemaakt</string>
     <string name="staff_audit_action_listing_deleted">Advertentie verwijderd</string>
     <string name="staff_audit_action_listing_published">Advertentie gepubliceerd</string>
-    <string name="staff_audit_action_listing_rejected">Afgewezen door staf</string>
+    <string name="staff_audit_action_listing_rejected">Afgewezen door medewerkers</string>
     <string name="staff_audit_action_listing_relisted">Opnieuw geplaatst</string>
     <string name="staff_audit_action_listing_removed">Verwijderd</string>
     <string name="staff_audit_action_listing_warning">Waarschuwing afgegeven</string>
@@ -149,7 +149,7 @@
     <string name="staff_categories_type_digital">Digitaal</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Fysiek</string>
-    <string name="staff_channel_name">Mochi-staf</string>
+    <string name="staff_channel_name">Medewerkers</string>
     <string name="staff_config_field_auto_approve">Drempel automatisch goedkeuren</string>
     <string name="staff_config_field_hold">Drempel vasthouden</string>
     <string name="staff_config_field_platform_fee">Platformkosten</string>
@@ -395,7 +395,7 @@
     <string name="staff_team_dialog_search_placeholder">Zoeken op naam, vingerafdruk of ID</string>
     <string name="staff_team_empty">Geen teamleden</string>
     <string name="staff_team_remove_confirm">Verwijderen</string>
-    <string name="staff_team_remove_desc">Dit lid verwijderen uit het stafteam?</string>
+    <string name="staff_team_remove_desc">Dit lid verwijderen uit het medewerkersteam?</string>
     <string name="staff_team_remove_title">Teamlid verwijderen</string>
     <string name="staff_team_role_admin">Beheerder</string>
     <string name="staff_team_role_moderator">Moderator</string>
@@ -483,4 +483,6 @@
     <string name="staff_payments_toast_refunded">Betaling terugbetaald</string>
     <string name="staff_payments_toast_refund_failed">Kan betaling niet terugbetalen</string>
     <string name="staff_disputes_withdrawn">Ingetrokken door de koper</string>
+    <string name="staff_status_denied">Bezwaar afgewezen</string>
+    <string name="staff_status_upheld">Bezwaar goedgekeurd</string>
 </resources>

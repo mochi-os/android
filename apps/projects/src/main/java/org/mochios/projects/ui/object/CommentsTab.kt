@@ -31,6 +31,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -49,8 +50,10 @@ import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
+import org.mochios.android.ui.components.SelectionAction
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.ui.components.replyCount
+import org.mochios.android.ui.components.windowSelection
 import org.mochios.android.format.personName
 import org.mochios.android.util.fingerprint
 import org.mochios.android.util.addressed
@@ -117,7 +120,7 @@ fun CommentsTab(
                         drafts = drafts,
                         currentUserId = currentUserId,
                         onReply = if (canComment) {
-                            { id, _ -> drafts.update(target) { it.copy(reply = id) } }
+                            { id, selected -> drafts.reply(target, id, selected) }
                         } else {
                             null
                         },
@@ -196,8 +199,11 @@ private fun CommentItem(
     avatarUrlBuilder: ((Comment) -> OwnedAddress?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
-    /** Null where the reader may not comment, so there is nothing to reply with. */
-    onReply: ((String, String) -> Unit)?,
+    /**
+     * Null where the reader may not comment, so there is nothing to reply with.
+     * Handed the comment and the text selected on the page, which the reply quotes, or null.
+     */
+    onReply: ((String, String?) -> Unit)?,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
     // Folds the comment this one replies to, from the thread line beside it.
@@ -207,6 +213,9 @@ private fun CommentItem(
     val mine = currentUserId != null && comment.authorId == currentUserId
     var collapsed by rememberSaveable(comment.id) { mutableStateOf(false) }
     val replies = remember(comment) { replyCount(comment) { it.children } }
+    // Reply quotes what is selected on the page, in this body or another, as on the web.
+    val view = LocalView.current
+    val replyLabel = stringResource(MochiR.string.comment_reply)
 
     SharedCommentItem(
         name = comment.name,
@@ -235,9 +244,10 @@ private fun CommentItem(
         replies = replies,
         onToggleCollapse = if (replies > 0) ({ collapsed = !collapsed }) else null,
         onCollapseParent = onCollapseParent,
+        selectionAction = onReply?.let { reply -> SelectionAction(replyLabel) { selected -> reply(comment.id, selected) } },
     ) {
         CommentActions(
-            onReply = onReply?.let { reply -> { reply(comment.id, comment.name) } },
+            onReply = onReply?.let { reply -> { reply(comment.id, windowSelection(view)) } },
             onEdit = { drafts.edit(comment.id, comment.text) }.takeIf { mine },
             onDelete = { onDelete(comment.id) }.takeIf { mine },
         )

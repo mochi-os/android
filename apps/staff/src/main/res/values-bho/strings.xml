@@ -483,4 +483,6 @@
     <string name="staff_payments_toast_refunded">भुगतान रिफंड भइल</string>
     <string name="staff_payments_toast_refund_failed">भुगतान रिफंड ना हो पाइल</string>
     <string name="staff_disputes_withdrawn">खरीदार वापस ले लिहलस</string>
+    <string name="staff_status_denied">अपील अस्वीकार</string>
+    <string name="staff_status_upheld">अपील स्वीकृत</string>
 </resources>

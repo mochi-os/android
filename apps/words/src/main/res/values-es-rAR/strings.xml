@@ -2,7 +2,6 @@
 <resources>
 
     <string name="words_new_game_add_friends">Agregá amigos</string>
-    <string name="words_detail_status_you_win">¡Ganaste!</string>
     <string name="words_detail_status_you_resigned">Te rendiste</string>
     <string name="words_detail_action_cancel_exchange">Cancelá el intercambio</string>
     <string name="words_detail_action_delete">Eliminá la partida</string>
@@ -10,22 +9,14 @@
     <string name="words_detail_blank_title">Elegí una letra</string>
     <string name="words_detail_resign_message">¿Estás seguro de que querés rendirte?</string>
 
-    <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_detail_chat_title">Chat</string>
 
     <string name="words_detail_delete_confirm">Eliminá</string>
-    <string name="words_detail_delete_message">Esto elimina permanentemente la partida y su chat. Esta acción no se puede deshacer.</string>
-    <string name="words_detail_chat_passed">%1$s pasó</string>
-    <string name="words_detail_chat_passed_over">%1$s pasó — fin del juego</string>
-    <string name="words_detail_chat_exchanged">%1$s cambió fichas</string>
     <string name="words_move_error_no_tiles">No colocaste ninguna ficha</string>
-    <string name="words_move_error_out_of_bounds">La colocación queda fuera del tablero</string>
     <string name="words_move_error_square_occupied">El casillero ya está ocupado</string>
     <string name="words_move_error_not_in_line">Las fichas tienen que ir en una sola fila o columna</string>
     <string name="words_move_error_not_contiguous">Las fichas tienen que estar seguidas (sin huecos)</string>
     <string name="words_move_error_first_move_centre">La primera jugada tiene que cubrir el casillero central</string>
     <string name="words_move_error_first_move_two_tiles">La primera jugada tiene que colocar al menos 2 fichas</string>
     <string name="words_move_error_not_connected">Las fichas tienen que conectarse con las fichas del tablero</string>
-    <string name="words_move_error_no_words">No se formó ninguna palabra válida</string>
     <string name="words_detail_submit_score">Enviá +%1$s</string>
 </resources>

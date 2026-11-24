@@ -428,7 +428,7 @@
     <string name="networks_title">ქსელები</string>
     <string name="networks_not_offered">ეს სერვერი სხვა ქსელებს არ გთავაზობთ.</string>
     <string name="networks_link">ანგარიშის დაკავშირება</string>
-    <string name="networks_link_action">ბმული</string>
+    <string name="networks_link_action">დაკავშირება</string>
     <string name="networks_linked">ანგარიში დაკავშირდა</string>
     <string name="networks_link_denied">სერვერმა არ დაუშვა დაკავშირება</string>
     <string name="networks_link_failed">ანგარიშის დაკავშირება ვერ მოხერხდა</string>
