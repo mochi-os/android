@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Kuulutus peidetakse ostjate eest. Seda ei saa tagasi võtta, kuid saad selle hiljem uue mustandina uuesti üles panna.</string>
     <string name="market_listings_remove_message_auction">See tühistab oksjoni. Kuulutus peidetakse ostjate eest; saad selle hiljem uue mustandina uuesti üles panna.</string>
     <string name="market_listings_remove_title">Kas eemaldada see kuulutus?</string>
+    <string name="market_audit_actor_staff">Töötajad</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">See tühistab oksjoni ja teavitab %1$s aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>
         <item quantity="other">See tühistab oksjoni ja teavitab %1$s aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>

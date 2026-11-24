@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Àkọsílẹ̀ àyẹ̀wò</string>
     <string name="view_list_sorted_ascending">tí a tò gòkè</string>
     <string name="view_list_sorted_descending">tí a tò sọkalẹ̀</string>
+    <string name="notification_channel_settings">Àwọn ìfìtọ́nisí ìṣètò</string>
 </resources>

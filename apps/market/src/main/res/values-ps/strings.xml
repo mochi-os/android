@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">لیست به د پیرودونکو څخه پټ شي. دا نشي بېرته راګرځیدلی، خو تاسو یې وروسته د نوې مسودې په توګه بیا لیست کولی شئ.</string>
     <string name="market_listings_remove_message_auction">دا به نیلام لغوه کړي. لیست به د پیرودونکو څخه پټ شي؛ تاسو یې وروسته د نوې مسودې په توګه بیا لیست کولی شئ.</string>
     <string name="market_listings_remove_title">دا لیست لرې کړو؟</string>
+    <string name="market_audit_actor_staff">کارمندان</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">دا به لیلام لغوه کړي او %1$s فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>
         <item quantity="other">دا به لیلام لغوه کړي او %1$s فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>

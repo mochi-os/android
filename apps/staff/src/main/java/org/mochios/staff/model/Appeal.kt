@@ -28,7 +28,9 @@ data class Appeal(
     @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
 )
 
+/** Result of `appeals/list`; [next] as on [AccountsListResponse]. */
 data class AppealsListResponse(
     val appeals: List<Appeal> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )

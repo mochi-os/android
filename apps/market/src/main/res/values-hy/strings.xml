@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Ցանկը կթաքցվի գնորդներից: Սա հնարավոր չէ չեղարկել, բայց կարող եք այն հետագայում նորից տեղադրել որպես նոր սևագիր:</string>
     <string name="market_listings_remove_message_auction">Սա կչեղարկի աճուրդը: Ցանկը կթաքցվի գնորդներից, կարող եք այն հետագայում նորից տեղադրել որպես նոր սևագիր:</string>
     <string name="market_listings_remove_title">Հեռացնե՞լ այս հայտարարությունը։</string>
+    <string name="market_audit_actor_staff">Անձնակազմ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Սա կչեղարկի աճուրդը և կծանուցի %1$s ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>
         <item quantity="other">Սա կչեղարկի աճուրդը և կծանուցի %1$s ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>

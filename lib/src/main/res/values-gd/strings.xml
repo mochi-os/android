@@ -413,4 +413,5 @@
     <string name="field_type_checklist">Liosta-dearbhaidh</string>
     <string name="view_list_sorted_ascending">air an seòrsachadh a\' dìreadh</string>
     <string name="view_list_sorted_descending">air an seòrsachadh a\' teàrnadh</string>
+    <string name="notification_channel_settings">Brathan nan Roghainnean</string>
 </resources>

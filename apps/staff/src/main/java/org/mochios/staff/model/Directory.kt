@@ -12,6 +12,7 @@ package org.mochios.staff.model
 data class DirectorySearchResult(
     val id: String = "",
     val name: String = "",
+    val fingerprint: String = "",
 )
 
 /**

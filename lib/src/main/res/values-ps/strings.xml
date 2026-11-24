@@ -409,4 +409,5 @@
     <string name="field_type_checklist">چک لیست</string>
     <string name="view_list_sorted_ascending">له کم څخه ډېر ته ترتیب شوی</string>
     <string name="view_list_sorted_descending">له ډېر څخه کم ته ترتیب شوی</string>
+    <string name="notification_channel_settings">د تنظیماتو خبرتیاوې</string>
 </resources>

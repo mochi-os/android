@@ -616,6 +616,7 @@
     <string name="market_listings_remove_message">Tin đăng sẽ bị ẩn khỏi người mua. Hành động này không thể hoàn tác, nhưng bạn có thể đăng lại sau dưới dạng bản nháp mới.</string>
     <string name="market_listings_remove_message_auction">Việc này sẽ hủy phiên đấu giá. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</string>
     <string name="market_listings_remove_title">Gỡ tin đăng này?</string>
+    <string name="market_audit_actor_staff">Nhân viên</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$s người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>
         <item quantity="other">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$s người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>

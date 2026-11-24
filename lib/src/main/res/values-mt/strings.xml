@@ -416,4 +416,5 @@
     <string name="field_type_checklist">Lista ta\' kontroll</string>
     <string name="view_list_sorted_ascending">issortjat b\'mod axxendenti</string>
     <string name="view_list_sorted_descending">issortjat b\'mod dixxendenti</string>
+    <string name="notification_channel_settings">Notifiki tal-Issettjar</string>
 </resources>

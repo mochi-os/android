@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Orodha itafichwa kutoka kwa wanunuzi. Hii haiwezi kutenduliwa, lakini unaweza kuiorodhesha tena baadaye kama rasimu mpya.</string>
     <string name="market_listings_remove_message_auction">Hii itaghairi mnada. Orodha itafichwa kutoka kwa wanunuzi; unaweza kuiorodhesha tena baadaye kama rasimu mpya.</string>
     <string name="market_listings_remove_title">Ondoa orodha hii?</string>
+    <string name="market_audit_actor_staff">Wafanyakazi</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Hii itaghairi mnada na kumjulisha mzabuni %1$s anayeshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>
         <item quantity="other">Hii itaghairi mnada na kuwajulisha wazabuni %1$s wanaoshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>

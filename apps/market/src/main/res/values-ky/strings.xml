@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Тизме сатып алуучулардан жашырылат. Бул кайтарылбайт, бирок аны кийин жаңы долбоор катары кайра тизмелөө мүмкүн.</string>
     <string name="market_listings_remove_message_auction">Бул аукционду жокко чыгарат. Тизме сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра тизмелесе болот.</string>
     <string name="market_listings_remove_title">Бул жарнаманы аласызбы?</string>
+    <string name="market_audit_actor_staff">Кызматкерлер</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Бул аукционду жокко чыгарып, %1$s активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>
         <item quantity="other">Бул аукционду жокко чыгарып, %1$s активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>

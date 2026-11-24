@@ -205,20 +205,20 @@
     <string name="format_time_months_short">%1$sወ</string>
     <string name="reaction_add">ምላሽ አክል</string>
     <string name="push_service_channel">Mochi ግፋ</string>
-    <string name="push_service_channel_description">ሞቺ ማሳወቂያዎችን ለመቀበል እንዲገናኝ ያደርጋል</string>
+    <string name="push_service_channel_description">ማሳወቂያዎችን ለመቀበል Mochi እንደተገናኘ ያቆያል</string>
     <string name="push_service_group">የጀርባ አገልግሎት</string>
-    <string name="push_service_title">ሞቺ ማሳወቂያዎችን እያዳመጠ ነው</string>
-    <string name="reauth_channel_name">ሞቺ መግባት ያስፈልጋል</string>
-    <string name="reauth_channel_description">ክፍለ-ጊዜዎ ስለተሰረዘ ሞቺ ወደ አገልጋይዎ መድረስ ሳይችል ሲቀር ይታያል</string>
-    <string name="reauth_signin_title">ሞቺ፦ እንደገና ይግቡ</string>
+    <string name="push_service_title">Mochi ማሳወቂያዎችን እየጠበቀ ነው</string>
+    <string name="reauth_channel_name">ወደ Mochi መግባት ያስፈልጋል</string>
+    <string name="reauth_channel_description">ክፍለ-ጊዜዎ ስለተሰረዘ Mochi ወደ አገልጋይዎ መድረስ ሲያቅተው ይታያል</string>
+    <string name="reauth_signin_title">Mochi፦ እንደገና ይግቡ</string>
     <string name="reauth_signin_text">እንደገና እስኪገቡ ድረስ ማሳወቂያዎች ቆመዋል</string>
     <string name="oem_hint_title">በጀርባ ተደራሽ ሁኑ</string>
-    <string name="oem_hint_body">ሞቺ ማሳወቂያዎችን ለማድረስ በጀርባ መሮጥ አለበት። እባክዎ በሚቀጥለው ስክሪን ላይ ይህንን ይፍቀዱ፣ አለበለዚያ ስክሪኑ ሲጠፋ ስልክዎ ማሳወቂያዎችን ሊያቆም ይችላል።</string>
-    <string name="oem_hint_samsung_note">በሳምሰንግ ስልኮች ላይ፣ ቅንብሮች → የመሣሪያ እንክብካቤ → የተኙ መተግበሪያዎችን ይመልከቱ እና ሞቺ ከተዘረዘረ ያስወግዱት።</string>
+    <string name="oem_hint_body">ማሳወቂያዎችን ለማድረስ Mochi በጀርባ መሥራት አለበት። እባክዎ በሚቀጥለው ስክሪን ላይ ይህንን ይፍቀዱ፣ አለበለዚያ ስክሪኑ ሲጠፋ ስልክዎ ማሳወቂያዎችን ሊያቆም ይችላል።</string>
+    <string name="oem_hint_samsung_note">በሳምሰንግ ስልኮች ላይ፣ ቅንብሮች → የመሣሪያ እንክብካቤ → የተኙ መተግበሪያዎችን ይመልከቱ እና Mochi ከተዘረዘረ ያስወግዱት።</string>
     <string name="oem_hint_allow">ጀርባን ይፍቀዱ</string>
     <string name="oem_hint_dismiss">እንደገና አታሳይ</string>
     <string name="about_label">ስለ</string>
-    <string name="about_title">ሞቺ ደንበኛ</string>
+    <string name="about_title">Mochi ደንበኛ</string>
     <string name="about_version">ስሪት %1$s</string>
     <string name="about_check_updates">ዝመናዎችን ይፈትሹ</string>
     <string name="about_up_to_date">ወቅታዊ ነው</string>
@@ -409,4 +409,5 @@
     <string name="field_type_checklist">ዝርዝር</string>
     <string name="view_list_sorted_ascending">ከታች ወደ ላይ ተደርድሯል</string>
     <string name="view_list_sorted_descending">ከላይ ወደ ታች ተደርድሯል</string>
+    <string name="notification_channel_settings">የቅንብሮች ማሳወቂያዎች</string>
 </resources>

@@ -406,7 +406,8 @@ class AppBootstrapViewModel @Inject constructor(
 
     /**
      * Retry the app's token mint after a transport failure, backing off to once
-     * a minute. A 401 clears the session, which flips the stage back to login.
+     * a minute. A 401 clears the session, which flips the stage back to login;
+     * a session with no identity yet goes to making one.
      */
     private fun remintWhenReachable(app: String) {
         remint?.cancel()
@@ -419,6 +420,10 @@ class AppBootstrapViewModel @Inject constructor(
                 val failure = result.exceptionOrNull()
                 if (failure is ApiException && failure.code == 401) {
                     sessionManager.clearAll()
+                    return@launch
+                }
+                if (identityRequired(failure)) {
+                    _stage.value = AuthStage.NeedsIdentity
                     return@launch
                 }
                 wait = (wait * 2).coerceAtMost(60_000L)
@@ -491,6 +496,15 @@ internal sealed class Startup {
 }
 
 /**
+ * Whether a token mint was refused because the session has no identity yet:
+ * core answers 403 `identity_required` rather than mint a token that would
+ * start working the moment one exists. An older core mints instead, and the
+ * identity read finds none.
+ */
+internal fun identityRequired(failure: Throwable?): Boolean =
+    failure is ApiException && failure.code == 403 && failure.apiError.error == "identity_required"
+
+/**
  * The start-up requests, sent together rather than one after another: the
  * app token's mint, the identity read and the preferences warm-up. Each was a
  * round trip in series behind the spinner, four or five of them with the
@@ -500,9 +514,10 @@ internal sealed class Startup {
  * draw with the default appearance, font size and formats and switch a round
  * trip later - and sent alongside the rest they add no round trip of their
  * own. A 401 from the mint signs out, "closing" shows the reactivation
- * interstitial, an account that read as having no identity goes to making one
- * - a read that failed is not taken for that - and a transport failure goes
- * on with the cached credentials; each abandons whatever is still in flight,
+ * interstitial, an account that read as having no identity, or whose mint was
+ * refused for want of one, goes to making one - a read that failed is not
+ * taken for that - and any other failure goes on with the cached
+ * credentials; each abandons whatever is still in flight,
  * which after a transport failure would only spend its connect timeout on the
  * spinner.
  */
@@ -519,6 +534,11 @@ internal suspend fun startup(
         read.cancel()
         warm.cancel()
         return@coroutineScope Startup.SignedOut
+    }
+    if (identityRequired(failure)) {
+        read.cancel()
+        warm.cancel()
+        return@coroutineScope Startup.NeedsIdentity
     }
     if (failure != null) {
         read.cancel()

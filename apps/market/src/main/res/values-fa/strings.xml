@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">آگهی از خریداران پنهان خواهد شد. این عمل قابل بازگشت نیست، اما می‌توانید بعداً آن را به‌عنوان پیش‌نویس جدید دوباره فهرست کنید.</string>
     <string name="market_listings_remove_message_auction">این کار حراج را لغو می‌کند. آگهی از خریداران پنهان خواهد شد؛ می‌توانید بعداً آن را به‌عنوان پیش‌نویس جدید دوباره فهرست کنید.</string>
     <string name="market_listings_remove_title">این آگهی را حذف می‌کنید؟</string>
+    <string name="market_audit_actor_staff">کارکنان</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">این کار مزایده را لغو می‌کند و به %1$s پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>
         <item quantity="other">این کار مزایده را لغو می‌کند و به %1$s پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>

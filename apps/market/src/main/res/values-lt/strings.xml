@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Pasiūlymas bus paslėptas nuo pirkėjų. To negalima atšaukti, bet vėliau galite jį iš naujo paskelbti kaip naują juodraštį.</string>
     <string name="market_listings_remove_message_auction">Tai atšauks aukcioną. Pasiūlymas bus paslėptas nuo pirkėjų; vėliau galite jį iš naujo paskelbti kaip naują juodraštį.</string>
     <string name="market_listings_remove_title">Šalinti šį skelbimą?</string>
+    <string name="market_audit_actor_staff">Personalas</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Tai atšauks aukcioną ir praneš %1$s aktyviam dalyviui. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
         <item quantity="few">Tai atšauks aukcioną ir praneš %1$s aktyviems dalyviams. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>

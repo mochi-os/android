@@ -355,4 +355,5 @@
     <string name="field_type_date">Fecha</string>
     <string name="field_type_checkbox">Casilla</string>
     <string name="field_type_checklist">Checklist</string>
+    <string name="notification_channel_settings">Notificaciones de Configuración</string>
 </resources>

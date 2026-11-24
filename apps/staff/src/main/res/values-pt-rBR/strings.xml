@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Staff</string>
+    <string name="app_name">Equipe Mochi</string>
     <string name="launcher_staff">Mochi Equipe</string>
     <string name="staff_accounts_action_ban_title">Banir conta</string>
     <string name="staff_accounts_action_suspend_title">Suspender conta</string>
@@ -44,8 +44,6 @@
     <string name="staff_appeals_denied_toast">Recurso negado</string>
     <string name="staff_appeals_dialog_title">Decidir recurso</string>
     <string name="staff_appeals_empty">Nenhuma apelação pendente</string>
-    <string name="staff_appeals_listing_label">#%1$s</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notas</string>
     <string name="staff_appeals_reason_label">Motivo do recurso do vendedor</string>
     <string name="staff_appeals_submit">Enviar</string>
@@ -155,7 +153,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Físico</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Equipe Mochi</string>
     <string name="staff_config_field_auto_approve">Limite de aprovação automática</string>
     <string name="staff_config_field_hold">Limite de retenção</string>
     <string name="staff_config_field_platform_fee">Taxa da plataforma</string>
@@ -192,9 +190,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vendedores</string>
     <string name="staff_dashboard_kpi_total_orders">Total de pedidos</string>
-    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
-    <string name="staff_dashboard_order_fallback">Pedido nº %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
     <string name="staff_dashboard_tab_listings">Anúncios</string>
@@ -208,7 +204,6 @@
     <string name="staff_disputes_dialog_title_review">Revisar disputa</string>
     <string name="staff_disputes_dialog_title_view">Visualizar disputa</string>
     <string name="staff_disputes_empty">Nenhuma disputa</string>
-    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Dados do comprador</string>
     <string name="staff_disputes_meta_chargeback_fee">Taxa de chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">retidos pela Stripe</string>
@@ -239,12 +234,10 @@
     <string name="staff_disputes_resolved_toast">Disputa resolvida</string>
     <string name="staff_disputes_resolving">Resolvendo…</string>
     <string name="staff_disputes_review">Analisar</string>
-    <string name="staff_disputes_status_escalated">Escalado</string>
     <string name="staff_disputes_status_open">Aberto</string>
     <string name="staff_disputes_status_resolved_buyer">Resolvido (comprador)</string>
     <string name="staff_disputes_status_resolved_seller">Resolvido (vendedor)</string>
     <string name="staff_disputes_status_responded">Respondido</string>
-    <string name="staff_disputes_status_reviewing">Avaliando</string>
     <string name="staff_disputes_stripe_bank_cannot_process">o banco não conseguiu processar</string>
     <string name="staff_disputes_stripe_check_returned">cheque devolvido</string>
     <string name="staff_disputes_stripe_credit_not_processed">crédito não processado</string>
@@ -273,12 +266,10 @@
     <string name="staff_listings_cancel">Cancelar</string>
     <string name="staff_listings_empty">Nenhum anúncio</string>
     <string name="staff_listings_filter_moderation_label">Moderação</string>
-    <string name="staff_listings_moderation_auto_approved">Aprovado automaticamente</string>
     <string name="staff_listings_moderation_hold">Reter</string>
     <string name="staff_listings_moderation_manual">Manual</string>
     <string name="staff_listings_moderation_rejected">Recusado</string>
     <string name="staff_listings_moderation_review">Aguardando revisão</string>
-    <string name="staff_listings_moderation_soft_approved">Aprovado provisoriamente</string>
     <string name="staff_listings_notes_label">Notas</string>
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">Motivo</string>
@@ -292,15 +283,12 @@
     <string name="staff_listings_status_active">Ativo</string>
     <string name="staff_listings_status_draft">Rascunho</string>
     <string name="staff_listings_status_expired">Expirado</string>
-    <string name="staff_listings_status_rejected">Recusado</string>
     <string name="staff_listings_status_removed">Removido</string>
     <string name="staff_listings_status_sold">Vendido</string>
     <string name="staff_listings_submitting">Enviando…</string>
     <string name="staff_moderation_empty">Nenhuma entrada de moderação</string>
     <string name="staff_moderation_filter_clear">Limpar filtro</string>
-    <string name="staff_moderation_listing_filter_placeholder">ID do anúncio</string>
     <string name="staff_moderation_system">Sistema</string>
-    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Ação</string>
     <string name="staff_reports_action_ban">Banir usuário</string>
     <string name="staff_reports_action_dismiss">Dispensar</string>
@@ -317,7 +305,6 @@
     <string name="staff_reports_dialog_title_view">Denúncia</string>
     <string name="staff_reports_empty">Nenhuma denúncia</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
-    <string name="staff_reports_listing_label">Anúncio nº %1$s</string>
     <string name="staff_reports_meta_details">Dados do denunciante</string>
     <string name="staff_reports_meta_price">Preço</string>
     <string name="staff_reports_meta_reason">Motivo</string>
@@ -335,7 +322,6 @@
     <string name="staff_reports_status_actioned">Tratado</string>
     <string name="staff_reports_status_dismissed">Dispensado</string>
     <string name="staff_reports_status_pending">Pendente</string>
-    <string name="staff_reports_status_reviewed">Avaliado</string>
     <string name="staff_reports_submit">Enviar</string>
     <string name="staff_reports_submitting">Enviando…</string>
     <string name="staff_reports_type_listing">Anúncio</string>
@@ -347,10 +333,7 @@
     <string name="staff_reviews_filter_all">Todos os status</string>
     <string name="staff_reviews_filter_published">Publicado</string>
     <string name="staff_reviews_filter_removed">Removido</string>
-    <string name="staff_reviews_order_label">pedido nº %1$s</string>
     <string name="staff_reviews_remove_confirm">Remover</string>
-    <string name="staff_reviews_remove_desc_full">%1$s → %2$s em %3$s. Excluir esta avaliação permanentemente? Esta ação não pode ser desfeita.</string>
-    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Excluir esta avaliação permanentemente? Esta ação não pode ser desfeita.</string>
     <string name="staff_reviews_remove_title">Remover avaliação?</string>
     <string name="staff_reviews_role_buyer">Comprador</string>
     <string name="staff_reviews_role_seller">Vendedor</string>
@@ -376,13 +359,10 @@
     <string name="staff_status_active">Ativo</string>
     <string name="staff_status_appealed">Recorrido</string>
     <string name="staff_status_approved">Aprovado</string>
-    <string name="staff_status_auto_approved">Aprovado automaticamente</string>
     <string name="staff_status_banned">Banido</string>
     <string name="staff_status_dismissed">Dispensado</string>
     <string name="staff_status_draft">Rascunho</string>
-    <string name="staff_status_escalated">Escalado</string>
     <string name="staff_status_expired">Expirado</string>
-    <string name="staff_status_hidden">Oculto</string>
     <string name="staff_status_hold">Reter</string>
     <string name="staff_status_manual">Manual</string>
     <string name="staff_status_moderator">Moderador</string>
@@ -395,9 +375,6 @@
     <string name="staff_status_resolved_seller">Resolvido (vendedor)</string>
     <string name="staff_status_responded">Respondido</string>
     <string name="staff_status_review">Aguardando revisão</string>
-    <string name="staff_status_reviewed">Avaliado</string>
-    <string name="staff_status_reviewing">Avaliando</string>
-    <string name="staff_status_soft_approved">Aprovado provisoriamente</string>
     <string name="staff_status_sold">Vendido</string>
     <string name="staff_status_support">Suporte</string>
     <string name="staff_status_suspended">Suspenso</string>
@@ -430,6 +407,23 @@
     <string name="staff_reports_conversation">Conversa</string>
     <string name="staff_reports_conversation_empty">Sem mensagens</string>
     <string name="staff_reports_conversation_show">Mostrar conversa</string>
+    <string name="staff_status_disputed">Contestado</string>
+    <string name="staff_audit_action_order_staff_read">Pedido consultado pela equipe</string>
+    <string name="staff_audit_action_thread_staff_read">Conversa consultada pela equipe</string>
+    <string name="staff_audit_action_payment_orphaned">Pagamento sem pedido</string>
+    <string name="staff_audit_action_audit_unknown_kind_probe">Tipo de auditoria desconhecido solicitado</string>
+    <string name="staff_audit_actor_staff">Equipe</string>
+    <string name="staff_audit_kind_order">Pedido</string>
+    <string name="staff_audit_kind_dispute">Disputa</string>
+    <string name="staff_audit_kind_subscription">Assinatura</string>
+    <string name="staff_audit_kind_staff">Membro da equipe</string>
+    <string name="staff_audit_reason_checkout_expired">Checkout expirado</string>
+    <string name="staff_audit_reason_period_ended">Período de assinatura encerrado</string>
+    <string name="staff_audit_reason_no_bids">Nenhum lance feito</string>
+    <string name="staff_audit_reason_reserve_not_met">Reserva não atingida</string>
+    <string name="staff_audit_reason_no_winning_bid">Sem lance vencedor</string>
+    <string name="staff_audit_reason_deauthorized">Acesso ao Stripe revogado</string>
+    <string name="staff_listing_condition">Condição</string>
     <plurals name="staff_accounts_sales">
         <item quantity="one">%1$s venda</item>
         <item quantity="other">%1$s vendas</item>

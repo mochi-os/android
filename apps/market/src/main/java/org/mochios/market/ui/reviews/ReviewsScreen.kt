@@ -74,9 +74,9 @@ fun ReviewsScreen(
         }
     }
 
-    val openProfile = { account: String ->
+    val openProfile = { account: String, fingerprint: String? ->
         if (account.isNotEmpty()) {
-            navController.navigate(MarketApp.publicProfile(account))
+            navController.navigate(MarketApp.publicProfile(account, fingerprint))
         }
     }
     val openListing = viewModel::openListing
@@ -135,7 +135,7 @@ private fun ReceivedTab(
     onRetry: () -> Unit,
     onDraftChange: (String, String) -> Unit,
     onSubmit: (String) -> Unit,
-    onProfileTap: (String) -> Unit,
+    onProfileTap: (String, String?) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle, onRetry) {
@@ -163,7 +163,7 @@ private fun SentTab(
     state: ReviewsTabState,
     onLoadMore: () -> Unit,
     onRetry: () -> Unit,
-    onProfileTap: (String) -> Unit,
+    onProfileTap: (String, String?) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle, onRetry) {
@@ -225,7 +225,7 @@ private fun ReceivedReviewCard(
     draft: String,
     onDraftChange: (String) -> Unit,
     onSubmit: () -> Unit,
-    onProfileTap: (String) -> Unit,
+    onProfileTap: (String, String?) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
     ReviewCard(
@@ -235,7 +235,7 @@ private fun ReceivedReviewCard(
         heading = {
             ReviewerName(
                 name = personName(review.reviewerName, review.reviewerFingerprint),
-                onClick = { onProfileTap(review.reviewer) },
+                onClick = { onProfileTap(review.reviewer, review.reviewerFingerprint) },
             )
         },
         onListing = { onListingTap(review.order) },
@@ -271,7 +271,7 @@ private fun ReceivedReviewCard(
 @Composable
 private fun SentReviewCard(
     review: Review,
-    onProfileTap: (String) -> Unit,
+    onProfileTap: (String, String?) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
     ReviewCard(
@@ -281,7 +281,7 @@ private fun SentReviewCard(
         heading = {
             ReviewerName(
                 name = personName(review.subjectName, review.subjectFingerprint),
-                onClick = { onProfileTap(review.subject) },
+                onClick = { onProfileTap(review.subject, review.subjectFingerprint) },
             )
         },
         onListing = { onListingTap(review.order) },

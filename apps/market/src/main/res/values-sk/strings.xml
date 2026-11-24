@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Ponuka bude skrytá pred kupujúcimi. Toto sa nedá vrátiť, ale môžete ju neskôr znovu zoznamovať ako nový koncept.</string>
     <string name="market_listings_remove_message_auction">Týmto sa zruší aukcia. Ponuka bude skrytá pred kupujúcimi; môžete ju neskôr znovu zoznamovať ako nový koncept.</string>
     <string name="market_listings_remove_title">Odstrániť tento inzerát?</string>
+    <string name="market_audit_actor_staff">Personál</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Tým sa zruší aukcia a upozorní sa %1$s aktívny dražiteľ. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
         <item quantity="few">Tým sa zruší aukcia a upozorní sa %1$s aktívni dražitelia. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>

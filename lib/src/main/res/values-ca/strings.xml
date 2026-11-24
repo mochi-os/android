@@ -411,4 +411,5 @@
     <string name="field_type_checklist">Llista de comprovació</string>
     <string name="view_list_sorted_ascending">ordenat ascendentment</string>
     <string name="view_list_sorted_descending">ordenat descendentment</string>
+    <string name="notification_channel_settings">Notificacions de Configuració</string>
 </resources>

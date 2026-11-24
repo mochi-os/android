@@ -5,6 +5,7 @@
 
 package org.mochios.staff.ui.listings
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,17 +20,20 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.flow.filter
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LoadState
-import org.mochios.android.util.append
-import org.mochios.android.api.userMessage
+import org.mochios.android.util.Paging
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.append
+import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.repository.StaffRepository
+import org.mochios.staff.ws.STAFF_EVENTS
 import org.mochios.staff.ws.StaffEvent
-import org.mochios.staff.ws.StaffEventsBus
+import org.mochios.staff.ws.staffEvent
 import javax.inject.Inject
 
 /**
@@ -45,6 +49,8 @@ data class ListingsUiState(
     val load: LoadState = LoadState.Idle,
     val listings: List<PendingListing> = emptyList(),
     val total: Long = 0,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val pendingAction: PendingListingAction? = null,
     val submitting: Boolean = false,
@@ -59,9 +65,18 @@ data class PendingListingAction(
     val listing: PendingListing,
 )
 
-/** One-shot events emitted to the screen (toasts). */
-sealed class ListingsEvent {
-    data class Toast(val message: String) : ListingsEvent()
+/** One-shot events emitted to the screen. */
+sealed interface ListingsEvent {
+    data class Toast(@StringRes val messageRes: Int) : ListingsEvent
+    data class Error(val error: MochiError) : ListingsEvent
+}
+
+/** What the snackbar says once [type] has been done. */
+@StringRes
+internal fun listingActionDone(type: ListingActionType): Int = when (type) {
+    ListingActionType.APPROVE -> R.string.staff_listings_approved_toast
+    ListingActionType.REJECT -> R.string.staff_listings_rejected_toast
+    ListingActionType.REMOVE -> R.string.staff_listings_removed_toast
 }
 
 private const val PAGE_SIZE = 20
@@ -69,7 +84,8 @@ private const val PAGE_SIZE = 20
 @HiltViewModel
 class ListingsViewModel @Inject constructor(
     private val repository: StaffRepository,
-    private val eventsBus: StaffEventsBus,
+    private val webSocket: MochiWebSocket,
+    sessionManager: SessionManager,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -91,24 +107,26 @@ class ListingsViewModel @Inject constructor(
     private var eventJob: Job? = null
     private var moreJob: Job? = null
 
-    /**
-     * Pages actually fetched. Deriving the next page from the row count breaks
-     * after an optimistic removal: the first page is refetched and appended as
-     * duplicates.
-     */
-    private var pagesLoaded = 0
+    /** The staff-events subscription, held while this view model lives. */
+    private val subscription: String
 
     init {
         reload()
         // Refresh in place whenever the moderation queue changes on the
         // server — appeals decided elsewhere, listings flipped by another
-        // moderator, etc. Mirrors web's `useStaffEvents()` invalidation
-        // for `/_authenticated/listings`.
-        viewModelScope.launch {
-            eventsBus.events
-                .filter { it is StaffEvent.ModerationUpdated || it is StaffEvent.Unknown }
-                .collect { _ -> reloadLatest() }
+        // moderator, etc. — or the socket was down and missed it. Mirrors
+        // web's `useStaffEvents()` invalidation for `/_authenticated/listings`.
+        subscription = webSocket.subscribe(sessionManager.getServerUrlBlocking(), STAFF_EVENTS, app = "staff") { frame ->
+            when (staffEvent(frame)) {
+                StaffEvent.ModerationUpdated, is StaffEvent.Unknown -> reloadLatest()
+                else -> Unit
+            }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        webSocket.unsubscribe(subscription)
     }
 
     /** Update the status filter and refetch from page 1. */
@@ -166,14 +184,15 @@ class ListingsViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
-                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     listings = r.listings,
                     total = r.total,
+                    paging = Paging().advance(r.listings.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -182,10 +201,10 @@ class ListingsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.load == LoadState.Loading || s.isLoading || s.listings.size >= s.total) return
-        val nextPage = pagesLoaded + 1
+        if (s.load == LoadState.Loading || s.isLoading || !s.paging.more) return
         moreJob = viewModelScope.launch {
             _state.value = s.copy(load = LoadState.Loading)
             try {
@@ -193,19 +212,19 @@ class ListingsViewModel @Inject constructor(
                     status = s.status,
                     moderation = s.moderation,
                     query = s.query.takeIf { it.isNotBlank() },
-                    page = nextPage,
+                    page = s.paging.page,
                     limit = PAGE_SIZE,
+                    after = s.paging.cursor,
                 )
-                pagesLoaded = nextPage
-                val listed = _state.value.listings.append(r.listings) { listing -> listing.id }
                 _state.value = _state.value.copy(
                     load = LoadState.Idle,
-                    listings = listed,
-                    // A page with no rows ends the list, whatever total it claims.
-                    total = if (r.listings.isEmpty()) listed.size.toLong() else r.total,
+                    listings = _state.value.listings.append(r.listings) { listing -> listing.id },
+                    total = r.total,
+                    paging = s.paging.advance(r.listings.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
@@ -233,23 +252,7 @@ class ListingsViewModel @Inject constructor(
         _state.value = _state.value.copy(submitting = true)
         viewModelScope.launch {
             try {
-                val id = pending.listing.id
-                when (pending.type) {
-                    ListingActionType.APPROVE ->
-                        repository.approveListing(id, notes.takeIf { it.isNotBlank() })
-                    ListingActionType.REJECT ->
-                        repository.rejectListing(
-                            id,
-                            reason.takeIf { it.isNotBlank() },
-                            notes.takeIf { it.isNotBlank() },
-                        )
-                    ListingActionType.REMOVE ->
-                        repository.removeListing(
-                            id,
-                            reason.takeIf { it.isNotBlank() },
-                            notes.takeIf { it.isNotBlank() },
-                        )
-                }
+                submitListingAction(repository, pending, reason, notes)
                 // Optimistically drop the row from the visible list — same
                 // contract as web's `setListings(prev => prev.filter(...))`.
                 val before = _state.value.listings
@@ -261,32 +264,36 @@ class ListingsViewModel @Inject constructor(
                     listings = after,
                     total = (_state.value.total - deltaTotal).coerceAtLeast(0L),
                 )
-                _events.tryEmit(ListingsEvent.Toast(successMessage(pending.type)))
+                _events.tryEmit(ListingsEvent.Toast(listingActionDone(pending.type)))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
-                _events.tryEmit(ListingsEvent.Toast(e.toMochiError().userMessage()))
+                _events.tryEmit(ListingsEvent.Error(e.toMochiError()))
             }
         }
     }
 
-    private fun successMessage(type: ListingActionType): String = when (type) {
-        ListingActionType.APPROVE -> SUCCESS_APPROVED
-        ListingActionType.REJECT -> SUCCESS_REJECTED
-        ListingActionType.REMOVE -> SUCCESS_REMOVED
-    }
-
     companion object {
-        // These markers are replaced by the screen with the localised
-        // string before showing the snackbar — keeping the ViewModel
-        // free of Android Context.
-        const val SUCCESS_APPROVED = "@approved"
-        const val SUCCESS_REJECTED = "@rejected"
-        const val SUCCESS_REMOVED = "@removed"
-
         // SavedStateHandle keys for filter persistence across process death.
         private const val KEY_STATUS = "filter_status"
         private const val KEY_MODERATION = "filter_moderation"
         private const val KEY_QUERY = "filter_query"
+    }
+}
+
+/** Sends [pending] to the Comptroller, with [reason] and [notes] where given. */
+internal suspend fun submitListingAction(
+    repository: StaffRepository,
+    pending: PendingListingAction,
+    reason: String,
+    notes: String,
+) {
+    val id = pending.listing.id
+    val written = notes.takeIf { it.isNotBlank() }
+    when (pending.type) {
+        ListingActionType.APPROVE -> repository.approveListing(id, written)
+        ListingActionType.REJECT -> repository.rejectListing(id, reason.takeIf { it.isNotBlank() }, written)
+        ListingActionType.REMOVE -> repository.removeListing(id, reason.takeIf { it.isNotBlank() }, written)
     }
 }

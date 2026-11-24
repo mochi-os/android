@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Tarree sakatta\'iinsaa</string>
     <string name="view_list_sorted_ascending">ol kaʼaatti tartiibeffame</string>
     <string name="view_list_sorted_descending">gad buʼaatti tartiibeffame</string>
+    <string name="notification_channel_settings">Beeksisaalee Qindaa\'inootaa</string>
 </resources>

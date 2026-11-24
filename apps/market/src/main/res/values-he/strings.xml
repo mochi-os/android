@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">הרישום יוסתר מקונים. לא ניתן לבטל זאת, אך תוכל לפרסם אותו מאוחר יותר כטיוטה חדשה.</string>
     <string name="market_listings_remove_message_auction">פעולה זו תבטל את המכירה הפומבית. הרישום יוסתר מקונים; תוכל לרשום אותו שוב מאוחר יותר כטיוטה חדשה.</string>
     <string name="market_listings_remove_title">להסיר רישום זה?</string>
+    <string name="market_audit_actor_staff">צוות</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$s מציע פעיל. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
         <item quantity="two">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$s מציעים פעילים. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>

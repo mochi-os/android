@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Za a ɓoye jeri daga masu siye. Wannan ba zai iya juyowa ba, amma za ka iya sake jera shi daga baya a matsayin sabon daftari.</string>
     <string name="market_listings_remove_message_auction">Wannan zai soke gwanjon. Za a ɓoye jeren daga masu siye; za ka iya sake jera shi daga baya a matsayin sabon daftari.</string>
     <string name="market_listings_remove_title">Cire wannan jeri?</string>
+    <string name="market_audit_actor_staff">Ma\'aikata</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Wannan zai soke gwanjon kuma ya sanar da mai neman %1$s mai aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>
         <item quantity="other">Wannan zai soke gwanjon kuma ya sanar da masu nema %1$s masu aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>

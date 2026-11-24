@@ -412,4 +412,5 @@
     <string name="field_type_checklist">Checklist</string>
     <string name="view_list_sorted_ascending">seřazeno vzestupně</string>
     <string name="view_list_sorted_descending">seřazeno sestupně</string>
+    <string name="notification_channel_settings">Oznámení nastavení</string>
 </resources>

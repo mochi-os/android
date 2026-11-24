@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Oferta zostanie ukryta przed kupującymi. Tego nie można cofnąć, ale możesz ją wystawić ponownie jako nowy szkic.</string>
     <string name="market_listings_remove_message_auction">Spowoduje to anulowanie aukcji. Ogłoszenie zostanie ukryte przed kupującymi; możesz je później wystawić ponownie jako nowy szkic.</string>
     <string name="market_listings_remove_title">Usunąć tę ofertę?</string>
+    <string name="market_audit_actor_staff">Personel</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnego licytującego. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
         <item quantity="few">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>

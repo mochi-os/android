@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Listing bakal disumputkeun ti pembeli. Ieu teu tiasa dibatalkeun, tapi anjeun tiasa ngadaptarkeun deui salaku draf anyar.</string>
     <string name="market_listings_remove_message_auction">Ieu bakal ngabatalkeun lélang. Listing bakal disumputkeun ti pembeli; anjeun tiasa ngadaptarkeun deui salaku draf anyar.</string>
     <string name="market_listings_remove_title">Cabut daptaran ieu?</string>
+    <string name="market_audit_actor_staff">Staf</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ieu bakal ngabatalkeun lelang sareng ngabéjaan %1$s panawar aktif. Iklan bakal disumputkeun ti nu meuli; anjeun tiasa masang deui engké salaku draf anyar.</item>
         <item quantity="other">Ieu bakal ngabatalkeun lelang sareng ngabéjaan %1$s panawar aktif. Iklan bakal disumputkeun ti nu meuli; anjeun tiasa masang deui engké salaku draf anyar.</item>

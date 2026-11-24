@@ -46,6 +46,7 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Appeal
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
@@ -82,7 +83,7 @@ fun AppealsScreen(
             state = state,
             onLoadMore = viewModel::loadMore,
             onOpenListing = { listingId ->
-                navController.navigate("market/listing/$listingId")
+                StaffApp.listing(listingId)?.let { route -> navController.navigate(route) }
             },
             onOpenAppeal = viewModel::openDecide,
             onRetry = viewModel::reload,
@@ -130,7 +131,7 @@ private fun AppealsBody(
                 items = state.appeals,
                 key = { appeal -> appeal.id },
                 load = state.load,
-                hasMore = state.appeals.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = onLoadMore,
             ) { appeal ->
                 AppealRow(
@@ -161,9 +162,7 @@ private fun AppealRow(
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = appeal.title.ifBlank {
-                        stringResource(R.string.staff_appeals_listing_label, appeal.listing)
-                    },
+                    text = appeal.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -184,7 +183,7 @@ private fun AppealRow(
             // Seller row.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 StaffUserAvatar(
-                    name = appeal.sellerName.ifBlank { appeal.seller },
+                    name = appeal.sellerName.ifBlank { formatFingerprint(appeal.sellerFingerprint) },
                     id = appeal.seller,
                     size = 20.dp,
                 )

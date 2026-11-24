@@ -82,6 +82,34 @@ class StartupTest {
         assertEquals(Startup.NeedsIdentity, outcome)
     }
 
+    // Core refuses a token to a session with no identity: restarting between
+    // the sign-up code and naming the account landed in an app whose every
+    // request failed.
+    @Test
+    fun `a mint refused for want of an identity goes to making one at once`() {
+        val (outcome, took) = run(
+            mint = { delay(TRIP); Result.failure(ApiException(403, ApiError("identity_required"))) },
+            identity = { delay(10 * TRIP); person() },
+            preferences = { delay(10 * TRIP); warmed.set(true) },
+        )
+        assertEquals(Startup.NeedsIdentity, outcome)
+        assertTrue("took $took ms", took < 2 * TRIP)
+        assertFalse(warmed.get())
+    }
+
+    @Test
+    fun `any other 403 from the mint goes on with the cached credentials`() {
+        val refused = ApiException(403, ApiError("forbidden"))
+        val (outcome, _) = run(mint = { delay(TRIP); Result.failure(refused) })
+        assertEquals(Startup.Continue(null, unreachable = true, failure = refused), outcome)
+    }
+
+    @Test
+    fun `a 401 signs out whatever its code`() {
+        val (outcome, _) = run(mint = { delay(TRIP); Result.failure(ApiException(401, ApiError("identity_required"))) })
+        assertEquals(Startup.SignedOut, outcome)
+    }
+
     @Test
     fun `an identity read that failed is not taken for none`() {
         val (outcome, _) = run(identity = { delay(TRIP); null })

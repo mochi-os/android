@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Жагсаалт</string>
     <string name="view_list_sorted_ascending">өсөхөөр эрэмбэлсэн</string>
     <string name="view_list_sorted_descending">буурахаар эрэмбэлсэн</string>
+    <string name="notification_channel_settings">Тохиргооны мэдэгдлүүд</string>
 </resources>

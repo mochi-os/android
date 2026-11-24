@@ -355,7 +355,7 @@ fun ListingDetailScreen(
                             lightboxOpen = true
                         },
                         onSellerTap = {
-                            navController.navigate(MarketApp.publicProfile(seller.id))
+                            navController.navigate(MarketApp.publicProfile(seller.id, seller.fingerprint))
                         },
                         onToggleSave = { viewModel.toggleSave() },
                         onReport = { reportOpen = true },

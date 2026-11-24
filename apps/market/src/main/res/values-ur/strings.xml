@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">فہرست خریداروں سے چھپا دی جائے گی۔ اسے واپس نہیں کیا جا سکتا، لیکن آپ بعد میں اسے ایک نئے مسودے کے طور پر دوبارہ فہرست میں شامل کر سکتے ہیں۔</string>
     <string name="market_listings_remove_message_auction">اس سے نیلامی منسوخ ہو جائے گی۔ فہرست خریداروں سے چھپا دی جائے گی؛ آپ بعد میں اسے نئے مسودے کے طور پر دوبارہ درج کر سکتے ہیں۔</string>
     <string name="market_listings_remove_title">یہ فہرست ہٹائیں؟</string>
+    <string name="market_audit_actor_staff">عملہ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">اس سے نیلامی منسوخ ہو جائے گی اور %1$s فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>
         <item quantity="other">اس سے نیلامی منسوخ ہو جائے گی اور %1$s فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>

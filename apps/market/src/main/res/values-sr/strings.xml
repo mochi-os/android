@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Оглас ће бити сакривен од купаца. Ово се не може опозвати, али га можеш касније поново објавити као нову скицу.</string>
     <string name="market_listings_remove_message_auction">Ово ће отказати аукцију. Оглас ће бити сакривен од купаца; можеш га касније поново објавити као нову скицу.</string>
     <string name="market_listings_remove_title">Уклонити овај оглас?</string>
+    <string name="market_audit_actor_staff">Особље</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ово ће отказати аукцију и обавестити %1$s активног понуђача. Оглас ће бити скривен од купаца; касније га можете поново објавити као нови нацрт.</item>
         <item quantity="few">Ово ће отказати аукцију и обавестити %1$s активна понуђача. Оглас ће бити скривен од купаца; касније га можете поново објавити као нови нацрт.</item>

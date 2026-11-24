@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Tarreeffamni bittootaarraa dhokfama. Kun deebi\'ee hin sirreessamu, garuu boodaa akka qabxii haaraatti irra deebitee tarreessuu dandeessa.</string>
     <string name="market_listings_remove_message_auction">Kun caalbaasii dhaabsisa. Tarreeffamni bittootarraa dhokfama; ati boodaa irra deebitee akka qabxii haaraatti tarreessuu dandeessa.</string>
     <string name="market_listings_remove_title">Tarreeffama kana haquuf?</string>
+    <string name="market_audit_actor_staff">Hojjettoota</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$s beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>
         <item quantity="other">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$s beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>

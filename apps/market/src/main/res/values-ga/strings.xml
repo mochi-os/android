@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Beidh an liosta i bhfolach ó cheannaitheoirí. Ní féidir é seo a chealú, ach is féidir leat é a athliostú níos déanaí mar dhréacht nua.</string>
     <string name="market_listings_remove_message_auction">Cuirfidh sé seo an ceant ar ceal. Beidh an liosta i bhfolach ó cheannaitheoirí; is féidir leat é a athliostú níos déanaí mar dhréacht nua.</string>
     <string name="market_listings_remove_title">Bain an liostáil seo?</string>
+    <string name="market_audit_actor_staff">Foireann</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s tairgeoir gníomhach ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
         <item quantity="two">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s thairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>

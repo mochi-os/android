@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">लिस्टिंग खरीदारों से छिपा दी जाएगी। यह पूर्ववत नहीं किया जा सकता, लेकिन आप इसे बाद में नए ड्राफ्ट के रूप में फिर से सूचीबद्ध कर सकते हैं।</string>
     <string name="market_listings_remove_message_auction">यह नीलामी रद्द कर देगा। लिस्टिंग खरीदारों से छिपी रहेगी; आप इसे बाद में नए ड्राफ्ट के रूप में फिर से सूचीबद्ध कर सकते हैं।</string>
     <string name="market_listings_remove_title">यह लिस्टिंग हटाएँ?</string>
+    <string name="market_audit_actor_staff">स्टाफ़</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">इससे नीलामी रद्द हो जाएगी और %1$s सक्रिय बोलीदाता को सूचित किया जाएगा। लिस्टिंग खरीदारों से छिपा दी जाएगी; आप इसे बाद में नए ड्राफ़्ट के रूप में फिर से लिस्ट कर सकते हैं।</item>
         <item quantity="other">इससे नीलामी रद्द हो जाएगी और %1$s सक्रिय बोलीदाताओं को सूचित किया जाएगा। लिस्टिंग खरीदारों से छिपा दी जाएगी; आप इसे बाद में नए ड्राफ़्ट के रूप में फिर से लिस्ट कर सकते हैं।</item>

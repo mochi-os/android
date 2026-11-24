@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">បញ្ជីនឹងត្រូវលាក់ពីអ្នកទិញ។ មិនអាចមិនធ្វើវិញបានទេ ប៉ុន្តែអ្នកអាចចុះបញ្ជីវាម្តងទៀតក្រោយជាសេចក្តីព្រាងថ្មី។</string>
     <string name="market_listings_remove_message_auction">នេះនឹងបោះបង់ការដេញថ្លៃ។ បញ្ជីនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចចុះបញ្ជីវាម្តងទៀតក្រោយជាសេចក្តីព្រាងថ្មី។</string>
     <string name="market_listings_remove_title">យកបញ្ជីលក់នេះចេញ?</string>
+    <string name="market_audit_actor_staff">បុគ្គលិក</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$s នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>
         <item quantity="other">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$s នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>

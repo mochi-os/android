@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Sanaw alyjylardan gizleniler. Bu yza gaýtaryp bolmaz, ýöne soň ony täze çernowik hökmünde täzeden sanawlap bolar.</string>
     <string name="market_listings_remove_message_auction">Bu auksiýony ýatyrar. Sanaw alyjylardan gizleniler; soň ony täze çernowik hökmünde täzeden sanawlap bolar.</string>
     <string name="market_listings_remove_title">Bu sanawy aýyrmak?</string>
+    <string name="market_audit_actor_staff">Işgärler</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Bu auksiony ýatyrar we %1$s işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>
         <item quantity="other">Bu auksiony ýatyrar we %1$s işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>

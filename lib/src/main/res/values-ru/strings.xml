@@ -413,4 +413,5 @@
     <string name="field_type_checklist">Чек-лист</string>
     <string name="view_list_sorted_ascending">сортировка по возрастанию</string>
     <string name="view_list_sorted_descending">сортировка по убыванию</string>
+    <string name="notification_channel_settings">Уведомления настроек</string>
 </resources>

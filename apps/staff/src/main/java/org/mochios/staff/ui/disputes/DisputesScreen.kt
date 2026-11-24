@@ -38,7 +38,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
@@ -55,6 +54,10 @@ import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
+import org.mochios.staff.ui.components.disputeReasonRes
+import org.mochios.staff.ui.components.disputeStatusLabels
+import org.mochios.staff.ui.components.filterOptions
+import org.mochios.staff.ui.components.stripeReasonRes
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
 
 /**
@@ -64,7 +67,6 @@ import org.mochios.staff.ui.dialog.DisputeReviewDialog
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DisputesScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
     viewModel: DisputesViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -131,7 +133,7 @@ private fun DisputesBody(
                     label = stringResource(R.string.staff_disputes_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_disputes_any_status),
-                    options = disputeStatusOptions(),
+                    options = filterOptions(disputeStatusLabels),
                     current = state.status,
                     onSelect = onStatusChange,
                 ),
@@ -156,7 +158,7 @@ private fun DisputesBody(
                 items = state.disputes,
                 key = { dispute -> dispute.id },
                 load = state.load,
-                hasMore = state.disputes.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = onLoadMore,
             ) { dispute ->
                 DisputeRow(
@@ -188,9 +190,7 @@ private fun DisputeRow(
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = dispute.title.ifBlank {
-                        stringResource(R.string.staff_disputes_listing_label, dispute.listing)
-                    },
+                    text = dispute.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -218,7 +218,7 @@ private fun DisputeRow(
             // Seller row.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 StaffUserAvatar(
-                    name = dispute.sellerName.ifBlank { dispute.seller },
+                    name = dispute.sellerName.ifBlank { formatFingerprint(dispute.sellerFingerprint) },
                     id = dispute.seller,
                     size = 18.dp,
                 )
@@ -237,7 +237,7 @@ private fun DisputeRow(
             // Buyer row.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 StaffUserAvatar(
-                    name = dispute.buyerName.ifBlank { dispute.buyer },
+                    name = dispute.buyerName.ifBlank { formatFingerprint(dispute.buyerFingerprint) },
                     id = dispute.buyer,
                     size = 18.dp,
                 )
@@ -292,41 +292,12 @@ private fun disputeReasonText(dispute: Dispute): String {
     }
 }
 
+/** Stripe's reason for a chargeback; one this client does not know reads "Unknown". */
 @Composable
-private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
-    "open" to stringResource(R.string.staff_disputes_status_open),
-    "responded" to stringResource(R.string.staff_disputes_status_responded),
-    "reviewing" to stringResource(R.string.staff_disputes_status_reviewing),
-    "resolved_buyer" to stringResource(R.string.staff_disputes_status_resolved_buyer),
-    "resolved_seller" to stringResource(R.string.staff_disputes_status_resolved_seller),
-    "escalated" to stringResource(R.string.staff_disputes_status_escalated),
-)
+internal fun stripeReasonLabel(reason: String): String =
+    stringResource(stripeReasonRes(reason) ?: R.string.staff_status_unknown)
 
+/** A buyer's reason for a dispute; anything else is the buyer's own words. */
 @Composable
-internal fun stripeReasonLabel(reason: String): String = when (reason) {
-    "bank_cannot_process" -> stringResource(R.string.staff_disputes_stripe_bank_cannot_process)
-    "check_returned" -> stringResource(R.string.staff_disputes_stripe_check_returned)
-    "credit_not_processed" -> stringResource(R.string.staff_disputes_stripe_credit_not_processed)
-    "customer_initiated" -> stringResource(R.string.staff_disputes_stripe_customer_initiated)
-    "debit_not_authorized" -> stringResource(R.string.staff_disputes_stripe_debit_not_authorized)
-    "duplicate" -> stringResource(R.string.staff_disputes_stripe_duplicate)
-    "fraudulent" -> stringResource(R.string.staff_disputes_stripe_fraudulent)
-    "general" -> stringResource(R.string.staff_disputes_stripe_general)
-    "incorrect_account_details" -> stringResource(R.string.staff_disputes_stripe_incorrect_account_details)
-    "insufficient_funds" -> stringResource(R.string.staff_disputes_stripe_insufficient_funds)
-    "product_not_received" -> stringResource(R.string.staff_disputes_stripe_product_not_received)
-    "product_unacceptable" -> stringResource(R.string.staff_disputes_stripe_product_unacceptable)
-    "subscription_canceled" -> stringResource(R.string.staff_disputes_stripe_subscription_canceled)
-    "unrecognized" -> stringResource(R.string.staff_disputes_stripe_unrecognized)
-    else -> reason.replace('_', ' ')
-}
-
-@Composable
-internal fun disputeReasonLabel(reason: String): String = when (reason) {
-    "not_received" -> stringResource(R.string.staff_disputes_reason_not_received)
-    "not_as_described" -> stringResource(R.string.staff_disputes_reason_not_as_described)
-    "damaged" -> stringResource(R.string.staff_disputes_reason_damaged)
-    "unauthorised" -> stringResource(R.string.staff_disputes_reason_unauthorised)
-    "other" -> stringResource(R.string.staff_disputes_reason_other)
-    else -> reason
-}
+internal fun disputeReasonLabel(reason: String): String =
+    disputeReasonRes(reason)?.let { label -> stringResource(label) } ?: reason

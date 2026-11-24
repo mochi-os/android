@@ -80,9 +80,11 @@ data class ActivitySignup(
 
 /**
  * Only the requested tab's fields are populated; with no `tab` the Comptroller
- * returns every tab.
+ * returns every tab. [next] is the requested tab's cursor, as on
+ * [AccountsListResponse].
  */
 data class ActivityData(
+    val next: String? = null,
     val orders: List<ActivityOrder>? = null,
     @SerializedName("orders_total") val ordersTotal: Long? = null,
     val listings: List<ActivityListing>? = null,

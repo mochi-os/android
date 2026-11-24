@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">商品将对买家隐藏。此操作无法撤消,但您可以稍后将其作为新草稿重新发布。</string>
     <string name="market_listings_remove_message_auction">这将取消拍卖。商品将对买家隐藏;您可以稍后将其作为新的草稿重新发布。</string>
     <string name="market_listings_remove_title">移除此商品?</string>
+    <string name="market_audit_actor_staff">工作人员</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">这将取消拍卖，并通知 %1$s 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>
         <item quantity="other">这将取消拍卖，并通知 %1$s 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>

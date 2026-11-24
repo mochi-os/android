@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Lîste dê ji kirroxan veşartî bibe. Ev nayê vegerandin, lê tu dikarî wê paşê wek pêşnîvîseke nû ji nû ve lîste bikî.</string>
     <string name="market_listings_remove_message_auction">Ev dê mezadê betal bike. Lîste dê ji kirroxan veşartî bibe; tu dikarî wê paşê wek pêşnîvîseke nû ji nû ve lîste bikî.</string>
     <string name="market_listings_remove_title">Vê lîsteyê rake?</string>
+    <string name="market_audit_actor_staff">Karmend</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ev ê mezadê betal bike û %1$s pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>
         <item quantity="other">Ev ê mezadê betal bike û %1$s pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>

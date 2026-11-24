@@ -958,7 +958,12 @@ open class MainActivity : ComponentActivity() {
                 }
             }
             "staff" -> {
+                // The queue a notification names, over the dashboard so Back
+                // lands there; a link to the console itself stops at it.
                 navController.openAppHome(StaffApp.HOME)
+                StaffApp.linkRoute(id)?.let { route ->
+                    navController.navigate(route) { launchSingleTop = true }
+                }
             }
             "settings" -> {
                 // The system settings another app sends an administrator to,

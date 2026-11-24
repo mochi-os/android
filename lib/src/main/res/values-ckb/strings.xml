@@ -205,20 +205,20 @@
     <string name="format_time_months_short">%1$sم</string>
     <string name="reaction_add">کاردانەوە زیاد بکە</string>
     <string name="push_service_channel">پاڵنانی Mochi</string>
-    <string name="push_service_channel_description">مۆچی پەیوەست ڕادەگرێت بۆ وەرگرتنی ئاگادارکردنەوەکان</string>
+    <string name="push_service_channel_description">Mochi پەیوەست ڕادەگرێت بۆ وەرگرتنی ئاگادارکردنەوەکان</string>
     <string name="push_service_group">خزمەتگوزاری پاشبنەما</string>
-    <string name="push_service_title">مۆچی چاوەڕێی ئاگادارکردنەوەکانە</string>
-    <string name="reauth_channel_name">چوونەژوورەوەی مۆچی پێویستە</string>
-    <string name="reauth_channel_description">دەردەکەوێت کاتێک مۆچی ناتوانێت بگاتە سێرڤەرەکەت چونکە دانیشتنەکەت بێ‌بەرامبەر کراوەتەوە</string>
-    <string name="reauth_signin_title">مۆچی: دووبارە بچۆ ژوورەوە</string>
+    <string name="push_service_title">Mochi چاوەڕێی ئاگادارکردنەوەکانە</string>
+    <string name="reauth_channel_name">چوونەژوورەوە بۆ Mochi پێویستە</string>
+    <string name="reauth_channel_description">دەردەکەوێت کاتێک Mochi ناتوانێت بگاتە سێرڤەرەکەت چونکە دانیشتنەکەت هەڵوەشێنراوەتەوە</string>
+    <string name="reauth_signin_title">Mochi: دووبارە بچۆ ژوورەوە</string>
     <string name="reauth_signin_text">ئاگادارکردنەوەکان وەستێنراون تا دووبارە دەچیتە ژوورەوە</string>
     <string name="oem_hint_title">لە پاشبنەمادا بەردەست بمێنەرەوە</string>
-    <string name="oem_hint_body">مۆچی دەبێت لە پاشبنەمادا کار بکات بۆ گەیاندنی ئاگادارکردنەوەکان. تکایە لە شاشەی داهاتوودا ڕێگە بدە، ئەگەرنا مۆبایلەکەت لەوانەیە کاتێک شاشە کوژاوەیە ئاگادارکردنەوەکان بوەستێنێت.</string>
-    <string name="oem_hint_samsung_note">لە مۆبایلی سامسۆنگدا، هەروەها سەیری ڕێکخستنەکان → چاودێری ئامێر → ئەپە نوستووەکان بکە و مۆچی لاببە ئەگەر لێرە بوو.</string>
+    <string name="oem_hint_body">Mochi دەبێت لە پاشبنەمادا کار بکات بۆ گەیاندنی ئاگادارکردنەوەکان. تکایە لە شاشەی داهاتوودا ڕێگە بدە، ئەگەرنا مۆبایلەکەت لەوانەیە کاتێک شاشە کوژاوەیە ئاگادارکردنەوەکان ڕابگرێت.</string>
+    <string name="oem_hint_samsung_note">لە مۆبایلی سامسۆنگدا، هەروەها سەیری ڕێکخستنەکان → چاودێری ئامێر → ئەپە نوستووەکان بکە و Mochi لاببە ئەگەر لە لیستەکەدا هەبوو.</string>
     <string name="oem_hint_allow">ڕێگەدان بە پاشبنەما</string>
     <string name="oem_hint_dismiss">جارێکی تر پیشان مەدە</string>
     <string name="about_label">دەربارە</string>
-    <string name="about_title">ڕاژەخوازی مۆچی</string>
+    <string name="about_title">ڕاژەخوازی Mochi</string>
     <string name="about_version">وەشانی %1$s</string>
     <string name="about_check_updates">پشکنینی نوێکردنەوەکان</string>
     <string name="about_up_to_date">نوێترین وەشان</string>
@@ -409,4 +409,5 @@
     <string name="field_type_checklist">لیستی پشکنین</string>
     <string name="view_list_sorted_ascending">بە شێوەی سەرکەوتوو ڕیزکراوە</string>
     <string name="view_list_sorted_descending">بە شێوەی داکەوتوو ڕیزکراوە</string>
+    <string name="notification_channel_settings">ئاگادارکردنەوەکانی ڕێکخستنەکان</string>
 </resources>

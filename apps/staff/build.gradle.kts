@@ -41,12 +41,6 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
-    // Custom Tabs for Comptroller dashboard / external moderator-tool redirects.
-    implementation(libs.browser)
-
-    // DataStore for staff-local prefs (last-viewed filters, expanded rows, etc.).
-    implementation(libs.datastore.preferences)
-
     testImplementation(libs.junit)
     testImplementation(platform(libs.compose.bom))
     testImplementation(libs.compose.ui.test.junit4)

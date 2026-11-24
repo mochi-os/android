@@ -413,4 +413,5 @@
     <string name="field_type_checklist">Zoznam úloh</string>
     <string name="view_list_sorted_ascending">zoradené vzostupne</string>
     <string name="view_list_sorted_descending">zoradené zostupne</string>
+    <string name="notification_channel_settings">Notifikácie nastavení</string>
 </resources>

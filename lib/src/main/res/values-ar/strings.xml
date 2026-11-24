@@ -417,4 +417,5 @@
     <string name="field_type_checklist">قائمة المهام</string>
     <string name="view_list_sorted_ascending">مرتّب تصاعديًا</string>
     <string name="view_list_sorted_descending">مرتّب تنازليًا</string>
+    <string name="notification_channel_settings">إشعارات الإعدادات</string>
 </resources>

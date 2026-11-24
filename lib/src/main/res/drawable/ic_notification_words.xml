@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- words's notification icon: apps/words/web/public/images/icon.svg in white
+     for the system tray. Written by claude/scripts/android-icons.py. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M5,3 h14 a2,2 0 0,1 2,2 v14 a2,2 0 0,1 -2,2 h-14 a2,2 0 0,1 -2,-2 v-14 a2,2 0 0,1 2,-2 Z"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M6.29,7.43 L8,7.43 L9.52,13.9 L11.14,7.43 L12.86,7.43 L14.48,13.9 L16,7.43 L17.71,7.43 L15.55,16 L13.55,16 L12,10.4 L10.45,16 L8.45,16 Z" />
+</vector>

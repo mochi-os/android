@@ -36,7 +36,9 @@ data class Review(
     val created: Long = 0,
 )
 
+/** Result of `reviews/list`; [next] as on [AccountsListResponse]. */
 data class ReviewsListResponse(
     val reviews: List<Review> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )

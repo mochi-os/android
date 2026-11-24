@@ -616,6 +616,7 @@
     <string name="market_listings_remove_message">Das Angebot wird vor Käufern ausgeblendet. Dies kann nicht rückgängig gemacht werden, aber Sie können es später als neuen Entwurf wieder einstellen.</string>
     <string name="market_listings_remove_message_auction">Dadurch wird die Auktion abgebrochen. Das Inserat wird vor Käufern verborgen; du kannst es später als neuen Entwurf wieder einstellen.</string>
     <string name="market_listings_remove_title">Dieses Angebot entfernen?</string>
+    <string name="market_audit_actor_staff">Personal</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Dadurch wird die Auktion abgebrochen und %1$s aktiver Bieter benachrichtigt. Das Angebot wird vor Käufern verborgen; Sie können es später als neuen Entwurf erneut einstellen.</item>
         <item quantity="other">Dadurch wird die Auktion abgebrochen und %1$s aktive Bieter benachrichtigt. Das Angebot wird vor Käufern verborgen; Sie können es später als neuen Entwurf erneut einstellen.</item>

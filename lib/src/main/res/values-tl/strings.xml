@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Checklist</string>
     <string name="view_list_sorted_ascending">nakaayos nang pataas</string>
     <string name="view_list_sorted_descending">nakaayos nang pababa</string>
+    <string name="notification_channel_settings">Mga notification ng mga setting</string>
 </resources>

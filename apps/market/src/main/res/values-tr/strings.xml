@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">İlan alıcılardan gizlenecek. Bu geri alınamaz, ancak daha sonra yeni bir taslak olarak yeniden listeleyebilirsin.</string>
     <string name="market_listings_remove_message_auction">Bu işlem açık artırmayı iptal edecek. İlan alıcılardan gizlenecek; daha sonra yeni bir taslak olarak yeniden listeleyebilirsin.</string>
     <string name="market_listings_remove_title">Bu ilan kaldırılsın mı?</string>
+    <string name="market_audit_actor_staff">Personel</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Bu, açık artırmayı iptal eder ve %1$s etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>
         <item quantity="other">Bu, açık artırmayı iptal eder ve %1$s etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>

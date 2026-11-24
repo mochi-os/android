@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Текшерүү тизмеси</string>
     <string name="view_list_sorted_ascending">өсүү тартибинде иреттелген</string>
     <string name="view_list_sorted_descending">кемүү тартибинде иреттелген</string>
+    <string name="notification_channel_settings">Жөндөөлөр эскертмелери</string>
 </resources>

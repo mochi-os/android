@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Listado oñeñomíta ojoguávakuéragui. Kóva ndaikatúi oñembojevy, ha katu ikatu emoĩ jey listape upéi borrador pyahúramo.</string>
     <string name="market_listings_remove_message_auction">Kóva ombotýta subasta. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</string>
     <string name="market_listings_remove_title">¿Embogue ko listado?</string>
+    <string name="market_audit_actor_staff">Mba\'apoharakuéra</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Kóva ombotýta subasta ha omomarandúta %1$s ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>
         <item quantity="other">Kóva ombotýta subasta ha omomarandúta %1$s ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>

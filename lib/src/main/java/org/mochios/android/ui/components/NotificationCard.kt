@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,8 +16,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -33,6 +37,8 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.ordered
+import org.mochios.android.push.notificationIconFor
+import org.mochios.android.push.pushApp
 import org.mochios.android.ui.theme.LocalSpacing
 
 /**
@@ -62,16 +68,33 @@ fun NotificationCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
             ) {
-                // Always render a leading avatar so rows align: a person photo
-                // when there's a sender, otherwise an app-seeded monogram so the
-                // circle still signals which app the notification came from.
-                val hasSender = notification.sender.isNotBlank()
-                EntityAvatar(
-                    name = if (hasSender) notification.sender else notification.topic,
-                    src = if (hasSender) personAvatarPath(notification.sender) else null,
-                    seed = if (hasSender) notification.sender else notification.topic,
-                    size = 36.dp,
-                )
+                // Always a leading circle so rows align: the sender's avatar,
+                // or with no sender the icon of the app it came from.
+                val icon = sourceIcon(notification)
+                if (icon == null) {
+                    EntityAvatar(
+                        name = notification.sender,
+                        src = personAvatarPath(notification.sender),
+                        seed = notification.sender,
+                        size = 36.dp,
+                    )
+                } else {
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colorScheme.primaryContainer),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        // Decorative: the row's own text says what it is about.
+                        Icon(
+                            painter = painterResource(icon),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
+                }
                 Column(
                     modifier = Modifier.weight(1f),
                     verticalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
@@ -111,6 +134,19 @@ fun NotificationCard(
         }
     }
 }
+
+/**
+ * The tray icon of the app a notification with no sender came from, which its
+ * row shows; null for one with a sender, whose row shows the person, as the
+ * web's list does.
+ */
+@DrawableRes
+internal fun sourceIcon(notification: MochiNotification): Int? =
+    if (notification.sender.isNotBlank()) {
+        null
+    } else {
+        notificationIconFor(pushApp(notification.app, notification.link))
+    }
 
 /**
  * The choices of a category menu: "Unassigned", then [categories] in reading

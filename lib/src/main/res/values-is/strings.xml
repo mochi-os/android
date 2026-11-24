@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Gátlisti</string>
     <string name="view_list_sorted_ascending">raðað í hækkandi röð</string>
     <string name="view_list_sorted_descending">raðað í lækkandi röð</string>
+    <string name="notification_channel_settings">Tilkynningar stillinga</string>
 </resources>

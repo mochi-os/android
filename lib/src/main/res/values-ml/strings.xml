@@ -409,4 +409,5 @@
     <string name="field_type_checklist">ചെക്ക്‌ലിസ്റ്റ്</string>
     <string name="view_list_sorted_ascending">ആരോഹണ ക്രമത്തിൽ അടുക്കിയത്</string>
     <string name="view_list_sorted_descending">അവരോഹണ ക്രമത്തിൽ അടുക്കിയത്</string>
+    <string name="notification_channel_settings">ക്രമീകരണങ്ങളുടെ അറിയിപ്പുകൾ</string>
 </resources>

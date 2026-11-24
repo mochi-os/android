@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Объявление будет скрыто от покупателей. Это нельзя отменить, но позже вы можете разместить его заново как новый черновик.</string>
     <string name="market_listings_remove_message_auction">Это отменит аукцион. Объявление будет скрыто от покупателей; вы сможете опубликовать его позже как новый черновик.</string>
     <string name="market_listings_remove_title">Удалить это объявление?</string>
+    <string name="market_audit_actor_staff">Сотрудники</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Это отменит аукцион и уведомит %1$s активного участника. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
         <item quantity="few">Это отменит аукцион и уведомит %1$s активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>

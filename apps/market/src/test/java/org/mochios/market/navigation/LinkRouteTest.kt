@@ -99,6 +99,18 @@ class LinkRouteTest {
     }
 
     @Test
+    fun `a profile is addressed by the fingerprint the Comptroller sends`() {
+        assertEquals("market/account/Abc234xyz", MarketApp.publicProfile("a1", "Abc234xyz"))
+    }
+
+    @Test
+    fun `a profile falls back to the id from a Comptroller that sends no fingerprint`() {
+        assertEquals("market/account/a1", MarketApp.publicProfile("a1"))
+        assertEquals("market/account/a1", MarketApp.publicProfile("a1", null))
+        assertEquals("market/account/a1", MarketApp.publicProfile("a1", ""))
+    }
+
+    @Test
     fun `a link naming nothing opens the market home alone`() {
         assertEquals(emptyList<String>(), routes(""))
         assertEquals(emptyList<String>(), routes("elsewhere/x"))

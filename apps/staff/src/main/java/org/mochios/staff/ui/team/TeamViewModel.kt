@@ -35,6 +35,14 @@ sealed interface TeamEvent {
     data class Error(val error: MochiError) : TeamEvent
 }
 
+/**
+ * [row] as a role change answered it: the answer whole when it is a list row,
+ * names and fingerprints with it; only its new role from a server that answers
+ * the bare member, which carries no fingerprint and would blank the card.
+ */
+internal fun StaffMember.after(updated: StaffMember): StaffMember =
+    if (updated.fingerprint.isNotEmpty()) updated else copy(role = updated.role)
+
 @HiltViewModel
 class TeamViewModel @Inject constructor(
     private val repo: StaffRepository,
@@ -101,7 +109,7 @@ class TeamViewModel @Inject constructor(
             try {
                 val updated = repo.setTeamRole(member.id, role)
                 _state.value = _state.value.copy(
-                    members = _state.value.members.map { if (it.id == member.id) updated else it },
+                    members = _state.value.members.map { row -> if (row.id == member.id) row.after(updated) else row },
                 )
                 _events.send(TeamEvent.Toast(org.mochios.staff.R.string.staff_team_toast_role_updated))
             } catch (e: Exception) {

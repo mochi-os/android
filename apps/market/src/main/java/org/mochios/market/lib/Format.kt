@@ -13,7 +13,6 @@ import org.mochios.android.format.formatPrice as libFormatPrice
 import org.mochios.android.format.minorToMajorText as libMinorToMajorText
 import org.mochios.android.format.toMinorUnits as libToMinorUnits
 import org.mochios.android.i18n.Format
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.PlaceData
 import org.mochios.market.model.Currency
 
@@ -31,11 +30,11 @@ fun currencyDecimals(currency: Currency): Int = libCurrencyDecimals(currency.nam
  * come from the device's locale.
  */
 @Composable
-fun formatPrice(amount: Long, currency: Currency): String = formatPrice(amount, currency, LocalFormat.current)
+fun formatPrice(amount: Long, currency: Currency): String = libFormatPrice(amount, currency.name)
 
 /** [formatPrice] outside composition, in [format]'s digits. */
 fun formatPrice(amount: Long, currency: Currency, format: Format): String =
-    libFormatPrice(amount, currency.name, format = format)
+    libFormatPrice(amount, currency.name, format)
 
 /**
  * Convert a free-text major-unit input (e.g. "12.34") into minor units for

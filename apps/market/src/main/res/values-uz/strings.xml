@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Eʼlon xaridorlardan yashiriladi. Buni bekor qilib boʻlmaydi, lekin uni keyinroq yangi qoralama sifatida qayta eʼlon qilishingiz mumkin.</string>
     <string name="market_listings_remove_message_auction">Bu auksionni bekor qiladi. Eʼlon xaridorlardan yashiriladi; uni keyinroq yangi qoralama sifatida qayta eʼlon qilishingiz mumkin.</string>
     <string name="market_listings_remove_title">Bu eʼlonni olib tashlasinmi?</string>
+    <string name="market_audit_actor_staff">Xodimlar</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Bu auksionni bekor qiladi va %1$s faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>
         <item quantity="other">Bu auksionni bekor qiladi va %1$s faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>

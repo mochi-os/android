@@ -409,4 +409,5 @@
     <string name="field_type_checklist">چيڪ لسٽ</string>
     <string name="view_list_sorted_ascending">گهٽ کان وڌيڪ ترتيب ڏنل</string>
     <string name="view_list_sorted_descending">وڌيڪ کان گهٽ ترتيب ڏنل</string>
+    <string name="notification_channel_settings">سيٽنگن جون اطلاعون</string>
 </resources>

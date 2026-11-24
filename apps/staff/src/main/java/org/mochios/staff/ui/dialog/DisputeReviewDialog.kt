@@ -143,7 +143,7 @@ fun DisputeReviewDialog(
                 Spacer(Modifier.height(4.dp))
                 StaffAuditTimeline(
                     kind = "dispute",
-                    objectId = dispute.id.toString(),
+                    objectId = dispute.id,
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
@@ -180,7 +180,7 @@ private fun MetadataCard(dispute: Dispute) {
     ) {
         MetaRow(
             stringResource(R.string.staff_disputes_meta_listing),
-            dispute.title.ifBlank { stringResource(R.string.staff_disputes_listing_label, dispute.listing) },
+            dispute.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
         )
         MetaRow(
             stringResource(R.string.staff_disputes_meta_total),

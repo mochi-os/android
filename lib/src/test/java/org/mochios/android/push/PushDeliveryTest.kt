@@ -10,6 +10,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import com.google.crypto.tink.apps.fixed_webpush.WebPushHybridDecrypt
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -22,6 +23,9 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
+import org.unifiedpush.android.connector.data.PublicKeySet
+import org.unifiedpush.android.connector.keys.KeyManager
+import java.util.Base64
 
 /**
  * Every transport posts a push through [postPushNotification]: one channel,
@@ -137,10 +141,82 @@ class PushDeliveryTest {
         assertEquals(listOf("n1"), read)
     }
 
+    /**
+     * The RFC 8291 example's receiving keys, opening a message as the
+     * connector's DefaultKeyManager does, with the same decrypt.
+     */
+    private class ExampleKeys(private val held: Boolean = true) : KeyManager {
+        override fun decrypt(instance: String, sealed: ByteArray): ByteArray? {
+            assertEquals(FCM_KEYS, instance)
+            if (!held) return null
+            return WebPushHybridDecrypt.Builder()
+                .withAuthSecret(decode(EXAMPLE_AUTH))
+                .withRecipientPublicKey(decode(EXAMPLE_P256DH))
+                .withRecipientPrivateKey(decode(EXAMPLE_PRIVATE))
+                .build()
+                .decrypt(sealed, null)
+        }
+
+        override fun generate(instance: String) = Unit
+        override fun getPublicKeySet(instance: String): PublicKeySet? = null
+        override fun exists(instance: String) = held
+        override fun delete(instance: String) = Unit
+    }
+
+    private fun shown(notification: Notification, key: String) =
+        notification.extras.getCharSequence(key)?.toString()
+
+    /** What core seals: the same value core's fcm_test.go makes, so a change on either side fails one of them. */
+    @Test
+    fun `a sealed FCM message is opened and posted`() {
+        val fields = fcmFields(mapOf("encrypted" to SEALED), ExampleKeys())
+        assertEquals("Meet at noon", fields?.get("body"))
+        post(pushOf(fields!!, null)!!)
+        val notification = posted("t1")!!
+        assertEquals("Ann", shown(notification, Notification.EXTRA_TITLE))
+        assertEquals("Meet at noon", shown(notification, Notification.EXTRA_TEXT))
+        assertEquals("chat", notification.channelId)
+    }
+
+    /** A server that predates the keys sends the fields themselves. */
+    @Test
+    fun `a plain FCM message is posted as it came`() {
+        val data = mapOf("title" to "Bob", "body" to "Hello", "link" to "/chat/c2", "tag" to "t2", "app" to published, "id" to "n2")
+        val fields = fcmFields(data, ExampleKeys())
+        assertEquals(data, fields)
+        post(pushOf(fields!!, null)!!)
+        assertEquals("Hello", shown(posted("t2")!!, Notification.EXTRA_TEXT))
+    }
+
+    @Test
+    fun `a sealed FCM message that will not open posts nothing`() {
+        val sealed = decode(SEALED)
+        sealed[120] = (sealed[120].toInt() xor 1).toByte()
+        val altered = Base64.getUrlEncoder().withoutPadding().encodeToString(sealed)
+        assertNull(fcmFields(mapOf("encrypted" to altered), ExampleKeys()))
+        assertNull("no keys held", fcmFields(mapOf("encrypted" to SEALED), ExampleKeys(held = false)))
+        assertNull("not base64", fcmFields(mapOf("encrypted" to "!!"), ExampleKeys()))
+    }
+
     @Test
     fun `the notification URI is opaque and encodes each value`() {
         val uri = notificationUri("/feeds/f1?a=b&c", "i&d", "n=1")
         assertEquals("mochi:notification?link=%2Ffeeds%2Ff1%3Fa%3Db%26c&id=i%26d&nonce=n%3D1", uri.toString())
         assertEquals("mochi:notification?link=%2Ffeeds&nonce=n", notificationUri("/feeds", null, "n").toString())
+    }
+
+    private companion object {
+        // RFC 8291 section 5's receiver: its private key, public key and
+        // authentication secret.
+        const val EXAMPLE_PRIVATE = "q1dXpw3UpT5VOmu_cf_v6ih07Aems3njxI-JWgLcM94"
+        const val EXAMPLE_P256DH = "BCVxsr7N_eNgVRqvHtD0zTZsEc6-VV-JvLexhqUzORcxaOzi6-AYWXvTBHm4bjyPjs7Vd8pZGH6SRpkNtoIAiw4"
+        const val EXAMPLE_AUTH = "BTBZMqHH6r4Tts7J_aSIgg"
+
+        // core's fcm_android_vector: {"app": published, "body": "Meet at
+        // noon", "id": "n1", "link": "/chat/c1", "tag": "t1", "title": "Ann"}
+        // sealed to the keys above.
+        const val SEALED = "DGv6ra1nlYgDCS1FRnbzlwAAEABBBP4z9KsN6nGRTbVYI_c7VJSPQTBtkgcy27mlmlMoZIIgDll6e3vCYLocInmYWAmS6TlzAC8wEqKK6PBru3jl7A_e3dpFEvCgNBCO4btNu21Z2ja9mapHA9O99CArl-2yB7bdUTw6QjSYewT32l_OlBsXAOoWo0nxg683r4mWK2ug-muw0c0ACeqTbKIiQnNLr655hGsbtfhNucZNPEU4Q9x1qEuDWDgG_nNJPKk8OPhgG5goiOw4EECe9lpi"
+
+        fun decode(value: String): ByteArray = Base64.getUrlDecoder().decode(value)
     }
 }

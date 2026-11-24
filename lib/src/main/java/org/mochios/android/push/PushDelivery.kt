@@ -76,6 +76,20 @@ internal fun pushFields(content: ByteArray): Map<String, String>? = try {
     null
 }
 
+/** The notification a push's fields describe; null for one with no title or body. */
+internal fun pushOf(fields: Map<String, String>, account: String?): Push? {
+    val push = Push(
+        title = fields["title"].orEmpty(),
+        body = fields["body"].orEmpty(),
+        link = fields["link"].orEmpty(),
+        tag = fields["tag"].orEmpty(),
+        app = fields["app"].orEmpty(),
+        id = fields["id"].orEmpty(),
+        account = account?.takeIf { it.isNotBlank() },
+    )
+    return push.takeUnless { it.title.isBlank() && it.body.isBlank() }
+}
+
 /** [deliverPush] for a UnifiedPush payload, a JSON object of the same fields. */
 fun deliverPush(context: Context, content: ByteArray, account: String?) {
     val fields = pushFields(content)
@@ -98,16 +112,8 @@ fun deliverPush(context: Context, fields: Map<String, String>, account: String?)
         SyncSignal.run(context, kind, deps.sessionManager())
         return
     }
-    val push = Push(
-        title = fields["title"].orEmpty(),
-        body = fields["body"].orEmpty(),
-        link = fields["link"].orEmpty(),
-        tag = fields["tag"].orEmpty(),
-        app = fields["app"].orEmpty(),
-        id = fields["id"].orEmpty(),
-        account = account?.takeIf { it.isNotBlank() },
-    )
-    if (push.title.isBlank() && push.body.isBlank()) {
+    val push = pushOf(fields, account)
+    if (push == null) {
         Log.w(TAG, "Push has no title or body; ignoring")
         return
     }

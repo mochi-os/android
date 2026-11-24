@@ -410,4 +410,5 @@
     <string name="field_type_checklist">Liste de contrôle</string>
     <string name="view_list_sorted_ascending">tri croissant</string>
     <string name="view_list_sorted_descending">tri décroissant</string>
+    <string name="notification_channel_settings">Notifications des Paramètres</string>
 </resources>

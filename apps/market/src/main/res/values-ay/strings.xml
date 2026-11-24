@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Listadox alasirinakat imantatäniwa. Akax janiw kutt\'ayañjamäkiti, ukampis qhipat machaq borradorjam wasitat uñstayasmawa.</string>
     <string name="market_listings_remove_message_auction">Akax subasta jaytaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</string>
     <string name="market_listings_remove_title">¿Aka listado aparañati?</string>
+    <string name="market_audit_actor_staff">Irnaqirinaka</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Akax subasta jaytaniwa ukat %1$s lurkaski pujirir yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>
         <item quantity="other">Akax subasta jaytaniwa ukat %1$s lurkaski pujirinakar yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>

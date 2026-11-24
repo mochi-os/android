@@ -409,4 +409,5 @@
     <string name="field_type_checklist">چیک لسٹ</string>
     <string name="view_list_sorted_ascending">صعودی ترتیب میں</string>
     <string name="view_list_sorted_descending">نزولی ترتیب میں</string>
+    <string name="notification_channel_settings">سیٹنگز کی نوٹیفکیشنز</string>
 </resources>

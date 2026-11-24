@@ -42,13 +42,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -69,7 +69,6 @@ import org.mochios.staff.ui.components.StaffUserAvatar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TeamScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
     snackbarHostState: SnackbarHostState,
     viewModel: TeamViewModel = hiltViewModel(),
 ) {
@@ -97,6 +96,7 @@ fun TeamScreen(
         isAdmin = isAdmin,
         onChangeRole = viewModel::changeRole,
         onAskRemove = viewModel::askRemove,
+        onRetry = viewModel::load,
     )
 
     val removeTarget = state.removeTarget
@@ -119,13 +119,16 @@ private fun TeamBody(
     isAdmin: Boolean,
     onChangeRole: (StaffMember, String) -> Unit,
     onAskRemove: (StaffMember) -> Unit,
+    onRetry: () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize(),
     ) {
+        val error = state.error
         when {
             state.isLoading && state.members.isEmpty() -> LoadingState()
+            error != null && state.members.isEmpty() -> ErrorState(error = error, onRetry = onRetry)
             state.members.isEmpty() -> EmptyState(
                 icon = Icons.Default.Group,
                 title = stringResource(R.string.staff_team_empty),

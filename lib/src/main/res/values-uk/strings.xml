@@ -413,4 +413,5 @@
     <string name="field_type_checklist">Контрольний список</string>
     <string name="view_list_sorted_ascending">сортування за зростанням</string>
     <string name="view_list_sorted_descending">сортування за спаданням</string>
+    <string name="notification_channel_settings">Сповіщення налаштувань</string>
 </resources>

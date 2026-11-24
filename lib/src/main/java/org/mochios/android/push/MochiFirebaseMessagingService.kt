@@ -14,12 +14,46 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.unifiedpush.android.connector.keys.DefaultKeyManager
+import org.unifiedpush.android.connector.keys.KeyManager
+import java.util.Base64
+
+private const val TAG = "MochiFcm"
 
 /**
- * Receives FCM messages. The server sends the UnifiedPush payload's fields in
- * `message.data` (`app`, `link`, `title`, `body`, `tag`, `id`, or `sync`), so
- * both transports deliver through [deliverPush]. FCM is registered for the
- * signed-in account alone, so a message names no account.
+ * The instance the FCM transport's Web Push keys are kept under in the
+ * UnifiedPush connector's key store, apart from the identities UnifiedPush
+ * registers ([MochiPushClient.register]).
+ */
+internal const val FCM_KEYS = "fcm"
+
+/**
+ * The fields an FCM message carries. A server holding this device's keys
+ * seals them (RFC 8291) into the one field `encrypted`, base64url, so Google
+ * relays ciphertext; one that predates the keys sends them as the message's
+ * data. Null for a sealed message that will not open with this device's keys.
+ */
+internal fun fcmFields(data: Map<String, String>, keys: KeyManager): Map<String, String>? {
+    val sealed = data["encrypted"] ?: return data
+    val plain = try {
+        keys.decrypt(FCM_KEYS, Base64.getUrlDecoder().decode(sealed))
+    } catch (e: Exception) {
+        Log.w(TAG, "FCM message did not open: ${e.message}")
+        return null
+    }
+    if (plain == null) {
+        Log.w(TAG, "FCM message is sealed, but this device holds no keys")
+        return null
+    }
+    return pushFields(plain)
+}
+
+/**
+ * Receives FCM messages. The server sends the UnifiedPush payload's fields
+ * (`app`, `link`, `title`, `body`, `tag`, `id`, or `sync`), sealed to this
+ * device's keys ([fcmFields]), so both transports deliver through
+ * [deliverPush]. FCM is registered for the signed-in account alone, so a
+ * message names no account.
  */
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -29,7 +63,8 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         EntryPointAccessors.fromApplication(applicationContext, PushEntryPoint::class.java)
 
     override fun onMessageReceived(message: RemoteMessage) {
-        deliverPush(applicationContext, message.data, null)
+        val fields = fcmFields(message.data, DefaultKeyManager(applicationContext)) ?: return
+        deliverPush(applicationContext, fields, null)
     }
 
     override fun onRegistered(installationId: String) {
@@ -51,9 +86,5 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             }
             FcmRegistrar.register(applicationContext, deps.okHttpClient(), server, installationId)
         }
-    }
-
-    private companion object {
-        const val TAG = "MochiFcm"
     }
 }

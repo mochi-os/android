@@ -413,4 +413,5 @@
     <string name="field_type_checklist">Užduočių sąrašas</string>
     <string name="view_list_sorted_ascending">surikiuota didėjančiai</string>
     <string name="view_list_sorted_descending">surikiuota mažėjančiai</string>
+    <string name="notification_channel_settings">Nustatymų pranešimai</string>
 </resources>

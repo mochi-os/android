@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Annoncen skjules for købere. Dette kan ikke fortrydes, men du kan genannoncere den senere som et nyt udkast.</string>
     <string name="market_listings_remove_message_auction">Dette annullerer auktionen. Annoncen skjules for købere; du kan genoplade den senere som et nyt udkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonce?</string>
+    <string name="market_audit_actor_staff">Personale</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Dette annullerer auktionen og underretter %1$s aktiv byder. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>
         <item quantity="other">Dette annullerer auktionen og underretter %1$s aktive bydere. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>

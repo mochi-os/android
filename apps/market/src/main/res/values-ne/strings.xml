@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">सूची क्रेताहरूबाट लुकाइनेछ। यो पूर्ववत् गर्न सकिन्न, तर तपाईं पछि यसलाई नयाँ मस्यौदाको रूपमा पुन: सूचीबद्ध गर्न सक्नुहुन्छ।</string>
     <string name="market_listings_remove_message_auction">यसले लिलामी रद्द गर्नेछ। सूची खरिदकर्ताबाट लुकाइनेछ; तपाईं पछि यसलाई नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</string>
     <string name="market_listings_remove_title">यो सूची हटाउने?</string>
+    <string name="market_audit_actor_staff">कर्मचारी</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">यसले लिलामी रद्द गर्नेछ र %1$s सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
         <item quantity="other">यसले लिलामी रद्द गर्नेछ र %1$s सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
@@ -624,8 +625,8 @@
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">सम्पत्ति मेटाउने?</string>
     <string name="market_sale_chargeback_fee">चार्जब्याक शुल्क</string>
-    <string name="market_sale_chargeback_fee_kept">(Stripe द्वारे ठेवले)</string>
-    <string name="market_sale_chargeback_fee_partial">(%1$s परत केले)</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe ले राखेको)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s फिर्ता गरियो)</string>
     <string name="market_sale_chargeback_fee_refunded">(फिर्ता गरियो)</string>
     <string name="market_messages_report">यो वार्तालाप रिपोर्ट गर्नुहोस्</string>
     <string name="market_report_conversation_title">वार्तालाप रिपोर्ट गर्नुहोस्</string>

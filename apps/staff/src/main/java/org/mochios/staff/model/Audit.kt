@@ -8,10 +8,14 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Row of the Comptroller `audit` table plus the resolved actor and, for an
- * account or staff row, the resolved object. `data` is a per-action JSON
- * string kept raw; `object` is the id of the row the entry concerns; `action`
- * is a dotted key such as `order.shipped`.
+ * Row of the Comptroller `audit` table plus the resolved actor and object.
+ * `data` is a per-action JSON string kept raw, its label keys already resolved
+ * to the reader's language and its amounts in minor units beside a
+ * `currency`; `object` is the id of the row the entry concerns, named by
+ * [objectName] (a listing's title, an account's name; "" when it is gone) and,
+ * for an account or staff row, [objectFingerprint]; `action` is a dotted key
+ * such as `order.shipped`. [actor] is "staff" with a blank [actorName] where
+ * the Comptroller hides which staff member acted.
  */
 data class AuditEntry(
     val id: String = "",
@@ -30,7 +34,9 @@ data class AuditEntry(
     val timestamp: Long = 0,
 )
 
+/** Result of `audit/list` and `audit/object`; [next] as on [AccountsListResponse]. */
 data class AuditListResponse(
     val audit: List<AuditEntry> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )

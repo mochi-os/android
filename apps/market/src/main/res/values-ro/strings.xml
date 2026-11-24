@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Anunțul va fi ascuns de cumpărători. Această acțiune nu poate fi anulată, dar îl poți relista mai târziu ca o nouă schiță.</string>
     <string name="market_listings_remove_message_auction">Aceasta va anula licitația. Anunțul va fi ascuns de cumpărători; îl poți relista mai târziu ca o nouă schiță.</string>
     <string name="market_listings_remove_title">Elimini acest anunț?</string>
+    <string name="market_audit_actor_staff">Personal</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Aceasta va anula licitația și va notifica %1$s ofertant activ. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
         <item quantity="few">Aceasta va anula licitația și va notifica %1$s ofertanți activi. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>

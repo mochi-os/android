@@ -613,6 +613,7 @@
     <string name="market_listings_remove_message">Огласот ќе биде скриен од купувачите. Ова не може да се поништи, но можете повторно да го наведете подоцна како нова скица.</string>
     <string name="market_listings_remove_message_auction">Ова ќе ја откаже аукцијата. Огласот ќе биде скриен од купувачите; можете повторно да го наведете подоцна како нова скица.</string>
     <string name="market_listings_remove_title">Да го отстраниме овој оглас?</string>
+    <string name="market_audit_actor_staff">Кадар</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ова ќе ја откаже аукцијата и ќе извести %1$s активен понудувач. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>
         <item quantity="other">Ова ќе ја откаже аукцијата и ќе извести %1$s активни понудувачи. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>

@@ -613,6 +613,7 @@
     <string name="market_listings_remove_message">Зар худалдан авагчдаас далдлагдана. Үүнийг буцаах боломжгүй ч дараа нь шинэ ноорог болгон дахин зарлаж болно.</string>
     <string name="market_listings_remove_message_auction">Энэ нь дуудлага худалдааг цуцална. Зар худалдан авагчдаас далдлагдах ба дараа нь шинэ ноорог болгон дахин зарлаж болно.</string>
     <string name="market_listings_remove_title">Энэ зарыг хасах уу?</string>
+    <string name="market_audit_actor_staff">Ажилтан</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Энэ нь дуудлага худалдааг цуцалж, %1$s идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>
         <item quantity="other">Энэ нь дуудлага худалдааг цуцалж, %1$s идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>

@@ -53,9 +53,6 @@ import org.mochios.android.util.navigateFromDrawer
 import org.mochios.staff.R
 import org.mochios.staff.model.Me
 import org.mochios.staff.repository.StaffRepository
-import org.mochios.staff.ws.StaffEventsBus
-import org.mochios.staff.ws.rememberStaffEventsSubscription
-import org.mochios.android.R as MochiR
 
 /**
  * The caller's [Me], provided by [StaffLayout]; null while loading. Screens
@@ -76,7 +73,6 @@ sealed class StaffLayoutUiState {
 @HiltViewModel
 class StaffLayoutViewModel @Inject constructor(
     private val repository: StaffRepository,
-    val eventsBus: StaffEventsBus,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow<StaffLayoutUiState>(StaffLayoutUiState.Loading)
@@ -106,8 +102,8 @@ class StaffLayoutViewModel @Inject constructor(
 }
 
 /**
- * Shell for every staff screen: drawer with [StaffSidebar], top bar, and the
- * staff-events WebSocket. Provides [LocalStaffMe]; the drawer stays mounted in
+ * Shell for every staff screen: drawer with [StaffSidebar] and top bar.
+ * Provides [LocalStaffMe]; the drawer stays mounted in
  * the loading and error states so the user can navigate away. A screen's one
  * add action goes in [floatingActionButton], which can read [LocalStaffMe].
  * Screens with a floating button show messages through [snackbarHostState] so
@@ -126,12 +122,6 @@ fun StaffLayout(
     content: @Composable () -> Unit,
 ) {
     val state by layoutViewModel.state.collectAsState()
-
-    // Open the staff-events WebSocket once at the layout level so a single
-    // connection survives across screen changes. The wrapper closes the
-    // socket on dispose, so dropping this composable (e.g. signing out or
-    // leaving the staff nav graph) unwinds the connection.
-    rememberStaffEventsSubscription(layoutViewModel.eventsBus)
 
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()

@@ -43,19 +43,11 @@ data class Dispute(
     val total: Long = 0,
     val currency: String = "",
     val title: String = "",
-) {
-    /**
-     * [fee] for a chargeback, null otherwise - a zero-fee chargeback stays
-     * distinct from a manual dispute.
-     */
-    val chargebackFee: Long?
-        get() = if (opener == "stripe") fee else null
+)
 
-    val chargebackReason: String?
-        get() = if (opener == "stripe") reason else null
-}
-
+/** Result of `disputes/list`; [next] as on [AccountsListResponse]. */
 data class DisputesListResponse(
     val disputes: List<Dispute> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )

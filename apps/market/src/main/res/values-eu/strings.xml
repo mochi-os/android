@@ -613,6 +613,7 @@
     <string name="market_listings_remove_message">Zerrenda erosleengandik ezkutatuko da. Hau ezin da desegin, baina geroago zirriborro berri gisa berriro zerrendatu dezakezu.</string>
     <string name="market_listings_remove_message_auction">Honek enkantea bertan behera utziko du. Zerrenda erosleengandik ezkutatuko da; geroago zirriborro berri gisa berriro zerrendatu dezakezu.</string>
     <string name="market_listings_remove_title">Zerrenda hau kendu?</string>
+    <string name="market_audit_actor_staff">Langileak</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Honek enkantea bertan behera utziko du eta %1$s lizitatzaile aktibori jakinaraziko dio. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>
         <item quantity="other">Honek enkantea bertan behera utziko du eta %1$s lizitatzaile aktibori jakinaraziko die. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>

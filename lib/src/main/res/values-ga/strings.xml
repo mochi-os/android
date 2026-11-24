@@ -415,4 +415,5 @@
     <string name="field_type_checklist">Seicliosta</string>
     <string name="view_list_sorted_ascending">sórtáilte go hardaitheach</string>
     <string name="view_list_sorted_descending">sórtáilte go híslitheach</string>
+    <string name="notification_channel_settings">Fógraí Socruithe</string>
 </resources>

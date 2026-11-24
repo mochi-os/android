@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Penyenaraian akan disembunyikan daripada pembeli. Ini tidak boleh dibatalkan, tetapi anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</string>
     <string name="market_listings_remove_message_auction">Ini akan membatalkan lelongan. Penyenaraian akan disembunyikan daripada pembeli; anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</string>
     <string name="market_listings_remove_title">Keluarkan penyenaraian ini?</string>
+    <string name="market_audit_actor_staff">Kakitangan</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ini akan membatalkan lelongan dan memaklumkan %1$s pembida aktif. Penyenaraian akan disembunyikan daripada pembeli; anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</item>
         <item quantity="other">Ini akan membatalkan lelongan dan memaklumkan %1$s pembida aktif. Penyenaraian akan disembunyikan daripada pembeli; anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</item>

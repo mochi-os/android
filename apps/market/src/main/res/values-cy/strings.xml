@@ -613,6 +613,7 @@
     <string name="market_listings_remove_message">Bydd y rhestriad yn cael ei guddio rhag prynwyr. Ni ellir dadwneud hyn, ond gallwch ei ailrestru\'n ddiweddarach fel drafft newydd.</string>
     <string name="market_listings_remove_message_auction">Bydd hyn yn canslo\'r arwerthiant. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru\'n ddiweddarach fel drafft newydd.</string>
     <string name="market_listings_remove_title">Tynnu\'r rhestriad hwn?</string>
+    <string name="market_audit_actor_staff">Staff</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="zero">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigwyr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
         <item quantity="one">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>

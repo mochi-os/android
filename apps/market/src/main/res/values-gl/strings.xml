@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">A listaxe será ocultada dos compradores. Isto non se pode desfacer, pero podes volver listala máis tarde como un novo borrador.</string>
     <string name="market_listings_remove_message_auction">Isto cancelará a poxa. A listaxe será ocultada dos compradores; podes volver listala máis tarde como un novo borrador.</string>
     <string name="market_listings_remove_title">Eliminar esta listaxe?</string>
+    <string name="market_audit_actor_staff">Persoal</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Isto cancelará a poxa e avisará a %1$s poxador activo. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>
         <item quantity="other">Isto cancelará a poxa e avisará a %1$s poxadores activos. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>

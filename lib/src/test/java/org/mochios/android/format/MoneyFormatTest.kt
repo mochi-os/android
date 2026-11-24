@@ -9,6 +9,9 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.NumberFormat
+import org.mochios.android.i18n.UserPreferences
 import java.util.Locale
 
 class MoneyFormatTest {
@@ -74,6 +77,18 @@ class MoneyFormatTest {
     fun shortOrBlankFingerprintShowsNothing() {
         assertEquals("", formatFingerprint(""))
         assertEquals("", formatFingerprint("abc"))
+    }
+
+    // A price takes its digits from the user's number format, as every other
+    // number on the screen does, and its symbol from the locale.
+    @Test
+    fun priceDigitsComeFromTheUsersNumberFormat() {
+        Locale.setDefault(Locale.UK)
+        val european = Format(UserPreferences(numberFormat = NumberFormat.EUROPEAN_DOT_COMMA))
+        assertEquals("£1.234,56", formatPrice(123456, "gbp", european, Locale.UK))
+        val western = Format(UserPreferences(numberFormat = NumberFormat.WESTERN_COMMA_DOT))
+        assertEquals("£1,234.56", formatPrice(123456, "gbp", western, Locale.UK))
+        assertEquals("1.500,00 XYZ", formatPrice(150000, "xyz", european, Locale.UK))
     }
 
     @Test

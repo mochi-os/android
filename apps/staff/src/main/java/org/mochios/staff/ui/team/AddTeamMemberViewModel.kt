@@ -26,7 +26,10 @@ data class AddTeamMemberUiState(
     val searching: Boolean = false,
     val selectedId: String? = null,
     val selectedName: String? = null,
+    val selectedFingerprint: String = "",
     val role: String = "",
+    /** Whether the picked person and role are being confirmed before the role is granted. */
+    val confirming: Boolean = false,
     val submitting: Boolean = false,
     val error: MochiError? = null,
     val added: Boolean = false,
@@ -71,12 +74,30 @@ class AddTeamMemberViewModel @Inject constructor(
         }
     }
 
-    fun selectPerson(id: String, name: String) {
-        _state.value = _state.value.copy(selectedId = id, selectedName = name)
+    fun selectPerson(person: DirectorySearchResult) {
+        _state.value = _state.value.copy(
+            selectedId = person.id,
+            selectedName = person.name,
+            selectedFingerprint = person.fingerprint,
+        )
     }
 
     fun setRole(role: String) {
         _state.value = _state.value.copy(role = role)
+    }
+
+    /**
+     * Asks to grant the role: the picked person's name and fingerprint are
+     * shown to check against before [submit], since names are neither unique
+     * nor verified and the role carries refund, ban and dispute authority.
+     */
+    fun confirm() {
+        if (_state.value.selectedId == null || _state.value.role.isBlank() || _state.value.submitting) return
+        _state.value = _state.value.copy(confirming = true)
+    }
+
+    fun cancelConfirm() {
+        _state.value = _state.value.copy(confirming = false)
     }
 
     /** Adds the picked person and reports it back through [AddTeamMemberUiState]. */
@@ -85,7 +106,7 @@ class AddTeamMemberViewModel @Inject constructor(
         val role = _state.value.role
         if (role.isBlank() || _state.value.submitting) return
         viewModelScope.launch {
-            _state.value = _state.value.copy(submitting = true, error = null)
+            _state.value = _state.value.copy(submitting = true, confirming = false, error = null)
             try {
                 repo.addTeamMember(id, role)
                 _state.value = _state.value.copy(submitting = false, added = true)

@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Lis la pral kache nan men acheteur. Sa pa ka anile, men ou ka relis li pita kòm yon nouvo bouyon.</string>
     <string name="market_listings_remove_message_auction">Sa pral anile vant lan. Lis la pral kache nan men acheteur; ou ka relis li pita kòm yon nouvo bouyon.</string>
     <string name="market_listings_remove_title">Retire lis sa a?</string>
+    <string name="market_audit_actor_staff">Estaf</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Sa pral anile vant o anchè a epi avèti %1$s moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>
         <item quantity="other">Sa pral anile vant o anchè a epi avèti %1$s moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>

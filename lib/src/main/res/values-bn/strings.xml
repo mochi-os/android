@@ -409,4 +409,5 @@
     <string name="field_type_checklist">চেকলিস্ট</string>
     <string name="view_list_sorted_ascending">ঊর্ধ্বক্রমে সাজানো</string>
     <string name="view_list_sorted_descending">অধঃক্রমে সাজানো</string>
+    <string name="notification_channel_settings">সেটিংস বিজ্ঞপ্তি</string>
 </resources>

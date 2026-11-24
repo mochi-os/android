@@ -410,4 +410,5 @@
     <string name="field_type_checklist">Danh sách kiểm tra</string>
     <string name="view_list_sorted_ascending">sắp xếp tăng dần</string>
     <string name="view_list_sorted_descending">sắp xếp giảm dần</string>
+    <string name="notification_channel_settings">Thông báo Cài đặt</string>
 </resources>

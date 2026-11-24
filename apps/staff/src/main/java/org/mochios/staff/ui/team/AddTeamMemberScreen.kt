@@ -54,6 +54,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.ui.components.MetaRow
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -79,6 +82,28 @@ fun AddTeamMemberScreen(
 
     LaunchedEffect(state.added) {
         if (state.added) onAdded()
+    }
+
+    // The person and role, checked once more before the role is granted:
+    // names are not unique, so the fingerprint is what tells two apart.
+    if (state.confirming) {
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelConfirm,
+            title = stringResource(R.string.staff_team_dialog_add_title),
+            content = {
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        StaffUserAvatar(name = state.selectedName.orEmpty(), id = state.selectedId.orEmpty(), size = 36.dp)
+                        Spacer(modifier = Modifier.width(12.dp))
+                        PersonLines(name = state.selectedName.orEmpty(), fingerprint = state.selectedFingerprint)
+                    }
+                    MetaRow(stringResource(R.string.staff_team_dialog_role), roleLabel(state.role))
+                }
+            },
+            confirmText = stringResource(R.string.staff_team_dialog_add),
+            onConfirm = viewModel::submit,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
     }
 
     Scaffold(
@@ -115,7 +140,7 @@ fun AddTeamMemberScreen(
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                     MochiButton(
-                        onClick = viewModel::submit,
+                        onClick = viewModel::confirm,
                         enabled = canSubmit,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
@@ -210,19 +235,16 @@ fun AddTeamMemberScreen(
                                                 },
                                             )
                                             .clickable(enabled = !state.submitting) {
-                                                viewModel.selectPerson(person.id, person.name)
+                                                viewModel.selectPerson(person)
                                             }
                                             .padding(horizontal = 8.dp, vertical = 8.dp),
                                         verticalAlignment = Alignment.CenterVertically,
                                     ) {
                                         StaffUserAvatar(name = person.name, id = person.id, size = 28.dp)
                                         Spacer(modifier = Modifier.width(8.dp))
-                                        Text(
-                                            text = person.name,
-                                            style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.Medium,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis,
+                                        PersonLines(
+                                            name = person.name,
+                                            fingerprint = person.fingerprint,
                                             modifier = Modifier.weight(1f),
                                         )
                                         if (selected) {
@@ -239,6 +261,29 @@ fun AddTeamMemberScreen(
                     }
                 }
             }
+        }
+    }
+}
+
+/** A person's name over their punctuated fingerprint, the one thing that tells two of the same name apart. */
+@Composable
+private fun PersonLines(name: String, fingerprint: String, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(
+            text = name.ifBlank { stringResource(R.string.staff_accounts_unnamed) },
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Medium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+        val punctuated = formatFingerprint(fingerprint)
+        if (punctuated.isNotEmpty()) {
+            Text(
+                text = punctuated,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+            )
         }
     }
 }

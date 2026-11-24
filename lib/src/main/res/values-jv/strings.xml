@@ -408,4 +408,5 @@
     <string name="field_type_checklist">Checklist</string>
     <string name="view_list_sorted_ascending">diurutake munggah</string>
     <string name="view_list_sorted_descending">diurutake mudhun</string>
+    <string name="notification_channel_settings">Notifikasi Setelan</string>
 </resources>

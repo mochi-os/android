@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">L\'annonce sera masquée aux acheteurs. Cela ne peut pas être annulé, mais vous pourrez la republier plus tard sous forme d\'un nouveau brouillon.</string>
     <string name="market_listings_remove_message_auction">Cela annulera l\'enchère. L\'annonce sera masquée aux acheteurs ; vous pourrez la republier ultérieurement comme nouveau brouillon.</string>
     <string name="market_listings_remove_title">Retirer cette annonce ?</string>
+    <string name="market_audit_actor_staff">Personnel</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Cela annulera l’enchère et préviendra %1$s enchérisseur actif. L’annonce sera masquée aux acheteurs ; vous pourrez la republier plus tard comme nouveau brouillon.</item>
         <item quantity="other">Cela annulera l’enchère et préviendra %1$s enchérisseurs actifs. L’annonce sera masquée aux acheteurs ; vous pourrez la republier plus tard comme nouveau brouillon.</item>

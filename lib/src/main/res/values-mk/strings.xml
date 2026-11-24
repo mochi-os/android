@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Список</string>
     <string name="view_list_sorted_ascending">подредено растечки</string>
     <string name="view_list_sorted_descending">подредено опаѓачки</string>
+    <string name="notification_channel_settings">Известувања од поставките</string>
 </resources>

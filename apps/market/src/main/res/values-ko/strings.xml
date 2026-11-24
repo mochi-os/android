@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">상품이 구매자에게 숨겨집니다. 이 작업은 취소할 수 없지만, 나중에 새 초안으로 다시 게시할 수 있습니다.</string>
     <string name="market_listings_remove_message_auction">이 작업을 수행하면 경매가 취소됩니다. 상품은 구매자에게 숨겨지며, 나중에 새 초안으로 다시 등록할 수 있습니다.</string>
     <string name="market_listings_remove_title">이 상품을 제거하시겠습니까?</string>
+    <string name="market_audit_actor_staff">스태프</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">경매가 취소되고 활성 입찰자 %1$s명에게 알림이 전송됩니다. 상품은 구매자에게 숨겨지며, 나중에 새 임시 저장으로 다시 등록할 수 있습니다.</item>
         <item quantity="other">경매가 취소되고 활성 입찰자 %1$s명에게 알림이 전송됩니다. 상품은 구매자에게 숨겨지며, 나중에 새 임시 저장으로 다시 등록할 수 있습니다.</item>

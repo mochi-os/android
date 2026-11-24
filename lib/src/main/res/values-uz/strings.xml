@@ -410,4 +410,5 @@
     <string name="field_type_checklist">Roʻyxat</string>
     <string name="view_list_sorted_ascending">oʻsish boʻyicha saralangan</string>
     <string name="view_list_sorted_descending">kamayish boʻyicha saralangan</string>
+    <string name="notification_channel_settings">Sozlamalar bildirishnomalari</string>
 </resources>

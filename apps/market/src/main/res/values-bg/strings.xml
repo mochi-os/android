@@ -616,6 +616,7 @@
     <string name="market_listings_remove_message">Обявата ще бъде скрита от купувачите. Това не може да се отмени, но можете да я обявите по-късно като нова чернова.</string>
     <string name="market_listings_remove_message_auction">Това ще отмени търга. Обявата ще бъде скрита от купувачите; можете да я обявите по-късно като нова чернова.</string>
     <string name="market_listings_remove_title">Да премахна ли тази обява?</string>
+    <string name="market_audit_actor_staff">Персонал</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Това ще отмени търга и ще уведоми %1$s активен наддаващ. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>
         <item quantity="other">Това ще отмени търга и ще уведоми %1$s активни наддаващи. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>

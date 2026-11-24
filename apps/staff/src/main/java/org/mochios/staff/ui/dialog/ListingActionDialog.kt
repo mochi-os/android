@@ -31,7 +31,8 @@ import org.mochios.staff.ui.listings.PendingListingAction
 
 /**
  * Confirmation dialog for approve / reject / remove on a listing. REJECT and
- * REMOVE require a reason.
+ * REMOVE require a reason. [history] is drawn under the fields: the listing's
+ * audit timeline.
  */
 @Composable
 fun ListingActionDialog(
@@ -39,6 +40,9 @@ fun ListingActionDialog(
     submitting: Boolean,
     onDismiss: () -> Unit,
     onSubmit: (reason: String, notes: String) -> Unit,
+    history: @Composable () -> Unit = {
+        StaffAuditTimeline(kind = "listing", objectId = action.listing.id, modifier = Modifier.fillMaxWidth())
+    },
 ) {
     var reason by rememberSaveable(action.listing.id, action.type) { mutableStateOf("") }
     var notes by rememberSaveable(action.listing.id, action.type) { mutableStateOf("") }
@@ -63,7 +67,7 @@ fun ListingActionDialog(
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(
-                    text = "${action.listing.title} (#${action.listing.id})",
+                    text = action.listing.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
@@ -86,11 +90,7 @@ fun ListingActionDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(4.dp))
-                StaffAuditTimeline(
-                    kind = "listing",
-                    objectId = action.listing.id.toString(),
-                    modifier = Modifier.fillMaxWidth(),
-                )
+                history()
             }
         },
         confirmText = if (submitting) stringResource(R.string.staff_listings_submitting)

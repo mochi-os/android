@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Listing bakal didhelikaké saka sing tuku. Iki ora bisa dibatalaké, nanging sampéyan bisa nge-list manèh mengko dadi konsep anyar.</string>
     <string name="market_listings_remove_message_auction">Iki bakal mbatalaké lelang. Listing bakal didhelikaké saka sing tuku; sampéyan bisa nge-list manèh mengko dadi konsep anyar.</string>
     <string name="market_listings_remove_title">Cabut listing iki?</string>
+    <string name="market_audit_actor_staff">Staf</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Iki bakal mbatalake lelang lan menehi kabar %1$s penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>
         <item quantity="other">Iki bakal mbatalake lelang lan menehi kabar %1$s penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>

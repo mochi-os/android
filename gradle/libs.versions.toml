@@ -1,3 +1,5 @@
+# Every artefact is checked against gradle/verification-metadata.xml: after
+# changing a version here, run `make verification` and review the new entries.
 [versions]
 agp = "9.4.0"
 kotlin = "2.4.20"

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Yoxlama siyahısı</string>
     <string name="view_list_sorted_ascending">artan sıra ilə sıralanıb</string>
     <string name="view_list_sorted_descending">azalan sıra ilə sıralanıb</string>
+    <string name="notification_channel_settings">Parametrlər bildirişləri</string>
 </resources>

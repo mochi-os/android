@@ -19,6 +19,10 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
+import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
@@ -36,10 +40,12 @@ data class ReviewsUiState(
     val filter: ReviewStatusFilter = ReviewStatusFilter.ALL,
     val reviews: List<Review> = emptyList(),
     val total: Long = 0,
-    val isLoading: Boolean = false,
-    val isLoadingMore: Boolean = false,
+    val isLoading: Boolean = true,
+    /** The next page, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
-    val hasMore: Boolean = false,
     val pendingRemove: Review? = null,
     val submitting: Boolean = false,
 )
@@ -49,6 +55,14 @@ sealed interface ReviewsEvent {
     data class Toast(val messageRes: Int) : ReviewsEvent
     data class Error(val error: MochiError) : ReviewsEvent
 }
+
+/**
+ * [row] as a review action answered it: the answer whole when it is a list
+ * row, names and listing title with it; only its new status from a server
+ * that answers the bare review, which would otherwise blank the card's names.
+ */
+internal fun Review.after(updated: Review): Review =
+    if (updated.reviewerName != null && updated.subjectName != null) updated else copy(status = updated.status)
 
 /**
  * Backs the reviews moderation screen; `restore` / `remove` map to the
@@ -72,47 +86,74 @@ class ReviewsViewModel @Inject constructor(
     private val _events = Channel<ReviewsEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
 
-    private var page: Int = 1
     private var loadJob: Job? = null
     private var moreJob: Job? = null
 
     init {
-        loadFirstPage()
+        load()
     }
 
     fun setFilter(filter: ReviewStatusFilter) {
         if (_state.value.filter == filter) return
         _state.value = _state.value.copy(filter = filter)
         savedStateHandle[KEY_FILTER] = filter.name
-        loadFirstPage()
+        load()
     }
 
+    /** Reads the first page again, as the error state's retry does. */
+    fun load() {
+        loadJob?.cancel()
+        // A load-more still in flight belongs to the filter being replaced;
+        // left running, it would splice that filter's rows into the new list.
+        moreJob?.cancel()
+        loadJob = viewModelScope.launch {
+            _state.value = _state.value.copy(isLoading = true, load = LoadState.Idle, error = null)
+            try {
+                val resp = repo.listReviews(
+                    status = _state.value.filter.wireValue(),
+                    page = 1,
+                    limit = PAGE_LIMIT,
+                )
+                _state.value = _state.value.copy(
+                    reviews = resp.reviews,
+                    total = resp.total,
+                    paging = Paging().advance(resp.reviews.size, resp.total, resp.next),
+                    isLoading = false,
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(
+                    isLoading = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.isLoading || s.isLoadingMore || !s.hasMore) return
+        if (s.isLoading || s.load == LoadState.Loading || !s.paging.more) return
         moreJob = viewModelScope.launch {
-            _state.value = s.copy(isLoadingMore = true)
+            _state.value = s.copy(load = LoadState.Loading)
             try {
                 val resp = repo.listReviews(
                     status = s.filter.wireValue(),
-                    page = page + 1,
+                    page = s.paging.page,
                     limit = PAGE_LIMIT,
+                    after = s.paging.cursor,
                 )
-                // Advance only once the page is in hand. Incrementing first
-                // permanently skips the page on any failure: hasMore stays
-                // true, so the next attempt asks for the one after.
-                page += 1
-                val merged = _state.value.reviews + resp.reviews
                 _state.value = _state.value.copy(
-                    reviews = merged,
+                    reviews = _state.value.reviews.append(resp.reviews) { review -> review.id },
                     total = resp.total,
-                    hasMore = merged.size.toLong() < resp.total,
-                    isLoadingMore = false,
+                    paging = s.paging.advance(resp.reviews.size, resp.total, resp.next),
+                    load = LoadState.Idle,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
-                _state.value = _state.value.copy(isLoadingMore = false)
-                _events.send(ReviewsEvent.Error(e.toMochiError()))
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }
@@ -124,13 +165,12 @@ class ReviewsViewModel @Inject constructor(
             try {
                 val updated = repo.actionReview(review.id, action)
                 _state.value = _state.value.copy(
-                    reviews = _state.value.reviews.map { if (it.id == updated.id) updated else it },
+                    reviews = _state.value.reviews.map { row -> if (row.id == updated.id) row.after(updated) else row },
                 )
-                _events.send(
-                    ReviewsEvent.Toast(org.mochios.staff.R.string.staff_reviews_toast_updated),
-                )
+                _events.send(ReviewsEvent.Toast(R.string.staff_reviews_toast_updated))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
             }
         }
@@ -151,47 +191,16 @@ class ReviewsViewModel @Inject constructor(
             try {
                 val updated = repo.actionReview(target.id, "remove")
                 _state.value = _state.value.copy(
-                    reviews = _state.value.reviews.map { if (it.id == updated.id) updated else it },
+                    reviews = _state.value.reviews.map { row -> if (row.id == updated.id) row.after(updated) else row },
                     pendingRemove = null,
                     submitting = false,
                 )
-                _events.send(
-                    ReviewsEvent.Toast(org.mochios.staff.R.string.staff_reviews_toast_removed),
-                )
+                _events.send(ReviewsEvent.Toast(R.string.staff_reviews_toast_removed))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
-            }
-        }
-    }
-
-    private fun loadFirstPage() {
-        loadJob?.cancel()
-        // A load-more still in flight belongs to the filter being replaced;
-        // left running, it would splice that filter's rows into the new list.
-        moreJob?.cancel()
-        loadJob = viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true, isLoadingMore = false, error = null)
-            page = 1
-            try {
-                val resp = repo.listReviews(
-                    status = _state.value.filter.wireValue(),
-                    page = page,
-                    limit = PAGE_LIMIT,
-                )
-                _state.value = _state.value.copy(
-                    reviews = resp.reviews,
-                    total = resp.total,
-                    hasMore = resp.reviews.size.toLong() < resp.total,
-                    isLoading = false,
-                )
-            } catch (e: Exception) {
-                if (e is CancellationException) throw e
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
             }
         }
     }

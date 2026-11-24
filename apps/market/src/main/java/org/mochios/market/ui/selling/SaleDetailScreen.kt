@@ -171,9 +171,9 @@ fun SaleDetailScreen(
                     onSubmitReview = { rating, body ->
                         viewModel.submitReview(rating, body, reviewSubmitFailedFallback)
                     },
-                    onOpenBuyer = { account ->
+                    onOpenBuyer = { account, fingerprint ->
                         if (account.isNotBlank()) {
-                            navController.navigate(MarketApp.publicProfile(account))
+                            navController.navigate(MarketApp.publicProfile(account, fingerprint))
                         }
                     },
                     // The seller opens (or reopens) the conversation with this
@@ -263,7 +263,7 @@ private fun SaleDetailBody(
     onOpenDispute: () -> Unit,
     onRespondReview: (String) -> Unit,
     onSubmitReview: (Int, String) -> Unit,
-    onOpenBuyer: (String) -> Unit,
+    onOpenBuyer: (String, String?) -> Unit,
     onMessageBuyer: () -> Unit,
 ) {
     val order = detail.order
@@ -350,7 +350,13 @@ private fun SaleDetailBody(
                     buyerName = order.buyerName.orEmpty().ifBlank { review.reviewerName.orEmpty() },
                     submitting = state.reviewResponseSubmitting,
                     errorMessage = state.reviewError,
-                    onOpenBuyer = { onOpenBuyer(order.buyer.ifBlank { review.reviewer }) },
+                    onOpenBuyer = {
+                        if (order.buyer.isNotBlank()) {
+                            onOpenBuyer(order.buyer, order.buyerFingerprint)
+                        } else {
+                            onOpenBuyer(review.reviewer, review.reviewerFingerprint)
+                        }
+                    },
                     onRespond = onRespondReview,
                 )
             }
@@ -369,7 +375,7 @@ private fun SaleDetailBody(
  * out: status, buyer, total, payout, any refund, delivery and purchase time.
  */
 @Composable
-private fun SaleSummaryCard(order: Order, onOpenBuyer: (String) -> Unit) {
+private fun SaleSummaryCard(order: Order, onOpenBuyer: (String, String?) -> Unit) {
     val currency = order.currency ?: Currency.GBP
     val format = LocalFormat.current
     MochiCard(modifier = Modifier.fillMaxWidth()) {
@@ -391,7 +397,7 @@ private fun SaleSummaryCard(order: Order, onOpenBuyer: (String) -> Unit) {
                         textDecoration = TextDecoration.Underline,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.clickable { onOpenBuyer(order.buyer) },
+                        modifier = Modifier.clickable { onOpenBuyer(order.buyer, order.buyerFingerprint) },
                     )
                 }
             }

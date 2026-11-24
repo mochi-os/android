@@ -5,6 +5,9 @@
 
 package org.mochios.android.push
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import androidx.annotation.DrawableRes
 import org.mochios.android.R
 import org.mochios.android.launcher.LAUNCHER_ACTIVITIES
@@ -16,8 +19,45 @@ import org.mochios.android.launcher.LAUNCHER_ACTIVITIES
  */
 internal val NOTIFICATION_CHANNELS = setOf(
     "feeds", "chat", "forums", "projects", "people", "crm",
-    "wikis", "chess", "go", "words", "market", "staff", "calendars",
+    "wikis", "chess", "go", "words", "market", "staff", "calendars", "settings",
 )
+
+/**
+ * Each app's tray icon: its web icon in white, written by
+ * claude/scripts/android-icons.py --tray, which also checks it.
+ */
+internal val NOTIFICATION_ICONS: Map<String, Int> = mapOf(
+    "calendars" to R.drawable.ic_notification_calendars,
+    "chat" to R.drawable.ic_notification_chat,
+    "chess" to R.drawable.ic_notification_chess,
+    "crm" to R.drawable.ic_notification_crm,
+    "feeds" to R.drawable.ic_notification_feeds,
+    "forums" to R.drawable.ic_notification_forums,
+    "go" to R.drawable.ic_notification_go,
+    "market" to R.drawable.ic_notification_market,
+    "people" to R.drawable.ic_notification_people,
+    "projects" to R.drawable.ic_notification_projects,
+    "settings" to R.drawable.ic_notification_settings,
+    "staff" to R.drawable.ic_notification_staff,
+    "wikis" to R.drawable.ic_notification_wikis,
+    "words" to R.drawable.ic_notification_words,
+)
+
+/**
+ * The channel of notifications that open Settings, such as the test a
+ * notification category sends. The Settings module posts none itself, so
+ * the channel and its name live here.
+ */
+fun setupSettingsNotificationChannel(context: Context) {
+    val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    manager.createNotificationChannel(
+        NotificationChannel(
+            "settings",
+            context.getString(R.string.notification_channel_settings),
+            NotificationManager.IMPORTANCE_DEFAULT,
+        ),
+    )
+}
 
 /** Channel used when the payload names an app we have no channel for. */
 internal const val FALLBACK_NOTIFICATION_CHANNEL = "feeds"
@@ -44,16 +84,9 @@ fun notificationChannelFor(app: String?, link: String?): String =
     pushApp(app, link)?.takeIf { it in NOTIFICATION_CHANNELS } ?: FALLBACK_NOTIFICATION_CHANNEL
 
 /**
- * Small tray icon for a Mochi-app slug, falling back to the generic Mochi mark.
- * Deliberately narrower than [NOTIFICATION_CHANNELS]: only these apps ship a
- * drawable.
+ * Small tray icon for a Mochi-app slug, falling back to the generic Mochi mark
+ * for an app this client does not host.
  */
 @DrawableRes
-fun notificationIconFor(app: String?): Int = when (app?.lowercase()) {
-    "feeds" -> R.drawable.ic_notification_feeds
-    "chat" -> R.drawable.ic_notification_chat
-    "forums" -> R.drawable.ic_notification_forums
-    "projects" -> R.drawable.ic_notification_projects
-    "settings" -> R.drawable.ic_notification_settings
-    else -> R.drawable.ic_mochi_notification
-}
+fun notificationIconFor(app: String?): Int =
+    NOTIFICATION_ICONS[app?.lowercase()] ?: R.drawable.ic_mochi_notification

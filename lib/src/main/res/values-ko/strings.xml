@@ -409,4 +409,5 @@
     <string name="field_type_checklist">체크리스트</string>
     <string name="view_list_sorted_ascending">오름차순 정렬</string>
     <string name="view_list_sorted_descending">내림차순 정렬</string>
+    <string name="notification_channel_settings">설정 알림</string>
 </resources>

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Comprobación lista</string>
     <string name="view_list_sorted_ascending">jisk\'at jach\'aru siqichata</string>
     <string name="view_list_sorted_descending">jach\'at jisk\'aru siqichata</string>
+    <string name="notification_channel_settings">Wakichawinaka yatiyawinaka</string>
 </resources>

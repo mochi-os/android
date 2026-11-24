@@ -409,4 +409,5 @@
     <string name="field_type_checklist">சரிபார்ப்பு பட்டியல்</string>
     <string name="view_list_sorted_ascending">ஏறுவரிசையில் வரிசைப்படுத்தப்பட்டது</string>
     <string name="view_list_sorted_descending">இறங்குவரிசையில் வரிசைப்படுத்தப்பட்டது</string>
+    <string name="notification_channel_settings">அமைப்புகள் அறிவிப்புகள்</string>
 </resources>

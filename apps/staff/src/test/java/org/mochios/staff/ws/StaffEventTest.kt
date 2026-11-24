@@ -8,38 +8,30 @@ package org.mochios.staff.ws
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.REOPEN
-import org.mochios.android.websocket.StreamWsEvent
 
 /**
- * A frame on the `staff-events` stream stands for the event its topic names;
- * the stream opening again after being down stands for one every list reads
+ * A frame on the `staff-events` socket stands for the event its topic names;
+ * the socket opening again after being down stands for one every list reads
  * again on, having missed whatever was sent meanwhile.
  */
 class StaffEventTest {
 
-    private fun frame(type: String = "", topic: String? = null) = StreamWsEvent(
-        type = type,
-        created = 0,
-        member = null,
-        name = null,
-        body = null,
-        event = null,
-        raw = if (topic == null) emptyMap() else mapOf("topic" to topic),
-    )
-
     @Test
     fun `a topic stands for its event`() {
-        assertEquals(StaffEvent.NewReport, staffEvent(frame(topic = "staff/report")))
+        assertEquals(StaffEvent.NewReport, staffEvent(WebSocketEvent(topic = "staff/report")))
+        assertEquals(StaffEvent.ModerationUpdated, staffEvent(WebSocketEvent(topic = "staff/moderation")))
+        assertEquals(StaffEvent.NewDispute, staffEvent(WebSocketEvent(topic = "staff/dispute")))
     }
 
     @Test
-    fun `the stream opening again stands for an event every list reads again on`() {
-        assertEquals(StaffEvent.Unknown(REOPEN), staffEvent(frame(type = REOPEN)))
+    fun `the socket opening again stands for an event every list reads again on`() {
+        assertEquals(StaffEvent.Unknown(REOPEN), staffEvent(WebSocketEvent(type = REOPEN)))
     }
 
     @Test
     fun `a frame with no topic stands for nothing`() {
-        assertNull(staffEvent(frame()))
+        assertNull(staffEvent(WebSocketEvent()))
     }
 }

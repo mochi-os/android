@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">出品は購入者から非表示になります。元に戻すことはできませんが、後で新しい下書きとして再出品できます。</string>
     <string name="market_listings_remove_message_auction">オークションがキャンセルされます。出品は購入者から非表示になりますが、後で新しい下書きとして再出品できます。</string>
     <string name="market_listings_remove_title">この出品を削除しますか？</string>
+    <string name="market_audit_actor_staff">スタッフ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">オークションをキャンセルし、%1$s 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>
         <item quantity="other">オークションをキャンセルし、%1$s 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>

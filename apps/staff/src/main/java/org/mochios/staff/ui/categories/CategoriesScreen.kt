@@ -46,6 +46,7 @@ import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -69,13 +70,6 @@ fun CategoriesScreen(
     snackbarHostState: SnackbarHostState,
     viewModel: CategoriesViewModel = hiltViewModel(),
 ) {
-    // Categories surfaces are admin-gated server-side, but every staff role
-    // can view the list. The "Add" topbar action is mounted at the route
-    // level (see StaffNavGraph) so we don't re-wire it here; future
-    // role-gated per-row affordances should read LocalStaffMe.current.
-    @Suppress("unused")
-    val me = org.mochios.staff.ui.components.LocalStaffMe.current
-
     val state by viewModel.state.collectAsState()
     val resources = LocalResources.current
 
@@ -96,6 +90,7 @@ fun CategoriesScreen(
         state = state,
         onEdit = { category -> navController.navigate(StaffApp.categoryEdit(category.id)) },
         onDelete = viewModel::askDelete,
+        onRetry = viewModel::load,
     )
 
     // Delete confirmation
@@ -118,9 +113,12 @@ private fun CategoriesBody(
     state: CategoriesUiState,
     onEdit: (Category) -> Unit,
     onDelete: (Category) -> Unit,
+    onRetry: () -> Unit,
 ) {
+    val error = state.error
     when {
         state.isLoading && state.categories.isEmpty() -> LoadingState()
+        error != null && state.categories.isEmpty() -> ErrorState(error = error, onRetry = onRetry)
         state.categories.isEmpty() -> EmptyState(
             icon = Icons.Default.Category,
             title = stringResource(R.string.staff_categories_empty),

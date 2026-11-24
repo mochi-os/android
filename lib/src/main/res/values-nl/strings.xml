@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Checklist</string>
     <string name="view_list_sorted_ascending">oplopend gesorteerd</string>
     <string name="view_list_sorted_descending">aflopend gesorteerd</string>
+    <string name="notification_channel_settings">Meldingen van Instellingen</string>
 </resources>

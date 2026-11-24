@@ -616,6 +616,7 @@
     <string name="market_listings_remove_message">A hirdetés el lesz rejtve a vásárlók elől. Ez nem vonható vissza, de később új vázlatként újra meghirdetheted.</string>
     <string name="market_listings_remove_message_auction">Ez törli az árverést. A hirdetés el lesz rejtve a vásárlók elől; később új vázlatként újra meghirdetheti.</string>
     <string name="market_listings_remove_title">Eltávolítod ezt a hirdetést?</string>
+    <string name="market_audit_actor_staff">Munkatársak</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ez törli az aukciót, és értesít %1$s aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>
         <item quantity="other">Ez törli az aukciót, és értesít %1$s aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>

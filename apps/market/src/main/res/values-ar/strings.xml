@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">ستُخفى القائمة عن المشترين. لا يمكن التراجع عن هذا، لكن يمكنك إعادة إدراجها لاحقًا كمسودة جديدة.</string>
     <string name="market_listings_remove_message_auction">سيؤدي هذا إلى إلغاء المزاد. سيتم إخفاء الإعلان من المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</string>
     <string name="market_listings_remove_title">هل تزيل هذه القائمة؟</string>
+    <string name="market_audit_actor_staff">الموظفون</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="zero">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$s من المزايدين النشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
         <item quantity="one">سيؤدي هذا إلى إلغاء المزاد وإشعار مزايد نشط واحد (%1$s). سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>

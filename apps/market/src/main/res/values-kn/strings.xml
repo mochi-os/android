@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗದು, ಆದರೆ ನೀವು ನಂತರ ಹೊಸ ಡ್ರಾಫ್ಟ್ ಆಗಿ ಮರು-ಪಟ್ಟಿ ಮಾಡಬಹುದು.</string>
     <string name="market_listings_remove_message_auction">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಇದನ್ನು ನಂತರ ಹೊಸ ಡ್ರಾಫ್ಟ್‌ ಆಗಿ ಮರು-ಪಟ್ಟಿ ಮಾಡಬಹುದು.</string>
     <string name="market_listings_remove_title">ಈ ಪಟ್ಟಿ ತೆಗೆದುಹಾಕುವುದೇ?</string>
+    <string name="market_audit_actor_staff">ಸಿಬ್ಬಂದಿ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$s ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>
         <item quantity="other">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$s ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>

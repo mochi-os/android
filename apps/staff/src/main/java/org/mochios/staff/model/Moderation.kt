@@ -8,8 +8,8 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Row of the Comptroller `moderation` table; `action` is `warning`, `removed`,
- * `appealed`, `upheld`, `denied`, ...
+ * Row of the Comptroller `moderation` table; `action` is one of
+ * [org.mochios.staff.ui.components.Stored.MODERATION_ACTION].
  */
 data class ModerationEntry(
     val id: String = "",
@@ -26,11 +26,13 @@ data class ModerationEntry(
 
 /**
  * Result of `moderation/log`. Mirrors `ModerationLogResponse` in
- * `apps/staff/web/src/types/moderation.ts`.
+ * `apps/staff/web/src/types/moderation.ts`; [next] as on
+ * [AccountsListResponse].
  */
 data class ModerationLogResponse(
     val log: List<ModerationEntry> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**

@@ -1029,9 +1029,10 @@ private fun mainThread(): (Runnable) -> Unit {
  *
  * It carries no credential: the token goes in the `Authorization: Bearer`
  * header, so a handshake sent without one connects and then hears nothing.
- * Core also accepts `?token=` for browsers, which cannot set a header on a
- * handshake; putting it back here would write the token into every access log
- * on the way. See [SocketUrlTest].
+ * A browser, which cannot set that header on a handshake, offers the token as
+ * a `mochi.token.` subprotocol, and older cores read it from `?token=`;
+ * putting it in the address here would write it into every access log on the
+ * way. See [SocketUrlTest].
  */
 internal fun socketUrl(server: String, key: String): HttpUrl? {
     if (key.isBlank()) return null

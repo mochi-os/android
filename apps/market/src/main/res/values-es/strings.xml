@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">El anuncio se ocultará a los compradores. Esto no se puede deshacer, pero puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_message_auction">Esto cancelará la subasta. El anuncio se ocultará de los compradores; puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_title">¿Retirar este anuncio?</string>
+    <string name="market_audit_actor_staff">Personal</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Esto cancelará la subasta y avisará a %1$s postor activo. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>
         <item quantity="other">Esto cancelará la subasta y avisará a %1$s postores activos. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>

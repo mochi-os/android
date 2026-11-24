@@ -35,18 +35,21 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.json.JSONObject
-import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.format.formatFingerprint
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.staff.R
 import org.mochios.staff.model.AuditEntry
 import org.mochios.staff.repository.StaffRepository
@@ -55,8 +58,9 @@ import javax.inject.Inject
 /**
  * Per-object audit history, mirroring
  * `apps/staff/web/src/components/shared/audit-timeline.tsx`. `objectId` is the
- * row id as a string (account ids are fingerprints). Owns its own ViewModel, so
- * it can be embedded in any dialog.
+ * row's id as the Comptroller keys it (an account's is its entity id). Owns
+ * its own ViewModel, so it can be embedded in any dialog; the history arrives
+ * a page at a time, the next on Load more.
  */
 @Composable
 fun StaffAuditTimeline(
@@ -73,13 +77,14 @@ fun StaffAuditTimeline(
             viewModel.load(kind, objectId)
         }
         val state by viewModel.state.collectAsState()
-        AuditTimelineBody(state = state, modifier = modifier)
+        AuditTimelineBody(state = state, onMore = viewModel::loadMore, modifier = modifier)
     }
 }
 
 @Composable
-private fun AuditTimelineBody(
+internal fun AuditTimelineBody(
     state: AuditTimelineUiState,
+    onMore: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     when {
@@ -110,8 +115,25 @@ private fun AuditTimelineBody(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.padding(bottom = 8.dp),
             )
+            val more = state.paging.more
             state.entries.forEachIndexed { index, entry ->
-                AuditRow(entry = entry, isLast = index == state.entries.lastIndex)
+                AuditRow(entry = entry, isLast = index == state.entries.lastIndex && !more)
+            }
+            if (more) {
+                when (val load = state.load) {
+                    LoadState.Loading -> Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                    }
+                    is LoadState.Failed -> InlineErrorState(error = load.error, onRetry = onMore)
+                    LoadState.Idle -> MochiTextButton(onClick = onMore) {
+                        Text(stringResource(R.string.staff_audit_load_more))
+                    }
+                }
             }
         }
     }
@@ -120,14 +142,9 @@ private fun AuditTimelineBody(
 @Composable
 private fun AuditRow(entry: AuditEntry, isLast: Boolean) {
     val format = LocalFormat.current
-    val label = actionLabel(entry.action)
+    val label = auditActionLabel(entry.action)
     val detail = auditDetail(entry)
-    val actor = when {
-        entry.actor == "system" || entry.actor.isBlank() ->
-            stringResource(R.string.staff_audit_actor_system)
-        entry.actorName.isNotBlank() -> entry.actorName
-        else -> formatFingerprint(entry.actorFingerprint)
-    }
+    val actor = auditActor(entry)
 
     Row(
         modifier = Modifier
@@ -183,144 +200,19 @@ private fun AuditRow(entry: AuditEntry, isLast: Boolean) {
     }
 }
 
-@Composable
-private fun actionLabel(action: String): String {
-    // Mirrors web's `useActionLabels()` — every action the Comptroller can
-    // emit is mapped to a localised label here. Unknown actions fall through
-    // to a capitalised version of the raw key so the timeline never shows
-    // bare snake_case to staff.
-    return when (action) {
-        // Listing actions
-        "listing.created" -> stringResource(R.string.staff_audit_action_listing_created)
-        "listing.updated" -> stringResource(R.string.staff_audit_action_listing_updated)
-        "listing.deleted" -> stringResource(R.string.staff_audit_action_listing_deleted)
-        "listing.published" -> stringResource(R.string.staff_audit_action_listing_published)
-        "listing.relisted" -> stringResource(R.string.staff_audit_action_listing_relisted)
-        "listing.expired" -> stringResource(R.string.staff_audit_action_listing_expired)
-        "listing.removed" -> stringResource(R.string.staff_audit_action_listing_removed)
-        "listing.approved" -> stringResource(R.string.staff_audit_action_listing_approved)
-        "listing.rejected" -> stringResource(R.string.staff_audit_action_listing_rejected)
-        "listing.warning" -> stringResource(R.string.staff_audit_action_listing_warning)
-        "listing.appeal_submitted" -> stringResource(R.string.staff_audit_action_listing_appeal_submitted)
-        "listing.appeal_decided" -> stringResource(R.string.staff_audit_action_listing_appeal_decided)
-
-        // Account actions
-        "account.seller_activated" -> stringResource(R.string.staff_audit_action_account_seller_activated)
-        "account.stripe_connected" -> stringResource(R.string.staff_audit_action_account_stripe_connected)
-        "account.stripe_onboarded" -> stringResource(R.string.staff_audit_action_account_stripe_onboarded)
-        "account.stripe_restricted" -> stringResource(R.string.staff_audit_action_account_stripe_restricted)
-        "account.stripe_disconnected" -> stringResource(R.string.staff_audit_action_account_stripe_disconnected)
-        "account.suspended" -> stringResource(R.string.staff_audit_action_account_suspended)
-        "account.unsuspended" -> stringResource(R.string.staff_audit_action_account_unsuspended)
-        "account.banned" -> stringResource(R.string.staff_audit_action_account_banned)
-        "account.unbanned" -> stringResource(R.string.staff_audit_action_account_unbanned)
-
-        // Order
-        "order.created" -> stringResource(R.string.staff_audit_action_order_created)
-        "order.paid" -> stringResource(R.string.staff_audit_action_order_paid)
-        "order.payment_failed" -> stringResource(R.string.staff_audit_action_order_payment_failed)
-        "order.shipped" -> stringResource(R.string.staff_audit_action_order_shipped)
-        "order.completed" -> stringResource(R.string.staff_audit_action_order_completed)
-        "order.refunded" -> stringResource(R.string.staff_audit_action_order_refunded)
-        "order.cancelled" -> stringResource(R.string.staff_audit_action_order_cancelled)
-        "order.chargeback" -> stringResource(R.string.staff_audit_action_order_chargeback)
-        "order.chargeback_won" -> stringResource(R.string.staff_audit_action_order_chargeback_won)
-        "order.chargeback_lost" -> stringResource(R.string.staff_audit_action_order_chargeback_lost)
-
-        // Dispute
-        "dispute.opened" -> stringResource(R.string.staff_audit_action_dispute_opened)
-        "dispute.responded" -> stringResource(R.string.staff_audit_action_dispute_responded)
-        "dispute.resolved_buyer" -> stringResource(R.string.staff_audit_action_dispute_resolved_buyer)
-        "dispute.resolved_seller" -> stringResource(R.string.staff_audit_action_dispute_resolved_seller)
-
-        // Auction
-        "auction.created" -> stringResource(R.string.staff_audit_action_auction_created)
-        "auction.opened" -> stringResource(R.string.staff_audit_action_auction_opened)
-        "auction.bid_placed" -> stringResource(R.string.staff_audit_action_auction_bid_placed)
-        "auction.ended_sold" -> stringResource(R.string.staff_audit_action_auction_ended_sold)
-        "auction.ended_unsold" -> stringResource(R.string.staff_audit_action_auction_ended_unsold)
-        "auction.cancelled" -> stringResource(R.string.staff_audit_action_auction_cancelled)
-        "auction.payment_overdue" -> stringResource(R.string.staff_audit_action_auction_payment_overdue)
-
-        // Subscription
-        "subscription.created" -> stringResource(R.string.staff_audit_action_subscription_created)
-        "subscription.activated" -> stringResource(R.string.staff_audit_action_subscription_activated)
-        "subscription.active" -> stringResource(R.string.staff_audit_action_subscription_active)
-        "subscription.cancel_scheduled" -> stringResource(R.string.staff_audit_action_subscription_cancel_scheduled)
-        "subscription.cancelled" -> stringResource(R.string.staff_audit_action_subscription_cancelled)
-        "subscription.paused" -> stringResource(R.string.staff_audit_action_subscription_paused)
-        "subscription.resumed" -> stringResource(R.string.staff_audit_action_subscription_resumed)
-        "subscription.reactivated" -> stringResource(R.string.staff_audit_action_subscription_reactivated)
-        "subscription.past_due" -> stringResource(R.string.staff_audit_action_subscription_past_due)
-        "subscription.chargeback" -> stringResource(R.string.staff_audit_action_subscription_chargeback)
-        "subscription.chargeback_won" -> stringResource(R.string.staff_audit_action_subscription_chargeback_won)
-        "subscription.chargeback_lost" -> stringResource(R.string.staff_audit_action_subscription_chargeback_lost)
-
-        // Reports / reviews
-        "report.created" -> stringResource(R.string.staff_audit_action_report_created)
-        "report.actioned" -> stringResource(R.string.staff_audit_action_report_actioned)
-        "review.created" -> stringResource(R.string.staff_audit_action_review_created)
-        "review.responded" -> stringResource(R.string.staff_audit_action_review_responded)
-        "review.revealed" -> stringResource(R.string.staff_audit_action_review_revealed)
-        "review.hide" -> stringResource(R.string.staff_audit_action_review_hide)
-        "review.remove" -> stringResource(R.string.staff_audit_action_review_remove)
-        "review.restore" -> stringResource(R.string.staff_audit_action_review_restore)
-
-        // Category
-        "category.created" -> stringResource(R.string.staff_audit_action_category_created)
-        "category.updated" -> stringResource(R.string.staff_audit_action_category_updated)
-        "category.deleted" -> stringResource(R.string.staff_audit_action_category_deleted)
-
-        // Staff / config
-        "staff.team_added" -> stringResource(R.string.staff_audit_action_staff_team_added)
-        "staff.team_removed" -> stringResource(R.string.staff_audit_action_staff_team_removed)
-        "staff.team_role_changed" -> stringResource(R.string.staff_audit_action_staff_team_role_changed)
-        "config.updated" -> stringResource(R.string.staff_audit_action_config_updated)
-        "config.thresholds_updated" -> stringResource(R.string.staff_audit_action_config_thresholds_updated)
-
-        else -> action.substringAfter('.', action).replace('_', ' ')
-            .replaceFirstChar { it.uppercase() }
-    }
-}
-
-private fun auditDetail(entry: AuditEntry): String {
-    if (entry.data.isBlank()) return ""
-    val payload = try {
-        JSONObject(entry.data)
-    } catch (_: Exception) {
-        return ""
-    }
-    val parts = mutableListOf<String>()
-    if (payload.has("reason")) {
-        val reason = payload.optString("reason")
-        if (reason.isNotBlank()) parts.add(reason)
-    }
-    if (payload.has("notes")) {
-        val notes = payload.optString("notes")
-        if (notes.isNotBlank() && notes !in parts) parts.add(notes)
-    }
-    if (payload.has("amount")) {
-        val amount = payload.opt("amount")?.toString().orEmpty()
-        if (amount.isNotBlank()) parts.add(amount)
-    }
-    if (payload.has("resolution")) {
-        val resolution = payload.optString("resolution")
-        if (resolution.isNotBlank()) parts.add(resolution)
-    }
-    if (payload.has("action")) {
-        val action = payload.optString("action")
-        if (action.isNotBlank()) parts.add(action)
-    }
-    return parts.joinToString(" · ")
-}
-
 // ---- Internal state + ViewModel for the embedded timeline ----
 
 internal data class AuditTimelineUiState(
     val isLoading: Boolean = true,
     val entries: List<AuditEntry> = emptyList(),
     val error: MochiError? = null,
+    /** How far the history has been read. */
+    val paging: Paging = Paging(),
+    /** The next page, for the timeline's foot. */
+    val load: LoadState = LoadState.Idle,
 )
+
+private const val PAGE_SIZE = 50
 
 @HiltViewModel
 internal class AuditTimelineHostViewModel @Inject constructor(
@@ -330,24 +222,53 @@ internal class AuditTimelineHostViewModel @Inject constructor(
     val state: StateFlow<AuditTimelineUiState> = _state.asStateFlow()
 
     private var lastKey: Pair<String, String>? = null
+    private var job: Job? = null
 
     fun load(kind: String, objectId: String) {
         val key = kind to objectId
         if (lastKey == key) return
         lastKey = key
+        job?.cancel()
         _state.value = AuditTimelineUiState(isLoading = true)
-        viewModelScope.launch {
+        job = viewModelScope.launch {
             try {
-                val r = repository.getObjectAudit(kind, objectId, limit = 50)
+                val r = repository.getObjectAudit(kind, objectId, limit = PAGE_SIZE)
                 _state.value = AuditTimelineUiState(
                     isLoading = false,
                     entries = r.audit,
+                    // The history never paged by number: a server that sends
+                    // no cursor has no next page to offer.
+                    paging = Paging().advance(r.audit.size, r.total, r.next ?: ""),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.value = AuditTimelineUiState(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
+            }
+        }
+    }
+
+    /** Reads the next page of the history, from Load more or its retry. */
+    fun loadMore() {
+        val (kind, objectId) = lastKey ?: return
+        val s = _state.value
+        if (s.isLoading || s.load == LoadState.Loading || !s.paging.more) return
+        job = viewModelScope.launch {
+            _state.value = s.copy(load = LoadState.Loading)
+            try {
+                val r = repository.getObjectAudit(kind, objectId, limit = PAGE_SIZE, after = s.paging.cursor)
+                _state.value = _state.value.copy(
+                    load = LoadState.Idle,
+                    entries = _state.value.entries.append(r.audit) { entry -> entry.id },
+                    paging = s.paging.advance(r.audit.size, r.total, r.next ?: ""),
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

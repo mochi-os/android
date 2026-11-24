@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Daftar akan disembunyikan dari pembeli. Ini tidak dapat dibatalkan, tetapi Anda dapat mendaftarkannya kembali nanti sebagai draf baru.</string>
     <string name="market_listings_remove_message_auction">Ini akan membatalkan lelang. Daftar akan disembunyikan dari pembeli; Anda dapat mendaftarkannya kembali nanti sebagai draf baru.</string>
     <string name="market_listings_remove_title">Hapus daftar ini?</string>
+    <string name="market_audit_actor_staff">Staf</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ini akan membatalkan lelang dan memberi tahu %1$s penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>
         <item quantity="other">Ini akan membatalkan lelang dan memberi tahu %1$s penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>

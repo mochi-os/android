@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">O anúncio será ocultado dos compradores. Isto não pode ser desfeito, mas pode republicá-lo mais tarde como um novo rascunho.</string>
     <string name="market_listings_remove_message_auction">Isto cancelará o leilão. O anúncio ficará oculto dos compradores; pode publicá-lo novamente mais tarde como um novo rascunho.</string>
     <string name="market_listings_remove_title">Remover este anúncio?</string>
+    <string name="market_audit_actor_staff">Equipa</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Isto cancelará o leilão e notificará %1$s licitante ativo. O anúncio ficará oculto dos compradores; poderá voltar a publicá-lo mais tarde como novo rascunho.</item>
         <item quantity="other">Isto cancelará o leilão e notificará %1$s licitantes ativos. O anúncio ficará oculto dos compradores; poderá voltar a publicá-lo mais tarde como novo rascunho.</item>

@@ -408,4 +408,5 @@
     <string name="field_type_checklist">စစ်ဆေးစာရင်း</string>
     <string name="view_list_sorted_ascending">ငယ်စဉ်ကြီးလိုက် စီထားသည်</string>
     <string name="view_list_sorted_descending">ကြီးစဉ်ငယ်လိုက် စီထားသည်</string>
+    <string name="notification_channel_settings">ဆက်တင်များ အကြောင်းကြားချက်များ</string>
 </resources>

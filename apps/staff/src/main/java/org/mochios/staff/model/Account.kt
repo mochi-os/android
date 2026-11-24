@@ -35,11 +35,14 @@ data class Account(
 
 /**
  * Result of `accounts/list`. Mirrors `AccountsListResponse` in
- * `apps/staff/web/src/types/accounts.ts`.
+ * `apps/staff/web/src/types/accounts.ts`; [next] is the cursor for the
+ * following page, "" after the last, and null from a server that pages only by
+ * number.
  */
 data class AccountsListResponse(
     val accounts: List<Account> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**

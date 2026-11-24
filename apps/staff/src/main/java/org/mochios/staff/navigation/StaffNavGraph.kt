@@ -30,6 +30,7 @@ import androidx.navigation.navArgument
 import org.mochios.android.ui.components.FilterButton
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.util.segment
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
 import org.mochios.staff.ui.accounts.AccountsViewModel
@@ -42,9 +43,11 @@ import org.mochios.staff.ui.components.StaffLayout
 import org.mochios.staff.ui.config.ConfigScreen
 import org.mochios.staff.ui.dashboard.DashboardScreen
 import org.mochios.staff.ui.disputes.DisputesScreen
+import org.mochios.staff.ui.listing.ListingScreen
 import org.mochios.staff.ui.listings.ListingsScreen
 import org.mochios.staff.ui.listings.ListingsViewModel
 import org.mochios.staff.ui.moderation.ModerationLogScreen
+import org.mochios.staff.ui.moderation.ModerationLogViewModel
 import org.mochios.staff.ui.reports.ReportsScreen
 import org.mochios.staff.ui.reports.ReportsViewModel
 import org.mochios.staff.ui.reviews.ReviewsScreen
@@ -60,6 +63,7 @@ object StaffApp {
     const val HOME = "staff"
     const val ACCOUNTS = "staff/accounts"
     const val LISTINGS = "staff/listings"
+    const val LISTING = "staff/listings/view/{id}"
     const val MODERATION = "staff/moderation"
     const val REPORTS = "staff/reports"
     const val DISPUTES = "staff/disputes"
@@ -72,8 +76,31 @@ object StaffApp {
     const val TEAM = "staff/team"
     const val TEAM_ADD = "staff/team/add"
 
+    /** The moderation log's route, with the listing it may be opened for. */
+    internal const val MODERATION_ROUTE = "$MODERATION?${ModerationLogViewModel.KEY_LISTING}={${ModerationLogViewModel.KEY_LISTING}}"
+
+    /** The screens the drawer opens, other than the dashboard. */
+    private val sections = listOf(LISTINGS, APPEALS, REPORTS, DISPUTES, REVIEWS, MODERATION, CATEGORIES, ACCOUNTS, TEAM, CONFIG)
+
     /** Route of the form that edits the category [id]. */
     fun categoryEdit(id: String) = "staff/categories/edit/${Uri.encode(id)}"
+
+    /** Route of the console's view of the listing [id]; null for an id that cannot be one segment. */
+    fun listing(id: String): String? = segment(id)?.let { part -> "staff/listings/view/$part" }
+
+    /** Route of the moderation log narrowed to the listing [id]. */
+    fun moderation(id: String): String = "$MODERATION?${ModerationLogViewModel.KEY_LISTING}=${Uri.encode(id)}"
+
+    /**
+     * The screen a `/staff/<section>` link names, as the Comptroller's
+     * notifications write them (`/staff/disputes`, `/staff/reports`...): any of
+     * the drawer's screens, opened over the dashboard. Null for the dashboard
+     * itself and for a section the console has no screen for.
+     */
+    fun linkRoute(section: String?): String? {
+        if (section.isNullOrEmpty()) return null
+        return "$HOME/$section".takeIf { route -> route in sections }
+    }
 }
 
 /**
@@ -95,7 +122,7 @@ fun NavGraphBuilder.staffNavGraph(
             R.string.staff_sidebar_dashboard,
             topBarActions = { NotificationBell(onClick = onOpenNotifications) },
         ) {
-            DashboardScreen(navController = navController)
+            DashboardScreen()
         }
     }
     composable(StaffApp.ACCOUNTS) {
@@ -114,7 +141,6 @@ fun NavGraphBuilder.staffNavGraph(
             },
         ) {
             AccountsScreen(
-                navController = navController,
                 viewModel = viewModel,
                 filtersOpen = filtersOpen,
                 onFiltersDismiss = { filtersOpen = false },
@@ -144,7 +170,25 @@ fun NavGraphBuilder.staffNavGraph(
             )
         }
     }
-    composable(StaffApp.MODERATION) {
+    composable(
+        route = StaffApp.LISTING,
+        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+    ) {
+        ListingScreen(
+            onBack = { navController.popBackStack() },
+            onOpenHistory = { listing -> navController.navigate(StaffApp.moderation(listing)) },
+        )
+    }
+    composable(
+        route = StaffApp.MODERATION_ROUTE,
+        arguments = listOf(
+            navArgument(ModerationLogViewModel.KEY_LISTING) {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
+        ),
+    ) {
         StaffLayout(navController, StaffApp.MODERATION, R.string.staff_sidebar_moderation) {
             ModerationLogScreen(navController = navController)
         }
@@ -174,7 +218,7 @@ fun NavGraphBuilder.staffNavGraph(
     }
     composable(StaffApp.DISPUTES) {
         StaffLayout(navController, StaffApp.DISPUTES, R.string.staff_sidebar_disputes) {
-            DisputesScreen(navController = navController)
+            DisputesScreen()
         }
     }
     composable(StaffApp.APPEALS) {
@@ -184,7 +228,7 @@ fun NavGraphBuilder.staffNavGraph(
     }
     composable(StaffApp.REVIEWS) {
         StaffLayout(navController, StaffApp.REVIEWS, R.string.staff_sidebar_reviews) {
-            ReviewsScreen(navController = navController)
+            ReviewsScreen()
         }
     }
     // Mount the VM at the route so the screen body and the form's result
@@ -249,7 +293,7 @@ fun NavGraphBuilder.staffNavGraph(
                         }
                     }
                 }
-                else -> ConfigScreen(navController = navController)
+                else -> ConfigScreen()
             }
         }
     }
@@ -284,7 +328,6 @@ fun NavGraphBuilder.staffNavGraph(
             },
         ) {
             TeamScreen(
-                navController = navController,
                 snackbarHostState = snackbarHostState,
                 viewModel = viewModel,
             )

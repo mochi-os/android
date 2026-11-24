@@ -21,6 +21,8 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import org.mochios.android.auth.AuthRepository
+import org.unifiedpush.android.connector.data.PublicKeySet
+import org.unifiedpush.android.connector.keys.DefaultKeyManager
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
@@ -106,9 +108,14 @@ object FcmRegistrar {
         val deps = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
-        // The memo: an unchanged FID was registered on an earlier resume, or
-        // was refused and re-posting it would only be refused again.
-        val credential = RegistrationMemo.fingerprint(installationId)
+        val keys = publicKeys(context)
+
+        // The memo: an unchanged FID and keys were registered on an earlier
+        // resume, or were refused and re-posting them would only be refused
+        // again. The keys are part of it, so a build that first has them
+        // registers them once over a memo of the FID alone.
+        val credential = if (keys == null) RegistrationMemo.fingerprint(installationId)
+        else RegistrationMemo.fingerprint(installationId, keys.auth, keys.pubKey)
         val store = RegistrationStore(context)
         val now = System.currentTimeMillis()
         when (RegistrationMemo.judge(now, server, PushTransport.TRANSPORT_FCM, credential, store.last(), store.refusal())) {
@@ -131,6 +138,7 @@ object FcmRegistrar {
                 installationId,
                 label = DeviceName.resolve(context),
                 device = deps.deviceStore().id(),
+                keys = keys,
             )
             val registration = Registration(server, PushTransport.TRANSPORT_FCM, credential, now)
             when {
@@ -165,10 +173,32 @@ object FcmRegistrar {
     }
 
     /**
+     * This device's Web Push keys for FCM, made on first use and kept in the
+     * UnifiedPush connector's key store under [FCM_KEYS]: the server seals
+     * every message to them, and [fcmFields] opens it. Null when the key
+     * store fails, and the device then registers without keys: plain messages
+     * rather than none.
+     */
+    private fun publicKeys(context: Context): PublicKeySet? = try {
+        val manager = DefaultKeyManager(context)
+        if (!manager.exists(FCM_KEYS)) manager.generate(FCM_KEYS)
+        manager.getPublicKeySet(FCM_KEYS)
+    } catch (e: Exception) {
+        Log.w(TAG, "FCM keys unavailable: ${e.message}")
+        null
+    }
+
+    /**
      * Tear down on logout / server switch. The installation stays deliverable
-     * on Google's side until unregistered, so drop it and the FirebaseApp too.
+     * on Google's side until unregistered, so drop it and the FirebaseApp too,
+     * and the keys, so the next server or account is given new ones.
      */
     suspend fun disconnect(context: Context) {
+        try {
+            DefaultKeyManager(context).delete(FCM_KEYS)
+        } catch (e: Exception) {
+            Log.w(TAG, "FCM keys not deleted: ${e.message}")
+        }
         val app = try {
             FirebaseApp.getInstance()
         } catch (_: IllegalStateException) {
@@ -231,6 +261,7 @@ object FcmRegistrar {
         installationId: String,
         label: String,
         device: String,
+        keys: PublicKeySet?,
     ): Answer {
         val appToken = authRepository.fetchToken("notifications").getOrNull()
             ?: error("Could not mint notifications app token")
@@ -238,12 +269,14 @@ object FcmRegistrar {
         // The FID goes in `token` as well as `installation`: FCM's send API
         // accepts an FID in its `token` field while it moves to `fid`, so a
         // server that still sends by token keeps delivering.
-        val body = JSONObject()
+        val json = JSONObject()
             .put("token", installationId)
             .put("installation", installationId)
             .put("label", label)
-            .toString()
-            .toRequestBody("application/json".toMediaType())
+        // The keys the server seals messages to; a server that predates them
+        // ignores them and sends plain fields, which fcmFields still reads.
+        if (keys != null) json.put("auth", keys.auth).put("p256dh", keys.pubKey)
+        val body = json.toString().toRequestBody("application/json".toMediaType())
         // The Device header binds the push account to this device, so a later
         // registration from the same phone replaces it rather than adding to it.
         val request = Request.Builder()

@@ -613,6 +613,7 @@
     <string name="market_listings_remove_message">Die lys sal vir kopers verberg word. Dit kan nie ongedaan gemaak word nie, maar jy kan dit later as \'n nuwe konsep weer lys.</string>
     <string name="market_listings_remove_message_auction">Hierdie sal die veiling kanselleer. Die lys sal versteek word vir kopers; jy kan dit later as \'n nuwe konsep her-lys.</string>
     <string name="market_listings_remove_title">Verwyder hierdie lys?</string>
+    <string name="market_audit_actor_staff">Personeel</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Dit sal die veiling kanselleer en %1$s aktiewe bieër in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>
         <item quantity="other">Dit sal die veiling kanselleer en %1$s aktiewe bieërs in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>

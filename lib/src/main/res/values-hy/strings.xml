@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Ստուգաթերթիկ</string>
     <string name="view_list_sorted_ascending">դասավորված աճման կարգով</string>
     <string name="view_list_sorted_descending">դասավորված նվազման կարգով</string>
+    <string name="notification_channel_settings">Կարգավորումների ծանուցումներ</string>
 </resources>

@@ -408,4 +408,5 @@
     <string name="field_type_checklist">បញ្ជីពិនិត្យ</string>
     <string name="view_list_sorted_ascending">តម្រៀបតាមលំដាប់កើន</string>
     <string name="view_list_sorted_descending">តម្រៀបតាមលំដាប់ថយ</string>
+    <string name="notification_channel_settings">ការជូនដំណឹងពីការកំណត់</string>
 </resources>

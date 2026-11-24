@@ -45,6 +45,9 @@ import org.mochios.android.format.formatPrice
 import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.StaffAuditTimeline
+import org.mochios.staff.ui.components.reportReasonLabel
+import org.mochios.staff.ui.components.reportTypeLabel
+import org.mochios.staff.ui.reports.reportTarget
 
 /**
  * Moderator dialog for acting on a report. [readOnly] renders metadata and
@@ -107,7 +110,7 @@ fun ReportActionDialog(
                 Spacer(Modifier.height(4.dp))
                 StaffAuditTimeline(
                     kind = "report",
-                    objectId = report.id.toString(),
+                    objectId = report.id,
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
@@ -138,10 +141,10 @@ internal fun MetadataCard(report: Report) {
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        MetaRow(stringResource(R.string.staff_reports_meta_type), report.type)
+        MetaRow(stringResource(R.string.staff_reports_meta_type), reportTypeLabel(report.type))
         MetaRow(
             stringResource(R.string.staff_reports_meta_target),
-            targetText(report),
+            reportTarget(report),
         )
         if (report.type == "listing" && report.listing != null) {
             MetaRow(
@@ -159,7 +162,7 @@ internal fun MetadataCard(report: Report) {
         )
         MetaRow(
             stringResource(R.string.staff_reports_meta_reason),
-            reasonLabel(report.reason),
+            reportReasonLabel(report.reason),
         )
         if (report.details.isNotBlank()) {
             Spacer(Modifier.height(4.dp))
@@ -250,21 +253,3 @@ private fun reportActionOptions(): List<Pair<String, String>> = listOf(
     "suspend" to stringResource(R.string.staff_reports_action_suspend),
     "ban" to stringResource(R.string.staff_reports_action_ban),
 )
-
-@Composable
-private fun targetText(report: Report): String = when (report.type) {
-    "listing" -> report.listing?.title
-        ?: stringResource(R.string.staff_reports_listing_label, report.target)
-    else -> report.targetName.ifBlank { formatFingerprint(report.targetFingerprint) }
-}
-
-@Composable
-private fun reasonLabel(reason: String): String = when (reason) {
-    "prohibited" -> stringResource(R.string.staff_reports_reason_prohibited)
-    "counterfeit" -> stringResource(R.string.staff_reports_reason_counterfeit)
-    "misleading" -> stringResource(R.string.staff_reports_reason_misleading)
-    "inappropriate" -> stringResource(R.string.staff_reports_reason_inappropriate)
-    "spam" -> stringResource(R.string.staff_reports_reason_spam)
-    "other" -> stringResource(R.string.staff_reports_reason_other)
-    else -> reason
-}

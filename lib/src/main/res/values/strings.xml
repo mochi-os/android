@@ -267,6 +267,9 @@
     <string name="push_service_title">Mochi listening for notifications</string>
     <string name="push_service_action_hide">Hide</string>
 
+    <!-- The channel of the notifications that open the Settings app -->
+    <string name="notification_channel_settings">Settings notifications</string>
+
     <!-- Reauth-required system notification (rare; surfaces only on persistent 401) -->
     <string name="reauth_channel_name">Mochi sign-in required</string>
     <string name="reauth_channel_description">Surfaces when Mochi can\'t reach your server because your session has been invalidated</string>

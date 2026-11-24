@@ -8,6 +8,7 @@ package org.mochios.staff.ui.config
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -29,6 +30,8 @@ data class ConfigUiState(
     /** Local edits the user has typed but not yet saved. */
     val local: Map<String, String> = emptyMap(),
     val isLoading: Boolean = false,
+    /** Whether [server] holds a read of the configuration; its fields are only editable once it does. */
+    val loaded: Boolean = false,
     val error: MochiError? = null,
     val saving: Map<String, Boolean> = emptyMap(),
 )
@@ -68,7 +71,10 @@ class ConfigViewModel @Inject constructor(
                     server = merged,
                     local = merged,
                     isLoading = false,
+                    loaded = true,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isLoading = false, error = e.toMochiError())
             }

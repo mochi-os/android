@@ -5,36 +5,50 @@
 
 package org.mochios.staff.ws
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.REOPEN
-import org.mochios.android.websocket.StreamWsEvent
-import org.mochios.android.websocket.rememberStreamWebSocket
 
 /**
- * Opens the `staff-events` WebSocket and republishes decoded `{topic, object}`
- * payloads to [eventsBus]. Mount once near the top of the nav graph - the
- * socket closes on dispose.
+ * The key the Comptroller's staff events arrive on. Each list that follows
+ * them subscribes for its view model's whole life, so the shared socket stays
+ * open while any of them is on the back stack, a screen pushed over it
+ * included.
  */
-@Composable
-fun rememberStaffEventsSubscription(eventsBus: StaffEventsBus) {
-    val controller = rememberStreamWebSocket("staff-events", app = "staff")
-    LaunchedEffect(controller) {
-        controller?.events?.collect { event ->
-            staffEvent(event)?.let { staffEvent -> eventsBus.publish(staffEvent) }
-        }
-    }
+const val STAFF_EVENTS = "staff-events"
+
+/**
+ * Live staff event from the `staff-events` socket. Topics: `staff/report` ->
+ * [NewReport], `staff/moderation` -> [ModerationUpdated], `staff/dispute` ->
+ * [NewDispute], else [Unknown].
+ */
+sealed class StaffEvent {
+    /** A new buyer-filed report landed in the reports queue. */
+    object NewReport : StaffEvent()
+
+    /**
+     * A listing's moderation state changed, or an appeal was filed or decided.
+     */
+    object ModerationUpdated : StaffEvent()
+
+    /** A new buyer dispute or chargeback landed. */
+    object NewDispute : StaffEvent()
+
+    /**
+     * A topic with no explicit mapping, or the socket opening again after
+     * missing events; treat as a hint to refetch.
+     */
+    data class Unknown(val topic: String) : StaffEvent()
 }
 
 /**
- * The [StaffEvent] a frame on the `staff-events` stream stands for, or null for
+ * The [StaffEvent] a frame on the `staff-events` socket stands for, or null for
  * one with no topic. The socket opening again after being down is a
  * [StaffEvent.Unknown]: every list reads again, having missed whatever was
  * sent meanwhile.
  */
-internal fun staffEvent(event: StreamWsEvent): StaffEvent? {
+internal fun staffEvent(event: WebSocketEvent): StaffEvent? {
     if (event.type == REOPEN) return StaffEvent.Unknown(REOPEN)
-    val topic = event.raw["topic"] as? String ?: return null
+    val topic = event.topic ?: return null
     return topic.toStaffEvent()
 }
 

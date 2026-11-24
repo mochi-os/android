@@ -210,16 +210,16 @@
     <string name="push_service_channel_description">האַלט Mochi פֿאַרבונדן צו באַקומען באַנאָכריכטיקונגען</string>
     <string name="push_service_group">הינטערגרונט־דינסט</string>
     <string name="push_service_title">Mochi הערט נאָך באַנאָכריכטיקונגען</string>
-    <string name="reauth_channel_name">מאָטשי - אַנמעלדונג נייטיק</string>
-    <string name="reauth_channel_description">ווייַזט זיך אַז מאָטשי קען נישט דערגרייכן אייער סערווער ווייַל אייער סעסיע איז אַנגילטיק געווארן</string>
-    <string name="reauth_signin_title">מאָטשי: זיך ווידער אַנמעלדן</string>
+    <string name="reauth_channel_name">Mochi: אַנמעלדונג נייטיק</string>
+    <string name="reauth_channel_description">ווייַזט זיך ווען Mochi קען נישט דערגרייכן אייער סערווער, ווייַל אייער סעסיע איז אומגילטיק געוואָרן</string>
+    <string name="reauth_signin_title">Mochi: מעלדט זיך ווידער אָן</string>
     <string name="reauth_signin_text">מעלדונגען זענען אָפּגעשטעלט ביז איר וועט זיך ווידער אַנמעלדן</string>
     <string name="oem_hint_title">בלייַבט דערגרייכבאַר אין הינטערגרונט</string>
-    <string name="oem_hint_body">מאָטשי דאַרף לויפן אין הינטערגרונט כדי צו צושטעלן מעלדונגען. ביטע ערלויבט דאָס אויפן קומענדיגן עקראַן, אַנדערש קען אייער טעלעפאָן אָפּשטעלן מעלדונגען ווען דער עקראַן איז אויס.</string>
-    <string name="oem_hint_samsung_note">אויף סאַמסונג טעלעפאָנען, קוקט אויך אונטער איינשטעלונגען → גערעט זאָרג → שלאָפנדע אַפּליקאַציעס און אַוועקנעמט מאָטשי אויב עס איז דאָרט.</string>
+    <string name="oem_hint_body">Mochi דאַרף לויפן אין הינטערגרונט כדי צו צושטעלן מעלדונגען. ביטע ערלויבט דאָס אויפן קומענדיגן עקראַן, אַנדערש קען אייער טעלעפאָן אָפּשטעלן מעלדונגען ווען דער עקראַן איז אויס.</string>
+    <string name="oem_hint_samsung_note">אויף סאַמסונג טעלעפאָנען, קוקט אויך אונטער איינשטעלונגען → גערעט זאָרג → שלאָפנדע אַפּליקאַציעס און נעמט אַוועק Mochi אויב עס שטייט דאָרט.</string>
     <string name="oem_hint_allow">ערלויבט הינטערגרונט</string>
     <string name="oem_hint_dismiss">ווייַזט נישט נאָך אַ מאָל</string>
-    <string name="about_title">מאָטשי קליענט</string>
+    <string name="about_title">Mochi קליענט</string>
     <string name="about_version">ווערסיע %1$s</string>
     <string name="about_check_updates">זוכט אויפדאַטירונגען</string>
     <string name="about_up_to_date">אויפן נייַעסטן</string>
@@ -409,4 +409,5 @@
     <string name="field_type_checklist">טשעקליסטע</string>
     <string name="view_list_sorted_ascending">סאָרטירט אַרויפֿגייענדיק</string>
     <string name="view_list_sorted_descending">סאָרטירט אַראָפּגייענדיק</string>
+    <string name="notification_channel_settings">מעלדונגען פֿון אײַנשטעלונגען</string>
 </resources>

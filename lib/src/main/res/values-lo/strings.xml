@@ -408,4 +408,5 @@
     <string name="field_type_checklist">ລາຍການກວດສອບ</string>
     <string name="view_list_sorted_ascending">ຈັດລຽງຈາກໜ້ອຍຫາຫຼາຍ</string>
     <string name="view_list_sorted_descending">ຈັດລຽງຈາກຫຼາຍຫາໜ້ອຍ</string>
+    <string name="notification_channel_settings">ການແຈ້ງເຕືອນການຕັ້ງຄ່າ</string>
 </resources>

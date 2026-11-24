@@ -411,4 +411,5 @@
     <string name="field_type_checklist">Kontrolsaraksts</string>
     <string name="view_list_sorted_ascending">kārtots augošā secībā</string>
     <string name="view_list_sorted_descending">kārtots dilstošā secībā</string>
+    <string name="notification_channel_settings">Iestatījumu paziņojumi</string>
 </resources>

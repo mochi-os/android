@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Auglýsingin verður falin fyrir kaupendum. Þetta er ekki hægt að afturkalla, en þú getur endurskráð hana síðar sem ný drög.</string>
     <string name="market_listings_remove_message_auction">Þetta mun hætta við uppboðið. Skráningin verður falin fyrir kaupendum; þú getur skráð hana aftur síðar sem nýja drög.</string>
     <string name="market_listings_remove_title">Fjarlægja þessa auglýsingu?</string>
+    <string name="market_audit_actor_staff">Starfsfólk</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Þetta hættir við uppboðið og lætur %1$s virkan bjóðanda vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>
         <item quantity="other">Þetta hættir við uppboðið og lætur %1$s virka bjóðendur vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>

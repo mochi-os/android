@@ -442,6 +442,7 @@ class UpdateChecker(
                 null
             }
             if (encoded.isNullOrBlank()) {
+                // log-ok: the packages server's public address, not the user's server
                 Log.w(TAG, "Refusing the manifest: no signature at $signatureUrl")
                 return false
             }

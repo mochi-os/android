@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Itatago ang listahan sa mga mamimili. Hindi ito mababawi, ngunit maaari mo itong ilista muli mamaya bilang bagong draft.</string>
     <string name="market_listings_remove_message_auction">Kakanselahin nito ang auction. Ang listahan ay itatago mula sa mga mamimili; maaari mo itong i-relist mamaya bilang bagong draft.</string>
     <string name="market_listings_remove_title">Alisin ang listahang ito?</string>
+    <string name="market_audit_actor_staff">Mga kawani</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Kakanselahin nito ang auction at aabisuhan ang %1$s aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>
         <item quantity="other">Kakanselahin nito ang auction at aabisuhan ang %1$s aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>

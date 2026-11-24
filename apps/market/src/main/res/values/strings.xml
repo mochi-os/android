@@ -53,6 +53,7 @@
     <string name="market_audit_account_suspended">Suspended as seller</string>
     <string name="market_audit_account_unbanned">Unbanned</string>
     <string name="market_audit_account_unsuspended">Unsuspended</string>
+    <string name="market_audit_actor_staff">Staff</string>
     <string name="market_audit_auction_bid_placed">Bid placed</string>
     <string name="market_audit_auction_cancelled">Auction cancelled</string>
     <string name="market_audit_auction_created">Auction created</string>

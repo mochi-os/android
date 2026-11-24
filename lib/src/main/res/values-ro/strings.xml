@@ -411,4 +411,5 @@
     <string name="field_type_checklist">Listă de verificare</string>
     <string name="view_list_sorted_ascending">sortat crescător</string>
     <string name="view_list_sorted_descending">sortat descrescător</string>
+    <string name="notification_channel_settings">Notificări din Setări</string>
 </resources>

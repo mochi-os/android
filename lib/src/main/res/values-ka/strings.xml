@@ -409,4 +409,5 @@
     <string name="field_type_checklist">ჩამონათვალი</string>
     <string name="view_list_sorted_ascending">დალაგებულია ზრდადობით</string>
     <string name="view_list_sorted_descending">დალაგებულია კლებადობით</string>
+    <string name="notification_channel_settings">პარამეტრების შეტყობინებები</string>
 </resources>

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">चेकलिस्ट</string>
     <string name="view_list_sorted_ascending">चढत्या क्रमाने लावलेले</string>
     <string name="view_list_sorted_descending">उतरत्या क्रमाने लावलेले</string>
+    <string name="notification_channel_settings">सेटिंग्ज सूचना</string>
 </resources>

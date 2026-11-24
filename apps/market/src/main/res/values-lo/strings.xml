@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້. ການກະທຳນີ້ຄືນບໍ່ໄດ້, ແຕ່ທ່ານສາມາດລະບຸໃໝ່ພາຍຫຼັງເປັນສະບັບຮ່າງໃໝ່.</string>
     <string name="market_listings_remove_message_auction">ນີ້ຈະຍົກເລີກການປະມູນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລະບຸໃໝ່ພາຍຫຼັງເປັນສະບັບຮ່າງໃໝ່.</string>
     <string name="market_listings_remove_title">ລຶບລາຍການຂາຍນີ້?</string>
+    <string name="market_audit_actor_staff">ພະນັກງານ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$s ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>
         <item quantity="other">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$s ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>

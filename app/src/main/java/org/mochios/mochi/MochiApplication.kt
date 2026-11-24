@@ -36,6 +36,7 @@ import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.PushServiceWatchdog
+import org.mochios.android.push.setupSettingsNotificationChannel
 import org.mochios.android.update.UpdateChecker
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.calendars.notifications.setupCalendarsNotificationChannel
@@ -139,6 +140,7 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
         setupMarketNotificationChannel(this)
         setupStaffNotificationChannel(this)
         setupCalendarsNotificationChannel(this)
+        setupSettingsNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
         UpdateChecker.schedule(this)
         // Shows and hides the Mochi Staff launcher alias as the bound

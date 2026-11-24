@@ -646,6 +646,7 @@
     <string name="market_price_reserve_unmet">Preço de reserva ainda não atingido</string>
     <string name="market_refund_dialog_amount_invalid">Insira um valor entre %1$s e %2$s</string>
     <string name="market_refund_dialog_prior">Reembolso anterior: %1$s</string>
+    <string name="market_audit_actor_staff">Equipe</string>
     <plurals name="market_editor_days">
         <item quantity="one">%1$s dia</item>
         <item quantity="other">%1$s dias</item>

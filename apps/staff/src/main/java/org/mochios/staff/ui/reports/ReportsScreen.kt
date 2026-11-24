@@ -34,13 +34,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
+import org.mochios.android.format.personName
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ChoiceFilter
@@ -52,7 +55,13 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.staff.R
 import org.mochios.staff.model.Report
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.StaffCardAction
+import org.mochios.staff.ui.components.filterOptions
+import org.mochios.staff.ui.components.reportReasonLabel
+import org.mochios.staff.ui.components.reportStatusLabels
+import org.mochios.staff.ui.components.reportTypeLabel
+import org.mochios.staff.ui.components.reportTypeLabels
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.components.StaffUserAvatar
@@ -68,19 +77,13 @@ fun ReportsScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-
-    val successMsg = stringResource(R.string.staff_reports_action_taken_toast)
+    val resources = LocalResources.current
 
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
             when (event) {
-                is ReportsEvent.Toast -> {
-                    val text = when (event.message) {
-                        ReportsViewModel.SUCCESS_TOAST -> successMsg
-                        else -> event.message
-                    }
-                    snackbar.showSnackbar(text)
-                }
+                is ReportsEvent.Toast -> snackbar.showSnackbar(resources.getString(event.messageRes))
+                is ReportsEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
             }
         }
     }
@@ -94,7 +97,7 @@ fun ReportsScreen(
             onStatusChange = viewModel::setStatus,
             onLoadMore = viewModel::loadMore,
             onOpenListing = { listingId ->
-                navController.navigate("market/listing/$listingId")
+                StaffApp.listing(listingId)?.let { route -> navController.navigate(route) }
             },
             onOpenReport = viewModel::openAction,
             onRetry = viewModel::reload,
@@ -144,7 +147,7 @@ private fun ReportsBody(
                     label = stringResource(R.string.staff_reports_filter_type_label),
                     chipLabel = stringResource(R.string.staff_filter_label_type),
                     anyLabel = stringResource(R.string.staff_reports_any_type),
-                    options = reportTypeOptions(),
+                    options = filterOptions(reportTypeLabels),
                     current = state.type,
                     onSelect = onTypeChange,
                 ),
@@ -152,7 +155,7 @@ private fun ReportsBody(
                     label = stringResource(R.string.staff_reports_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_reports_any_status),
-                    options = reportStatusOptions(),
+                    options = filterOptions(reportStatusLabels),
                     current = state.status,
                     onSelect = onStatusChange,
                 ),
@@ -177,7 +180,7 @@ private fun ReportsBody(
                 items = state.reports,
                 key = { report -> report.id },
                 load = state.load,
-                hasMore = state.reports.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = onLoadMore,
             ) { report ->
                 ReportRow(
@@ -206,7 +209,7 @@ internal fun ReportRow(
             // Target: the listing title, or the reported user's resolved name.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = targetText(report),
+                    text = reportTarget(report),
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -232,7 +235,7 @@ internal fun ReportRow(
             // Reporter row.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 StaffUserAvatar(
-                    name = report.reporterName.ifBlank { report.reporter },
+                    name = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
                     id = report.reporter,
                     size = 20.dp,
                 )
@@ -248,16 +251,20 @@ internal fun ReportRow(
             }
             Spacer(Modifier.height(8.dp))
 
-            // Type / status / reason chips.
+            // What the report is about, and where it stands.
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                StaffStatusBadge(status = report.type)
+                Text(
+                    text = reportTypeLabel(report.type),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
                 StaffStatusBadge(status = report.status)
             }
             Spacer(Modifier.height(6.dp))
 
             // Reason, and the reporter's details when they wrote any.
             Text(
-                text = reasonLabel(report.reason),
+                text = reportReasonLabel(report.reason),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 2,
@@ -295,35 +302,13 @@ internal fun ReportRow(
     }
 }
 
+/**
+ * What a report is about: the reported listing's title, or the reported
+ * person's name, else fingerprint; never an id.
+ */
 @Composable
-private fun targetText(report: Report): String = when (report.type) {
-    "listing" -> report.listing?.title
-        ?: stringResource(R.string.staff_reports_listing_label, report.target)
-    else -> report.targetName.ifBlank { formatFingerprint(report.targetFingerprint) }
+internal fun reportTarget(report: Report): String = when (report.type) {
+    "listing" -> report.listing?.title?.ifBlank { null } ?: stringResource(R.string.staff_listing_untitled)
+    else -> personName(report.targetName, report.targetFingerprint)
 }
-
-@Composable
-private fun reasonLabel(reason: String): String = when (reason) {
-    "prohibited" -> stringResource(R.string.staff_reports_reason_prohibited)
-    "counterfeit" -> stringResource(R.string.staff_reports_reason_counterfeit)
-    "misleading" -> stringResource(R.string.staff_reports_reason_misleading)
-    "inappropriate" -> stringResource(R.string.staff_reports_reason_inappropriate)
-    "spam" -> stringResource(R.string.staff_reports_reason_spam)
-    "other" -> stringResource(R.string.staff_reports_reason_other)
-    else -> reason
-}
-
-@Composable
-private fun reportTypeOptions(): List<Pair<String, String>> = listOf(
-    "listing" to stringResource(R.string.staff_reports_type_listing),
-    "user" to stringResource(R.string.staff_reports_type_user),
-)
-
-@Composable
-private fun reportStatusOptions(): List<Pair<String, String>> = listOf(
-    "pending" to stringResource(R.string.staff_reports_status_pending),
-    "reviewed" to stringResource(R.string.staff_reports_status_reviewed),
-    "actioned" to stringResource(R.string.staff_reports_status_actioned),
-    "dismissed" to stringResource(R.string.staff_reports_status_dismissed),
-)
 

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">चेकलिस्ट</string>
     <string name="view_list_sorted_ascending">आरोही क्रम में सॉर्ट किया गया</string>
     <string name="view_list_sorted_descending">अवरोही क्रम में सॉर्ट किया गया</string>
+    <string name="notification_channel_settings">सेटिंग्स नोटिफ़िकेशन</string>
 </resources>

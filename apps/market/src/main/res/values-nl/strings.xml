@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">De advertentie wordt verborgen voor kopers. Dit kan niet ongedaan worden gemaakt, maar je kunt het later opnieuw als nieuw concept aanbieden.</string>
     <string name="market_listings_remove_message_auction">Hiermee wordt de veiling geannuleerd. De advertentie wordt verborgen voor kopers; je kunt deze later opnieuw plaatsen als een nieuw concept.</string>
     <string name="market_listings_remove_title">Deze advertentie verwijderen?</string>
+    <string name="market_audit_actor_staff">Medewerkers</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Hiermee wordt de veiling geannuleerd en wordt %1$s actieve bieder op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>
         <item quantity="other">Hiermee wordt de veiling geannuleerd en worden %1$s actieve bieders op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>

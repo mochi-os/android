@@ -25,7 +25,7 @@ packages = ../../packages/android
 generated := $(shell date +%s)
 key = ../../core/local/update-signing.key
 
-.PHONY: all apk clean locales release release-publish
+.PHONY: all apk clean locales release release-publish verification
 
 all: apk
 
@@ -40,6 +40,17 @@ apk:
 # rules and one place to change them.
 locales:
 	python3 tools/check-locales.py --discover . --strict
+
+# Gradle checks every artefact it fetches - libraries, plugins, the Kotlin
+# compiler, lint - against its SHA-256 in gradle/verification-metadata.xml, so
+# one replaced on a repository fails the build rather than being compiled into
+# a signed release. After changing a version in gradle/libs.versions.toml, run
+# this to add the new artefacts' checksums, over every task the release, CI and
+# the screenshots build run, and read the new entries in the file's diff
+# before committing it. Entries for versions no longer used are harmless. A
+# -sources or -javadoc jar an IDE fetches is trusted without one.
+verification:
+	./gradlew --write-verification-metadata sha256 :app:assembleDebug :app:assembleRelease testDebugUnitTest lintDebug
 
 clean:
 	./gradlew clean

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Λίστα ελέγχου</string>
     <string name="view_list_sorted_ascending">ταξινόμηση κατά αύξουσα σειρά</string>
     <string name="view_list_sorted_descending">ταξινόμηση κατά φθίνουσα σειρά</string>
+    <string name="notification_channel_settings">Ειδοποιήσεις ρυθμίσεων</string>
 </resources>

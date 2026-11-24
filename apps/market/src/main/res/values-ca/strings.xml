@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">L\'anunci s\'amagarà als compradors. Això no es pot desfer, però pots tornar-lo a publicar més tard com a nou esborrany.</string>
     <string name="market_listings_remove_message_auction">Això cancel·larà la subhasta. L\'anunci s\'amagarà als compradors; pots tornar-lo a publicar més tard com a nou esborrany.</string>
     <string name="market_listings_remove_title">Vols eliminar aquest anunci?</string>
+    <string name="market_audit_actor_staff">Personal</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Això cancel·larà la subhasta i avisarà %1$s licitador actiu. L\'anunci s\'amagarà als compradors; més endavant podeu tornar-lo a publicar com a esborrany nou.</item>
         <item quantity="other">Això cancel·larà la subhasta i avisarà %1$s licitadors actius. L\'anunci s\'amagarà als compradors; més endavant podeu tornar-lo a publicar com a esborrany nou.</item>

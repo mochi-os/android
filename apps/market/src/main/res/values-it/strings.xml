@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">L\'annuncio sarà nascosto agli acquirenti. Questa azione non può essere annullata, ma potrai ripubblicarlo più tardi come una nuova bozza.</string>
     <string name="market_listings_remove_message_auction">Questo annullerà l\'asta. L\'inserzione sarà nascosta agli acquirenti; potrai riproporla in seguito come nuova bozza.</string>
     <string name="market_listings_remove_title">Rimuovere questo annuncio?</string>
+    <string name="market_audit_actor_staff">Staff</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">L’asta verrà annullata e %1$s offerente attivo verrà avvisato. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>
         <item quantity="other">L’asta verrà annullata e %1$s offerenti attivi verranno avvisati. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>

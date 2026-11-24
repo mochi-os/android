@@ -411,4 +411,5 @@
     <string name="field_type_checklist">Lista</string>
     <string name="view_list_sorted_ascending">sortirano rastuće</string>
     <string name="view_list_sorted_descending">sortirano opadajuće</string>
+    <string name="notification_channel_settings">Obavještenja postavki</string>
 </resources>

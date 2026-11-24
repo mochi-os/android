@@ -410,4 +410,5 @@
     <string name="field_type_checklist">Lista de verificação</string>
     <string name="view_list_sorted_ascending">ordenado de forma ascendente</string>
     <string name="view_list_sorted_descending">ordenado de forma descendente</string>
+    <string name="notification_channel_settings">Notificações das Definições</string>
 </resources>

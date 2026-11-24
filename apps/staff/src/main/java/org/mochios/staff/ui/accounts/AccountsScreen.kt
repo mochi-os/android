@@ -46,14 +46,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -83,34 +84,19 @@ import org.mochios.staff.ui.dialog.AccountAuditDialog
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccountsScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
     viewModel: AccountsViewModel = hiltViewModel(),
     filtersOpen: Boolean = false,
     onFiltersDismiss: () -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
+    val resources = LocalResources.current
 
-    val suspendedMsg = stringResource(R.string.staff_accounts_suspended_toast)
-    val unsuspendedMsg = stringResource(R.string.staff_accounts_unsuspended_toast)
-    val bannedMsg = stringResource(R.string.staff_accounts_banned_toast)
-    val unbannedMsg = stringResource(R.string.staff_accounts_unbanned_toast)
-
-    // Snackbar plumbing — translate ViewModel sentinel markers to their
-    // localised string before showing.
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
             when (event) {
-                is AccountsEvent.Toast -> {
-                    val text = when (event.message) {
-                        AccountsViewModel.SUCCESS_SUSPENDED -> suspendedMsg
-                        AccountsViewModel.SUCCESS_UNSUSPENDED -> unsuspendedMsg
-                        AccountsViewModel.SUCCESS_BANNED -> bannedMsg
-                        AccountsViewModel.SUCCESS_UNBANNED -> unbannedMsg
-                        else -> event.message
-                    }
-                    snackbar.showSnackbar(text)
-                }
+                is AccountsEvent.Toast -> snackbar.showSnackbar(resources.getString(event.messageRes))
+                is AccountsEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
             }
         }
     }
@@ -243,7 +229,7 @@ private fun AccountsBody(
                 items = state.accounts,
                 key = { account -> account.id },
                 load = state.load,
-                hasMore = state.accounts.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = onLoadMore,
             ) { account ->
                 AccountRow(

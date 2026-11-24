@@ -94,7 +94,12 @@ object MarketApp {
         return "market/messages/$listingId/$threadId${query.orEmpty()}"
     }
     fun conversation(threadId: String) = "market/messages/$threadId"
-    fun publicProfile(accountId: String) = "market/account/$accountId"
+    /**
+     * An account's profile, addressed by the [fingerprint] where the
+     * Comptroller sends one, else by its [accountId], which it accepts as well.
+     */
+    fun publicProfile(accountId: String, fingerprint: String? = null) =
+        "market/account/${fingerprint?.takeIf { value -> value.isNotBlank() } ?: accountId}"
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
     fun sellerSettings(code: String?, state: String?, error: String?, errorDescription: String?): String {

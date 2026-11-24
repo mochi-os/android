@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Jerin dubawa</string>
     <string name="view_list_sorted_ascending">an jera hawa sama</string>
     <string name="view_list_sorted_descending">an jera sauka ƙasa</string>
+    <string name="notification_channel_settings">Sanarwar saituna</string>
 </resources>

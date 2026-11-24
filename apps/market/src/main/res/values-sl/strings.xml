@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Oglas bo skrit pred kupci. Tega ni mogoče razveljaviti, lahko pa ga kasneje znova objavite kot nov osnutek.</string>
     <string name="market_listings_remove_message_auction">S tem boste preklicali dražbo. Oglas bo skrit pred kupci; lahko ga znova objavite kasneje kot nov osnutek.</string>
     <string name="market_listings_remove_title">Odstrani ta oglas?</string>
+    <string name="market_audit_actor_staff">Osebje</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">To bo preklicalo dražbo in obvestilo %1$s aktivnega ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
         <item quantity="two">To bo preklicalo dražbo in obvestilo %1$s aktivna ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>

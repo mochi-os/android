@@ -16,6 +16,7 @@ import org.mochios.staff.model.ConfigEntry
 import org.mochios.staff.model.DirectorySearchResponse
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.model.DisputesListResponse
+import org.mochios.staff.model.ListingView
 import org.mochios.staff.model.Me
 import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
@@ -73,7 +74,7 @@ interface StaffApi {
         @Field("id") id: String,
     ): Response<ApiResponse<OkResponse>>
 
-    /** Update a staff team member's role. */
+    /** Update a staff team member's role. Answers the member as a `team/list` row. */
     @FormUrlEncoded
     @POST("-/team/role")
     suspend fun setTeamRole(
@@ -96,7 +97,8 @@ interface StaffApi {
 
     /**
      * `status` is `active`/`suspended`/`banned`; `seller` limits to onboarded
-     * sellers; `query` substring-matches biography, location and name.
+     * sellers; `query` matches the account's entity id. `after` is the `next`
+     * the previous page answered.
      */
     @GET("-/accounts/list")
     suspend fun listAccounts(
@@ -105,6 +107,7 @@ interface StaffApi {
         @Query("query") query: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<AccountsListResponse>>
 
     /** Suspend an account (temporary; reversible via [unsuspendAccount]). */
@@ -204,7 +207,14 @@ interface StaffApi {
         @Query("query") query: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<PendingListingsResponse>>
+
+    /** One listing, whatever its status, with its seller, photos and moderation history. */
+    @GET("-/listings/get")
+    suspend fun getListing(
+        @Query("id") id: String,
+    ): Response<ApiResponse<ListingView>>
 
     /** Approve a pending listing. */
     @FormUrlEncoded
@@ -234,12 +244,17 @@ interface StaffApi {
 
     // ---- Moderation ----
 
-    /** Moderation log, optionally filtered to a single listing id. */
+    /**
+     * Moderation log, optionally narrowed to one listing by its id and to
+     * listings whose title matches `query`.
+     */
     @GET("-/moderation/log")
     suspend fun getModerationLog(
         @Query("listing") listing: String? = null,
+        @Query("query") query: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ModerationLogResponse>>
 
     @GET("-/moderation/thresholds")
@@ -261,6 +276,7 @@ interface StaffApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ReportsListResponse>>
 
     /**
@@ -288,6 +304,7 @@ interface StaffApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<DisputesListResponse>>
 
     @FormUrlEncoded
@@ -309,12 +326,13 @@ interface StaffApi {
     @GET("-/metrics/overview")
     suspend fun getMetricsOverview(): Response<ApiResponse<MetricsOverview>>
 
-    /** `page` is 1-based - staff.star forwards only `tab`, `page`, `limit`. */
+    /** `page` is 1-based; each tab pages on its own `after` cursor. */
     @GET("-/metrics/activity")
     suspend fun getMetricsActivity(
         @Query("tab") tab: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ActivityData>>
 
     // ---- Audit ----
@@ -334,13 +352,16 @@ interface StaffApi {
         @Query("dedupe") dedupe: Int? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<AuditListResponse>>
 
+    /** One object's audit history, newest first, a page at a time on `after`. */
     @GET("-/audit/object")
     suspend fun getObjectAudit(
         @Query("kind") kind: String,
         @Query("object") `object`: String,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<AuditListResponse>>
 
     // ---- Config ----
@@ -364,6 +385,7 @@ interface StaffApi {
     suspend fun listAppeals(
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<AppealsListResponse>>
 
     /**
@@ -380,17 +402,18 @@ interface StaffApi {
 
     // ---- Reviews ----
 
-    /** List user-submitted reviews awaiting moderation. */
+    /** List user-submitted reviews, optionally by status. */
     @GET("-/reviews/list")
     suspend fun listReviews(
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ReviewsListResponse>>
 
     /**
-     * Take action on a review (`remove` / `restore`; staff.star forwards
-     * the action verbatim and the Comptroller validates it).
+     * Take action on a review (`remove` / `restore`; the Comptroller validates
+     * it). Answers the review as a `reviews/list` row.
      */
     @FormUrlEncoded
     @POST("-/reviews/action")

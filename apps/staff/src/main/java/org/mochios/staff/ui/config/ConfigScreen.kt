@@ -42,8 +42,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
@@ -59,7 +59,6 @@ import org.mochios.staff.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConfigScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
     viewModel: ConfigViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -80,10 +79,12 @@ fun ConfigScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
+        val error = state.error
         when {
-            state.isLoading && state.server.isEmpty() -> Box(modifier = Modifier.fillMaxSize()) {
-                LoadingState()
-            }
+            // A configuration that was never read shows no fields: blank ones
+            // would read as nothing configured, and saving one would write it.
+            !state.loaded && error != null && !state.isLoading -> ErrorState(error = error, onRetry = viewModel::load)
+            !state.loaded -> LoadingState()
             else -> ConfigBody(
                 state = state,
                 onLocalChange = viewModel::setLocal,

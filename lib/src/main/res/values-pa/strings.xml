@@ -409,4 +409,5 @@
     <string name="field_type_checklist">ਚੈੱਕਲਿਸਟ</string>
     <string name="view_list_sorted_ascending">ਵਧਦੇ ਕ੍ਰਮ ਵਿੱਚ ਛਾਂਟਿਆ</string>
     <string name="view_list_sorted_descending">ਘਟਦੇ ਕ੍ਰਮ ਵਿੱਚ ਛਾਂਟਿਆ</string>
+    <string name="notification_channel_settings">ਸੈਟਿੰਗਾਂ ਦੀਆਂ ਸੂਚਨਾਵਾਂ</string>
 </resources>

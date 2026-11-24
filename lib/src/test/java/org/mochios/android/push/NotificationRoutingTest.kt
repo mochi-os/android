@@ -6,8 +6,10 @@
 package org.mochios.android.push
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.R
 import org.mochios.android.launcher.LAUNCHER_ACTIVITIES
 
 /**
@@ -21,7 +23,7 @@ class NotificationRoutingTest {
     /** The slugs MochiApplication creates a channel for, in manifest order. */
     private val createdAtStartup = setOf(
         "feeds", "chat", "forums", "projects", "crm", "people",
-        "wikis", "chess", "go", "words", "market", "staff", "calendars",
+        "wikis", "chess", "go", "words", "market", "staff", "calendars", "settings",
     )
 
     @Test
@@ -34,6 +36,36 @@ class NotificationRoutingTest {
         for (slug in NOTIFICATION_CHANNELS) {
             assertEquals(slug, notificationChannelFor(slug, ""))
         }
+    }
+
+    /**
+     * A category's test, linked into Settings, posted on the Feeds channel
+     * while Settings had none.
+     */
+    @Test
+    fun `a notification that opens settings posts on the settings channel`() {
+        assertEquals("settings", notificationChannelFor("notifications", "/settings/user/notifications"))
+    }
+
+    /** Nine of the apps that notify drew the generic Mochi mark in the tray. */
+    @Test
+    fun `every app with a channel has a tray icon of its own`() {
+        for (slug in NOTIFICATION_CHANNELS) {
+            assertNotEquals("no tray icon for $slug", R.drawable.ic_mochi_notification, notificationIconFor(slug))
+        }
+        val icons = NOTIFICATION_CHANNELS.map { slug -> notificationIconFor(slug) }.toSet()
+        assertEquals(NOTIFICATION_CHANNELS.size, icons.size)
+    }
+
+    @Test
+    fun `a published app's id finds its tray icon by the link`() {
+        assertEquals(R.drawable.ic_notification_chess, notificationIconFor(pushApp("12254aHfG39LqrizXg8Wv7", "/chess/g1")))
+    }
+
+    @Test
+    fun `an app the client does not host has the Mochi mark`() {
+        assertEquals(R.drawable.ic_mochi_notification, notificationIconFor(pushApp("12254aHfG39LqrizXg8Wv7", "/air/game")))
+        assertEquals(R.drawable.ic_mochi_notification, notificationIconFor(null))
     }
 
     /** The apps that used to land on Feeds over FCM. */
@@ -93,12 +125,9 @@ class NotificationRoutingTest {
         }
     }
 
-    /**
-     * Home and Settings have launcher activities and no channel: neither ever
-     * posts notifications.
-     */
+    /** Home has a launcher activity and no channel: it never posts notifications. */
     @Test
-    fun `launcher activities beyond the channel set are only home and settings`() {
-        assertEquals(setOf("home", "settings"), LAUNCHER_ACTIVITIES.keys - NOTIFICATION_CHANNELS)
+    fun `the launcher activity beyond the channel set is only home`() {
+        assertEquals(setOf("home"), LAUNCHER_ACTIVITIES.keys - NOTIFICATION_CHANNELS)
     }
 }

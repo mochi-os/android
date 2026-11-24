@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">યાદી ખરીદદારોથી છુપાવવામાં આવશે. આ પૂર્વવત્ કરી શકાતું નથી, પરંતુ તમે પછીથી તેને નવા ડ્રાફ્ટ તરીકે ફરીથી યાદી કરી શકો છો.</string>
     <string name="market_listings_remove_message_auction">આ હરાજી રદ કરશે. યાદી ખરીદદારોથી છુપાવવામાં આવશે; તમે પછીથી તેને નવા ડ્રાફ્ટ તરીકે ફરીથી સૂચિબદ્ધ કરી શકો છો.</string>
     <string name="market_listings_remove_title">આ યાદી દૂર કરશો?</string>
+    <string name="market_audit_actor_staff">સ્ટાફ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">આ હરાજી રદ કરશે અને %1$s સક્રિય બોલી લગાવનારને જાણ કરશે. લિસ્ટિંગ ખરીદદારોથી છુપાવવામાં આવશે; તમે તેને પછીથી નવા ડ્રાફ્ટ તરીકે ફરીથી લિસ્ટ કરી શકો છો.</item>
         <item quantity="other">આ હરાજી રદ કરશે અને %1$s સક્રિય બોલી લગાવનારાઓને જાણ કરશે. લિસ્ટિંગ ખરીદદારોથી છુપાવવામાં આવશે; તમે તેને પછીથી નવા ડ્રાફ્ટ તરીકે ફરીથી લિસ્ટ કરી શકો છો.</item>

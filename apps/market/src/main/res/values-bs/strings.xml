@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Oglas će biti skriven od kupaca. Ovo se ne može poništiti, ali možeš ga kasnije ponovo objaviti kao novu skicu.</string>
     <string name="market_listings_remove_message_auction">Ovo će otkazati aukciju. Oglas će biti skriven od kupaca; možeš ga kasnije ponovo objaviti kao novu skicu.</string>
     <string name="market_listings_remove_title">Ukloniti ovaj oglas?</string>
+    <string name="market_audit_actor_staff">Osoblje</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Ovo će otkazati aukciju i obavijestiti %1$s aktivnog ponuđača. Oglas će biti sakriven od kupaca; kasnije ga možete ponovo objaviti kao novi nacrt.</item>
         <item quantity="few">Ovo će otkazati aukciju i obavijestiti %1$s aktivna ponuđača. Oglas će biti sakriven od kupaca; kasnije ga možete ponovo objaviti kao novi nacrt.</item>

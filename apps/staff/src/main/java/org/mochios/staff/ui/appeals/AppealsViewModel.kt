@@ -17,23 +17,26 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
 import org.mochios.android.util.append
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.staff.model.Appeal
 import org.mochios.staff.repository.StaffRepository
+import org.mochios.staff.ws.STAFF_EVENTS
 import org.mochios.staff.ws.StaffEvent
-import org.mochios.staff.ws.StaffEventsBus
+import org.mochios.staff.ws.staffEvent
 import javax.inject.Inject
 
 /**
- * `appeals/list` has no filters and no server pagination; it returns every
- * pending appeal in one response.
+ * The pending appeals, newest first. `appeals/list` has no filters; it pages
+ * by cursor like every staff list.
  */
 data class AppealsUiState(
     val isLoading: Boolean = true,
@@ -41,6 +44,8 @@ data class AppealsUiState(
     val load: LoadState = LoadState.Idle,
     val appeals: List<Appeal> = emptyList(),
     val total: Long = 0,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val decideDialog: Appeal? = null,
     val submitting: Boolean = false,
@@ -60,7 +65,8 @@ private const val PAGE_SIZE = 20
 @HiltViewModel
 class AppealsViewModel @Inject constructor(
     private val repository: StaffRepository,
-    private val eventsBus: StaffEventsBus,
+    private val webSocket: MochiWebSocket,
+    sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(AppealsUiState())
@@ -75,23 +81,26 @@ class AppealsViewModel @Inject constructor(
     private var eventJob: Job? = null
     private var moreJob: Job? = null
 
-    /**
-     * Pages actually fetched. Deriving the next page from the row count breaks
-     * after an optimistic removal: the first page is refetched and appended as
-     * duplicates.
-     */
-    private var pagesLoaded = 0
+    /** The staff-events subscription, held while this view model lives. */
+    private val subscription: String
 
     init {
         reload()
         // Appeals are triggered by moderation events (listings flipping
         // between hold / review / rejected / appealed) — refresh whenever
-        // the moderation queue changes server-side.
-        viewModelScope.launch {
-            eventsBus.events
-                .filter { it is StaffEvent.ModerationUpdated || it is StaffEvent.Unknown }
-                .collect { _ -> reloadLatest() }
+        // the moderation queue changes server-side, or the socket was down
+        // and missed it.
+        subscription = webSocket.subscribe(sessionManager.getServerUrlBlocking(), STAFF_EVENTS, app = "staff") { frame ->
+            when (staffEvent(frame)) {
+                StaffEvent.ModerationUpdated, is StaffEvent.Unknown -> reloadLatest()
+                else -> Unit
+            }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        webSocket.unsubscribe(subscription)
     }
 
     /**
@@ -116,14 +125,15 @@ class AppealsViewModel @Inject constructor(
             _state.value = s.copy(isLoading = true, load = LoadState.Idle, error = null)
             try {
                 val r = repository.listAppeals(page = 1, limit = PAGE_SIZE)
-                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     appeals = r.appeals,
                     total = r.total,
+                    paging = Paging().advance(r.appeals.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -132,24 +142,23 @@ class AppealsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.load == LoadState.Loading || s.isLoading || s.appeals.size >= s.total) return
-        val nextPage = pagesLoaded + 1
+        if (s.load == LoadState.Loading || s.isLoading || !s.paging.more) return
         moreJob = viewModelScope.launch {
             _state.value = s.copy(load = LoadState.Loading)
             try {
-                val r = repository.listAppeals(page = nextPage, limit = PAGE_SIZE)
-                pagesLoaded = nextPage
-                val listed = _state.value.appeals.append(r.appeals) { appeal -> appeal.id }
+                val r = repository.listAppeals(page = s.paging.page, limit = PAGE_SIZE, after = s.paging.cursor)
                 _state.value = _state.value.copy(
                     load = LoadState.Idle,
-                    appeals = listed,
-                    // A page with no rows ends the list, whatever total it claims.
-                    total = if (r.appeals.isEmpty()) listed.size.toLong() else r.total,
+                    appeals = _state.value.appeals.append(r.appeals) { appeal -> appeal.id },
+                    total = r.total,
+                    paging = s.paging.advance(r.appeals.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }

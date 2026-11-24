@@ -10,10 +10,14 @@ The single implementation: the gradle checkLocaleCompleteness task and the CI
 step both shell out to this file. Add a new check here and nowhere else.
 
 Checks: key presence; argument survival (a translation dropping a %1$s);
-placeholder syntax ({name} or ICU markup, which Android never substitutes);
-fallback awareness (a region catalogue judged against its parent); plural
-completeness (a quantity the language needs, which Android silently serves from
-`other`); locale coverage (an empty locale directory, and keys the source has
+empty values (a present key holding no text, which Android shows as a blank
+label where a missing one would at least fall back to English); brand terms
+(Mochi, Stripe, OAuth, ... verbatim in Latin script wherever the English names
+them); placeholder syntax ({name} or ICU markup, which Android never
+substitutes); fallback awareness (a region catalogue judged against its
+parent); plural completeness (a quantity the language needs, which Android
+silently serves from `other`); locale coverage (an empty locale directory, a
+locale the other modules carry and this one lacks, and keys the source has
 dropped); bare double quotes (the resource compiler takes an unescaped " as
 quoting and drops it, so "%1$s" shows without its quotes and „%2$s" loses its
 closing one); decimal conversions (%d writes a number in the locale's own
@@ -127,6 +131,37 @@ def load_strings(directory: Path) -> dict[str, str]:
 
 PLURALS_RE = re.compile(r'<plurals name="([^"]+)">(.*?)</plurals>', re.S)
 QUANTITY_RE = re.compile(r'quantity="(\w+)"')
+ITEM_RE = re.compile(r'<item quantity="(\w+)">(.*?)</item>', re.S)
+
+
+def load_plurals(directory: Path) -> dict[str, dict[str, str]]:
+    """Each <plurals> block's items, quantity by quantity."""
+    return {name: dict(ITEM_RE.findall(body))
+            for name, body in PLURALS_RE.findall(read_catalogues(directory))}
+
+
+# A <string> written with no text at all: `<string name="x"/>` or
+# `<string name="x"></string>`. KEY_RE counts either as present.
+EMPTY_RE = re.compile(r'<string name="([^"]+)"[^>]*?(?:/>|>\s*</string>)')
+
+# The brand and protocol terms a translation must carry verbatim, in Latin
+# script, wherever its English names them: a transliterated "Mochi" reads as a
+# different word, and a translated protocol name breaks the instruction it is
+# in. A copy of BRAND in the monorepo's claude/scripts/i18n_glossary.py, which
+# this repository cannot import: change the two together.
+BRAND = [
+    "Mochi", "Stripe", "GitHub", "Pushbullet", "ntfy", "OAuth", "OIDC", "PKCE",
+    "JWT", "SAML", "libp2p",
+    "CalDAV", "CardDAV", "WebDAV", "vCard", "iCalendar", "ICS", "DAVx5", "Thunderbird",
+    "ActivityPub", "WebFinger", "NodeInfo", "Mastodon", "Lemmy", "Mbin", "PieFed",
+    "Bluesky", "Matrix", "Element", "XMPP", "Jabber", "DID", "OMEMO", "Olm", "Megolm",
+]
+
+
+def brands(text: str) -> list[str]:
+    """The brand terms a text holds. Substring matching, as the web and label
+    gates do: a term followed by a non-Latin suffix ("Mochiን") still counts."""
+    return [term for term in BRAND if term in text]
 
 # Format arguments inside <plurals> are deliberately not checked: requiring what
 # the source's same quantity carries misreports languages that express a count
@@ -301,16 +336,18 @@ def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
     return problems
 
 
-def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
-    """Return (dropped-argument, leftover-placeholder) findings for a module.
+def check_values(module_dir: Path) -> tuple[list[str], list[str], list[str], list[str]]:
+    """Return (dropped-argument, leftover-placeholder, empty-value, lost-brand)
+    findings for a module.
 
     Whether the value under a present key is usable, as opposed to key presence.
     """
     res = module_dir / "src" / "main" / "res"
     english = load_strings(res / "values")
     if not english:
-        return [], []
-    arguments, placeholders = [], []
+        return [], [], [], []
+    english_plurals = load_plurals(res / "values")
+    arguments, placeholders, empties, lost = [], [], [], []
     for vd in sorted(res.iterdir()):
         if not vd.is_dir() or not vd.name.startswith("values-"):
             continue
@@ -325,8 +362,28 @@ def check_values(module_dir: Path) -> tuple[list[str], list[str]]:
                     arguments.append(f"{vd.name} {key}: {argument} absent")
             if PLACEHOLDER_RE.search(value):
                 placeholders.append(f"{vd.name} {key}: {value.strip()[:48]}")
+            for term in brands(source):
+                if term not in value:
+                    lost.append(f"{vd.name} {key}: {term} absent ({value.strip()[:48]})")
+        for key in EMPTY_RE.findall(COMMENT_RE.sub("", read_catalogues(vd))):
+            if english.get(key, "").strip():
+                empties.append(f"{vd.name} {key}")
+        for key, items in load_plurals(vd).items():
+            source = english_plurals.get(key)
+            if not source:
+                continue
+            # A term every English form names is owed by every translated form;
+            # one only the singular names is not, as languages split counts
+            # differently.
+            terms = [term for term in BRAND if all(term in text for text in source.values())]
+            for quantity, value in sorted(items.items()):
+                if not value.strip() and any(text.strip() for text in source.values()):
+                    empties.append(f"{vd.name} {key} {quantity}")
+                for term in terms:
+                    if term not in value:
+                        lost.append(f"{vd.name} {key} {quantity}: {term} absent ({value.strip()[:48]})")
 
-    return arguments, placeholders
+    return arguments, placeholders, empties, lost
 
 
 # A value's text, element by element: every <string> and every plural <item>.
@@ -464,10 +521,85 @@ def discover(root: Path) -> list[Path]:
     """
     # strings.xml -> values -> res -> main -> src -> the module itself
     found = {
-        path.parents[4]
+        path.parents[4].resolve()
         for path in root.rglob("src/main/res/values/strings.xml")
     }
     return sorted(found)
+
+
+# A locale qualifier's language: two or three lower-case letters.
+LANGUAGE_RE = re.compile(r"^[a-z]{2,3}$")
+
+
+def full_locale(qualifier: str) -> bool:
+    """Whether a values-* directory is a locale every module must carry.
+
+    A regional catalogue (values-de-rCH, values-b+es+419) is sparse by design,
+    falling through to its language, and an English one falls through to
+    values/, so neither is owed by a module. A script one (values-b+zh+Hans)
+    has no language catalogue beneath it, so it is.
+    """
+    if OVERLAY_RE.match(qualifier):
+        return False
+    tag = qualifier[len("values-"):]
+    if tag.startswith("b+"):
+        language, *rest = tag[2:].split("+")
+        if any(len(subtag) != 4 for subtag in rest):
+            return False
+    elif "-r" in tag:
+        return False
+    else:
+        language = tag
+    return bool(LANGUAGE_RE.match(language)) and language not in NOT_LOCALE
+
+
+def full_locales(module_dir: Path) -> set[str]:
+    res = module_dir / "src" / "main" / "res"
+    if not res.is_dir():
+        return set()
+    return {d.name for d in res.iterdir() if d.is_dir() and full_locale(d.name)}
+
+
+# The smallest legitimate locale set for a module checked with nothing to
+# measure it against. Deliberately loose: it only has to catch a set that has
+# collapsed, not police a locale or two.
+FLOOR = 90
+
+
+def project_of(module_dir: Path) -> Path | None:
+    """The Android project a module belongs to: the nearest directory above it
+    holding a settings.gradle.kts (or settings.gradle)."""
+    for directory in module_dir.resolve().parents:
+        if (directory / "settings.gradle.kts").is_file() or (directory / "settings.gradle").is_file():
+            return directory
+    return None
+
+
+def reference_modules(modules: list[Path]) -> tuple[set[Path], bool]:
+    """The modules a run's locale set is measured against, and whether there
+    are none beyond a lone module outside any project.
+
+    Key presence only judges the locale directories a module has, so a module
+    created with three locales, or one that lost a directory in a merge,
+    passed and read English throughout. A module checked on its own is
+    measured against the rest of its project.
+    """
+    reference = {m.resolve() for m in modules}
+    projects = {p for p in (project_of(m) for m in modules) if p}
+    for project in projects:
+        reference |= set(discover(project))
+    return reference, len(reference) == 1 and not projects
+
+
+def check_presence(module_dir: Path, expected: set[str], lone: bool) -> list[str]:
+    """Return the locales the module lacks: those its project's other modules
+    carry, or, for a lone module, a set smaller than the floor."""
+    have = full_locales(module_dir)
+    if lone:
+        if len(have) < FLOOR:
+            return [f"only {len(have)} locale directories, below the {FLOOR} floor"]
+        return []
+    return [f"{name}: absent" for name in sorted(expected - have)]
 
 
 def main():
@@ -483,20 +615,31 @@ def main():
     if not modules:
         ap.error("give at least one module directory, or --discover DIR")
 
+    # The locale set every module owes, worked out once for the run.
+    reference, lone = reference_modules(modules)
+    expected = set().union(*(full_locales(m) for m in reference))
+
     any_problems = False
     for module_str in modules:
         module = Path(module_str).resolve()
         problems = check_module(module)
-        arguments, placeholders = check_values(module)
+        absent = check_presence(module, expected, lone)
+        arguments, placeholders, empties, lost = check_values(module)
         overlays = check_overlays(module)
         plurals = check_plurals(module)
         silent, stale = check_coverage(module)
         quotes = check_quotes(module)
         decimals = check_decimals(module)
-        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale, quotes, decimals)):
+        if not any((problems, absent, arguments, placeholders, empties, lost, overlays, plurals,
+                    silent, stale, quotes, decimals)):
             print(f"{module}: ok")
             continue
         any_problems = True
+        if absent:
+            print(f"{module}: locale directories missing, so the module reads English there throughout",
+                  file=sys.stderr)
+            for finding in absent[:10]:
+                print(f"  {finding}", file=sys.stderr)
         if problems:
             print(f"{module}: {len(problems)} locale(s) incomplete", file=sys.stderr)
             for locale, missing in problems:
@@ -505,6 +648,14 @@ def main():
         if arguments:
             print(f"{module}: {len(arguments)} value(s) drop a format argument", file=sys.stderr)
             for finding in arguments[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if empties:
+            print(f"{module}: {len(empties)} value(s) are empty, which Android shows as a blank label", file=sys.stderr)
+            for finding in empties[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if lost:
+            print(f"{module}: {len(lost)} value(s) drop or transliterate a brand term; keep it verbatim in Latin script", file=sys.stderr)
+            for finding in lost[:10]:
                 print(f"  {finding}", file=sys.stderr)
         if placeholders:
             print(f"{module}: {len(placeholders)} value(s) carry web placeholder syntax", file=sys.stderr)

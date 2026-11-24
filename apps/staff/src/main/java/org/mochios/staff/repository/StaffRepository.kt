@@ -6,27 +6,29 @@
 package org.mochios.staff.repository
 
 import android.os.SystemClock
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.staff.api.StaffApi
-import org.mochios.staff.model.Account
 import org.mochios.staff.model.AccountSummary
+import org.mochios.staff.model.AccountsListResponse
 import org.mochios.staff.model.ActivityData
 import org.mochios.staff.model.AppealsListResponse
 import org.mochios.staff.model.AuditListResponse
 import org.mochios.staff.model.Category
 import org.mochios.staff.model.ConfigEntry
+import org.mochios.staff.model.ConversationMessage
+import org.mochios.staff.model.DirectorySearchResult
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.model.DisputesListResponse
-import org.mochios.staff.model.DirectorySearchResult
+import org.mochios.staff.model.ListingView
 import org.mochios.staff.model.Me
 import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
 import org.mochios.staff.model.PendingListingsResponse
-import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.model.ReportsListResponse
 import org.mochios.staff.model.Review
@@ -38,14 +40,27 @@ import javax.inject.Singleton
 
 /**
  * Wraps [StaffApi] like [org.mochios.market.repository.MarketRepository]:
- * unwrap the response, rethrow as [MochiError]. Row ids are opaque Comptroller
- * uids forwarded verbatim; [getMe] succeeds for any authenticated identity,
- * everything else is 403 for non-staff.
+ * unwrap the response, rethrow as [org.mochios.android.api.MochiError]. Row
+ * ids are opaque Comptroller uids forwarded verbatim; [getMe] succeeds for any
+ * authenticated identity, everything else is 403 for non-staff.
  */
 @Singleton
 class StaffRepository @Inject constructor(
     private val api: StaffApi,
 ) {
+
+    /**
+     * [block]'s answer, a failure rethrown as a MochiError. A cancellation
+     * passes through as it is: turned into an error, a read its caller
+     * replaced would report a failure that did not happen.
+     */
+    private suspend inline fun <T> call(block: () -> T): T = try {
+        block()
+    } catch (e: CancellationException) {
+        throw e
+    } catch (e: Exception) {
+        throw e.toMochiError()
+    }
 
     // ---- Me ----
 
@@ -70,6 +85,9 @@ class StaffRepository @Inject constructor(
         }
         val me = try {
             api.getMe().unwrap()
+        } catch (e: CancellationException) {
+            held = null
+            throw e
         } catch (e: Exception) {
             held = null
             throw e.toMochiError()
@@ -85,47 +103,18 @@ class StaffRepository @Inject constructor(
 
     // ---- Team ----
 
-    suspend fun listTeam(): List<StaffMember> {
-        return try {
-            api.listTeam().unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun listTeam(): List<StaffMember> = call { api.listTeam().unwrap() }
 
-    suspend fun addTeamMember(id: String, role: String): StaffMember {
-        return try {
-            api.addTeamMember(id, role).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun addTeamMember(id: String, role: String): StaffMember = call { api.addTeamMember(id, role).unwrap() }
 
-    suspend fun removeTeamMember(id: String) {
-        try {
-            api.removeTeamMember(id).unwrapEmpty()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun removeTeamMember(id: String) = call { api.removeTeamMember(id).unwrapEmpty() }
 
-    suspend fun setTeamRole(id: String, role: String): StaffMember {
-        return try {
-            api.setTeamRole(id, role).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun setTeamRole(id: String, role: String): StaffMember = call { api.setTeamRole(id, role).unwrap() }
 
     // ---- Directory ----
 
-    suspend fun searchDirectory(query: String): List<DirectorySearchResult> {
-        return try {
-            api.searchDirectory(query).unwrap().results
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun searchDirectory(query: String): List<DirectorySearchResult> =
+        call { api.searchDirectory(query).unwrap().results }
 
     // ---- Accounts ----
 
@@ -135,53 +124,24 @@ class StaffRepository @Inject constructor(
         query: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ) = try {
-        api.listAccounts(status, seller, query, page, limit).unwrap()
-    } catch (e: Exception) {
-        throw e.toMochiError()
-    }
+        after: String? = null,
+    ): AccountsListResponse = call { api.listAccounts(status, seller, query, page, limit, after).unwrap() }
 
-    suspend fun suspendAccount(id: String, reason: String? = null, notes: String? = null): AccountSummary {
-        return try {
-            api.suspendAccount(id, reason, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun suspendAccount(id: String, reason: String? = null, notes: String? = null): AccountSummary =
+        call { api.suspendAccount(id, reason, notes).unwrap() }
 
-    suspend fun unsuspendAccount(id: String, notes: String? = null): AccountSummary {
-        return try {
-            api.unsuspendAccount(id, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun unsuspendAccount(id: String, notes: String? = null): AccountSummary =
+        call { api.unsuspendAccount(id, notes).unwrap() }
 
-    suspend fun banAccount(id: String, reason: String? = null, notes: String? = null): AccountSummary {
-        return try {
-            api.banAccount(id, reason, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun banAccount(id: String, reason: String? = null, notes: String? = null): AccountSummary =
+        call { api.banAccount(id, reason, notes).unwrap() }
 
-    suspend fun unbanAccount(id: String, notes: String? = null): AccountSummary {
-        return try {
-            api.unbanAccount(id, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun unbanAccount(id: String, notes: String? = null): AccountSummary =
+        call { api.unbanAccount(id, notes).unwrap() }
 
     // ---- Categories ----
 
-    suspend fun listCategories(): List<Category> {
-        return try {
-            api.listCategories().unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun listCategories(): List<Category> = call { api.listCategories().unwrap() }
 
     suspend fun createCategory(
         name: String,
@@ -191,20 +151,16 @@ class StaffRepository @Inject constructor(
         position: Int? = null,
         digital: Boolean? = null,
         physical: Boolean? = null,
-    ): Category {
-        return try {
-            api.createCategory(
-                name = name,
-                slug = slug,
-                parent = parent,
-                icon = icon,
-                position = position,
-                digital = digital?.let { if (it) 1 else 0 },
-                physical = physical?.let { if (it) 1 else 0 },
-            ).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    ): Category = call {
+        api.createCategory(
+            name = name,
+            slug = slug,
+            parent = parent,
+            icon = icon,
+            position = position,
+            digital = digital?.let { if (it) 1 else 0 },
+            physical = physical?.let { if (it) 1 else 0 },
+        ).unwrap()
     }
 
     suspend fun updateCategory(
@@ -217,31 +173,21 @@ class StaffRepository @Inject constructor(
         digital: Boolean? = null,
         physical: Boolean? = null,
         active: Boolean? = null,
-    ): Category {
-        return try {
-            api.updateCategory(
-                id = id,
-                name = name,
-                slug = slug,
-                parent = parent,
-                icon = icon,
-                position = position,
-                digital = digital?.let { if (it) 1 else 0 },
-                physical = physical?.let { if (it) 1 else 0 },
-                active = active?.let { if (it) 1 else 0 },
-            ).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    ): Category = call {
+        api.updateCategory(
+            id = id,
+            name = name,
+            slug = slug,
+            parent = parent,
+            icon = icon,
+            position = position,
+            digital = digital?.let { if (it) 1 else 0 },
+            physical = physical?.let { if (it) 1 else 0 },
+            active = active?.let { if (it) 1 else 0 },
+        ).unwrap()
     }
 
-    suspend fun deleteCategory(id: String) {
-        try {
-            api.deleteCategory(id).unwrapEmpty()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun deleteCategory(id: String) = call { api.deleteCategory(id).unwrapEmpty() }
 
     // ---- Listings moderation ----
 
@@ -251,67 +197,37 @@ class StaffRepository @Inject constructor(
         query: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): PendingListingsResponse {
-        return try {
-            api.listPendingListings(status, moderation, query, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): PendingListingsResponse = call { api.listPendingListings(status, moderation, query, page, limit, after).unwrap() }
+
+    suspend fun getListing(id: String): ListingView = call { api.getListing(id).unwrap() }
 
     suspend fun approveListing(id: String, notes: String? = null) {
-        try {
-            api.approveListing(id, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+        call { api.approveListing(id, notes).unwrap() }
     }
 
     suspend fun rejectListing(id: String, reason: String? = null, notes: String? = null) {
-        try {
-            api.rejectListing(id, reason, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+        call { api.rejectListing(id, reason, notes).unwrap() }
     }
 
     suspend fun removeListing(id: String, reason: String? = null, notes: String? = null) {
-        try {
-            api.removeListing(id, reason, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+        call { api.removeListing(id, reason, notes).unwrap() }
     }
 
     // ---- Moderation ----
 
     suspend fun getModerationLog(
-        listingId: String? = null,
+        listing: String? = null,
+        query: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): ModerationLogResponse {
-        return try {
-            api.getModerationLog(listingId, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): ModerationLogResponse = call { api.getModerationLog(listing, query, page, limit, after).unwrap() }
 
-    suspend fun getModerationThresholds(): Thresholds {
-        return try {
-            api.getModerationThresholds().unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun getModerationThresholds(): Thresholds = call { api.getModerationThresholds().unwrap() }
 
-    suspend fun setModerationThresholds(low: Int? = null, high: Int? = null): Thresholds {
-        return try {
-            api.setModerationThresholds(low, high).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun setModerationThresholds(low: Int? = null, high: Int? = null): Thresholds =
+        call { api.setModerationThresholds(low, high).unwrap() }
 
     // ---- Reports ----
 
@@ -320,29 +236,14 @@ class StaffRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): ReportsListResponse {
-        return try {
-            api.listReports(type, status, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): ReportsListResponse = call { api.listReports(type, status, page, limit, after).unwrap() }
 
-    suspend fun actionReport(id: String, action: String, notes: String? = null): Report {
-        return try {
-            api.actionReport(id, action, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun actionReport(id: String, action: String, notes: String? = null): Report =
+        call { api.actionReport(id, action, notes).unwrap() }
 
-    suspend fun getConversation(thread: String): List<ConversationMessage> {
-        return try {
-            api.getConversation(thread).unwrap().messages
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun getConversation(thread: String): List<ConversationMessage> =
+        call { api.getConversation(thread).unwrap().messages }
 
     // ---- Disputes ----
 
@@ -350,48 +251,26 @@ class StaffRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): DisputesListResponse {
-        return try {
-            api.listDisputes(status, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): DisputesListResponse = call { api.listDisputes(status, page, limit, after).unwrap() }
 
     suspend fun reviewDispute(
         id: String,
         status: String,
         resolution: String? = null,
         refundAmount: Long? = null,
-    ): Dispute {
-        return try {
-            api.reviewDispute(id, status, resolution, refundAmount?.toString()).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    ): Dispute = call { api.reviewDispute(id, status, resolution, refundAmount?.toString()).unwrap() }
 
     // ---- Metrics ----
 
-    suspend fun getMetricsOverview(): MetricsOverview {
-        return try {
-            api.getMetricsOverview().unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun getMetricsOverview(): MetricsOverview = call { api.getMetricsOverview().unwrap() }
 
     suspend fun getMetricsActivity(
         tab: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): ActivityData {
-        return try {
-            api.getMetricsActivity(tab, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): ActivityData = call { api.getMetricsActivity(tab, page, limit, after).unwrap() }
 
     // ---- Audit ----
 
@@ -405,60 +284,29 @@ class StaffRepository @Inject constructor(
         dedupe: Int? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): AuditListResponse {
-        return try {
-            api.listAudit(app, kind, action, actor, since, until, dedupe, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): AuditListResponse = call { api.listAudit(app, kind, action, actor, since, until, dedupe, page, limit, after).unwrap() }
 
     suspend fun getObjectAudit(
         kind: String,
         objectId: String,
         limit: Int? = null,
-    ): AuditListResponse {
-        return try {
-            api.getObjectAudit(kind, objectId, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): AuditListResponse = call { api.getObjectAudit(kind, objectId, limit, after).unwrap() }
 
     // ---- Config ----
 
-    suspend fun getConfig(): List<ConfigEntry> {
-        return try {
-            api.getConfig().unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun getConfig(): List<ConfigEntry> = call { api.getConfig().unwrap() }
 
-    suspend fun setConfig(key: String, value: String) {
-        try {
-            api.setConfig(key, value).unwrapEmpty()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun setConfig(key: String, value: String) = call { api.setConfig(key, value).unwrapEmpty() }
 
     // ---- Appeals ----
 
-    suspend fun listAppeals(page: Int? = null, limit: Int? = null): AppealsListResponse {
-        return try {
-            api.listAppeals(page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun listAppeals(page: Int? = null, limit: Int? = null, after: String? = null): AppealsListResponse =
+        call { api.listAppeals(page, limit, after).unwrap() }
 
     suspend fun decideAppeal(listingId: String, decision: String, notes: String? = null) {
-        try {
-            api.decideAppeal(listingId, decision, notes).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+        call { api.decideAppeal(listingId, decision, notes).unwrap() }
     }
 
     // ---- Reviews ----
@@ -467,21 +315,10 @@ class StaffRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
-    ): ReviewsListResponse {
-        return try {
-            api.listReviews(status, page, limit).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+        after: String? = null,
+    ): ReviewsListResponse = call { api.listReviews(status, page, limit, after).unwrap() }
 
-    suspend fun actionReview(id: String, action: String): Review {
-        return try {
-            api.actionReview(id, action).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun actionReview(id: String, action: String): Review = call { api.actionReview(id, action).unwrap() }
 
     private companion object {
         /** How long a [getMe] answer is reused, in milliseconds. */

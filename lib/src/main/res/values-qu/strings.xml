@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Lista</string>
     <string name="view_list_sorted_ascending">wicharispa ordenasqa</string>
     <string name="view_list_sorted_descending">uraykuspa ordenasqa</string>
+    <string name="notification_channel_settings">Wakichiykuna willaykuna</string>
 </resources>

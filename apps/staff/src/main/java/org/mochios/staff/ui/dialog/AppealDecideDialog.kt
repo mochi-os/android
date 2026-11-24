@@ -44,6 +44,10 @@ fun AppealDecideDialog(
     submitting: Boolean,
     onDismiss: () -> Unit,
     onSubmit: (decision: String, notes: String) -> Unit,
+    // Audit kind is the LISTING's history: "appeal" is not a valid kind and 403s.
+    history: @Composable () -> Unit = {
+        StaffAuditTimeline(kind = "listing", objectId = appeal.listing, modifier = Modifier.fillMaxWidth())
+    },
 ) {
     var decision by rememberSaveable(appeal.id) { mutableStateOf("") }
     var notes by rememberSaveable(appeal.id) { mutableStateOf("") }
@@ -57,11 +61,7 @@ fun AppealDecideDialog(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 Text(
-                    text = stringResource(
-                        R.string.staff_appeals_listing_with_id,
-                        appeal.title.ifBlank { stringResource(R.string.staff_appeals_listing_label, appeal.listing) },
-                        appeal.listing,
-                    ),
+                    text = appeal.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
@@ -104,13 +104,7 @@ fun AppealDecideDialog(
                 )
 
                 Spacer(Modifier.height(4.dp))
-                StaffAuditTimeline(
-                    // Audit kind is the LISTING's history: "appeal" is not a
-                    // valid kind and 403s.
-                    kind = "listing",
-                    objectId = appeal.listing.toString(),
-                    modifier = Modifier.fillMaxWidth(),
-                )
+                history()
             }
         },
         confirmText = if (submitting) stringResource(R.string.staff_appeals_submitting)

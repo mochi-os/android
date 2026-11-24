@@ -18,11 +18,13 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import androidx.annotation.StringRes
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
 import org.mochios.android.util.append
-import org.mochios.android.api.userMessage
+import org.mochios.staff.R
 import org.mochios.staff.model.Account
 import org.mochios.staff.model.AccountSummary
 import org.mochios.staff.repository.StaffRepository
@@ -42,6 +44,8 @@ data class AccountsUiState(
     val load: LoadState = LoadState.Idle,
     val accounts: List<Account> = emptyList(),
     val total: Long = 0,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val pendingAction: PendingAccountAction? = null,
     val historyAccount: Account? = null,
@@ -57,9 +61,19 @@ data class PendingAccountAction(
     val account: Account,
 )
 
-/** One-shot events emitted to the screen (toasts). */
-sealed class AccountsEvent {
-    data class Toast(val message: String) : AccountsEvent()
+/** One-shot events emitted to the screen. */
+sealed interface AccountsEvent {
+    data class Toast(@StringRes val messageRes: Int) : AccountsEvent
+    data class Error(val error: MochiError) : AccountsEvent
+}
+
+/** What the snackbar says once [type] has been done. */
+@StringRes
+internal fun accountActionDone(type: AccountActionType): Int = when (type) {
+    AccountActionType.SUSPEND -> R.string.staff_accounts_suspended_toast
+    AccountActionType.UNSUSPEND -> R.string.staff_accounts_unsuspended_toast
+    AccountActionType.BAN -> R.string.staff_accounts_banned_toast
+    AccountActionType.UNBAN -> R.string.staff_accounts_unbanned_toast
 }
 
 private const val PAGE_SIZE = 20
@@ -83,9 +97,6 @@ class AccountsViewModel @Inject constructor(
     val events: SharedFlow<AccountsEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
-
-    /** Pages read since the last reload; rows a page repeats are dropped, so the count of rows cannot say. */
-    private var pagesLoaded = 0
     private var moreJob: Job? = null
 
     init {
@@ -135,14 +146,15 @@ class AccountsViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
-                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     accounts = r.accounts,
                     total = r.total,
+                    paging = Paging().advance(r.accounts.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -151,10 +163,10 @@ class AccountsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.load == LoadState.Loading || s.isLoading || s.accounts.size >= s.total) return
-        val nextPage = pagesLoaded + 1
+        if (s.load == LoadState.Loading || s.isLoading || !s.paging.more) return
         moreJob = viewModelScope.launch {
             _state.value = s.copy(load = LoadState.Loading)
             try {
@@ -162,19 +174,19 @@ class AccountsViewModel @Inject constructor(
                     status = s.status,
                     seller = s.seller,
                     query = s.query.takeIf { it.isNotBlank() },
-                    page = nextPage,
+                    page = s.paging.page,
                     limit = PAGE_SIZE,
+                    after = s.paging.cursor,
                 )
-                pagesLoaded = nextPage
-                val listed = _state.value.accounts.append(r.accounts) { account -> account.id }
                 _state.value = _state.value.copy(
                     load = LoadState.Idle,
-                    accounts = listed,
-                    // A page with no rows ends the list, whatever total it claims.
-                    total = if (r.accounts.isEmpty()) listed.size.toLong() else r.total,
+                    accounts = _state.value.accounts.append(r.accounts) { account -> account.id },
+                    total = r.total,
+                    paging = s.paging.advance(r.accounts.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
@@ -252,31 +264,17 @@ class AccountsViewModel @Inject constructor(
                     pendingAction = null,
                     accounts = replaced,
                 )
-                _events.tryEmit(AccountsEvent.Toast(successMessage(pending.type)))
+                _events.tryEmit(AccountsEvent.Toast(accountActionDone(pending.type)))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
-                _events.tryEmit(AccountsEvent.Toast(e.toMochiError().userMessage()))
+                _events.tryEmit(AccountsEvent.Error(e.toMochiError()))
             }
         }
     }
 
-    private fun successMessage(type: AccountActionType): String = when (type) {
-        AccountActionType.SUSPEND -> SUCCESS_SUSPENDED
-        AccountActionType.UNSUSPEND -> SUCCESS_UNSUSPENDED
-        AccountActionType.BAN -> SUCCESS_BANNED
-        AccountActionType.UNBAN -> SUCCESS_UNBANNED
-    }
-
     companion object {
-        // Sentinel markers that the screen swaps for localised strings
-        // before showing the snackbar — keeps the ViewModel free of
-        // Android Context.
-        const val SUCCESS_SUSPENDED = "@suspended"
-        const val SUCCESS_UNSUSPENDED = "@unsuspended"
-        const val SUCCESS_BANNED = "@banned"
-        const val SUCCESS_UNBANNED = "@unbanned"
-
         // SavedStateHandle keys for filter persistence across process death.
         private const val KEY_STATUS = "filter_status"
         private const val KEY_SELLER = "filter_seller"

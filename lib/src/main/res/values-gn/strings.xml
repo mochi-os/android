@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Lista jehechajey</string>
     <string name="view_list_sorted_ascending">ojupíva oñemohenda</string>
     <string name="view_list_sorted_descending">oguejýva oñemohenda</string>
+    <string name="notification_channel_settings">Ñemboheko momarandukuéra</string>
 </resources>

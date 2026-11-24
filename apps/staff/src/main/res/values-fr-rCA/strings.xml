@@ -57,7 +57,6 @@
     <string name="staff_listings_status_active">Actif</string>
     <string name="staff_status_active">Actif</string>
 
-    <string name="app_name">Staff</string>
     <string name="staff_accounts_action_ban_title">Bannir le compte</string>
     <string name="staff_accounts_action_suspend_title">Suspendre le compte</string>
     <string name="staff_accounts_action_unban_title">Lever le bannissement</string>
@@ -153,7 +152,6 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vendeurs</string>
     <string name="staff_dashboard_kpi_total_orders">Total des commandes</string>
-    <string name="staff_dashboard_order_fallback">Commande #%1$s</string>
     <string name="staff_dashboard_system">Système</string>
     <string name="staff_dashboard_tab_audit">Vérification</string>
     <string name="staff_dashboard_tab_listings">Annonces</string>
@@ -193,11 +191,9 @@
     <string name="staff_disputes_resolved_toast">Litige résolu</string>
     <string name="staff_disputes_resolving">Résolution en cours…</string>
     <string name="staff_disputes_review">Examiner</string>
-    <string name="staff_disputes_status_escalated">Escaladé</string>
     <string name="staff_disputes_status_resolved_buyer">Résolu (acheteur)</string>
     <string name="staff_disputes_status_resolved_seller">Résolu (vendeur)</string>
     <string name="staff_disputes_status_responded">Répondu</string>
-    <string name="staff_disputes_status_reviewing">En examen</string>
     <string name="staff_disputes_stripe_bank_cannot_process">la banque n\'a pas pu traiter</string>
     <string name="staff_disputes_stripe_check_returned">chèque retourné</string>
     <string name="staff_disputes_stripe_credit_not_processed">crédit non traité</string>
@@ -223,12 +219,10 @@
     <string name="staff_listings_approved_toast">Annonce approuvée</string>
     <string name="staff_listings_empty">Aucune annonce</string>
     <string name="staff_listings_filter_moderation_label">Modération</string>
-    <string name="staff_listings_moderation_auto_approved">Approuvée automatiquement</string>
     <string name="staff_listings_moderation_hold">En attente</string>
     <string name="staff_listings_moderation_manual">Manuelle</string>
     <string name="staff_listings_moderation_rejected">Rejetée</string>
     <string name="staff_listings_moderation_review">Examen</string>
-    <string name="staff_listings_moderation_soft_approved">Approuvée sous conditions</string>
     <string name="staff_listings_notes_label">Notes</string>
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reject">Rejeter</string>
@@ -239,13 +233,11 @@
     <string name="staff_listings_seller_verified">Vendeur vérifié</string>
     <string name="staff_listings_status_draft">Brouillon</string>
     <string name="staff_listings_status_expired">Expirée</string>
-    <string name="staff_listings_status_rejected">Rejetée</string>
     <string name="staff_listings_status_removed">Retirée</string>
     <string name="staff_listings_status_sold">Vendue</string>
     <string name="staff_listings_submitting">Soumission en cours…</string>
     <string name="staff_moderation_empty">Aucune entrée de modération</string>
     <string name="staff_moderation_filter_clear">Effacer le filtre</string>
-    <string name="staff_moderation_listing_filter_placeholder">ID de l\'annonce</string>
     <string name="staff_moderation_system">Système</string>
     <string name="staff_reports_action">Action</string>
     <string name="staff_reports_action_ban">Bannir l\'utilisateur</string>
@@ -259,7 +251,6 @@
     <string name="staff_reports_dialog_title_action">Intervenir sur le signalement</string>
     <string name="staff_reports_dialog_title_view">Signalement</string>
     <string name="staff_reports_empty">Aucun signalement</string>
-    <string name="staff_reports_listing_label">Annonce nº %1$s</string>
     <string name="staff_reports_meta_details">Coordonnées du signaleur</string>
     <string name="staff_reports_meta_price">Prix</string>
     <string name="staff_reports_meta_reporter">Signaleur</string>
@@ -273,7 +264,6 @@
     <string name="staff_reports_status_actioned">Traité</string>
     <string name="staff_reports_status_dismissed">Rejeté</string>
     <string name="staff_reports_status_pending">En attente</string>
-    <string name="staff_reports_status_reviewed">Examiné</string>
     <string name="staff_reports_submit">Soumettre</string>
     <string name="staff_reports_submitting">Soumission…</string>
     <string name="staff_reports_type_listing">Annonce</string>
@@ -282,9 +272,6 @@
     <string name="staff_reviews_filter_all">Tous les statuts</string>
     <string name="staff_reviews_filter_published">Publiés</string>
     <string name="staff_reviews_filter_removed">Supprimés</string>
-    <string name="staff_reviews_order_label">commande nº %1$s</string>
-    <string name="staff_reviews_remove_desc_full">%1$s → %2$s le %3$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
-    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
     <string name="staff_reviews_remove_title">Supprimer l\'avis ?</string>
     <string name="staff_reviews_role_buyer">Acheteur</string>
     <string name="staff_reviews_role_seller">Vendeur</string>
@@ -309,13 +296,10 @@
     <string name="staff_status_admin">Administrateur</string>
     <string name="staff_status_appealed">En appel</string>
     <string name="staff_status_approved">Approuvé</string>
-    <string name="staff_status_auto_approved">Approuvé automatiquement</string>
     <string name="staff_status_banned">Banni</string>
     <string name="staff_status_dismissed">Rejeté</string>
     <string name="staff_status_draft">Brouillon</string>
-    <string name="staff_status_escalated">Escaladé</string>
     <string name="staff_status_expired">Expiré</string>
-    <string name="staff_status_hidden">Masqué</string>
     <string name="staff_status_hold">En suspens</string>
     <string name="staff_status_manual">Manuel</string>
     <string name="staff_status_moderator">Modérateur</string>
@@ -327,9 +311,6 @@
     <string name="staff_status_resolved_seller">Résolu (vendeur)</string>
     <string name="staff_status_responded">Répondu</string>
     <string name="staff_status_review">Révision</string>
-    <string name="staff_status_reviewed">Révisé</string>
-    <string name="staff_status_reviewing">En révision</string>
-    <string name="staff_status_soft_approved">Approuvé provisoirement</string>
     <string name="staff_status_sold">Vendu</string>
     <string name="staff_status_support">Soutien</string>
     <string name="staff_status_suspended">Suspendu</string>
@@ -368,7 +349,6 @@
     <string name="staff_categories_toast_deleted">Catégorie supprimée</string>
     <string name="staff_categories_toast_updated">Catégorie modifiée</string>
     <string name="staff_categories_type_none">—</string>
-    <string name="staff_channel_name">Staff</string>
     <string name="staff_categories_dialog_parent">Parent</string>
     <string name="staff_categories_dialog_position">Position</string>
     <string name="staff_categories_dialog_digital">Numérique</string>
@@ -431,6 +411,13 @@
 
     <string name="staff_disputes_meta_already_refunded">Déjà remboursé</string>
     <string name="staff_disputes_refund_exceeds_remaining">Le montant du remboursement dépasse le montant remboursable restant</string>
+    <string name="staff_status_paid">Payée</string>
+    <string name="staff_status_delivered">Livrée</string>
+    <string name="staff_status_disputed">Contestée</string>
+    <string name="staff_status_cancelled">Annulée</string>
+    <string name="staff_listing_condition_new">Nouveau</string>
+    <string name="staff_listing_condition_used">Usagé</string>
+    <string name="staff_listing_condition_refurbished">Remis à neuf</string>
     <plurals name="staff_accounts_sales">
         <item quantity="one">%1$s vente</item>
         <item quantity="other">%1$s ventes</item>

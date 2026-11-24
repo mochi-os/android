@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">सूची खरेदीदारांपासून लपवली जाईल. हे रद्द करता येणार नाही, परंतु आपण ती नंतर नवीन मसुदा म्हणून पुन्हा सूचीबद्ध करू शकता.</string>
     <string name="market_listings_remove_message_auction">हे लिलाव रद्द करेल. यादी खरेदीदारांपासून लपवली जाईल; तुम्ही ती नंतर नवीन ड्राफ्ट म्हणून पुन्हा सूचीबद्ध करू शकता.</string>
     <string name="market_listings_remove_title">ही सूची काढून टाकायची?</string>
+    <string name="market_audit_actor_staff">कर्मचारी</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">यामुळे लिलाव रद्द होईल आणि %1$s सक्रिय बोलीदाराला सूचित केले जाईल. सूची खरेदीदारांपासून लपवली जाईल; तुम्ही ती नंतर नवीन मसुदा म्हणून पुन्हा सूचीबद्ध करू शकता.</item>
         <item quantity="other">यामुळे लिलाव रद्द होईल आणि %1$s सक्रिय बोलीदारांना सूचित केले जाईल. सूची खरेदीदारांपासून लपवली जाईल; तुम्ही ती नंतर नवीन मसुदा म्हणून पुन्हा सूचीबद्ध करू शकता.</item>

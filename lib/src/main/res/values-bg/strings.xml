@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Чек-лист</string>
     <string name="view_list_sorted_ascending">сортирано във възходящ ред</string>
     <string name="view_list_sorted_descending">сортирано в низходящ ред</string>
+    <string name="notification_channel_settings">Известия от настройките</string>
 </resources>

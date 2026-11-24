@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Shpallja do të fshihet nga blerësit. Kjo nuk mund të zhbëhet, por mund ta rilistosh më vonë si një draft të ri.</string>
     <string name="market_listings_remove_message_auction">Kjo do të anulojë ankandin. Shpallja do të fshihet nga blerësit; mund ta rilistosh më vonë si një draft të ri.</string>
     <string name="market_listings_remove_title">Të hiqet ky listim?</string>
+    <string name="market_audit_actor_staff">Stafi</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Kjo do të anulojë ankandin dhe do të njoftojë %1$s ofertues aktiv. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>
         <item quantity="other">Kjo do të anulojë ankandin dhe do të njoftojë %1$s ofertues aktivë. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>

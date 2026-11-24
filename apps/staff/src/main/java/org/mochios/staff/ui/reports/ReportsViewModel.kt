@@ -5,6 +5,7 @@
 
 package org.mochios.staff.ui.reports
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,24 +19,28 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LoadState
-import org.mochios.android.util.append
-import org.mochios.android.api.userMessage
+import org.mochios.android.util.Paging
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.append
+import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.staff.R
 import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.repository.StaffRepository
+import org.mochios.staff.ws.STAFF_EVENTS
 import org.mochios.staff.ws.StaffEvent
-import org.mochios.staff.ws.StaffEventsBus
+import org.mochios.staff.ws.staffEvent
 import javax.inject.Inject
 
 /**
- * UI state for [ReportsScreen]. `type` is listing / user; `status` is pending /
- * reviewed / actioned / dismissed; null means any.
+ * UI state for [ReportsScreen]. `type` is one of
+ * [org.mochios.staff.ui.components.Stored.Report.type] and `status` one of its
+ * statuses; null means any.
  */
 data class ReportsUiState(
     val type: String? = null,
@@ -45,6 +50,8 @@ data class ReportsUiState(
     val load: LoadState = LoadState.Idle,
     val reports: List<Report> = emptyList(),
     val total: Long = 0,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val actionDialog: Report? = null,
     val submitting: Boolean = false,
@@ -57,9 +64,10 @@ data class ReportsUiState(
     val loadingConversation: Boolean = false,
 )
 
-/** One-shot events emitted to the screen (toasts). */
-sealed class ReportsEvent {
-    data class Toast(val message: String) : ReportsEvent()
+/** One-shot events emitted to the screen. */
+sealed interface ReportsEvent {
+    data class Toast(@StringRes val messageRes: Int) : ReportsEvent
+    data class Error(val error: MochiError) : ReportsEvent
 }
 
 private const val PAGE_SIZE = 20
@@ -67,7 +75,8 @@ private const val PAGE_SIZE = 20
 @HiltViewModel
 class ReportsViewModel @Inject constructor(
     private val repository: StaffRepository,
-    private val eventsBus: StaffEventsBus,
+    private val webSocket: MochiWebSocket,
+    sessionManager: SessionManager,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -88,22 +97,25 @@ class ReportsViewModel @Inject constructor(
     private var eventJob: Job? = null
     private var moreJob: Job? = null
 
-    /**
-     * Pages actually fetched. Deriving the next page from the row count breaks
-     * after an optimistic removal: the first page is refetched and appended as
-     * duplicates.
-     */
-    private var pagesLoaded = 0
+    /** The staff-events subscription, held while this view model lives. */
+    private val subscription: String
 
     init {
         reload()
-        // Refresh whenever a new buyer-filed report lands on the server —
-        // mirrors web's `useStaffEvents()` invalidation for the reports queue.
-        viewModelScope.launch {
-            eventsBus.events
-                .filter { it is StaffEvent.NewReport || it is StaffEvent.Unknown }
-                .collect { _ -> reloadLatest() }
+        // Refresh whenever a new buyer-filed report lands on the server, or
+        // the socket was down and missed one — mirrors web's
+        // `useStaffEvents()` invalidation for the reports queue.
+        subscription = webSocket.subscribe(sessionManager.getServerUrlBlocking(), STAFF_EVENTS, app = "staff") { frame ->
+            when (staffEvent(frame)) {
+                StaffEvent.NewReport, is StaffEvent.Unknown -> reloadLatest()
+                else -> Unit
+            }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        webSocket.unsubscribe(subscription)
     }
 
     fun setType(type: String?) {
@@ -147,14 +159,15 @@ class ReportsViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
-                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     reports = r.reports,
                     total = r.total,
+                    paging = Paging().advance(r.reports.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -163,29 +176,29 @@ class ReportsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.load == LoadState.Loading || s.isLoading || s.reports.size >= s.total) return
-        val nextPage = pagesLoaded + 1
+        if (s.load == LoadState.Loading || s.isLoading || !s.paging.more) return
         moreJob = viewModelScope.launch {
             _state.value = s.copy(load = LoadState.Loading)
             try {
                 val r = repository.listReports(
                     type = s.type,
                     status = s.status,
-                    page = nextPage,
+                    page = s.paging.page,
                     limit = PAGE_SIZE,
+                    after = s.paging.cursor,
                 )
-                pagesLoaded = nextPage
-                val listed = _state.value.reports.append(r.reports) { report -> report.id }
                 _state.value = _state.value.copy(
                     load = LoadState.Idle,
-                    reports = listed,
-                    // A page with no rows ends the list, whatever total it claims.
-                    total = if (r.reports.isEmpty()) listed.size.toLong() else r.total,
+                    reports = _state.value.reports.append(r.reports) { report -> report.id },
+                    total = r.total,
+                    paging = s.paging.advance(r.reports.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
@@ -222,12 +235,13 @@ class ReportsViewModel @Inject constructor(
                         conversation = messages,
                     )
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 if (_state.value.actionDialog?.id == report.id) {
                     _state.value = _state.value.copy(loadingConversation = false)
                 }
-                _events.tryEmit(ReportsEvent.Toast(e.toMochiError().userMessage()))
+                _events.tryEmit(ReportsEvent.Error(e.toMochiError()))
             }
         }
     }
@@ -256,20 +270,17 @@ class ReportsViewModel @Inject constructor(
                     reports = after,
                     total = (_state.value.total - deltaTotal).coerceAtLeast(0L),
                 )
-                _events.tryEmit(ReportsEvent.Toast(SUCCESS_TOAST))
+                _events.tryEmit(ReportsEvent.Toast(R.string.staff_reports_action_taken_toast))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
-                _events.tryEmit(ReportsEvent.Toast(e.toMochiError().userMessage()))
+                _events.tryEmit(ReportsEvent.Error(e.toMochiError()))
             }
         }
     }
 
     companion object {
-        // Replaced by the screen with the localised success string before
-        // the snackbar is shown — keeps the ViewModel free of Context.
-        const val SUCCESS_TOAST = "@action_taken"
-
         // SavedStateHandle keys for filter persistence across process death.
         private const val KEY_TYPE = "filter_type"
         private const val KEY_STATUS = "filter_status"

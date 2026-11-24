@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Sludinājums tiks paslēpts no pircējiem. To nevar atsaukt, bet vēlāk to varat atkārtoti uzskaitīt kā jaunu melnrakstu.</string>
     <string name="market_listings_remove_message_auction">Tas atcels izsoli. Sludinājums tiks paslēpts no pircējiem; vēlāk to varat atkārtoti uzskaitīt kā jaunu melnrakstu.</string>
     <string name="market_listings_remove_title">Noņemt šo sludinājumu?</string>
+    <string name="market_audit_actor_staff">Personāls</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="zero">Tas atcels izsoli un paziņos %1$s aktīvu solītāju. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
         <item quantity="one">Tas atcels izsoli un paziņos %1$s aktīvam solītājam. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>

@@ -132,7 +132,7 @@ fun PublicProfileScreen(
                     reviews = state.reviews,
                     load = state.load,
                     hasMore = state.paging.more,
-                    accountId = viewModel.accountId,
+                    accountId = profileIdentity(state.account!!, viewModel.accountId),
                     onLoadMore = viewModel::loadMoreReviews,
                     modifier = Modifier.padding(padding),
                 )
@@ -140,6 +140,13 @@ fun PublicProfileScreen(
         }
     }
 }
+
+/**
+ * The entity a profile shows the avatar of: the account the Comptroller
+ * answered, whose id the [address] may only name by fingerprint, else the
+ * address itself.
+ */
+internal fun profileIdentity(account: Account, address: String): String = account.id.ifBlank { address }
 
 @Composable
 private fun ProfileBody(

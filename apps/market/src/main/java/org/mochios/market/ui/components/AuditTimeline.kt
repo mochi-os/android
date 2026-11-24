@@ -160,7 +160,14 @@ fun AuditTimeline(
             } else {
                 ""
             }
-            val sub = listOf(timestampText, event.actorName)
+            // The Comptroller names no staff member to a party: such an entry
+            // is the staff's, with no name.
+            val actor = if (event.actor == "staff" && event.actorName.isBlank()) {
+                stringResource(R.string.market_audit_actor_staff)
+            } else {
+                event.actorName
+            }
+            val sub = listOf(timestampText, actor)
                 .filter { part -> part.isNotBlank() }
                 .joinToString(" · ")
             Row(modifier = Modifier.height(IntrinsicSize.Min)) {

@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Lîsteya kontrolê</string>
     <string name="view_list_sorted_ascending">bi rêza hilkişandî</string>
     <string name="view_list_sorted_descending">bi rêza daketî</string>
+    <string name="notification_channel_settings">Agahdariyên Mîhengan</string>
 </resources>

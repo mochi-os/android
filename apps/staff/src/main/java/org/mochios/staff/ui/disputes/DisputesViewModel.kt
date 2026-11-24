@@ -18,23 +18,26 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
 import org.mochios.android.util.append
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.repository.StaffRepository
+import org.mochios.staff.ws.STAFF_EVENTS
 import org.mochios.staff.ws.StaffEvent
-import org.mochios.staff.ws.StaffEventsBus
+import org.mochios.staff.ws.staffEvent
 import javax.inject.Inject
 
 /**
- * UI state for [DisputesScreen]. `status` is open / responded / reviewing /
- * resolved_buyer / resolved_seller / escalated, or null for any.
+ * UI state for [DisputesScreen]. `status` is one of
+ * [org.mochios.staff.ui.components.Stored.Dispute.status], or null for any.
  */
 data class DisputesUiState(
     val status: String? = null,
@@ -43,6 +46,8 @@ data class DisputesUiState(
     val load: LoadState = LoadState.Idle,
     val disputes: List<Dispute> = emptyList(),
     val total: Long = 0,
+    /** How far the list has been read. */
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val reviewDialog: Dispute? = null,
     val submitting: Boolean = false,
@@ -69,7 +74,8 @@ private const val PAGE_SIZE = 20
 @HiltViewModel
 class DisputesViewModel @Inject constructor(
     private val repository: StaffRepository,
-    private val eventsBus: StaffEventsBus,
+    private val webSocket: MochiWebSocket,
+    sessionManager: SessionManager,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -89,21 +95,24 @@ class DisputesViewModel @Inject constructor(
     private var eventJob: Job? = null
     private var moreJob: Job? = null
 
-    /**
-     * Pages actually fetched. Deriving the next page from the row count breaks
-     * after an optimistic removal: the first page is refetched and appended as
-     * duplicates.
-     */
-    private var pagesLoaded = 0
+    /** The staff-events subscription, held while this view model lives. */
+    private val subscription: String
 
     init {
         reload()
-        // Refresh whenever a new dispute / chargeback lands on the server.
-        viewModelScope.launch {
-            eventsBus.events
-                .filter { it is StaffEvent.NewDispute || it is StaffEvent.Unknown }
-                .collect { _ -> reloadLatest() }
+        // Refresh whenever a new dispute / chargeback lands on the server, or
+        // the socket was down and missed one.
+        subscription = webSocket.subscribe(sessionManager.getServerUrlBlocking(), STAFF_EVENTS, app = "staff") { frame ->
+            when (staffEvent(frame)) {
+                StaffEvent.NewDispute, is StaffEvent.Unknown -> reloadLatest()
+                else -> Unit
+            }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        webSocket.unsubscribe(subscription)
     }
 
     fun setStatus(status: String?) {
@@ -139,14 +148,15 @@ class DisputesViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
-                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     disputes = r.disputes,
                     total = r.total,
+                    paging = Paging().advance(r.disputes.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -155,28 +165,28 @@ class DisputesViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _state.value
-        if (s.load == LoadState.Loading || s.isLoading || s.disputes.size >= s.total) return
-        val nextPage = pagesLoaded + 1
+        if (s.load == LoadState.Loading || s.isLoading || !s.paging.more) return
         moreJob = viewModelScope.launch {
             _state.value = s.copy(load = LoadState.Loading)
             try {
                 val r = repository.listDisputes(
                     status = s.status,
-                    page = nextPage,
+                    page = s.paging.page,
                     limit = PAGE_SIZE,
+                    after = s.paging.cursor,
                 )
-                pagesLoaded = nextPage
-                val listed = _state.value.disputes.append(r.disputes) { dispute -> dispute.id }
                 _state.value = _state.value.copy(
                     load = LoadState.Idle,
-                    disputes = listed,
-                    // A page with no rows ends the list, whatever total it claims.
-                    total = if (r.disputes.isEmpty()) listed.size.toLong() else r.total,
+                    disputes = _state.value.disputes.append(r.disputes) { dispute -> dispute.id },
+                    total = r.total,
+                    paging = s.paging.advance(r.disputes.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }

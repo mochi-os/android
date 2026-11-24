@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Sjekkliste</string>
     <string name="view_list_sorted_ascending">sortert stigende</string>
     <string name="view_list_sorted_descending">sortert synkende</string>
+    <string name="notification_channel_settings">Innstillingsvarsler</string>
 </resources>

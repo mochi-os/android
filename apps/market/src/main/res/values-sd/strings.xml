@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">لسٽ خريد ڪندڙن کان لڪايو ويندو. اھو واپس نه ٿو ٿي سگھي، پر توھان ان کي بعد ۾ نئون ڊرافٽ طور لسٽ ڪري سگھو ٿا.</string>
     <string name="market_listings_remove_message_auction">ھي نيلامي منسوخ ڪندو. لسٽ خريد ڪندڙن کان لڪائي ويندي؛ توھان ان کي بعد ۾ نئون ڊرافٽ طور لسٽ ڪري سگھو ٿا.</string>
     <string name="market_listings_remove_title">هن فهرست کي هٽائجي؟</string>
+    <string name="market_audit_actor_staff">اسٽاف</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">اهو نيلامي منسوخ ڪندو ۽ %1$s سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>
         <item quantity="other">اهو نيلامي منسوخ ڪندو ۽ %1$s سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>

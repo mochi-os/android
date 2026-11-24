@@ -616,6 +616,7 @@
     <string name="market_listings_remove_message">लिस्टिंग खरीददारन से छिप जाई। एकरा के पूर्ववत ना कइल जा सके, बाकी आप एकरा के बाद में नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकेनीं।</string>
     <string name="market_listings_remove_message_auction">ई नीलामी रद्द कर दी। लिस्टिंग खरीददारन से छिप जाई; आप एकरा के बाद में नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकेनीं।</string>
     <string name="market_listings_remove_title">ए लिस्टिंग के हटाईं?</string>
+    <string name="market_audit_actor_staff">स्टाफ</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">एह से नीलामी रद्द हो जाई आ %1$s सक्रिय बोली लगावे वाला के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>
         <item quantity="other">एह से नीलामी रद्द हो जाई आ %1$s सक्रिय बोली लगावे वाला लोग के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>

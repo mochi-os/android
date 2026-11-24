@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Daftar periksa</string>
     <string name="view_list_sorted_ascending">diurutkan naik</string>
     <string name="view_list_sorted_descending">diurutkan turun</string>
+    <string name="notification_channel_settings">Notifikasi Pengaturan</string>
 </resources>

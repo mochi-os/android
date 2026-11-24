@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Kontrol listesi</string>
     <string name="view_list_sorted_ascending">artan sırada</string>
     <string name="view_list_sorted_descending">azalan sırada</string>
+    <string name="notification_channel_settings">Ayarlar bildirimleri</string>
 </resources>

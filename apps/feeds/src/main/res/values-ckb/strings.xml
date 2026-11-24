@@ -121,7 +121,7 @@
     <string name="feeds_remove_source_confirm">ئەمە هاوردەکردنی ناوەڕۆک لە \"%1$s\" ڕادەگرێت.</string>
     <string name="feeds_remove_also_delete_posts">هەروەها ئەو بابەتانەش بسڕەوە کە لەم سەرچاوەیەوە هاوردە کراون</string>
     <string name="feeds_suggested_credibility_title">متمانەی پێشنیارکراو</string>
-    <string name="feeds_suggested_credibility_body">موچی متمانەی %1$s پێشنیار دەکات. وەردەگیرێت؟</string>
+    <string name="feeds_suggested_credibility_body">Mochi متمانەی %1$s پێشنیار دەکات. قبووڵی دەکەیت؟</string>
     <string name="feeds_suggested_credibility_keep">هەمانە بهێڵەرەوە</string>
 
     <string name="feeds_interest_boosted">ئارەزوو زیادکرا</string>

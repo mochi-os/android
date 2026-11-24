@@ -409,4 +409,5 @@
     <string name="field_type_checklist">چک‌لیست</string>
     <string name="view_list_sorted_ascending">مرتب‌شده صعودی</string>
     <string name="view_list_sorted_descending">مرتب‌شده نزولی</string>
+    <string name="notification_channel_settings">اعلان‌های تنظیمات</string>
 </resources>

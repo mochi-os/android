@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Annonsen skjules for kjøpere. Dette kan ikke angres, men du kan annonsere den på nytt senere som en ny kladd.</string>
     <string name="market_listings_remove_message_auction">Dette vil avbryte auksjonen. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonsen?</string>
+    <string name="market_audit_actor_staff">Personale</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Dette avbryter auksjonen og varsler %1$s aktiv budgiver. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>
         <item quantity="other">Dette avbryter auksjonen og varsler %1$s aktive budgivere. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>

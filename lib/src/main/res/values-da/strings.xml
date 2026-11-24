@@ -411,4 +411,5 @@
     <string name="field_type_checklist">Tjekliste</string>
     <string name="view_list_sorted_ascending">sorteret stigende</string>
     <string name="view_list_sorted_descending">sorteret faldende</string>
+    <string name="notification_channel_settings">Indstillingsnotifikationer</string>
 </resources>

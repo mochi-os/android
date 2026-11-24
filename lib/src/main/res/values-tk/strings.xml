@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Kontrol sanawy</string>
     <string name="view_list_sorted_ascending">artýan tertipde tertiplenen</string>
     <string name="view_list_sorted_descending">kemelýän tertipde tertiplenen</string>
+    <string name="notification_channel_settings">Sazlamalar bildirişleri</string>
 </resources>

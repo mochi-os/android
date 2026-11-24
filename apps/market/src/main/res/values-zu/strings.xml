@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Uhlu luzofihlwa kubathengi. Lokhu akunakushintshwa, kodwa ungalubuyekeza kamuva njengohlaka olusha.</string>
     <string name="market_listings_remove_message_auction">Lokhu kuzokhansela indali. Uhlu luzofihlwa kubathengi; ungaluphinda ulufake kamuva njengohlaka olusha.</string>
     <string name="market_listings_remove_title">Susa lolu hlu?</string>
+    <string name="market_audit_actor_staff">Abasebenzi</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$s. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>
         <item quantity="other">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$s. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>

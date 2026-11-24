@@ -90,7 +90,7 @@ fun MySubscribersScreen(
                             onClickBuyer = {
                                 if (sub.buyer.isNotEmpty()) {
                                     navController.navigate(
-                                        MarketApp.publicProfile(sub.buyer),
+                                        MarketApp.publicProfile(sub.buyer, sub.buyerFingerprint),
                                     )
                                 }
                             },

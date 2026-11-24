@@ -408,4 +408,5 @@
     <string name="field_type_checklist">Lis verifikasyon</string>
     <string name="view_list_sorted_ascending">klase an lòd monte</string>
     <string name="view_list_sorted_descending">klase an lòd desann</string>
+    <string name="notification_channel_settings">Notifikasyon Paramèt</string>
 </resources>

@@ -47,7 +47,6 @@
     <string name="words_detail_action_open_chat">Open chat</string>
     <string name="words_detail_action_more">Game actions</string>
     <string name="words_detail_exchange_count">Exchange (%1$s)</string>
-    <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s jugó %2$s</string>
 
     <string name="words_detail_delete_title">¿Eliminar la partida?</string>

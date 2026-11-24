@@ -40,6 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -47,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
@@ -62,7 +64,11 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.ScoreColorChip
+import org.mochios.staff.ui.components.filterOptions
+import org.mochios.staff.ui.components.listingModerationLabels
+import org.mochios.staff.ui.components.listingStatusLabels
 import org.mochios.staff.ui.components.StaffCardAction
 import org.mochios.staff.ui.components.StaffCardMenu
 import org.mochios.staff.ui.components.StaffStatusBadge
@@ -71,9 +77,9 @@ import org.mochios.staff.ui.dialog.ListingActionDialog
 
 /**
  * Staff listings moderation. Approve / Reject show only for `active` rows whose
- * moderation is `hold` or `review`; Remove shows for any `active` row. The
- * market listing route is built inline - the staff module does not depend on
- * `:apps:market`.
+ * moderation is `hold` or `review`; Remove shows for any `active` row. A card
+ * opens the console's own view of the listing, which shows a held or rejected
+ * listing that the market's page would not.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -85,25 +91,13 @@ fun ListingsScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val snackbar = remember { SnackbarHostState() }
+    val resources = LocalResources.current
 
-    val approvedMsg = stringResource(R.string.staff_listings_approved_toast)
-    val rejectedMsg = stringResource(R.string.staff_listings_rejected_toast)
-    val removedMsg = stringResource(R.string.staff_listings_removed_toast)
-
-    // Snackbar plumbing — translate ViewModel sentinel markers to their
-    // localised string before showing.
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
             when (event) {
-                is ListingsEvent.Toast -> {
-                    val text = when (event.message) {
-                        ListingsViewModel.SUCCESS_APPROVED -> approvedMsg
-                        ListingsViewModel.SUCCESS_REJECTED -> rejectedMsg
-                        ListingsViewModel.SUCCESS_REMOVED -> removedMsg
-                        else -> event.message
-                    }
-                    snackbar.showSnackbar(text)
-                }
+                is ListingsEvent.Toast -> snackbar.showSnackbar(resources.getString(event.messageRes))
+                is ListingsEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
             }
         }
     }
@@ -130,7 +124,7 @@ fun ListingsScreen(
             onModerationChange = viewModel::setModeration,
             onLoadMore = viewModel::loadMore,
             onOpenListing = { listing ->
-                navController.navigate("market/listing/${listing.id}")
+                StaffApp.listing(listing.id)?.let { route -> navController.navigate(route) }
             },
             onAction = { type, listing -> viewModel.openAction(type, listing) },
             onRetry = viewModel::reload,
@@ -176,7 +170,7 @@ private fun ListingsBody(
                     label = stringResource(R.string.staff_listings_filter_status_label),
                     chipLabel = stringResource(R.string.staff_filter_label_status),
                     anyLabel = stringResource(R.string.staff_listings_any_status),
-                    options = listingStatusOptions(),
+                    options = filterOptions(listingStatusLabels),
                     current = state.status,
                     onSelect = onStatusChange,
                 ),
@@ -184,7 +178,7 @@ private fun ListingsBody(
                     label = stringResource(R.string.staff_listings_filter_moderation_label),
                     chipLabel = stringResource(R.string.staff_filter_label_moderation),
                     anyLabel = stringResource(R.string.staff_listings_any_moderation),
-                    options = moderationStateOptions(),
+                    options = filterOptions(listingModerationLabels),
                     current = state.moderation,
                     onSelect = onModerationChange,
                 ),
@@ -232,7 +226,7 @@ private fun ListingsBody(
                 items = state.listings,
                 key = { listing -> listing.id },
                 load = state.load,
-                hasMore = state.listings.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = onLoadMore,
             ) { listing ->
                 ListingRow(
@@ -245,6 +239,15 @@ private fun ListingsBody(
     }
 }
 
+/** The actions a moderator can take on [listing]: approve and reject while it waits, remove while it is live. */
+internal fun listingActions(listing: PendingListing): List<ListingActionType> = buildList {
+    if (listing.status == "active" && (listing.moderation == "hold" || listing.moderation == "review")) {
+        add(ListingActionType.APPROVE)
+        add(ListingActionType.REJECT)
+    }
+    if (listing.status == "active") add(ListingActionType.REMOVE)
+}
+
 @Composable
 private fun ListingRow(
     listing: PendingListing,
@@ -252,9 +255,9 @@ private fun ListingRow(
     onAction: (ListingActionType) -> Unit,
 ) {
     val format = LocalFormat.current
-    val pending = listing.status == "active" &&
-        (listing.moderation == "hold" || listing.moderation == "review")
-    val canRemove = listing.status == "active"
+    val allowed = listingActions(listing)
+    val pending = ListingActionType.APPROVE in allowed
+    val canRemove = ListingActionType.REMOVE in allowed
     val actions = buildList {
         if (pending) {
             add(
@@ -294,7 +297,7 @@ private fun ListingRow(
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = listing.title,
+                    text = listing.title.ifBlank { stringResource(R.string.staff_listing_untitled) },
                     style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -307,7 +310,7 @@ private fun ListingRow(
             // Seller — avatar + name + onboarded tick.
             Row(verticalAlignment = Alignment.CenterVertically) {
                 StaffUserAvatar(
-                    name = listing.sellerName.ifBlank { listing.seller },
+                    name = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
                     id = listing.seller,
                     size = 20.dp,
                 )
@@ -360,24 +363,4 @@ private fun ListingRow(
         }
     }
 }
-
-@Composable
-private fun listingStatusOptions(): List<Pair<String, String>> = listOf(
-    "active" to stringResource(R.string.staff_listings_status_active),
-    "draft" to stringResource(R.string.staff_listings_status_draft),
-    "sold" to stringResource(R.string.staff_listings_status_sold),
-    "expired" to stringResource(R.string.staff_listings_status_expired),
-    "removed" to stringResource(R.string.staff_listings_status_removed),
-    "rejected" to stringResource(R.string.staff_listings_status_rejected),
-)
-
-@Composable
-private fun moderationStateOptions(): List<Pair<String, String>> = listOf(
-    "hold" to stringResource(R.string.staff_listings_moderation_hold),
-    "review" to stringResource(R.string.staff_listings_moderation_review),
-    "auto_approved" to stringResource(R.string.staff_listings_moderation_auto_approved),
-    "soft_approved" to stringResource(R.string.staff_listings_moderation_soft_approved),
-    "manual" to stringResource(R.string.staff_listings_moderation_manual),
-    "rejected" to stringResource(R.string.staff_listings_moderation_rejected),
-)
 

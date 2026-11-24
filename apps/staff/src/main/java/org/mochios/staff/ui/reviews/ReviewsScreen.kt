@@ -9,7 +9,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,8 +17,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
@@ -47,7 +44,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.format.formatFingerprint
@@ -55,7 +51,9 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ChoiceFilter
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterBar
+import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -69,16 +67,8 @@ import org.mochios.staff.ui.components.StaffUserAvatar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReviewsScreen(
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
     viewModel: ReviewsViewModel = hiltViewModel(),
 ) {
-    // Role is read from LocalStaffMe.current in case future review-moderation
-    // affordances need admin gating; the current body doesn't yet branch on
-    // role, but the lookup is in place for #557 (reviewer role badge) and
-    // #564 (route-level admin gates).
-    @Suppress("unused")
-    val me = org.mochios.staff.ui.components.LocalStaffMe.current
-
     val state by viewModel.state.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
@@ -96,16 +86,16 @@ fun ReviewsScreen(
         }
     }
 
-    androidx.compose.foundation.layout.Box(
+    Box(
         modifier = Modifier.fillMaxSize(),
     ) {
         ReviewsBody(
-            padding = androidx.compose.foundation.layout.PaddingValues(0.dp),
             state = state,
             onFilterChange = viewModel::setFilter,
             onAction = viewModel::runAction,
             onAskRemove = viewModel::askRemove,
             onLoadMore = viewModel::loadMore,
+            onRetry = viewModel::load,
         )
         SnackbarHost(
             hostState = snackbarHostState,
@@ -143,17 +133,15 @@ fun ReviewsScreen(
 
 @Composable
 private fun ReviewsBody(
-    padding: PaddingValues,
     state: ReviewsUiState,
     onFilterChange: (ReviewStatusFilter) -> Unit,
     onAction: (Review, String) -> Unit,
     onAskRemove: (Review) -> Unit,
     onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
 ) {
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(padding),
+        modifier = Modifier.fillMaxSize(),
     ) {
         FilterBar(
             filters = listOf(
@@ -179,37 +167,26 @@ private fun ReviewsBody(
             ),
         )
 
+        val error = state.error
         when {
             state.isLoading && state.reviews.isEmpty() -> LoadingState()
+            error != null && state.reviews.isEmpty() -> ErrorState(error = error, onRetry = onRetry)
             state.reviews.isEmpty() -> EmptyState(
                 icon = Icons.Default.Star,
                 title = stringResource(R.string.staff_reviews_empty),
             )
-            else -> {
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(state.reviews, key = { it.id }) { review ->
-                        ReviewRow(
-                            review = review,
-                            onAction = onAction,
-                            onAskRemove = onAskRemove,
-                        )
-                    }
-                    if (state.hasMore) {
-                        item {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(16.dp),
-                                contentAlignment = Alignment.Center,
-                            ) {
-                                LaunchedEffect(state.reviews.size) { onLoadMore() }
-                                if (state.isLoadingMore) {
-                                    androidx.compose.material3.CircularProgressIndicator()
-                                }
-                            }
-                        }
-                    }
-                }
+            else -> InfiniteList(
+                items = state.reviews,
+                key = { review -> review.id },
+                load = state.load,
+                hasMore = state.paging.more,
+                onLoadMore = onLoadMore,
+            ) { review ->
+                ReviewRow(
+                    review = review,
+                    onAction = onAction,
+                    onAskRemove = onAskRemove,
+                )
             }
         }
     }
@@ -269,13 +246,6 @@ private fun ReviewRow(
                         color = MaterialTheme.colorScheme.primary,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                    )
-                }
-                if (review.order.isNotEmpty()) {
-                    Text(
-                        text = stringResource(R.string.staff_reviews_order_label, review.order),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
                 Spacer(modifier = Modifier.height(6.dp))

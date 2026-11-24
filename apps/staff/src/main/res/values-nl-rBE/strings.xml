@@ -45,8 +45,6 @@
     <string name="staff_appeals_denied_toast">Beroep afgewezen</string>
     <string name="staff_appeals_dialog_title">Beslissen over beroep</string>
     <string name="staff_appeals_empty">Geen openstaande beroepen</string>
-    <string name="staff_appeals_listing_label">#%1$s</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notities</string>
     <string name="staff_appeals_reason_label">Reden van bezwaar van de verkoper</string>
     <string name="staff_appeals_submit">Indienen</string>
@@ -192,9 +190,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Verkopers</string>
     <string name="staff_dashboard_kpi_total_orders">Totale bestellingen</string>
-    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_open_sidebar">Zijbalk openen</string>
-    <string name="staff_dashboard_order_fallback">Bestelling nr. %1$s</string>
     <string name="staff_dashboard_system">Systeem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_moderation">Moderatie</string>
@@ -208,7 +204,6 @@
     <string name="staff_disputes_dialog_title_view">Geschil bekijken</string>
     <string name="staff_disputes_empty">Geen disputen</string>
     <string name="staff_disputes_filter_status_label">Status</string>
-    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Gegevens van de koper</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback-kosten</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">ingehouden door Stripe</string>
@@ -237,12 +232,10 @@
     <string name="staff_disputes_resolve">Oplossen</string>
     <string name="staff_disputes_resolved_toast">Geschil opgelost</string>
     <string name="staff_disputes_resolving">Oplossen…</string>
-    <string name="staff_disputes_status_escalated">Geëscaleerd</string>
     <string name="staff_disputes_status_open">Open</string>
     <string name="staff_disputes_status_resolved_buyer">Opgelost (koper)</string>
     <string name="staff_disputes_status_resolved_seller">Opgelost (verkoper)</string>
     <string name="staff_disputes_status_responded">Gereageerd</string>
-    <string name="staff_disputes_status_reviewing">Beoordelen</string>
     <string name="staff_disputes_stripe_bank_cannot_process">bank kon niet verwerken</string>
     <string name="staff_disputes_stripe_check_returned">cheque geretourneerd</string>
     <string name="staff_disputes_stripe_credit_not_processed">krediet niet verwerkt</string>
@@ -273,11 +266,9 @@
     <string name="staff_listings_empty">Geen advertenties</string>
     <string name="staff_listings_filter_moderation_label">Moderatie</string>
     <string name="staff_listings_filter_status_label">Status</string>
-    <string name="staff_listings_moderation_auto_approved">Automatisch goedgekeurd</string>
     <string name="staff_listings_moderation_hold">Vasthouden</string>
     <string name="staff_listings_moderation_manual">Handmatig</string>
     <string name="staff_listings_moderation_rejected">Afgewezen</string>
-    <string name="staff_listings_moderation_soft_approved">Voorlopig goedgekeurd</string>
     <string name="staff_listings_notes_label">Notities</string>
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">Reden</string>
@@ -291,14 +282,12 @@
     <string name="staff_listings_status_active">Actief</string>
     <string name="staff_listings_status_draft">Concept</string>
     <string name="staff_listings_status_expired">Verlopen</string>
-    <string name="staff_listings_status_rejected">Afgewezen</string>
     <string name="staff_listings_status_removed">Verwijderd</string>
     <string name="staff_listings_status_sold">Verkocht</string>
     <string name="staff_listings_submitting">Versturen…</string>
     <string name="staff_moderation_empty">Geen moderatiegegevens</string>
     <string name="staff_moderation_filter_clear">Filter wissen</string>
     <string name="staff_moderation_system">Systeem</string>
-    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Actie</string>
     <string name="staff_reports_action_ban">Gebruiker verbannen</string>
     <string name="staff_reports_action_dismiss">Afwijzen</string>
@@ -316,7 +305,6 @@
     <string name="staff_reports_empty">Geen rapporten</string>
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
-    <string name="staff_reports_listing_label">Advertentie nr. %1$s</string>
     <string name="staff_reports_meta_details">Gegevens van de melder</string>
     <string name="staff_reports_meta_price">Prijs</string>
     <string name="staff_reports_meta_reason">Reden</string>
@@ -334,7 +322,6 @@
     <string name="staff_reports_status_actioned">Behandeld</string>
     <string name="staff_reports_status_dismissed">Gesloten</string>
     <string name="staff_reports_status_pending">In behandeling</string>
-    <string name="staff_reports_status_reviewed">Beoordeeld</string>
     <string name="staff_reports_submit">Indienen</string>
     <string name="staff_reports_submitting">Versturen…</string>
     <string name="staff_reports_type_user">Gebruiker</string>
@@ -345,10 +332,7 @@
     <string name="staff_reviews_filter_all">Alle statussen</string>
     <string name="staff_reviews_filter_published">Gepubliceerd</string>
     <string name="staff_reviews_filter_removed">Verwijderd</string>
-    <string name="staff_reviews_order_label">bestelling nr. %1$s</string>
     <string name="staff_reviews_remove_confirm">Verwijderen</string>
-    <string name="staff_reviews_remove_desc_full">%1$s → %2$s op %3$s. Deze beoordeling permanent verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
-    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Deze beoordeling permanent verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
     <string name="staff_reviews_remove_title">Review verwijderen?</string>
     <string name="staff_reviews_role_buyer">Koper</string>
     <string name="staff_reviews_role_seller">Verkoper</string>
@@ -373,13 +357,10 @@
     <string name="staff_status_admin">Beheerder</string>
     <string name="staff_status_appealed">In beroep gegaan</string>
     <string name="staff_status_approved">Goedgekeurd</string>
-    <string name="staff_status_auto_approved">Automatisch goedgekeurd</string>
     <string name="staff_status_banned">Verbannen</string>
     <string name="staff_status_dismissed">Gesloten</string>
     <string name="staff_status_draft">Concept</string>
-    <string name="staff_status_escalated">Geëscaleerd</string>
     <string name="staff_status_expired">Verlopen</string>
-    <string name="staff_status_hidden">Verborgen</string>
     <string name="staff_status_hold">Vasthouden</string>
     <string name="staff_status_manual">Handmatig</string>
     <string name="staff_status_moderator">Moderator</string>
@@ -391,9 +372,6 @@
     <string name="staff_status_resolved_buyer">Opgelost (koper)</string>
     <string name="staff_status_resolved_seller">Opgelost (verkoper)</string>
     <string name="staff_status_responded">Gereageerd</string>
-    <string name="staff_status_reviewed">Beoordeeld</string>
-    <string name="staff_status_reviewing">Beoordelen</string>
-    <string name="staff_status_soft_approved">Voorlopig goedgekeurd</string>
     <string name="staff_status_sold">Verkocht</string>
     <string name="staff_status_support">Ondersteuning</string>
     <string name="staff_status_suspended">Geschorst</string>
@@ -427,6 +405,8 @@
     <string name="staff_reports_conversation">Gesprek</string>
     <string name="staff_reports_conversation_empty">Geen berichten</string>
     <string name="staff_reports_conversation_show">Gesprek tonen</string>
+    <string name="staff_audit_action_other">Andere activiteit</string>
+    <string name="staff_audit_reason_reserve_not_met">Reserve niet bereikt</string>
     <plurals name="staff_accounts_sales">
         <item quantity="one">%1$s verkoop</item>
         <item quantity="other">%1$s verkopen</item>

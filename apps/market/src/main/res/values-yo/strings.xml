@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">A yóò fi àkójọ pamọ́ kúrò lọ́dọ̀ àwọn olúrà. Èyí kò ṣeé yípadà, ṣùgbọ́n o lè tún un ṣe lẹ́yìn náà gẹ́gẹ́ bí àyàwòlé tuntun.</string>
     <string name="market_listings_remove_message_auction">Eyi yoo fagilee titaja naa. Atokọ naa yoo farapamọ kuro lọdọ awọn olura; o le tun ṣe atokọ rẹ nigbamii bi akọsilẹ tuntun.</string>
     <string name="market_listings_remove_title">Yọ àkójọ yìí kuro?</string>
+    <string name="market_audit_actor_staff">Òṣìṣẹ́</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$s tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>
         <item quantity="other">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$s tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>

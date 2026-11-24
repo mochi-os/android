@@ -36,7 +36,7 @@
     <string name="common_logout">Phuma</string>
     <string name="common_subscribe">Bhalisa</string>
     <string name="common_copy">Kopisha</string>
-    <string name="common_copied">Kukopishelwe kwi-clipboard</string>
+    <string name="common_copied">Kukopishelwe ku-clipboard</string>
     <string name="provider_browser">Izaziso zebhrawuza</string>
     <string name="provider_caldav">Iseva yekhalenda</string>
     <string name="provider_email">I-imeyili</string>
@@ -409,4 +409,5 @@
     <string name="field_type_checklist">Uhlu lokuhlola</string>
     <string name="view_list_sorted_ascending">kuhlungwe ngokukhuphuka</string>
     <string name="view_list_sorted_descending">kuhlungwe ngokwehla</string>
+    <string name="notification_channel_settings">Izaziso zezilungiselelo</string>
 </resources>

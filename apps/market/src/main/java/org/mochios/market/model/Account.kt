@@ -56,6 +56,8 @@ fun userAvatarUrl(user: String): OwnedAddress? = segment(user)?.let { id -> Owne
  */
 data class AccountSummary(
     val id: String = "",
+    /** The 9-character fingerprint its profile is addressed by, from a Comptroller that sends it. */
+    val fingerprint: String? = null,
     val name: String = "",
     val location: String = "",
     val status: String? = null,

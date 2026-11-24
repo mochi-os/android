@@ -493,10 +493,10 @@ class SessionManager internal constructor(
             val sessionCookie = cookies.find { it.name == "session" }
             // Only renew an existing session, never resurrect one that sign-out
             // or a 401 cleared: a stray authenticated call would flip us back
-            // signed-in. The server sends the cookie back on every request to
-            // extend its expiry; one with the value already held is not
-            // written again, since each write is a fresh seal and a rewrite of
-            // the credential file.
+            // signed-in. Core sets the cookie at sign-in with a fixed 365-day
+            // lifetime, and older cores also sent it again on each request;
+            // one with the value already held is not written again, since
+            // each write is a fresh seal and a rewrite of the credential file.
             if (sessionCookie != null) {
                 val held = getSessionCookieBlocking()
                 if (held != null && held != sessionCookie.value) {

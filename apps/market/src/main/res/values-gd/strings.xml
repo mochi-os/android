@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Thèid an liostachadh fhalach bho luchd-ceannach. Chan urrainn seo a thoirt air ais, ach \'s urrainn dhut ath-liostadh nas fhaide air adhart mar dhreachd ùr.</string>
     <string name="market_listings_remove_message_auction">Sguiridh seo dhen ròp. Thèid an liostachadh fhalach bho luchd-ceannach; \'s urrainn dhut ath-liostadh nas fhaide air adhart mar dhreachd ùr.</string>
     <string name="market_listings_remove_title">Thoir an liostadh seo air falbh?</string>
+    <string name="market_audit_actor_staff">Luchd-obrach</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Sguirear dhen rop agus thèid fios a chur gu %1$s thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
         <item quantity="two">Sguirear dhen rop agus thèid fios a chur gu %1$s thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>

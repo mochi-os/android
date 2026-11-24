@@ -409,4 +409,5 @@
     <string name="field_type_checklist">ಚೆಕ್‌ಲಿಸ್ಟ್</string>
     <string name="view_list_sorted_ascending">ಆರೋಹಣ ಕ್ರಮದಲ್ಲಿ ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
     <string name="view_list_sorted_descending">ಅವರೋಹಣ ಕ್ರಮದಲ್ಲಿ ವಿಂಗಡಿಸಲಾಗಿದೆ</string>
+    <string name="notification_channel_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
 </resources>

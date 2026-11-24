@@ -614,6 +614,7 @@
     <string name="market_listings_remove_message">Ilmoitus piilotetaan ostajilta. Tätä ei voi peruuttaa, mutta voit listata sen myöhemmin uutena luonnoksena.</string>
     <string name="market_listings_remove_message_auction">Tämä peruuttaa huutokaupan. Ilmoitus piilotetaan ostajilta; voit listata sen myöhemmin uutena luonnoksena.</string>
     <string name="market_listings_remove_title">Poista tämä ilmoitus?</string>
+    <string name="market_audit_actor_staff">Henkilöstö</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">Tämä peruu huutokaupan ja ilmoittaa %1$s aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>
         <item quantity="other">Tämä peruu huutokaupan ja ilmoittaa %1$s aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>

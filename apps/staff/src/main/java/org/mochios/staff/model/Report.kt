@@ -64,7 +64,9 @@ data class ReportListing(
     val currency: String = "",
 )
 
+/** Result of `reports/list`; [next] as on [AccountsListResponse]. */
 data class ReportsListResponse(
     val reports: List<Report> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )

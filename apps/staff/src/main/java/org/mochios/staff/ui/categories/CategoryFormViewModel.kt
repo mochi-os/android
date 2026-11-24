@@ -159,7 +159,10 @@ class CategoryFormViewModel @Inject constructor(
                         name = form.name.trim(),
                         slug = form.slug.trim(),
                         parent = form.parent,
-                        icon = form.icon.takeIf { icon -> icon.isNotBlank() },
+                        // Sent as typed, an empty field included: the server
+                        // leaves a field it is not sent as it was, so an
+                        // emptied icon would otherwise stay.
+                        icon = form.icon,
                         position = form.position.toIntOrNull(),
                         digital = form.digital,
                         physical = form.physical,

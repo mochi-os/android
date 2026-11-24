@@ -14,8 +14,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.History
@@ -23,6 +23,8 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.InputChip
+import androidx.compose.material3.InputChipDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,7 +38,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -54,11 +55,13 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.ModerationEntry
+import org.mochios.staff.navigation.StaffApp
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 /**
- * Read-only moderation feed, optionally narrowed to a single listing id.
+ * Read-only moderation feed, searched by listing title, and narrowed to one
+ * listing when opened from that listing's history.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,11 +71,10 @@ fun ModerationLogScreen(
 ) {
     val state by viewModel.state.collectAsState()
 
-    var listingInput by remember { mutableStateOf(state.listingId ?: "") }
-    LaunchedEffect(listingInput) {
+    var searchInput by remember { mutableStateOf(state.query) }
+    LaunchedEffect(searchInput) {
         delay(300L)
-        val parsed = listingInput.trim().ifBlank { null }
-        if (parsed != state.listingId) viewModel.setListingId(parsed)
+        if (searchInput != state.query) viewModel.setQuery(searchInput)
     }
 
     Column(Modifier.fillMaxSize()) {
@@ -80,15 +82,14 @@ fun ModerationLogScreen(
             filters = emptyList(),
             search = {
                 MochiTextField(
-                    value = listingInput,
-                    onValueChange = { v -> listingInput = v.filter { it.isDigit() } },
-                    placeholder = { Text(stringResource(R.string.staff_moderation_listing_filter_placeholder)) },
+                    value = searchInput,
+                    onValueChange = { value -> searchInput = value },
+                    placeholder = { Text(stringResource(R.string.staff_moderation_search_placeholder)) },
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     singleLine = true,
-                    trailingIcon = if (listingInput.isNotEmpty()) {
+                    trailingIcon = if (searchInput.isNotEmpty()) {
                         {
-                            MochiIconButton(onClick = { listingInput = "" }) {
+                            MochiIconButton(onClick = { searchInput = "" }) {
                                 Icon(
                                     Icons.Default.Close,
                                     contentDescription = stringResource(R.string.staff_moderation_filter_clear),
@@ -102,6 +103,28 @@ fun ModerationLogScreen(
                 )
             },
         )
+        if (state.listing != null) {
+            InputChip(
+                selected = true,
+                onClick = viewModel::clearListing,
+                label = {
+                    Text(
+                        text = state.entries.firstOrNull()?.listingTitle?.ifBlank { null }
+                            ?: stringResource(R.string.staff_listing_untitled),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                },
+                trailingIcon = {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(R.string.staff_moderation_filter_clear),
+                        modifier = Modifier.size(InputChipDefaults.IconSize),
+                    )
+                },
+                modifier = Modifier.padding(horizontal = 16.dp),
+            )
+        }
 
         val currentError = state.error
         when {
@@ -122,13 +145,13 @@ fun ModerationLogScreen(
                 items = state.entries,
                 key = { entry -> entry.id },
                 load = state.load,
-                hasMore = state.entries.size < state.total,
+                hasMore = state.paging.more,
                 onLoadMore = viewModel::loadMore,
             ) { entry ->
                 ModerationRow(
                     entry = entry,
                     onOpen = {
-                        navController.navigate("market/listing/${entry.listing}")
+                        StaffApp.listing(entry.listing)?.let { route -> navController.navigate(route) }
                     },
                 )
             }
@@ -152,9 +175,7 @@ private fun ModerationRow(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             // Listing link
-            val linkText = entry.listingTitle.ifBlank {
-                stringResource(R.string.staff_moderation_unknown_listing, entry.listing)
-            }
+            val linkText = entry.listingTitle.ifBlank { stringResource(R.string.staff_listing_untitled) }
             Text(
                 text = linkText,
                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),

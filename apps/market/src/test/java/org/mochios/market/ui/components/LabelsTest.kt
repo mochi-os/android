@@ -102,6 +102,16 @@ class LabelsTest {
         rule.onAllNodesWithText("listing.renamed").assertCountEquals(0)
     }
 
+    // The Comptroller names no staff member to a party: such an entry comes
+    // with the actor "staff" and no name, and reads as the staff's.
+    @Test
+    fun `an entry a hidden staff member made reads as staff`() {
+        rule.setContent {
+            AuditTimeline(events = listOf(AuditEvent(id = "e1", action = "order.refunded", actor = "staff", actorName = "", timestamp = 0)))
+        }
+        rule.onNodeWithText(text(R.string.market_audit_actor_staff)).assertExists()
+    }
+
     @Test
     fun `one review is a review`() {
         rule.setContent { RatingStars(rating = 4f, count = 1) }
