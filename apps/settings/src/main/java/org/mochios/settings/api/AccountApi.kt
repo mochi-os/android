@@ -39,8 +39,9 @@ data class StepUpResponse(
     val ok: Boolean? = null,
 )
 
-/** `{ "url": "..." }` envelope for the OAuth step-up begin action. */
-data class UrlResponse(val url: String = "")
+/** What the OAuth step-up begin action answers: the consent to open and, when
+ *  the begin named the app's scheme, the nonce its deep-link return carries. */
+data class UrlResponse(val url: String = "", val nonce: String? = null)
 
 // ---------- Identity ----------
 
@@ -64,7 +65,13 @@ data class MethodInfo(
     val available: Boolean = false,
 )
 
-data class MethodsResponse(val methods: Map<String, MethodInfo> = emptyMap())
+/** `required` names the factors a step-up must re-verify, which a run of wrong
+ *  authenticator codes raises above what the states say; null from a core
+ *  that does not send it. */
+data class MethodsResponse(
+    val methods: Map<String, MethodInfo> = emptyMap(),
+    val required: List<String>? = null,
+)
 
 // ---------- Passkeys ----------
 
@@ -293,11 +300,17 @@ interface AccountApi {
     suspend fun beginOauthVerify(
         @Field("provider") provider: String,
         @Field("challenge") challenge: String,
+        @Field("scheme") scheme: String,
     ): Response<UrlResponse>
 
+    /** A null [code] is left out: the poll of a step-up whose return
+     *  carries no code. */
     @FormUrlEncoded
     @POST("settings/-/user/account/oauth/verify/finish")
-    suspend fun finishOauthVerify(@Field("verifier") verifier: String): Response<StepUpResponse>
+    suspend fun finishOauthVerify(
+        @Field("verifier") verifier: String,
+        @Field("code") code: String?,
+    ): Response<StepUpResponse>
 }
 
 @Module

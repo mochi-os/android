@@ -205,9 +205,9 @@ fun StepUpDialog(
                         )
                     }
                 }
-                // Poll for the proof the provider callback stores server-side,
-                // keyed by the verifier the client holds. Mirrors the web popup
-                // poll: up to two minutes, then give up.
+                // Wait for the consent's return, which the client redeems with
+                // the verifier it holds: up to two minutes, the life of the
+                // code the return carries, then give up.
                 val deadline = System.currentTimeMillis() + 120_000
                 while (System.currentTimeMillis() < deadline) {
                     delay(1000)

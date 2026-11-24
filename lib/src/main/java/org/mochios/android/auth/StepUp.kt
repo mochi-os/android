@@ -42,8 +42,10 @@ interface StepUpClient {
      *  browser. The client holds the verifier for [oauthPoll]. */
     suspend fun oauthBegin(provider: String): String
 
-    /** Poll for the proof the OAuth browser flow produced. Returns a result
-     *  carrying token/remaining once the provider callback has stored it, or
-     *  an empty result (both null) while it is still pending. */
+    /** Poll for the proof the OAuth browser flow produced: the code its
+     *  deep-link return carried, redeemed from the app's own session. Returns
+     *  a result carrying token/remaining once proved, an empty result (both
+     *  null) while the return has not come, and throws when it came back
+     *  refused. */
     suspend fun oauthPoll(): StepUpResult
 }

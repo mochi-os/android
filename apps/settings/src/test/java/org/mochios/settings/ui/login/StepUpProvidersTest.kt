@@ -33,6 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class StepUpProvidersTest {
     private val context = RuntimeEnvironment.getApplication()
     private lateinit var server: MockWebServer
+    private var methods = """{"methods": {"oauth": {"state": "allowed"}}}"""
 
     @Before
     fun begin() {
@@ -40,7 +41,7 @@ class StepUpProvidersTest {
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse =
                 when (request.path.orEmpty().removePrefix("/").substringBefore("?")) {
-                    "settings/-/user/account/methods" -> json("""{"methods": {"oauth": {"state": "allowed"}}}""")
+                    "settings/-/user/account/methods" -> json(methods)
                     "settings/-/user/account/oauth" -> json(
                         """{"identities": [{"provider": "google", "verify": true}, {"provider": "mastodon", "verify": true},
                            {"provider": "bluesky", "verify": false}, {"provider": "github"}]}""",
@@ -56,11 +57,30 @@ class StepUpProvidersTest {
 
     private fun json(body: String) = MockResponse().setBody(body).setHeader("Content-Type", "application/json")
 
-    @Test
-    fun `offers only the providers the server can confirm an identity through`() {
+    private fun client(): SettingsStepUpClient {
         val api = Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build()
             .create(AccountApi::class.java)
-        val client = SettingsStepUpClient(api, PasskeyManager(context))
-        assertEquals(listOf("google", "mastodon", "github"), runBlocking { client.oauthProviders() })
+        return SettingsStepUpClient(api, PasskeyManager(context))
+    }
+
+    @Test
+    fun `offers only the providers the server can confirm an identity through`() {
+        assertEquals(listOf("google", "mastodon", "github"), runBlocking { client().oauthProviders() })
+    }
+
+    // After a run of wrong authenticator codes the server adds the emailed
+    // code, which no method's state shows: the dialog asks for what the server
+    // names, so an authenticator-only account is offered the email it needs.
+    @Test
+    fun `asks for the factors the server names over those the states imply`() {
+        methods = """{"methods": {"email": {"state": "allowed"}, "totp": {"state": "required"}},
+            "required": ["email", "totp"]}"""
+        assertEquals(listOf("email", "totp"), runBlocking { client().methods() })
+    }
+
+    @Test
+    fun `reads the states when the server names no factors`() {
+        methods = """{"methods": {"email": {"state": "allowed"}, "totp": {"state": "required"}}}"""
+        assertEquals(listOf("totp"), runBlocking { client().methods() })
     }
 }

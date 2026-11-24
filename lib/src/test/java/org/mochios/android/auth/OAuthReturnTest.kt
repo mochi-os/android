@@ -108,4 +108,50 @@ class OAuthReturnTest {
         assertNull(oauthReturnKind("oauth"))
         assertNull(oauthReturnKind("oauth-return-x"))
     }
+
+    /** A step-up's return has a name of its own, apart from sign-in's. */
+    @Test
+    fun `the step-up return is routed to the step-up`() {
+        assertEquals(OAuthReturnKind.VERIFY, oauthReturnKind("oauth-verify-return"))
+        assertNotEquals(oauthReturnKind("oauth-return"), oauthReturnKind("oauth-verify-return"))
+    }
+
+    // The step-up takes the first return it is handed, so one delivered by an
+    // app that guessed nothing must not be taken, nor one for an earlier
+    // step-up, and a return is taken once.
+    @Test
+    fun `a step-up takes only the return that carries its nonce, once`() {
+        val returns = OAuthVerifyReturn()
+        assertFalse("no step-up is waiting", returns.deliver("code-1", null, "nonce-1"))
+        assertNull(returns.take())
+
+        returns.expect("nonce-1")
+        assertFalse("another nonce", returns.deliver("code-2", null, "nonce-2"))
+        assertFalse("no nonce", returns.deliver("code-2", null, null))
+        assertFalse("neither code nor error", returns.deliver(null, null, "nonce-1"))
+        assertNull(returns.take())
+
+        assertTrue(returns.deliver("code-1", null, "nonce-1"))
+        assertFalse("taken already", returns.deliver("code-3", null, "nonce-1"))
+        assertEquals("code-1" to null, returns.take())
+        assertNull("once", returns.take())
+    }
+
+    @Test
+    fun `a new step-up drops the return the last one left`() {
+        val returns = OAuthVerifyReturn()
+        returns.expect("nonce-1")
+        assertTrue(returns.deliver(null, "reauthentication_failed", "nonce-1"))
+        returns.expect("nonce-2")
+        assertNull(returns.take())
+        assertFalse(returns.deliver("code-1", null, "nonce-1"))
+    }
+
+    @Test
+    fun `an empty nonce expects nothing`() {
+        val returns = OAuthVerifyReturn()
+        returns.expect("")
+        assertFalse(returns.deliver("code-1", null, ""))
+        assertFalse(returns.deliver("code-1", null, null))
+    }
 }

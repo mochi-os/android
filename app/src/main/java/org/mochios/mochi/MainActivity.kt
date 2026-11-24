@@ -112,6 +112,7 @@ open class MainActivity : ComponentActivity() {
     @Inject lateinit var okHttpClient: okhttp3.OkHttpClient
     @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
     @Inject lateinit var webSocket: org.mochios.android.websocket.MochiWebSocket
+    @Inject lateinit var oauthVerifyReturn: org.mochios.android.auth.OAuthVerifyReturn
 
     // The same instance AppBootstrapHost draws from: both take the activity's.
     private val bootstrap: AppBootstrapViewModel by viewModels()
@@ -578,6 +579,7 @@ open class MainActivity : ComponentActivity() {
                 OAuthReturnKind.LOGIN -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.GRANT -> applyOAuthGrantReturn(params["code"], params["error"], params["nonce"])
+                OAuthReturnKind.VERIFY -> applyOAuthVerifyReturn(params["code"], params["error"], params["nonce"])
                 null -> Log.w(TAG, "Unknown system intent: ${uriName(uri)}")
             }
         }
@@ -623,7 +625,8 @@ open class MainActivity : ComponentActivity() {
                     uri.getQueryParameter("error"),
                     uri.getQueryParameter("nonce"),
                 )
-                null -> Unit
+                // The step-up's return was never sent in this older shape.
+                OAuthReturnKind.VERIFY, null -> Unit
             }
         }
     }
@@ -732,6 +735,16 @@ open class MainActivity : ComponentActivity() {
                 return@launch
             }
             sessionManager.setOAuthGrantReturn(code, error)
+        }
+    }
+
+    /**
+     * VERIFY ceremony return: a step-up's consent, handed to the step-up
+     * waiting in this process, which redeems its code from this session.
+     */
+    private fun applyOAuthVerifyReturn(code: String?, error: String?, nonce: String?) {
+        if (!oauthVerifyReturn.deliver(code, error, nonce)) {
+            Log.w(TAG, "Ignoring mochi:oauth-verify-return that matches no outstanding step-up")
         }
     }
 

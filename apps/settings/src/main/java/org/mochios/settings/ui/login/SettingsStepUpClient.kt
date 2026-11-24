@@ -5,16 +5,22 @@
 
 package org.mochios.settings.ui.login
 
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.OAuthPkce
+import org.mochios.android.auth.OAuthVerifyReturn
 import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.StepUpClient
 import org.mochios.android.auth.StepUpResult
 import org.mochios.settings.api.AccountApi
-import org.mochios.settings.api.MethodInfo
+import org.mochios.settings.api.MethodsResponse
 import org.mochios.settings.api.StepUpResponse
 import javax.inject.Inject
 import javax.inject.Singleton
+
+// The app's own scheme: naming it is what has the server hand the step-up's
+// proof back to the app rather than to the browser that finished the consent.
+private const val OAUTH_SCHEME = "mochi"
 
 /**
  * Settings' [StepUpClient]: the shared StepUpDialog cannot name app action
@@ -25,23 +31,29 @@ import javax.inject.Singleton
 class SettingsStepUpClient @Inject constructor(
     private val api: AccountApi,
     private val passkeyManager: PasskeyManager,
+    // Hilt hands every holder the one the app's deep links deliver to.
+    private val returns: OAuthVerifyReturn = OAuthVerifyReturn(),
 ) : StepUpClient {
 
     // One step-up runs at a time; the OAuth verifier the dialog began with is
-    // held here for the poll.
+    // held here for the poll, with whether its proof returns to the app.
     private var oauthVerifier: String? = null
+    private var oauthNative = false
 
-    private suspend fun states(): Map<String, MethodInfo> =
-        api.getMethods().unwrapRaw().methods
+    private suspend fun states(): MethodsResponse = api.getMethods().unwrapRaw()
 
-    // The required step-up factors, mirroring reauthentication_required: the
-    // methods whose state is "required", recovery excluded.
-    private fun requiredFactors(map: Map<String, MethodInfo>): List<String> =
-        map.filter { it.value.state == "required" }.keys.filter { it != "recovery" }
+    // The required step-up factors. The server names them: a run of wrong
+    // authenticator codes adds the emailed code, which no method's state
+    // shows. A server that does not name them is read from the states: those
+    // "required", recovery excluded.
+    private fun requiredFactors(states: MethodsResponse): List<String> =
+        states.required?.distinct()
+            ?: states.methods.filter { it.value.state == "required" }.keys.filter { it != "recovery" }
 
     override suspend fun methods(): List<String> {
-        val map = states()
-        val required = requiredFactors(map)
+        val states = states()
+        val map = states.methods
+        val required = requiredFactors(states)
         // OAuth is offered separately via oauthProviders, never as a code
         // field, so drop it from the code-factor list.
         if (required.isNotEmpty()) return required.filter { it != "oauth" }
@@ -70,8 +82,9 @@ class SettingsStepUpClient @Inject constructor(
     }
 
     override suspend fun oauthProviders(): List<String> {
-        val map = states()
-        val required = requiredFactors(map)
+        val states = states()
+        val map = states.methods
+        val required = requiredFactors(states)
         // OAuth re-verifies the oauth factor: acceptable only when oauth is
         // required, or nothing is required (any one factor) and the user
         // hasn't disabled it. A required email factor needs a real email code.
@@ -87,12 +100,25 @@ class SettingsStepUpClient @Inject constructor(
         val verifier = OAuthPkce.generateVerifier()
         oauthVerifier = verifier
         val challenge = OAuthPkce.challengeFor(verifier)
-        return api.beginOauthVerify(provider, challenge).unwrapRaw().url
+        val begun = api.beginOauthVerify(provider, challenge, OAUTH_SCHEME).unwrapRaw()
+        oauthNative = !begun.nonce.isNullOrBlank()
+        returns.expect(begun.nonce.orEmpty())
+        return begun.url
     }
 
     override suspend fun oauthPoll(): StepUpResult {
         val verifier = oauthVerifier ?: return StepUpResult()
-        return api.finishOauthVerify(verifier).unwrapRaw().toResult()
+        // A server that answered no nonce proves the consent where the browser
+        // finished it, so the proof is polled for; otherwise the proof comes
+        // back to the app as a code, and nothing is asked until it does.
+        if (!oauthNative) return api.finishOauthVerify(verifier, null).unwrapRaw().toResult()
+        val (code, error) = returns.take() ?: return StepUpResult()
+        if (error != null || code == null) throw MochiError.Unknown()
+        val result = api.finishOauthVerify(verifier, code).unwrapRaw().toResult()
+        // The code is spent either way: one the server would not redeem leaves
+        // nothing to wait for.
+        if (result.token == null && result.remaining == null) throw MochiError.Unknown()
+        return result
     }
 
     private fun StepUpResponse.toResult() = StepUpResult(token = token, remaining = remaining)
