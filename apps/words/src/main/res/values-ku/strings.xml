@@ -83,4 +83,14 @@
         <item quantity="one">%1$s lîstikvan</item>
         <item quantity="other">%1$s lîstikvan</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Xala peyvê sê qat</string>
+    <string name="words_board_premium_name_double_word">Xala peyvê du qat</string>
+    <string name="words_board_premium_name_triple_letter">Xala tîpê sê qat</string>
+    <string name="words_board_premium_name_double_letter">Xala tîpê du qat</string>
+    <string name="words_board_premium_name_start">Çargoşeya destpêkê, xala peyvê du qat</string>
+    <string name="words_board_square_empty">Çargoşeya vala %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Çargoşeya vala %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s li %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s li %2$s%3$s, ji bo rakirinê tikê bike</string>
+    <string name="words_board_square_pending_premium">%1$s li %2$s%3$s, %4$s, ji bo rakirinê tikê bike</string>
 </resources>

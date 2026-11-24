@@ -83,4 +83,14 @@
         <item quantity="one">%1$s لوبغاړی</item>
         <item quantity="other">%1$s لوبغاړي</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">د کلمې درې چنده نمرې</string>
+    <string name="words_board_premium_name_double_word">د کلمې دوه چنده نمرې</string>
+    <string name="words_board_premium_name_triple_letter">د توري درې چنده نمرې</string>
+    <string name="words_board_premium_name_double_letter">د توري دوه چنده نمرې</string>
+    <string name="words_board_premium_name_start">د پیل چوک، د کلمې دوه چنده نمرې</string>
+    <string name="words_board_square_empty">خالي چوک %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">خالي چوک %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s په %2$s%3$s کې</string>
+    <string name="words_board_square_pending">%1$s په %2$s%3$s کې، د لرې کولو لپاره کلیک وکړئ</string>
+    <string name="words_board_square_pending_premium">%1$s په %2$s%3$s کې، %4$s، د لرې کولو لپاره کلیک وکړئ</string>
 </resources>

@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">ကစားသမား %1$s ဦး</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">စကားလုံး အမှတ် သုံးဆ</string>
+    <string name="words_board_premium_name_double_word">စကားလုံး အမှတ် နှစ်ဆ</string>
+    <string name="words_board_premium_name_triple_letter">အက္ခရာ အမှတ် သုံးဆ</string>
+    <string name="words_board_premium_name_double_letter">အက္ခရာ အမှတ် နှစ်ဆ</string>
+    <string name="words_board_premium_name_start">စတင်ကွက်၊ စကားလုံး အမှတ် နှစ်ဆ</string>
+    <string name="words_board_square_empty">ကွက်လပ် %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ကွက်လပ် %1$s%2$s၊ %3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s ၌ %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s ၌ %1$s၊ ဖယ်ရှားရန် နှိပ်ပါ</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s ၌ %1$s၊ %4$s၊ ဖယ်ရှားရန် နှိပ်ပါ</string>
 </resources>

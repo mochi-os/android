@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s ผู้เล่น</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">คะแนนคำสามเท่า</string>
+    <string name="words_board_premium_name_double_word">คะแนนคำสองเท่า</string>
+    <string name="words_board_premium_name_triple_letter">คะแนนอักษรสามเท่า</string>
+    <string name="words_board_premium_name_double_letter">คะแนนอักษรสองเท่า</string>
+    <string name="words_board_premium_name_start">ช่องเริ่มต้น คะแนนคำสองเท่า</string>
+    <string name="words_board_square_empty">ช่องว่าง %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ช่องว่าง %1$s%2$s %3$s</string>
+    <string name="words_board_square_tile">%1$s ที่ %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ที่ %2$s%3$s คลิกเพื่อนำออก</string>
+    <string name="words_board_square_pending_premium">%1$s ที่ %2$s%3$s %4$s คลิกเพื่อนำออก</string>
 </resources>

@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s 名玩家</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">三倍詞分</string>
+    <string name="words_board_premium_name_double_word">雙倍詞分</string>
+    <string name="words_board_premium_name_triple_letter">三倍字分</string>
+    <string name="words_board_premium_name_double_letter">雙倍字分</string>
+    <string name="words_board_premium_name_start">起始格,雙倍詞分</string>
+    <string name="words_board_square_empty">空格 %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">空格 %1$s%2$s,%3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s 處的 %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s 處的 %1$s,點擊移除</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s 處的 %1$s,%4$s,點擊移除</string>
 </resources>

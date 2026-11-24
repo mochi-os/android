@@ -83,4 +83,14 @@
         <item quantity="one">%1$s მოთამაშე</item>
         <item quantity="other">%1$s მოთამაშე</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">სიტყვის სამმაგი ქულა</string>
+    <string name="words_board_premium_name_double_word">სიტყვის ორმაგი ქულა</string>
+    <string name="words_board_premium_name_triple_letter">ასოს სამმაგი ქულა</string>
+    <string name="words_board_premium_name_double_letter">ასოს ორმაგი ქულა</string>
+    <string name="words_board_premium_name_start">საწყისი უჯრა, სიტყვის ორმაგი ქულა</string>
+    <string name="words_board_square_empty">ცარიელი უჯრა %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ცარიელი უჯრა %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s პოზიციაზე %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s პოზიციაზე %2$s%3$s, დააწკაპუნეთ მოსაშორებლად</string>
+    <string name="words_board_square_pending_premium">%1$s პოზიციაზე %2$s%3$s, %4$s, დააწკაპუნეთ მოსაშორებლად</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s spiller</item>
         <item quantity="other">%1$s spillere</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Trippel ordverdi</string>
+    <string name="words_board_premium_name_double_word">Dobbel ordverdi</string>
+    <string name="words_board_premium_name_triple_letter">Trippel bokstavverdi</string>
+    <string name="words_board_premium_name_double_letter">Dobbel bokstavverdi</string>
+    <string name="words_board_premium_name_start">Startfelt, dobbel ordverdi</string>
+    <string name="words_board_square_empty">Tomt felt %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Tomt felt %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s på %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s på %2$s%3$s, klikk for å fjerne</string>
+    <string name="words_board_square_pending_premium">%1$s på %2$s%3$s, %4$s, klikk for å fjerne</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s mängija</item>
         <item quantity="other">%1$s mängijat</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Kolmekordne sõna väärtus</string>
+    <string name="words_board_premium_name_double_word">Kahekordne sõna väärtus</string>
+    <string name="words_board_premium_name_triple_letter">Kolmekordne tähe väärtus</string>
+    <string name="words_board_premium_name_double_letter">Kahekordne tähe väärtus</string>
+    <string name="words_board_premium_name_start">Algusruut, kahekordne sõna väärtus</string>
+    <string name="words_board_square_empty">Tühi ruut %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Tühi ruut %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s positsioonil %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s positsioonil %2$s%3$s, klõpsa eemaldamiseks</string>
+    <string name="words_board_square_pending_premium">%1$s positsioonil %2$s%3$s, %4$s, klõpsa eemaldamiseks</string>
 </resources>

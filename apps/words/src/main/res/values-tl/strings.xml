@@ -83,4 +83,14 @@
         <item quantity="one">%1$s manlalaro</item>
         <item quantity="other">%1$s manlalaro</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Tatlong beses na puntos ng salita</string>
+    <string name="words_board_premium_name_double_word">Dobleng puntos ng salita</string>
+    <string name="words_board_premium_name_triple_letter">Tatlong beses na puntos ng titik</string>
+    <string name="words_board_premium_name_double_letter">Dobleng puntos ng titik</string>
+    <string name="words_board_premium_name_start">Panimulang kahon, dobleng puntos ng salita</string>
+    <string name="words_board_square_empty">Walang lamang kahon %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Walang lamang kahon %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s sa %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s sa %2$s%3$s, i-click para alisin</string>
+    <string name="words_board_square_pending_premium">%1$s sa %2$s%3$s, %4$s, i-click para alisin</string>
 </resources>

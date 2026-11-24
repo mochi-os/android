@@ -83,4 +83,14 @@
         <item quantity="one">%1$s giocatore</item>
         <item quantity="other">%1$s giocatori</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Parola tripla</string>
+    <string name="words_board_premium_name_double_word">Parola doppia</string>
+    <string name="words_board_premium_name_triple_letter">Lettera tripla</string>
+    <string name="words_board_premium_name_double_letter">Lettera doppia</string>
+    <string name="words_board_premium_name_start">Casella di partenza, parola doppia</string>
+    <string name="words_board_square_empty">Casella vuota %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Casella vuota %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s in %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s in %2$s%3$s, fai clic per rimuovere</string>
+    <string name="words_board_square_pending_premium">%1$s in %2$s%3$s, %4$s, fai clic per rimuovere</string>
 </resources>

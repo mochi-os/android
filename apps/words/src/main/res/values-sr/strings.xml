@@ -85,4 +85,14 @@
         <item quantity="few">%1$s играча</item>
         <item quantity="other">%1$s играча</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Трострука вредност речи</string>
+    <string name="words_board_premium_name_double_word">Двострука вредност речи</string>
+    <string name="words_board_premium_name_triple_letter">Трострука вредност слова</string>
+    <string name="words_board_premium_name_double_letter">Двострука вредност слова</string>
+    <string name="words_board_premium_name_start">Почетно поље, двострука вредност речи</string>
+    <string name="words_board_square_empty">Празно поље %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Празно поље %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s на %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s на %2$s%3$s, кликни да уклониш</string>
+    <string name="words_board_square_pending_premium">%1$s на %2$s%3$s, %4$s, кликни да уклониш</string>
 </resources>

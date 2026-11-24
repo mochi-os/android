@@ -87,4 +87,14 @@
         <item quantity="many">%1$s graczy</item>
         <item quantity="other">%1$s gracza</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Potrójna premia słowna</string>
+    <string name="words_board_premium_name_double_word">Podwójna premia słowna</string>
+    <string name="words_board_premium_name_triple_letter">Potrójna premia literowa</string>
+    <string name="words_board_premium_name_double_letter">Podwójna premia literowa</string>
+    <string name="words_board_premium_name_start">Pole startowe, podwójna premia słowna</string>
+    <string name="words_board_square_empty">Puste pole %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Puste pole %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s na %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s na %2$s%3$s, kliknij, aby usunąć</string>
+    <string name="words_board_square_pending_premium">%1$s na %2$s%3$s, %4$s, kliknij, aby usunąć</string>
 </resources>

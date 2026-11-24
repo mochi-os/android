@@ -85,4 +85,14 @@
         <item quantity="few">%1$s hráči</item>
         <item quantity="other">%1$s hráčů</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Trojnásobná hodnota slova</string>
+    <string name="words_board_premium_name_double_word">Dvojnásobná hodnota slova</string>
+    <string name="words_board_premium_name_triple_letter">Trojnásobná hodnota písmene</string>
+    <string name="words_board_premium_name_double_letter">Dvojnásobná hodnota písmene</string>
+    <string name="words_board_premium_name_start">Startovní políčko, dvojnásobná hodnota slova</string>
+    <string name="words_board_square_empty">Prázdné políčko %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Prázdné políčko %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s na %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s na %2$s%3$s, kliknutím odeberete</string>
+    <string name="words_board_square_pending_premium">%1$s na %2$s%3$s, %4$s, kliknutím odeberete</string>
 </resources>

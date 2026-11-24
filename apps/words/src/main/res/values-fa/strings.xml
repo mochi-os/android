@@ -83,4 +83,14 @@
         <item quantity="one">%1$s بازیکن</item>
         <item quantity="other">%1$s بازیکن</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">سه برابر امتیاز کلمه</string>
+    <string name="words_board_premium_name_double_word">دو برابر امتیاز کلمه</string>
+    <string name="words_board_premium_name_triple_letter">سه برابر امتیاز حرف</string>
+    <string name="words_board_premium_name_double_letter">دو برابر امتیاز حرف</string>
+    <string name="words_board_premium_name_start">خانه شروع، دو برابر امتیاز کلمه</string>
+    <string name="words_board_square_empty">خانه خالی %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">خانه خالی %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s در %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s در %2$s%3$s، برای حذف کلیک کنید</string>
+    <string name="words_board_square_pending_premium">%1$s در %2$s%3$s، %4$s، برای حذف کلیک کنید</string>
 </resources>

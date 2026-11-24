@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s人のプレイヤー</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">単語得点3倍</string>
+    <string name="words_board_premium_name_double_word">単語得点2倍</string>
+    <string name="words_board_premium_name_triple_letter">文字得点3倍</string>
+    <string name="words_board_premium_name_double_letter">文字得点2倍</string>
+    <string name="words_board_premium_name_start">開始マス、単語得点2倍</string>
+    <string name="words_board_square_empty">空きマス %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">空きマス %1$s%2$s、%3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s の %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s の %1$s、クリックで削除</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s の %1$s、%4$s、クリックで削除</string>
 </resources>

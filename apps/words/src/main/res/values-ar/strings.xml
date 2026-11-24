@@ -91,4 +91,14 @@
         <item quantity="many">%1$s لاعبًا</item>
         <item quantity="other">%1$s لاعب</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">ثلاثة أضعاف نقاط الكلمة</string>
+    <string name="words_board_premium_name_double_word">ضعف نقاط الكلمة</string>
+    <string name="words_board_premium_name_triple_letter">ثلاثة أضعاف نقاط الحرف</string>
+    <string name="words_board_premium_name_double_letter">ضعف نقاط الحرف</string>
+    <string name="words_board_premium_name_start">مربع البداية، ضعف نقاط الكلمة</string>
+    <string name="words_board_square_empty">مربع فارغ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">مربع فارغ %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s في %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s في %2$s%3$s، انقر للإزالة</string>
+    <string name="words_board_square_pending_premium">%1$s في %2$s%3$s، %4$s، انقر للإزالة</string>
 </resources>

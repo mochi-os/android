@@ -83,4 +83,14 @@
         <item quantity="one">%1$s leikmaður</item>
         <item quantity="other">%1$s leikmenn</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Þrefalt orðgildi</string>
+    <string name="words_board_premium_name_double_word">Tvöfalt orðgildi</string>
+    <string name="words_board_premium_name_triple_letter">Þrefalt stafgildi</string>
+    <string name="words_board_premium_name_double_letter">Tvöfalt stafgildi</string>
+    <string name="words_board_premium_name_start">Upphafsreitur, tvöfalt orðgildi</string>
+    <string name="words_board_square_empty">Auður reitur %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Auður reitur %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s á %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s á %2$s%3$s, smelltu til að fjarlægja</string>
+    <string name="words_board_square_pending_premium">%1$s á %2$s%3$s, %4$s, smelltu til að fjarlægja</string>
 </resources>

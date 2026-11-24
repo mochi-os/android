@@ -40,6 +40,8 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -264,10 +266,14 @@ private fun BoardCell(
     }
 
     var cellCoords by remember { mutableStateOf<LayoutCoordinates?>(null) }
+    val label = squareLabel(row, col, cellValue, pending?.letter, isBeingDragged)
 
     Box(
         modifier = Modifier
             .fillMaxSize()
+            // The cell's own name replaces its face: a tile's letter or an
+            // empty square's "TW" read alone says nothing of where it is.
+            .clearAndSetSemantics { contentDescription = label }
             .onGloballyPositioned { cellCoords = it }
             .background(
                 when {
@@ -393,6 +399,45 @@ private fun premiumColor(t: PremiumType): Color = when (t) {
     PremiumType.DL -> Color(0xFFA5C8E0)
     PremiumType.ST -> Color(0xFFFFB3B3)
     PremiumType.NONE -> Color.Transparent
+}
+
+/**
+ * What a screen reader says for a square, as the web board names it: the tile
+ * and its coordinate, a pending tile with how to take it back, an empty square
+ * with its premium. Columns are lettered from A and rows numbered from 1 top to
+ * bottom, as the game numbers them. A played tile's premium is spent and not
+ * named.
+ */
+@Composable
+internal fun squareLabel(row: Int, col: Int, cellValue: Char, pendingLetter: Char?, lifted: Boolean = false): String {
+    val column = ('A' + col).toString()
+    val number = (row + 1).toString()
+    val premium = premiumName(getPremium(row, col))?.let { stringResource(it) }
+    return when {
+        cellValue != '.' ->
+            stringResource(R.string.words_board_square_tile, getDisplayLetter(cellValue), column, number)
+        pendingLetter != null && !lifted -> {
+            val letter = pendingLetter.uppercaseChar().toString()
+            if (premium != null) {
+                stringResource(R.string.words_board_square_pending_premium, letter, column, number, premium)
+            } else {
+                stringResource(R.string.words_board_square_pending, letter, column, number)
+            }
+        }
+        premium != null -> stringResource(R.string.words_board_square_empty_premium, column, number, premium)
+        else -> stringResource(R.string.words_board_square_empty, column, number)
+    }
+}
+
+/** A premium's full name, for the square's spoken label. */
+@StringRes
+private fun premiumName(t: PremiumType): Int? = when (t) {
+    PremiumType.TW -> R.string.words_board_premium_name_triple_word
+    PremiumType.DW -> R.string.words_board_premium_name_double_word
+    PremiumType.TL -> R.string.words_board_premium_name_triple_letter
+    PremiumType.DL -> R.string.words_board_premium_name_double_letter
+    PremiumType.ST -> R.string.words_board_premium_name_start
+    PremiumType.NONE -> null
 }
 
 /** The abbreviation an empty premium square shows; the start square shows a star. */

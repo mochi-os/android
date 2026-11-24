@@ -84,4 +84,14 @@
         <item quantity="few">%1$s igralci</item>
         <item quantity="other">%1$s igralcev</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Trojna vrednost besede</string>
+    <string name="words_board_premium_name_double_word">Dvojna vrednost besede</string>
+    <string name="words_board_premium_name_triple_letter">Trojna vrednost črke</string>
+    <string name="words_board_premium_name_double_letter">Dvojna vrednost črke</string>
+    <string name="words_board_premium_name_start">Začetno polje, dvojna vrednost besede</string>
+    <string name="words_board_square_empty">Prazno polje %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Prazno polje %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ob %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ob %2$s%3$s, kliknite za odstranitev</string>
+    <string name="words_board_square_pending_premium">%1$s ob %2$s%3$s, %4$s, kliknite za odstranitev</string>
 </resources>

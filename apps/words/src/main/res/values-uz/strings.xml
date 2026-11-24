@@ -83,4 +83,14 @@
         <item quantity="one">%1$s oʻyinchi</item>
         <item quantity="other">%1$s oʻyinchi</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Soʻz balli uch barobar</string>
+    <string name="words_board_premium_name_double_word">Soʻz balli ikki barobar</string>
+    <string name="words_board_premium_name_triple_letter">Harf balli uch barobar</string>
+    <string name="words_board_premium_name_double_letter">Harf balli ikki barobar</string>
+    <string name="words_board_premium_name_start">Boshlangʻich katak, soʻz balli ikki barobar</string>
+    <string name="words_board_square_empty">Boʻsh katak %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Boʻsh katak %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s da</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s da, olib tashlash uchun bosing</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s da, %4$s, olib tashlash uchun bosing</string>
 </resources>

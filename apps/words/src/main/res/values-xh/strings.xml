@@ -83,4 +83,14 @@
         <item quantity="one">Umdlali ongu-%1$s</item>
         <item quantity="other">Abadlali abangu-%1$s</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Amanqaku egama aphindwe kathathu</string>
+    <string name="words_board_premium_name_double_word">Amanqaku egama aphindwe kabini</string>
+    <string name="words_board_premium_name_triple_letter">Amanqaku onobumba aphindwe kathathu</string>
+    <string name="words_board_premium_name_double_letter">Amanqaku onobumba aphindwe kabini</string>
+    <string name="words_board_premium_name_start">Isikwere sokuqala, amanqaku egama aphindwe kabini</string>
+    <string name="words_board_square_empty">Isikwere esingenanto %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Isikwere esingenanto %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ku-%2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ku-%2$s%3$s, cofa ukususa</string>
+    <string name="words_board_square_pending_premium">%1$s ku-%2$s%3$s, %4$s, cofa ukususa</string>
 </resources>

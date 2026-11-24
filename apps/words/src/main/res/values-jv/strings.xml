@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s pamain</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Biji tembung kaping telu</string>
+    <string name="words_board_premium_name_double_word">Biji tembung kaping pindho</string>
+    <string name="words_board_premium_name_triple_letter">Biji aksara kaping telu</string>
+    <string name="words_board_premium_name_double_letter">Biji aksara kaping pindho</string>
+    <string name="words_board_premium_name_start">Kothak wiwitan, biji tembung kaping pindho</string>
+    <string name="words_board_square_empty">Kothak kosong %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Kothak kosong %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ing %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ing %2$s%3$s, klik kanggo mbusak</string>
+    <string name="words_board_square_pending_premium">%1$s ing %2$s%3$s, %4$s, klik kanggo mbusak</string>
 </resources>

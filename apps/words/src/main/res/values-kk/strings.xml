@@ -83,4 +83,14 @@
         <item quantity="one">%1$s ойыншы</item>
         <item quantity="other">%1$s ойыншы</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Сөздің үш еселенген ұпайы</string>
+    <string name="words_board_premium_name_double_word">Сөздің екі еселенген ұпайы</string>
+    <string name="words_board_premium_name_triple_letter">Әріптің үш еселенген ұпайы</string>
+    <string name="words_board_premium_name_double_letter">Әріптің екі еселенген ұпайы</string>
+    <string name="words_board_premium_name_start">Бастапқы алаң, сөздің екі еселенген ұпайы</string>
+    <string name="words_board_square_empty">Бос алаң %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Бос алаң %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s-те</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s-те, жою үшін басыңыз</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s-те, %4$s, жою үшін басыңыз</string>
 </resources>

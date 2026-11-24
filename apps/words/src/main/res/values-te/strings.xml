@@ -83,4 +83,14 @@
         <item quantity="one">%1$s ఆటగాడు</item>
         <item quantity="other">%1$s ఆటగాళ్లు</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">పదానికి మూడు రెట్లు పాయింట్లు</string>
+    <string name="words_board_premium_name_double_word">పదానికి రెండు రెట్లు పాయింట్లు</string>
+    <string name="words_board_premium_name_triple_letter">అక్షరానికి మూడు రెట్లు పాయింట్లు</string>
+    <string name="words_board_premium_name_double_letter">అక్షరానికి రెండు రెట్లు పాయింట్లు</string>
+    <string name="words_board_premium_name_start">ప్రారంభ గడి, పదానికి రెండు రెట్లు పాయింట్లు</string>
+    <string name="words_board_square_empty">ఖాళీ గడి %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ఖాళీ గడి %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s వద్ద</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s వద్ద, తీసివేయడానికి క్లిక్ చేయండి</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s వద్ద, %4$s, తీసివేయడానికి క్లిక్ చేయండి</string>
 </resources>

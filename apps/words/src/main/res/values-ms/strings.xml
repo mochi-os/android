@@ -78,4 +78,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s pemain</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Mata perkataan tiga kali ganda</string>
+    <string name="words_board_premium_name_double_word">Mata perkataan dua kali ganda</string>
+    <string name="words_board_premium_name_triple_letter">Mata huruf tiga kali ganda</string>
+    <string name="words_board_premium_name_double_letter">Mata huruf dua kali ganda</string>
+    <string name="words_board_premium_name_start">Petak mula, mata perkataan dua kali ganda</string>
+    <string name="words_board_square_empty">Petak kosong %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Petak kosong %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s di %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s di %2$s%3$s, klik untuk membuang</string>
+    <string name="words_board_square_pending_premium">%1$s di %2$s%3$s, %4$s, klik untuk membuang</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s ਖਿਡਾਰੀ</item>
         <item quantity="other">%1$s ਖਿਡਾਰੀ</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">ਸ਼ਬਦ ਦੇ ਤਿੰਨ ਗੁਣਾ ਅੰਕ</string>
+    <string name="words_board_premium_name_double_word">ਸ਼ਬਦ ਦੇ ਦੁੱਗਣੇ ਅੰਕ</string>
+    <string name="words_board_premium_name_triple_letter">ਅੱਖਰ ਦੇ ਤਿੰਨ ਗੁਣਾ ਅੰਕ</string>
+    <string name="words_board_premium_name_double_letter">ਅੱਖਰ ਦੇ ਦੁੱਗਣੇ ਅੰਕ</string>
+    <string name="words_board_premium_name_start">ਸ਼ੁਰੂਆਤੀ ਖਾਨਾ, ਸ਼ਬਦ ਦੇ ਦੁੱਗਣੇ ਅੰਕ</string>
+    <string name="words_board_square_empty">ਖਾਲੀ ਖਾਨਾ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ਖਾਲੀ ਖਾਨਾ %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s \'ਤੇ</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s \'ਤੇ, ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s \'ਤੇ, %4$s, ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ</string>
 </resources>

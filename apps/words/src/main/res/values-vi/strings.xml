@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s người chơi</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Nhân ba điểm từ</string>
+    <string name="words_board_premium_name_double_word">Nhân đôi điểm từ</string>
+    <string name="words_board_premium_name_triple_letter">Nhân ba điểm chữ</string>
+    <string name="words_board_premium_name_double_letter">Nhân đôi điểm chữ</string>
+    <string name="words_board_premium_name_start">Ô xuất phát, nhân đôi điểm từ</string>
+    <string name="words_board_square_empty">Ô trống %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Ô trống %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s tại %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s tại %2$s%3$s, nhấp để gỡ</string>
+    <string name="words_board_square_pending_premium">%1$s tại %2$s%3$s, %4$s, nhấp để gỡ</string>
 </resources>

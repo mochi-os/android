@@ -87,4 +87,14 @@
         <item quantity="many">%1$s гравців</item>
         <item quantity="other">%1$s гравця</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Потроєна вартість слова</string>
+    <string name="words_board_premium_name_double_word">Подвоєна вартість слова</string>
+    <string name="words_board_premium_name_triple_letter">Потроєна вартість літери</string>
+    <string name="words_board_premium_name_double_letter">Подвоєна вартість літери</string>
+    <string name="words_board_premium_name_start">Стартова клітинка, подвоєна вартість слова</string>
+    <string name="words_board_square_empty">Порожня клітинка %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Порожня клітинка %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s на %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s на %2$s%3$s, натисніть, щоб видалити</string>
+    <string name="words_board_square_pending_premium">%1$s на %2$s%3$s, %4$s, натисніть, щоб видалити</string>
 </resources>

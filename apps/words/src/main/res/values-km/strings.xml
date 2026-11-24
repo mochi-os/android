@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">អ្នកលេង %1$s នាក់</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">ពិន្ទុពាក្យបីដង</string>
+    <string name="words_board_premium_name_double_word">ពិន្ទុពាក្យពីរដង</string>
+    <string name="words_board_premium_name_triple_letter">ពិន្ទុអក្សរបីដង</string>
+    <string name="words_board_premium_name_double_letter">ពិន្ទុអក្សរពីរដង</string>
+    <string name="words_board_premium_name_start">ប្រអប់ចាប់ផ្តើម, ពិន្ទុពាក្យពីរដង</string>
+    <string name="words_board_square_empty">ប្រអប់ទទេ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ប្រអប់ទទេ %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s នៅ %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s នៅ %2$s%3$s, ចុចដើម្បីដក</string>
+    <string name="words_board_square_pending_premium">%1$s នៅ %2$s%3$s, %4$s, ចុចដើម្បីដក</string>
 </resources>

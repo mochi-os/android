@@ -83,4 +83,14 @@
         <item quantity="one">%1$s παίκτης</item>
         <item quantity="other">%1$s παίκτες</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Τριπλάσια αξία λέξης</string>
+    <string name="words_board_premium_name_double_word">Διπλάσια αξία λέξης</string>
+    <string name="words_board_premium_name_triple_letter">Τριπλάσια αξία γράμματος</string>
+    <string name="words_board_premium_name_double_letter">Διπλάσια αξία γράμματος</string>
+    <string name="words_board_premium_name_start">Αρχικό τετράγωνο, διπλάσια αξία λέξης</string>
+    <string name="words_board_square_empty">Κενό τετράγωνο %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Κενό τετράγωνο %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s στο %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s στο %2$s%3$s, κάντε κλικ για αφαίρεση</string>
+    <string name="words_board_square_pending_premium">%1$s στο %2$s%3$s, %4$s, κάντε κλικ για αφαίρεση</string>
 </resources>

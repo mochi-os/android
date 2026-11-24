@@ -83,4 +83,14 @@
         <item quantity="one">%1$s खेळाडू</item>
         <item quantity="other">%1$s खेळाडू</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">शब्दाचे तिप्पट गुण</string>
+    <string name="words_board_premium_name_double_word">शब्दाचे दुप्पट गुण</string>
+    <string name="words_board_premium_name_triple_letter">अक्षराचे तिप्पट गुण</string>
+    <string name="words_board_premium_name_double_letter">अक्षराचे दुप्पट गुण</string>
+    <string name="words_board_premium_name_start">सुरुवातीचा चौकोन, शब्दाचे दुप्पट गुण</string>
+    <string name="words_board_square_empty">रिकामा चौकोन %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">रिकामा चौकोन %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s येथे %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s येथे %2$s%3$s, काढण्यासाठी क्लिक करा</string>
+    <string name="words_board_square_pending_premium">%1$s येथे %2$s%3$s, %4$s, काढण्यासाठी क्लिक करा</string>
 </resources>

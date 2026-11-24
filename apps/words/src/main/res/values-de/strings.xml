@@ -83,4 +83,14 @@
         <item quantity="one">%1$s Spieler</item>
         <item quantity="other">%1$s Spieler</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Dreifacher Wortwert</string>
+    <string name="words_board_premium_name_double_word">Doppelter Wortwert</string>
+    <string name="words_board_premium_name_triple_letter">Dreifacher Buchstabenwert</string>
+    <string name="words_board_premium_name_double_letter">Doppelter Buchstabenwert</string>
+    <string name="words_board_premium_name_start">Startfeld, doppelter Wortwert</string>
+    <string name="words_board_square_empty">Leeres Feld %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Leeres Feld %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s auf %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s auf %2$s%3$s, zum Entfernen klicken</string>
+    <string name="words_board_square_pending_premium">%1$s auf %2$s%3$s, %4$s, zum Entfernen klicken</string>
 </resources>

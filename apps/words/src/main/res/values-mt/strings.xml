@@ -89,4 +89,14 @@
         <item quantity="many">%1$s-il plejer</item>
         <item quantity="other">%1$s plejer</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Kelma tripla</string>
+    <string name="words_board_premium_name_double_word">Kelma doppja</string>
+    <string name="words_board_premium_name_triple_letter">Ittra tripla</string>
+    <string name="words_board_premium_name_double_letter">Ittra doppja</string>
+    <string name="words_board_premium_name_start">Kwadru tal-bidu, kelma doppja</string>
+    <string name="words_board_square_empty">Kwadru vojt %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Kwadru vojt %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s fuq %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s fuq %2$s%3$s, ikklikkja biex tneħħi</string>
+    <string name="words_board_square_pending_premium">%1$s fuq %2$s%3$s, %4$s, ikklikkja biex tneħħi</string>
 </resources>

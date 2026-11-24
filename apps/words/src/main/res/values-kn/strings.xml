@@ -83,4 +83,14 @@
         <item quantity="one">%1$s ಆಟಗಾರ</item>
         <item quantity="other">%1$s ಆಟಗಾರರು</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">ಪದದ ಮೂರು ಪಟ್ಟು ಅಂಕ</string>
+    <string name="words_board_premium_name_double_word">ಪದದ ಎರಡು ಪಟ್ಟು ಅಂಕ</string>
+    <string name="words_board_premium_name_triple_letter">ಅಕ್ಷರದ ಮೂರು ಪಟ್ಟು ಅಂಕ</string>
+    <string name="words_board_premium_name_double_letter">ಅಕ್ಷರದ ಎರಡು ಪಟ್ಟು ಅಂಕ</string>
+    <string name="words_board_premium_name_start">ಆರಂಭಿಕ ಚೌಕ, ಪದದ ಎರಡು ಪಟ್ಟು ಅಂಕ</string>
+    <string name="words_board_square_empty">ಖಾಲಿ ಚೌಕ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ಖಾಲಿ ಚೌಕ %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ರಲ್ಲಿ %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ರಲ್ಲಿ %2$s%3$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="words_board_square_pending_premium">%1$s ರಲ್ಲಿ %2$s%3$s, %4$s, ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
 </resources>

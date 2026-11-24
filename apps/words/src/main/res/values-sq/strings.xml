@@ -80,4 +80,14 @@
         <item quantity="one">%1$s lojtar</item>
         <item quantity="other">%1$s lojtarë</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Vlerë e trefishtë e fjalës</string>
+    <string name="words_board_premium_name_double_word">Vlerë e dyfishtë e fjalës</string>
+    <string name="words_board_premium_name_triple_letter">Vlerë e trefishtë e shkronjës</string>
+    <string name="words_board_premium_name_double_letter">Vlerë e dyfishtë e shkronjës</string>
+    <string name="words_board_premium_name_start">Katrori i nisjes, vlerë e dyfishtë e fjalës</string>
+    <string name="words_board_square_empty">Katror bosh %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Katror bosh %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s në %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s në %2$s%3$s, kliko për të hequr</string>
+    <string name="words_board_square_pending_premium">%1$s në %2$s%3$s, %4$s, kliko për të hequr</string>
 </resources>

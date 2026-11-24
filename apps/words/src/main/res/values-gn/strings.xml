@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s ñembosaráihára</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Ñe\'ẽ mbohapy jey</string>
+    <string name="words_board_premium_name_double_word">Ñe\'ẽ mokõi jey</string>
+    <string name="words_board_premium_name_triple_letter">Tai mbohapy jey</string>
+    <string name="words_board_premium_name_double_letter">Tai mokõi jey</string>
+    <string name="words_board_premium_name_start">Ñepyrũha cuadro, ñe\'ẽ mokõi jey</string>
+    <string name="words_board_square_empty">Cuadro nandi %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Cuadro nandi %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s-pe</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s-pe, eikutu embogue hag̃ua</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s-pe, %4$s, eikutu embogue hag̃ua</string>
 </resources>

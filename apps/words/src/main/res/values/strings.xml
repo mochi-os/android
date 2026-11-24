@@ -65,6 +65,16 @@
     <string name="words_board_premium_double_word">DW</string>
     <string name="words_board_premium_triple_letter">TL</string>
     <string name="words_board_premium_double_letter">DL</string>
+    <string name="words_board_premium_name_triple_word">Triple word score</string>
+    <string name="words_board_premium_name_double_word">Double word score</string>
+    <string name="words_board_premium_name_triple_letter">Triple letter score</string>
+    <string name="words_board_premium_name_double_letter">Double letter score</string>
+    <string name="words_board_premium_name_start">Start square, double word score</string>
+    <string name="words_board_square_empty">Empty square %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Empty square %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s at %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s at %2$s%3$s, click to remove</string>
+    <string name="words_board_square_pending_premium">%1$s at %2$s%3$s, %4$s, click to remove</string>
     <string name="words_detail_cancel">Cancel</string>
     <string name="words_detail_exchange">Exchange</string>
     <string name="words_detail_exchange_count">Exchange (%1$s)</string>

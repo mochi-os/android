@@ -83,4 +83,14 @@
         <item quantity="one">Ɗan wasa %1$s</item>
         <item quantity="other">\'Yan wasa %1$s</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Makin kalma sau uku</string>
+    <string name="words_board_premium_name_double_word">Makin kalma sau biyu</string>
+    <string name="words_board_premium_name_triple_letter">Makin harafi sau uku</string>
+    <string name="words_board_premium_name_double_letter">Makin harafi sau biyu</string>
+    <string name="words_board_premium_name_start">Murabba\'in farawa, makin kalma sau biyu</string>
+    <string name="words_board_square_empty">Murabba\'i mara komai %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Murabba\'i mara komai %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s a %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s a %2$s%3$s, danna don cire</string>
+    <string name="words_board_square_pending_premium">%1$s a %2$s%3$s, %4$s, danna don cire</string>
 </resources>

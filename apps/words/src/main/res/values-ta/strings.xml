@@ -83,4 +83,14 @@
         <item quantity="one">%1$s வீரர்</item>
         <item quantity="other">%1$s வீரர்கள்</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">சொல்லுக்கு மும்மடங்கு மதிப்பெண்</string>
+    <string name="words_board_premium_name_double_word">சொல்லுக்கு இருமடங்கு மதிப்பெண்</string>
+    <string name="words_board_premium_name_triple_letter">எழுத்துக்கு மும்மடங்கு மதிப்பெண்</string>
+    <string name="words_board_premium_name_double_letter">எழுத்துக்கு இருமடங்கு மதிப்பெண்</string>
+    <string name="words_board_premium_name_start">தொடக்கக் கட்டம், சொல்லுக்கு இருமடங்கு மதிப்பெண்</string>
+    <string name="words_board_square_empty">வெற்று கட்டம் %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">வெற்று கட்டம் %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s-இல்</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s-இல், அகற்ற கிளிக் செய்யவும்</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s-இல், %4$s, அகற்ற கிளிக் செய்யவும்</string>
 </resources>

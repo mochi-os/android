@@ -83,4 +83,14 @@
         <item quantity="one">%1$s שפּילער</item>
         <item quantity="other">%1$s שפּילער</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">דרײַפֿאַכיקער ווערט פֿון וואָרט</string>
+    <string name="words_board_premium_name_double_word">טאָפּלטער ווערט פֿון וואָרט</string>
+    <string name="words_board_premium_name_triple_letter">דרײַפֿאַכיקער ווערט פֿון אות</string>
+    <string name="words_board_premium_name_double_letter">טאָפּלטער ווערט פֿון אות</string>
+    <string name="words_board_premium_name_start">אָנהייב־קעסטל, טאָפּלטער ווערט פֿון וואָרט</string>
+    <string name="words_board_square_empty">ליידיק קעסטל %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ליידיק קעסטל %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s בײַ %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s בײַ %2$s%3$s, קליק צו אַראָפּנעמען</string>
+    <string name="words_board_square_pending_premium">%1$s בײַ %2$s%3$s, %4$s, קליק צו אַראָפּנעמען</string>
 </resources>

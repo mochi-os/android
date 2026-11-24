@@ -89,4 +89,14 @@
         <item quantity="many">%1$s imreoir</item>
         <item quantity="other">%1$s imreoir</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Scór focail faoi thrí</string>
+    <string name="words_board_premium_name_double_word">Scór focail faoi dhó</string>
+    <string name="words_board_premium_name_triple_letter">Scór litreach faoi thrí</string>
+    <string name="words_board_premium_name_double_letter">Scór litreach faoi dhó</string>
+    <string name="words_board_premium_name_start">Cearnóg tosaigh, scór focail faoi dhó</string>
+    <string name="words_board_square_empty">Cearnóg fholamh %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Cearnóg fholamh %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ag %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ag %2$s%3$s, cliceáil chun é a bhaint</string>
+    <string name="words_board_square_pending_premium">%1$s ag %2$s%3$s, %4$s, cliceáil chun é a bhaint</string>
 </resources>

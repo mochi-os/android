@@ -83,4 +83,14 @@
         <item quantity="one">%1$s spelare</item>
         <item quantity="other">%1$s spelare</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Trippelt ordvärde</string>
+    <string name="words_board_premium_name_double_word">Dubbelt ordvärde</string>
+    <string name="words_board_premium_name_triple_letter">Trippelt bokstavsvärde</string>
+    <string name="words_board_premium_name_double_letter">Dubbelt bokstavsvärde</string>
+    <string name="words_board_premium_name_start">Startruta, dubbelt ordvärde</string>
+    <string name="words_board_square_empty">Tom ruta %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Tom ruta %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s vid %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s vid %2$s%3$s, klicka för att ta bort</string>
+    <string name="words_board_square_pending_premium">%1$s vid %2$s%3$s, %4$s, klicka för att ta bort</string>
 </resources>

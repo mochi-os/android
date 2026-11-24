@@ -83,4 +83,14 @@
         <item quantity="one">%1$s играч</item>
         <item quantity="other">%1$s играчи</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Утроена стойност на думата</string>
+    <string name="words_board_premium_name_double_word">Удвоена стойност на думата</string>
+    <string name="words_board_premium_name_triple_letter">Утроена стойност на буквата</string>
+    <string name="words_board_premium_name_double_letter">Удвоена стойност на буквата</string>
+    <string name="words_board_premium_name_start">Начално поле, удвоена стойност на думата</string>
+    <string name="words_board_square_empty">Празно поле %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Празно поле %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s в %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s в %2$s%3$s, натиснете за премахване</string>
+    <string name="words_board_square_pending_premium">%1$s в %2$s%3$s, %4$s, натиснете за премахване</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s یاریزان</item>
         <item quantity="other">%1$s یاریزان</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">سێ هێندەی خاڵی وشە</string>
+    <string name="words_board_premium_name_double_word">دوو هێندەی خاڵی وشە</string>
+    <string name="words_board_premium_name_triple_letter">سێ هێندەی خاڵی پیت</string>
+    <string name="words_board_premium_name_double_letter">دوو هێندەی خاڵی پیت</string>
+    <string name="words_board_premium_name_start">خانەی دەستپێک، دوو هێندەی خاڵی وشە</string>
+    <string name="words_board_square_empty">خانەی بەتاڵی %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">خانەی بەتاڵی %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s لە %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s لە %2$s%3$s، کرتە بکە بۆ لابردن</string>
+    <string name="words_board_square_pending_premium">%1$s لە %2$s%3$s، %4$s، کرتە بکە بۆ لابردن</string>
 </resources>

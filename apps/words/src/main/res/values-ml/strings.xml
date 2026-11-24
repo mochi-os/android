@@ -83,4 +83,14 @@
         <item quantity="one">%1$s കളിക്കാരൻ</item>
         <item quantity="other">%1$s കളിക്കാർ</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">വാക്കിന് മൂന്നിരട്ടി പോയിന്റ്</string>
+    <string name="words_board_premium_name_double_word">വാക്കിന് ഇരട്ടി പോയിന്റ്</string>
+    <string name="words_board_premium_name_triple_letter">അക്ഷരത്തിന് മൂന്നിരട്ടി പോയിന്റ്</string>
+    <string name="words_board_premium_name_double_letter">അക്ഷരത്തിന് ഇരട്ടി പോയിന്റ്</string>
+    <string name="words_board_premium_name_start">ആരംഭ ചതുരം, വാക്കിന് ഇരട്ടി പോയിന്റ്</string>
+    <string name="words_board_square_empty">ശൂന്യ ചതുരം %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ശൂന്യ ചതുരം %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s-ൽ</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s-ൽ, നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s-ൽ, %4$s, നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക</string>
 </resources>

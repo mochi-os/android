@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s бозигар</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Холи сечандаи калима</string>
+    <string name="words_board_premium_name_double_word">Холи дучандаи калима</string>
+    <string name="words_board_premium_name_triple_letter">Холи сечандаи ҳарф</string>
+    <string name="words_board_premium_name_double_letter">Холи дучандаи ҳарф</string>
+    <string name="words_board_premium_name_start">Чоркунҷаи оғоз, холи дучандаи калима</string>
+    <string name="words_board_square_empty">Чоркунҷаи холии %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Чоркунҷаи холии %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s дар %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s дар %2$s%3$s, барои хориҷ кардан клик кунед</string>
+    <string name="words_board_square_pending_premium">%1$s дар %2$s%3$s, %4$s, барои хориҷ кардан клик кунед</string>
 </resources>

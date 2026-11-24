@@ -83,4 +83,14 @@
         <item quantity="one">%1$s taphataa</item>
         <item quantity="other">%1$s taphattoota</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Qabxii jechaa harka sadii</string>
+    <string name="words_board_premium_name_double_word">Qabxii jechaa harka lama</string>
+    <string name="words_board_premium_name_triple_letter">Qabxii qubee harka sadii</string>
+    <string name="words_board_premium_name_double_letter">Qabxii qubee harka lama</string>
+    <string name="words_board_premium_name_start">Iddoo jalqabaa, qabxii jechaa harka lama</string>
+    <string name="words_board_square_empty">Iddoo duwwaa %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Iddoo duwwaa %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s irratti</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s irratti, haquuf cuqaasi</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s irratti, %4$s, haquuf cuqaasi</string>
 </resources>

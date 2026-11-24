@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">ຜູ້ຫຼິ້ນ %1$s ຄົນ</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">ຄະແນນຄຳສາມເທົ່າ</string>
+    <string name="words_board_premium_name_double_word">ຄະແນນຄຳສອງເທົ່າ</string>
+    <string name="words_board_premium_name_triple_letter">ຄະແນນອັກສອນສາມເທົ່າ</string>
+    <string name="words_board_premium_name_double_letter">ຄະແນນອັກສອນສອງເທົ່າ</string>
+    <string name="words_board_premium_name_start">ຊ່ອງເລີ່ມຕົ້ນ, ຄະແນນຄຳສອງເທົ່າ</string>
+    <string name="words_board_square_empty">ຊ່ອງສີ່ຫຼ່ຽມວ່າງ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">ຊ່ອງສີ່ຫຼ່ຽມວ່າງ %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ທີ່ %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ທີ່ %2$s%3$s, ຄລິກເພື່ອລົບ</string>
+    <string name="words_board_square_pending_premium">%1$s ທີ່ %2$s%3$s, %4$s, ຄລິກເພື່ອລົບ</string>
 </resources>

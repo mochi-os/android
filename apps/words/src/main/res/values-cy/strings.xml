@@ -91,4 +91,14 @@
         <item quantity="many">%1$s chwaraewr</item>
         <item quantity="other">%1$s chwaraewr</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Sgôr gair triphlyg</string>
+    <string name="words_board_premium_name_double_word">Sgôr gair dwbl</string>
+    <string name="words_board_premium_name_triple_letter">Sgôr llythyren driphlyg</string>
+    <string name="words_board_premium_name_double_letter">Sgôr llythyren ddwbl</string>
+    <string name="words_board_premium_name_start">Sgwâr cychwyn, sgôr gair dwbl</string>
+    <string name="words_board_square_empty">Sgwâr gwag %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Sgwâr gwag %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s yn %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s yn %2$s%3$s, cliciwch i dynnu</string>
+    <string name="words_board_square_pending_premium">%1$s yn %2$s%3$s, %4$s, cliciwch i dynnu</string>
 </resources>

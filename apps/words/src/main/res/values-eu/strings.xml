@@ -80,4 +80,14 @@
         <item quantity="one">%1$s jokalari</item>
         <item quantity="other">%1$s jokalari</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Hitzaren balio hirukoitza</string>
+    <string name="words_board_premium_name_double_word">Hitzaren balio bikoitza</string>
+    <string name="words_board_premium_name_triple_letter">Letraren balio hirukoitza</string>
+    <string name="words_board_premium_name_double_letter">Letraren balio bikoitza</string>
+    <string name="words_board_premium_name_start">Hasierako laukia, hitzaren balio bikoitza</string>
+    <string name="words_board_square_empty">Lauki hutsa %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Lauki hutsa %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s-(e)an</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s-(e)an, sakatu kentzeko</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s-(e)an, %4$s, sakatu kentzeko</string>
 </resources>

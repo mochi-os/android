@@ -80,4 +80,14 @@
         <item quantity="one">Mchezaji %1$s</item>
         <item quantity="other">Wachezaji %1$s</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Alama za neno mara tatu</string>
+    <string name="words_board_premium_name_double_word">Alama za neno mara mbili</string>
+    <string name="words_board_premium_name_triple_letter">Alama za herufi mara tatu</string>
+    <string name="words_board_premium_name_double_letter">Alama za herufi mara mbili</string>
+    <string name="words_board_premium_name_start">Mraba wa kuanzia, alama za neno mara mbili</string>
+    <string name="words_board_square_empty">Mraba tupu %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Mraba tupu %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s kwenye %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s kwenye %2$s%3$s, bonyeza ili kuondoa</string>
+    <string name="words_board_square_pending_premium">%1$s kwenye %2$s%3$s, %4$s, bonyeza ili kuondoa</string>
 </resources>

@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">Eléré %1$s</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Àmì ọ̀rọ̀ ìlọ́po mẹ́ta</string>
+    <string name="words_board_premium_name_double_word">Àmì ọ̀rọ̀ ìlọ́po méjì</string>
+    <string name="words_board_premium_name_triple_letter">Àmì lẹ́tà ìlọ́po mẹ́ta</string>
+    <string name="words_board_premium_name_double_letter">Àmì lẹ́tà ìlọ́po méjì</string>
+    <string name="words_board_premium_name_start">Onígun ìbẹ̀rẹ̀, àmì ọ̀rọ̀ ìlọ́po méjì</string>
+    <string name="words_board_square_empty">Onígun mẹ́rin tó ṣófo %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Onígun mẹ́rin tó ṣófo %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ní %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ní %2$s%3$s, tẹ láti yọ</string>
+    <string name="words_board_square_pending_premium">%1$s ní %2$s%3$s, %4$s, tẹ láti yọ</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s खिलाड़ी</item>
         <item quantity="other">%1$s खिलाड़ी</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">शब्द के तीन गुना अंक</string>
+    <string name="words_board_premium_name_double_word">शब्द के दुगुना अंक</string>
+    <string name="words_board_premium_name_triple_letter">अक्षर के तीन गुना अंक</string>
+    <string name="words_board_premium_name_double_letter">अक्षर के दुगुना अंक</string>
+    <string name="words_board_premium_name_start">सुरुआती वर्ग, शब्द के दुगुना अंक</string>
+    <string name="words_board_square_empty">खाली वर्ग %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">खाली वर्ग %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s पर</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s पर, हटावे खातिर क्लिक करीं</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s पर, %4$s, हटावे खातिर क्लिक करीं</string>
 </resources>

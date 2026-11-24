@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s pamaén</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Nilai kecap tilu kali</string>
+    <string name="words_board_premium_name_double_word">Nilai kecap dua kali</string>
+    <string name="words_board_premium_name_triple_letter">Nilai hurup tilu kali</string>
+    <string name="words_board_premium_name_double_letter">Nilai hurup dua kali</string>
+    <string name="words_board_premium_name_start">Kotak mimiti, nilai kecap dua kali</string>
+    <string name="words_board_square_empty">Kotak kosong %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Kotak kosong %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s dina %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s dina %2$s%3$s, klik pikeun nyabut</string>
+    <string name="words_board_square_pending_premium">%1$s dina %2$s%3$s, %4$s, klik pikeun nyabut</string>
 </resources>

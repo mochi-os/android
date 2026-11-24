@@ -83,4 +83,14 @@
         <item quantity="one">%1$s oýunçy</item>
         <item quantity="other">%1$s oýunçy</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Sözüň üç esse baly</string>
+    <string name="words_board_premium_name_double_word">Sözüň iki esse baly</string>
+    <string name="words_board_premium_name_triple_letter">Harpyň üç esse baly</string>
+    <string name="words_board_premium_name_double_letter">Harpyň iki esse baly</string>
+    <string name="words_board_premium_name_start">Başlangyç öýjük, sözüň iki esse baly</string>
+    <string name="words_board_square_empty">Boş öýjük %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Boş öýjük %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s -da %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s -da %1$s, aýyrmak üçin bas</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s -da %1$s, %4$s, aýyrmak üçin bas</string>
 </resources>

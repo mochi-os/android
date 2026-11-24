@@ -85,4 +85,14 @@
         <item quantity="two">%1$s שחקנים</item>
         <item quantity="other">%1$s שחקנים</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">מילה משולשת</string>
+    <string name="words_board_premium_name_double_word">מילה כפולה</string>
+    <string name="words_board_premium_name_triple_letter">אות משולשת</string>
+    <string name="words_board_premium_name_double_letter">אות כפולה</string>
+    <string name="words_board_premium_name_start">משבצת פתיחה, מילה כפולה</string>
+    <string name="words_board_square_empty">משבצת ריקה %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">משבצת ריקה %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ב-%2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s ב-%2$s%3$s, לחץ כדי להסיר</string>
+    <string name="words_board_square_pending_premium">%1$s ב-%2$s%3$s, %4$s, לחץ כדי להסיר</string>
 </resources>

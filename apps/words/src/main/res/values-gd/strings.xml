@@ -87,4 +87,14 @@
         <item quantity="few">%1$s cluicheadairean</item>
         <item quantity="other">%1$s cluicheadair</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Sgòr facail trì-fillte</string>
+    <string name="words_board_premium_name_double_word">Sgòr facail dà-fhillte</string>
+    <string name="words_board_premium_name_triple_letter">Sgòr litreach trì-fillte</string>
+    <string name="words_board_premium_name_double_letter">Sgòr litreach dà-fhillte</string>
+    <string name="words_board_premium_name_start">Ceàrnag tòiseachaidh, sgòr facail dà-fhillte</string>
+    <string name="words_board_square_empty">Ceàrnag fhalamh %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Ceàrnag fhalamh %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s aig %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s aig %2$s%3$s, briog airson toirt air falbh</string>
+    <string name="words_board_square_pending_premium">%1$s aig %2$s%3$s, %4$s, briog airson toirt air falbh</string>
 </resources>

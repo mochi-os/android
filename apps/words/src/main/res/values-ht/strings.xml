@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s jwè</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Mo konte trip</string>
+    <string name="words_board_premium_name_double_word">Mo konte doub</string>
+    <string name="words_board_premium_name_triple_letter">Lèt konte trip</string>
+    <string name="words_board_premium_name_double_letter">Lèt konte doub</string>
+    <string name="words_board_premium_name_start">Kare depa, mo konte doub</string>
+    <string name="words_board_square_empty">Kare vid %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Kare vid %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s nan %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s nan %2$s%3$s, klike pou retire</string>
+    <string name="words_board_square_pending_premium">%1$s nan %2$s%3$s, %4$s, klike pou retire</string>
 </resources>

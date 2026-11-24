@@ -83,4 +83,14 @@
         <item quantity="one">%1$s játékos</item>
         <item quantity="other">%1$s játékos</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Háromszoros szóérték</string>
+    <string name="words_board_premium_name_double_word">Kétszeres szóérték</string>
+    <string name="words_board_premium_name_triple_letter">Háromszoros betűérték</string>
+    <string name="words_board_premium_name_double_letter">Kétszeres betűérték</string>
+    <string name="words_board_premium_name_start">Kezdőmező, kétszeres szóérték</string>
+    <string name="words_board_square_empty">Üres mező %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Üres mező %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s itt: %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s itt: %2$s%3$s, kattintson az eltávolításhoz</string>
+    <string name="words_board_square_pending_premium">%1$s itt: %2$s%3$s, %4$s, kattintson az eltávolításhoz</string>
 </resources>

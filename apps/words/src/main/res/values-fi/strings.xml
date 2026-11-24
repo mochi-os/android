@@ -83,4 +83,14 @@
         <item quantity="one">%1$s pelaaja</item>
         <item quantity="other">%1$s pelaajaa</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Kolminkertainen sanan arvo</string>
+    <string name="words_board_premium_name_double_word">Kaksinkertainen sanan arvo</string>
+    <string name="words_board_premium_name_triple_letter">Kolminkertainen kirjaimen arvo</string>
+    <string name="words_board_premium_name_double_letter">Kaksinkertainen kirjaimen arvo</string>
+    <string name="words_board_premium_name_start">Aloitusruutu, kaksinkertainen sanan arvo</string>
+    <string name="words_board_square_empty">Tyhjä ruutu %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Tyhjä ruutu %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s kohdassa %2$s%3$s</string>
+    <string name="words_board_square_pending">%1$s kohdassa %2$s%3$s, poista napsauttamalla</string>
+    <string name="words_board_square_pending_premium">%1$s kohdassa %2$s%3$s, %4$s, poista napsauttamalla</string>
 </resources>

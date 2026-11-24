@@ -83,4 +83,14 @@
         <item quantity="one">ක්‍රීඩකයන් %1$s</item>
         <item quantity="other">ක්‍රීඩකයන් %1$s</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">වචනයට තුන් ගුණයක ලකුණු</string>
+    <string name="words_board_premium_name_double_word">වචනයට දෙගුණයක ලකුණු</string>
+    <string name="words_board_premium_name_triple_letter">අකුරට තුන් ගුණයක ලකුණු</string>
+    <string name="words_board_premium_name_double_letter">අකුරට දෙගුණයක ලකුණු</string>
+    <string name="words_board_premium_name_start">ආරම්භක කොටුව, වචනයට දෙගුණයක ලකුණු</string>
+    <string name="words_board_square_empty">හිස් කොටුව %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">හිස් කොටුව %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s හි %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s හි %1$s, ඉවත් කිරීමට ක්ලික් කරන්න</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s හි %1$s, %4$s, ඉවත් කිරීමට ක්ලික් කරන්න</string>
 </resources>

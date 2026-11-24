@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">%1$s anatirinaka</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Kimsa kuti aru jakhu</string>
+    <string name="words_board_premium_name_double_word">Pä kuti aru jakhu</string>
+    <string name="words_board_premium_name_triple_letter">Kimsa kuti qillqa jakhu</string>
+    <string name="words_board_premium_name_double_letter">Pä kuti qillqa jakhu</string>
+    <string name="words_board_premium_name_start">Qalltaña cuadro, pä kuti aru jakhu</string>
+    <string name="words_board_square_empty">Ch\'usa cuadro %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Ch\'usa cuadro %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s ukax %2$s%3$s ukan</string>
+    <string name="words_board_square_pending">%1$s ukax %2$s%3$s ukan, apaqañatakix klikam</string>
+    <string name="words_board_square_pending_premium">%1$s ukax %2$s%3$s ukan, %4$s, apaqañatakix klikam</string>
 </resources>

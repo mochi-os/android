@@ -80,4 +80,14 @@
         <item quantity="one">%1$s کھلاڑی</item>
         <item quantity="other">%1$s کھلاڑی</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">لفظ کے تین گنا پوائنٹس</string>
+    <string name="words_board_premium_name_double_word">لفظ کے دگنے پوائنٹس</string>
+    <string name="words_board_premium_name_triple_letter">حرف کے تین گنا پوائنٹس</string>
+    <string name="words_board_premium_name_double_letter">حرف کے دگنے پوائنٹس</string>
+    <string name="words_board_premium_name_start">آغاز کا خانہ، لفظ کے دگنے پوائنٹس</string>
+    <string name="words_board_square_empty">خالی خانہ %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">خالی خانہ %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s پر</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s پر، ہٹانے کے لیے کلک کریں</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s پر، %4$s، ہٹانے کے لیے کلک کریں</string>
 </resources>

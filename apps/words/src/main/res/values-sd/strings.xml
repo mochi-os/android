@@ -83,4 +83,14 @@
         <item quantity="one">%1$s رانديگر</item>
         <item quantity="other">%1$s رانديگر</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">لفظ جا ٽيڻا نمبر</string>
+    <string name="words_board_premium_name_double_word">لفظ جا ٻيڻا نمبر</string>
+    <string name="words_board_premium_name_triple_letter">حرف جا ٽيڻا نمبر</string>
+    <string name="words_board_premium_name_double_letter">حرف جا ٻيڻا نمبر</string>
+    <string name="words_board_premium_name_start">شروعاتي چورس، لفظ جا ٻيڻا نمبر</string>
+    <string name="words_board_square_empty">خالي چورس %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">خالي چورس %1$s%2$s، %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s تي</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s تي، ھٽائڻ لاءِ ڪلڪ ڪريو</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s تي، %4$s، ھٽائڻ لاءِ ڪلڪ ڪريو</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s oyunçu</item>
         <item quantity="other">%1$s oyunçu</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">Üçqat söz xalı</string>
+    <string name="words_board_premium_name_double_word">İkiqat söz xalı</string>
+    <string name="words_board_premium_name_triple_letter">Üçqat hərf xalı</string>
+    <string name="words_board_premium_name_double_letter">İkiqat hərf xalı</string>
+    <string name="words_board_premium_name_start">Başlanğıc kvadratı, ikiqat söz xalı</string>
+    <string name="words_board_square_empty">Boş kvadrat %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">Boş kvadrat %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s mövqeyində %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s mövqeyində %1$s, silmək üçün klikləyin</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s mövqeyində %1$s, %4$s, silmək üçün klikləyin</string>
 </resources>

@@ -83,4 +83,14 @@
         <item quantity="one">%1$s खेलाडी</item>
         <item quantity="other">%1$s खेलाडी</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">शब्दको तेब्बर अङ्क</string>
+    <string name="words_board_premium_name_double_word">शब्दको दोब्बर अङ्क</string>
+    <string name="words_board_premium_name_triple_letter">अक्षरको तेब्बर अङ्क</string>
+    <string name="words_board_premium_name_double_letter">अक्षरको दोब्बर अङ्क</string>
+    <string name="words_board_premium_name_start">सुरुको वर्ग, शब्दको दोब्बर अङ्क</string>
+    <string name="words_board_square_empty">खाली वर्ग %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">खाली वर्ग %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%1$s %2$s%3$s मा</string>
+    <string name="words_board_square_pending">%1$s %2$s%3$s मा, हटाउन क्लिक गर्नुहोस्</string>
+    <string name="words_board_square_pending_premium">%1$s %2$s%3$s मा, %4$s, हटाउन क्लिक गर्नुहोस्</string>
 </resources>

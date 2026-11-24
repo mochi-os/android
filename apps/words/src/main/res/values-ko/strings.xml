@@ -81,4 +81,14 @@
     <plurals name="words_detail_players">
         <item quantity="other">플레이어 %1$s명</item>
     </plurals>
+    <string name="words_board_premium_name_triple_word">단어 점수 3배</string>
+    <string name="words_board_premium_name_double_word">단어 점수 2배</string>
+    <string name="words_board_premium_name_triple_letter">글자 점수 3배</string>
+    <string name="words_board_premium_name_double_letter">글자 점수 2배</string>
+    <string name="words_board_premium_name_start">시작 칸, 단어 점수 2배</string>
+    <string name="words_board_square_empty">빈 칸 %1$s%2$s</string>
+    <string name="words_board_square_empty_premium">빈 칸 %1$s%2$s, %3$s</string>
+    <string name="words_board_square_tile">%2$s%3$s의 %1$s</string>
+    <string name="words_board_square_pending">%2$s%3$s의 %1$s, 제거하려면 클릭</string>
+    <string name="words_board_square_pending_premium">%2$s%3$s의 %1$s, %4$s, 제거하려면 클릭</string>
 </resources>
