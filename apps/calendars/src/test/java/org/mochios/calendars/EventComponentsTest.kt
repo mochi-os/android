@@ -219,7 +219,7 @@ class EventComponentsTest {
 
     @Test
     fun `a copy of this event carries the edits and drops the repeat`() {
-        val copy = duplicate(form(title = "Renamed").copy(colour = "#f87171"), Scope.ONE)
+        val copy = duplicate(form(title = "Renamed").copy(colour = "#f87171"), Scope.ONE, listOf(master()), LONDON)
         assertEquals("Renamed", copy.title)
         assertEquals("#f87171", copy.colour)
         assertEquals(NEXT, copy.start)
@@ -232,12 +232,73 @@ class EventComponentsTest {
     @Test
     fun `a copy of all events carries the edits onto the series' own start`() {
         // The occurrence a week on, moved by an hour: the series copy starts an hour after the series did.
-        val copy = duplicate(form(title = "Renamed", start = NEXT + 3_600, finish = NEXT_END + 3_600), Scope.ALL)
+        val copy = duplicate(
+            form(title = "Renamed", start = NEXT + 3_600, finish = NEXT_END + 3_600),
+            Scope.ALL,
+            listOf(master()),
+            LONDON,
+        )
         assertEquals("Renamed", copy.title)
         assertEquals(TEN + 3_600, copy.start)
         assertEquals(ELEVEN + 3_600, copy.finish)
         assertEquals("FREQ=WEEKLY", copy.recurrence.rule())
         assertEquals(0L, copy.occurrence)
+    }
+
+    /** How [seconds] reads on London's clock, as `yyyyMMdd'T'HHmmss`. */
+    private fun reads(seconds: Long) = java.time.Instant.ofEpochSecond(seconds).atZone(java.time.ZoneId.of(LONDON))
+        .format(java.time.format.DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss"))
+
+    /**
+     * A daily London series at 09:00 from Wednesday 23 October 2024, whose
+     * Saturday occurrence, in summer time, was moved to 09:00 on Sunday the
+     * 27th, in winter time: London's clocks go back that morning.
+     */
+    private fun autumn(): List<EventComponent> = listOf(
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up"),
+                property("DTSTART", "20241023T090000", "TZID", LONDON),
+                property("DTEND", "20241023T100000", "TZID", LONDON),
+                property("RRULE", "FREQ=DAILY"),
+            ),
+        ),
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up, a day late"),
+                property("RECURRENCE-ID", "20241026T090000", "TZID", LONDON),
+                property("DTSTART", "20241027T090000", "TZID", LONDON),
+                property("DTEND", "20241027T100000", "TZID", LONDON),
+            ),
+        ),
+    )
+
+    @Test
+    fun `a copy of all events from an override moved across a clock change lands on the series by the clock`() {
+        // The override opened, renamed and copied whole: a day on from the
+        // series' first occurrence, at 09:00 as the form shows.
+        val tree = autumn()
+        val form = draft(tree[1], LONDON).copy(
+            title = "Renamed",
+            recurrence = Recurrence(Frequency.DAILY),
+            occurrence = london("20241026T090000"),
+            series = london("20241023T090000"),
+        )
+        val copy = duplicate(form, Scope.ALL, tree, LONDON)
+        assertEquals(
+            "THE POINT: 09:00 to 10:00 on the 24th, not 10:00 to 11:00",
+            listOf("20241024T090000", "20241024T100000"),
+            listOf(reads(copy.start), reads(copy.finish)),
+        )
+        assertEquals(
+            "where saving the form to the series puts the series",
+            components(form, tree, Scope.ALL, LONDON)[0].value("DTSTART"),
+            reads(copy.start),
+        )
     }
 
     // ---- colour and link ----
@@ -789,5 +850,90 @@ class EventComponentsTest {
         val read = draft(carried, LONDON, NEXT)
         val tree = components(read.copy(title = "Just this one", occurrence = NEXT), listOf(carried), Scope.ONE, LONDON)
         assertEquals(listOf(alarm(15, "EMAIL", "Leave now")), tree[1].components.filter { it.name == "VALARM" })
+    }
+
+    // ---- a series moved across a clock change ----
+
+    /** The instant [time], as `yyyyMMdd'T'HHmmss`, reads on London's clock. */
+    private fun london(time: String) =
+        java.time.LocalDateTime.parse(time, java.time.format.DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss"))
+            .atZone(java.time.ZoneId.of(LONDON)).toEpochSecond()
+
+    /**
+     * A weekly London series at 10:00 from Friday [from], with the 10 April
+     * occurrence moved to 14:00, the 17th's excluded and Wednesday the 22nd
+     * added: every one of them in summer time, which London's clocks go on
+     * to on Sunday 29 March.
+     */
+    private fun spring(from: String): List<EventComponent> = listOf(
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up"),
+                property("DTSTART", "${from}T100000", "TZID", LONDON),
+                property("DTEND", "${from}T110000", "TZID", LONDON),
+                property("RRULE", "FREQ=WEEKLY"),
+                property("EXDATE", "20260417T100000", "TZID", LONDON),
+                property("RDATE", "20260422T100000", "TZID", LONDON),
+            ),
+        ),
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up, late"),
+                property("RECURRENCE-ID", "20260410T100000", "TZID", LONDON),
+                property("DTSTART", "20260410T140000", "TZID", LONDON),
+                property("DTEND", "20260410T150000", "TZID", LONDON),
+            ),
+        ),
+    )
+
+    /** What [tree]'s series and its 10 April override, moved on three days by the clock, are written as. */
+    private fun movedOnThreeDays(tree: List<EventComponent>) {
+        val head = tree.first { it.property("RECURRENCE-ID") == null }
+        val late = tree.single { it.property("RECURRENCE-ID") != null }
+        assertEquals("THE POINT: the override still names the 13 April 10:00 the series now holds", "20260413T100000", late.value("RECURRENCE-ID"))
+        assertEquals("and starts at 14:00 that day still", "20260413T140000", late.value("DTSTART"))
+        assertEquals("20260413T150000", late.value("DTEND"))
+        assertEquals("THE POINT: the exclusion moves to 10:00 on the 20th, not 09:00", "20260420T100000", head.value("EXDATE"))
+        assertEquals("and the added date to 10:00 on the 25th", "20260425T100000", head.value("RDATE"))
+    }
+
+    @Test
+    fun `a series moved whole across a clock change takes its overrides and dates along by the clock`() {
+        // From Friday 27 March, in winter time, to Monday the 30th, in summer:
+        // three days on the clock, an hour short of that by the watch.
+        val form = form(start = london("20260330T100000"), finish = london("20260330T110000"), occurrence = 0, series = 0)
+        val tree = components(form, spring("20260327"), Scope.ALL, LONDON)
+        assertEquals("20260330T100000", tree[0].value("DTSTART"))
+        movedOnThreeDays(tree)
+    }
+
+    @Test
+    fun `a series moved from one occurrence across a clock change takes its overrides and dates along by the clock`() {
+        // From the 27 March occurrence on, moved to Monday the 30th.
+        val carried = spring("20260320")
+        val form = draft(carried[0], LONDON, london("20260327T100000"))
+            .copy(start = london("20260330T100000"), finish = london("20260330T110000"))
+        val (_, after) = org.mochios.calendars.ui.editor.split(carried, form, london("20260327T100000"), LONDON)!!
+        assertEquals("20260330T100000", after[0].value("DTSTART"))
+        movedOnThreeDays(after)
+    }
+
+    @Test
+    fun `a series moved from an occurrence opened across a clock change moves its start by the clock`() {
+        // The 27 March occurrence opened in winter time and moved to Monday
+        // the 30th, in summer time, then saved to the whole series from the 20th.
+        val form = form(
+            start = london("20260330T100000"),
+            finish = london("20260330T110000"),
+            occurrence = london("20260327T100000"),
+            series = london("20260320T100000"),
+        )
+        val tree = components(form, spring("20260320"), Scope.ALL, LONDON)
+        assertEquals("THE POINT: three days on at 10:00, not at 09:00", "20260323T100000", tree[0].value("DTSTART"))
+        movedOnThreeDays(tree)
     }
 }

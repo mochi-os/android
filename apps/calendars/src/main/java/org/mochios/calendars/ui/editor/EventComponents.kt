@@ -21,6 +21,8 @@ import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZoneOffset
+import java.time.ZonedDateTime
+import java.time.temporal.ChronoUnit
 
 /**
  * Whether an edit or a delete touches one occurrence, that occurrence and
@@ -161,7 +163,9 @@ private val MANAGED = setOf(
  * [Scope.ALL] rewrites the master and keeps every override but that of the
  * occurrence the form was opened on, which the form replaces; a series whose
  * start moved takes its overrides and listed dates along by the same
- * distance. [Scope.ONE] keeps the master as it stands and replaces just the
+ * distance, by the clock where it repeats ([shifting]), as the series' start
+ * moves by as far as the clock moved the occurrence the form was opened on.
+ * [Scope.ONE] keeps the master as it stands and replaces just the
  * override for the occurrence the user opened, adding one when there was
  * none. [Scope.FOLLOWING] is two events, which [split] builds; here it reads
  * as the whole series, which is what it is on the series' first occurrence.
@@ -178,17 +182,13 @@ fun components(
     val overrides = events.filter { it.exception() }
 
     if (scope != Scope.ONE || master == null) {
-        val start = if (form.occurrence > 0 && form.series > 0) {
-            form.series + (form.start - form.occurrence)
-        } else {
-            form.start
-        }
+        val start = landing(form, master, user)
         val head = component(form, master, recurrence = true, occurrence = 0, start = start, user = user)
         val first = master?.let { begins(it, user) } ?: 0L
-        val shift = if (first == 0L) 0L else start - first
         val kept = unopened(overrides, form, user)
-        if (shift == 0L) return listOf(head) + kept
-        return listOf(relisted(head, master!!, Long.MIN_VALUE, shift, user)) +
+        if (first == 0L || start == first) return listOf(head) + kept
+        val shift = shifting(first, start, repeats(master!!, user))
+        return listOf(relisted(head, master, Long.MIN_VALUE, shift, user)) +
             carried(kept, head, Long.MIN_VALUE, shift, user)
     }
     val own = overrides.firstOrNull { matches(it, form.occurrence, user) }
@@ -292,13 +292,23 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
  * The form a copy opens on when the form it is copied from holds edits, as
  * the web editor builds it: [Scope.ONE] is the form as it stands without its
  * repeat, the whole series is the form moved back onto the series' own start,
- * as saving it to the series would. Either is a new event, of no occurrence.
+ * as saving it to the series would ([landing]), its length kept. Either is a
+ * new event, of no occurrence. [carried] is the event as the server last sent
+ * it, whose master says where the series repeats, and a floating time in it
+ * is read in [user]'s zone.
  */
-fun duplicate(form: EventForm, scope: Scope): EventForm {
-    val moved = if (scope != Scope.ONE && form.occurrence > 0 && form.series > 0) {
-        shifted(form, form.series - form.occurrence)
-    } else {
+fun duplicate(
+    form: EventForm,
+    scope: Scope,
+    carried: List<EventComponent>,
+    user: String = form.zone.start.ifBlank { CalendarsMapping.UTC },
+): EventForm {
+    val master = carried.firstOrNull { it.name.equals("VEVENT", ignoreCase = true) && !it.exception() }
+    val moved = if (scope == Scope.ONE) {
         form
+    } else {
+        val start = landing(form, master, user)
+        form.copy(start = start, finish = start + (form.finish - form.start))
     }
     val recurrence = if (scope == Scope.ONE) Recurrence() else form.recurrence
     return moved.copy(recurrence = recurrence, occurrence = 0, series = 0)
@@ -367,7 +377,7 @@ fun truncated(carried: List<EventComponent>, occurrence: Long, user: String = Ca
     val parts = rule.split(";").filterNot {
         it.uppercase().startsWith("UNTIL=") || it.uppercase().startsWith("COUNT=")
     } + "UNTIL=$until"
-    val (before, _) = dates(master.properties, occurrence, 0, user)
+    val (before, _) = dates(master.properties, occurrence, { seconds -> seconds }, user)
     val properties = master.properties.filterNot { listed(it) }.map {
         if (it.name.equals("RRULE", ignoreCase = true)) it.copy(value = parts.joinToString(";")) else it
     } + before
@@ -382,11 +392,11 @@ fun truncated(carried: List<EventComponent>, occurrence: Long, user: String = Ca
  * the series as it now goes on from there, so the form's dates are where
  * this occurrence lands. The old overrides and listed dates from the cut
  * onwards move to the new event, shifted as the form shifted the occurrence,
- * except the override of the occurrence the form was opened on, which the
- * form replaces. The new rule keeps the old one's end; a `COUNT` is left for
- * the server to shorten by the occurrences the old event keeps. Null when
- * the occurrence is the series' first, which makes the edit one of the whole
- * series.
+ * by the clock where the series repeats ([shifting]), except the override of the
+ * occurrence the form was opened on, which the form replaces. The new rule
+ * keeps the old one's end; a `COUNT` is left for the server to shorten by the
+ * occurrences the old event keeps. Null when the occurrence is the series'
+ * first, which makes the edit one of the whole series.
  */
 fun split(
     carried: List<EventComponent>,
@@ -397,7 +407,7 @@ fun split(
     val before = truncated(carried, occurrence, user) ?: return null
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
     val master = events.first { !it.exception() }
-    val shift = form.start - occurrence
+    val shift = shifting(occurrence, form.start, repeats(master, user))
     val head = component(form, master, recurrence = true, occurrence = 0, start = form.start, user = user)
     val after = listOf(relisted(head, master, occurrence, shift, user)) +
         carried(unopened(events.filter { it.exception() }, form, user), head, occurrence, shift, user)
@@ -426,11 +436,52 @@ private fun listed(property: EventProperty): Boolean =
     property.name.equals("RDATE", ignoreCase = true) || property.name.equals("EXDATE", ignoreCase = true)
 
 /**
+ * How a date the series carries moves when the series' start moves from
+ * [from] to [to], epoch seconds: by as far as the clock moved where the
+ * series repeats, [zone], so a date across a clock change from the start
+ * keeps its time of day there, as the occurrence it names does, rather than
+ * landing an hour off as a move by the same seconds would.
+ */
+private fun shifting(from: Long, to: Long, zone: ZoneId): (Long) -> Long {
+    val clock = { seconds: Long -> Instant.ofEpochSecond(seconds).atZone(zone) }
+    val distance = ChronoUnit.SECONDS.between(clock(from).toLocalDateTime(), clock(to).toLocalDateTime())
+    if (distance == 0L) return { seconds -> seconds }
+    // In the hour a clock change reads twice, the reading on the same side
+    // of the change as the date had.
+    return { seconds ->
+        val at = clock(seconds)
+        ZonedDateTime.ofLocal(at.toLocalDateTime().plusSeconds(distance), zone, at.offset).toEpochSecond()
+    }
+}
+
+/**
+ * Where the series' own start lands, epoch seconds, once the occurrence the
+ * [form] was opened on moves to the form's start: as far on as the clock moved
+ * that occurrence where [master]'s series repeats ([shifting]), so an
+ * occurrence moved across a clock change from its place, such as an override
+ * a day after it, moves the series by the days and time of day it moved, not
+ * an hour off. A form opened on no occurrence starts where it says.
+ */
+private fun landing(form: EventForm, master: EventComponent?, user: String): Long = when {
+    form.occurrence <= 0 || form.series <= 0 -> form.start
+    master != null -> shifting(form.occurrence, form.start, repeats(master, user))(form.series)
+    else -> form.series + (form.start - form.occurrence)
+}
+
+/**
+ * The zone [master]'s series repeats in, as its start names it: its own,
+ * the [user]'s for a floating one, and UTC for one in UTC or of whole days,
+ * which are held as their UTC midnights.
+ */
+private fun repeats(master: EventComponent, user: String): ZoneId =
+    zoneOf(CalendarsMapping.zone(master.property("DTSTART"), user))
+
+/**
  * The head with the master's listed dates from [from] on, each moved by
  * [shift], in place of any it carries. A head with neither a rule nor listed
  * dates of its own repeats no longer, and gets none back.
  */
-private fun relisted(head: EventComponent, master: EventComponent, from: Long, shift: Long, user: String): EventComponent {
+private fun relisted(head: EventComponent, master: EventComponent, from: Long, shift: (Long) -> Long, user: String): EventComponent {
     if (head.property("RRULE") == null && head.property("RDATE") == null) return head
     val (_, after) = dates(master.properties, from, shift, user)
     return head.copy(properties = head.properties.filterNot { listed(it) } + after)
@@ -439,14 +490,14 @@ private fun relisted(head: EventComponent, master: EventComponent, from: Long, s
 /**
  * The master's list-valued dates, `RDATE` and `EXDATE`, kept to one side of a
  * cut: the first of the pair keeps those naming instants before [from], the
- * second the rest, each moved by [shift] seconds in the form it had. A
- * property left with no values is dropped. A floating value is read, and
- * written, as the clock reads in the [user]'s zone.
+ * second the rest, each moved by [shift] in the form it had. A property left
+ * with no values is dropped. A floating value is read, and written, as the
+ * clock reads in the [user]'s zone.
  */
 private fun dates(
     properties: List<EventProperty>,
     from: Long,
-    shift: Long,
+    shift: (Long) -> Long,
     user: String,
 ): Pair<List<EventProperty>, List<EventProperty>> {
     val before = mutableListOf<EventProperty>()
@@ -462,7 +513,7 @@ private fun dates(
             if (seconds == 0L || seconds < from) {
                 early.add(single.value)
             } else {
-                late.add(CalendarsMapping.like(property.name, (seconds + shift) * 1000, single, user))
+                late.add(CalendarsMapping.like(property.name, shift(seconds) * 1000, single, user))
             }
         }
         if (early.isNotEmpty()) before.add(property.copy(value = early.joinToString(",")))
@@ -473,25 +524,27 @@ private fun dates(
 
 /**
  * The overrides of occurrences at or after [from], following a master that
- * moved by [shift] seconds: each keeps its own title, length and zones,
- * moves by the same shift, and names its occurrence as the new [head] does.
+ * moved as [shift] moves an instant: each keeps its own title, length and
+ * zones, moves by the same shift, its start and its end each, and names its
+ * occurrence, moved likewise, as the new [head] does.
  */
 private fun carried(
     overrides: List<EventComponent>,
     head: EventComponent,
     from: Long,
-    shift: Long,
+    shift: (Long) -> Long,
     user: String,
 ): List<EventComponent> {
     val out = mutableListOf<EventComponent>()
     for (item in overrides) {
         val at = key(item, user)
         if (at == 0L || at < from) continue
-        if (shift == 0L) {
+        if (shift(at) == at) {
             out.add(item)
             continue
         }
-        val own = shifted(draft(item, user), shift)
+        val opened = draft(item, user)
+        val own = opened.copy(start = shift(opened.start), finish = shift(opened.finish))
         val rewritten = component(
             own.copy(recurrence = Recurrence()),
             item,
@@ -500,7 +553,7 @@ private fun carried(
             start = own.start,
             user = user,
         )
-        out.add(rewritten.copy(properties = rewritten.properties + identifier(head, at + shift, user)))
+        out.add(rewritten.copy(properties = rewritten.properties + identifier(head, shift(at), user)))
     }
     return out
 }

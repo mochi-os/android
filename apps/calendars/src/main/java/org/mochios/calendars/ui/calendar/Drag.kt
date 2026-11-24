@@ -82,12 +82,13 @@ fun dropped(
  * known by its identity rather than its start, since "This event" may have
  * moved an override onto another occurrence's start; every occurrence of a
  * series moved whole; and each from the one moved on for "This and
- * following".
+ * following", by its place in the series, as the series is cut there: an
+ * override's is the occurrence it replaces, wherever it was moved.
  */
 fun takes(instance: Instance, scope: Scope, occurrence: Instance): Boolean =
     occurrence.event == instance.event && (
         !instance.recurring || occurrence.identity == instance.identity ||
-            scope == Scope.ALL || (scope == Scope.FOLLOWING && occurrence.start >= instance.start)
+            scope == Scope.ALL || (scope == Scope.FOLLOWING && occurrence.occurrence >= instance.occurrence)
         )
 
 /** How long a drag rests at a grid's edge before the page turns, and again for each further page. */

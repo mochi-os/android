@@ -118,6 +118,17 @@ class CalendarFlowTest {
     @Volatile private var slow = false
     @Volatile private var last = 0L
 
+    /** More occurrences of the stand-up, listed in a range that holds their start: each start and its JSON. */
+    @Volatile private var extra: List<Pair<Long, String>> = emptyList()
+
+    /**
+     * What a listing of the stand-up's calendar answers once a split has cut
+     * the series, the occurrences' JSON, and [following], what a split sets
+     * it to.
+     */
+    @Volatile private var cut: String? = null
+    @Volatile private var following = ""
+
     @Before
     fun begin() {
         VisibilityStore.hidden(context, emptySet())
@@ -158,6 +169,15 @@ class CalendarFlowTest {
                             MockResponse().setResponseCode(412).setBody("""{"error": "changed"}""")
                         }
                     }
+                    "-/events/split" -> {
+                        written = request.body.readUtf8()
+                        version++
+                        cut = following
+                        ok(
+                            """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "recurring": true, "components": []},
+                                "following": {"id": "e3", "calendar": "$holding", "etag": "w1", "recurring": true, "components": []}}""",
+                        )
+                    }
                     "-/events" -> when {
                         (request.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0) >= held -> {
                             paging?.await(10, TimeUnit.SECONDS)
@@ -168,6 +188,7 @@ class CalendarFlowTest {
                             )
                         }
                         failing -> MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
+                        holding in query.split(",") && cut != null -> ok("""{"instances": [$cut], "truncated": false}""")
                         holding in query.split(",") -> {
                             val from = request.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0
                             val until = request.requestUrl?.queryParameter("finish")?.toLongOrNull() ?: 0
@@ -177,9 +198,10 @@ class CalendarFlowTest {
                             } else {
                                 ""
                             }
+                            val more = extra.filter { (at, _) -> at >= from && at < until }.joinToString("") { (_, json) -> ", $json" }
                             ok(
                                 """{"instances": [{"event": "e1", "calendar": "$holding", "summary": "Stand-up",
-                                    "start": $start, "finish": ${start + 3_600}, "recurring": $weekly}$also], "truncated": false}""",
+                                    "start": $start, "finish": ${start + 3_600}, "recurring": $weekly}$also$more], "truncated": false}""",
                             )
                         }
                         else -> ok("""{"instances": [], "truncated": false}""")
@@ -967,6 +989,34 @@ class CalendarFlowTest {
         until { said.size == 2 }
     }
 
+    @Test
+    fun `a drag of an occurrence a failed move drew another onto leaves what that move took to show again`() {
+        weekly = true
+        // Monday 12 October 10:00, a week on, the series' next occurrence.
+        later = start + 7 * 86_400
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.count { it.event == "e1" } == 2 }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        refusals = 1
+        stall = CountDownLatch(1)
+        // The 5th's occurrence alone onto the 12th's start; then, before that
+        // is written, the 12th's own occurrence on two hours. The first write fails.
+        model.move(model.uiState.value.instances.first { it.start == start }, later, later + 3_600, org.mochios.calendars.ui.editor.Scope.ONE)
+        val own = model.uiState.value.instances.first { it.start == later && !it.exception }
+        model.move(own, later + 7_200, later + 10_800, org.mochios.calendars.ui.editor.Scope.ONE)
+        reading?.countDown()
+        until { said.any { it is CalendarEvent.Failed } }
+        settle()
+        assertTrue(
+            "THE POINT: the 5th's occurrence is back where the server has it: the second drag was of another occurrence at that start",
+            model.uiState.value.instances.any { it.event == "e1" && it.start == start },
+        )
+        stall?.countDown()
+        until { said.size == 2 }
+    }
+
     // ---- calendar actions ----
 
     private fun said(model: CalendarViewModel): MutableList<CalendarEvent> {
@@ -1153,4 +1203,113 @@ class CalendarFlowTest {
         assertFalse(model.uiState.value.instances.any { it.event == "e2" })
     }
 
+    // ---- a series move's preview ----
+
+    /** The same hour as [start] on day [day] of October. */
+    private fun october(day: Int, hour: Int = 10) = LocalDate.of(2026, 10, day).atTime(hour, 0).atZone(london).toEpochSecond()
+
+    /** A listed occurrence of the stand-up from [from] for an hour; an override when it [replaces] an occurrence. */
+    private fun occurrence(from: Long, replaces: Long? = null, event: String = "e1") =
+        """{"event": "$event", "calendar": "c1", "summary": "Stand-up", "start": $from, "finish": ${from + 3_600},
+            "recurring": true${replaces?.let { """, "exception": true, "occurrence": $it""" } ?: ""}}"""
+
+    @Test
+    fun `a series moved with this and following lets go of its preview as soon as the month read after the save lands`() {
+        weekly = true
+        later = october(12)
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.count { it.event == "e1" } == 2 }
+        val said = said(model)
+        // Once cut, the 5th's stays e1's and the 12th's on is e3's, an hour on.
+        following = listOf(occurrence(start), occurrence(october(12, 11), event = "e3")).joinToString(",")
+        // The next month's read waits, so only the month shown lands.
+        val next = CountDownLatch(1)
+        paging = next
+        held = october(15)
+        val waiting = { listings().count { (it.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0) >= held } }
+        val before = waiting()
+        val twelfth = model.uiState.value.instances.first { it.start == later }
+        model.move(twelfth, october(12, 11), october(12, 12), org.mochios.calendars.ui.editor.Scope.FOLLOWING)
+        until { said.isNotEmpty() }
+        assertEquals(CalendarEvent.Moved, said.single())
+        // The months read on the save's own announcement: the next one waits,
+        // and the one shown lands.
+        until { waiting() > before }
+        settle()
+        val drawn = model.uiState.value.instances
+        assertTrue("THE POINT: the preview has gone with the month that holds the move: $drawn", drawn.none { it.readonly })
+        assertEquals("drawn once, as e3's", listOf("e3"), drawn.filter { it.start == october(12, 11) }.map { it.event })
+        next.countDown()
+    }
+
+    @Test
+    fun `a series moved whole draws each override at the place the save moves it to`() {
+        weekly = true
+        // The 12th's moved to Tuesday the 13th at 14:00, and the 19th's as listed.
+        extra = listOf(
+            october(13, 14) to occurrence(october(13, 14), replaces = october(12)),
+            october(19) to occurrence(october(19)),
+        )
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.count { it.event == "e1" } == 3 }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        model.move(model.uiState.value.instances.first { it.start == start }, LocalDate.of(2026, 10, 12), org.mochios.calendars.ui.editor.Scope.ALL)
+        val drawn = model.uiState.value.instances.filter { it.event == "e1" }
+        assertEquals(
+            "THE POINT: the 5th's on the 12th and the 13th's override on the 20th, not one of them dropped for sharing the 12th's place",
+            listOf(october(12), october(20, 14), october(26)),
+            drawn.map { it.start },
+        )
+        assertEquals("the override known by the 19th's place, where the save moves it", october(19), drawn.first { it.exception }.occurrence)
+        reading?.countDown()
+        until { said.isNotEmpty() }
+    }
+
+    @Test
+    fun `an occurrence moved with this and following onto one the move leaves draws both`() {
+        weekly = true
+        later = october(12)
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.count { it.event == "e1" } == 2 }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        lost = true
+        // The 12th's, and those after it, back a week onto the 5th's place.
+        model.move(model.uiState.value.instances.first { it.start == later }, LocalDate.of(2026, 10, 5), org.mochios.calendars.ui.editor.Scope.FOLLOWING)
+        val drawn = model.uiState.value.instances.filter { it.event == "e1" && it.start == start }
+        assertEquals("THE POINT: the 5th's, which the cut leaves, and the 12th's on it, read-only", listOf(false, true), drawn.map { it.readonly }.sorted())
+        reading?.countDown()
+        until { said.isNotEmpty() }
+    }
+
+    @Test
+    fun `a drag of the occurrence a failed this event move drew another beside does not hide what that move took`() {
+        weekly = true
+        later = october(12)
+        val model = model()
+        model.anchor(LocalDate.of(2026, 10, 5))
+        until { model.uiState.value.instances.count { it.event == "e1" } == 2 }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        refusals = 1
+        stall = CountDownLatch(1)
+        // The 5th's alone onto the 12th's start; then, before that is written,
+        // the 12th's own two hours on. The first write is refused.
+        model.move(model.uiState.value.instances.first { it.start == start }, later, later + 3_600, org.mochios.calendars.ui.editor.Scope.ONE)
+        val twelfth = model.uiState.value.instances.first { it.start == later && !it.exception }
+        model.move(twelfth, later + 7_200, later + 10_800, org.mochios.calendars.ui.editor.Scope.ONE)
+        reading?.countDown()
+        until { said.any { it is CalendarEvent.Failed } }
+        settle()
+        assertTrue(
+            "THE POINT: the 5th's is drawn where the server has it again, as the second drag took the 12th's own",
+            model.uiState.value.instances.any { it.event == "e1" && it.start == start },
+        )
+        stall?.countDown()
+        until { said.size == 2 }
+    }
 }

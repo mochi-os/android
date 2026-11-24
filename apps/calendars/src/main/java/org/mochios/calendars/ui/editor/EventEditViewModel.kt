@@ -703,7 +703,7 @@ class EventEditViewModel @Inject constructor(
                 val state = _uiState.value
                 val plain = carried?.components?.let { copied(it, state.occurrence, scope, zone) }
                 val edited = dirty(state)
-                val form = (if (edited) duplicate(form(state), scope) else plain) ?: return@withLock
+                val form = (if (edited) duplicate(form(state), scope, carried?.components.orEmpty(), zone) else plain) ?: return@withLock
                 val calendar = state.calendars.firstOrNull { it.id == state.calendar }?.id
                     ?: state.calendars.firstOrNull()?.id.orEmpty()
                 open(form, state.calendars, calendar, plain?.takeIf { edited }?.let { it to calendar })

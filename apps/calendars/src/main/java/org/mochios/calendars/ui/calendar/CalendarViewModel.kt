@@ -164,6 +164,44 @@ sealed class CalendarEvent {
     data class Done(@param:StringRes val message: Int) : CalendarEvent()
 }
 
+/**
+ * A move drawn where it put its occurrences, laid over every listing that
+ * lands until its write settles: [covers] picks the listed occurrences it
+ * replaces and [placed] is what it draws instead of those held at the drop.
+ * A move of a whole series, or of an occurrence and those after it, covers
+ * occurrences no listing held then too, such as those of a month paged to
+ * while it is written: [place] draws each where the move leaves it, unless
+ * [known], the occurrences of the series by event that [placed] was made
+ * from or draws, has it already. [hides] is what the moves the drag started
+ * from covered, which stays hidden if they let go first. [since] is how many
+ * listings had been asked for when the server answered its write, and
+ * [written] says the write was answered; a listing asked for after both
+ * holds the move itself, and the preview goes. [made] is the events the
+ * answer says the write made of what the move covers, as "This and
+ * following" makes the series from the moved occurrence on: what [placed]
+ * draws, so a listing that holds them before the preview goes draws them
+ * once.
+ */
+internal class Preview(
+    val covers: (Instance) -> Boolean,
+    val placed: List<Instance>,
+    val place: ((Instance) -> Instance)?,
+    val known: Set<Pair<String, Long>>,
+    val hides: (Instance) -> Boolean,
+) {
+    var since = Int.MAX_VALUE
+    var written = false
+    var made: Set<String> = emptySet()
+
+    /** [shown] as this move leaves it. */
+    fun over(shown: List<Instance>): List<Instance> {
+        val beyond = place?.let { moved ->
+            shown.filter { occurrence -> covers(occurrence) && (occurrence.event to occurrence.occurrence) !in known }.map(moved)
+        }.orEmpty()
+        return shown.filterNot { occurrence -> covers(occurrence) || hides(occurrence) || occurrence.event in made } + placed + beyond
+    }
+}
+
 @HiltViewModel
 class CalendarViewModel @Inject constructor(
     @param:ApplicationContext private val context: Context,
@@ -450,7 +488,9 @@ class CalendarViewModel @Inject constructor(
      * is paged to, and never turns the view into an error. Only [calendars],
      * the ones shown, are read, so hidden ones never take a share of the most
      * the server will list. [read] is the listing this is, which lets go of
-     * the moves written before it was asked for once the whole of it is in.
+     * the moves answered before it was asked for as soon as the shown period
+     * is in: that period holds them, and drawn over it too they would show
+     * twice.
      */
     private suspend fun periods(state: CalendarUiState, calendars: List<String>, read: Int) {
         // With events shown in their own zones, a day's occurrences can
@@ -463,8 +503,10 @@ class CalendarViewModel @Inject constructor(
         val kept = arrived.filter { instance ->
             instance.finish <= start - margin || instance.start >= finish + margin
         }
+        // The shown period, read after a move was answered, holds it: the
+        // move lets go here, not once the neighbours are in as well.
         _uiState.value = _uiState.value.copy(
-            instances = land(distinct(shown + kept)),
+            instances = land(distinct(shown + kept), read),
             truncated = truncated,
             bounds = Bounds(),
             earliest = 0,
@@ -976,38 +1018,8 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /**
-     * A move drawn where it put its occurrences, laid over every listing that
-     * lands until its write settles: [covers] picks the listed occurrences it
-     * replaces and [placed] is what it draws instead of those held at the
-     * drop. A move of a whole series, or of an occurrence and those after
-     * it, covers occurrences no listing held then too, such as those of a
-     * month paged to while it is written: [place] draws each where the move
-     * leaves it, unless [known], the occurrences of the series by event that
-     * [placed] was made from or draws, has it already. [hides] is what the
-     * moves the drag started from covered, which stays hidden if they let go
-     * first. [since] is how many listings had been asked for when its write
-     * began, and [written] says the write was answered; a listing asked for
-     * after both holds the move itself, and the preview goes.
-     */
-    private class Preview(
-        val covers: (Instance) -> Boolean,
-        val placed: List<Instance>,
-        val place: ((Instance) -> Instance)?,
-        val known: Set<Pair<String, Long>>,
-        val hides: (Instance) -> Boolean,
-    ) {
-        var since = Int.MAX_VALUE
-        var written = false
-
-        /** [shown] as this move leaves it. */
-        fun over(shown: List<Instance>): List<Instance> {
-            val beyond = place?.let { moved ->
-                shown.filter { occurrence -> covers(occurrence) && (occurrence.event to occurrence.occurrence) !in known }.map(moved)
-            }.orEmpty()
-            return shown.filterNot { occurrence -> covers(occurrence) || hides(occurrence) } + placed + beyond
-        }
-    }
+    /** How many series moves have been drawn, which gives each its own [Instance.mark]. */
+    private var marks = 0
 
     /** The moves being written, in the order they were made. */
     private val previews = mutableListOf<Preview>()
@@ -1043,36 +1055,46 @@ class CalendarViewModel @Inject constructor(
      * "This event" on a series makes an override of the occurrence it was,
      * and "This and following" and "All events" give the occurrences a place
      * in the series that only a fresh listing names, so they are read-only
-     * until it comes.
+     * until it comes. Those carry the place the save gives them, an
+     * override's moved by as far as its start moved, as the save moves its
+     * `RECURRENCE-ID`, and a [Instance.mark] of the move's own, so none is
+     * taken for an occurrence the move leaves, such as one before a cut that
+     * holds the place it moves onto.
      */
     private fun preview(instance: Instance, scope: Scope, place: (Instance) -> Instance): Preview {
         val covers = { occurrence: Instance -> takes(instance, scope, occurrence) }
         val state = _uiState.value
+        val mark = "${instance.event}:moved:${++marks}"
+        val carried = { occurrence: Instance ->
+            val moved = place(occurrence)
+            moved.copy(
+                readonly = true,
+                mark = mark,
+                replaced = occurrence.replaced?.let { key -> key + moved.start - occurrence.start },
+            )
+        }
         // An event that does not repeat has the one occurrence, which moves.
         val moving = if (instance.recurring) (state.instances.filter(covers) + instance).distinctBy { it.occurrence } else listOf(instance)
         val placed = moving.map { occurrence ->
-            val moved = place(occurrence)
             when {
-                !instance.recurring -> moved
-                scope == Scope.ONE -> moved.copy(exception = true, replaced = if (occurrence.moved) null else occurrence.occurrence)
-                else -> moved.copy(readonly = true)
+                !instance.recurring -> place(occurrence)
+                scope == Scope.ONE -> place(occurrence).copy(exception = true, replaced = if (occurrence.moved) null else occurrence.occurrence)
+                else -> carried(occurrence)
             }
         }
         // A drag of an occurrence an earlier move drew goes on hiding what
-        // that move covered, which shows again if that move fails first.
+        // that move covered, which shows again if that move fails first. The
+        // occurrence is known by its identity: "This event" may have drawn
+        // one onto another occurrence's start, which is not the one it drew.
         val earlier = previews.filter { preview ->
-            preview.placed.any { drawn -> drawn.event == instance.event && drawn.start == instance.start }
+            preview.placed.any { drawn -> drawn.identity == instance.identity }
         }
         val shown = Preview(
             covers = covers,
             placed = placed,
             // The whole series, or this occurrence and those after it, moves
             // the occurrences no listing held at the drop as well.
-            place = if (instance.recurring && scope != Scope.ONE) {
-                { occurrence -> place(occurrence).copy(readonly = true) }
-            } else {
-                null
-            },
+            place = if (instance.recurring && scope != Scope.ONE) carried else null,
             known = (moving + placed).map { occurrence -> occurrence.event to occurrence.occurrence }.toSet(),
             hides = { occurrence -> earlier.any { preview -> preview.covers(occurrence) || preview.hides(occurrence) } },
         )
@@ -1116,8 +1138,13 @@ class CalendarViewModel @Inject constructor(
     private fun rewrite(instance: Instance, scope: Scope, shown: Preview?, change: (EventForm) -> EventForm) {
         viewModelScope.launch {
             val written = writing.withLock {
-                shown?.since = reads
-                rewriting(instance, scope, change)
+                rewriting(instance, scope, change) { made ->
+                    // From the answer on, a listing asked for holds the move,
+                    // and the events it made: the write's own announcement
+                    // asks for one at once.
+                    shown?.since = reads
+                    shown?.made = made
+                }
             }
             settle(shown, written)
             if (!written) load(reset = false)
@@ -1140,8 +1167,18 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /** Whether the move was written; a write announces itself, which reads the range again. */
-    private suspend fun rewriting(instance: Instance, scope: Scope, change: (EventForm) -> EventForm): Boolean {
+    /**
+     * Whether the move was written; a write announces itself, which reads the
+     * range again. [answered] is told the moment the server answers, before
+     * the write announces itself, with the events the write made of what the
+     * move took besides the one moved.
+     */
+    private suspend fun rewriting(
+        instance: Instance,
+        scope: Scope,
+        change: (EventForm) -> EventForm,
+        answered: (Set<String>) -> Unit,
+    ): Boolean {
         try {
             val event = repository.getEvent(instance.event)
             val master = event.master() ?: return false
@@ -1168,7 +1205,7 @@ class CalendarViewModel @Inject constructor(
                         moment,
                         halves.first,
                         halves.second,
-                    )
+                    ) { (_, made) -> answered(setOf(made.id) - event.id) }
                     undo = {
                         repository.deleteEvent(following.id, following.etag)
                         restore(kept.etag)
@@ -1186,7 +1223,8 @@ class CalendarViewModel @Inject constructor(
             }
             val form = change(base).copy(occurrence = if (chosen == Scope.ONE) key else 0)
             val components = components(form, event.components, if (event.recurring) chosen else Scope.ALL, user)
-            val written = repository.updateEvent(event.id, event.etag, null, components)
+            // Rewritten in place, the event keeps its id.
+            val written = repository.updateEvent(event.id, event.etag, null, components) { answered(emptySet()) }
             undo = { restore(written.etag) }
             _events.tryEmit(CalendarEvent.Moved)
             return true

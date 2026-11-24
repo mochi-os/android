@@ -14,6 +14,7 @@ import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.calendar.Cut
 import org.mochios.calendars.ui.calendar.Dwell
 import org.mochios.calendars.ui.calendar.PAGE_HOLD
+import org.mochios.calendars.ui.calendar.Preview
 import org.mochios.calendars.ui.calendar.clocked
 import org.mochios.calendars.ui.calendar.edge
 import org.mochios.calendars.ui.calendar.whole
@@ -163,6 +164,25 @@ class DragTest {
         assertFalse(takes(later, Scope.FOLLOWING, first))
     }
 
+    /**
+     * A daily series from Monday the 21st, its Tuesday dragged with "This and
+     * following": an override is taken by its place in the series, the
+     * occurrence it replaces, as the series is cut there, not by where "This
+     * event" moved it.
+     */
+    @Test
+    fun `this and following takes an override by its place in the series, not where it was moved to`() {
+        val monday = meeting.copy(event = "e1", recurring = true)
+        val tuesday = monday.copy(start = monday.start + 86_400)
+        // Monday's occurrence moved onto Wednesday, and Thursday's onto Sunday the 20th.
+        val early = monday.copy(start = monday.start + 2 * 86_400, exception = true, replaced = monday.start)
+        val late = monday.copy(start = monday.start - 86_400, exception = true, replaced = monday.start + 3 * 86_400)
+        assertFalse("THE POINT: Monday's, though moved after Tuesday, is before it in the series", takes(tuesday, Scope.FOLLOWING, early))
+        assertTrue("THE POINT: Thursday's, though moved before Tuesday, is after it in the series", takes(tuesday, Scope.FOLLOWING, late))
+        assertTrue("an override dragged is cut at its own place too", takes(late, Scope.FOLLOWING, monday.copy(start = monday.start + 4 * 86_400)))
+        assertFalse(takes(late, Scope.FOLLOWING, tuesday))
+    }
+
     // ---- turning the page at the side ----
 
     @Test
@@ -230,5 +250,50 @@ class DragTest {
         assertEquals(false, timed.allday)
         assertEquals(clock(NEW_YORK, 2026, 9, 22, 11, 15), timed.start)
         assertEquals(clock(NEW_YORK, 2026, 9, 22, 12, 15), timed.finish)
+    }
+
+    // ---- what a move cuts at, and draws ----
+
+    /**
+     * A weekly series from Monday 21 September, three of its occurrences moved
+     * by "This event": the 28th's back to Sunday the 27th, the 21st's on to
+     * Thursday 1 October, and 5 October's back to Saturday the 26th. "This
+     * and following" from the 28th's cuts the series by each one's place, as
+     * the server does, not by where each now starts.
+     */
+    @Test
+    fun `this and following cuts the series at the place of the occurrence, not at where overrides now start`() {
+        val first = meeting.copy(event = "e1", recurring = true)
+        val week = 7 * 86_400L
+        val dragged = first.copy(start = first.start + week - 86_400, exception = true, replaced = first.start + week)
+        val early = first.copy(start = first.start + week + 3 * 86_400, exception = true, replaced = first.start)
+        val late = first.copy(start = first.start + 5 * 86_400, exception = true, replaced = first.start + 2 * week)
+        assertFalse("THE POINT: the 21st's, though it now starts after the 27th, is before the cut", takes(dragged, Scope.FOLLOWING, early))
+        assertTrue("THE POINT: 5 October's, though it now starts before the 27th, is after the cut", takes(dragged, Scope.FOLLOWING, late))
+        assertTrue("and the dragged one itself", takes(dragged, Scope.FOLLOWING, dragged))
+    }
+
+    /**
+     * A listing that holds the event "This and following" made, read before
+     * the move's preview lets go, draws the occurrences once: the preview
+     * draws them where they go, as the old event's, until a listing asked for
+     * after the answer comes.
+     */
+    @Test
+    fun `a move's preview hides the events its save made, which it draws itself`() {
+        val first = meeting.copy(event = "e1", recurring = true)
+        val moved = first.copy(start = first.start + 3_600, finish = first.finish + 3_600, readonly = true, mark = "e1:moved:1")
+        val preview = Preview(
+            covers = { occurrence -> takes(first, Scope.FOLLOWING, occurrence) },
+            placed = listOf(moved),
+            place = null,
+            known = setOf("e1" to first.start, "e1" to moved.start),
+            hides = { false },
+        )
+        // The new event's occurrence where the move put it, as a listing has it.
+        val made = first.copy(event = "e3", start = moved.start, finish = moved.finish)
+        assertEquals("until the save is answered", 2, preview.over(listOf(made)).size)
+        preview.made = setOf("e3")
+        assertEquals("THE POINT: drawn once, as the preview draws it", listOf(moved), preview.over(listOf(made)))
     }
 }

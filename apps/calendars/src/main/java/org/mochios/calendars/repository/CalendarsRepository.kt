@@ -311,14 +311,23 @@ class CalendarsRepository @Inject constructor(
             api.createEvent(EventCreateRequest(components, calendar, slug)).unwrap().event
         }.also { _eventsChanged.tryEmit(Unit) }
 
+    /**
+     * Rewrites [event] as [components]. [answered] is given the event as
+     * written the moment the server answers, before anything is told the
+     * events changed and reads them again.
+     */
     suspend fun updateEvent(
         event: String,
         etag: String?,
         calendar: String?,
         components: List<EventComponent>?,
+        answered: (Event) -> Unit = {},
     ): Event = call {
         api.updateEvent(EventUpdateRequest(event, etag, calendar, components)).unwrap().event
-    }.also { _eventsChanged.tryEmit(Unit) }
+    }.also { written ->
+        answered(written)
+        _eventsChanged.tryEmit(Unit)
+    }
 
     /**
      * Cuts a series in two at the occurrence starting at [start], epoch
@@ -326,7 +335,8 @@ class CalendarsRepository @Inject constructor(
      * [components], ending before that occurrence, and a new event is
      * created from [following], in [calendar] when given. Both halves go in
      * one call, so the series is never left with both or neither. Answers
-     * the old event and the new one.
+     * the old event and the new one, which [answered] is given the moment
+     * the server answers, before anything is told the events changed.
      */
     suspend fun splitEvent(
         event: String,
@@ -335,10 +345,14 @@ class CalendarsRepository @Inject constructor(
         components: List<EventComponent>,
         following: List<EventComponent>,
         calendar: String? = null,
+        answered: (Pair<Event, Event>) -> Unit = {},
     ): Pair<Event, Event> = call {
         val body = api.splitEvent(EventSplitRequest(event, etag, start, components, following, calendar)).unwrap()
         body.event to body.following
-    }.also { _eventsChanged.tryEmit(Unit) }
+    }.also { halves ->
+        answered(halves)
+        _eventsChanged.tryEmit(Unit)
+    }
 
     suspend fun deleteEvent(event: String, etag: String) {
         call { api.deleteEvent(event, etag).unwrap() }

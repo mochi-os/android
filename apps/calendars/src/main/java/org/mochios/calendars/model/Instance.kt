@@ -45,6 +45,14 @@ data class Instance(
     @SerializedName("occurrence") val replaced: Long? = null,
     val zone: Zone? = null,
     val alarm: Boolean = false,
+    /**
+     * Never sent by the server: on an occurrence a move of a series, whole or
+     * from one occurrence on, draws read-only while it is written, what it is
+     * known by in place of its event ([identity]), so it stands apart from
+     * the occurrences the move leaves, such as those before a cut, which may
+     * hold the place it moves onto.
+     */
+    @Transient val mark: String? = null,
 ) {
     /** The occurrence has been called off: its event's `STATUS:CANCELLED`. */
     val cancelled: Boolean get() = status.trim().equals("CANCELLED", ignoreCase = true)
@@ -73,9 +81,11 @@ data class Instance(
     /**
      * What the views know the occurrence by: its event and [occurrence],
      * which no other occurrence listed shares. Its start is not enough:
-     * "This event" may have moved an override onto another occurrence's.
+     * "This event" may have moved an override onto another occurrence's. An
+     * occurrence a move draws read-only is known by its [mark] in place of
+     * its event.
      */
-    val identity: Pair<String, Long> get() = event to occurrence
+    val identity: Pair<String, Long> get() = (mark ?: event) to occurrence
 
     /**
      * An override listed by a core that does not name the occurrence it
