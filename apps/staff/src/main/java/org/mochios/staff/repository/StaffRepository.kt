@@ -28,6 +28,8 @@ import org.mochios.staff.model.ListingView
 import org.mochios.staff.model.Me
 import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
+import org.mochios.staff.model.OrphanedPaymentsResponse
+import org.mochios.staff.model.PaymentRefund
 import org.mochios.staff.model.PendingListingsResponse
 import org.mochios.staff.model.Report
 import org.mochios.staff.model.ReportsListResponse
@@ -260,6 +262,16 @@ class StaffRepository @Inject constructor(
         resolution: String? = null,
         refundAmount: Long? = null,
     ): Dispute = call { api.reviewDispute(id, status, resolution, refundAmount?.toString()).unwrap() }
+
+    // ---- Payments ----
+
+    suspend fun listOrphanedPayments(
+        page: Int? = null,
+        limit: Int? = null,
+        after: String? = null,
+    ): OrphanedPaymentsResponse = call { api.listOrphanedPayments(page, limit, after).unwrap() }
+
+    suspend fun refundPayment(id: String): PaymentRefund = call { api.refundPayment(id).unwrap() }
 
     // ---- Metrics ----
 

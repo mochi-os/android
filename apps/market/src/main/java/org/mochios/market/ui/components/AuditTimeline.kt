@@ -46,11 +46,10 @@ internal fun auditActionResource(action: String): Int? {
     return when (action) {
         "order.created" -> R.string.market_audit_order_created
         "order.paid" -> R.string.market_audit_order_paid
-        "order.payment_failed" -> R.string.market_audit_order_payment_failed
         "order.shipped" -> R.string.market_audit_order_shipped
         "order.completed" -> R.string.market_audit_order_completed
         "order.refunded" -> R.string.market_audit_order_refunded
-        "order.cancelled" -> R.string.market_audit_order_cancelled
+        "order.refund_failed" -> R.string.market_audit_order_refund_failed
         "order.chargeback" -> R.string.market_audit_order_chargeback
         "order.chargeback_won" -> R.string.market_audit_order_chargeback_won
         "order.chargeback_lost" -> R.string.market_audit_order_chargeback_lost
@@ -60,11 +59,9 @@ internal fun auditActionResource(action: String): Int? {
         "dispute.resolved_buyer" -> R.string.market_audit_dispute_resolved_buyer
         "dispute.resolved_seller" -> R.string.market_audit_dispute_resolved_seller
         "listing.created" -> R.string.market_audit_listing_created
-        "listing.updated" -> R.string.market_audit_listing_updated
         "listing.deleted" -> R.string.market_audit_listing_deleted
         "listing.published" -> R.string.market_audit_listing_published
         "listing.relisted" -> R.string.market_audit_listing_relisted
-        "listing.expired" -> R.string.market_audit_listing_expired
         "listing.removed" -> R.string.market_audit_listing_removed
         "listing.cleared" -> R.string.market_audit_listing_cleared
         "listing.approved" -> R.string.market_audit_listing_approved
@@ -95,7 +92,6 @@ internal fun auditActionResource(action: String): Int? {
         "review.created" -> R.string.market_audit_review_created
         "review.responded" -> R.string.market_audit_review_responded
         "review.revealed" -> R.string.market_audit_review_revealed
-        "review.hide" -> R.string.market_audit_review_hide
         "review.remove" -> R.string.market_audit_review_remove
         "review.restore" -> R.string.market_audit_review_restore
         "report.created" -> R.string.market_audit_report_created

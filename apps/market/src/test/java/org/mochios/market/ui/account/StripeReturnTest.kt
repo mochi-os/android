@@ -11,6 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
@@ -69,6 +70,16 @@ class StripeReturnTest {
         val events = complete("""{"redirect_url": "x", "connected": "1"}""")
         assertEquals(listOf(SellerSettingsEvent.Notice(R.string.market_account_stripe_connected)), events)
         assertEquals(1, server.of("-/accounts/get").size)
+    }
+
+    // The Comptroller keeps Stripe's code; the exchange is completed from the
+    // state alone, and a code the return still carries is not sent.
+    @Test
+    fun `the return is completed from its state alone`() {
+        complete("""{"redirect_url": "x", "connected": "1"}""")
+        val sent = server.of("-/accounts/stripe/oauth/complete").single().fields
+        assertEquals("s1", sent["state"])
+        assertFalse("no code is sent", sent.containsKey("code"))
     }
 
     @Test

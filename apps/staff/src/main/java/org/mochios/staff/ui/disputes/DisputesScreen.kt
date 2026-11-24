@@ -48,6 +48,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterBar
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusTone
 import org.mochios.staff.R
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.ui.components.StaffCardAction
@@ -255,7 +257,7 @@ private fun DisputeRow(
 
             // Status + total + reason.
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                StaffStatusBadge(status = dispute.status)
+                DisputeStatus(dispute)
                 Text(
                     text = formatPrice(dispute.total, dispute.currency),
                     style = MaterialTheme.typography.labelMedium,
@@ -277,6 +279,19 @@ private fun DisputeRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
+    }
+}
+
+/**
+ * A dispute's state. One the buyer withdrew closes as resolved for the seller,
+ * but no one decided it for the seller, so it says it was withdrawn.
+ */
+@Composable
+internal fun DisputeStatus(dispute: Dispute) {
+    if (dispute.decider == "buyer") {
+        StatusBadge(label = stringResource(R.string.staff_disputes_withdrawn), tone = StatusTone.Neutral)
+    } else {
+        StaffStatusBadge(status = dispute.status)
     }
 }
 

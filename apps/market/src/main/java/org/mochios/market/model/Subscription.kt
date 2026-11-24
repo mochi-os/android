@@ -35,6 +35,16 @@ data class Subscription(
 )
 
 /**
+ * A Stripe billing portal session for a subscription's customer, where the
+ * buyer gives Stripe a new card after a renewal failed. [url] is Stripe's own
+ * address, which the app opens in a browser tab.
+ */
+data class SubscriptionPortal(
+    val url: String = "",
+    val redirect: String? = null,
+)
+
+/**
  * Source: `SubscriptionStatus` in web `types/common.ts`. `pending` is the
  * window between Checkout and the first settled invoice; `past_due` means
  * Stripe is retrying a failed renewal.

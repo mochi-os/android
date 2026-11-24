@@ -39,9 +39,18 @@ data class MySubscriptionsUiState(
 
 sealed interface MySubscriptionsEvent {
     data class Toast(val message: String) : MySubscriptionsEvent
+    /** Stripe's billing portal, which the screen opens in a browser tab. */
+    data class OpenPortal(val url: String) : MySubscriptionsEvent
 }
 
 private const val PAGE_SIZE = 20
+
+/**
+ * Where Stripe's billing portal sends the buyer back: the app's own
+ * subscriptions, which MainActivity reaches from a Checkout return of a
+ * subscription.
+ */
+internal const val PORTAL_RETURN = "mochi://market/checkout/success?kind=subscription"
 
 @HiltViewModel
 class MySubscriptionsViewModel @Inject constructor(
@@ -108,6 +117,25 @@ class MySubscriptionsViewModel @Inject constructor(
     fun resume(id: String) = mutate(id) { repository.resumeSubscription(id) }
     fun reactivate(id: String) = mutate(id) { repository.reactivateSubscription(id) }
     fun cancel(id: String) = mutate(id) { repository.cancelSubscription(id) }
+
+    /**
+     * Open Stripe's billing portal for a past-due subscription, where the
+     * buyer gives a new card for the renewal that failed.
+     */
+    fun updatePayment(id: String) {
+        if (_uiState.value.mutatingId != null) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(mutatingId = id)
+            try {
+                val portal = repository.subscriptionPortal(id, PORTAL_RETURN)
+                _events.tryEmit(MySubscriptionsEvent.OpenPortal(portal.url))
+            } catch (e: Exception) {
+                _events.tryEmit(MySubscriptionsEvent.Toast(e.toMochiError().userMessage()))
+            } finally {
+                _uiState.value = _uiState.value.copy(mutatingId = null)
+            }
+        }
+    }
 
     private fun mutate(id: String, op: suspend () -> Subscription) {
         viewModelScope.launch {

@@ -134,27 +134,22 @@
     <string name="staff_audit_action_listing_approved">Aprobada por staff</string>
     <string name="staff_audit_action_listing_created">Publicación creada</string>
     <string name="staff_audit_action_listing_deleted">Publicación eliminada</string>
-    <string name="staff_audit_action_listing_expired">Vencida</string>
     <string name="staff_audit_action_listing_published">Publicación publicada</string>
     <string name="staff_audit_action_listing_rejected">Rechazada por staff</string>
     <string name="staff_audit_action_listing_relisted">Republicado</string>
     <string name="staff_audit_action_listing_removed">Eliminado</string>
-    <string name="staff_audit_action_listing_updated">Publicación editada</string>
     <string name="staff_audit_action_listing_warning">Advertencia emitida</string>
-    <string name="staff_audit_action_order_cancelled">Cancelado</string>
     <string name="staff_audit_action_order_chargeback">Contracargo recibido</string>
     <string name="staff_audit_action_order_chargeback_lost">Contracargo confirmado</string>
     <string name="staff_audit_action_order_chargeback_won">Contracargo desestimado</string>
     <string name="staff_audit_action_order_completed">Completado</string>
     <string name="staff_audit_action_order_created">Pedido realizado</string>
     <string name="staff_audit_action_order_paid">Pago recibido</string>
-    <string name="staff_audit_action_order_payment_failed">Pago fallido</string>
     <string name="staff_audit_action_order_refunded">Reembolsado</string>
     <string name="staff_audit_action_order_shipped">Enviado</string>
     <string name="staff_audit_action_report_actioned">Denuncia atendida</string>
     <string name="staff_audit_action_report_created">Denunciado</string>
     <string name="staff_audit_action_review_created">Reseña enviada</string>
-    <string name="staff_audit_action_review_hide">Reseña oculta</string>
     <string name="staff_audit_action_review_remove">Reseña eliminada</string>
     <string name="staff_audit_action_review_responded">Respuesta publicada</string>
     <string name="staff_audit_action_review_restore">Reseña restaurada</string>
@@ -406,4 +401,5 @@
         <item quantity="one">%1$s venta</item>
         <item quantity="other">%1$s ventas</item>
     </plurals>
+    <string name="staff_audit_reason_listing_removed">Publicación eliminada</string>
 </resources>

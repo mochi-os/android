@@ -63,10 +63,15 @@ data class ListingDetailResponse(
     val now: Long = 0,
 )
 
-/** Inline `my_subscription` projection on [ListingDetailResponse]. */
+/**
+ * Inline `my_subscription` projection on [ListingDetailResponse]. [entitled]
+ * is the Comptroller's own judgement of file access now: a live subscription
+ * (active or past due) paid through a date still to come.
+ */
 data class MySubscription(
     val id: String = "",
     val status: String = "",
+    val entitled: Boolean = false,
 )
 
 /** Inline `my_order` projection on [ListingDetailResponse]. */

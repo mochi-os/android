@@ -57,7 +57,6 @@ class AuditLabelsTest {
         "account.unsuspended",
         "auction.bid_placed", "auction.cancelled", "auction.created", "auction.ended_sold", "auction.ended_unsold",
         "auction.opened", "auction.payment_overdue",
-        "audit.unknown_kind_probe",
         "category.created", "category.deleted", "category.updated",
         "config.thresholds_updated", "config.updated",
         "dispute.opened", "dispute.resolved_buyer", "dispute.resolved_seller", "dispute.responded",
@@ -65,8 +64,8 @@ class AuditLabelsTest {
         "listing.created", "listing.deleted", "listing.published", "listing.rejected", "listing.relisted",
         "listing.removed", "listing.warning",
         "order.chargeback", "order.chargeback_lost", "order.chargeback_won", "order.completed", "order.created",
-        "order.paid", "order.refunded", "order.shipped", "order.staff_read",
-        "payment.orphaned",
+        "order.paid", "order.refund_failed", "order.refunded", "order.shipped", "order.staff_read",
+        "payment.orphaned", "payment.refund_failed", "payment.refunded",
         "report.actioned", "report.created",
         "review.created", "review.remove", "review.responded", "review.restore", "review.revealed",
         "staff.team_added", "staff.team_removed", "staff.team_role_changed",
@@ -85,6 +84,79 @@ class AuditLabelsTest {
             assertNotNull("no label for $action", auditActionRes(action))
         }
         assertNull(auditActionRes("listing.renamed"))
+    }
+
+    @Test
+    fun `an action the Comptroller no longer writes has no label`() {
+        val retired = listOf(
+            "audit.unknown_kind_probe", "listing.expired", "listing.updated", "order.cancelled",
+            "order.payment_failed", "review.hide",
+        )
+        for (action in retired) {
+            assertNull(action, auditActionRes(action))
+        }
+    }
+
+    @Test
+    fun `every reason token the Comptroller writes reads in words`() {
+        val reasons = listOf(
+            Triple("auction.ended_unsold", "no_bids", R.string.staff_audit_reason_no_bids),
+            Triple("auction.ended_unsold", "reserve_not_met", R.string.staff_audit_reason_reserve_not_met),
+            Triple("auction.ended_unsold", "no_winning_bid", R.string.staff_audit_reason_no_winning_bid),
+            Triple("auction.cancelled", "listing_removed", R.string.staff_audit_reason_listing_removed),
+            Triple("auction.cancelled", "payment_unavailable", R.string.staff_audit_reason_payment_unavailable),
+            Triple("subscription.cancelled", "checkout_expired", R.string.staff_audit_reason_checkout_expired),
+            Triple("subscription.cancelled", "period_ended", R.string.staff_audit_reason_period_ended),
+            Triple("subscription.cancel_scheduled", "listing_removed", R.string.staff_audit_reason_listing_removed),
+            Triple("account.stripe_disconnected", "deauthorized", R.string.staff_audit_reason_deauthorized),
+            Triple("account.stripe_disconnected", "unreachable", R.string.staff_audit_reason_unreachable),
+            Triple("account.stripe_disconnected", "duplicate", R.string.staff_audit_reason_duplicate),
+            Triple("review.revealed", "timeout", R.string.staff_audit_reason_timeout),
+            Triple("subscription.chargeback", "fraudulent", R.string.staff_disputes_stripe_fraudulent),
+        )
+        for ((action, reason, label) in reasons) {
+            assertEquals("$action $reason", context.getString(label), detail(action, """{"reason": "$reason"}"""))
+        }
+    }
+
+    @Test
+    fun `a reason token this client has no words for shows nothing, but a person's words show`() {
+        assertEquals("", detail("auction.cancelled", """{"reason": "something_new"}"""))
+        assertEquals("", detail("order.chargeback", """{"reason": "timeout"}"""))
+        assertEquals("Fake photos", detail("listing.rejected", """{"reason": "Fake photos"}"""))
+        assertEquals(context.getString(R.string.staff_reports_reason_spam), detail("account.suspended", """{"reason": "spam"}"""))
+    }
+
+    @Test
+    fun `every way the Comptroller says an action came about reads in words`() {
+        val vias = listOf(
+            Triple("order.refunded", "seller", R.string.staff_audit_via_seller),
+            Triple("order.refunded", "staff", R.string.staff_audit_via_staff),
+            Triple("order.refunded", "stripe", R.string.staff_audit_via_stripe),
+            Triple("order.refunded", "reconciled", R.string.staff_audit_via_reconciled),
+            Triple("dispute.resolved_buyer", "refund", R.string.staff_audit_via_refund),
+            Triple("order.completed", "automatic", R.string.staff_audit_via_automatic),
+            Triple("dispute.resolved_seller", "withdrawn", R.string.staff_disputes_withdrawn),
+            Triple("order.completed", "dispute_resolved_seller", R.string.staff_status_resolved_seller),
+            Triple("account.seller_activated", "stripe_oauth", R.string.staff_audit_action_account_stripe_connected),
+            Triple("auction.ended_sold", "instant", R.string.staff_audit_via_instant),
+        )
+        for ((action, via, label) in vias) {
+            assertEquals("$action $via", context.getString(label), detail(action, """{"via": "$via"}"""))
+        }
+        assertEquals("", detail("order.completed", """{"via": "something_new"}"""))
+    }
+
+    @Test
+    fun `the new configuration keys are named in a config change`() {
+        assertEquals(
+            context.getString(R.string.staff_config_field_completion_timeout) + " · 21",
+            detail("config.updated", """{"key": "completion_timeout_days", "value": "21"}"""),
+        )
+        assertEquals(
+            context.getString(R.string.staff_config_field_seller_storage) + " · 2048",
+            detail("config.updated", """{"key": "seller_storage_megabytes", "value": "2048"}"""),
+        )
     }
 
     @Test

@@ -13,6 +13,7 @@ import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -70,13 +71,13 @@ class LabelsTest {
         rule.onAllNodesWithText("on_hold").assertCountEquals(0)
     }
 
-    /** Every action the Comptroller writes on a listing, order, dispute, subscription or auction (2026-11-19). */
+    /** Every action the Comptroller writes on a listing, order, dispute, subscription or auction (2026-11-23). */
     private val written = listOf(
         "listing.appeal_decided", "listing.appeal_submitted", "listing.approved", "listing.cleared",
         "listing.created", "listing.deleted", "listing.published", "listing.rejected", "listing.relisted",
         "listing.removed", "listing.warning",
         "order.chargeback", "order.chargeback_lost", "order.chargeback_won", "order.completed",
-        "order.created", "order.paid", "order.refunded", "order.shipped", "order.staff_read",
+        "order.created", "order.paid", "order.refund_failed", "order.refunded", "order.shipped", "order.staff_read",
         "dispute.opened", "dispute.responded", "dispute.resolved_buyer", "dispute.resolved_seller",
         "auction.bid_placed", "auction.cancelled", "auction.created", "auction.ended_sold",
         "auction.ended_unsold", "auction.opened", "auction.payment_overdue",
@@ -90,6 +91,13 @@ class LabelsTest {
     fun `every action the Comptroller writes on a timeline is labelled`() {
         for (action in written) {
             assertNotNull(action, auditActionResource(action))
+        }
+    }
+
+    @Test
+    fun `an action the Comptroller no longer writes has no label`() {
+        for (action in listOf("listing.expired", "listing.updated", "order.cancelled", "order.payment_failed", "review.hide")) {
+            assertNull(action, auditActionResource(action))
         }
     }
 

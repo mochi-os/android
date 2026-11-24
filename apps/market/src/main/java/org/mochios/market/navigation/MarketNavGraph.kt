@@ -58,7 +58,7 @@ object MarketApp {
      * and MainActivity maps it here with Stripe's raw parameters.
      */
     const val SELLER_SETTINGS_PATTERN =
-        "market/account/seller?code={code}&state={state}&error={error}&error_description={error_description}"
+        "market/account/seller?state={state}&error={error}&error_description={error_description}"
 
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}?title={title}"
@@ -102,8 +102,8 @@ object MarketApp {
         "market/account/${fingerprint?.takeIf { value -> value.isNotBlank() } ?: accountId}"
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
-    fun sellerSettings(code: String?, state: String?, error: String?, errorDescription: String?): String {
-        val query = listOf("code" to code, "state" to state, "error" to error, "error_description" to errorDescription)
+    fun sellerSettings(state: String?, error: String?, errorDescription: String?): String {
+        val query = listOf("state" to state, "error" to error, "error_description" to errorDescription)
             .filter { !it.second.isNullOrBlank() }
             .joinToString("&") { (name, value) -> name + "=" + Uri.encode(value) }
         return if (query.isEmpty()) SELLER_SETTINGS else "$SELLER_SETTINGS?$query"
@@ -137,7 +137,7 @@ object MarketApp {
             "account" -> when (id) {
                 null -> listOf(ACCOUNT)
                 "seller" -> listOf(
-                    sellerSettings(query("code"), query("state"), query("error"), query("error_description")),
+                    sellerSettings(query("state"), query("error"), query("error_description")),
                 )
                 else -> listOf(publicProfile(id))
             }
@@ -213,7 +213,7 @@ fun NavGraphBuilder.marketNavGraph(
     composable(MarketApp.ACCOUNT) { AccountSettingsScreen(navController = navController) }
     composable(
         route = MarketApp.SELLER_SETTINGS_PATTERN,
-        arguments = listOf("code", "state", "error", "error_description").map { name ->
+        arguments = listOf("state", "error", "error_description").map { name ->
             navArgument(name) {
                 type = NavType.StringType
                 nullable = true

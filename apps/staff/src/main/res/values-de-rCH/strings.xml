@@ -128,27 +128,22 @@
     <string name="staff_audit_action_listing_approved">Vom Team genehmigt</string>
     <string name="staff_audit_action_listing_created">Inserat erstellt</string>
     <string name="staff_audit_action_listing_deleted">Inserat gelöscht</string>
-    <string name="staff_audit_action_listing_expired">Abgelaufen</string>
     <string name="staff_audit_action_listing_published">Inserat veröffentlicht</string>
     <string name="staff_audit_action_listing_rejected">Vom Personal abgelehnt</string>
     <string name="staff_audit_action_listing_relisted">Wieder eingestellt</string>
     <string name="staff_audit_action_listing_removed">Entfernt</string>
-    <string name="staff_audit_action_listing_updated">Inserat bearbeitet</string>
     <string name="staff_audit_action_listing_warning">Verwarnung ausgesprochen</string>
-    <string name="staff_audit_action_order_cancelled">Storniert</string>
     <string name="staff_audit_action_order_chargeback">Rückbuchung erhalten</string>
     <string name="staff_audit_action_order_chargeback_lost">Rückbuchung bestätigt</string>
     <string name="staff_audit_action_order_chargeback_won">Rückbuchung abgewiesen</string>
     <string name="staff_audit_action_order_completed">Abgeschlossen</string>
     <string name="staff_audit_action_order_created">Bestellung aufgegeben</string>
     <string name="staff_audit_action_order_paid">Zahlung erhalten</string>
-    <string name="staff_audit_action_order_payment_failed">Zahlung fehlgeschlagen</string>
     <string name="staff_audit_action_order_refunded">Erstattet</string>
     <string name="staff_audit_action_order_shipped">Versendet</string>
     <string name="staff_audit_action_report_actioned">Meldung bearbeitet</string>
     <string name="staff_audit_action_report_created">Gemeldet</string>
     <string name="staff_audit_action_review_created">Bewertung eingereicht</string>
-    <string name="staff_audit_action_review_hide">Bewertung ausgeblendet</string>
     <string name="staff_audit_action_review_remove">Bewertung entfernt</string>
     <string name="staff_audit_action_review_responded">Antwort veröffentlicht</string>
     <string name="staff_audit_action_review_restore">Bewertung wiederhergestellt</string>
@@ -414,4 +409,5 @@
         <item quantity="one">%1$s Verkauf</item>
         <item quantity="other">%1$s Verkäufe</item>
     </plurals>
+    <string name="staff_audit_reason_listing_removed">Inserat entfernt</string>
 </resources>

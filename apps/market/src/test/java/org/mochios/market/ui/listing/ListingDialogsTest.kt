@@ -62,6 +62,10 @@ class ListingDialogsTest {
 
     /** The reason `-/bids/place` and `-/reports/create` refuse with, or null to accept. */
     @Volatile private var refusal: String? = null
+    /** The auction's buy-now price, 0 for none. */
+    @Volatile private var instant: Long = 0
+    /** The auction's current bid, 0 before anyone bids. */
+    @Volatile private var high: Long = 0
     private val bids = AtomicInteger(0)
     private val reports = AtomicInteger(0)
 
@@ -77,7 +81,7 @@ class ListingDialogsTest {
                 return when (path) {
                     "-/listings/viewer/get" -> ok(
                         """{"listing": {"id": "l1", "title": "Teapot", "price": 100, "currency": "jpy", "pricing": "auction", "status": "active"},
-                           "auction": {"id": "a1", "listing": "l1", "status": "active", "bids": 0}}""",
+                           "auction": {"id": "a1", "listing": "l1", "status": "active", "bids": 0, "instant": $instant, "bid": $high}}""",
                     )
                     "-/bids/place" -> {
                         bids.incrementAndGet()
@@ -217,6 +221,45 @@ class ListingDialogsTest {
         rule.onNode(hasText(string(R.string.market_bid_dialog_submit)) and hasClickAction()).performClick()
         until { closed.isNotEmpty() }
         assertEquals(2, bids.get())
+    }
+
+    // The Comptroller turns a bid that reaches the buy-now price into the
+    // purchase at that price, so the bidder is asked first.
+    @Test
+    fun `a bid that reaches the buy-now price is confirmed as the purchase first`() {
+        instant = 100
+        val model = model()
+        showBid(model)
+        bid()
+        rule.waitForIdle()
+        assertEquals(0, bids.get())
+        assertEquals(1, count(string(R.string.market_bid_dialog_instant_title)))
+        rule.onNode(hasText(string(R.string.market_bid_dialog_instant_confirm)) and hasClickAction()).performClick()
+        until { bids.get() == 1 }
+    }
+
+    @Test
+    fun `a bid under the buy-now price is sent at once`() {
+        instant = 500
+        val model = model()
+        showBid(model)
+        bid()
+        until { closed.isNotEmpty() }
+        assertEquals(1, bids.get())
+        assertEquals(0, count(string(R.string.market_bid_dialog_instant_title)))
+    }
+
+    // The minimum follows the server's rule, a current bid above 0, whatever
+    // count of bids the answer carries.
+    @Test
+    fun `a bid at the current bid is refused before it is sent, though the count says none`() {
+        high = 150
+        val model = model()
+        showBid(model)
+        bid()
+        rule.waitForIdle()
+        assertEquals(0, bids.get())
+        assertEquals(1, count(string(R.string.market_bid_dialog_invalid_amount)))
     }
 
     @Test

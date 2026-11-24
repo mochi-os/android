@@ -71,14 +71,11 @@
     <string name="market_audit_listing_cleared">Cleared from seller\'s list</string>
     <string name="market_audit_listing_created">Listing created</string>
     <string name="market_audit_listing_deleted">Listing deleted</string>
-    <string name="market_audit_listing_expired">Expired</string>
     <string name="market_audit_listing_published">Listing published</string>
     <string name="market_audit_listing_rejected">Rejected by staff</string>
     <string name="market_audit_listing_relisted">Relisted</string>
     <string name="market_audit_listing_removed">Removed</string>
-    <string name="market_audit_listing_updated">Listing edited</string>
     <string name="market_audit_listing_warning">Warning issued</string>
-    <string name="market_audit_order_cancelled">Cancelled</string>
     <string name="market_audit_order_chargeback">Chargeback received</string>
     <string name="market_audit_order_chargeback_lost">Chargeback upheld</string>
     <string name="market_audit_order_staff_read">Viewed by staff</string>
@@ -87,13 +84,12 @@
     <string name="market_audit_order_completed">Completed</string>
     <string name="market_audit_order_created">Order placed</string>
     <string name="market_audit_order_paid">Payment received</string>
-    <string name="market_audit_order_payment_failed">Payment failed</string>
     <string name="market_audit_order_refunded">Refunded</string>
+    <string name="market_audit_order_refund_failed">Refund failed</string>
     <string name="market_audit_order_shipped">Shipped</string>
     <string name="market_audit_report_actioned">Report actioned</string>
     <string name="market_audit_report_created">Reported</string>
     <string name="market_audit_review_created">Review submitted</string>
-    <string name="market_audit_review_hide">Review hidden</string>
     <string name="market_audit_review_remove">Review removed</string>
     <string name="market_audit_review_responded">Response posted</string>
     <string name="market_audit_review_restore">Review restored</string>
@@ -116,6 +112,9 @@
     <string name="market_bid_dialog_ceiling_label">Maximum bid (optional)</string>
     <string name="market_bid_dialog_current_high">Current high bid: %1$s</string>
     <string name="market_bid_dialog_failed">Could not place bid</string>
+    <string name="market_bid_dialog_instant_body">Your bid reaches the buy-now price, so it buys the item now for %1$s. You then have 96 hours to pay.</string>
+    <string name="market_bid_dialog_instant_confirm">Buy now</string>
+    <string name="market_bid_dialog_instant_title">Buy it now?</string>
     <string name="market_bid_dialog_instant_win">Purchase confirmed — complete payment</string>
     <string name="market_bid_dialog_invalid_amount">Enter an amount higher than the current bid</string>
     <string name="market_bid_dialog_invalid_ceiling">Maximum bid must be at least your bid amount</string>
@@ -142,7 +141,7 @@
     <string name="market_chargeback_reason_check_returned">Cheque returned</string>
     <string name="market_chargeback_reason_credit_not_processed">Credit not processed</string>
     <string name="market_chargeback_reason_customer_initiated">Customer initiated</string>
-    <string name="market_chargeback_reason_debit_not_authorized">Debit not authorised</string>
+    <string name="market_chargeback_reason_debit_not_authorized">Debit not allowed</string>
     <string name="market_chargeback_reason_duplicate">Duplicate charge</string>
     <string name="market_chargeback_reason_fraudulent">Fraudulent</string>
     <string name="market_chargeback_reason_general">General</string>
@@ -151,7 +150,7 @@
     <string name="market_chargeback_reason_product_not_received">Product not received</string>
     <string name="market_chargeback_reason_product_unacceptable">Product unacceptable</string>
     <string name="market_chargeback_reason_subscription_canceled">Subscription cancelled</string>
-    <string name="market_chargeback_reason_unrecognized">Unrecognised charge</string>
+    <string name="market_chargeback_reason_unrecognized">Unknown charge</string>
     <string name="market_checkout_address_city">City</string>
     <string name="market_checkout_address_country">Country</string>
     <string name="market_checkout_address_heading">Shipping address</string>
@@ -202,6 +201,7 @@
     <string name="market_dispute_dialog_submit">Submit</string>
     <string name="market_dispute_dialog_submitting">Submitting…</string>
     <string name="market_dispute_dialog_title">Respond to dispute</string>
+    <string name="market_dispute_withdrawn_by_buyer">Withdrawn by the buyer</string>
     <string name="market_editor_asset_add">Add file</string>
     <string name="market_editor_asset_delete">Remove asset</string>
     <string name="market_editor_asset_delete_confirm_title">Delete asset?</string>
@@ -210,6 +210,7 @@
     <string name="market_editor_asset_external_filename">Filename</string>
     <string name="market_editor_asset_external_mime">MIME type</string>
     <string name="market_editor_asset_external_url">Reference URL</string>
+    <string name="market_editor_asset_too_large">%1$s is too large. A file can be at most %2$s.</string>
     <string name="market_editor_assets_empty">No assets yet</string>
     <string name="market_editor_back">Back</string>
     <string name="market_editor_category">Category</string>
@@ -433,6 +434,7 @@
     <string name="market_price_starting_bid">Starting bid: %1$s</string>
     <string name="market_profile_biography">About</string>
     <string name="market_profile_joined">Joined %1$s</string>
+    <string name="market_profile_listings_section">Listings</string>
     <string name="market_profile_load_failed">Could not load profile</string>
     <string name="market_profile_no_reviews">No reviews yet.</string>
     <string name="market_profile_reviews_section">Reviews</string>
@@ -448,6 +450,10 @@
     <string name="market_purchase_dispute_resolution">Staff resolution</string>
     <string name="market_purchase_dispute_response">Seller\'s response</string>
     <string name="market_purchase_dispute_title">Refund request</string>
+    <string name="market_purchase_dispute_withdraw">Withdraw dispute</string>
+    <string name="market_purchase_dispute_withdraw_body">The dispute closes for the seller, and the order goes back to where it was.</string>
+    <string name="market_purchase_dispute_withdraw_title">Withdraw dispute?</string>
+    <string name="market_purchase_dispute_withdrawn">Dispute withdrawn</string>
     <string name="market_purchase_download_section">Your purchase is ready</string>
     <string name="market_purchase_item">Item</string>
     <string name="market_purchase_message_seller">Message seller</string>
@@ -494,7 +500,7 @@
     <string name="market_refund_reason_not_as_described">Not as described</string>
     <string name="market_refund_reason_not_received">Not received</string>
     <string name="market_refund_reason_other">Other</string>
-    <string name="market_refund_reason_unauthorised">Unauthorised</string>
+    <string name="market_refund_reason_unauthorised">Payment not made by me</string>
     <string name="market_refund_submit">Request refund</string>
     <string name="market_refund_title">Request refund</string>
     <string name="market_report_conversation_title">Report conversation</string>
@@ -577,8 +583,6 @@
     <string name="market_seller_connecting">Loading…</string>
     <string name="market_seller_fee_loading">Loading fee details…</string>
     <string name="market_seller_fee_value">%1$s%% per sale</string>
-    <string name="market_seller_future_controls_body">More seller account controls will appear here as they become available.</string>
-    <string name="market_seller_future_controls_title">Future seller controls</string>
     <string name="market_seller_manage_stripe">Manage Stripe</string>
     <string name="market_seller_open_dashboard">Open Stripe dashboard</string>
     <string name="market_seller_payments_activate_first">Activate seller account first</string>
@@ -655,9 +659,11 @@
     <string name="market_subscriptions_action_reactivate">Reactivate</string>
     <string name="market_subscriptions_action_resume">Resume</string>
     <string name="market_subscriptions_action_resubscribe">Resubscribe</string>
+    <string name="market_subscriptions_action_update_payment">Update payment method</string>
     <string name="market_subscriptions_actions_label">Subscription actions</string>
     <string name="market_subscriptions_cancel_body">This will cancel your subscription. You will lose access at the end of your current billing period.</string>
     <string name="market_subscriptions_cancel_confirm">Cancel subscription</string>
+    <string name="market_subscriptions_cancel_past_due_body">This will cancel your subscription now. Its renewal payment failed, so access ends straight away.</string>
     <string name="market_subscriptions_cancel_title">Cancel subscription</string>
     <string name="market_subscriptions_cancels_on">Cancels on %1$s</string>
     <string name="market_subscriptions_cancels_period_end">Cancels at the end of the current period</string>

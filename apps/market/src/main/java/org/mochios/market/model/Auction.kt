@@ -28,7 +28,18 @@ data class Auction(
     @SerializedName("has_reserve") val hasReserve: Boolean? = null,
     @SerializedName("reserve_met") val reserveMet: Boolean? = null,
     val mine: Boolean? = null,
-)
+) {
+    /**
+     * Whether anyone has bid, by the Comptroller's own rule (auctions.star): a
+     * current bid above 0. Not [bids], which a Comptroller that predates the
+     * count leaves at 0, so a live auction read as unbid and its minimum fell
+     * to the starting price the server refuses.
+     */
+    val bidden: Boolean get() = bid > 0
+
+    /** The least a bid may be: [startingPrice] until someone bids, then one unit above the current bid. */
+    fun minimum(startingPrice: Long): Long = if (bidden) bid + 1 else startingPrice
+}
 
 /**
  * Mirrors `Bid` in web `types/auctions.ts`. `ceiling` is the bidder's proxy

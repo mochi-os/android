@@ -51,6 +51,7 @@ import org.mochios.market.model.StripeStatus
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionCreateResponse
 import org.mochios.market.model.SubscriptionListResponse
+import org.mochios.market.model.SubscriptionPortal
 import org.mochios.market.model.ThreadDetailResponse
 import org.mochios.market.model.ThreadsListResponse
 import retrofit2.Response
@@ -126,13 +127,13 @@ interface MarketApi {
 
     /**
      * Finish a Stripe Connect ceremony the browser handed to the app: the
-     * callback route sends an app-platform state to `mochi://market/stripe/oauth`
-     * with Stripe's raw parameters, and this completes it as the seller.
+     * callback route sends an app-platform state to `mochi://market/stripe/oauth`,
+     * and this completes it as the seller from the state alone. The Comptroller
+     * keeps Stripe's code itself.
      */
     @FormUrlEncoded
     @POST("-/accounts/stripe/oauth/complete")
     suspend fun completeStripeOauth(
-        @Field("code") code: String? = null,
         @Field("state") state: String? = null,
         @Field("error") error: String? = null,
         @Field("error_description") errorDescription: String? = null,
@@ -619,6 +620,17 @@ interface MarketApi {
         @Field("id") id: String,
     ): Response<ApiResponse<Subscription>>
 
+    /**
+     * A Stripe billing portal session for a past-due subscription's customer;
+     * Stripe sends the buyer back to [destination], a `mochi://` address.
+     */
+    @FormUrlEncoded
+    @POST("-/subscriptions/portal")
+    suspend fun subscriptionPortal(
+        @Field("id") id: String,
+        @Field("return") destination: String,
+    ): Response<ApiResponse<SubscriptionPortal>>
+
     // ---- Threads (buyer-seller conversations) ----
 
     /** Open a thread on a listing (buyer may be inferred from session). */
@@ -730,6 +742,13 @@ interface MarketApi {
     suspend fun respondDispute(
         @Field("id") id: String,
         @Field("body") body: String,
+    ): Response<ApiResponse<Dispute>>
+
+    /** The buyer closes their own open or answered dispute for the seller. */
+    @FormUrlEncoded
+    @POST("-/disputes/withdraw")
+    suspend fun withdrawDispute(
+        @Field("id") id: String,
     ): Response<ApiResponse<Dispute>>
 
     // ---- Audit ----

@@ -23,6 +23,8 @@ data class Dispute(
     val response: String = "",
     val resolution: String = "",
     val resolver: String = "",
+    /** Who closed it: "staff", "seller", "stripe", or "buyer" for a dispute the buyer withdrew; "" while open. */
+    val decider: String = "",
     val fee: Long = 0,
     @SerializedName("fee_refunded") val feeRefunded: Int = 0,
     @SerializedName("evidence_due") val evidenceDue: Long = 0,

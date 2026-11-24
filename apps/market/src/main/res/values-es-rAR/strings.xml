@@ -484,8 +484,6 @@
     <string name="market_seller_connecting">Cargando...</string>
     <string name="market_seller_fee_loading">Cargando detalles de la comisión...</string>
     <string name="market_seller_fee_value">%1$s %% por venta</string>
-    <string name="market_seller_future_controls_body">Aquí aparecerán más ajustes de la cuenta de vendedor a medida que estén disponibles.</string>
-    <string name="market_seller_future_controls_title">Futuros ajustes de vendedor</string>
     <string name="market_seller_manage_stripe">Gestionar Stripe</string>
     <string name="market_seller_open_dashboard">Abrir panel de Stripe</string>
     <string name="market_seller_payments_activate_first">Activa primero la cuenta de vendedor</string>
@@ -547,27 +545,22 @@
     <string name="market_audit_listing_approved">Aprobada por staff</string>
     <string name="market_audit_listing_created">Publicación creada</string>
     <string name="market_audit_listing_deleted">Publicación eliminada</string>
-    <string name="market_audit_listing_expired">Vencida</string>
     <string name="market_audit_listing_published">Publicación publicada</string>
     <string name="market_audit_listing_rejected">Rechazada por staff</string>
     <string name="market_audit_listing_relisted">Republicado</string>
     <string name="market_audit_listing_removed">Eliminada</string>
-    <string name="market_audit_listing_updated">Publicación editada</string>
     <string name="market_audit_listing_warning">Advertencia emitida</string>
-    <string name="market_audit_order_cancelled">Cancelado</string>
     <string name="market_audit_order_chargeback">Contracargo recibido</string>
     <string name="market_audit_order_chargeback_lost">Contracargo confirmado</string>
     <string name="market_audit_order_chargeback_won">Contracargo desestimado</string>
     <string name="market_audit_order_completed">Completado</string>
     <string name="market_audit_order_created">Pedido realizado</string>
     <string name="market_audit_order_paid">Pago recibido</string>
-    <string name="market_audit_order_payment_failed">Pago fallido</string>
     <string name="market_audit_order_refunded">Reembolsado</string>
     <string name="market_audit_order_shipped">Enviado</string>
     <string name="market_audit_report_actioned">Denuncia atendida</string>
     <string name="market_audit_report_created">Denunciado</string>
     <string name="market_audit_review_created">Reseña enviada</string>
-    <string name="market_audit_review_hide">Reseña oculta</string>
     <string name="market_audit_review_remove">Reseña eliminada</string>
     <string name="market_audit_review_responded">Respuesta publicada</string>
     <string name="market_audit_review_restore">Reseña restaurada</string>
@@ -629,4 +622,7 @@
         <item quantity="other">(%1$s reseñas)</item>
     </plurals>
     <string name="market_audit_other">Otra actividad</string>
+    <string name="market_bid_dialog_instant_confirm">Comprá ahora</string>
+    <string name="market_bid_dialog_instant_body">Tu oferta alcanza el precio de compra inmediata, así que compra el artículo ahora por %1$s. Después tenés 96 horas para pagar.</string>
+    <string name="market_subscriptions_cancel_past_due_body">Esto va a cancelar tu suscripción ahora. El pago de la renovación falló, así que el acceso termina de inmediato.</string>
 </resources>

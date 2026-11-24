@@ -495,8 +495,6 @@
     <string name="market_seller_connecting">Chargement...</string>
     <string name="market_seller_fee_loading">Chargement des détails des frais...</string>
     <string name="market_seller_fee_value">%1$s %% par vente</string>
-    <string name="market_seller_future_controls_body">D\'autres réglages du compte vendeur apparaîtront ici au fur et à mesure de leur disponibilité.</string>
-    <string name="market_seller_future_controls_title">Futurs réglages vendeur</string>
     <string name="market_seller_manage_stripe">Gérer Stripe</string>
     <string name="market_seller_open_dashboard">Ouvrir le tableau de bord Stripe</string>
     <string name="market_seller_payments_activate_first">Activez d\'abord le compte vendeur</string>
@@ -554,27 +552,22 @@
     <string name="market_audit_listing_approved">Approuvé par le staff</string>
     <string name="market_audit_listing_created">Annonce créée</string>
     <string name="market_audit_listing_deleted">Annonce supprimée</string>
-    <string name="market_audit_listing_expired">Expirée</string>
     <string name="market_audit_listing_published">Annonce publiée</string>
     <string name="market_audit_listing_rejected">Rejetée par le personnel</string>
     <string name="market_audit_listing_relisted">Republiée</string>
     <string name="market_audit_listing_removed">Retirée</string>
-    <string name="market_audit_listing_updated">Annonce modifiée</string>
     <string name="market_audit_listing_warning">Avertissement émis</string>
-    <string name="market_audit_order_cancelled">Annulée</string>
     <string name="market_audit_order_chargeback">Rétrofacturation reçue</string>
     <string name="market_audit_order_chargeback_lost">Rétrofacturation maintenue</string>
     <string name="market_audit_order_chargeback_won">Rétrofacturation rejetée</string>
     <string name="market_audit_order_completed">Terminé</string>
     <string name="market_audit_order_created">Commande passée</string>
     <string name="market_audit_order_paid">Paiement reçu</string>
-    <string name="market_audit_order_payment_failed">Échec du paiement</string>
     <string name="market_audit_order_refunded">Remboursé</string>
     <string name="market_audit_order_shipped">Expédié</string>
     <string name="market_audit_report_actioned">Signalement traité</string>
     <string name="market_audit_report_created">Signalée</string>
     <string name="market_audit_review_created">Avis soumis</string>
-    <string name="market_audit_review_hide">Avis masqué</string>
     <string name="market_audit_review_remove">Avis supprimé</string>
     <string name="market_audit_review_responded">Réponse publiée</string>
     <string name="market_audit_review_restore">Avis restauré</string>
@@ -635,4 +628,5 @@
         <item quantity="other">(%1$s avis)</item>
     </plurals>
     <string name="market_audit_other">Autre activité</string>
+    <string name="market_bid_dialog_instant_confirm">Acheter maintenant</string>
 </resources>

@@ -30,11 +30,9 @@ import org.mochios.staff.model.AuditEntry
 internal fun auditActionRes(action: String): Int? = when (action) {
     // Listing
     "listing.created" -> R.string.staff_audit_action_listing_created
-    "listing.updated" -> R.string.staff_audit_action_listing_updated
     "listing.deleted" -> R.string.staff_audit_action_listing_deleted
     "listing.published" -> R.string.staff_audit_action_listing_published
     "listing.relisted" -> R.string.staff_audit_action_listing_relisted
-    "listing.expired" -> R.string.staff_audit_action_listing_expired
     "listing.removed" -> R.string.staff_audit_action_listing_removed
     "listing.cleared" -> R.string.staff_audit_action_listing_cleared
     "listing.approved" -> R.string.staff_audit_action_listing_approved
@@ -57,11 +55,10 @@ internal fun auditActionRes(action: String): Int? = when (action) {
     // Order
     "order.created" -> R.string.staff_audit_action_order_created
     "order.paid" -> R.string.staff_audit_action_order_paid
-    "order.payment_failed" -> R.string.staff_audit_action_order_payment_failed
     "order.shipped" -> R.string.staff_audit_action_order_shipped
     "order.completed" -> R.string.staff_audit_action_order_completed
     "order.refunded" -> R.string.staff_audit_action_order_refunded
-    "order.cancelled" -> R.string.staff_audit_action_order_cancelled
+    "order.refund_failed" -> R.string.staff_audit_action_order_refund_failed
     "order.chargeback" -> R.string.staff_audit_action_order_chargeback
     "order.chargeback_won" -> R.string.staff_audit_action_order_chargeback_won
     "order.chargeback_lost" -> R.string.staff_audit_action_order_chargeback_lost
@@ -102,6 +99,8 @@ internal fun auditActionRes(action: String): Int? = when (action) {
 
     // Payment
     "payment.orphaned" -> R.string.staff_audit_action_payment_orphaned
+    "payment.refunded" -> R.string.staff_audit_action_payment_refunded
+    "payment.refund_failed" -> R.string.staff_audit_action_payment_refund_failed
 
     // Reports / reviews
     "report.created" -> R.string.staff_audit_action_report_created
@@ -109,7 +108,6 @@ internal fun auditActionRes(action: String): Int? = when (action) {
     "review.created" -> R.string.staff_audit_action_review_created
     "review.responded" -> R.string.staff_audit_action_review_responded
     "review.revealed" -> R.string.staff_audit_action_review_revealed
-    "review.hide" -> R.string.staff_audit_action_review_hide
     "review.remove" -> R.string.staff_audit_action_review_remove
     "review.restore" -> R.string.staff_audit_action_review_restore
 
@@ -124,9 +122,6 @@ internal fun auditActionRes(action: String): Int? = when (action) {
     "staff.team_role_changed" -> R.string.staff_audit_action_staff_team_role_changed
     "config.updated" -> R.string.staff_audit_action_config_updated
     "config.thresholds_updated" -> R.string.staff_audit_action_config_thresholds_updated
-
-    // Audit
-    "audit.unknown_kind_probe" -> R.string.staff_audit_action_audit_unknown_kind_probe
 
     else -> null
 }
@@ -185,10 +180,11 @@ fun auditDetail(entry: AuditEntry): String =
 
 /**
  * What an entry's data says, in words: its reason, notes and description, the
- * action or decision taken, and its amounts in their currency. Wire values go
- * through the module's tables; a reason that is none of theirs is the words a
- * person wrote. Keys that hold only wire values with no reader's meaning (how
- * a refund was made, a listing's prior status) are left out.
+ * action or decision taken, its amounts in their currency, and how it came
+ * about. Wire values go through the module's tables, and one they do not hold
+ * is left out; only an action whose reason a person writes ([writtenReasons])
+ * shows a reason that is none of theirs. Keys that hold only wire values with
+ * no reader's meaning (a listing's prior status) are left out.
  */
 internal fun auditDetail(action: String, data: String, resources: Resources, format: Format): String {
     if (data.isBlank()) return ""
@@ -213,13 +209,16 @@ internal fun auditDetail(action: String, data: String, resources: Resources, for
         val res = when (action) {
             "dispute.opened" -> disputeReasonRes(reason)
             "order.chargeback", "subscription.chargeback" -> stripeReasonRes(reason)
-            "report.created" -> reportReasonRes(reason)
-            else -> null
-        } ?: systemReasonRes(reason)
-            // Acting on a report records the report's reason when staff wrote
-            // no notes of their own.
-            ?: reportReasonRes(reason)
-        add(label(res) ?: reason)
+            else -> systemReasonRes(action, reason)
+        }
+        when {
+            res != null -> add(label(res))
+            // A person's words: acting on a report records the report's
+            // reason when staff wrote no notes of their own.
+            action in writtenReasons -> add(label(reportReasonRes(reason)) ?: reason)
+            // A token this client has no words for is shown as nothing,
+            // never as itself.
+        }
     }
     add(text("notes"))
     add(text("description"))
@@ -239,7 +238,6 @@ internal fun auditDetail(action: String, data: String, resources: Resources, for
     // A resolution is resolved to the reader's language by the server; an
     // older server's label key is no sentence to show.
     add(text("resolution").takeUnless { it.startsWith("labels.") })
-    if (action == "audit.unknown_kind_probe") add(text("kind"))
 
     add(price("amount"))
     val refund = price("refund_amount")
@@ -266,14 +264,33 @@ internal fun auditDetail(action: String, data: String, resources: Resources, for
             add(resources.getString(key) + " · " + text("value"))
         }
     }
+    add(label(viaRes(text("via"))))
     return parts.joinToString(" · ")
 }
+
+/**
+ * Actions whose reason is what a person wrote: a reporter (the Comptroller
+ * takes any text, though clients send one of the report reasons), staff
+ * removing, rejecting or sanctioning, or a seller appealing.
+ */
+internal val writtenReasons = setOf(
+    "account.banned",
+    "account.suspended",
+    "listing.appeal_submitted",
+    "listing.rejected",
+    "listing.removed",
+    "listing.warning",
+    "report.created",
+)
 
 /** The configuration field a `config.updated` entry names. */
 @StringRes
 private fun configKeyRes(key: String): Int? = when (key) {
     "fee_percent" -> R.string.staff_config_field_platform_fee
     "review_timeout_days" -> R.string.staff_config_field_review_window
+    "dispute_window_days" -> R.string.staff_config_field_dispute_window
+    "completion_timeout_days" -> R.string.staff_config_field_completion_timeout
+    "seller_storage_megabytes" -> R.string.staff_config_field_seller_storage
     "stripe_publishable_key" -> R.string.staff_config_field_stripe_publishable
     "stripe_secret_key" -> R.string.staff_config_field_stripe_secret
     "stripe_webhook_secret" -> R.string.staff_config_field_stripe_webhook

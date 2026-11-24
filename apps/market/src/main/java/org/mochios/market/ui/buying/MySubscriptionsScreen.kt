@@ -5,6 +5,8 @@
 
 package org.mochios.market.ui.buying
 
+import android.content.ActivityNotFoundException
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,6 +14,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.outlined.Cancel
+import androidx.compose.material.icons.outlined.CreditCard
 import androidx.compose.material.icons.outlined.Pause
 import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Refresh
@@ -29,6 +32,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -42,6 +46,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -64,11 +69,28 @@ fun MySubscriptionsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
+    val context = LocalContext.current
+    val browserUnavailable = stringResource(R.string.market_checkout_browser_unavailable)
+    val stripeOpenFailed = stringResource(R.string.market_account_stripe_open_failed)
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is MySubscriptionsEvent.Toast -> snackbar.showSnackbar(event.message)
+                is MySubscriptionsEvent.OpenPortal -> {
+                    // Only a web address leaves the app: launchUrl degrades
+                    // to ACTION_VIEW.
+                    val target = webUri(event.url)
+                    if (target == null) {
+                        snackbar.showSnackbar(stripeOpenFailed)
+                    } else {
+                        try {
+                            CustomTabsIntent.Builder().build().launchUrl(context, target)
+                        } catch (_: ActivityNotFoundException) {
+                            snackbar.showSnackbar(browserUnavailable)
+                        }
+                    }
+                }
             }
         }
     }
@@ -122,6 +144,7 @@ fun MySubscriptionsScreen(
                         onPause = { viewModel.pause(sub.id) },
                         onResume = { viewModel.resume(sub.id) },
                         onReactivate = { viewModel.reactivate(sub.id) },
+                        onUpdatePayment = { viewModel.updatePayment(sub.id) },
                         onCancelRequested = { pendingCancel = sub },
                     )
                 }
@@ -133,7 +156,12 @@ fun MySubscriptionsScreen(
         MochiAlertDialog(
             onDismissRequest = { pendingCancel = null },
             title = stringResource(R.string.market_subscriptions_cancel_title),
-            text = stringResource(R.string.market_subscriptions_cancel_body),
+            // A past-due subscription is cancelled at once: its renewal was
+            // never paid.
+            text = stringResource(
+                if (sub.status == SubscriptionStatus.PAST_DUE) R.string.market_subscriptions_cancel_past_due_body
+                else R.string.market_subscriptions_cancel_body,
+            ),
             confirmText = stringResource(R.string.market_subscriptions_cancel_confirm),
             onConfirm = {
                 viewModel.cancel(sub.id)
@@ -154,6 +182,7 @@ private fun SubscriptionRow(
     onResume: () -> Unit,
     onReactivate: () -> Unit,
     onResubscribe: () -> Unit,
+    onUpdatePayment: () -> Unit,
     onCancelRequested: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -193,6 +222,13 @@ private fun SubscriptionRow(
                 )
             }
             MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                if (sub.status == SubscriptionStatus.PAST_DUE) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.market_subscriptions_action_update_payment)) },
+                        onClick = { menu = false; onUpdatePayment() },
+                        leadingIcon = { Icon(Icons.Outlined.CreditCard, contentDescription = null) },
+                    )
+                }
                 if (sub.status == SubscriptionStatus.ACTIVE && sub.cancelled == 0L) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_pause)) },

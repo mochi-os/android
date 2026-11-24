@@ -73,8 +73,11 @@ import org.mochios.market.lib.parseLocation
 import org.mochios.market.lib.ratingStars
 import org.mochios.market.lib.toPlaceData
 import org.mochios.market.model.Account
+import org.mochios.market.model.Listing
 import org.mochios.market.model.Review
 import org.mochios.market.model.userAvatarUrl
+import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.ListingCard
 import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.VerifiedGreen
@@ -134,6 +137,9 @@ fun PublicProfileScreen(
                     hasMore = state.paging.more,
                     accountId = profileIdentity(state.account!!, viewModel.accountId),
                     onLoadMore = viewModel::loadMoreReviews,
+                    onOpenListing = { listing ->
+                        navController.navigate(MarketApp.listingDetail(listing.id, listing.title))
+                    },
                     modifier = Modifier.padding(padding),
                 )
             }
@@ -156,6 +162,7 @@ private fun ProfileBody(
     hasMore: Boolean,
     accountId: String,
     onLoadMore: () -> Unit,
+    onOpenListing: (Listing) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val format = LocalFormat.current
@@ -214,6 +221,29 @@ private fun ProfileBody(
                                 .clip(RoundedCornerShape(12.dp)),
                         )
                     }
+                }
+            }
+        }
+
+        // The seller's latest listings for sale, as cards two to a row.
+        if (account.listings.isNotEmpty()) {
+            item(key = "listings_header") {
+                Text(
+                    text = stringResource(R.string.market_profile_listings_section),
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                )
+            }
+            items(account.listings.chunked(2), key = { row -> "listings_" + row.first().id }) { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    for (item in row) {
+                        ListingCard(
+                            listing = item.toListing(),
+                            onClick = onOpenListing,
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                    if (row.size == 1) Spacer(Modifier.weight(1f))
                 }
             }
         }

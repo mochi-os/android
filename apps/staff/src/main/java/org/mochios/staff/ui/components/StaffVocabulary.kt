@@ -166,15 +166,53 @@ internal fun stripeReasonRes(reason: String): Int? = when (reason) {
     else -> null
 }
 
-/** The reasons the Comptroller itself gives when it ends an auction, a subscription or a Stripe link. */
+/**
+ * The reasons the Comptroller itself writes on [action] when it ends an
+ * auction, a subscription or a Stripe link, or reveals a review: each token
+ * only on the action it is written with.
+ */
 @StringRes
-internal fun systemReasonRes(reason: String): Int? = when (reason) {
-    "checkout_expired" -> R.string.staff_audit_reason_checkout_expired
-    "period_ended" -> R.string.staff_audit_reason_period_ended
-    "no_bids" -> R.string.staff_audit_reason_no_bids
-    "reserve_not_met" -> R.string.staff_audit_reason_reserve_not_met
-    "no_winning_bid" -> R.string.staff_audit_reason_no_winning_bid
-    "deauthorized" -> R.string.staff_audit_reason_deauthorized
+internal fun systemReasonRes(action: String, reason: String): Int? = when (action) {
+    "auction.ended_unsold" -> when (reason) {
+        "no_bids" -> R.string.staff_audit_reason_no_bids
+        "reserve_not_met" -> R.string.staff_audit_reason_reserve_not_met
+        "no_winning_bid" -> R.string.staff_audit_reason_no_winning_bid
+        else -> null
+    }
+    "auction.cancelled" -> when (reason) {
+        "listing_removed" -> R.string.staff_audit_reason_listing_removed
+        "payment_unavailable" -> R.string.staff_audit_reason_payment_unavailable
+        else -> null
+    }
+    "subscription.cancelled" -> when (reason) {
+        "checkout_expired" -> R.string.staff_audit_reason_checkout_expired
+        "period_ended" -> R.string.staff_audit_reason_period_ended
+        else -> null
+    }
+    "subscription.cancel_scheduled" -> if (reason == "listing_removed") R.string.staff_audit_reason_listing_removed else null
+    "account.stripe_disconnected" -> when (reason) {
+        "deauthorized" -> R.string.staff_audit_reason_deauthorized
+        "unreachable" -> R.string.staff_audit_reason_unreachable
+        "duplicate" -> R.string.staff_audit_reason_duplicate
+        else -> null
+    }
+    "review.revealed" -> if (reason == "timeout") R.string.staff_audit_reason_timeout else null
+    else -> null
+}
+
+/** How an action came about, where the Comptroller records it (`via`). */
+@StringRes
+internal fun viaRes(via: String): Int? = when (via) {
+    "seller" -> R.string.staff_audit_via_seller
+    "staff" -> R.string.staff_audit_via_staff
+    "stripe" -> R.string.staff_audit_via_stripe
+    "reconciled" -> R.string.staff_audit_via_reconciled
+    "refund" -> R.string.staff_audit_via_refund
+    "automatic" -> R.string.staff_audit_via_automatic
+    "withdrawn" -> R.string.staff_disputes_withdrawn
+    "dispute_resolved_seller" -> R.string.staff_status_resolved_seller
+    "stripe_oauth" -> R.string.staff_audit_action_account_stripe_connected
+    "instant" -> R.string.staff_audit_via_instant
     else -> null
 }
 

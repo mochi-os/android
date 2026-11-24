@@ -195,13 +195,15 @@ class ListingLoadTest {
         model.share(format)
         until { shared != null }
         job.cancel()
-        assertEquals(Shared(text = "Teapot\n" + formatPrice(100, Currency.JPY, format), url = "$base/market/listings/l1"), shared)
+        // Its title, then its price as a paragraph of its own: a feed's post
+        // joins lines a single newline parts.
+        assertEquals(Shared(text = "Teapot\n\n" + formatPrice(100, Currency.JPY, format), url = "$base/market/listings/l1"), shared)
         // The sheet the screen's ShareSheet opens with it.
         share(context, shared!!)
         val chooser = shadowOf(context).nextStartedActivity
         assertEquals(Intent.ACTION_CHOOSER, chooser.action)
         val send = IntentCompat.getParcelableExtra(chooser, Intent.EXTRA_INTENT, Intent::class.java)!!
-        assertEquals("Teapot\n" + formatPrice(100, Currency.JPY, format) + "\n$base/market/listings/l1", send.getStringExtra(Intent.EXTRA_TEXT))
+        assertEquals("Teapot\n\n" + formatPrice(100, Currency.JPY, format) + "\n\n$base/market/listings/l1", send.getStringExtra(Intent.EXTRA_TEXT))
         assertEquals(shared!!.text, send.getStringExtra(EXTRA_WORDS))
         assertEquals("$base/market/listings/l1", send.getStringExtra(EXTRA_ADDRESS))
     }

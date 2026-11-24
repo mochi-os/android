@@ -31,9 +31,18 @@ import org.mochios.market.model.Auction
 import org.mochios.market.model.Currency
 
 /**
+ * Whether a bid of [amount], with the proxy [ceiling], reaches [auction]'s
+ * buy-now price. The Comptroller turns such a bid into an immediate purchase
+ * at that price: the auction ends and the bidder has 96 hours to pay.
+ */
+internal fun reachesInstant(auction: Auction, amount: Long, ceiling: Long?): Boolean =
+    auction.instant > 0L && (amount >= auction.instant || (ceiling ?: 0L) >= auction.instant)
+
+/**
  * The optional maximum is a proxy-bid ceiling: the Comptroller raises the bid
  * by the smallest increment needed to stay ahead, up to it. Blank sends no
- * ceiling.
+ * ceiling. A bid that reaches the buy-now price is the purchase, so it is
+ * confirmed as one before it is sent.
  */
 @Composable
 fun PlaceBidDialog(
@@ -51,14 +60,16 @@ fun PlaceBidDialog(
     var amountInput by remember { mutableStateOf("") }
     var ceilingInput by remember { mutableStateOf("") }
     var validationError by remember { mutableStateOf<String?>(null) }
+    // A bid that reaches the buy-now price, waiting on the bidder's word.
+    var purchase by remember { mutableStateOf<Pair<Long, Long?>?>(null) }
 
-    val hasBids = auction.bids > 0
+    val hasBids = auction.bidden
     // Not auction.reserve: the server redacts it to 0 for anyone but the
     // seller, so it showed "starting at £0.00" and set the floor to nothing.
     // Mirror the server's own rule (auctions.star): the minimum is the
     // listing price until there are bids, then one unit above the high bid.
     val currentHigh = if (hasBids) auction.bid else startingPrice
-    val minimum = if (hasBids) auction.bid + 1 else startingPrice
+    val minimum = auction.minimum(startingPrice)
 
     LaunchedEffect(open, auction.id) {
         if (open) {
@@ -70,6 +81,29 @@ fun PlaceBidDialog(
 
     val invalidAmountText = stringResource(R.string.market_bid_dialog_invalid_amount)
     val invalidCeilingText = stringResource(R.string.market_bid_dialog_invalid_ceiling)
+
+    // The confirmation stands in for the form, which keeps what was typed for
+    // a bidder who goes back to it.
+    val pending = purchase
+    if (pending != null) {
+        MochiAlertDialog(
+            onDismissRequest = { if (!submitting) purchase = null },
+            title = stringResource(R.string.market_bid_dialog_instant_title),
+            text = stringResource(
+                R.string.market_bid_dialog_instant_body,
+                formatPrice(auction.instant, currency),
+            ),
+            confirmText = stringResource(R.string.market_bid_dialog_instant_confirm),
+            onConfirm = {
+                purchase = null
+                onSubmit(pending.first, pending.second, currency)
+            },
+            confirmLoading = submitting,
+            dismissText = stringResource(R.string.market_bid_dialog_cancel),
+            dismissEnabled = !submitting,
+        )
+        return
+    }
 
     MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
@@ -142,6 +176,10 @@ fun PlaceBidDialog(
                     return@MochiAlertDialog
                 }
                 c
+            }
+            if (reachesInstant(auction, minor, ceiling)) {
+                purchase = minor to ceiling
+                return@MochiAlertDialog
             }
             onSubmit(minor, ceiling, currency)
         },

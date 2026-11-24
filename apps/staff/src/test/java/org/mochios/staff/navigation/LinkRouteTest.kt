@@ -31,6 +31,8 @@ class LinkRouteTest {
         assertEquals(StaffApp.LISTINGS, StaffApp.linkRoute(section("/staff/listings")))
         assertEquals(StaffApp.APPEALS, StaffApp.linkRoute(section("/staff/appeals")))
         assertEquals(StaffApp.ACCOUNTS, StaffApp.linkRoute(section("/staff/accounts")))
+        // The orphaned-payment alert.
+        assertEquals(StaffApp.PAYMENTS, StaffApp.linkRoute(section("/staff/payments")))
     }
 
     @Test
@@ -44,7 +46,8 @@ class LinkRouteTest {
     fun `every drawer screen can be linked to, and nothing else`() {
         for (route in listOf(
             StaffApp.LISTINGS, StaffApp.APPEALS, StaffApp.REPORTS, StaffApp.DISPUTES, StaffApp.REVIEWS,
-            StaffApp.MODERATION, StaffApp.CATEGORIES, StaffApp.ACCOUNTS, StaffApp.TEAM, StaffApp.CONFIG,
+            StaffApp.MODERATION, StaffApp.CATEGORIES, StaffApp.ACCOUNTS, StaffApp.PAYMENTS, StaffApp.TEAM,
+            StaffApp.CONFIG,
         )) {
             assertEquals(route, StaffApp.linkRoute(route.removePrefix("staff/")))
         }

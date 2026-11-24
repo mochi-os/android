@@ -57,7 +57,17 @@ class LinkRouteTest {
         assertEquals(listOf(MarketApp.PURCHASES), routes("purchases"))
         assertEquals(listOf(MarketApp.SUBSCRIPTIONS), routes("subscriptions"))
         assertEquals(
-            listOf(MarketApp.sellerSettings("c1", "s1", null, null)),
+            listOf(MarketApp.sellerSettings("s1", null, null)),
+            routes("account/seller", mapOf("state" to "s1")),
+        )
+    }
+
+    // The Comptroller keeps Stripe's code; a return carries the state alone,
+    // and a code a link still holds goes nowhere.
+    @Test
+    fun `a Stripe return reaches the seller settings with its state and no code`() {
+        assertEquals(
+            listOf("market/account/seller?state=s1"),
             routes("account/seller", mapOf("code" to "c1", "state" to "s1")),
         )
     }

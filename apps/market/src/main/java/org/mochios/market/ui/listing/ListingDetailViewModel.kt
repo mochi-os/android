@@ -118,11 +118,16 @@ internal fun ListingDetailResponse.offer(viewer: String?): Offer {
     return Offer.Buy(resume = reserved)
 }
 
-/** Whether [viewer] may download this listing's files: its seller, a buyer with a paid order, or an active subscriber. */
+/**
+ * Whether [viewer] may download this listing's files: its seller, a buyer with
+ * a paid order, or a subscriber the Comptroller says is entitled. The
+ * subscription's status alone is not the rule: an active one whose paid period
+ * has lapsed is refused, and a past-due one inside it is not.
+ */
 internal fun ListingDetailResponse.downloadable(viewer: String?): Boolean {
     if (viewer != null && viewer == listing.seller) return true
     if (myOrder?.status in PAID) return true
-    return mySubscription?.status == "active"
+    return mySubscription?.entitled == true
 }
 
 /** Order statuses the server lets a buyer download in. */

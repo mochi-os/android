@@ -130,7 +130,20 @@ sealed class EditListingEvent {
     /** Emit when photos or files are added before the listing has a title, so
      * there is no listing row to attach them to yet. */
     data object TitleRequired : EditListingEvent()
+    /** A picked file over [ASSET_SIZE_MAXIMUM], refused before it was sent. */
+    data class TooLarge(val name: String) : EditListingEvent()
 }
+
+/**
+ * The largest digital asset a listing may hold, in bytes: the Comptroller's
+ * ASSET_SIZE_MAXIMUM. The editor refuses a larger file before sending it,
+ * since the Comptroller would refuse it only after the whole upload.
+ */
+internal const val ASSET_SIZE_MAXIMUM = 100L * 1024 * 1024
+
+/** [files] split into those within [ASSET_SIZE_MAXIMUM] and those over it. */
+internal fun assetsWithinLimit(files: List<File>): Pair<List<File>, List<File>> =
+    files.partition { file -> file.length() <= ASSET_SIZE_MAXIMUM }
 
 @HiltViewModel
 class EditListingViewModel @Inject constructor(
@@ -618,8 +631,10 @@ class EditListingViewModel @Inject constructor(
                 try {
                     val temps = repository.stageFiles(uris)
                     try {
-                        assetTracker.expect(temps)
-                        for (temp in temps) {
+                        val (accepted, refused) = assetsWithinLimit(temps)
+                        for (file in refused) _events.emit(EditListingEvent.TooLarge(file.name))
+                        assetTracker.expect(accepted)
+                        for (temp in accepted) {
                             val asset = repository.uploadAsset(listingId, temp, assetTracker)
                             _state.value = _state.value.copy(assets = _state.value.assets + asset)
                         }

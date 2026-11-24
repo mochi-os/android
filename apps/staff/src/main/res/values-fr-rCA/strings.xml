@@ -338,7 +338,6 @@
     <string name="staff_audit_actor_system">Système</string>
     <string name="staff_audit_action_listing_removed">Supprimé</string>
     <string name="staff_audit_action_order_completed">Terminé</string>
-    <string name="staff_audit_action_listing_expired">Expirée</string>
     <string name="staff_audit_action_order_refunded">Remboursé</string>
     <string name="staff_audit_action_review_remove">Avis supprimé</string>
     <string name="staff_audit_title">Historique</string>
@@ -359,20 +358,16 @@
     <string name="staff_audit_action_listing_published">Annonce publiée</string>
     <string name="staff_audit_action_listing_rejected">Rejetée par le personnel</string>
     <string name="staff_audit_action_listing_relisted">Republiée</string>
-    <string name="staff_audit_action_listing_updated">Annonce modifiée</string>
     <string name="staff_audit_action_listing_warning">Avertissement émis</string>
-    <string name="staff_audit_action_order_cancelled">Annulée</string>
     <string name="staff_audit_action_order_chargeback">Rétrofacturation reçue</string>
     <string name="staff_audit_action_order_chargeback_lost">Rétrofacturation maintenue</string>
     <string name="staff_audit_action_order_chargeback_won">Rétrofacturation rejetée</string>
     <string name="staff_audit_action_order_created">Commande passée</string>
     <string name="staff_audit_action_order_paid">Paiement reçu</string>
-    <string name="staff_audit_action_order_payment_failed">Échec du paiement</string>
     <string name="staff_audit_action_order_shipped">Expédiée</string>
     <string name="staff_audit_action_report_actioned">Signalement traité</string>
     <string name="staff_audit_action_report_created">Signalée</string>
     <string name="staff_audit_action_review_created">Avis soumis</string>
-    <string name="staff_audit_action_review_hide">Avis masqué</string>
     <string name="staff_audit_action_review_responded">Réponse publiée</string>
     <string name="staff_audit_action_review_restore">Avis restauré</string>
     <string name="staff_audit_action_review_revealed">Avis dévoilé</string>
@@ -422,4 +417,5 @@
         <item quantity="one">%1$s vente</item>
         <item quantity="other">%1$s ventes</item>
     </plurals>
+    <string name="staff_audit_reason_listing_removed">Annonce retirée</string>
 </resources>

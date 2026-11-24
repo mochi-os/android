@@ -21,6 +21,8 @@ import org.mochios.staff.model.Me
 import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
 import org.mochios.staff.model.OkResponse
+import org.mochios.staff.model.OrphanedPaymentsResponse
+import org.mochios.staff.model.PaymentRefund
 import org.mochios.staff.model.PendingListingsResponse
 import org.mochios.staff.model.ConversationResponse
 import org.mochios.staff.model.Report
@@ -319,6 +321,23 @@ interface StaffApi {
         // amount is the optional partial refund (minor units) for resolved_buyer.
         @Field("amount") refundAmount: String? = null,
     ): Response<ApiResponse<Dispute>>
+
+    // ---- Payments ----
+
+    /** Payments that settled with no order or subscription, newest first. */
+    @GET("-/payments/orphaned")
+    suspend fun listOrphanedPayments(
+        @Query("page") page: Int? = null,
+        @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
+    ): Response<ApiResponse<OrphanedPaymentsResponse>>
+
+    /** Refunds an orphaned payment in full; the Comptroller admits admins only. */
+    @FormUrlEncoded
+    @POST("-/payments/refund")
+    suspend fun refundPayment(
+        @Field("id") id: String,
+    ): Response<ApiResponse<PaymentRefund>>
 
     // ---- Metrics ----
 

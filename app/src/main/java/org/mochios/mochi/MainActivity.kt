@@ -544,16 +544,15 @@ open class MainActivity : ComponentActivity() {
     }
 
     /**
-     * Stripe Connect return (`mochi://market/stripe/oauth?code&state&error&
-     * error_description`): the market callback hands an app-platform state
-     * here with Stripe's raw parameters, and the seller settings screen
-     * completes the exchange as the signed-in seller. The state is opaque
-     * to the app, so it is only bounded, never interpreted.
+     * Stripe Connect return (`mochi://market/stripe/oauth?state&error&
+     * error_description`): the Comptroller keeps Stripe's code and hands an
+     * app-platform state here, and the seller settings screen completes the
+     * exchange from it as the signed-in seller. The state is opaque to the
+     * app, so it is only bounded, never interpreted.
      */
     private fun handleMarketStripeOauthDeepLink(uri: Uri) {
         val state = uri.getQueryParameter("state")?.takeIf { it.length in 1..200 } ?: return
         val route = MarketApp.sellerSettings(
-            code = uri.getQueryParameter("code"),
             state = state,
             error = uri.getQueryParameter("error"),
             errorDescription = uri.getQueryParameter("error_description"),

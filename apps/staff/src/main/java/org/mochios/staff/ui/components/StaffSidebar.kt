@@ -7,6 +7,7 @@ package org.mochios.staff.ui.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Category
+import androidx.compose.material.icons.outlined.CreditCard
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Gavel
 import androidx.compose.material.icons.outlined.Group
@@ -99,6 +100,14 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
                 id = StaffApp.ACCOUNTS,
                 title = stringResource(R.string.staff_sidebar_accounts),
                 icon = Icons.Outlined.People,
+                section = management,
+            )
+        )
+        add(
+            DrawerItem(
+                id = StaffApp.PAYMENTS,
+                title = stringResource(R.string.staff_sidebar_payments),
+                icon = Icons.Outlined.CreditCard,
                 section = management,
             )
         )

@@ -99,7 +99,7 @@ fun ConfigScreen(
 }
 
 @Composable
-private fun ConfigBody(
+internal fun ConfigBody(
     state: ConfigUiState,
     onLocalChange: (String, String) -> Unit,
     onSave: (String) -> Unit,
@@ -143,12 +143,44 @@ private fun ConfigBody(
             )
         }
 
+        // Orders: how long a shipped order waits before it completes itself.
+        ConfigCard(title = stringResource(R.string.staff_config_group_orders)) {
+            NumberField(
+                label = stringResource(R.string.staff_config_field_completion_timeout),
+                suffix = stringResource(R.string.staff_config_suffix_days),
+                key = ConfigViewModel.KEY_COMPLETION_TIMEOUT,
+                state = state,
+                onLocalChange = onLocalChange,
+                onSave = onSave,
+            )
+        }
+
+        // Sellers: the storage each seller's listing files may take.
+        ConfigCard(title = stringResource(R.string.staff_config_group_sellers)) {
+            NumberField(
+                label = stringResource(R.string.staff_config_field_seller_storage),
+                suffix = stringResource(R.string.staff_config_suffix_megabytes),
+                key = ConfigViewModel.KEY_SELLER_STORAGE,
+                state = state,
+                onLocalChange = onLocalChange,
+                onSave = onSave,
+            )
+        }
+
         // Reviews
         ConfigCard(title = stringResource(R.string.staff_config_group_reviews)) {
             NumberField(
                 label = stringResource(R.string.staff_config_field_review_window),
                 suffix = stringResource(R.string.staff_config_suffix_days),
                 key = ConfigViewModel.KEY_REVIEW_WINDOW,
+                state = state,
+                onLocalChange = onLocalChange,
+                onSave = onSave,
+            )
+            NumberField(
+                label = stringResource(R.string.staff_config_field_dispute_window),
+                suffix = stringResource(R.string.staff_config_suffix_days),
+                key = ConfigViewModel.KEY_DISPUTE_WINDOW,
                 state = state,
                 onLocalChange = onLocalChange,
                 onSave = onSave,

@@ -40,7 +40,38 @@ data class Account(
     val sales: Long = 0,
     val created: Long = 0,
     val updated: Long = 0,
+    /** A seller's public profile: their latest listings for sale, each a card. */
+    val listings: List<ProfileListing> = emptyList(),
 )
+
+/**
+ * A listing on a seller's public profile, as the Comptroller answers it for a
+ * card; [photo] is its first photo's id, the one the public photo route
+ * serves, or "" for none.
+ */
+data class ProfileListing(
+    val id: String = "",
+    val title: String = "",
+    val price: Long = 0,
+    val currency: Currency? = null,
+    val pricing: PricingModel? = null,
+    val type: ListingType? = null,
+    val photo: String = "",
+    /** Sent with a subscription by a Comptroller that sends it. */
+    val interval: Interval? = null,
+) {
+    /** The card's listing: the fields a card draws, with the photo by id. */
+    fun toListing(): Listing = Listing(
+        id = id,
+        title = title,
+        price = price,
+        currency = currency,
+        pricing = pricing,
+        type = type,
+        interval = interval,
+        photo = photo.takeIf { it.isNotBlank() }?.let { Photo(id = it) },
+    )
+}
 
 /**
  * Where a market user's avatar is served, through the market's own proxy.

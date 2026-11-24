@@ -610,6 +610,18 @@ internal fun feeOutcome(dispute: Dispute): FeeOutcome? = when {
 }
 
 /**
+ * The buyer's own account of [dispute], or null for none. A chargeback is
+ * stored with an empty description, and older ones with English the
+ * Comptroller wrote, which repeats the reason and amount shown beside it; the
+ * other clients leave a chargeback's out too.
+ */
+internal fun disputeDescription(dispute: Dispute): String? =
+    dispute.description.takeIf { dispute.opener != "stripe" && it.isNotBlank() }
+
+/** Whether the buyer withdrew [dispute], closing it for the seller. */
+internal fun disputeWithdrawn(dispute: Dispute): Boolean = dispute.decider == "buyer"
+
+/**
  * The open dispute on the sale: its status, a chargeback's reason, evidence
  * deadline and fee, the buyer's case and the seller's answer, and Respond while
  * a buyer's dispute is open. A chargeback is answered on the Stripe Dashboard,
@@ -665,10 +677,11 @@ private fun DisputePanel(dispute: Dispute, currency: Currency, onRespond: () -> 
                     SummaryValue(text = if (note.isEmpty()) amount else "$amount $note")
                 }
             }
-            if (dispute.description.isNotBlank()) {
+            val description = disputeDescription(dispute)
+            if (description != null) {
                 Spacer(modifier = Modifier.size(4.dp))
                 Text(
-                    text = dispute.description,
+                    text = description,
                     style = MaterialTheme.typography.bodyMedium,
                 )
             }
@@ -677,6 +690,14 @@ private fun DisputePanel(dispute: Dispute, currency: Currency, onRespond: () -> 
                 Text(
                     text = dispute.response,
                     style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            if (disputeWithdrawn(dispute)) {
+                Spacer(modifier = Modifier.size(4.dp))
+                Text(
+                    text = stringResource(R.string.market_dispute_withdrawn_by_buyer),
+                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }

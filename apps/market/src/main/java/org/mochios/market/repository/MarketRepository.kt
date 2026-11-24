@@ -63,6 +63,7 @@ import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionCreateResponse
+import org.mochios.market.model.SubscriptionPortal
 import org.mochios.market.model.SubscriptionsListResponse
 import org.mochios.market.model.ThreadDetailResponse
 import org.mochios.market.model.ThreadsListResponse
@@ -166,13 +167,12 @@ class MarketRepository @Inject constructor(
     }
 
     suspend fun completeStripeOauth(
-        code: String?,
         state: String?,
         error: String?,
         errorDescription: String?,
     ): StripeOauthCompletion {
         return try {
-            api.completeStripeOauth(code, state, error, errorDescription).unwrap()
+            api.completeStripeOauth(state, error, errorDescription).unwrap()
                 .also { ownAccount.forget() }
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -825,6 +825,15 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /** Stripe's billing portal for subscription [id], returning to [destination]. */
+    suspend fun subscriptionPortal(id: String, destination: String): SubscriptionPortal {
+        return try {
+            api.subscriptionPortal(id, destination).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     // ---- Threads ----
 
     suspend fun createThread(listing: String, buyer: String? = null): MarketThread {
@@ -949,6 +958,15 @@ class MarketRepository @Inject constructor(
     suspend fun respondToDispute(id: String, body: String): Dispute {
         return try {
             api.respondDispute(id.toString(), body).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** Withdraw the buyer's own dispute [id]: it closes for the seller and the order is restored. */
+    suspend fun withdrawDispute(id: String): Dispute {
+        return try {
+            api.withdrawDispute(id).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

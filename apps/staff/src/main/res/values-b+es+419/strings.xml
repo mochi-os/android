@@ -80,27 +80,22 @@
     <string name="staff_audit_action_listing_approved">Aprobado por el personal</string>
     <string name="staff_audit_action_listing_created">Publicación creada</string>
     <string name="staff_audit_action_listing_deleted">Publicación eliminada</string>
-    <string name="staff_audit_action_listing_expired">Caducado</string>
     <string name="staff_audit_action_listing_published">Publicación publicada</string>
     <string name="staff_audit_action_listing_rejected">Rechazado por el personal</string>
     <string name="staff_audit_action_listing_relisted">Vuelto a publicar</string>
     <string name="staff_audit_action_listing_removed">Eliminado</string>
-    <string name="staff_audit_action_listing_updated">Publicación editada</string>
     <string name="staff_audit_action_listing_warning">Advertencia emitida</string>
-    <string name="staff_audit_action_order_cancelled">Cancelado</string>
     <string name="staff_audit_action_order_chargeback">Contracargo recibido</string>
     <string name="staff_audit_action_order_chargeback_lost">Contracargo admitido</string>
     <string name="staff_audit_action_order_chargeback_won">Contracargo desestimado</string>
     <string name="staff_audit_action_order_completed">Completado</string>
     <string name="staff_audit_action_order_created">Pedido realizado</string>
     <string name="staff_audit_action_order_paid">Pago recibido</string>
-    <string name="staff_audit_action_order_payment_failed">Pago fallido</string>
     <string name="staff_audit_action_order_refunded">Reembolsado</string>
     <string name="staff_audit_action_order_shipped">Enviado</string>
     <string name="staff_audit_action_report_actioned">Reporte gestionado</string>
     <string name="staff_audit_action_report_created">Reportado</string>
     <string name="staff_audit_action_review_created">Reseña enviada</string>
-    <string name="staff_audit_action_review_hide">Reseña oculta</string>
     <string name="staff_audit_action_review_remove">Reseña eliminada</string>
     <string name="staff_audit_action_review_responded">Respuesta publicada</string>
     <string name="staff_audit_action_review_restore">Reseña restaurada</string>
@@ -424,4 +419,13 @@
         <item quantity="one">%1$s venta</item>
         <item quantity="other">%1$s ventas</item>
     </plurals>
+    <string name="staff_audit_reason_listing_removed">Publicación eliminada</string>
+    <string name="staff_config_group_orders">Pedidos</string>
+    <string name="staff_config_group_sellers">Vendedores</string>
+    <string name="staff_sidebar_payments">Pagos</string>
+    <string name="staff_audit_reason_unreachable">Cuenta de Stripe inaccesible</string>
+    <string name="staff_audit_reason_timeout">Periodo de reseñas finalizado</string>
+    <string name="staff_audit_via_seller">Reembolsado por el vendedor</string>
+    <string name="staff_audit_via_instant">Compra inmediata</string>
+    <string name="staff_config_field_dispute_window">Plazo de disputa</string>
 </resources>

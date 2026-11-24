@@ -495,8 +495,6 @@
     <string name="market_seller_connecting">Wird geladen...</string>
     <string name="market_seller_fee_loading">Gebührendetails werden geladen...</string>
     <string name="market_seller_fee_value">%1$s %% pro Verkauf</string>
-    <string name="market_seller_future_controls_body">Weitere Verkäuferkonto-Optionen erscheinen hier, sobald sie verfügbar sind.</string>
-    <string name="market_seller_future_controls_title">Künftige Verkäuferoptionen</string>
     <string name="market_seller_manage_stripe">Stripe verwalten</string>
     <string name="market_seller_open_dashboard">Stripe-Dashboard öffnen</string>
     <string name="market_seller_payments_activate_first">Zuerst Verkäuferkonto aktivieren</string>
@@ -554,27 +552,22 @@
     <string name="market_audit_listing_approved">Vom Team genehmigt</string>
     <string name="market_audit_listing_created">Inserat erstellt</string>
     <string name="market_audit_listing_deleted">Inserat gelöscht</string>
-    <string name="market_audit_listing_expired">Abgelaufen</string>
     <string name="market_audit_listing_published">Inserat veröffentlicht</string>
     <string name="market_audit_listing_rejected">Vom Personal abgelehnt</string>
     <string name="market_audit_listing_relisted">Wieder eingestellt</string>
     <string name="market_audit_listing_removed">Entfernt</string>
-    <string name="market_audit_listing_updated">Inserat bearbeitet</string>
     <string name="market_audit_listing_warning">Verwarnung ausgesprochen</string>
-    <string name="market_audit_order_cancelled">Storniert</string>
     <string name="market_audit_order_chargeback">Rückbuchung erhalten</string>
     <string name="market_audit_order_chargeback_lost">Rückbuchung bestätigt</string>
     <string name="market_audit_order_chargeback_won">Rückbuchung abgewiesen</string>
     <string name="market_audit_order_completed">Abgeschlossen</string>
     <string name="market_audit_order_created">Bestellung aufgegeben</string>
     <string name="market_audit_order_paid">Zahlung erhalten</string>
-    <string name="market_audit_order_payment_failed">Zahlung fehlgeschlagen</string>
     <string name="market_audit_order_refunded">Erstattet</string>
     <string name="market_audit_order_shipped">Versendet</string>
     <string name="market_audit_report_actioned">Meldung bearbeitet</string>
     <string name="market_audit_report_created">Gemeldet</string>
     <string name="market_audit_review_created">Bewertung eingereicht</string>
-    <string name="market_audit_review_hide">Bewertung ausgeblendet</string>
     <string name="market_audit_review_remove">Bewertung entfernt</string>
     <string name="market_audit_review_responded">Antwort veröffentlicht</string>
     <string name="market_audit_review_restore">Bewertung wiederhergestellt</string>
@@ -636,4 +629,6 @@
         <item quantity="other">(%1$s Bewertungen)</item>
     </plurals>
     <string name="market_audit_other">Sonstige Aktivität</string>
+    <string name="market_profile_listings_section">Anzeigen</string>
+    <string name="market_editor_asset_too_large">%1$s ist zu gross. Eine Datei darf höchstens %2$s gross sein.</string>
 </resources>

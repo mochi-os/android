@@ -80,27 +80,22 @@
     <string name="staff_audit_action_listing_approved">Goedgekeurd door personeel</string>
     <string name="staff_audit_action_listing_created">Advertentie aangemaakt</string>
     <string name="staff_audit_action_listing_deleted">Advertentie verwijderd</string>
-    <string name="staff_audit_action_listing_expired">Verlopen</string>
     <string name="staff_audit_action_listing_published">Advertentie gepubliceerd</string>
     <string name="staff_audit_action_listing_rejected">Afgewezen door staff</string>
     <string name="staff_audit_action_listing_relisted">Opnieuw aangeboden</string>
     <string name="staff_audit_action_listing_removed">Verwijderd</string>
-    <string name="staff_audit_action_listing_updated">Advertentie bewerkt</string>
     <string name="staff_audit_action_listing_warning">Waarschuwing gegeven</string>
-    <string name="staff_audit_action_order_cancelled">Geannuleerd</string>
     <string name="staff_audit_action_order_chargeback">Chargeback ontvangen</string>
     <string name="staff_audit_action_order_chargeback_lost">Chargeback toegewezen</string>
     <string name="staff_audit_action_order_chargeback_won">Chargeback afgewezen</string>
     <string name="staff_audit_action_order_completed">Voltooid</string>
     <string name="staff_audit_action_order_created">Bestelling geplaatst</string>
     <string name="staff_audit_action_order_paid">Betaling ontvangen</string>
-    <string name="staff_audit_action_order_payment_failed">Betaling mislukt</string>
     <string name="staff_audit_action_order_refunded">Terugbetaald</string>
     <string name="staff_audit_action_order_shipped">Verzonden</string>
     <string name="staff_audit_action_report_actioned">Rapport behandeld</string>
     <string name="staff_audit_action_report_created">Gerapporteerd</string>
     <string name="staff_audit_action_review_created">Review ingediend</string>
-    <string name="staff_audit_action_review_hide">Review verborgen</string>
     <string name="staff_audit_action_review_remove">Review verwijderd</string>
     <string name="staff_audit_action_review_responded">Reactie geplaatst</string>
     <string name="staff_audit_action_review_restore">Review hersteld</string>
@@ -411,4 +406,13 @@
         <item quantity="one">%1$s verkoop</item>
         <item quantity="other">%1$s verkopen</item>
     </plurals>
+    <string name="staff_audit_reason_unreachable">Stripe-account onbereikbaar</string>
+    <string name="staff_audit_reason_listing_removed">Advertentie verwijderd</string>
+    <string name="staff_audit_reason_timeout">Reviewperiode beëindigd</string>
+    <string name="staff_audit_via_seller">Terugbetaald door de verkoper</string>
+    <string name="staff_audit_via_instant">Directe aankoop</string>
+    <string name="staff_config_group_orders">Bestellingen</string>
+    <string name="staff_config_group_sellers">Verkopers</string>
+    <string name="staff_config_field_dispute_window">Geschiltermijn</string>
+    <string name="staff_sidebar_payments">Betalingen</string>
 </resources>

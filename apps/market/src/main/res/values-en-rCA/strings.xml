@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="market_chargeback_reason_debit_not_authorized">Debit not authorized</string>
-    <string name="market_chargeback_reason_unrecognized">Unrecognized charge</string>
-    <string name="market_refund_reason_unauthorised">Unauthorized</string>
     <string name="market_checkout_address_postcode">Postal code</string>
     <string name="market_checkout_address_region">Province</string>
     <string name="market_editor_zone_region">Province</string>

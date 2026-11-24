@@ -26,10 +26,20 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.model.Asset
 import org.mochios.market.model.AssetDownload
+import org.mochios.market.R
 import org.mochios.market.model.AuditEvent
+import org.mochios.market.model.Dispute
 import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
+
+/**
+ * Whether the buyer may withdraw [dispute]: one they opened, while it is open
+ * or answered. A chargeback is the bank's, and the Comptroller refuses a
+ * decided dispute.
+ */
+internal fun withdrawable(dispute: Dispute): Boolean =
+    dispute.opener != "stripe" && (dispute.status == "open" || dispute.status == "responded")
 
 data class PurchaseDetailUiState(
     val isLoading: Boolean = true,
@@ -117,6 +127,27 @@ class PurchaseDetailViewModel @Inject constructor(
                 // or every other action on the order stays disabled.
                 load()
                 _uiState.value = _uiState.value.copy(submitting = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(submitting = false)
+                _events.tryEmit(PurchaseDetailEvent.Toast(e.toMochiError().userMessage()))
+            }
+        }
+    }
+
+    /**
+     * Withdraw the buyer's own dispute: it closes for the seller and the order
+     * goes back where the dispute found it, so the order is read again.
+     */
+    fun withdrawDispute() {
+        val dispute = _uiState.value.detail?.dispute ?: return
+        if (!withdrawable(dispute)) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(submitting = true)
+            try {
+                repository.withdrawDispute(dispute.id)
+                load()
+                _uiState.value = _uiState.value.copy(submitting = false)
+                _events.tryEmit(PurchaseDetailEvent.Toast(context.getString(R.string.market_purchase_dispute_withdrawn)))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(submitting = false)
                 _events.tryEmit(PurchaseDetailEvent.Toast(e.toMochiError().userMessage()))

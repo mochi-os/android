@@ -61,6 +61,7 @@ import androidx.navigation.NavController
 import com.google.gson.Gson
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -90,6 +91,7 @@ fun EditListingScreen(
     val assetUpload by viewModel.assetUpload.collectAsState()
     val snackbar = remember { SnackbarHostState() }
     val resources = LocalResources.current
+    val format = LocalFormat.current
 
     // Surface ViewModel-emitted events onto the snackbar host and handle the
     // terminal events (deleted / published) by navigating back.
@@ -102,6 +104,13 @@ fun EditListingScreen(
                 is EditListingEvent.Published -> navController.popBackStack()
                 is EditListingEvent.TitleRequired ->
                     snackbar.showSnackbar(resources.getString(R.string.market_editor_title_required))
+                is EditListingEvent.TooLarge -> snackbar.showSnackbar(
+                    resources.getString(
+                        R.string.market_editor_asset_too_large,
+                        event.name,
+                        format.formatFileSize(ASSET_SIZE_MAXIMUM),
+                    ),
+                )
             }
         }
     }

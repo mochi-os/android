@@ -65,8 +65,8 @@ class SellerSettingsViewModel @Inject constructor(
 
     init {
         loadFees()
-        // Stripe's OAuth return arrives as this route's arguments. Its code
-        // and state are single-use, so it is taken out of the handle, which
+        // Stripe's OAuth return arrives as this route's arguments. Its state
+        // is single-use, so it is taken out of the handle, which
         // outlives a rotation and the process, and completed here once; the
         // completion reads the account after it.
         val stripeReturn = StripeOauthReturn.from(savedStateHandle)
@@ -168,7 +168,6 @@ class SellerSettingsViewModel @Inject constructor(
             _state.value = _state.value.copy(connecting = true)
             try {
                 val result = repo.completeStripeOauth(
-                    code = oauth.code,
                     state = oauth.state,
                     error = oauth.error,
                     errorDescription = oauth.errorDescription,
@@ -210,24 +209,23 @@ class SellerSettingsViewModel @Inject constructor(
 }
 
 /**
- * Stripe's raw OAuth return, as MainActivity hands it over from
+ * A Stripe OAuth return, as MainActivity hands it over from
  * `mochi://market/stripe/oauth` in the seller settings route's arguments;
- * absent when the screen opened normally.
+ * absent when the screen opened normally. The Comptroller keeps Stripe's code
+ * and hands the ceremony back with its state alone.
  */
 data class StripeOauthReturn(
-    val code: String?,
     val state: String?,
     val error: String?,
     val errorDescription: String?,
 ) {
     companion object {
         /** The route arguments a return arrives in. */
-        val KEYS = listOf("code", "state", "error", "error_description")
+        val KEYS = listOf("state", "error", "error_description")
 
         fun from(handle: SavedStateHandle): StripeOauthReturn? {
             val state = handle.get<String>("state")?.takeIf { it.isNotBlank() } ?: return null
             return StripeOauthReturn(
-                code = handle.get<String>("code"),
                 state = state,
                 error = handle.get<String>("error"),
                 errorDescription = handle.get<String>("error_description"),

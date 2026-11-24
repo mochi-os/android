@@ -55,7 +55,9 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -79,6 +81,7 @@ import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.dialog.RequestRefundDialog
 import org.mochios.market.ui.selling.deliveryLabel
+import org.mochios.market.ui.selling.disputeWithdrawn
 
 @Composable
 fun PurchaseDetailScreen(
@@ -93,6 +96,7 @@ fun PurchaseDetailScreen(
     var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     val scope = rememberCoroutineScope()
     var refundDialogOpen by remember { mutableStateOf(false) }
+    var withdrawDialogOpen by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
@@ -168,7 +172,15 @@ fun PurchaseDetailScreen(
                         },
                         onRequestRefund = { refundDialogOpen = true },
                     )
-                    detail.dispute?.let { DisputeCard(it, detail.order.total, detail.order.currency ?: Currency.GBP) }
+                    detail.dispute?.let {
+                        DisputeCard(
+                            dispute = it,
+                            orderTotal = detail.order.total,
+                            currency = detail.order.currency ?: Currency.GBP,
+                            submitting = state.submitting,
+                            onWithdraw = { withdrawDialogOpen = true },
+                        )
+                    }
                     if (detail.canReview) {
                         WriteReviewForm(
                             submitting = state.submitting,
@@ -183,6 +195,21 @@ fun PurchaseDetailScreen(
                 }
             }
         }
+    }
+
+    if (withdrawDialogOpen && detail?.dispute != null) {
+        MochiAlertDialog(
+            onDismissRequest = { withdrawDialogOpen = false },
+            title = stringResource(R.string.market_purchase_dispute_withdraw_title),
+            text = stringResource(R.string.market_purchase_dispute_withdraw_body),
+            confirmText = stringResource(R.string.market_purchase_dispute_withdraw),
+            onConfirm = {
+                withdrawDialogOpen = false
+                viewModel.withdrawDispute()
+            },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
     }
 
     if (refundDialogOpen && detail != null) {
@@ -403,7 +430,13 @@ private fun PrimaryActionsCard(
 }
 
 @Composable
-private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) {
+private fun DisputeCard(
+    dispute: Dispute,
+    orderTotal: Long,
+    currency: Currency,
+    submitting: Boolean,
+    onWithdraw: () -> Unit,
+) {
     val isChargeback = dispute.opener == "stripe"
     val reasonLabel = disputeReasonLabel(dispute.reason, dispute.opener)
     MochiCard(shape = RoundedCornerShape(10.dp)) {
@@ -462,6 +495,24 @@ private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) 
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Text(dispute.resolution, style = MaterialTheme.typography.bodyMedium)
+            }
+            if (disputeWithdrawn(dispute)) {
+                Text(
+                    stringResource(R.string.market_dispute_withdrawn_by_buyer),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            // The buyer may close their own request while it is open or
+            // answered; a chargeback is the bank's.
+            if (withdrawable(dispute)) {
+                MochiOutlinedButton(
+                    onClick = onWithdraw,
+                    enabled = !submitting,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Text(stringResource(R.string.market_purchase_dispute_withdraw))
+                }
             }
         }
     }

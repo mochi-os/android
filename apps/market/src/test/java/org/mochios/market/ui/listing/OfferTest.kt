@@ -83,12 +83,30 @@ class OfferTest {
     }
 
     @Test
-    fun `files are downloadable by the seller, a paying buyer and an active subscriber only`() {
+    fun `files are downloadable by the seller, a paying buyer and an entitled subscriber only`() {
         assertTrue(detail().downloadable("seller"))
         assertFalse(detail().downloadable("buyer"))
         assertFalse(detail(order = MyOrder("o1", "pending")).downloadable("buyer"))
         assertTrue(detail(order = MyOrder("o1", "paid")).downloadable("buyer"))
-        assertTrue(detail(subscription = MySubscription("s1", "active")).downloadable("buyer"))
+        assertTrue(detail(subscription = MySubscription("s1", "active", entitled = true)).downloadable("buyer"))
         assertFalse(detail(subscription = MySubscription("s1", "paused")).downloadable("buyer"))
+    }
+
+    // The Comptroller grants a subscription's files while it is live and paid
+    // through a date still to come, and answers that as entitled.
+    @Test
+    fun `a subscriber's files follow the Comptroller's entitlement, not the status`() {
+        assertFalse(detail(subscription = MySubscription("s1", "active", entitled = false)).downloadable("buyer"))
+        assertTrue(detail(subscription = MySubscription("s1", "past_due", entitled = true)).downloadable("buyer"))
+    }
+
+    @Test
+    fun `entitled is read from the listing's answer`() {
+        val response = com.google.gson.Gson().fromJson(
+            """{"listing": {"id": "l1"}, "my_subscription": {"id": "s1", "status": "past_due", "entitled": true}}""",
+            ListingDetailResponse::class.java,
+        )
+        assertTrue(response.mySubscription!!.entitled)
+        assertTrue(response.downloadable("buyer"))
     }
 }

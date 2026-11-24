@@ -93,7 +93,7 @@ fun ReportActionDialog(
                 if (!readOnly) {
                     LabeledSelectField(
                         label = stringResource(R.string.staff_reports_action_label),
-                        options = reportActionOptions(),
+                        options = reportActionOptions(report),
                         selected = action,
                         onSelect = { value -> action = value },
                     )
@@ -246,10 +246,25 @@ internal fun ConversationSection(
 }
 
 @Composable
-private fun reportActionOptions(): List<Pair<String, String>> = listOf(
-    "dismiss" to stringResource(R.string.staff_reports_action_dismiss),
-    "warn" to stringResource(R.string.staff_reports_action_warn),
-    "remove" to stringResource(R.string.staff_reports_action_remove),
-    "suspend" to stringResource(R.string.staff_reports_action_suspend),
-    "ban" to stringResource(R.string.staff_reports_action_ban),
-)
+private fun reportActionOptions(report: Report): List<Pair<String, String>> =
+    reportActions(report).map { action ->
+        action to stringResource(
+            when (action) {
+                "dismiss" -> R.string.staff_reports_action_dismiss
+                "warn" -> R.string.staff_reports_action_warn
+                "remove" -> R.string.staff_reports_action_remove
+                "suspend" -> R.string.staff_reports_action_suspend
+                else -> R.string.staff_reports_action_ban
+            },
+        )
+    }
+
+/**
+ * The actions staff may take on [report]. Remove is offered only on a report
+ * of a listing the server still has: a user report has no listing to remove,
+ * and the Comptroller refuses Remove for one.
+ */
+internal fun reportActions(report: Report): List<String> =
+    listOf("dismiss", "warn", "remove", "suspend", "ban").filter { action ->
+        action != "remove" || (report.type == "listing" && report.listing != null)
+    }

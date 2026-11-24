@@ -48,6 +48,7 @@ import org.mochios.staff.ui.listings.ListingsScreen
 import org.mochios.staff.ui.listings.ListingsViewModel
 import org.mochios.staff.ui.moderation.ModerationLogScreen
 import org.mochios.staff.ui.moderation.ModerationLogViewModel
+import org.mochios.staff.ui.payments.PaymentsScreen
 import org.mochios.staff.ui.reports.ReportsScreen
 import org.mochios.staff.ui.reports.ReportsViewModel
 import org.mochios.staff.ui.reviews.ReviewsScreen
@@ -67,6 +68,7 @@ object StaffApp {
     const val MODERATION = "staff/moderation"
     const val REPORTS = "staff/reports"
     const val DISPUTES = "staff/disputes"
+    const val PAYMENTS = "staff/payments"
     const val APPEALS = "staff/appeals"
     const val REVIEWS = "staff/reviews"
     const val CATEGORIES = "staff/categories"
@@ -80,7 +82,7 @@ object StaffApp {
     internal const val MODERATION_ROUTE = "$MODERATION?${ModerationLogViewModel.KEY_LISTING}={${ModerationLogViewModel.KEY_LISTING}}"
 
     /** The screens the drawer opens, other than the dashboard. */
-    private val sections = listOf(LISTINGS, APPEALS, REPORTS, DISPUTES, REVIEWS, MODERATION, CATEGORIES, ACCOUNTS, TEAM, CONFIG)
+    private val sections = listOf(LISTINGS, APPEALS, REPORTS, DISPUTES, REVIEWS, MODERATION, CATEGORIES, ACCOUNTS, PAYMENTS, TEAM, CONFIG)
 
     /** Route of the form that edits the category [id]. */
     fun categoryEdit(id: String) = "staff/categories/edit/${Uri.encode(id)}"
@@ -219,6 +221,11 @@ fun NavGraphBuilder.staffNavGraph(
     composable(StaffApp.DISPUTES) {
         StaffLayout(navController, StaffApp.DISPUTES, R.string.staff_sidebar_disputes) {
             DisputesScreen()
+        }
+    }
+    composable(StaffApp.PAYMENTS) {
+        StaffLayout(navController, StaffApp.PAYMENTS, R.string.staff_sidebar_payments) {
+            PaymentsScreen(admin = LocalStaffMe.current?.role == "admin")
         }
     }
     composable(StaffApp.APPEALS) {

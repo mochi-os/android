@@ -38,7 +38,9 @@ fun PriceDisplay(
     ) {
         when (listing.pricing) {
             PricingModel.AUCTION -> {
-                val hasBids = auction != null && auction.bids > 0
+                // The server's own rule, a current bid above 0; the count of
+                // bids is for display only.
+                val hasBids = auction != null && auction.bidden
                 val headlineAmount = when {
                     hasBids -> auction!!.bid
                     // Not auction.reserve: the server redacts it to 0 for
@@ -94,12 +96,14 @@ fun PriceDisplay(
             }
             PricingModel.SUBSCRIPTION -> {
                 val amount = formatPrice(listing.price, currency)
-                val key = when (listing.interval) {
-                    org.mochios.market.model.Interval.YEARLY -> R.string.market_price_per_year
-                    else -> R.string.market_price_per_month
-                }
+                // A row that does not say its period (a profile's listing
+                // card) shows the price alone rather than guess one.
                 Text(
-                    text = stringResource(key, amount),
+                    text = when (listing.interval) {
+                        org.mochios.market.model.Interval.YEARLY -> stringResource(R.string.market_price_per_year, amount)
+                        org.mochios.market.model.Interval.MONTHLY -> stringResource(R.string.market_price_per_month, amount)
+                        null -> amount
+                    },
                     style = style,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
