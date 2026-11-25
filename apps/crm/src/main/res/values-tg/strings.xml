@@ -18,6 +18,10 @@
     <string name="crm_settings">Танзимот</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Содиротро нигоҳ доштан нашуд</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Бе %1$s замима содир шуд</item>
+        <item quantity="other">Бе %1$s замима содир шуд</item>
+    </plurals>
     <string name="crm_sort_rank">Дастӣ</string>
     <string name="crm_sort_created">Эҷодшуда</string>
     <string name="crm_sort_updated">Навсозӣ шуд</string>

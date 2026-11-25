@@ -18,6 +18,10 @@
     <string name="crm_settings">Mipangilio</string>
     <string name="crm_design">Muundo</string>
     <string name="crm_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Imehamishwa bila kiambatisho %1$s</item>
+        <item quantity="other">Imehamishwa bila viambatisho %1$s</item>
+    </plurals>
     <string name="crm_sort_rank">Kwa mkono</string>
     <string name="crm_sort_created">Imeundwa</string>
     <string name="crm_sort_updated">Imesasishwa</string>

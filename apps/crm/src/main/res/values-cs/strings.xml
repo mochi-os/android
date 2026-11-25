@@ -18,6 +18,11 @@
     <string name="crm_settings">Nastavení</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Export se nepodařilo uložit</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exportováno bez %1$s přílohy</item>
+        <item quantity="few">Exportováno bez %1$s příloh</item>
+        <item quantity="other">Exportováno bez %1$s příloh</item>
+    </plurals>
     <string name="crm_sort_rank">Ručně</string>
     <string name="crm_sort_created">Vytvořeno</string>
     <string name="crm_sort_updated">Aktualizováno</string>

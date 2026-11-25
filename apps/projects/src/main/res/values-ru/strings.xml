@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">Или загрузите файл</string>
     <string name="projects_export">Экспортировать данные</string>
     <string name="projects_export_failed">Не удалось сохранить экспорт</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Экспортировано без %1$s вложения</item>
+        <item quantity="few">Экспортировано без %1$s вложений</item>
+        <item quantity="many">Экспортировано без %1$s вложений</item>
+        <item quantity="other">Экспортировано без %1$s вложения</item>
+    </plurals>
     <string name="projects_export_saved">Данные проекта сохранены</string>
     <string name="projects_exporting">Подготовка экспорта…</string>
     <string name="projects_board_add_column">Добавить колонку</string>

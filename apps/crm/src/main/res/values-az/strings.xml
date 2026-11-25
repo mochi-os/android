@@ -18,6 +18,10 @@
     <string name="crm_settings">Parametrlər</string>
     <string name="crm_design">Dizayn</string>
     <string name="crm_export_failed">İxrac saxlanıla bilmədi</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s qoşma olmadan ixrac edildi</item>
+        <item quantity="other">%1$s qoşma olmadan ixrac edildi</item>
+    </plurals>
     <string name="crm_sort_rank">Əl ilə</string>
     <string name="crm_sort_created">Yaradıldı</string>
     <string name="crm_sort_updated">Yeniləndi</string>

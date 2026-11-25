@@ -18,6 +18,10 @@
     <string name="crm_settings">Stillingar</string>
     <string name="crm_design">Hönnun</string>
     <string name="crm_export_failed">Ekki tókst að vista útflutninginn</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Flutt út án %1$s viðhengis</item>
+        <item quantity="other">Flutt út án %1$s viðhengja</item>
+    </plurals>
     <string name="crm_sort_rank">Handvirkt</string>
     <string name="crm_sort_created">Búið til</string>
     <string name="crm_sort_updated">Uppfært</string>

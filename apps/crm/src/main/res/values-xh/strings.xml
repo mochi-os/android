@@ -18,6 +18,10 @@
     <string name="crm_settings">Iisetingi</string>
     <string name="crm_design">Uyilo</string>
     <string name="crm_export_failed">Ayikwazanga ukugcinwa into ethunyelwe</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Ikhutshwe ngaphandle kwesiqhotyoshelwa esi-%1$s</item>
+        <item quantity="other">Ikhutshwe ngaphandle kweziqhotyoshelwa ezi-%1$s</item>
+    </plurals>
     <string name="crm_sort_rank">Ngesandla</string>
     <string name="crm_sort_created">Yenziwe</string>
     <string name="crm_sort_updated">Kuhlaziyiwe</string>

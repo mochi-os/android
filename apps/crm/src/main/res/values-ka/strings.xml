@@ -18,6 +18,10 @@
     <string name="crm_settings">პარამეტრები</string>
     <string name="crm_design">დიზაინი</string>
     <string name="crm_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">ექსპორტირდა %1$s დანართის გარეშე</item>
+        <item quantity="other">ექსპორტირდა %1$s დანართის გარეშე</item>
+    </plurals>
     <string name="crm_sort_rank">ხელით</string>
     <string name="crm_sort_created">შექმნილია</string>
     <string name="crm_sort_updated">განახლებულია</string>

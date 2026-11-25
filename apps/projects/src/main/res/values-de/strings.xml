@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Oder eine Datei hochladen</string>
     <string name="projects_export">Daten exportieren</string>
     <string name="projects_export_failed">Der Export konnte nicht gespeichert werden</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Ohne %1$s Anhang exportiert</item>
+        <item quantity="other">Ohne %1$s Anhänge exportiert</item>
+    </plurals>
     <string name="projects_export_saved">Projektdaten gespeichert</string>
     <string name="projects_exporting">Export wird vorbereitet…</string>
     <string name="projects_board_add_column">Spalte hinzufügen</string>

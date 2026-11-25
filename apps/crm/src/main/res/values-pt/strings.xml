@@ -18,6 +18,10 @@
     <string name="crm_settings">Definições</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Não foi possível guardar a exportação</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exportado sem %1$s anexo</item>
+        <item quantity="other">Exportado sem %1$s anexos</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Criado</string>
     <string name="crm_sort_updated">Atualizado</string>

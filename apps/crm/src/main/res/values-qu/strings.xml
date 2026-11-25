@@ -18,6 +18,10 @@
     <string name="crm_settings">Wakichiykuna</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Exportasqata mana waqaychayta atikurqanchu</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s adjunto mana kaspa exportasqa</item>
+        <item quantity="other">%1$s adjuntokuna mana kaspa exportasqa</item>
+    </plurals>
     <string name="crm_sort_rank">Makiwan</string>
     <string name="crm_sort_created">Kamarisqa</string>
     <string name="crm_sort_updated">Musuqchasqa</string>

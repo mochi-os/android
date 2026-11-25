@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Edo igo fitxategi bat</string>
     <string name="projects_export">Esportatu datuak</string>
     <string name="projects_export_failed">Ezin izan da esportazioa gorde</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s eranskinik gabe esportatu da</item>
+        <item quantity="other">%1$s eranskinik gabe esportatu da</item>
+    </plurals>
     <string name="projects_export_saved">Proiektuaren datuak gordeta</string>
     <string name="projects_exporting">Esportazioa prestatzen…</string>
     <string name="projects_board_add_column">Gehitu zutabea</string>

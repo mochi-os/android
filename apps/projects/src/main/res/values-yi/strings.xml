@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">אָדער אַרויפֿלאָדן אַ טעקע</string>
     <string name="projects_export">עקספּאָרטירן דאַטן</string>
     <string name="projects_export_failed">מ׳האָט נישט געקענט אויפֿהיטן דעם עקספּאָרט</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">עקספּאָרטירט אָן %1$s בײַלאַגע</item>
+        <item quantity="other">עקספּאָרטירט אָן %1$s בײַלאַגעס</item>
+    </plurals>
     <string name="projects_export_saved">פּראָיעקט־דאַטן געשפּיכלערט</string>
     <string name="projects_exporting">גרייטן דעם עקספּאָרט…</string>
     <string name="projects_board_add_column">צולייגן זײַל</string>

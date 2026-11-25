@@ -18,6 +18,10 @@
     <string name="crm_settings">Настройки</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Експортът не можа да се запази</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Експортирано без %1$s прикачен файл</item>
+        <item quantity="other">Експортирано без %1$s прикачени файла</item>
+    </plurals>
     <string name="crm_sort_rank">Ръчно</string>
     <string name="crm_sort_created">Създадено</string>
     <string name="crm_sort_updated">Обновено</string>

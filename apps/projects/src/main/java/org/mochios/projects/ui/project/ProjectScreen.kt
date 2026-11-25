@@ -73,6 +73,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -88,6 +89,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.launcher.Shortcuts
@@ -508,6 +510,11 @@ private fun ProjectContent(
 
     val exportSaved = stringResource(R.string.projects_export_saved)
     val exportFailed = stringResource(R.string.projects_export_failed)
+    val exportMissing = pluralStringResource(
+        R.plurals.projects_export_missing,
+        uiState.exportMissing,
+        LocalFormat.current.formatNumber(uiState.exportMissing),
+    )
     // The picker only reports where the file goes; the ViewModel writes it.
     val saveExport = rememberFileSaveLauncher(MIME_ZIP) { uri ->
         if (uri != null) viewModel.writeExportTo(uri) else viewModel.cancelExport()
@@ -522,7 +529,11 @@ private fun ProjectContent(
     LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
         val saved = uiState.savedExport
         if (saved != null) {
-            Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            if (uiState.exportMissing > 0) {
+                Toast.makeText(context, exportMissing, Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            }
             shareExportFile(context, saved)
             viewModel.clearExportResult()
         } else if (uiState.exportFailed) {

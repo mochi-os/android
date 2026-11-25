@@ -7,8 +7,11 @@ package org.mochios.crm.repository
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.auth.SessionManager
 import java.util.concurrent.atomic.AtomicInteger
 import android.content.Context
@@ -104,6 +107,27 @@ class CrmsRepository @Inject constructor(
         objectsCache.clear()
         watchedCache.clear()
     }
+
+    /**
+     * Where a CRM's moves and reparents wait their turn: a scope of the
+     * repository's own, so those still waiting when the board closes are
+     * sent all the same, and on the main thread, where the board that made
+     * them reads what each answers.
+     */
+    private val writes = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+
+    /** Each CRM's turn to write, by CRM. */
+    private val turns = ConcurrentHashMap<String, Mutex>()
+
+    /**
+     * Runs [write] once every write [queue]d for [crmId] before it has run,
+     * outliving the screen that asked for it. Sent at once, a later drag
+     * could reach the server first, and a drop beside a card whose own move
+     * had not landed would go beside where it was; a board opened again on
+     * the CRM waits behind those the closed one left.
+     */
+    fun queue(crmId: String, write: suspend () -> Unit): Job =
+        writes.launch { turns.computeIfAbsent(crmId) { Mutex() }.withLock { write() } }
 
     fun getCachedCrmInfo(crmId: String): CrmDetails? {
         val (details, ts) = crmInfoCache[crmId] ?: return null

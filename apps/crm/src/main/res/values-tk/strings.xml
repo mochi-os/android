@@ -18,6 +18,10 @@
     <string name="crm_settings">Sazlamalar</string>
     <string name="crm_design">Dizaýn</string>
     <string name="crm_export_failed">Eksporty saklap bolmady</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s goşundysyz eksport edildi</item>
+        <item quantity="other">%1$s goşundysyz eksport edildi</item>
+    </plurals>
     <string name="crm_sort_rank">El bilen</string>
     <string name="crm_sort_created">Döredildi</string>
     <string name="crm_sort_updated">Täzelendi</string>

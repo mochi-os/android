@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Ose ngarko një skedar</string>
     <string name="projects_export">Eksporto të dhënat</string>
     <string name="projects_export_failed">Eksporti nuk u ruajt dot</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">U eksportua pa %1$s bashkëngjitje</item>
+        <item quantity="other">U eksportua pa %1$s bashkëngjitje</item>
+    </plurals>
     <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
     <string name="projects_exporting">Po përgatitet eksporti…</string>
     <string name="projects_board_add_column">Shto kolonë</string>

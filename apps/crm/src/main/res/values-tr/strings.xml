@@ -18,6 +18,10 @@
     <string name="crm_settings">Ayarlar</string>
     <string name="crm_design">Tasarım</string>
     <string name="crm_export_failed">Dışa aktarma kaydedilemedi</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s ek olmadan dışa aktarıldı</item>
+        <item quantity="other">%1$s ek olmadan dışa aktarıldı</item>
+    </plurals>
     <string name="crm_sort_rank">Elle</string>
     <string name="crm_sort_created">Oluşturuldu</string>
     <string name="crm_sort_updated">Güncellendi</string>

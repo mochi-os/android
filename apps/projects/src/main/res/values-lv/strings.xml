@@ -311,6 +311,11 @@
     <string name="projects_design_or_upload_json">Vai augšupielādējiet failu</string>
     <string name="projects_export">Eksportēt datus</string>
     <string name="projects_export_failed">Neizdevās saglabāt eksportu</string>
+    <plurals name="projects_export_missing">
+        <item quantity="zero">Eksportēts bez %1$s pielikumiem</item>
+        <item quantity="one">Eksportēts bez %1$s pielikuma</item>
+        <item quantity="other">Eksportēts bez %1$s pielikumiem</item>
+    </plurals>
     <string name="projects_export_saved">Projekta dati saglabāti</string>
     <string name="projects_exporting">Sagatavo eksportu…</string>
     <string name="projects_board_add_column">Pievienot kolonnu</string>

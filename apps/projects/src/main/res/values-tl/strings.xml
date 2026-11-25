@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">O mag-upload ng file</string>
     <string name="projects_export">I-export ang data</string>
     <string name="projects_export_failed">Hindi ma-save ang export</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Na-export nang walang %1$s attachment</item>
+        <item quantity="other">Na-export nang walang %1$s attachment</item>
+    </plurals>
     <string name="projects_export_saved">Na-save ang data ng proyekto</string>
     <string name="projects_exporting">Inihahanda ang export…</string>
     <string name="projects_board_add_column">Magdagdag ng column</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Немесе файл жүктеңіз</string>
     <string name="projects_export">Деректерді экспорттау</string>
     <string name="projects_export_failed">Экспортты сақтау мүмкін болмады</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s тіркемесіз экспортталды</item>
+        <item quantity="other">%1$s тіркемесіз экспортталды</item>
+    </plurals>
     <string name="projects_export_saved">Жоба деректері сақталды</string>
     <string name="projects_exporting">Экспорт дайындалуда…</string>
     <string name="projects_board_add_column">Баған қосу</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Veya bir dosya yükleyin</string>
     <string name="projects_export">Verileri dışa aktar</string>
     <string name="projects_export_failed">Dışa aktarma kaydedilemedi</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s ek olmadan dışa aktarıldı</item>
+        <item quantity="other">%1$s ek olmadan dışa aktarıldı</item>
+    </plurals>
     <string name="projects_export_saved">Proje verileri kaydedildi</string>
     <string name="projects_exporting">Dışa aktarma hazırlanıyor…</string>
     <string name="projects_board_add_column">Sütun ekle</string>

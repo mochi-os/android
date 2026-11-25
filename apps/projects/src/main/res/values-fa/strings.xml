@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">یا یک فایل بارگذاری کنید</string>
     <string name="projects_export">خروجی داده‌ها</string>
     <string name="projects_export_failed">ذخیره خروجی ممکن نشد</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">خروجی بدون %1$s پیوست گرفته شد</item>
+        <item quantity="other">خروجی بدون %1$s پیوست گرفته شد</item>
+    </plurals>
     <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
     <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>
     <string name="projects_board_add_column">افزودن ستون</string>

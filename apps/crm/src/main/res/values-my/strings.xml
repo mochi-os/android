@@ -18,6 +18,9 @@
     <string name="crm_settings">ဆက်တင်များ</string>
     <string name="crm_design">ဒီဇိုင်း</string>
     <string name="crm_export_failed">တင်ပို့မှုကို သိမ်းဆည်း၍မရပါ</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">ပူးတွဲဖိုင် %1$s ခု မပါဘဲ ထုတ်ယူပြီးပါပြီ</item>
+    </plurals>
     <string name="crm_sort_rank">ကိုယ်တိုင်</string>
     <string name="crm_sort_created">ဖန်တီးပြီး</string>
     <string name="crm_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>

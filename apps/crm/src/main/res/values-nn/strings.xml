@@ -18,6 +18,10 @@
     <string name="crm_settings">Innstillingar</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Kunne ikkje lagra eksporten</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Eksportert utan %1$s vedlegg</item>
+        <item quantity="other">Eksportert utan %1$s vedlegg</item>
+    </plurals>
     <string name="crm_sort_rank">Manuell</string>
     <string name="crm_sort_created">Oppretta</string>
     <string name="crm_sort_updated">Oppdatert</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Tai lataa tiedosto</string>
     <string name="projects_export">Vie tiedot</string>
     <string name="projects_export_failed">Vientiä ei voitu tallentaa</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Viety ilman %1$s liitettä</item>
+        <item quantity="other">Viety ilman %1$s liitettä</item>
+    </plurals>
     <string name="projects_export_saved">Projektin tiedot tallennettu</string>
     <string name="projects_exporting">Valmistellaan vientiä…</string>
     <string name="projects_board_add_column">Lisää sarake</string>

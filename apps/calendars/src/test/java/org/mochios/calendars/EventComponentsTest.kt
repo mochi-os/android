@@ -26,6 +26,7 @@ import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.duplicate
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
+import org.mochios.calendars.ui.editor.matches
 import org.mochios.calendars.ui.editor.moved
 import org.mochios.calendars.ui.editor.named
 import org.mochios.calendars.ui.editor.original
@@ -34,6 +35,13 @@ import org.mochios.calendars.ui.editor.truncated
 import org.mochios.calendars.ui.editor.moveOccurrence
 import org.mochios.calendars.ui.editor.single
 import org.mochios.calendars.ui.editor.written
+import org.mochios.calendars.ui.editor.advanced
+import org.mochios.calendars.ui.editor.instant
+import org.mochios.calendars.ui.editor.picked
+import org.mochios.calendars.model.Hours
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.ZoneOffset
 
 /**
  * The tree the editor sends: what "This event" and "All events" each change,
@@ -635,15 +643,25 @@ class EventComponentsTest {
     }
 
     @Test
-    fun `reading no TZID at all means the user's zone`() {
-        val component = EventComponent(
+    fun `reading a start in UTC keeps UTC, and one with no zone at all the user's`() {
+        val utc = EventComponent(
             name = "VEVENT",
             properties = listOf(
                 property("DTSTART", "20260922T090000Z"),
                 property("DTEND", "20260922T100000Z"),
             ),
         )
-        assertEquals(Zone("Pacific/Auckland", "Pacific/Auckland"), written(component, "Pacific/Auckland"))
+        val floating = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260922T090000"),
+                property("DTEND", "20260922T100000"),
+            ),
+        )
+        assertEquals(
+            listOf(Zone(CalendarsMapping.UTC, CalendarsMapping.UTC), Zone("Pacific/Auckland", "Pacific/Auckland")),
+            listOf(written(utc, "Pacific/Auckland"), written(floating, "Pacific/Auckland")),
+        )
     }
 
     @Test
@@ -935,5 +953,451 @@ class EventComponentsTest {
         val tree = components(form, spring("20260320"), Scope.ALL, LONDON)
         assertEquals("THE POINT: three days on at 10:00, not at 09:00", "20260323T100000", tree[0].value("DTSTART"))
         movedOnThreeDays(tree)
+    }
+
+    // ---- an hour the clocks read twice or skip ----
+
+    /** The instant [time], as `yyyyMMdd'T'HHmmss`, reads on the clock in [zone]. */
+    private fun at(time: String, zone: String) =
+        java.time.LocalDateTime.parse(time, java.time.format.DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss"))
+            .atZone(java.time.ZoneId.of(zone)).toEpochSecond()
+
+    @Test
+    fun `a date moved into the hour the clocks read twice falls where the server places the series' own occurrence`() {
+        // A daily London series at 01:30 from Friday 25 October 2024, whose
+        // exclusion of Saturday's, written in UTC, and a date added at the
+        // same instant, written in New York, move with it a day on to Sunday
+        // the 27th, when 01:30 comes round twice: the server places that
+        // occurrence at the second, in winter time, 01:30 UTC.
+        val tree = listOf(
+            EventComponent(
+                name = "VEVENT",
+                properties = listOf(
+                    property("UID", "uid-1@mochi"),
+                    property("SUMMARY", "Night shift"),
+                    property("DTSTART", "20241025T013000", "TZID", LONDON),
+                    property("DTEND", "20241025T023000", "TZID", LONDON),
+                    property("RRULE", "FREQ=DAILY"),
+                    property("EXDATE", "20241026T003000Z"),
+                    property("RDATE", "20241025T203000", "TZID", NEW_YORK),
+                ),
+            ),
+        )
+        val form = form(start = london("20241026T013000"), finish = london("20241026T023000"), occurrence = 0, series = 0)
+        val head = components(form, tree, Scope.ALL, LONDON)[0]
+        assertEquals(
+            "THE POINT: both at 01:30 in winter time, 21:30 in New York, not in summer time",
+            listOf("20241027T013000Z", "20241026T213000"),
+            listOf(head.value("EXDATE"), head.value("RDATE")),
+        )
+    }
+
+    @Test
+    fun `a date moved into the hour the clocks skip falls where the server places the series' own occurrence`() {
+        // A daily New York series at 02:30 from Friday 8 March 2024, whose
+        // exclusion of Saturday's, written in UTC, moves with it a day on to
+        // Sunday the 10th, whose 02:30 the clocks skip: the server places that
+        // occurrence an hour before, at 01:30 in winter time, 06:30 UTC.
+        val tree = listOf(
+            EventComponent(
+                name = "VEVENT",
+                properties = listOf(
+                    property("UID", "uid-1@mochi"),
+                    property("SUMMARY", "Night shift"),
+                    property("DTSTART", "20240308T023000", "TZID", NEW_YORK),
+                    property("DTEND", "20240308T033000", "TZID", NEW_YORK),
+                    property("RRULE", "FREQ=DAILY"),
+                    property("EXDATE", "20240309T073000Z"),
+                ),
+            ),
+        )
+        val form = form(
+            start = at("20240309T023000", NEW_YORK),
+            finish = at("20240309T033000", NEW_YORK),
+            occurrence = 0,
+            series = 0,
+        ).copy(zone = Zone(NEW_YORK, NEW_YORK))
+        val head = components(form, tree, Scope.ALL, NEW_YORK)[0]
+        assertEquals("THE POINT: 06:30 UTC, not 07:30", "20240310T063000Z", head.value("EXDATE"))
+    }
+
+    // ---- a series moved into another zone ----
+
+    /**
+     * A daily London series at 09:00 from [from], with Tuesday 29 October
+     * 2024's occurrence moved to 14:00, Wednesday the 30th's excluded and
+     * 18:00 on Thursday the 31st added. London's clocks go back on Sunday the
+     * 27th and New York's on Sunday 3 November, so in the week between, where
+     * each of those falls, the two cities are four hours apart, not five.
+     */
+    private fun window(from: String = "20241023"): List<EventComponent> = listOf(
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up"),
+                property("DTSTART", "${from}T090000", "TZID", LONDON),
+                property("DTEND", "${from}T100000", "TZID", LONDON),
+                property("RRULE", "FREQ=DAILY"),
+                property("EXDATE", "20241030T090000", "TZID", LONDON),
+                property("RDATE", "20241031T180000", "TZID", LONDON),
+            ),
+        ),
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up, late"),
+                property("RECURRENCE-ID", "20241029T090000", "TZID", LONDON),
+                property("DTSTART", "20241029T140000", "TZID", LONDON),
+                property("DTEND", "20241029T150000", "TZID", LONDON),
+            ),
+        ),
+    )
+
+    /**
+     * What [tree] writes for its series and its one override: the series'
+     * start and the zone it is in, the override's occurrence, start and end,
+     * and the series' excluded and added dates.
+     */
+    private fun carries(tree: List<EventComponent>): List<String?> {
+        val head = tree.first { it.property("RECURRENCE-ID") == null }
+        val late = tree.single { it.property("RECURRENCE-ID") != null }
+        return listOf(
+            head.value("DTSTART"),
+            head.property("DTSTART")?.parameter("TZID"),
+            late.value("RECURRENCE-ID"),
+            late.value("DTSTART"),
+            late.value("DTEND"),
+            head.value("EXDATE"),
+            head.value("RDATE"),
+        )
+    }
+
+    /**
+     * What [carries] reads once [window]'s series is at 09:00 in New York
+     * from the 23rd: the override still names its occurrence's 09:00 there
+     * and starts five hours on from it, at 14:00 New York time, and the listed
+     * dates keep their New York times, each as London's clock then reads it.
+     * By London's clock all four land an hour later.
+     */
+    private val CARRIED = listOf(
+        "20241023T090000",
+        NEW_YORK,
+        "20241029T090000",
+        "20241029T180000",
+        "20241029T190000",
+        "20241030T130000",
+        "20241031T220000",
+    )
+
+    /** The form at [start] to an hour on, as `yyyyMMdd'T'HHmmss` in New York, in that zone. */
+    private fun york(start: String, occurrence: Long = 0, series: Long = 0): EventForm {
+        val begins = at(start, NEW_YORK)
+        return form(start = begins, finish = begins + 3_600, occurrence = occurrence, series = series, recurrence = Recurrence(Frequency.DAILY))
+            .copy(zone = Zone(NEW_YORK, NEW_YORK))
+    }
+
+    @Test
+    fun `a series moved into another zone takes its overrides and dates onto that zone's clock`() {
+        val tree = components(york("20241023T090000"), window(), Scope.ALL, LONDON)
+        assertEquals("THE POINT: each an hour before where London's clock puts it", CARRIED, carries(tree))
+    }
+
+    @Test
+    fun `a series moved into another zone from an occurrence between the clock changes lands on that zone's clock`() {
+        // Monday the 28th's occurrence, 09:00 in London, set to 09:00 in New
+        // York and saved to the whole series: the series goes to 09:00 in New
+        // York from the 23rd, not 08:00.
+        val form = york("20241028T090000", occurrence = london("20241028T090000"), series = london("20241023T090000"))
+        val tree = components(form, window(), Scope.ALL, LONDON)
+        assertEquals("THE POINT: the series at 09:00 New York time, not 08:00", CARRIED, carries(tree))
+    }
+
+    @Test
+    fun `a series moved into another zone from one occurrence on takes its overrides and dates onto that zone's clock`() {
+        val carried = window("20241020")
+        val cut = london("20241023T090000")
+        val (_, after) = org.mochios.calendars.ui.editor.split(carried, york("20241023T090000"), cut, LONDON)!!
+        assertEquals("THE POINT: each an hour before where London's clock puts it", CARRIED, carries(after))
+    }
+
+    @Test
+    fun `a copy of all events from an occurrence set to another zone lands on the series' start by that zone's clock`() {
+        val form = york("20241028T090000", occurrence = london("20241028T090000"), series = london("20241023T090000"))
+        val copy = duplicate(form, Scope.ALL, window(), LONDON)
+        assertEquals(
+            "THE POINT: 09:00 to 10:00 New York time on the 23rd, not 08:00 to 09:00",
+            listOf(at("20241023T090000", NEW_YORK), at("20241023T100000", NEW_YORK)),
+            listOf(copy.start, copy.finish),
+        )
+    }
+
+    @Test
+    fun `a series set to another zone at the same instant takes its overrides and dates onto that zone's clock`() {
+        // 09:00 in London on the 23rd is 04:00 in New York: the series starts
+        // where it did, but in the week between the clock changes its
+        // occurrences fall an hour before London's 09:00, and what it carries
+        // goes with them: the override still five hours on from its own.
+        val form = york("20241023T040000")
+        assertEquals(london("20241023T090000"), form.start)
+        assertEquals(
+            "THE POINT: each an hour before where it was",
+            listOf(
+                "20241023T040000",
+                NEW_YORK,
+                "20241029T040000",
+                "20241029T130000",
+                "20241029T140000",
+                "20241030T080000",
+                "20241031T170000",
+            ),
+            carries(components(form, window(), Scope.ALL, LONDON)),
+        )
+    }
+
+    // ---- a stored time in an hour the clocks read twice or skip ----
+
+    /**
+     * A daily series in [zone] from [from] to [until], `yyyyMMdd'T'HHmmss`,
+     * with [added] added and moved two hours on by an override of its own.
+     */
+    private fun added(zone: String, from: String, until: String, added: String, moved: String): List<EventComponent> = listOf(
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Night shift"),
+                property("DTSTART", from, "TZID", zone),
+                property("DTEND", until, "TZID", zone),
+                property("RRULE", "FREQ=DAILY"),
+                property("RDATE", added, "TZID", zone),
+            ),
+        ),
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Night shift, late"),
+                property("RECURRENCE-ID", added, "TZID", zone),
+                property("DTSTART", moved, "TZID", zone),
+            ),
+        ),
+    )
+
+    /**
+     * Where [carried] cut at [cut] by [split] puts the added date and its
+     * override: the old series' added dates and overrides, then the new
+     * one's, and whether the override names the added occurrence at
+     * [occurrence], where the server lists it.
+     */
+    private fun halves(carried: List<EventComponent>, cut: Long, occurrence: Long, user: String): List<Any> {
+        val form = draft(carried[0], user, cut)
+        val (before, after) = org.mochios.calendars.ui.editor.split(carried, form, cut, user)!!
+        fun dates(tree: List<EventComponent>) = tree[0].all("RDATE").map { it.value }
+        fun overrides(tree: List<EventComponent>) = tree.drop(1).map { it.value("RECURRENCE-ID") }
+        return listOf(dates(before), overrides(before), dates(after), overrides(after), matches(carried[1], occurrence, user))
+    }
+
+    @Test
+    fun `a stored time London's clocks read twice is read where the server places it`() {
+        // A daily series at 01:00 from Friday 25 October 2024, with 01:30 on
+        // Sunday the 27th added, when London's 01:00 to 02:00 comes round
+        // twice, and cut at that Sunday's 01:00: the server places both in
+        // winter time, the second time round, 01:00 and 01:30 UTC, so the
+        // added date falls after the cut and goes with the new series.
+        val carried = added(LONDON, "20241025T010000", "20241025T020000", "20241027T013000", "20241027T033000")
+        assertEquals(
+            "THE POINT: 01:30 in winter time, after the cut, not in summer time before it",
+            listOf(emptyList<String>(), emptyList<String>(), listOf("20241027T013000"), listOf("20241027T013000"), true),
+            halves(carried, 1_729_990_800L, 1_729_992_600L, LONDON),
+        )
+    }
+
+    @Test
+    fun `a stored time New York's clocks skip is read where the server places it`() {
+        // A daily series at 03:00 from Friday 8 March 2024, with 02:30 on
+        // Sunday the 10th added, which New York's clocks skip, and cut at
+        // that Sunday's 03:00: the server places 02:30 an hour back, at
+        // 01:30 in winter time, 06:30 UTC, so the added date falls before
+        // the cut at 07:00 UTC and stays with the old series.
+        val carried = added(NEW_YORK, "20240308T030000", "20240308T040000", "20240310T023000", "20240310T043000")
+        assertEquals(
+            "THE POINT: an hour back, before the cut, not an hour on after it",
+            listOf(listOf("20240310T023000"), listOf("20240310T023000"), emptyList<String>(), emptyList<String>(), true),
+            halves(carried, 1_710_054_000L, 1_710_052_200L, NEW_YORK),
+        )
+    }
+
+    // ---- a series stored in UTC ----
+
+    /**
+     * A weekly series stored in UTC, at 09:00 UTC from Tuesday 22 September
+     * 2026, 10:00 in London's summer time, with 3 November, in its winter
+     * time, excluded and 10 November moved to 14:00.
+     */
+    private fun universal(): List<EventComponent> = listOf(
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up"),
+                property("DTSTART", "20260922T090000Z"),
+                property("DTEND", "20260922T100000Z"),
+                property("RRULE", "FREQ=WEEKLY"),
+                property("EXDATE", "20261103T090000Z"),
+            ),
+        ),
+        EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("UID", "uid-1@mochi"),
+                property("SUMMARY", "Stand-up, late"),
+                property("RECURRENCE-ID", "20261110T090000Z"),
+                property("DTSTART", "20261110T140000Z"),
+                property("DTEND", "20261110T150000Z"),
+            ),
+        ),
+    )
+
+    /**
+     * What [tree]'s series says of when it happens: its start as written,
+     * the instants of its first eight weeks less those it excludes, each a
+     * week on by the clock of the zone its start is in, and its override's
+     * occurrence and start.
+     */
+    private fun schedule(tree: List<EventComponent>): List<Any?> {
+        val master = tree.first { it.property("RECURRENCE-ID") == null }
+        val late = tree.single { it.property("RECURRENCE-ID") != null }
+        val starts = master.property("DTSTART")!!
+        val first = java.time.Instant.ofEpochMilli(CalendarsMapping.moment(starts, LONDON))
+            .atZone(java.time.ZoneId.of(CalendarsMapping.zone(starts, LONDON)))
+        val excluded = master.all("EXDATE").map { CalendarsMapping.moment(it, LONDON) / 1000 }.toSet()
+        val weeks = (0L until 8L).map { first.plusWeeks(it).toEpochSecond() }.filterNot { it in excluded }
+        return listOf(
+            starts,
+            weeks,
+            CalendarsMapping.moment(late.property("RECURRENCE-ID")!!, LONDON) / 1000,
+            CalendarsMapping.moment(late.property("DTSTART")!!, LONDON) / 1000,
+        )
+    }
+
+    @Test
+    fun `a series stored in UTC renamed with all events stays in UTC and keeps every occurrence`() {
+        // The editor opened on 29 September and only the title changed.
+        val carried = universal()
+        val form = draft(carried[0], LONDON, NEXT).copy(title = "Stand-up, renamed", occurrence = NEXT, series = TEN)
+        val tree = components(form, carried, Scope.ALL, LONDON)
+        assertEquals(
+            "THE POINT: renamed, still 09:00 UTC, so its winter weeks stay at 09:00 UTC, not 10:00",
+            listOf<Any?>("Stand-up, renamed") + schedule(carried),
+            listOf<Any?>(tree[0].value("SUMMARY")) + schedule(tree),
+        )
+    }
+
+    // ---- a time typed or moved into an hour the clocks skip or read twice ----
+    //
+    // Each is placed where the server places it, Go's time.Date: New York's
+    // skipped 02:30 on 10 March 2024 an hour back, at 01:30 in winter time,
+    // and London's 01:30 on 27 October 2024, which comes round twice, in
+    // winter time. The platform would put the first an hour on and the
+    // second in summer time.
+
+    private val HAVANA = "America/Havana"
+    private val AMMAN = "Asia/Amman"
+
+    /** An instant, written in UTC. */
+    private fun utc(text: String) = java.time.Instant.parse(text).epochSecond
+
+    @Test
+    fun `a time moved to a zone whose clocks skip or read it twice lands where the server places it`() {
+        // 02:30 and 01:30 by UTC's clock, moved onto New York's and London's.
+        assertEquals(
+            "THE POINT: 01:30 in New York's winter time, and London's 01:30 in winter time",
+            listOf(utc("2024-03-10T06:30:00Z"), utc("2024-10-27T01:30:00Z")),
+            listOf(
+                moved(utc("2024-03-10T02:30:00Z"), CalendarsMapping.UTC, NEW_YORK),
+                moved(utc("2024-10-27T01:30:00Z"), CalendarsMapping.UTC, LONDON),
+            ),
+        )
+    }
+
+    @Test
+    fun `a form moved a day onto a time the clocks skip or read twice lands where the server places it`() {
+        // An hour long, from 02:30 on 9 March in New York and from 01:30 on
+        // 26 October in London, each a day on.
+        val york = form(start = at("20240309T023000", NEW_YORK), finish = at("20240309T033000", NEW_YORK))
+            .copy(zone = Zone(NEW_YORK, NEW_YORK))
+        val london = form(start = at("20241026T013000", LONDON), finish = at("20241026T023000", LONDON))
+        assertEquals(
+            "THE POINT: each start where the server places it; the ends exist once",
+            listOf(utc("2024-03-10T06:30:00Z"), utc("2024-03-10T07:30:00Z"), utc("2024-10-27T01:30:00Z"), utc("2024-10-27T02:30:00Z")),
+            listOf(advanced(york, 1), advanced(london, 1)).flatMap { listOf(it.start, it.finish) },
+        )
+    }
+
+    @Test
+    fun `an all-day form begins at a midnight the clocks skip or read twice where the server places it`() {
+        // Havana's clocks go from midnight to 01:00 on 10 March 2024, and
+        // Amman's back from 01:00 to midnight on 30 October 2020: the server
+        // places Havana's midnight an hour back, at 23:00 the evening before,
+        // and Amman's the second time round.
+        val day = { date: LocalDate -> EventForm(allday = true, start = date.atStartOfDay(ZoneOffset.UTC).toEpochSecond()) }
+        assertEquals(
+            "THE POINT: an hour back in Havana, the second midnight in Amman",
+            listOf(utc("2024-03-10T04:00:00Z"), utc("2020-10-29T22:00:00Z")),
+            listOf(instant(day(LocalDate.of(2024, 3, 10)), HAVANA), instant(day(LocalDate.of(2020, 10, 30)), AMMAN)),
+        )
+    }
+
+    @Test
+    fun `days picked whose working hours the clocks skip or read twice begin where the server places them`() {
+        // Working hours from 02:00 on New York's 10 March and from 01:00 on
+        // London's 27 October.
+        val now = java.time.LocalDateTime.of(2026, 1, 1, 12, 0)
+        val york = picked(LocalDate.of(2024, 3, 10), LocalDate.of(2024, 3, 10), Hours(start = 2), 60, ZoneId.of(NEW_YORK), now)
+        val london = picked(LocalDate.of(2024, 10, 27), LocalDate.of(2024, 10, 27), Hours(start = 1), 60, ZoneId.of(LONDON), now)
+        assertEquals(
+            "THE POINT: 01:00 in New York's winter time, and London's 01:00 in winter time",
+            listOf(utc("2024-03-10T06:00:00Z"), utc("2024-03-10T07:00:00Z"), utc("2024-10-27T01:00:00Z"), utc("2024-10-27T02:00:00Z")),
+            listOf(york.first, york.second, london.first, london.second),
+        )
+    }
+
+    @Test
+    fun `an all-day override is found where the server lists it at a midnight the clocks skip or read twice`() {
+        // An all-day daily series whose 9 March 2024 in Havana moved to the
+        // 10th, and whose 29 October 2020 in Amman moved to the 30th: each
+        // listed at the server's midnight of the day it moved to.
+        fun tree(from: String, replaced: String, moved: String, ends: String) = listOf(
+            EventComponent(
+                name = "VEVENT",
+                properties = listOf(
+                    property("UID", "uid-1@mochi"),
+                    property("DTSTART", from, "VALUE", "DATE"),
+                    property("RRULE", "FREQ=DAILY"),
+                ),
+            ),
+            EventComponent(
+                name = "VEVENT",
+                properties = listOf(
+                    property("UID", "uid-1@mochi"),
+                    property("RECURRENCE-ID", replaced, "VALUE", "DATE"),
+                    property("DTSTART", moved, "VALUE", "DATE"),
+                    property("DTEND", ends, "VALUE", "DATE"),
+                ),
+            ),
+        )
+        assertEquals(
+            "THE POINT: the occurrence each replaces, its own midnight, not the listed start handed back",
+            listOf(
+                LocalDate.of(2024, 3, 9).atStartOfDay(ZoneId.of(HAVANA)).toEpochSecond(),
+                LocalDate.of(2020, 10, 29).atStartOfDay(ZoneId.of(AMMAN)).toEpochSecond(),
+            ),
+            listOf(
+                original(tree("20240301", "20240309", "20240310", "20240311"), utc("2024-03-10T04:00:00Z"), HAVANA),
+                original(tree("20201001", "20201029", "20201030", "20201031"), utc("2020-10-29T22:00:00Z"), AMMAN),
+            ),
+        )
     }
 }

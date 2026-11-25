@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">또는 파일 업로드</string>
     <string name="projects_export">데이터 내보내기</string>
     <string name="projects_export_failed">내보내기를 저장하지 못했습니다</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">첨부 파일 %1$s개를 제외하고 내보냈어요</item>
+    </plurals>
     <string name="projects_export_saved">프로젝트 데이터가 저장됨</string>
     <string name="projects_exporting">내보내기 준비 중…</string>
     <string name="projects_board_add_column">컬럼 추가</string>

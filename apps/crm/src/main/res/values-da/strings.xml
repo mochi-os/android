@@ -18,6 +18,10 @@
     <string name="crm_settings">Indstillinger</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Eksporten kunne ikke gemmes</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Eksporteret uden %1$s vedhæftning</item>
+        <item quantity="other">Eksporteret uden %1$s vedhæftninger</item>
+    </plurals>
     <string name="crm_sort_rank">Manuel</string>
     <string name="crm_sort_created">Oprettet</string>
     <string name="crm_sort_updated">Opdateret</string>

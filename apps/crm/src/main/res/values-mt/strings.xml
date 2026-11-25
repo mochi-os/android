@@ -18,6 +18,13 @@
     <string name="crm_settings">Issettjar</string>
     <string name="crm_design">Disinn</string>
     <string name="crm_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Esportat mingħajr %1$s mehmuż</item>
+        <item quantity="two">Esportat mingħajr %1$s mehmużin</item>
+        <item quantity="few">Esportat mingħajr %1$s mehmużin</item>
+        <item quantity="many">Esportat mingħajr %1$s mehmuż</item>
+        <item quantity="other">Esportat mingħajr %1$s mehmuż</item>
+    </plurals>
     <string name="crm_sort_rank">Manwali</string>
     <string name="crm_sort_created">Maħluq</string>
     <string name="crm_sort_updated">Aġġornat</string>

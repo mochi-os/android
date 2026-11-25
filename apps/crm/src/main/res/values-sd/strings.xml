@@ -18,6 +18,10 @@
     <string name="crm_settings">سيٽنگون</string>
     <string name="crm_design">ڊزائن</string>
     <string name="crm_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s منسلڪ کان سواءِ برآمد ٿيو</item>
+        <item quantity="other">%1$s منسلڪات کان سواءِ برآمد ٿيو</item>
+    </plurals>
     <string name="crm_sort_rank">دستي</string>
     <string name="crm_sort_created">ٺاهيو ويو</string>
     <string name="crm_sort_updated">اپڊيٽ ٿيو</string>

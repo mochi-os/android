@@ -18,6 +18,10 @@
     <string name="crm_settings">ቅንብሮች</string>
     <string name="crm_design">ንድፍ</string>
     <string name="crm_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">ያለ %1$s አባሪ ወደ ውጭ ተልኳል</item>
+        <item quantity="other">ያለ %1$s አባሪዎች ወደ ውጭ ተልኳል</item>
+    </plurals>
     <string name="crm_sort_rank">በእጅ</string>
     <string name="crm_sort_created">ተፈጥሯል</string>
     <string name="crm_sort_updated">ተዘምኗል</string>

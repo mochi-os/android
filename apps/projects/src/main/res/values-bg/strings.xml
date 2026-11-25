@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Или качете файл</string>
     <string name="projects_export">Експортиране на данни</string>
     <string name="projects_export_failed">Експортът не можа да се запази</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Експортирано без %1$s прикачен файл</item>
+        <item quantity="other">Експортирано без %1$s прикачени файла</item>
+    </plurals>
     <string name="projects_export_saved">Данните за проекта са запазени</string>
     <string name="projects_exporting">Подготвяне на експорта…</string>
     <string name="projects_board_add_column">Добави колона</string>

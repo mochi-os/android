@@ -18,6 +18,9 @@
     <string name="crm_settings">ការកំណត់</string>
     <string name="crm_design">រចនា</string>
     <string name="crm_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">បាននាំចេញដោយគ្មានឯកសារភ្ជាប់ %1$s</item>
+    </plurals>
     <string name="crm_sort_rank">ដោយដៃ</string>
     <string name="crm_sort_created">បានបង្កើត</string>
     <string name="crm_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>

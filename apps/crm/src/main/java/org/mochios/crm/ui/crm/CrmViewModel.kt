@@ -22,8 +22,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
@@ -41,6 +39,8 @@ import org.mochios.android.websocket.REOPEN
 import org.mochios.android.share.Shared
 import org.mochios.crm.ui.board.boardClass
 import org.mochios.crm.ui.board.boardOptions
+import org.mochios.crm.ui.board.cascaded
+import org.mochios.crm.ui.board.parentValues
 import org.mochios.crm.ui.board.topLevelObjects
 import org.mochios.crm.api.MovedRank
 import org.mochios.crm.lib.ActiveViewStore
@@ -114,6 +114,8 @@ data class CrmUiState(
     /** An export that landed, ready to be offered to the share sheet. */
     val savedExport: SavedExport? = null,
     val exportFailed: Boolean = false,
+    /** Attachments the export could not fetch, which the saved file lacks. */
+    val exportMissing: Int = 0,
 )
 
 @HiltViewModel
@@ -186,12 +188,15 @@ class CrmViewModel @Inject constructor(
     /** The moves drawn and not yet answered, in the order they were made. */
     private val pending = mutableListOf<Move>()
 
+    /** How many reads of the objects have begun. */
+    private var fetches = 0
+
     /**
-     * Sends the moves one at a time, in the order they were made: sent at
-     * once, a later drag could reach the server first, and a drop beside a
-     * card whose own move had not landed would go beside where it was.
+     * How many reads of the objects had begun when the server last answered
+     * a move or a reparent: a list asked for before then may have been read
+     * without it, and is dropped (see [land]).
      */
-    private val moving = Mutex()
+    private var answered = 0
 
     init {
         loadCrm()
@@ -229,14 +234,14 @@ class CrmViewModel @Inject constructor(
 
             _uiState.value = _uiState.value.copy(isLoading = true)
             try {
-                val (details, objects, people) = fetch()
+                val (details, objects, people, begun) = fetch()
                 val watched = repository.getWatched(crmId)
                 val activeViewId = _uiState.value.activeViewId
                     ?: rememberedViewId(details.views)
                     ?: defaultViewId(details, objects)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
-                    objects = land(objects),
+                    objects = land(objects, begun),
                     watched = watched,
                     people = people ?: _uiState.value.people,
                     activeViewId = activeViewId,
@@ -252,16 +257,28 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
+     * The CRM's information, its items and its people as [fetch] reads them,
+     * with the count of reads of the items begun when this one began.
+     */
+    private data class Fetched(
+        val details: CrmDetails,
+        val objects: List<CrmObject>,
+        val people: List<Person>?,
+        val begun: Int,
+    )
+
+    /**
      * The CRM's information, its items and its people, asked for at once. The
      * information is awaited first: a CRM gone or closed to the user reports
      * that, whatever the items' answer, which is then discarded. The people
      * are best-effort, null when they cannot be read.
      */
-    private suspend fun fetch(): Triple<CrmDetails, List<CrmObject>, List<Person>?> = coroutineScope {
+    private suspend fun fetch(): Fetched = coroutineScope {
+        val begun = ++fetches
         val details = async { repository.getCrmInfo(crmId) }
         val objects = async { attempt { repository.getObjects(crmId) } }
         val people = async { attempt { repository.getPeople(crmId) } }
-        Triple(details.await(), objects.await().getOrThrow(), people.await().getOrNull())
+        Fetched(details.await(), objects.await().getOrThrow(), people.await().getOrNull(), begun)
     }
 
     /**
@@ -332,11 +349,11 @@ class CrmViewModel @Inject constructor(
 
     private suspend fun refreshSilently() {
         try {
-            val (details, objects, people) = fetch()
+            val (details, objects, people, begun) = fetch()
             val watched = repository.getWatched(crmId)
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
-                objects = land(objects),
+                objects = land(objects, begun),
                 watched = watched,
                 people = people ?: _uiState.value.people
             )
@@ -351,11 +368,11 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val (details, objects, people) = fetch()
+                val (details, objects, people, begun) = fetch()
                 val watched = repository.getWatched(crmId)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
-                    objects = land(objects),
+                    objects = land(objects, begun),
                     watched = watched,
                     people = people ?: _uiState.value.people,
                     isRefreshing = false,
@@ -669,9 +686,15 @@ class CrmViewModel @Inject constructor(
         val scope: String?,
     )
 
-    /** A list the server answered, with the moves still waiting drawn over it. */
-    private fun land(objects: List<CrmObject>): List<CrmObject> {
-        settled = objects
+    /**
+     * A list the server answered, with the moves still waiting drawn over it.
+     * One whose read began, as [begun] counts it, before the server last
+     * answered a move or a reparent may have been read without it, and is
+     * dropped: the list held has the move, and the read made once the moves
+     * are answered brings what else changed.
+     */
+    private fun land(objects: List<CrmObject>, begun: Int? = null): List<CrmObject> {
+        if (begun == null || begun > answered) settled = objects
         return drawn()
     }
 
@@ -687,7 +710,9 @@ class CrmViewModel @Inject constructor(
      * drawn there at once, sent once every move made before it has been
      * answered, and takes the keys the server wrote when it answers. When it
      * fails it goes back to where it was, and a move still waiting that was
-     * dropped beside it keeps only its other neighbour.
+     * dropped beside it keeps only its other neighbour. The moves wait in the
+     * repository's queue for the CRM, so those made before the screen closes
+     * are still sent, in turn, after it has.
      */
     fun moveObject(
         objectId: String,
@@ -704,21 +729,20 @@ class CrmViewModel @Inject constructor(
         val move = Move(objectId, field, value, after, before, rowField, rowValue, parent, clear, scope)
         pending += move
         _uiState.value = _uiState.value.copy(objects = drawn())
-        viewModelScope.launch {
-            moving.withLock {
-                try {
-                    // Read at its turn: a failed move before it may have
-                    // taken one of its neighbours away.
-                    val ranks = repository.moveObject(crmId, objectId, field, value, move.after, move.before, rowField, rowValue, parent, clear, scope)
-                    pending.remove(move)
-                    settled = reranked(placed(settled, move), ranks)
-                    _uiState.value = _uiState.value.copy(objects = drawn())
-                } catch (e: CancellationException) {
-                    throw e
-                } catch (e: Exception) {
-                    fail(move)
-                    _actionFailed.tryEmit(e.toMochiError())
-                }
+        repository.queue(crmId) {
+            try {
+                // Read at its turn: a failed move before it may have taken
+                // one of its neighbours away.
+                val ranks = repository.moveObject(crmId, objectId, field, value, move.after, move.before, rowField, rowValue, parent, clear, scope)
+                answered = fetches
+                pending.remove(move)
+                settled = reranked(placed(settled, move), ranks)
+                _uiState.value = _uiState.value.copy(objects = drawn())
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                fail(move)
+                _actionFailed.tryEmit(e.toMochiError())
             }
             // The list is read again once nothing waits: a reload between
             // moves would only be drawn over.
@@ -745,50 +769,81 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * [objects] with [move] drawn as the server will write it: its column,
-     * lane and parent changed, and beside the first of its neighbours that is
-     * still where it goes, as the server places it, with that object's key
-     * and the place next to it in the list, which a sort by key keeps, since
-     * a tie keeps its order. With neither, a move to another column goes
-     * after every key, and anything else keeps its own.
+     * [objects] with [move] drawn as the server will write it: under its new
+     * parent, taking that parent's board columns and lanes with each of its
+     * descendants, as far as each one's class takes them; its column and lane
+     * changed, the change going to its descendants the same way; and beside
+     * the first of its neighbours that is still where it goes, as the server
+     * places it, with that object's key and the place next to it in the list,
+     * which a sort by key keeps, since a tie keeps its order. With neither, a
+     * move to another column goes after every key, and anything else keeps
+     * its own.
      */
     private fun placed(objects: List<CrmObject>, move: Move): List<CrmObject> {
         val previous = objects.firstOrNull { obj -> obj.id == move.objectId } ?: return objects
         val field = move.field?.takeIf { field -> field.isNotBlank() }
         val lane = move.rowField?.takeIf { lane -> lane.isNotBlank() }
-        var values = previous.values
+        val details = _uiState.value.crmDetails
+        // A new parent's values come first, as the server copies them before
+        // it writes the move's own.
+        val adopted = move.parent?.takeIf { parent -> parent.isNotBlank() && parent != previous.parent }
+            ?.let { parent -> objects.firstOrNull { obj -> obj.id == parent } }
+        val inherited = if (adopted != null && details != null) parentValues(details, adopted) else emptyMap()
+        val start = if (details != null) cascaded(details, previous, inherited) else previous
+        var values = start.values
         // An empty value keeps the object's own, as the server does, and a
         // clear empties it.
         if (field != null && move.clear) values = values + (field to "")
         else if (field != null && !move.value.isNullOrEmpty()) values = values + (field to move.value)
         if (lane != null) values = values + (lane to move.rowValue.orEmpty())
         var moved = previous.copy(values = values, parent = move.parent ?: previous.parent)
+        val changed = buildMap {
+            if (field != null && moved.stringValue(field) != start.stringValue(field)) put(field, moved.stringValue(field))
+            if (lane != null && moved.stringValue(lane) != start.stringValue(lane)) put(lane, moved.stringValue(lane))
+        }
+        val below = if (details == null || (inherited.isEmpty() && changed.isEmpty())) emptySet() else collectDescendants(move.objectId, objects)
+        val drawn = if (below.isEmpty()) objects else objects.map { obj ->
+            if (obj.id in below) cascaded(details!!, cascaded(details, obj, inherited), changed) else obj
+        }
         val column = field?.let { moved.stringValue(it) }
         val among = move.scope ?: move.parent
+        // Whether obj is in the column or lane holding value of name. The one
+        // for no value also holds, as boards draw them there, the objects
+        // whose value no option of the field has for the moved object's
+        // class, when the class enumerates it: a deleted option's, or another
+        // class's.
+        fun holds(obj: CrmObject, name: String, value: String): Boolean {
+            val held = obj.stringValue(name)
+            if (held == value) return true
+            if (value.isNotEmpty() || details == null) return false
+            val declared = details.fields[previous.objectClass]?.firstOrNull { candidate -> candidate.id == name }
+            return declared?.fieldtype == "enumerated" &&
+                details.options[previous.objectClass]?.get(name).orEmpty().none { option -> option.id == held }
+        }
         // A neighbour counts only in the column, lane and parent the move puts
         // the object in, as the server takes one: one moved elsewhere since
         // the drop leaves the other.
         val beside = { id: String? ->
-            objects.firstOrNull { obj ->
+            drawn.firstOrNull { obj ->
                 obj.id == id && obj.id != move.objectId &&
-                    (field == null || obj.stringValue(field) == column) &&
-                    (lane == null || obj.stringValue(lane) == move.rowValue.orEmpty()) &&
+                    (field == null || holds(obj, field, column.orEmpty())) &&
+                    (lane == null || holds(obj, lane, move.rowValue.orEmpty())) &&
                     (among == null || obj.parent == among)
             }
         }
         val after = beside(move.after)
         val anchor = after ?: beside(move.before)
-        val others = objects.filter { obj -> obj.id != move.objectId }.toMutableList()
+        val others = drawn.filter { obj -> obj.id != move.objectId }.toMutableList()
         when {
             anchor != null -> {
                 moved = moved.copy(rank = anchor.rank)
                 others.add(others.indexOf(anchor) + if (after != null) 1 else 0, moved)
             }
-            field != null && column != previous.stringValue(field) -> {
+            field != null && column != start.stringValue(field) -> {
                 // The last key, and last in the list, which a tie keeps last.
                 others.add(moved.copy(rank = others.maxOfOrNull { obj -> obj.rank } ?: moved.rank))
             }
-            else -> return objects.map { obj -> if (obj.id == move.objectId) moved else obj }
+            else -> return drawn.map { obj -> if (obj.id == move.objectId) moved else obj }
         }
         return others
     }
@@ -824,8 +879,9 @@ class CrmViewModel @Inject constructor(
      * the column, lane and parent change, and a drop that changes none of
      * them writes nothing. An empty [value] is the column for no value, which
      * clears a value the board draws a column for, and an empty [rowValue]
-     * the lane for none, likewise. [scope] is the parent whose children a
-     * drop that keeps its parent goes among, as the tree names it.
+     * the lane for none, likewise. The move names the column and the lane
+     * only when it changes them ([sent]). [scope] is the parent whose
+     * children a drop that keeps its parent goes among, as the tree names it.
      */
     fun moveBeside(
         objectId: String,
@@ -840,54 +896,70 @@ class CrmViewModel @Inject constructor(
         scope: String? = null,
     ) {
         val clear = clears(objectId, field, value)
-        val sent = sent(objectId, field, value, rowField, rowValue)
+        val sent = sent(objectId, field, value, rowField, rowValue, clear)
         val far = other?.takeIf { id -> id != objectId && id != target }
         when (placement()) {
             Placement.Ascending -> moveObject(
-                objectId, field, sent.value,
+                objectId, sent.field, sent.value,
                 after = if (below) target else far, before = if (below) far else target,
                 rowField = sent.lane, rowValue = sent.row, parent = parent, clear = clear, scope = scope,
             )
             Placement.Descending -> moveObject(
-                objectId, field, sent.value,
+                objectId, sent.field, sent.value,
                 after = if (below) far else target, before = if (below) target else far,
                 rowField = sent.lane, rowValue = sent.row, parent = parent, clear = clear, scope = scope,
             )
-            Placement.None -> if (clear || changes(objectId, field, sent.value, sent.lane, sent.row, parent)) {
-                moveObject(objectId, field, sent.value, rowField = sent.lane, rowValue = sent.row, parent = parent, clear = clear, scope = scope)
+            Placement.None -> if (clear || changes(objectId, sent.field, sent.value, sent.lane, sent.row, parent)) {
+                moveObject(objectId, sent.field, sent.value, rowField = sent.lane, rowValue = sent.row, parent = parent, clear = clear, scope = scope)
             }
         }
     }
 
-    /** What a board move sends of its column and lane: see [sent]. */
-    private data class Sent(val value: String?, val lane: String?, val row: String?)
+    /** What a board move names of its column and lane: see [sent]. */
+    private data class Sent(val field: String?, val value: String?, val lane: String?, val row: String?)
 
     /**
      * What a move of [objectId] into column [value] of [field] and lane
-     * [rowValue] of [rowField] sends, which the server places it among: the
-     * column's value, or none for the column it is drawn in, which keeps its
-     * own; and, on a board that draws lanes, their field with the lane it
-     * goes to, or its own value when it stays in the lane it is drawn in,
-     * which writes nothing. A card whose value no lane is drawn for is drawn
-     * in the lane for none, and a drop there keeps that value rather than
-     * writing "" over it. A move that names no column, as the tree's, names
-     * no lane either.
+     * [rowValue] of [rowField] names, which the server takes its neighbours
+     * among: the column's field and value only when the move changes the
+     * column it is drawn in, to another with a value or, with [clear], to
+     * the one for no value; and the lane's only when it changes the lane it
+     * is drawn in. The column for no value also draws the cards whose value
+     * no column is drawn for, and so does the lane for none, and a card's
+     * class may have no such field: naming the field there would refuse the
+     * neighbours drawn beside the card whose value is not its own, and the
+     * move itself where the class lacks it.
      */
-    private fun sent(objectId: String, field: String?, value: String?, rowField: String?, rowValue: String?): Sent {
+    private fun sent(objectId: String, field: String?, value: String?, rowField: String?, rowValue: String?, clear: Boolean): Sent {
         val obj = _uiState.value.objects.firstOrNull { candidate -> candidate.id == objectId }
-            ?: return Sent(value, rowField, rowValue?.takeIf { rowField != null })
-        val column = if (!field.isNullOrBlank() && value.orEmpty() == boardColumn(obj, field)) "" else value
-        val lane = rowField ?: boardLaneField().takeIf { !field.isNullOrBlank() }
-            ?: return Sent(column, null, null)
-        val row = (if (rowField != null) rowValue.orEmpty() else null)?.takeIf { target -> boardLane(obj, lane) != target }
-            ?: obj.stringValue(lane)
-        return Sent(column, lane, row)
+        val named = field?.takeIf { name -> name.isNotBlank() }
+        val column = value?.takeIf { target -> target.isNotEmpty() && (obj == null || named == null || target != boardColumn(obj, named)) }
+        val lane = rowField?.takeIf { name -> name.isNotBlank() }
+        val row = if (lane == null) null else rowValue.orEmpty().takeIf { target -> obj == null || boardLane(obj, lane) != target }
+        return Sent(
+            field = named.takeIf { clear || column != null },
+            value = if (clear) "" else column,
+            lane = lane.takeIf { row != null },
+            row = row,
+        )
     }
 
     /** The field the active board draws lanes of, when it draws any. */
     private fun boardLaneField(): String? {
         val view = getActiveView()?.takeIf { view -> view.viewtype == "board" } ?: return null
         return view.rows.takeIf { rows -> rows.isNotBlank() && getBoardOptions(view, rows).isNotEmpty() }
+    }
+
+    /**
+     * The lane of the active board [objectId] goes to: [rowValue] of
+     * [rowField] when a drop names one, else the one it is drawn in; with
+     * the lanes' field, or null on a board that draws none.
+     */
+    private fun boardTarget(objectId: String, rowField: String?, rowValue: String?): Pair<String, String>? {
+        val lane = rowField?.takeIf { name -> name.isNotBlank() } ?: boardLaneField() ?: return null
+        if (rowField != null) return lane to rowValue.orEmpty()
+        val obj = _uiState.value.objects.firstOrNull { candidate -> candidate.id == objectId } ?: return null
+        return lane to boardLane(obj, lane)
     }
 
     /**
@@ -939,17 +1011,19 @@ class CrmViewModel @Inject constructor(
      * the lane for none, likewise. A drop in the lane the card is drawn in
      * keeps its lane, and one with no lane on a board that draws them keeps
      * the card's own: the end is the last of the column in that lane, as the
-     * server places it.
+     * board draws it. The move names the column and the lane only when it
+     * changes them ([sent]).
      */
     fun moveToEnd(objectId: String, field: String, value: String, rowField: String? = null, rowValue: String? = null) {
         val clear = clears(objectId, field, value)
-        val sent = sent(objectId, field, value, rowField, rowValue)
-        val column = rankOrder(field, value, objectId, clear, sent.lane, sent.row.orEmpty())
+        val sent = sent(objectId, field, value, rowField, rowValue, clear)
+        val lane = boardTarget(objectId, rowField, rowValue)
+        val column = rankOrder(field, value, objectId, clear, lane?.first, lane?.second.orEmpty())
         when (placement()) {
-            Placement.Ascending -> moveObject(objectId, field, sent.value, after = column.lastOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
-            Placement.Descending -> moveObject(objectId, field, sent.value, before = column.firstOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
-            Placement.None -> if (clear || changes(objectId, field, sent.value, sent.lane, sent.row, null)) {
-                moveObject(objectId, field, sent.value, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.Ascending -> moveObject(objectId, sent.field, sent.value, after = column.lastOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.Descending -> moveObject(objectId, sent.field, sent.value, before = column.firstOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.None -> if (clear || changes(objectId, sent.field, sent.value, sent.lane, sent.row, null)) {
+                moveObject(objectId, sent.field, sent.value, rowField = sent.lane, rowValue = sent.row, clear = clear)
             }
         }
     }
@@ -965,15 +1039,26 @@ class CrmViewModel @Inject constructor(
      */
     fun moveToTop(objectId: String, field: String, value: String) {
         val clear = clears(objectId, field, value)
-        val sent = sent(objectId, field, value, null, null)
-        val column = rankOrder(field, value, objectId, clear, sent.lane, sent.row.orEmpty())
+        val sent = sent(objectId, field, value, null, null, clear)
+        val lane = boardTarget(objectId, null, null)
+        val column = rankOrder(field, value, objectId, clear, lane?.first, lane?.second.orEmpty())
         when (placement()) {
-            Placement.Ascending -> moveObject(objectId, field, sent.value, before = column.firstOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
-            Placement.Descending -> moveObject(objectId, field, sent.value, after = column.lastOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
-            Placement.None -> if (clear || changes(objectId, field, sent.value, sent.lane, sent.row, null)) {
-                moveObject(objectId, field, sent.value, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.Ascending -> moveObject(objectId, sent.field, sent.value, before = column.firstOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.Descending -> moveObject(objectId, sent.field, sent.value, after = column.lastOrNull()?.id, rowField = sent.lane, rowValue = sent.row, clear = clear)
+            Placement.None -> if (clear || changes(objectId, sent.field, sent.value, sent.lane, sent.row, null)) {
+                moveObject(objectId, sent.field, sent.value, rowField = sent.lane, rowValue = sent.row, clear = clear)
             }
         }
+    }
+
+    /**
+     * Moves [objectId] into lane [rowValue] of [rowField], keeping its column
+     * and its key, as the Move sheet's lanes do. A lane it is drawn in
+     * already writes nothing.
+     */
+    fun moveToLane(objectId: String, rowField: String, rowValue: String) {
+        val sent = sent(objectId, null, null, rowField, rowValue, false)
+        if (sent.lane != null) moveObject(objectId, rowField = sent.lane, rowValue = sent.row)
     }
 
     /**
@@ -1020,9 +1105,10 @@ class CrmViewModel @Inject constructor(
             delay(REFRESH_DEBOUNCE)
             objectsPending = false
             try {
+                val begun = ++fetches
                 val objects = repository.getObjects(crmId)
                 val watched = repository.getWatched(crmId)
-                _uiState.value = _uiState.value.copy(objects = land(objects), watched = watched)
+                _uiState.value = _uiState.value.copy(objects = land(objects, begun), watched = watched)
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) { }
@@ -1146,24 +1232,47 @@ class CrmViewModel @Inject constructor(
 
     /**
      * Moves [objectId] under [newParentId], or to the top level for "", in
-     * turn with the moves made before it. The server gives it a key after
-     * its new siblings, which it answers and tells subscribers of; it is
-     * drawn there when the answer comes, and the list read then holds it.
+     * turn with the moves made before it, in the repository's queue for the
+     * CRM, as [moveObject] sends them. The server gives it a key after its
+     * new siblings, which it answers and tells subscribers of, and it and
+     * its descendants take the new parent's board columns and lanes, as far
+     * as each one's class takes them; it is drawn there when the answer
+     * comes, and the list read then holds it.
      */
     fun reparentObject(objectId: String, newParentId: String) {
-        viewModelScope.launch {
-            moving.withLock {
-                try {
-                    val ranks = repository.updateObject(crmId, objectId, newParentId)
-                    settled = reranked(settled.map { obj -> if (obj.id == objectId) obj.copy(parent = newParentId) else obj }, ranks)
-                    _uiState.value = _uiState.value.copy(objects = drawn())
-                } catch (e: CancellationException) {
-                    throw e
-                } catch (e: Exception) {
-                    _actionFailed.tryEmit(e.toMochiError())
-                }
+        repository.queue(crmId) {
+            try {
+                val ranks = repository.updateObject(crmId, objectId, newParentId)
+                answered = fetches
+                settled = reranked(reparented(settled, objectId, newParentId), ranks)
+                _uiState.value = _uiState.value.copy(objects = drawn())
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionFailed.tryEmit(e.toMochiError())
             }
             if (pending.isEmpty()) refreshObjects()
+        }
+    }
+
+    /**
+     * [objects] with [objectId] under [parent], it and its descendants taking
+     * the board columns and lanes of a parent other than the top level, as
+     * the server copies them, each as far as its own class takes them.
+     */
+    private fun reparented(objects: List<CrmObject>, objectId: String, parent: String): List<CrmObject> {
+        val details = _uiState.value.crmDetails
+        val previous = objects.firstOrNull { obj -> obj.id == objectId } ?: return objects
+        val adopted = parent.takeIf { id -> id.isNotBlank() && id != previous.parent }
+            ?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
+        val inherited = if (adopted != null && details != null) parentValues(details, adopted) else emptyMap()
+        val below = if (inherited.isEmpty()) emptySet() else collectDescendants(objectId, objects)
+        return objects.map { obj ->
+            when {
+                obj.id == objectId -> (if (inherited.isEmpty()) obj else cascaded(details!!, obj, inherited)).copy(parent = parent)
+                obj.id in below -> cascaded(details!!, obj, inherited)
+                else -> obj
+            }
         }
     }
 
@@ -1261,25 +1370,30 @@ class CrmViewModel @Inject constructor(
      * end is past the board's hidden objects too. An empty [value] keeps the
      * moved object's own column, as the server does, unless [clear] moves it
      * to the column for no value, which also holds every value the board
-     * draws no column for. With [lane], only those holding [row] in it: a
-     * move that changes lane is placed only beside an object of its new one,
-     * as the server takes a neighbour.
+     * draws no column for. With [lane], only those in lane [row] of it: the
+     * objects holding [row], or for "" every one the board draws in the lane
+     * for none, which holds every value no lane is drawn for too. A move is
+     * placed beside a card of the lane it goes to, as the board draws it.
      */
     fun rankOrder(field: String, value: String, moved: String, clear: Boolean = false, lane: String? = null, row: String = ""): List<CrmObject> {
         val objects = _uiState.value.objects
         val columns = boardColumns(field)
+        val rows = lane?.let { name -> boardColumns(name) }.orEmpty()
         val target = if (clear) "" else value.ifBlank { objects.firstOrNull { obj -> obj.id == moved }?.let { obj -> boardColumn(obj, field, columns) }.orEmpty() }
+        val inLane = { obj: CrmObject ->
+            lane == null || if (row.isEmpty()) boardColumn(obj, lane, rows).isEmpty() else obj.stringValue(lane) == row
+        }
         return objects
-            .filter { obj -> obj.id != moved && boardColumn(obj, field, columns) == target && (lane == null || obj.stringValue(lane) == row) }
+            .filter { obj -> obj.id != moved && boardColumn(obj, field, columns) == target && inLane(obj) }
             .sortedBy { obj -> obj.rank }
     }
 
     /**
-     * Descendant ids of [objectId], for refusing a drop that would reparent a
-     * row under itself.
+     * Descendant ids of [objectId] among [objects], for refusing a drop that
+     * would reparent a row under itself, and for what a move cascades to.
      */
-    fun collectDescendants(objectId: String): Set<String> {
-        val byParent = _uiState.value.objects.groupBy { it.parent }
+    fun collectDescendants(objectId: String, objects: List<CrmObject> = _uiState.value.objects): Set<String> {
+        val byParent = objects.groupBy { it.parent }
         val result = mutableSetOf<String>()
         val stack = ArrayDeque<String>()
         stack.add(objectId)
@@ -1504,8 +1618,11 @@ class CrmViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isExporting = true)
             try {
                 var rounds = 0
+                var missing = 0
                 while (rounds < MAX_WARM_ROUNDS) {
                     val warm = repository.warmExport(entityId())
+                    // The last round's failures are what the export leaves out.
+                    missing = warm.failed
                     if (warm.remaining <= 0) {
                         break
                     }
@@ -1513,6 +1630,7 @@ class CrmViewModel @Inject constructor(
                 }
                 val name = _uiState.value.crmDetails?.crm?.name
                 _uiState.value = _uiState.value.copy(
+                    exportMissing = missing,
                     pendingExport = PendingExport(
                         suggestedName = repository.exportFileName(name, "crm-backup", "zip"),
                         mimeType = MIME_ZIP,
@@ -1641,7 +1759,7 @@ class CrmViewModel @Inject constructor(
     }
 
     fun clearExportResult() {
-        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false)
+        _uiState.value = _uiState.value.copy(savedExport = null, exportFailed = false, exportMissing = 0)
     }
 
     fun getCardFields(classId: String): List<CrmField> {

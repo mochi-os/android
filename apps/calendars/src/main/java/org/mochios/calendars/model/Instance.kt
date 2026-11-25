@@ -6,6 +6,8 @@
 package org.mochios.calendars.model
 
 import com.google.gson.annotations.SerializedName
+import java.time.ZoneId
+import java.time.ZoneOffset
 
 /**
  * One occurrence of an event inside a range, as `-/events` returns it. The
@@ -45,6 +47,14 @@ data class Instance(
     @SerializedName("occurrence") val replaced: Long? = null,
     val zone: Zone? = null,
     val alarm: Boolean = false,
+    /**
+     * On a timed occurrence written at a clock reading its zone skips, the
+     * reading it is written at, `yyyyMMdd'T'HHmmss`, where [start] is where
+     * the server places it: the 10 March 2024 occurrence of a New York series
+     * at 02:30 starts at 01:30 in winter time and reads 02:30. Null on every
+     * other occurrence, and from a core that predates it.
+     */
+    val reading: String? = null,
     /**
      * Never sent by the server: on an occurrence a move of a series, whole or
      * from one occurrence on, draws read-only while it is written, what it is
@@ -111,13 +121,29 @@ fun tint(own: String?, calendar: String?): String =
 
 /**
  * The IANA zone each end of a timed occurrence was written in, its `TZID`:
- * a flight can start in one and end in another. Blank means UTC or floating,
- * which is read in the user's own zone.
+ * a flight can start in one and end in another. An end written in UTC names
+ * `UTC`; blank means floating, or UTC from a core that predates naming it,
+ * and is read in the user's own zone.
  */
 data class Zone(
     val start: String = "",
     val finish: String = "",
 )
+
+/**
+ * The zone an end of an occurrence is shown in apart from the user's own:
+ * [named], the one it was written in, unless it names none or UTC, under
+ * any of UTC's names. UTC is how a client writes an instant, not a place's
+ * clock, so an occurrence written in it reads, and moves on its own, in the
+ * user's zone; only a series moved whole or from one occurrence on keeps to
+ * it, as it repeats in it. The web client reads a zone the same way
+ * (regional).
+ */
+fun regional(named: String?): String? {
+    if (named.isNullOrBlank()) return null
+    val universal = runCatching { ZoneId.of(named.trim()).normalized() == ZoneOffset.UTC }.getOrDefault(false)
+    return if (universal) null else named
+}
 
 /**
  * The body of `-/events`. [truncated] means the range held more occurrences

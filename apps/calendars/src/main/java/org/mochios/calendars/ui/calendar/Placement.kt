@@ -6,6 +6,7 @@
 package org.mochios.calendars.ui.calendar
 
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.regional
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
@@ -43,9 +44,10 @@ fun zoneOf(named: String?, user: ZoneId): ZoneId {
 
 /**
  * The IANA zone an end's clock text reads in, or null for the user's own:
- * the end's own zone only when [zones] is on and it names one.
+ * the end's own zone only when [zones] is on and it names one other than
+ * UTC ([regional]).
  */
-fun clockZone(named: String?, zones: Boolean): String? = named?.takeIf { zones && it.isNotBlank() }
+fun clockZone(named: String?, zones: Boolean): String? = if (zones) regional(named) else null
 
 /**
  * A timed occurrence's span as the day and week views read it, "09:00 to
@@ -66,12 +68,13 @@ fun interval(
 
 /**
  * Each end of a timed occurrence at its wall-clock time. With [zones] on,
- * an end reads in the zone it was written in; otherwise both read in the
- * [user]'s. A finish on the stroke of midnight belongs to the day before.
+ * an end reads in the zone it was written in, but for UTC ([regional]);
+ * otherwise both read in the [user]'s. A finish on the stroke of midnight
+ * belongs to the day before.
  */
 fun ends(instance: Instance, user: ZoneId, zones: Boolean): Ends {
-    val startZone = if (zones) zoneOf(instance.zone?.start, user) else user
-    val finishZone = if (zones) zoneOf(instance.zone?.finish, user) else user
+    val startZone = if (zones) zoneOf(regional(instance.zone?.start), user) else user
+    val finishZone = if (zones) zoneOf(regional(instance.zone?.finish), user) else user
     val begins = Instant.ofEpochSecond(instance.start).atZone(startZone)
     val finishes = Instant.ofEpochSecond(maxOf(instance.start, instance.finish)).atZone(finishZone)
     val from = Clock(begins.toLocalDate(), begins.hour * 60 + begins.minute)

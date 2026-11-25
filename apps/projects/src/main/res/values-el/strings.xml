@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Ή ανεβάστε ένα αρχείο</string>
     <string name="projects_export">Εξαγωγή δεδομένων</string>
     <string name="projects_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Εξήχθη χωρίς %1$s συνημμένο</item>
+        <item quantity="other">Εξήχθη χωρίς %1$s συνημμένα</item>
+    </plurals>
     <string name="projects_export_saved">Τα δεδομένα του έργου αποθηκεύτηκαν</string>
     <string name="projects_exporting">Προετοιμασία εξαγωγής…</string>
     <string name="projects_board_add_column">Προσθήκη στήλης</string>

@@ -313,6 +313,13 @@
     <string name="projects_design_or_upload_json">Jew tella\' fajl</string>
     <string name="projects_export">Esporta d-data</string>
     <string name="projects_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Esportat mingħajr %1$s mehmuż</item>
+        <item quantity="two">Esportat mingħajr %1$s mehmużin</item>
+        <item quantity="few">Esportat mingħajr %1$s mehmużin</item>
+        <item quantity="many">Esportat mingħajr %1$s mehmuż</item>
+        <item quantity="other">Esportat mingħajr %1$s mehmuż</item>
+    </plurals>
     <string name="projects_export_saved">Id-data tal-proġett ġiet salvata</string>
     <string name="projects_exporting">Qed titħejja l-esportazzjoni…</string>
     <string name="projects_board_add_column">Żid kolonna</string>

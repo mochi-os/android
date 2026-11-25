@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Térã ehupi peteĩ archivo</string>
     <string name="projects_export">Emosẽ mba\'ekuaarã</string>
     <string name="projects_export_failed">Ndaikatúi oñeñongatu ñemosẽ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Oñemosẽ %1$s adjunto\'ỹre</item>
+        <item quantity="other">Oñemosẽ %1$s adjunto\'ỹre</item>
+    </plurals>
     <string name="projects_export_saved">Proyecto datos oñeñongatúma</string>
     <string name="projects_exporting">Oñembosako\'ihína ñemosẽ…</string>
     <string name="projects_board_add_column">Embojuaju columna</string>

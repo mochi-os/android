@@ -18,6 +18,10 @@
     <string name="crm_settings">Asetukset</string>
     <string name="crm_design">Suunnittelu</string>
     <string name="crm_export_failed">Vientiä ei voitu tallentaa</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Viety ilman %1$s liitettä</item>
+        <item quantity="other">Viety ilman %1$s liitettä</item>
+    </plurals>
     <string name="crm_sort_rank">Manuaalinen</string>
     <string name="crm_sort_created">Luotu</string>
     <string name="crm_sort_updated">Päivitetty</string>

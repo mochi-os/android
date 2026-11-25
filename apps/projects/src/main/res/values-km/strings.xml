@@ -309,6 +309,9 @@
     <string name="projects_design_or_upload_json">ឬបញ្ចូលឯកសារ</string>
     <string name="projects_export">នាំចេញទិន្នន័យ</string>
     <string name="projects_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">បាននាំចេញដោយគ្មានឯកសារភ្ជាប់ %1$s</item>
+    </plurals>
     <string name="projects_export_saved">បានរក្សាទុកទិន្នន័យគម្រោង</string>
     <string name="projects_exporting">កំពុងរៀបចំការនាំចេញ…</string>
     <string name="projects_board_add_column">បន្ថែមជួរឈរ</string>

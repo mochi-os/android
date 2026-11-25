@@ -280,4 +280,19 @@ class RecurrenceTest {
             assertEquals(chosen, minutes(alarm.value("TRIGGER")))
         }
     }
+
+    @Test
+    fun `an end on a day before a midnight the clocks skip or read twice takes in what the server does`() {
+        // The last second before the next day begins, which the server, as
+        // Go's time.Date, places an hour back in Havana, whose clocks go from
+        // midnight to 01:00 on 10 March 2024, and the second time round in
+        // Amman, whose clocks come back from 01:00 to midnight on 30 October
+        // 2020: as the web client ends the same rule.
+        val daily = { day: LocalDate -> Recurrence(frequency = Frequency.DAILY, ending = Ending.UNTIL, until = day) }
+        assertEquals(
+            "THE POINT: an hour back in Havana, the second midnight in Amman",
+            listOf("FREQ=DAILY;UNTIL=20240310T035959Z", "FREQ=DAILY;UNTIL=20201029T215959Z"),
+            listOf(daily(LocalDate.of(2024, 3, 9)).rule("America/Havana"), daily(LocalDate.of(2020, 10, 29)).rule("Asia/Amman")),
+        )
+    }
 }

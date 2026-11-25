@@ -18,6 +18,10 @@
     <string name="crm_settings">Параметрлер</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Экспортты сақтау мүмкін болмады</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s тіркемесіз экспортталды</item>
+        <item quantity="other">%1$s тіркемесіз экспортталды</item>
+    </plurals>
     <string name="crm_sort_rank">Қолмен</string>
     <string name="crm_sort_created">Құрылды</string>
     <string name="crm_sort_updated">Жаңартылды</string>

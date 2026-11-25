@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Eða hlaðið upp skrá</string>
     <string name="projects_export">Flytja út gögn</string>
     <string name="projects_export_failed">Ekki tókst að vista útflutninginn</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Flutt út án %1$s viðhengis</item>
+        <item quantity="other">Flutt út án %1$s viðhengja</item>
+    </plurals>
     <string name="projects_export_saved">Verkefnagögn vistuð</string>
     <string name="projects_exporting">Undirbý útflutning…</string>
     <string name="projects_board_add_column">Bæta við dálki</string>

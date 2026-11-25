@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">Atau muat naik fail</string>
     <string name="projects_export">Eksport data</string>
     <string name="projects_export_failed">Eksport tidak dapat disimpan</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">Dieksport tanpa %1$s lampiran</item>
+    </plurals>
     <string name="projects_export_saved">Data projek disimpan</string>
     <string name="projects_exporting">Menyediakan eksport…</string>
     <string name="projects_board_add_column">Tambah lajur</string>

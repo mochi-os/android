@@ -18,6 +18,10 @@
     <string name="crm_settings">Ρυθμίσεις</string>
     <string name="crm_design">Σχεδιασμός</string>
     <string name="crm_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Εξήχθη χωρίς %1$s συνημμένο</item>
+        <item quantity="other">Εξήχθη χωρίς %1$s συνημμένα</item>
+    </plurals>
     <string name="crm_sort_rank">Χειροκίνητο</string>
     <string name="crm_sort_created">Δημιουργήθηκε</string>
     <string name="crm_sort_updated">Ενημερώθηκε</string>

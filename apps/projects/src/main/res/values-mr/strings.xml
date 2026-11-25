@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">किंवा फाइल अपलोड करा</string>
     <string name="projects_export">डेटा निर्यात करा</string>
     <string name="projects_export_failed">निर्यात जतन करता आले नाही</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s संलग्नकाशिवाय निर्यात केले</item>
+        <item quantity="other">%1$s संलग्नकांशिवाय निर्यात केले</item>
+    </plurals>
     <string name="projects_export_saved">प्रकल्प डेटा जतन केला</string>
     <string name="projects_exporting">निर्यात तयार करत आहे…</string>
     <string name="projects_board_add_column">कॉलम जोडा</string>

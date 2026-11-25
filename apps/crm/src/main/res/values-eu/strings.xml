@@ -18,6 +18,10 @@
     <string name="crm_settings">Ezarpenak</string>
     <string name="crm_design">Diseinua</string>
     <string name="crm_export_failed">Ezin izan da esportazioa gorde</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s eranskinik gabe esportatu da</item>
+        <item quantity="other">%1$s eranskinik gabe esportatu da</item>
+    </plurals>
     <string name="crm_sort_rank">Eskuz</string>
     <string name="crm_sort_created">Sortua</string>
     <string name="crm_sort_updated">Eguneratuta</string>

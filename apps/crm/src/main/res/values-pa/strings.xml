@@ -18,6 +18,10 @@
     <string name="crm_settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="crm_design">ਡਿਜ਼ਾਈਨ</string>
     <string name="crm_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s ਅਟੈਚਮੈਂਟ ਤੋਂ ਬਿਨਾਂ ਐਕਸਪੋਰਟ ਕੀਤਾ ਗਿਆ</item>
+        <item quantity="other">%1$s ਅਟੈਚਮੈਂਟਾਂ ਤੋਂ ਬਿਨਾਂ ਐਕਸਪੋਰਟ ਕੀਤਾ ਗਿਆ</item>
+    </plurals>
     <string name="crm_sort_rank">ਮੈਨੁਅਲ</string>
     <string name="crm_sort_created">ਬਣਾਇਆ ਗਿਆ</string>
     <string name="crm_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>

@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">Lub prześlij plik</string>
     <string name="projects_export">Eksportuj dane</string>
     <string name="projects_export_failed">Nie udało się zapisać eksportu</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Wyeksportowano bez %1$s załącznika</item>
+        <item quantity="few">Wyeksportowano bez %1$s załączników</item>
+        <item quantity="many">Wyeksportowano bez %1$s załączników</item>
+        <item quantity="other">Wyeksportowano bez %1$s załącznika</item>
+    </plurals>
     <string name="projects_export_saved">Dane projektu zapisane</string>
     <string name="projects_exporting">Przygotowywanie eksportu…</string>
     <string name="projects_board_add_column">Dodaj kolumnę</string>

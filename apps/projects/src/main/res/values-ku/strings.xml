@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">An jî pelekê bar bike</string>
     <string name="projects_export">Daneyan eksport bike</string>
     <string name="projects_export_failed">Nekarî hinardekirin tomar bike</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Bê %1$s pêvek hat hinardekirin</item>
+        <item quantity="other">Bê %1$s pêvek hat hinardekirin</item>
+    </plurals>
     <string name="projects_export_saved">Daneyên projeyê hatin tomarkirin</string>
     <string name="projects_exporting">Hinardekirin tê amadekirin…</string>
     <string name="projects_board_add_column">Stûn zêde bike</string>

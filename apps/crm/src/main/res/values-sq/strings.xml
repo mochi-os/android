@@ -18,6 +18,10 @@
     <string name="crm_settings">Cilësimet</string>
     <string name="crm_design">Dizajni</string>
     <string name="crm_export_failed">Eksporti nuk u ruajt dot</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">U eksportua pa %1$s bashkëngjitje</item>
+        <item quantity="other">U eksportua pa %1$s bashkëngjitje</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">U krijua</string>
     <string name="crm_sort_updated">U përditësua</string>

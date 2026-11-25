@@ -53,6 +53,10 @@
     <string name="crm_exporting">Preparing export…</string>
     <string name="crm_export_saved">CRM data saved</string>
     <string name="crm_export_failed">Couldn\'t save export</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exported without %1$s attachment</item>
+        <item quantity="other">Exported without %1$s attachments</item>
+    </plurals>
     <!-- The CSV export's first three column headings. -->
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">Class</string>

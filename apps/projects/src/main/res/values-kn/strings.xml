@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">ಅಥವಾ ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="projects_export">ಡೇಟಾ ರಫ್ತು ಮಾಡಿ</string>
     <string name="projects_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s ಲಗತ್ತು ಇಲ್ಲದೆ ರಫ್ತು ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ಲಗತ್ತುಗಳು ಇಲ್ಲದೆ ರಫ್ತು ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
     <string name="projects_export_saved">ಯೋಜನೆಯ ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>

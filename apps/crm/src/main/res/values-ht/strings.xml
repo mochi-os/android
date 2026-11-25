@@ -18,6 +18,9 @@
     <string name="crm_settings">Paramèt</string>
     <string name="crm_design">Konsepsyon</string>
     <string name="crm_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">Ekspòte san %1$s atachman</item>
+    </plurals>
     <string name="crm_sort_rank">Manyèl</string>
     <string name="crm_sort_created">Kreye</string>
     <string name="crm_sort_updated">Mete ajou</string>

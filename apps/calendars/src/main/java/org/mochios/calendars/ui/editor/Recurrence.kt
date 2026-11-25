@@ -103,8 +103,10 @@ data class Recurrence(
             if (allday) return DATE.format(day)
             if (floating) return PLAIN_STAMP.format(day.atTime(23, 59, 59))
             val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneOffset.UTC)
-            val ends = day.plusDays(1).atStartOfDay(id).minusSeconds(1)
-            return STAMP.format(ends.withZoneSameInstant(ZoneOffset.UTC))
+            // The second before the next day begins, which is placed where
+            // the server places it when the clocks skip or read it twice.
+            val ends = CalendarsMapping.placed(day.plusDays(1).atStartOfDay(), id) - 1
+            return STAMP.format(Instant.ofEpochSecond(ends).atZone(ZoneOffset.UTC))
         }
     }
 }

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">නැතහොත් ගොනුවක් උඩුගත කරන්න</string>
     <string name="projects_export">දත්ත නිර්යාත කරන්න</string>
     <string name="projects_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">ඇමුණුම් %1$s ක් නොමැතිව නිර්යාත කරන ලදී</item>
+        <item quantity="other">ඇමුණුම් %1$s ක් නොමැතිව නිර්යාත කරන ලදී</item>
+    </plurals>
     <string name="projects_export_saved">ව්‍යාපෘති දත්ත සුරකින ලදී</string>
     <string name="projects_exporting">නිර්යාතය සූදානම් කරමින්…</string>
     <string name="projects_board_add_column">තීරුවක් එක් කරන්න</string>

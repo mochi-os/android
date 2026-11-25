@@ -18,6 +18,10 @@
     <string name="crm_settings">Mga setting</string>
     <string name="crm_design">Disenyo</string>
     <string name="crm_export_failed">Hindi ma-save ang export</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Na-export nang walang %1$s attachment</item>
+        <item quantity="other">Na-export nang walang %1$s attachment</item>
+    </plurals>
     <string name="crm_sort_rank">Manwal</string>
     <string name="crm_sort_created">Nagawa</string>
     <string name="crm_sort_updated">Na-update</string>

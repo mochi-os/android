@@ -5,14 +5,17 @@
 
 package org.mochios.calendars.ui.calendar
 
+import org.mochios.android.sync.CalendarsMapping
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.editor.Scope
+import org.mochios.calendars.ui.editor.stated
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZoneOffset
+import java.time.temporal.ChronoUnit
 import kotlin.math.roundToInt
 
 /** The grid a dragged block snaps to, in hours: a quarter of an hour. */
@@ -43,14 +46,40 @@ fun resized(cut: Cut, hours: Float): Cut {
 
 /**
  * The instant [hours] from midnight on [day] by the clock in [zone], to the
- * minute; 24 is the next day's midnight. A time a clock change skips reads
- * as the first one after it.
+ * minute; 24 is the next day's midnight. A time the clocks skip or read twice
+ * is placed where the server places it ([CalendarsMapping.placed]), as the
+ * web client places a drop.
  */
 fun at(day: LocalDate, hours: Float, zone: ZoneId): Long {
     val minutes = (hours * 60).roundToInt()
-    if (minutes >= 1440) return day.plusDays(1).atStartOfDay(zone).toEpochSecond()
-    return day.atTime(LocalTime.ofSecondOfDay(minutes.coerceAtLeast(0) * 60L)).atZone(zone).toEpochSecond()
+    if (minutes >= 1440) return CalendarsMapping.placed(day.plusDays(1).atStartOfDay(), zone)
+    return CalendarsMapping.placed(day.atTime(LocalTime.ofSecondOfDay(minutes.coerceAtLeast(0) * 60L)), zone)
 }
+
+/**
+ * Where [seconds], an occurrence of a series or the series' own start, lands
+ * when a drag moves the occurrence at [from] to [to]: as far on by the clock
+ * in [zone] as that one moved, so a time across a clock change from it keeps
+ * its time of day there, placed where the server places it
+ * ([CalendarsMapping.placed]). The occurrence dragged lands where it was
+ * dropped. [seconds] and [from] read as [own] and [opened], the readings
+ * the listing gives them where their zone skips the one their instants read
+ * ([Instance.reading]), so a series written at 02:30 on a day the clocks
+ * skip, drawn at 01:30, moves from 02:30.
+ */
+fun slid(seconds: Long, from: Long, to: Long, zone: ZoneId, own: String? = null, opened: String? = null): Long {
+    if (seconds == from) return to
+    val clock = { at: Long, given: String? -> stated(given) ?: Instant.ofEpochSecond(at).atZone(zone).toLocalDateTime() }
+    return CalendarsMapping.placed(clock(seconds, own).plusMinutes(ChronoUnit.MINUTES.between(clock(from, opened), clock(to, null))), zone)
+}
+
+/**
+ * [seconds] moved on by whole [days] by the clock in [zone], as a chip
+ * dragged to another day moves each end, placed where the server places it
+ * ([CalendarsMapping.placed]).
+ */
+fun stepped(seconds: Long, days: Long, zone: ZoneId): Long =
+    CalendarsMapping.placed(Instant.ofEpochSecond(seconds).atZone(zone).toLocalDateTime().plusDays(days), zone)
 
 /**
  * The occurrence's ends, epoch seconds, after its block on [day] went from

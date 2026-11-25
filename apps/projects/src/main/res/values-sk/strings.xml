@@ -312,6 +312,11 @@
     <string name="projects_design_or_upload_json">Alebo nahrajte súbor</string>
     <string name="projects_export">Exportovať údaje</string>
     <string name="projects_export_failed">Export sa nepodarilo uložiť</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exportované bez %1$s prílohy</item>
+        <item quantity="few">Exportované bez %1$s príloh</item>
+        <item quantity="other">Exportované bez %1$s príloh</item>
+    </plurals>
     <string name="projects_export_saved">Dáta projektu uložené</string>
     <string name="projects_exporting">Pripravuje sa export…</string>
     <string name="projects_board_add_column">Pridať stĺpec</string>

@@ -314,6 +314,14 @@
     <string name="projects_design_or_upload_json">أو ارفع ملفًا</string>
     <string name="projects_export">تصدير البيانات</string>
     <string name="projects_export_failed">تعذّر حفظ التصدير</string>
+    <plurals name="projects_export_missing">
+        <item quantity="zero">تم التصدير بدون %1$s مرفق</item>
+        <item quantity="one">تم التصدير بدون مرفق واحد</item>
+        <item quantity="two">تم التصدير بدون مرفقين</item>
+        <item quantity="few">تم التصدير بدون %1$s مرفقات</item>
+        <item quantity="many">تم التصدير بدون %1$s مرفقًا</item>
+        <item quantity="other">تم التصدير بدون %1$s مرفق</item>
+    </plurals>
     <string name="projects_export_saved">تم حفظ بيانات المشروع</string>
     <string name="projects_exporting">جارٍ تحضير التصدير…</string>
     <string name="projects_board_add_column">إضافة عمود</string>

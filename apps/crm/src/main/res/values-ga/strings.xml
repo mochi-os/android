@@ -18,6 +18,13 @@
     <string name="crm_settings">Socruithe</string>
     <string name="crm_design">Dearadh</string>
     <string name="crm_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="two">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="few">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="many">Easpórtáilte gan %1$s gceangaltán</item>
+        <item quantity="other">Easpórtáilte gan %1$s ceangaltán</item>
+    </plurals>
     <string name="crm_sort_rank">Láimhe</string>
     <string name="crm_sort_created">Cruthaithe</string>
     <string name="crm_sort_updated">Nuashonraithe</string>

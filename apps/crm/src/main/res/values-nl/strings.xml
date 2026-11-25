@@ -18,6 +18,10 @@
     <string name="crm_settings">Instellingen</string>
     <string name="crm_design">Ontwerp</string>
     <string name="crm_export_failed">De export kon niet worden opgeslagen</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Geëxporteerd zonder %1$s bijlage</item>
+        <item quantity="other">Geëxporteerd zonder %1$s bijlagen</item>
+    </plurals>
     <string name="crm_sort_rank">Handmatig</string>
     <string name="crm_sort_created">Aangemaakt</string>
     <string name="crm_sort_updated">Bijgewerkt</string>

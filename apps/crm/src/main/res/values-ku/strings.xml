@@ -18,6 +18,10 @@
     <string name="crm_settings">Mîheng</string>
     <string name="crm_design">Sêwiran</string>
     <string name="crm_export_failed">Nekarî hinardekirin tomar bike</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Bê %1$s pêvek hat hinardekirin</item>
+        <item quantity="other">Bê %1$s pêvek hat hinardekirin</item>
+    </plurals>
     <string name="crm_sort_rank">Destî</string>
     <string name="crm_sort_created">Hat çêkirin</string>
     <string name="crm_sort_updated">Nûjen kirin</string>

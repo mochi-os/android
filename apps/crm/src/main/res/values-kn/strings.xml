@@ -18,6 +18,10 @@
     <string name="crm_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="crm_design">ವಿನ್ಯಾಸ</string>
     <string name="crm_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s ಲಗತ್ತು ಇಲ್ಲದೆ ರಫ್ತು ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ಲಗತ್ತುಗಳು ಇಲ್ಲದೆ ರಫ್ತು ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
     <string name="crm_sort_rank">ಮ್ಯಾನುಯಲ್</string>
     <string name="crm_sort_created">ರಚಿಸಲಾಗಿದೆ</string>
     <string name="crm_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>

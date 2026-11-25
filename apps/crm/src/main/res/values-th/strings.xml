@@ -18,6 +18,9 @@
     <string name="crm_settings">การตั้งค่า</string>
     <string name="crm_design">ออกแบบ</string>
     <string name="crm_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">ส่งออกแล้ว โดยไม่มีไฟล์แนบ %1$s ไฟล์</item>
+    </plurals>
     <string name="crm_sort_rank">ด้วยตนเอง</string>
     <string name="crm_sort_created">สร้างแล้ว</string>
     <string name="crm_sort_updated">อัปเดตแล้ว</string>

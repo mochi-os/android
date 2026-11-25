@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">O carrega un fitxer</string>
     <string name="projects_export">Exporta les dades</string>
     <string name="projects_export_failed">No s\'ha pogut desar l\'exportació</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exportat sense %1$s fitxer adjunt</item>
+        <item quantity="other">Exportat sense %1$s fitxers adjunts</item>
+    </plurals>
     <string name="projects_export_saved">Dades del projecte desades</string>
     <string name="projects_exporting">S\'està preparant l\'exportació…</string>
     <string name="projects_board_add_column">Afegeix una columna</string>

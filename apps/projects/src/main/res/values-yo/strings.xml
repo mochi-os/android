@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">Tàbí gbé fáìlì kan sókè</string>
     <string name="projects_export">Gbé dátà jáde</string>
     <string name="projects_export_failed">A kò lè fi ìkójáde pamọ́</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">A ti gbé e jáde láìsí àsomọ́ %1$s</item>
+    </plurals>
     <string name="projects_export_saved">A ti fi dátà iṣẹ́ pamọ́</string>
     <string name="projects_exporting">Ń múra ìkójáde sílẹ̀…</string>
     <string name="projects_board_add_column">Fi ọ̀wọ́n kún</string>

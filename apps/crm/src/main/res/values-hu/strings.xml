@@ -18,6 +18,10 @@
     <string name="crm_settings">Beállítások</string>
     <string name="crm_design">Tervezés</string>
     <string name="crm_export_failed">Az exportálást nem sikerült menteni</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s melléklet nélkül exportálva</item>
+        <item quantity="other">%1$s melléklet nélkül exportálva</item>
+    </plurals>
     <string name="crm_sort_rank">Kézi</string>
     <string name="crm_sort_created">Létrehozva</string>
     <string name="crm_sort_updated">Frissítve</string>

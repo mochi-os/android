@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Yookaan faayilii ol kaa\'i</string>
     <string name="projects_export">Daataa baasi</string>
     <string name="projects_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Maxxansa %1$s malee baafame</item>
+        <item quantity="other">Maxxansoota %1$s malee baafame</item>
+    </plurals>
     <string name="projects_export_saved">Daataan piroojektii olkaa\'ameera</string>
     <string name="projects_exporting">Alergiinsa qopheessaa jira…</string>
     <string name="projects_board_add_column">Tarjaa dabali</string>

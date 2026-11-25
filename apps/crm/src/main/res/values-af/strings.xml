@@ -18,6 +18,10 @@
     <string name="crm_settings">Instellings</string>
     <string name="crm_design">Ontwerp</string>
     <string name="crm_export_failed">Kon nie die uitvoer stoor nie</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Uitgevoer sonder %1$s aanhegsel</item>
+        <item quantity="other">Uitgevoer sonder %1$s aanhegsels</item>
+    </plurals>
     <string name="crm_sort_rank">Handmatig</string>
     <string name="crm_sort_created">Geskep</string>
     <string name="crm_sort_updated">Opgedateer</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">অথবা একটি ফাইল আপলোড করুন</string>
     <string name="projects_export">ডেটা এক্সপোর্ট করুন</string>
     <string name="projects_export_failed">রপ্তানি সংরক্ষণ করা যায়নি</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$sটি সংযুক্তি ছাড়া এক্সপোর্ট করা হয়েছে</item>
+        <item quantity="other">%1$sটি সংযুক্তি ছাড়া এক্সপোর্ট করা হয়েছে</item>
+    </plurals>
     <string name="projects_export_saved">প্রকল্পের ডেটা সংরক্ষিত হয়েছে</string>
     <string name="projects_exporting">রপ্তানি প্রস্তুত করা হচ্ছে…</string>
     <string name="projects_board_add_column">কলাম যোগ করুন</string>

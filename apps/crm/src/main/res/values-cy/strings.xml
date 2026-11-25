@@ -18,6 +18,14 @@
     <string name="crm_settings">Gosodiadau</string>
     <string name="crm_design">Dyluniad</string>
     <string name="crm_export_failed">Methwyd cadw\'r allforio</string>
+    <plurals name="crm_export_missing">
+        <item quantity="zero">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="one">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="two">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="few">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="many">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="other">Wedi\'i allforio heb %1$s atodiad</item>
+    </plurals>
     <string name="crm_sort_rank">Â llaw</string>
     <string name="crm_sort_created">Wedi\'i greu</string>
     <string name="crm_sort_updated">Wedi\'i ddiweddaru</string>

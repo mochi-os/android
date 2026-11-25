@@ -18,6 +18,11 @@
     <string name="crm_settings">Iestatījumi</string>
     <string name="crm_design">Dizains</string>
     <string name="crm_export_failed">Neizdevās saglabāt eksportu</string>
+    <plurals name="crm_export_missing">
+        <item quantity="zero">Eksportēts bez %1$s pielikumiem</item>
+        <item quantity="one">Eksportēts bez %1$s pielikuma</item>
+        <item quantity="other">Eksportēts bez %1$s pielikumiem</item>
+    </plurals>
     <string name="crm_sort_rank">Manuāls</string>
     <string name="crm_sort_created">Izveidots</string>
     <string name="crm_sort_updated">Atjaunināts</string>

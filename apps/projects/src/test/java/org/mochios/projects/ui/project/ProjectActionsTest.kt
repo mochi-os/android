@@ -116,6 +116,9 @@ class ProjectActionsTest {
     /** The status options of a task, as `{"id", "name"}` objects. */
     @Volatile private var options = """[{"id": "todo", "name": "To do", "rank": 1}, {"id": "doing", "name": "Doing", "rank": 2}, {"id": "done", "name": "Done", "rank": 3}]"""
 
+    /** The status options of a bug, when not a task's. */
+    @Volatile private var bugOptions: String? = null
+
     /** The size options of a task. */
     @Volatile private var sizes = """[{"id": "small", "name": "Small", "rank": 1}, {"id": "large", "name": "Large", "rank": 2}]"""
 
@@ -197,7 +200,7 @@ class ProjectActionsTest {
                                 {"id": "size", "name": "Size", "fieldtype": "enumerated", "rank": 3}],
                             "bug": [{"id": "title", "name": "Title", "fieldtype": "text", "rank": 1}, {"id": "status", "name": "Status", "fieldtype": "enumerated", "rank": 2}]},
                         "options": {"task": {"status": $options, "size": $sizes},
-                            "bug": {"status": $options}},
+                            "bug": {"status": ${bugOptions ?: options}}},
                         "views": [{"id": "v1", "name": "Board", "viewtype": "board", "columns": "status", "classes": ["task"], "filter": "status:todo"},
                             {"id": "v2", "name": "List", "viewtype": "list"},
                             {"id": "v3", "name": "Lanes", "viewtype": "board", "columns": "status", "rows": "size", "classes": ["task"]}],
@@ -523,6 +526,55 @@ class ProjectActionsTest {
         assertEquals("u", sent("p1/-/objects/n/move")["after"]?.asString)
     }
 
+    /** The ids the column for no value draws, in the order the board draws them. */
+    private fun none(model: ProjectViewModel): List<String> =
+        model.sortObjects(model.uiState.value.objects.filter { obj -> obj.stringValue("status") !in setOf("todo", "doing", "done") }).map { obj -> obj.id }
+
+    /** Vale, with no status, past Stale: the column for no value's last card. */
+    private val vale = item("v", "task", "", "a8", "Vale", number = 8)
+
+    /** Gamma cleared on the column for no value, dropped below [after]; asserts it drawn there, of the ids [drawn] gives, at once. */
+    private fun clearBelow(model: ProjectViewModel, after: String, message: String, expected: List<String>, drawn: (ProjectViewModel) -> List<String>, field: String = "status") {
+        answering = CountDownLatch(1)
+        model.moveObject("g", field, "", after = after, clear = true)
+        assertEquals(message, expected, drawn(model))
+        answering?.countDown()
+        until { asked.any { (path, _) -> path == "p1/-/objects/g/move" } }
+        assertEquals(after, sent("p1/-/objects/g/move")["after"]?.asString)
+        assertEquals("true", sent("p1/-/objects/g/move")["clear"]?.asString)
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is drawn beside a card whose status is a deleted option's`() {
+        objects = "$objects,$vale"
+        clearBelow(unset(), "s", "THE POINT: below Stale at once, as the server places it", listOf("u", "s", "g", "v"), this::none)
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is drawn beside a card whose status only another class offers`() {
+        bugOptions = options.removeSuffix("]") + """, {"id": "triage", "name": "Triage", "rank": 4}]"""
+        // Tally, a bug in Triage, which a task's status does not offer.
+        objects = "$objects," + item("t", "bug", "triage", "a7", "Tally", number = 9) + ",$vale"
+        clearBelow(unset(), "t", "THE POINT: below Tally at once, as the server places it", listOf("u", "s", "t", "g", "v"), this::none)
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is not drawn beside a card holding an option of its own class`() {
+        objects = "$objects,$vale"
+        // Alpha, named after, is in To do.
+        clearBelow(unset(), "a", "THE POINT: at the column's end, as the server places it with no neighbour there", listOf("u", "s", "v", "g"), this::none)
+    }
+
+    @Test
+    fun `a card cleared of a field its class holds as text is not drawn beside a card holding a value of it`() {
+        objects = "$objects,$vale"
+        clearBelow(
+            unset(), "s", "THE POINT: after every key, as the server places it, a text field having no column for no value",
+            listOf("a", "c", "b", "h", "u", "s", "v", "g"), { model -> model.sortObjects(model.uiState.value.objects).map { obj -> obj.id } },
+            field = "title",
+        )
+    }
+
     @Test
     fun `a card dropped on another in its own column names no column`() {
         val model = project()
@@ -800,6 +852,19 @@ class ProjectActionsTest {
         model.moveBeside("a", target = "u", below = true, field = "status", value = "todo", rowField = "size", rowValue = "")
         until { asked.any { (path, _) -> path == "p1/-/objects/a/move" } }
         assertEquals("THE POINT: from Small into the lane for none", """{"field":"size","value":""}""", sent("p1/-/objects/a/move")["row"]?.asString)
+    }
+
+    @Test
+    fun `a card dropped in the lane for none is drawn beside a card whose size no option has`() {
+        val model = lanes()
+        answering = CountDownLatch(1)
+        // Alpha dropped below Huge, whose size no lane is drawn for.
+        model.moveBeside("a", target = "v", below = true, field = "status", value = "todo", rowField = "size", rowValue = "")
+        assertEquals("THE POINT: below Huge at once, as the server places it", listOf("u", "v", "a"), todo(model))
+        answering?.countDown()
+        until { asked.any { (path, _) -> path == "p1/-/objects/a/move" } }
+        assertEquals("v", sent("p1/-/objects/a/move")["after"]?.asString)
+        assertEquals("""{"field":"size","value":""}""", sent("p1/-/objects/a/move")["row"]?.asString)
     }
 
     @Test

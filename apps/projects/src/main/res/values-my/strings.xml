@@ -309,6 +309,9 @@
     <string name="projects_design_or_upload_json">သို့မဟုတ် ဖိုင်တစ်ခု အပ်လုဒ်လုပ်ပါ</string>
     <string name="projects_export">ဒေတာ ထုတ်ယူရန်</string>
     <string name="projects_export_failed">တင်ပို့မှုကို သိမ်းဆည်း၍မရပါ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">ပူးတွဲဖိုင် %1$s ခု မပါဘဲ ထုတ်ယူပြီးပါပြီ</item>
+    </plurals>
     <string name="projects_export_saved">ပရောဂျက်ဒေတာ သိမ်းဆည်းပြီး</string>
     <string name="projects_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
     <string name="projects_board_add_column">ကော်လံ ထည့်မည်</string>

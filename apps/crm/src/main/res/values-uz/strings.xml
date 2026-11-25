@@ -18,6 +18,10 @@
     <string name="crm_settings">Sozlamalar</string>
     <string name="crm_design">Dizayn</string>
     <string name="crm_export_failed">Eksportni saqlab bo\'lmadi</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s biriktirmasiz eksport qilindi</item>
+        <item quantity="other">%1$s biriktirmasiz eksport qilindi</item>
+    </plurals>
     <string name="crm_sort_rank">Qoʻlda</string>
     <string name="crm_sort_created">Yaratildi</string>
     <string name="crm_sort_updated">Yangilangan</string>

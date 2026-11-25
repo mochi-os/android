@@ -37,3 +37,62 @@ fun boardOptions(details: CrmDetails, view: CrmView?, field: String): List<Field
     val classId = boardClass(details, view) ?: return emptyList()
     return details.options[classId]?.get(field).orEmpty()
 }
+
+/**
+ * Whether an object of [classId] takes [value] for [field] when a move or a
+ * reparent cascades it from an ancestor, as the server decides: the class has
+ * the field and the value is one the field accepts. Fields are per class, so
+ * a child of another class may lack the field, or not offer the option, its
+ * ancestor's move names. An empty value clears the field and always passes.
+ */
+fun cascadeAccepts(details: CrmDetails, classId: String, field: String, value: String): Boolean {
+    val declared = details.fields[classId]?.firstOrNull { candidate -> candidate.id == field } ?: return false
+    if (value.isEmpty()) return true
+    val number = { bound: String -> bound.takeIf { text -> NUMBER.matches(text) }?.toDouble() }
+    return when (declared.fieldtype) {
+        "enumerated" -> details.options[classId]?.get(field).orEmpty().any { option -> option.id == value }
+        "checkbox" -> value in setOf("0", "1", "true", "false")
+        "number" -> NUMBER.matches(value) && value.toDouble().let { amount ->
+            number(declared.min)?.let { minimum -> amount >= minimum } != false &&
+                number(declared.max)?.let { maximum -> amount <= maximum } != false
+        }
+        "date" -> DATE.matches(value) &&
+            (declared.min.isEmpty() || value >= declared.min) && (declared.max.isEmpty() || value <= declared.max)
+        "text" -> (declared.minlength == 0 || value.length >= declared.minlength) &&
+            (declared.maxlength == 0 || value.length <= declared.maxlength)
+        "user" -> ENTITY.matches(value)
+        else -> true
+    }
+}
+
+private val NUMBER = Regex("""-?\d+(\.\d+)?""")
+private val DATE = Regex("""\d{4}-\d{2}-\d{2}""")
+private val ENTITY = Regex("""\w{49,51}""")
+
+/**
+ * [obj] with those of [values] (field id to value) its class takes
+ * ([cascadeAccepts]), or [obj] itself when it takes none.
+ */
+fun cascaded(details: CrmDetails, obj: CrmObject, values: Map<String, String>): CrmObject {
+    var taken: Map<String, Any?>? = null
+    for ((field, value) in values) {
+        if (obj.stringValue(field) == value) continue
+        if (!cascadeAccepts(details, obj.objectClass, field, value)) continue
+        taken = (taken ?: obj.values) + (field to value)
+    }
+    return taken?.let { values -> obj.copy(values = values) } ?: obj
+}
+
+/**
+ * The board column and lane values a move or a reparent under [parent]
+ * copies from it, for every view's column and lane field, as the server
+ * copies them: a field the parent holds no value for is cleared.
+ */
+fun parentValues(details: CrmDetails, parent: CrmObject): Map<String, String> {
+    val values = LinkedHashMap<String, String>()
+    for (view in details.views) {
+        if (view.columns.isNotBlank()) values[view.columns] = parent.stringValue(view.columns)
+        if (view.rows.isNotBlank()) values[view.rows] = parent.stringValue(view.rows)
+    }
+    return values
+}

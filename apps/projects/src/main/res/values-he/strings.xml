@@ -312,6 +312,11 @@
     <string name="projects_design_or_upload_json">או העלה קובץ</string>
     <string name="projects_export">ייצוא נתונים</string>
     <string name="projects_export_failed">לא ניתן היה לשמור את הייצוא</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">הייצוא הושלם ללא קובץ מצורף אחד</item>
+        <item quantity="two">הייצוא הושלם ללא שני קבצים מצורפים</item>
+        <item quantity="other">הייצוא הושלם ללא %1$s קבצים מצורפים</item>
+    </plurals>
     <string name="projects_export_saved">נתוני הפרויקט נשמרו</string>
     <string name="projects_exporting">מכין את הייצוא…</string>
     <string name="projects_board_add_column">הוסף עמודה</string>

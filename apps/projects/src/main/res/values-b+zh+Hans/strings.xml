@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">或上传文件</string>
     <string name="projects_export">导出数据</string>
     <string name="projects_export_failed">无法保存导出内容</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">已导出，缺少 %1$s 个附件</item>
+    </plurals>
     <string name="projects_export_saved">项目数据已保存</string>
     <string name="projects_exporting">正在准备导出…</string>
     <string name="projects_board_add_column">添加列</string>

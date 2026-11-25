@@ -18,6 +18,12 @@
     <string name="crm_settings">Налады</string>
     <string name="crm_design">Дызайн</string>
     <string name="crm_export_failed">Не ўдалося захаваць экспарт</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Экспартавана без %1$s укладання</item>
+        <item quantity="few">Экспартавана без %1$s укладанняў</item>
+        <item quantity="many">Экспартавана без %1$s укладанняў</item>
+        <item quantity="other">Экспартавана без %1$s укладання</item>
+    </plurals>
     <string name="crm_sort_rank">Уручную</string>
     <string name="crm_sort_created">Створана</string>
     <string name="crm_sort_updated">Абноўлена</string>

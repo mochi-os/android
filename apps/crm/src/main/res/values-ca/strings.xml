@@ -18,6 +18,10 @@
     <string name="crm_settings">Configuració</string>
     <string name="crm_design">Disseny</string>
     <string name="crm_export_failed">No s\'ha pogut desar l\'exportació</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exportat sense %1$s fitxer adjunt</item>
+        <item quantity="other">Exportat sense %1$s fitxers adjunts</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Creat</string>
     <string name="crm_sort_updated">Actualitzat</string>

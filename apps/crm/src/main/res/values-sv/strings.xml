@@ -18,6 +18,10 @@
     <string name="crm_settings">Inställningar</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Exporten kunde inte sparas</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exporterat utan %1$s bilaga</item>
+        <item quantity="other">Exporterat utan %1$s bilagor</item>
+    </plurals>
     <string name="crm_sort_rank">Manuell</string>
     <string name="crm_sort_created">Skapad</string>
     <string name="crm_sort_updated">Uppdaterad</string>

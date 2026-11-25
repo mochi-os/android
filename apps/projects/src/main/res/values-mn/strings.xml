@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Эсвэл файл байршуулна уу</string>
     <string name="projects_export">Өгөгдөл экспортлох</string>
     <string name="projects_export_failed">Экспортыг хадгалж чадсангүй</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s хавсралтгүйгээр экспортлогдлоо</item>
+        <item quantity="other">%1$s хавсралтгүйгээр экспортлогдлоо</item>
+    </plurals>
     <string name="projects_export_saved">Төслийн өгөгдөл хадгалагдлаа</string>
     <string name="projects_exporting">Экспортыг бэлтгэж байна…</string>
     <string name="projects_board_add_column">Багана нэмэх</string>

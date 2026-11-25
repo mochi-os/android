@@ -18,6 +18,11 @@
     <string name="crm_settings">Nustatymai</string>
     <string name="crm_design">Dizainas</string>
     <string name="crm_export_failed">Nepavyko išsaugoti eksporto</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Eksportuota be %1$s priedo</item>
+        <item quantity="few">Eksportuota be %1$s priedų</item>
+        <item quantity="other">Eksportuota be %1$s priedų</item>
+    </plurals>
     <string name="crm_sort_rank">Rankinis</string>
     <string name="crm_sort_created">Sukurta</string>
     <string name="crm_sort_updated">Atnaujinta</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Vagy töltsön fel egy fájlt</string>
     <string name="projects_export">Adatok exportálása</string>
     <string name="projects_export_failed">Az exportálást nem sikerült menteni</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s melléklet nélkül exportálva</item>
+        <item quantity="other">%1$s melléklet nélkül exportálva</item>
+    </plurals>
     <string name="projects_export_saved">A projekt adatai mentve</string>
     <string name="projects_exporting">Exportálás előkészítése…</string>
     <string name="projects_board_add_column">Oszlop hozzáadása</string>

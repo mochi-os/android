@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Eller ladda upp en fil</string>
     <string name="projects_export">Exportera data</string>
     <string name="projects_export_failed">Exporten kunde inte sparas</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exporterat utan %1$s bilaga</item>
+        <item quantity="other">Exporterat utan %1$s bilagor</item>
+    </plurals>
     <string name="projects_export_saved">Projektdata sparad</string>
     <string name="projects_exporting">Förbereder export…</string>
     <string name="projects_board_add_column">Lägg till kolumn</string>

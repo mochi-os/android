@@ -18,6 +18,10 @@
     <string name="crm_settings">Qindaa\'inoota</string>
     <string name="crm_design">Boci</string>
     <string name="crm_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Maxxansa %1$s malee baafame</item>
+        <item quantity="other">Maxxansoota %1$s malee baafame</item>
+    </plurals>
     <string name="crm_sort_rank">Harkaan</string>
     <string name="crm_sort_created">Uumame</string>
     <string name="crm_sort_updated">Haaromfameera</string>

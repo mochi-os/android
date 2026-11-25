@@ -311,6 +311,11 @@
     <string name="projects_design_or_upload_json">Sau încarcă un fișier</string>
     <string name="projects_export">Exportă datele</string>
     <string name="projects_export_failed">Exportul nu a putut fi salvat</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exportat fără %1$s atașament</item>
+        <item quantity="few">Exportat fără %1$s atașamente</item>
+        <item quantity="other">Exportat fără %1$s de atașamente</item>
+    </plurals>
     <string name="projects_export_saved">Datele proiectului au fost salvate</string>
     <string name="projects_exporting">Se pregătește exportul…</string>
     <string name="projects_board_add_column">Adaugă coloană</string>

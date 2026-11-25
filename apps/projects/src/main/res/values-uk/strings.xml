@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">Або завантажте файл</string>
     <string name="projects_export">Експортувати дані</string>
     <string name="projects_export_failed">Не вдалося зберегти експорт</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Експортовано без %1$s вкладення</item>
+        <item quantity="few">Експортовано без %1$s вкладень</item>
+        <item quantity="many">Експортовано без %1$s вкладень</item>
+        <item quantity="other">Експортовано без %1$s вкладення</item>
+    </plurals>
     <string name="projects_export_saved">Дані проєкту збережено</string>
     <string name="projects_exporting">Підготовка експорту…</string>
     <string name="projects_board_add_column">Додати стовпець</string>

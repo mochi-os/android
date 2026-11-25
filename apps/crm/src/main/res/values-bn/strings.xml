@@ -18,6 +18,10 @@
     <string name="crm_settings">সেটিংস</string>
     <string name="crm_design">ডিজাইন</string>
     <string name="crm_export_failed">রপ্তানি সংরক্ষণ করা যায়নি</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$sটি সংযুক্তি ছাড়া এক্সপোর্ট করা হয়েছে</item>
+        <item quantity="other">%1$sটি সংযুক্তি ছাড়া এক্সপোর্ট করা হয়েছে</item>
+    </plurals>
     <string name="crm_sort_rank">ম্যানুয়াল</string>
     <string name="crm_sort_created">তৈরি হয়েছে</string>
     <string name="crm_sort_updated">আপডেট হয়েছে</string>

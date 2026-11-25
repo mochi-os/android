@@ -107,6 +107,9 @@ class CalendarFlowTest {
     /** Holds every read [refusals] lets through until released. */
     @Volatile private var stall: CountDownLatch? = null
 
+    /** Holds each write of the stored event, a move's, until released. */
+    @Volatile private var writes: CountDownLatch? = null
+
     /** Another occurrence of the stand-up, listed in a range that holds it, or 0 for none. */
     @Volatile private var later = 0L
 
@@ -159,6 +162,7 @@ class CalendarFlowTest {
                         if (refusing) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""") else ok("{}")
                     "-/link/revoke" -> ok("""{"revoked": $revocable}""")
                     "-/events/update" -> {
+                        writes?.await(10, TimeUnit.SECONDS)
                         val body = request.body.readUtf8()
                         written = body
                         if (body.contains("\"etag\":\"v$version\"")) {
@@ -170,6 +174,7 @@ class CalendarFlowTest {
                         }
                     }
                     "-/events/split" -> {
+                        writes?.await(10, TimeUnit.SECONDS)
                         written = request.body.readUtf8()
                         version++
                         cut = following
@@ -250,13 +255,13 @@ class CalendarFlowTest {
     private val LATE = """, {"name": "VEVENT", "properties": [
             {"name": "UID", "params": {}, "value": "uid-1"},
             {"name": "SUMMARY", "params": {}, "value": "Late"},
-            {"name": "RECURRENCE-ID", "params": {}, "value": "20261012T090000Z"},
-            {"name": "DTSTART", "params": {}, "value": "20261013T130000Z"},
-            {"name": "DTEND", "params": {}, "value": "20261013T140000Z"}
+            {"name": "RECURRENCE-ID", "params": {"TZID": ["Europe/London"]}, "value": "20261012T100000"},
+            {"name": "DTSTART", "params": {"TZID": ["Europe/London"]}, "value": "20261013T140000"},
+            {"name": "DTEND", "params": {"TZID": ["Europe/London"]}, "value": "20261013T150000"}
         ], "components": []}"""
 
-    private val TIMED = """{"name": "DTSTART", "params": {}, "value": "20261005T090000Z"},
-            {"name": "DTEND", "params": {}, "value": "20261005T100000Z"}"""
+    private val TIMED = """{"name": "DTSTART", "params": {"TZID": ["Europe/London"]}, "value": "20261005T100000"},
+            {"name": "DTEND", "params": {"TZID": ["Europe/London"]}, "value": "20261005T110000"}"""
 
     private val DAY = """{"name": "DTSTART", "params": {"VALUE": ["DATE"]}, "value": "20261008"},
             {"name": "DTEND", "params": {"VALUE": ["DATE"]}, "value": "20261009"}"""
@@ -753,6 +758,565 @@ class CalendarFlowTest {
     }
 
     @Test
+    fun `all events dragged across the clock change keeps a series stored in UTC in UTC, its occurrence where it was dropped`() {
+        weekly = true
+        // Weekly at 09:00 UTC from Monday 5 October, 10:00 in London's summer time.
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {}, "value": "20261005T090000Z"},
+            {"name": "DTEND", "params": {}, "value": "20261005T100000Z"},
+            {"name": "RRULE", "params": {}, "value": "FREQ=WEEKLY"}
+        ], "components": []}]"""
+        val model = model()
+        val said = said(model)
+        // Saturday 24 October 10:00 in summer time to Sunday 25 October 10:00
+        // in winter time: 25 hours on by the clock of UTC, which the series
+        // repeats on.
+        val saturday = LocalDate.of(2026, 10, 24).atTime(10, 0).atZone(london).toEpochSecond()
+        val sunday = LocalDate.of(2026, 10, 25).atTime(10, 0).atZone(london).toEpochSecond()
+        val instance = org.mochios.calendars.model.Instance(
+            event = "e1", calendar = "c1", start = saturday, finish = saturday + 3_600, recurring = true,
+        )
+        model.move(instance, sunday, sunday + 3_600, org.mochios.calendars.ui.editor.Scope.ALL)
+        until { said.isNotEmpty() }
+        assertEquals(CalendarEvent.Moved, said.single())
+        // From 09:00 UTC on the 5th to 10:00 UTC on the 6th, so Sunday's
+        // occurrence falls at 10:00 UTC, 10:00 in London, where it was dropped.
+        assertEquals(
+            "THE POINT: still in UTC and 25 hours on, not a day on to 09:00 UTC or into London's zone",
+            "20261006T100000Z",
+            begins(written),
+        )
+    }
+
+    /** An instant, written in UTC. */
+    private fun utc(text: String) = Instant.parse(text).epochSecond
+
+    /** A model whose user is in [zone], their week starting on Monday. */
+    private fun model(zone: String): CalendarViewModel {
+        val viewer = object : org.mochios.calendars.di.Viewer {
+            override fun zone(): String = zone
+            override fun week(): Int = 1
+            override suspend fun server(): String = "https://example.org"
+        }
+        return CalendarViewModel(context, repository, viewer).also { model ->
+            until { !model.uiState.value.isLoading }
+        }
+    }
+
+    @Test
+    fun `a series stored in UTC that the listing names UTC is drawn on UTC's clock when dragged across the clock change`() {
+        weekly = true
+        // The series at 09:00 UTC, listed in UTC: Saturday 24 October 2026,
+        // 10:00 in London's summer time, and Monday the 26th, 09:00 in its
+        // winter time, beside the 5 October occurrence every listing holds.
+        val saturday = utc("2026-10-24T09:00:00Z")
+        val monday = utc("2026-10-26T09:00:00Z")
+        val listed = { at: Long ->
+            at to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $at, "finish": ${at + 3_600},
+                "recurring": true, "zone": {"start": "UTC", "finish": "UTC"}}"""
+        }
+        extra = listOf(listed(saturday), listed(monday))
+        val model = model()
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2026, 10, 24))
+        until { model.uiState.value.instances.map { it.start }.containsAll(listOf(saturday, monday)) }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        // Saturday's dropped at 10:00 on Sunday the 25th, in winter time: 25
+        // hours on by UTC's clock, a day by London's.
+        val instance = model.uiState.value.instances.first { it.start == saturday }
+        model.move(instance, utc("2026-10-25T10:00:00Z"), utc("2026-10-25T11:00:00Z"), org.mochios.calendars.ui.editor.Scope.ALL)
+        val drawn = model.uiState.value.instances.filter { it.event == "e1" }.map { it.start }.sorted()
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        assertEquals(
+            "THE POINT: each 25 hours on, at 10:00 UTC, as the write puts the series, not a day on by London's clock",
+            listOf(utc("2026-10-06T10:00:00Z"), utc("2026-10-25T10:00:00Z"), utc("2026-10-27T10:00:00Z")),
+            drawn,
+        )
+    }
+
+    // ---- an occurrence on a day the clocks skip, dragged to the next day ----
+    //
+    // New York's clocks go from 02:00 to 03:00 on 10 March 2024, so the
+    // server lists a daily 02:30 series that day at 01:30 in winter time.
+
+    /**
+     * What dragging the 10th's occurrence of a daily New York series from
+     * [day] at 02:30 onto the 11th for [scope] writes: the DTSTART of the
+     * component that replaces the 10th's occurrence, or with no [replaced]
+     * the master's.
+     */
+    private fun dragged(day: String, scope: org.mochios.calendars.ui.editor.Scope, replaced: String? = null): String? {
+        weekly = true
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {"TZID": ["America/New_York"]}, "value": "${day}T023000"},
+            {"name": "DTEND", "params": {"TZID": ["America/New_York"]}, "value": "${day}T033000"},
+            {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"}
+        ], "components": []}]"""
+        val tenth = utc("2024-03-10T06:30:00Z")
+        extra = listOf(
+            tenth to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $tenth, "finish": ${tenth + 3_600},
+                "recurring": true, "zone": {"start": "America/New_York", "finish": "America/New_York"}}""",
+        )
+        val model = model("America/New_York")
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2024, 3, 10))
+        until { model.uiState.value.instances.any { it.start == tenth } }
+        val said = said(model)
+        model.move(model.uiState.value.instances.first { it.start == tenth }, LocalDate.of(2024, 3, 11), scope)
+        until { said.isNotEmpty() }
+        return begins(written, replaced)
+    }
+
+    @Test
+    fun `a series dragged whole from a later occurrence on a day the clocks skip keeps its time of day`() {
+        assertEquals(
+            "THE POINT: the series still at 02:30, from a day on",
+            "20240302T023000",
+            dragged("20240301", org.mochios.calendars.ui.editor.Scope.ALL),
+        )
+    }
+
+    @Test
+    fun `a series dragged whole from its first occurrence on a day the clocks skip keeps its time of day`() {
+        assertEquals(
+            "THE POINT: the series still at 02:30, from a day on, not 01:30",
+            "20240311T023000",
+            dragged("20240310", org.mochios.calendars.ui.editor.Scope.ALL),
+        )
+    }
+
+    @Test
+    fun `a series cut by dragging its occurrence on a day the clocks skip goes on at its time of day`() {
+        dragged("20240301", org.mochios.calendars.ui.editor.Scope.FOLLOWING)
+        val following = com.google.gson.JsonParser.parseString(written).asJsonObject.getAsJsonArray("following")[0].asJsonObject
+        val start = following.getAsJsonArray("properties").map { it.asJsonObject }
+            .first { it.get("name").asString == "DTSTART" }.get("value").asString
+        assertEquals("THE POINT: the series goes on at 02:30 from the 11th, not 01:30", "20240311T023000", start)
+    }
+
+    @Test
+    fun `one occurrence on a day the clocks skip dragged alone lands where it is drawn`() {
+        assertEquals(
+            "THE POINT: at 01:30 on the 11th, where the 10th's occurrence is drawn, a day on",
+            "20240311T013000",
+            dragged("20240301", org.mochios.calendars.ui.editor.Scope.ONE, replaced = "20240310"),
+        )
+    }
+
+    /**
+     * Where the 10th's and 11th's occurrences of a daily New York series at
+     * 02:30 from the 1st are drawn once the 10th's is dragged onto the 11th
+     * for [scope] and the stored event is read, while the write is out.
+     */
+    private fun drawn(scope: org.mochios.calendars.ui.editor.Scope): List<Long> =
+        dragging { model, tenth -> model.move(tenth, LocalDate.of(2024, 3, 11), scope) }.first
+
+    /**
+     * Where the 10th's and 11th's occurrences of a daily New York series at
+     * 02:30 from the 1st are drawn once [move] drags the 10th's and the
+     * stored event is read, while the write is out, and then what the write
+     * sends.
+     */
+    private fun dragging(move: (CalendarViewModel, org.mochios.calendars.model.Instance) -> Unit): Pair<List<Long>, String> {
+        weekly = true
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {"TZID": ["America/New_York"]}, "value": "20240301T023000"},
+            {"name": "DTEND", "params": {"TZID": ["America/New_York"]}, "value": "20240301T033000"},
+            {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"}
+        ], "components": []}]"""
+        val days = listOf(utc("2024-03-10T06:30:00Z"), utc("2024-03-11T06:30:00Z"))
+        extra = days.map { at ->
+            at to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $at, "finish": ${at + 3_600},
+                "recurring": true, "zone": {"start": "America/New_York", "finish": "America/New_York"}}"""
+        }
+        val model = model("America/New_York")
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2024, 3, 10))
+        until { model.uiState.value.instances.map { it.start }.containsAll(days) }
+        writes = CountDownLatch(1)
+        move(model, model.uiState.value.instances.first { it.start == days[0] })
+        until { asked.any { it.path.orEmpty().contains("/-/events/update") || it.path.orEmpty().contains("/-/events/split") } }
+        val starts = model.uiState.value.instances.filter { it.event == "e1" && it.start < utc("2025-01-01T00:00:00Z") }.map { it.start }.sorted()
+        writes?.countDown()
+        until { written.isNotEmpty() }
+        return starts to written
+    }
+
+    /** What [dragging] gives when the 10th's is dropped at 03:30 in summer time for [scope]. */
+    private fun dropped(scope: org.mochios.calendars.ui.editor.Scope) =
+        dragging { model, tenth -> model.move(tenth, utc("2024-03-10T07:30:00Z"), utc("2024-03-10T08:30:00Z"), scope) }
+
+    /** The DTSTART of the first component in [part] of the [written] body. */
+    private fun starting(written: String, part: String): String =
+        com.google.gson.JsonParser.parseString(written).asJsonObject.getAsJsonArray(part)[0].asJsonObject
+            .getAsJsonArray("properties").map { it.asJsonObject }
+            .first { it.get("name").asString == "DTSTART" }.get("value").asString
+
+    @Test
+    fun `a series dragged whole from its occurrence the clocks skip moves an hour on from its reading, drawn so`() {
+        val (starts, written) = dropped(org.mochios.calendars.ui.editor.Scope.ALL)
+        assertEquals(
+            "THE POINT: the series at 03:30, an hour on from 02:30, and the 11th's drawn at 03:30, not 04:30",
+            listOf(listOf(utc("2024-03-10T07:30:00Z"), utc("2024-03-11T07:30:00Z")), "20240301T033000"),
+            listOf(starts, starting(written, "components")),
+        )
+    }
+
+    @Test
+    fun `a series cut by dragging its occurrence the clocks skip moves an hour on from its reading, drawn so`() {
+        val (starts, written) = dropped(org.mochios.calendars.ui.editor.Scope.FOLLOWING)
+        assertEquals(
+            "THE POINT: the series from the 10th at 03:30, and the 11th's drawn at 03:30, not 04:30",
+            listOf(listOf(utc("2024-03-10T07:30:00Z"), utc("2024-03-11T07:30:00Z")), "20240310T033000"),
+            listOf(starts, starting(written, "following")),
+        )
+    }
+
+    @Test
+    fun `one occurrence the clocks skip dragged alone to half past three lands where it is dropped`() {
+        val (starts, written) = dropped(org.mochios.calendars.ui.editor.Scope.ONE)
+        assertEquals(
+            "THE POINT: at 03:30 on the 10th, the 11th's left where it is",
+            listOf(listOf(utc("2024-03-10T07:30:00Z"), utc("2024-03-11T06:30:00Z")), "20240310T033000"),
+            listOf(starts, begins(written, "20240310")),
+        )
+    }
+
+    @Test
+    fun `a series cut by dragging its occurrence on a day the clocks skip is drawn where the write puts it`() {
+        assertEquals(
+            "THE POINT: the 10th's at 02:30 on the 11th, where the write puts it, not 01:30",
+            listOf(utc("2024-03-11T06:30:00Z"), utc("2024-03-12T06:30:00Z")),
+            drawn(org.mochios.calendars.ui.editor.Scope.FOLLOWING),
+        )
+    }
+
+    @Test
+    fun `a series dragged whole from its occurrence on a day the clocks skip is drawn where the write puts it`() {
+        assertEquals(
+            "THE POINT: the 10th's at 02:30 on the 11th, where the write puts it, not 01:30",
+            listOf(utc("2024-03-11T06:30:00Z"), utc("2024-03-12T06:30:00Z")),
+            drawn(org.mochios.calendars.ui.editor.Scope.ALL),
+        )
+    }
+
+    @Test
+    fun `one occurrence on a day the clocks skip dragged alone is drawn where it is dropped`() {
+        assertEquals(
+            "THE POINT: at 01:30 on the 11th, beside the 11th's own, as written",
+            listOf(utc("2024-03-11T05:30:00Z"), utc("2024-03-11T06:30:00Z")),
+            drawn(org.mochios.calendars.ui.editor.Scope.ONE),
+        )
+    }
+
+    /**
+     * Where the 10th's and 11th's occurrences of a daily New York series at
+     * 02:30 from the 1st are drawn the moment [move] drags the 10th's, the
+     * read of the stored event held, and then once it is read, the write
+     * held. The listing gives the 10th's the reading it is written at where
+     * [given] says so, as a core that predates the field does not.
+     */
+    private fun framed(given: Boolean, move: (CalendarViewModel, org.mochios.calendars.model.Instance) -> Unit): Pair<List<Long>, List<Long>> {
+        weekly = true
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {"TZID": ["America/New_York"]}, "value": "20240301T023000"},
+            {"name": "DTEND", "params": {"TZID": ["America/New_York"]}, "value": "20240301T033000"},
+            {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"}
+        ], "components": []}]"""
+        val days = listOf(utc("2024-03-10T06:30:00Z"), utc("2024-03-11T06:30:00Z"))
+        extra = days.map { at ->
+            val stated = if (given && at == days[0]) """, "reading": "20240310T023000"""" else ""
+            at to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $at, "finish": ${at + 3_600},
+                "recurring": true, "zone": {"start": "America/New_York", "finish": "America/New_York"}$stated}"""
+        }
+        val model = model("America/New_York")
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2024, 3, 10))
+        until { model.uiState.value.instances.map { it.start }.containsAll(days) }
+        val starts = { model.uiState.value.instances.filter { it.event == "e1" && it.start < utc("2025-01-01T00:00:00Z") }.map { it.start }.sorted() }
+        reading = CountDownLatch(1)
+        writes = CountDownLatch(1)
+        move(model, model.uiState.value.instances.first { it.start == days[0] })
+        val first = starts()
+        reading?.countDown()
+        until { asked.any { it.path.orEmpty().contains("/-/events/update") || it.path.orEmpty().contains("/-/events/split") } }
+        val then = starts()
+        writes?.countDown()
+        until { written.isNotEmpty() }
+        return first to then
+    }
+
+    /** The 10th's occurrence dragged onto the 11th for [scope]. */
+    private fun onward(scope: org.mochios.calendars.ui.editor.Scope) = { model: CalendarViewModel, tenth: org.mochios.calendars.model.Instance ->
+        model.move(tenth, LocalDate.of(2024, 3, 11), scope)
+    }
+
+    /** The 10th's occurrence dropped at 03:30 in summer time for [scope]. */
+    private fun later(scope: org.mochios.calendars.ui.editor.Scope) = { model: CalendarViewModel, tenth: org.mochios.calendars.model.Instance ->
+        model.move(tenth, utc("2024-03-10T07:30:00Z"), utc("2024-03-10T08:30:00Z"), scope)
+    }
+
+    /** The 10th's and 11th's occurrences a day on, at 02:30, as the write puts them. */
+    private val onto = listOf(utc("2024-03-11T06:30:00Z"), utc("2024-03-12T06:30:00Z"))
+
+    /** The 10th's and 11th's occurrences at 03:30, an hour on from 02:30, as the write puts them. */
+    private val half = listOf(utc("2024-03-10T07:30:00Z"), utc("2024-03-11T07:30:00Z"))
+
+    @Test
+    fun `a series dragged whole a day on from its occurrence the clocks skip is drawn at half past two from the first frame when the listing gives its reading`() {
+        assertEquals("THE POINT: before the event is read", onto, framed(true, onward(org.mochios.calendars.ui.editor.Scope.ALL)).first)
+    }
+
+    @Test
+    fun `a series cut a day on from its occurrence the clocks skip is drawn at half past two from the first frame when the listing gives its reading`() {
+        assertEquals("THE POINT: before the event is read", onto, framed(true, onward(org.mochios.calendars.ui.editor.Scope.FOLLOWING)).first)
+    }
+
+    @Test
+    fun `a series dragged whole to half past three from its occurrence the clocks skip is drawn an hour on from the first frame when the listing gives its reading`() {
+        assertEquals("THE POINT: before the event is read", half, framed(true, later(org.mochios.calendars.ui.editor.Scope.ALL)).first)
+    }
+
+    @Test
+    fun `a series cut at half past three from its occurrence the clocks skip is drawn an hour on from the first frame when the listing gives its reading`() {
+        assertEquals("THE POINT: before the event is read", half, framed(true, later(org.mochios.calendars.ui.editor.Scope.FOLLOWING)).first)
+    }
+
+    @Test
+    fun `a series cut a day on from its occurrence the clocks skip is drawn from its instant without the reading, and at half past two once the event is read`() {
+        assertEquals(
+            "THE POINT: at 01:30 on the 11th until the event is read, then at 02:30",
+            listOf(utc("2024-03-11T05:30:00Z"), utc("2024-03-12T06:30:00Z")) to onto,
+            framed(false, onward(org.mochios.calendars.ui.editor.Scope.FOLLOWING)),
+        )
+    }
+
+    @Test
+    fun `a series dragged whole to half past three from its occurrence the clocks skip is drawn from its instant without the reading, and an hour on once the event is read`() {
+        assertEquals(
+            "THE POINT: the 11th's two hours on until the event is read, then one",
+            listOf(utc("2024-03-10T07:30:00Z"), utc("2024-03-11T08:30:00Z")) to half,
+            framed(false, later(org.mochios.calendars.ui.editor.Scope.ALL)),
+        )
+    }
+
+    /**
+     * What dropping the 10th's occurrence of a daily New York series at
+     * 09:00 from the 1st, which lists 02:30 on the 10th besides, at 03:30 in
+     * summer time for all events writes as the series' start, the listing
+     * giving that occurrence the reading it is written at where [given] says
+     * so.
+     */
+    private fun listed(given: Boolean): String? {
+        weekly = true
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {"TZID": ["America/New_York"]}, "value": "20240301T090000"},
+            {"name": "DTEND", "params": {"TZID": ["America/New_York"]}, "value": "20240301T100000"},
+            {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"},
+            {"name": "RDATE", "params": {"TZID": ["America/New_York"]}, "value": "20240310T023000"}
+        ], "components": []}]"""
+        val tenth = utc("2024-03-10T06:30:00Z")
+        val stated = if (given) """, "reading": "20240310T023000"""" else ""
+        extra = listOf(
+            tenth to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $tenth, "finish": ${tenth + 3_600},
+                "recurring": true, "zone": {"start": "America/New_York", "finish": "America/New_York"}$stated}""",
+        )
+        val model = model("America/New_York")
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2024, 3, 10))
+        until { model.uiState.value.instances.any { it.start == tenth } }
+        val said = said(model)
+        later(org.mochios.calendars.ui.editor.Scope.ALL)(model, model.uiState.value.instances.first { it.start == tenth })
+        until { said.isNotEmpty() }
+        return begins(written)
+    }
+
+    @Test
+    fun `a series moved from a date listed at another time the clocks skip is measured from the reading the listing gives it`() {
+        // The series' own 09:00 does not find the listed date's reading: from
+        // the listing's 02:30 the series goes an hour on, and without it two,
+        // from the 01:30 its instant reads.
+        assertEquals("THE POINT: an hour on from 02:30", "20240301T100000", listed(true))
+        assertEquals("two hours on from 01:30, from a core that predates the reading", "20240301T110000", listed(false))
+    }
+
+    // ---- an event written in UTC, dragged across a change of clocks ----
+    //
+    // 14:00 UTC on Saturday 1 November 2025 is 10:00 in New York's summer
+    // time. Its clocks go back on the 2nd, so 10:00 on Monday the 3rd is
+    // 15:00 UTC.
+
+    /**
+     * Where the event written in UTC from 1 November, repeating daily where
+     * [series] says so, is drawn the moment its occurrence that day is
+     * dragged onto the 3rd for [scope], the read of the stored event held,
+     * and what the write then gives as the DTSTART of the component that
+     * replaces that occurrence, with no [replaced] the master's.
+     */
+    private fun universal(series: Boolean, scope: org.mochios.calendars.ui.editor.Scope, replaced: String? = null): Pair<List<Long>, String?> {
+        weekly = series
+        val rule = if (series) """, {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"}""" else ""
+        kept = """[{"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+            {"name": "DTSTART", "params": {}, "value": "20251101T140000Z"},
+            {"name": "DTEND", "params": {}, "value": "20251101T150000Z"}$rule
+        ], "components": []}]"""
+        val days = if (series) listOf(utc("2025-11-01T14:00:00Z"), utc("2025-11-02T14:00:00Z")) else listOf(utc("2025-11-01T14:00:00Z"))
+        extra = days.map { at ->
+            at to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $at, "finish": ${at + 3_600},
+                "recurring": $series, "zone": {"start": "UTC", "finish": "UTC"}}"""
+        }
+        val model = model("America/New_York")
+        model.view(CalendarsSection.MONTH)
+        model.anchor(LocalDate.of(2025, 11, 1))
+        until { model.uiState.value.instances.map { it.start }.containsAll(days) }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        model.move(model.uiState.value.instances.first { it.start == days[0] }, LocalDate.of(2025, 11, 3), scope)
+        val first = model.uiState.value.instances
+            .filter { it.event == "e1" && it.start < utc("2026-01-01T00:00:00Z") }.map { it.start }.sorted()
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        return first to begins(written, replaced)
+    }
+
+    @Test
+    fun `one event written in UTC dragged across the clock change keeps its time on the user's clock, still written in UTC`() {
+        assertEquals(
+            "THE POINT: 10:00 on the 3rd in winter time, drawn and written, not 09:00",
+            listOf(utc("2025-11-03T15:00:00Z")) to "20251103T150000Z",
+            universal(series = false, org.mochios.calendars.ui.editor.Scope.ALL),
+        )
+    }
+
+    @Test
+    fun `one occurrence of a series written in UTC dragged alone across the clock change keeps its time on the user's clock`() {
+        assertEquals(
+            "THE POINT: 10:00 on the 3rd in winter time, not 09:00",
+            "20251103T150000Z",
+            universal(series = true, org.mochios.calendars.ui.editor.Scope.ONE, replaced = "20251101").second,
+        )
+    }
+
+    @Test
+    fun `a series written in UTC dragged whole across the clock change keeps its time on UTC's clock`() {
+        assertEquals(
+            "THE POINT: at 14:00 UTC, the clock it repeats on, drawn and written",
+            listOf(utc("2025-11-03T14:00:00Z"), utc("2025-11-04T14:00:00Z")) to "20251103T140000Z",
+            universal(series = true, org.mochios.calendars.ui.editor.Scope.ALL),
+        )
+    }
+
+    @Test
+    fun `an all-day occurrence on a day whose midnight the clocks skip is placed by its date, not the day its start reads`() {
+        // Havana's clocks skip midnight on 10 March 2024: the server lists
+        // that day's all-day occurrence from 04:00 UTC, 23:00 on the 9th
+        // there, and dates it the 10th.
+        val havana = ZoneId.of("America/Havana")
+        val midnight = 1_710_043_200L
+        val model = model(havana.id)
+        val day = org.mochios.calendars.model.Instance(
+            event = "e9", allday = true, date = "2024-03-10", start = midnight, finish = midnight + 86_400,
+        )
+        assertEquals(LocalDate.of(2024, 3, 9), Instant.ofEpochSecond(midnight).atZone(havana).toLocalDate())
+        assertEquals(
+            "THE POINT: on the 10th alone, not the 9th",
+            listOf(LocalDate.of(2024, 3, 10), LocalDate.of(2024, 3, 10), false, true),
+            listOf(model.day(day), model.finish(day), model.covers(day, LocalDate.of(2024, 3, 9)), model.covers(day, LocalDate.of(2024, 3, 10))),
+        )
+    }
+
+    // ---- a midnight or an hour the clocks skip or read twice ----
+    //
+    // Each is placed where the server places it, Go's time.Date: Havana's
+    // skipped midnight on 10 March 2024 an hour back, at 23:00 the evening
+    // before; Amman's midnight on 30 October 2020, which comes round twice,
+    // the second time; New York's skipped 02:00 on 8 March 2026 an hour back,
+    // at 01:00 in winter time; and London's 01:00 on 25 October 2026, which
+    // comes round twice, in winter time. The platform would put each the
+    // other way.
+
+    @Test
+    fun `a day's range begins and ends at a midnight the clocks skip or read twice where the server places it`() {
+        val havana = model("America/Havana")
+        val amman = model("Asia/Amman")
+        val day = { model: CalendarViewModel, date: LocalDate ->
+            model.range(model.uiState.value.copy(view = CalendarsSection.DAY, anchor = date))
+        }
+        assertEquals(
+            "THE POINT: an hour back in Havana, the second midnight in Amman, at both ends",
+            listOf(utc("2024-03-10T04:00:00Z"), utc("2024-03-10T04:00:00Z"), utc("2020-10-29T22:00:00Z"), utc("2020-10-29T22:00:00Z")),
+            listOf(
+                day(havana, LocalDate.of(2024, 3, 10)).first,
+                day(havana, LocalDate.of(2024, 3, 9)).second,
+                day(amman, LocalDate.of(2020, 10, 30)).first,
+                day(amman, LocalDate.of(2020, 10, 29)).second,
+            ),
+        )
+    }
+
+    @Test
+    fun `a new event on a day whose working hours the clocks skip or read twice starts where the server places it`() {
+        val york = model("America/New_York")
+        val london = model()
+        val hours = { model: CalendarViewModel, start: Int ->
+            model.uiState.value.let { it.copy(preferences = it.preferences.copy(hours = org.mochios.calendars.model.Hours(start = start))) }
+        }
+        assertEquals(
+            "THE POINT: 01:00 in New York's winter time, and London's 01:00 in winter time",
+            listOf(utc("2026-03-08T06:00:00Z"), utc("2026-10-25T01:00:00Z")),
+            listOf(
+                york.creation(LocalDate.of(2026, 3, 8), hours(york, 2)),
+                london.creation(LocalDate.of(2026, 10, 25), hours(london, 1)),
+            ),
+        )
+    }
+
+    /**
+     * Where the preview draws the start of a block of 10:00 the day before
+     * [day], dropped in the all-day band on [day], for a user in [zone].
+     */
+    private fun banded(zone: String, day: LocalDate): Long {
+        val opens = day.minusDays(1).atTime(10, 0).atZone(ZoneId.of(zone)).toEpochSecond()
+        extra = listOf(
+            opens to """{"event": "e1", "calendar": "c1", "summary": "Stand-up", "start": $opens, "finish": ${opens + 3_600}}""",
+        )
+        val model = model(zone)
+        model.view(CalendarsSection.MONTH)
+        model.anchor(day)
+        until { model.uiState.value.instances.any { it.start == opens } }
+        val said = said(model)
+        reading = CountDownLatch(1)
+        model.move(model.uiState.value.instances.first { it.start == opens }, Moved.Whole(day), org.mochios.calendars.ui.editor.Scope.ALL)
+        val drawn = model.uiState.value.instances.first { it.allday && it.date == day.toString() }.start
+        reading?.countDown()
+        until { said.isNotEmpty() }
+        return drawn
+    }
+
+    @Test
+    fun `a block dropped in the band on a day whose midnight the clocks skip or read twice is drawn from where the server places it`() {
+        assertEquals(
+            "THE POINT: an hour back in Havana, the second midnight in Amman",
+            listOf(utc("2024-03-10T04:00:00Z"), utc("2020-10-29T22:00:00Z")),
+            listOf(banded("America/Havana", LocalDate.of(2024, 3, 10)), banded("Asia/Amman", LocalDate.of(2020, 10, 30))),
+        )
+    }
+
+    @Test
     fun `an occurrence moved with this event is drawn as the override of the occurrence it was`() {
         weekly = true
         val model = model()
@@ -803,7 +1367,7 @@ class CalendarFlowTest {
         assertEquals(listOf(CalendarEvent.Moved, CalendarEvent.Moved), said)
         assertTrue(written, written.contains("\"value\":\"20261005T100000\""))
         assertTrue(written, written.contains("\"value\":\"20261005T120000\""))
-        assertFalse("THE POINT: no override of an 11:00 the series does not have: $written", written.contains("20261005T110000"))
+        assertNull("THE POINT: no override of an 11:00 the series does not have: $written", begins(written, "20261005T110000"))
     }
 
     @Test

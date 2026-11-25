@@ -18,6 +18,10 @@
     <string name="crm_settings">Wakichawinaka</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Apsuta janiw imañjamäkiti</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s adjunto jan utjasa apsutawa</item>
+        <item quantity="other">%1$s adjuntonaka jan utjasa apsutawa</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Lurata</string>
     <string name="crm_sort_updated">Machaqachatawa</string>

@@ -49,6 +49,10 @@
     <string name="projects_exporting">Preparing export…</string>
     <string name="projects_export_saved">Project data saved</string>
     <string name="projects_export_failed">Couldn\'t save export</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exported without %1$s attachment</item>
+        <item quantity="other">Exported without %1$s attachments</item>
+    </plurals>
 
     <!-- Sort and filter -->
     <string name="projects_sort_filter_title">Sort &amp; filter</string>

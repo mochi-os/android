@@ -18,6 +18,10 @@
     <string name="crm_settings">सेटिंग सब</string>
     <string name="crm_design">डिज़ाइन</string>
     <string name="crm_export_failed">एक्सपोर्ट सेव ना हो सकल</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s अटैचमेंट के बिना एक्सपोर्ट हो गइल</item>
+        <item quantity="other">%1$s अटैचमेंट के बिना एक्सपोर्ट हो गइल</item>
+    </plurals>
     <string name="crm_sort_rank">मैनुअल</string>
     <string name="crm_sort_created">बनावल गइल</string>
     <string name="crm_sort_updated">अपडेट भइल</string>

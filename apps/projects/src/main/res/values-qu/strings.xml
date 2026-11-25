@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Utaq huk archivota wichachiy</string>
     <string name="projects_export">Datokunata exportay</string>
     <string name="projects_export_failed">Exportasqata mana waqaychayta atikurqanchu</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s adjunto mana kaspa exportasqa</item>
+        <item quantity="other">%1$s adjuntokuna mana kaspa exportasqa</item>
+    </plurals>
     <string name="projects_export_saved">Proyecto datokuna waqaychasqa</string>
     <string name="projects_exporting">Exportasqata wakichichkan…</string>
     <string name="projects_board_add_column">Columna yapay</string>

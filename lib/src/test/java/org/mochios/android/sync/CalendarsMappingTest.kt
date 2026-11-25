@@ -456,4 +456,25 @@ class CalendarsMappingTest {
         assertEquals("20260922T090000Z", stamped.value)
         assertEquals(TEN, CalendarsMapping.moment(stamped))
     }
+
+    @Test
+    fun `a time the clocks read twice or skip reads where the server places it`() {
+        // The server's own readings, from Go's time.Date: London's 01:30 on
+        // 27 October 2024, which comes round twice, in winter time; its 01:30
+        // on 30 March 2025, which the clocks skip, an hour on; New York's
+        // 01:30 on 3 November 2024 in summer time, and its skipped 02:30 on
+        // 10 March 2024 an hour back, at 01:30 in winter time. A floating
+        // time is read the same way in the zone it is read in.
+        val read = listOf(
+            property("DTSTART", "20241027T013000", "TZID", LONDON),
+            property("DTSTART", "20250330T013000", "TZID", LONDON),
+            property("DTSTART", "20241103T013000", "TZID", "America/New_York"),
+            property("DTSTART", "20240310T023000", "TZID", "America/New_York"),
+        ).map { CalendarsMapping.moment(it) } + CalendarsMapping.moment(property("DTSTART", "20241027T013000"), LONDON)
+        assertEquals(
+            "THE POINT: London's repeated hour in winter time and New York's skipped hour an hour back",
+            listOf(1_729_992_600_000L, 1_743_298_200_000L, 1_730_611_800_000L, 1_710_052_200_000L, 1_729_992_600_000L),
+            read,
+        )
+    }
 }

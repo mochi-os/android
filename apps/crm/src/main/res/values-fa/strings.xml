@@ -18,6 +18,10 @@
     <string name="crm_settings">تنظیمات</string>
     <string name="crm_design">طراحی</string>
     <string name="crm_export_failed">ذخیره خروجی ممکن نشد</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">خروجی بدون %1$s پیوست گرفته شد</item>
+        <item quantity="other">خروجی بدون %1$s پیوست گرفته شد</item>
+    </plurals>
     <string name="crm_sort_rank">دستی</string>
     <string name="crm_sort_created">ساخته شد</string>
     <string name="crm_sort_updated">به‌روزرسانی شد</string>

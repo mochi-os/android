@@ -18,6 +18,9 @@
     <string name="crm_settings">設定</string>
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">已匯出，缺少 %1$s 個附件</item>
+    </plurals>
     <string name="crm_sort_rank">手動</string>
     <string name="crm_sort_created">已建立</string>
     <string name="crm_sort_updated">已更新</string>

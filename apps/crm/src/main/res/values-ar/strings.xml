@@ -18,6 +18,14 @@
     <string name="crm_settings">الإعدادات</string>
     <string name="crm_design">التصميم</string>
     <string name="crm_export_failed">تعذّر حفظ التصدير</string>
+    <plurals name="crm_export_missing">
+        <item quantity="zero">تم التصدير بدون %1$s مرفق</item>
+        <item quantity="one">تم التصدير بدون مرفق واحد</item>
+        <item quantity="two">تم التصدير بدون مرفقين</item>
+        <item quantity="few">تم التصدير بدون %1$s مرفقات</item>
+        <item quantity="many">تم التصدير بدون %1$s مرفقًا</item>
+        <item quantity="other">تم التصدير بدون %1$s مرفق</item>
+    </plurals>
     <string name="crm_sort_rank">يدوي</string>
     <string name="crm_sort_created">تم الإنشاء</string>
     <string name="crm_sort_updated">تم التحديث</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Կամ վերբեռնեք ֆայլ</string>
     <string name="projects_export">Արտահանել տվյալները</string>
     <string name="projects_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Արտահանվեց առանց %1$s կցորդի</item>
+        <item quantity="other">Արտահանվեց առանց %1$s կցորդի</item>
+    </plurals>
     <string name="projects_export_saved">Նախագծի տվյալները պահպանվեցին</string>
     <string name="projects_exporting">Արտահանման նախապատրաստում…</string>
     <string name="projects_board_add_column">Ավելացնել սյունակ</string>

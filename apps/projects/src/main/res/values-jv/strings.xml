@@ -309,6 +309,9 @@
     <string name="projects_design_or_upload_json">Utawa unggah berkas</string>
     <string name="projects_export">Ekspor data</string>
     <string name="projects_export_failed">Ekspor ora bisa disimpen</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">Diekspor tanpa %1$s lampiran</item>
+    </plurals>
     <string name="projects_export_saved">Data proyek kasimpen</string>
     <string name="projects_exporting">Nyiapake ekspor…</string>
     <string name="projects_board_add_column">Tambah kolom</string>

@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">Ali naložite datoteko</string>
     <string name="projects_export">Izvozi podatke</string>
     <string name="projects_export_failed">Izvoza ni bilo mogoče shraniti</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Izvoženo brez %1$s priloge</item>
+        <item quantity="two">Izvoženo brez %1$s prilog</item>
+        <item quantity="few">Izvoženo brez %1$s prilog</item>
+        <item quantity="other">Izvoženo brez %1$s prilog</item>
+    </plurals>
     <string name="projects_export_saved">Podatki projekta shranjeni</string>
     <string name="projects_exporting">Priprava izvoza…</string>
     <string name="projects_board_add_column">Dodaj stolpec</string>

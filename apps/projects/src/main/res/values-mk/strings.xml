@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Или прикачете датотека</string>
     <string name="projects_export">Извези податоци</string>
     <string name="projects_export_failed">Извозот не можеше да се зачува</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Извезено без %1$s прилог</item>
+        <item quantity="other">Извезено без %1$s прилози</item>
+    </plurals>
     <string name="projects_export_saved">Податоците за проектот се зачувани</string>
     <string name="projects_exporting">Се подготвува извозот…</string>
     <string name="projects_board_add_column">Додај колона</string>

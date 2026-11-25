@@ -312,6 +312,11 @@
     <string name="projects_design_or_upload_json">Arba įkelkite failą</string>
     <string name="projects_export">Eksportuoti duomenis</string>
     <string name="projects_export_failed">Nepavyko išsaugoti eksporto</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Eksportuota be %1$s priedo</item>
+        <item quantity="few">Eksportuota be %1$s priedų</item>
+        <item quantity="other">Eksportuota be %1$s priedų</item>
+    </plurals>
     <string name="projects_export_saved">Projekto duomenys išsaugoti</string>
     <string name="projects_exporting">Ruošiamas eksportas…</string>
     <string name="projects_board_add_column">Pridėti stulpelį</string>

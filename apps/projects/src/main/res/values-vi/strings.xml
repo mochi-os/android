@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">Hoặc tải lên một tệp</string>
     <string name="projects_export">Xuất dữ liệu</string>
     <string name="projects_export_failed">Không thể lưu bản xuất</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">Đã xuất nhưng thiếu %1$s tệp đính kèm</item>
+    </plurals>
     <string name="projects_export_saved">Đã lưu dữ liệu dự án</string>
     <string name="projects_exporting">Đang chuẩn bị bản xuất…</string>
     <string name="projects_board_add_column">Thêm cột</string>

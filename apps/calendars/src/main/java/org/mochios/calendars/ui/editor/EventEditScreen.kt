@@ -135,6 +135,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import java.time.Instant
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.ZoneOffset
 import java.time.format.TextStyle
@@ -345,6 +346,7 @@ fun EventEditScreen(
                 zone = uiState.zone,
                 own = viewModel.zone,
                 ordered = uiState.ordered,
+                reading = uiState.reading,
                 onStart = viewModel::start,
                 onFinish = viewModel::finish,
                 onZone = viewModel::zone,
@@ -797,22 +799,30 @@ internal fun EventText(
 private fun MomentField(
     label: String,
     moment: Long,
+    reading: LocalDateTime?,
     allday: Boolean,
     zone: String,
-    onChange: (Long) -> Unit,
+    onChange: (LocalDateTime) -> Unit,
 ) {
     val format = LocalFormat.current
     var picking by remember { mutableStateOf(false) }
     var timing by remember { mutableStateOf(false) }
     // An all-day day is a date held at its UTC midnight, so it is read in UTC.
     val id = remember(zone, allday) { shownIn(allday, zone) }
-    val local = remember(moment, id) { Instant.ofEpochSecond(moment).atZone(id) }
+    // The end as its clock reads: as typed or stored while that is still
+    // its own, so a time the clocks skip shows as typed, else its instant's.
+    val local = remember(moment, reading, id, allday) {
+        (if (allday) null else live(reading, moment, id.id))
+            ?: Instant.ofEpochSecond(moment).atZone(id).toLocalDateTime()
+    }
+    // Shown as that reading reads, whatever instant it has.
+    val shown = local.toEpochSecond(ZoneOffset.UTC)
 
     Column {
         Caption(label)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
             Choice(
-                text = format.formatDate(moment, id.id),
+                text = format.formatDate(shown, "UTC"),
                 onClick = { picking = true },
                 modifier = Modifier.weight(1f),
             )
@@ -822,7 +832,7 @@ private fun MomentField(
                 Spacer(Modifier.width(TIME))
             } else {
                 Choice(
-                    text = format.formatTime(moment, id.id),
+                    text = format.formatTime(shown, "UTC"),
                     onClick = { timing = true },
                     align = TextAlign.End,
                     modifier = Modifier.width(TIME),
@@ -836,7 +846,7 @@ private fun MomentField(
             day = local.toLocalDate(),
             onDismiss = { picking = false },
             onPick = { date ->
-                onChange(date.atTime(local.toLocalTime()).atZone(id).toEpochSecond())
+                onChange(date.atTime(local.toLocalTime()))
                 picking = false
             },
         )
@@ -854,12 +864,7 @@ private fun MomentField(
             content = { TimePicker(state = state) },
             confirmText = stringResource(MochiR.string.common_save),
             onConfirm = {
-                onChange(
-                    local.toLocalDate()
-                        .atTime(LocalTime.of(state.hour, state.minute))
-                        .atZone(id)
-                        .toEpochSecond(),
-                )
+                onChange(local.toLocalDate().atTime(LocalTime.of(state.hour, state.minute)))
                 timing = false
             },
             dismissText = stringResource(MochiR.string.common_cancel),
@@ -884,8 +889,9 @@ internal fun EventMoments(
     zone: Zone,
     own: String,
     ordered: Boolean = true,
-    onStart: (Long) -> Unit,
-    onFinish: (Long) -> Unit,
+    reading: Reading = Reading(),
+    onStart: (LocalDateTime) -> Unit,
+    onFinish: (LocalDateTime) -> Unit,
     onZone: (Zone) -> Unit,
 ) {
     val begins = zone.start.ifBlank { own }
@@ -895,6 +901,7 @@ internal fun EventMoments(
             MomentField(
                 label = stringResource(R.string.calendars_event_start),
                 moment = start,
+                reading = reading.start,
                 allday = allday,
                 zone = if (allday) own else begins,
                 onChange = onStart,
@@ -913,9 +920,10 @@ internal fun EventMoments(
             MomentField(
                 label = stringResource(R.string.calendars_event_finish),
                 moment = if (allday) finish - DAY else finish,
+                reading = reading.finish,
                 allday = allday,
                 zone = if (allday) own else ends,
-                onChange = { onFinish(if (allday) it + DAY else it) },
+                onChange = { onFinish(if (allday) it.plusDays(1) else it) },
             )
             if (!ordered) {
                 Text(

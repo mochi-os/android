@@ -18,6 +18,9 @@
     <string name="crm_settings">Tetapan</string>
     <string name="crm_design">Reka bentuk</string>
     <string name="crm_export_failed">Eksport tidak dapat disimpan</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">Dieksport tanpa %1$s lampiran</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Dicipta</string>
     <string name="crm_sort_updated">Dikemas kini</string>

@@ -18,6 +18,9 @@
     <string name="crm_settings">ການຕັ້ງຄ່າ</string>
     <string name="crm_design">ການອອກແບບ</string>
     <string name="crm_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">ສົ່ງອອກແລ້ວ ໂດຍບໍ່ມີໄຟລ໌ແນບ %1$s ໄຟລ໌</item>
+    </plurals>
     <string name="crm_sort_rank">ດ້ວຍຕົນເອງ</string>
     <string name="crm_sort_created">ສ້າງແລ້ວ</string>
     <string name="crm_sort_updated">ອັບເດດແລ້ວ</string>

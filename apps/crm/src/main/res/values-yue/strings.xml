@@ -49,6 +49,9 @@
     <string name="crm_class_move_down">下移</string>
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">已匯出，少咗 %1$s 個附件</item>
+    </plurals>
     <string name="crm_export_csv_id">ID</string>
     <string name="crm_export_csv_class">類別</string>
     <string name="crm_design_title">設計</string>

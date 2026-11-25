@@ -18,6 +18,9 @@
     <string name="crm_settings">Cài đặt</string>
     <string name="crm_design">Thiết kế</string>
     <string name="crm_export_failed">Không thể lưu bản xuất</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">Đã xuất nhưng thiếu %1$s tệp đính kèm</item>
+    </plurals>
     <string name="crm_sort_rank">Thủ công</string>
     <string name="crm_sort_created">Đã tạo</string>
     <string name="crm_sort_updated">Đã cập nhật</string>

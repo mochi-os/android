@@ -91,6 +91,17 @@ class PlacementTest {
     }
 
     @Test
+    fun `an end written in UTC sits at its time in the user's zone, under any of UTC's names`() {
+        // 14:00 to 17:00 UTC is 15:00 to 18:00 in London's summer time.
+        for (utc in listOf("UTC", "Etc/UTC", "GMT")) {
+            val written = meeting.copy(zone = Zone(utc, utc))
+            assertEquals(utc, Cut(15f, 18f), cut(written, SEPTEMBER_22, LONDON, zones = true))
+        }
+        val mixed = meeting.copy(zone = Zone("America/New_York", "UTC"))
+        assertEquals(Cut(10f, 18f), cut(mixed, SEPTEMBER_22, LONDON, zones = true))
+    }
+
+    @Test
     fun `an occurrence crossing midnight draws on each day it covers`() {
         val overnight = Instance(
             start = at("Europe/London", 2026, 9, 22, 22),
@@ -193,6 +204,7 @@ class PlacementTest {
         assertNull(clockZone("America/New_York", zones = false))
         assertNull(clockZone("", zones = true))
         assertNull(clockZone(null, zones = true))
+        assertNull(clockZone("UTC", zones = true))
     }
 
     // ---- the all-day band ----

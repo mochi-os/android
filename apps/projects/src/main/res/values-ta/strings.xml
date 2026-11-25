@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">அல்லது கோப்பைப் பதிவேற்றவும்</string>
     <string name="projects_export">தரவை ஏற்றுமதி செய்</string>
     <string name="projects_export_failed">ஏற்றுமதியைச் சேமிக்க முடியவில்லை</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s இணைப்பு இல்லாமல் ஏற்றுமதி செய்யப்பட்டது</item>
+        <item quantity="other">%1$s இணைப்புகள் இல்லாமல் ஏற்றுமதி செய்யப்பட்டது</item>
+    </plurals>
     <string name="projects_export_saved">திட்டத் தரவு சேமிக்கப்பட்டது</string>
     <string name="projects_exporting">ஏற்றுமதி தயாராகிறது…</string>
     <string name="projects_board_add_column">நெடுவரிசை சேர்</string>

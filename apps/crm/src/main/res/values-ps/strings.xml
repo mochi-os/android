@@ -18,6 +18,10 @@
     <string name="crm_settings">تنظیمات</string>
     <string name="crm_design">ډیزاین</string>
     <string name="crm_export_failed">صادرول خوندي نه شو</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">د %1$s ضمیمې پرته صادر شو</item>
+        <item quantity="other">د %1$s ضمیمو پرته صادر شو</item>
+    </plurals>
     <string name="crm_sort_rank">لاسي</string>
     <string name="crm_sort_created">جوړ شو</string>
     <string name="crm_sort_updated">نوی شو</string>

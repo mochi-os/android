@@ -17,6 +17,9 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.performTouchInput
 import androidx.core.content.IntentCompat
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import com.google.gson.JsonObject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -140,16 +143,19 @@ class BoardMovesTest {
 
     /**
      * The CRM with [named]'s objects and any [extra] ones, on a board with
-     * lanes of tier when [lanes].
+     * lanes of tier when [lanes]; with [prospects], a contact's stage offers
+     * prospect, which a company's does not.
      */
-    private fun named(lanes: Boolean = false, extra: List<String> = emptyList()): CrmViewModel {
+    private fun named(lanes: Boolean = false, extra: List<String> = emptyList(), prospects: Boolean = false): CrmViewModel {
         val rows = if (lanes) "tier" else ""
+        val contact = if (prospects) """, "contact": [{"id": "stage", "name": "Stage", "fieldtype": "enumerated"}]""" else ""
+        val offered = if (prospects) """, "contact": {"stage": [{"id": "lead", "name": "Lead"}, {"id": "prospect", "name": "Prospect"}]}""" else ""
         server.data("c1/-/information", """{"crm": {"id": "c1", "name": "Sales", "access": "owner"},
             "classes": [{"id": "company", "name": "Company", "title": "name"}, {"id": "contact", "name": "Contact", "title": "name"}],
             "fields": {"company": [{"id": "stage", "name": "Stage", "fieldtype": "enumerated"}, {"id": "name", "name": "Name", "fieldtype": "text"},
-                {"id": "tier", "name": "Tier", "fieldtype": "enumerated"}]},
+                {"id": "tier", "name": "Tier", "fieldtype": "enumerated"}]$contact},
             "options": {"company": {"stage": [{"id": "lead", "name": "Lead"}, {"id": "won", "name": "Won"}, {"id": "lost", "name": "Lost"}],
-                "tier": [{"id": "gold", "name": "Gold"}, {"id": "silver", "name": "Silver"}]}},
+                "tier": [{"id": "gold", "name": "Gold"}, {"id": "silver", "name": "Silver"}]}$offered},
             "views": [{"id": "v1", "name": "Board", "viewtype": "board", "columns": "stage", "rows": "$rows", "classes": ["company"]}],
             "hierarchy": {"company": [""], "contact": ["", "company"]}}""")
         val objects = if (extra.isEmpty()) named else named.trimEnd().removeSuffix("]") + ", " + extra.joinToString(", ") + "]"
@@ -295,9 +301,98 @@ class BoardMovesTest {
         rule.onNodeWithText(context.getString(R.string.crm_move_position_top)).performSemanticsAction(SemanticsActions.OnClick)
         until("the move") { server.of("c1/-/objects/s/move").isNotEmpty() }
         val top = server.of("c1/-/objects/s/move").single().json()
-        assertEquals("THE POINT: no option the server would refuse, but the column it is drawn in", "", top.get("value").asString)
-        assertFalse("which it keeps", top.has("clear"))
+        assertFalse(
+            "THE POINT: the column it stays in is not named, so the server takes Umbra, whose stage is not Stale's, beside it",
+            top.has("field") || top.has("value"),
+        )
+        assertFalse("and it keeps its stage", top.has("clear"))
         assertEquals("above Umbra, the first card there", "u", top.get("before").asString)
+    }
+
+    @Test
+    fun `a card reordered in the column for no value is drawn beside a card whose stage is not its own`() {
+        val model = named(extra = listOf(stale))
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/u/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        // Umbra dropped below Stale, which holds a stage no column is drawn for.
+        model.moveBeside("u", target = "s", below = true, field = "stage", value = "")
+        val none = model.sortObjects(model.uiState.value.objects.filter { obj -> obj.stringValue("stage") !in setOf("lead", "won", "lost") })
+        assertEquals("THE POINT: below Stale at once, as the server places it", listOf("s", "u"), ids(none))
+        answering.countDown()
+        until("the move") { server.of("c1/-/objects/u/move").isNotEmpty() }
+        assertFalse(server.of("c1/-/objects/u/move").single().json().has("field"))
+    }
+
+    @Test
+    fun `a card of a class without the column field is reordered without naming it`() {
+        // A note has no stage field, so it is drawn in the column for no value.
+        val note = """{"id": "n", "class": "note", "parent": "", "rank": "c0", "values": {"name": "Note"}}"""
+        val model = named(extra = listOf(stale, note))
+        server.refuse("c1/-/objects", "Down", 500)
+        model.moveBeside("n", target = "u", below = true, field = "stage", value = "")
+        until("the move") { server.of("c1/-/objects/n/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/n/move").single().json()
+        assertFalse("THE POINT: named, the server refuses the move, the field not found", move.has("field"))
+        assertEquals("u", move.get("after").asString)
+    }
+
+    /** The ids the column for no value draws, in the order the board draws them. */
+    private fun none(model: CrmViewModel): List<String> =
+        ids(model.sortObjects(model.uiState.value.objects.filter { obj -> obj.stringValue("stage") !in setOf("lead", "won", "lost") }))
+
+    // Opal, with no stage, past Stale: the column for no value's last card.
+    private val opal = """{"id": "o", "class": "company", "parent": "", "rank": "c5", "values": {"stage": "", "name": "Opal"}}"""
+
+    /** Bolt cleared on the column for no value, dropped below [after]; asserts it drawn there, of the ids [drawn] gives, at once. */
+    private fun clearBelow(model: CrmViewModel, after: String, message: String, expected: List<String>, drawn: (CrmViewModel) -> List<String> = this::none, field: String = "stage") {
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/b/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        model.moveObject("b", field, "", after = after, clear = true)
+        assertEquals(message, expected, drawn(model))
+        answering.countDown()
+        until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/b/move").single().json()
+        assertEquals(after, move.get("after").asString)
+        assertEquals("true", move.get("clear").asString)
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is drawn beside a card whose stage is a deleted option's`() {
+        val model = named(extra = listOf(stale, opal))
+        clearBelow(model, "s", "THE POINT: below Stale at once, as the server places it", listOf("u", "s", "b", "o"))
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is drawn beside a card whose stage only another class offers`() {
+        // Pia, a contact in Prospect, which a company's stage does not offer.
+        val pia = """{"id": "p", "class": "contact", "parent": "", "rank": "b7", "values": {"stage": "prospect", "name": "Pia"}}"""
+        val model = named(extra = listOf(stale, pia, opal), prospects = true)
+        clearBelow(model, "p", "THE POINT: below Pia at once, as the server places it", listOf("u", "s", "p", "b", "o"))
+    }
+
+    @Test
+    fun `a card cleared on the column for no value is not drawn beside a card holding an option of its own class`() {
+        val model = named(extra = listOf(stale, opal))
+        // Wren, named after, is in Won.
+        clearBelow(model, "w", "THE POINT: at the column's end, as the server places it with no neighbour there", listOf("u", "s", "o", "b"))
+    }
+
+    @Test
+    fun `a card cleared of a field its class holds as text is not drawn beside a card holding a value of it`() {
+        val model = named(extra = listOf(stale, opal))
+        clearBelow(
+            model, "s", "THE POINT: after every key, as the server places it, a text field having no column for no value",
+            listOf("c1", "a", "d", "w", "x", "u", "s", "o", "b"), { drawn -> ids(drawn.sortObjects(drawn.uiState.value.objects)) },
+            field = "name",
+        )
     }
 
     @Test
@@ -505,8 +600,7 @@ class BoardMovesTest {
         val move = server.of("c1/-/objects/d/move").single().json()
         assertEquals("above Bolt", "b", move.get("before").asString)
         assertEquals("THE POINT: and below Acme, the card drawn above the drop", "a", move.get("after").asString)
-        assertEquals("in the column named, which the server takes them in", "stage", move.get("field").asString)
-        assertEquals("THE POINT: with no value, which keeps the column it is in", "", move.get("value").asString)
+        assertFalse("THE POINT: the column it stays in is not named", move.has("field") || move.has("value"))
     }
 
     @Test
@@ -579,12 +673,19 @@ class BoardMovesTest {
     fun `a card reordered in the lane for none keeps a tier no lane is drawn for`() {
         val model = named(lanes = true, extra = listOf(vast, nil))
         server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/v/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
         model.moveBeside("v", target = "n", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
+        val none = model.sortObjects(model.uiState.value.objects.filter { obj -> obj.id in setOf("v", "n") })
+        assertEquals("THE POINT: drawn below Nil at once, as the server places it", listOf("n", "v"), ids(none))
+        answering.countDown()
         until("the move") { server.of("c1/-/objects/v/move").isNotEmpty() }
-        assertEquals(
-            "THE POINT: it stays in the lane it is drawn in, so its own tier goes, which writes nothing, not \"\"",
-            """{"field":"tier","value":"bronze"}""",
-            server.of("c1/-/objects/v/move").single().json().get("row").asString,
+        assertFalse(
+            "THE POINT: it stays in the lane it is drawn in, so no lane is named: its own would refuse Nil beside it, and \"\" would clear it",
+            server.of("c1/-/objects/v/move").single().json().has("row"),
         )
         assertEquals("bronze", model.uiState.value.objects.first { obj -> obj.id == "v" }.stringValue("tier"))
         model.moveBeside("a", target = "n", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
@@ -602,24 +703,42 @@ class BoardMovesTest {
         assertTrue("THE POINT: nothing changes, so nothing goes", server.of("c1/-/objects/v/move").isEmpty())
     }
 
+    @Test
+    fun `a card dropped in the lane for none is drawn beside a card whose tier no option has`() {
+        val model = named(lanes = true, extra = listOf(vast, nil))
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/d/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        // Dyna, in gold, dropped below Vast, whose tier no lane is drawn for.
+        model.moveBeside("d", target = "v", below = true, field = "stage", value = "lead", rowField = "tier", rowValue = "")
+        assertEquals("THE POINT: below Vast at once, as the server places it", listOf("c1", "a", "b", "v", "d", "n", "x"), lead(model))
+        answering.countDown()
+        until("the move") { server.of("c1/-/objects/d/move").isNotEmpty() }
+        val move = server.of("c1/-/objects/d/move").single().json()
+        assertEquals("v", move.get("after").asString)
+        assertEquals("""{"field":"tier","value":""}""", move.get("row").asString)
+    }
+
     // ---- What a move goes among ----
 
     @Test
-    fun `a drop at the end of its own column on a board with lanes names the column and the lane it stays in`() {
+    fun `a drop at the end of its own column on a board with lanes names neither, and ends in the lane it stays in`() {
         val model = named(lanes = true)
         server.refuse("c1/-/objects", "Down", 500)
         // On the column's empty space, which names no lane.
         model.moveToEnd("a", "stage", "lead")
         until("the move") { moves("a").isNotEmpty() }
         val move = moves("a").single()
-        assertEquals("stage", move.get("field").asString)
-        assertEquals("with no value, which keeps its column", "", move.get("value").asString)
-        assertEquals("THE POINT: and its own lane, which writes nothing", """{"field":"tier","value":"gold"}""", move.get("row").asString)
-        assertEquals("so the end is gold's, after Dyna, not Xavi", "d", move.get("after").asString)
+        assertFalse("THE POINT: the column does not change, so it is not named", move.has("field"))
+        assertFalse("THE POINT: nor does the lane", move.has("row"))
+        assertEquals("the end is gold's, after Dyna, not Xavi", "d", move.get("after").asString)
     }
 
     @Test
-    fun `the Move sheet on a board with lanes names the column and the lane, changing only what was chosen`() {
+    fun `the Move sheet on a board with lanes names only what was chosen`() {
         val model = named(lanes = true)
         server.refuse("c1/-/objects", "Down", 500)
         val acme = model.uiState.value.objects.first { obj -> obj.id == "a" }
@@ -628,14 +747,13 @@ class BoardMovesTest {
         rule.onNodeWithText(context.getString(R.string.crm_move_after, "Dyna")).performSemanticsAction(SemanticsActions.OnClick)
         until("the move") { moves("a").isNotEmpty() }
         val after = moves("a").single()
-        assertEquals("stage", after.get("field").asString)
-        assertEquals("", after.get("value").asString)
-        assertEquals("THE POINT: in its own lane", """{"field":"tier","value":"gold"}""", after.get("row").asString)
+        assertFalse("THE POINT: a place in its own column does not name it", after.has("field"))
+        assertFalse("THE POINT: nor its own lane", after.has("row"))
+        assertEquals("d", after.get("after").asString)
         rule.onNodeWithText("Silver").performSemanticsAction(SemanticsActions.OnClick)
         until("the second move") { moves("a").size == 2 }
         val lane = moves("a")[1]
-        assertEquals("THE POINT: a lane chosen names the column too, with no value", "stage", lane.get("field").asString)
-        assertEquals("", lane.get("value").asString)
+        assertFalse("THE POINT: a lane chosen names no column", lane.has("field") || lane.has("value"))
         assertEquals("""{"field":"tier","value":"silver"}""", lane.get("row").asString)
     }
 
@@ -658,9 +776,193 @@ class BoardMovesTest {
         assertFalse(moves("c2").single().has("parent"))
     }
 
+    // ---- A tree whose parents a filter hides ----
+
+    /**
+     * The CRM with Corp filtered out: its contacts, Kay and Lee, are drawn at
+     * the top level between Top and Last, a contact the hierarchy lets go
+     * under Corp, beside Parent and its Kid. Answers the tree's rows in the
+     * order drawn.
+     */
+    private fun hidden(): Pair<CrmViewModel, List<CrmObject>> {
+        server.data("c1/-/objects", """{"objects": [
+            {"id": "co", "class": "company", "parent": "", "rank": "a0", "values": {"stage": "lead", "name": "Corp"}},
+            {"id": "k1", "class": "contact", "parent": "co", "rank": "a1", "values": {"name": "Kay"}},
+            {"id": "t1", "class": "company", "parent": "", "rank": "a2", "values": {"stage": "lead", "name": "Top"}},
+            {"id": "k2", "class": "contact", "parent": "co", "rank": "a3", "values": {"name": "Lee"}},
+            {"id": "t2", "class": "contact", "parent": "", "rank": "a4", "values": {"name": "Last"}},
+            {"id": "p", "class": "company", "parent": "", "rank": "a5", "values": {"stage": "lead", "name": "Parent"}},
+            {"id": "kid", "class": "contact", "parent": "p", "rank": "a6", "values": {"name": "Kid"}}
+        ], "watched": []}""")
+        val model = board(7)
+        server.refuse("c1/-/objects", "Down", 500)
+        return model to model.uiState.value.objects.filter { obj -> obj.id != "co" }
+    }
+
+    private fun node(model: CrmViewModel, id: String) =
+        TreeNode(model.uiState.value.objects.first { obj -> obj.id == id }, depth = 0, hasChildren = false, isExpanded = true)
+
+    @Test
+    fun `a row dropped beside a row whose parent is hidden stays where it is in the tree, between the rows drawn there`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop(sourceId = "t2", targetNode = node(model, "k1"), edge = DragEdge.Bottom, viewModel = model, drawn = drawn)
+        until("the move") { moves("t2").isNotEmpty() }
+        val move = moves("t2").single()
+        assertFalse("THE POINT: not put under Corp, which the tree does not draw", move.has("parent"))
+        assertEquals("after Kay", "k1", move.get("after").asString)
+        assertEquals("THE POINT: and before Top, the row drawn below Kay, not Lee, Corp's next", "t1", move.get("before").asString)
+        assertFalse("THE POINT: the top level draws rows of two parents, so none is named", move.has("scope"))
+    }
+
+    @Test
+    fun `a row whose parent is hidden dropped beside a top-level row keeps its parent`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop(sourceId = "k2", targetNode = node(model, "t1"), edge = DragEdge.Top, viewModel = model, drawn = drawn)
+        until("the move") { moves("k2").isNotEmpty() }
+        val move = moves("k2").single()
+        assertFalse("THE POINT: it is drawn at the top level already, so it stays with Corp", move.has("parent"))
+        assertFalse("THE POINT: and the top level, of two parents, names none", move.has("scope"))
+        assertEquals("t1", move.get("before").asString)
+        assertEquals("Kay, drawn above Top", "k1", move.get("after").asString)
+    }
+
+    @Test
+    fun `a row reordered after the last child of a hidden parent goes before the row drawn below, not to the end`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop(sourceId = "k1", targetNode = node(model, "k2"), edge = DragEdge.Bottom, viewModel = model, drawn = drawn)
+        until("the move") { moves("k1").isNotEmpty() }
+        val move = moves("k1").single()
+        assertFalse("THE POINT: named, Corp's last child would be the scope's end, and Kay would jump past every key", move.has("scope"))
+        assertEquals("k2", move.get("after").asString)
+        assertEquals("Last, drawn below Lee", "t2", move.get("before").asString)
+    }
+
+    @Test
+    fun `a row under a drawn parent dropped beside a row whose parent is hidden is refused`() {
+        val (model, drawn) = hidden()
+        handleTreeDrop(sourceId = "kid", targetNode = node(model, "k1"), edge = DragEdge.Top, viewModel = model, drawn = drawn)
+        settle()
+        assertTrue("THE POINT: it would go under Corp, out of sight", moves("kid").isEmpty())
+    }
+
+    /** A CRM whose contacts have a stage too: Parent won, with Kin; Mover in lead, with Under. */
+    private fun staged(): CrmViewModel {
+        server.data("c1/-/information", """{"crm": {"id": "c1", "name": "Sales", "access": "owner"},
+            "classes": [{"id": "company", "name": "Company", "title": "name"}, {"id": "contact", "name": "Contact", "title": "name"}],
+            "fields": {"company": [{"id": "stage", "name": "Stage", "fieldtype": "enumerated"}, {"id": "tier", "name": "Tier", "fieldtype": "enumerated"}],
+                "contact": [{"id": "stage", "name": "Stage", "fieldtype": "enumerated"}]},
+            "options": {"company": {"stage": [{"id": "lead", "name": "Lead"}, {"id": "won", "name": "Won"}], "tier": [{"id": "gold", "name": "Gold"}]},
+                "contact": {"stage": [{"id": "lead", "name": "Lead"}, {"id": "won", "name": "Won"}]}},
+            "views": [{"id": "v1", "name": "Board", "viewtype": "board", "columns": "stage", "rows": "tier", "classes": ["company"]}],
+            "hierarchy": {"company": [""], "contact": ["", "company", "contact"]}}""")
+        server.data("c1/-/objects", """{"objects": [
+            {"id": "p", "class": "company", "parent": "", "rank": "a0", "values": {"stage": "won", "tier": "gold", "name": "Parent"}},
+            {"id": "q", "class": "contact", "parent": "p", "rank": "a1", "values": {"stage": "won", "name": "Kin"}},
+            {"id": "x", "class": "contact", "parent": "", "rank": "a2", "values": {"stage": "lead", "name": "Mover"}},
+            {"id": "y", "class": "contact", "parent": "x", "rank": "a3", "values": {"stage": "lead", "name": "Under"}}
+        ], "watched": []}""")
+        val model = board(4)
+        server.refuse("c1/-/objects", "Down", 500)
+        return model
+    }
+
+    @Test
+    fun `a row moved into a parent's children takes its board values at once, with its own children`() {
+        val model = staged()
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/x/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        val kin = TreeNode(model.uiState.value.objects.first { obj -> obj.id == "q" }, depth = 1, hasChildren = false, isExpanded = true)
+        handleTreeDrop(sourceId = "x", targetNode = kin, edge = DragEdge.Bottom, viewModel = model, drawn = model.uiState.value.objects)
+        val drawn = model.uiState.value.objects.associateBy { obj -> obj.id }
+        assertEquals("p", drawn.getValue("x").parent)
+        assertEquals("THE POINT: Parent's stage, before the server answers", "won", drawn.getValue("x").stringValue("stage"))
+        assertEquals("THE POINT: and its child's", "won", drawn.getValue("y").stringValue("stage"))
+        assertEquals("a contact has no tier, so it takes none", "", drawn.getValue("x").stringValue("tier"))
+        answering.countDown()
+        until("the move") { moves("x").isNotEmpty() }
+        assertEquals("p", moves("x").single().get("parent").asString)
+    }
+
+    @Test
+    fun `a row dropped on another takes its new parent's board values with its children`() {
+        val model = staged()
+        server.data("c1/-/objects/x/update", """{"success": true, "parent": "p", "ranks": [{"id": "x", "rank": "a1V", "updated": 77}], "updated": 77}""")
+        val parent = TreeNode(model.uiState.value.objects.first { obj -> obj.id == "p" }, depth = 0, hasChildren = true, isExpanded = true)
+        handleTreeDrop(sourceId = "x", targetNode = parent, edge = DragEdge.On, viewModel = model, drawn = model.uiState.value.objects)
+        until("the key") { model.uiState.value.objects.first { obj -> obj.id == "x" }.rank == "a1V" }
+        val drawn = model.uiState.value.objects.associateBy { obj -> obj.id }
+        assertEquals("p", drawn.getValue("x").parent)
+        assertEquals("THE POINT: Parent's stage, as the server gives it, though the list cannot be read again", "won", drawn.getValue("x").stringValue("stage"))
+        assertEquals("THE POINT: and its child's", "won", drawn.getValue("y").stringValue("stage"))
+    }
+
     // ---- One move at a time ----
 
     private fun moves(id: String) = server.of("c1/-/objects/$id/move").map { sent -> sent.json() }
+
+    @Test
+    fun `moves still waiting when the board closes are sent, in turn`() {
+        val store = ViewModelStore()
+        val model = ViewModelProvider(store, object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T = CrmViewModel(
+                SavedStateHandle(mapOf("crmId" to "c1")),
+                server.repository(),
+                socket,
+                server.session,
+                ActiveViewStore(context),
+                CollapsedColumnsStore(context),
+            ) as T
+        })[CrmViewModel::class.java]
+        until("the board") { model.uiState.value.objects.size == 5 && model.uiState.value.crmDetails != null }
+        server.refuse("c1/-/objects", "Down", 500)
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("{}")
+        }
+        model.moveObject("w", "stage", "lead", after = "a")
+        model.moveObject("b", "stage", "won", after = "w")
+        until("the first move") { moves("w").isNotEmpty() }
+        // Back, while the first is still being written.
+        store.clear()
+        answering.countDown()
+        until("the second move") { moves("b").isNotEmpty() }
+        assertEquals("THE POINT: the second is sent once the first is answered, though the board has gone", "w", moves("b").single().get("after").asString)
+    }
+
+    @Test
+    fun `a list read while a move is answered lands without taking it back`() {
+        val model = board()
+        val answering = CountDownLatch(1)
+        server.on("c1/-/objects/w/move") {
+            answering.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("""{"success": true, "ranks": [{"id": "w", "rank": "a0V", "updated": 99}], "updated": 99}""")
+        }
+        val reading = CountDownLatch(1)
+        // The list as it was before the move, held until released.
+        server.on("c1/-/objects") {
+            reading.await(10, TimeUnit.SECONDS)
+            CrmServer.ok("""{"objects": $objects, "watched": []}""")
+        }
+        model.moveObject("w", "stage", "lead", after = "a")
+        until("the move") { moves("w").isNotEmpty() }
+        // A pull to refresh, read before the move is written.
+        model.refresh()
+        until("the reload") { server.of("c1/-/objects").size >= 2 }
+        answering.countDown()
+        until("the keys") { model.uiState.value.objects.first { obj -> obj.id == "w" }.rank == "a0V" }
+        // Every list read from now on fails, so only the stale one lands.
+        server.refuse("c1/-/objects", "Down", 500)
+        reading.countDown()
+        until("the reload to land") { !model.uiState.value.isRefreshing }
+        settle()
+        assertEquals("THE POINT: the list read before the answer does not put it back in won", "lead", stage(model, "w"))
+        assertEquals("a0V", model.uiState.value.objects.first { obj -> obj.id == "w" }.rank)
+    }
 
     @Test
     fun `two quick moves of one card go one after the other, in the order made`() {

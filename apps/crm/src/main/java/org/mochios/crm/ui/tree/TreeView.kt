@@ -129,11 +129,19 @@ fun TreeView(
  * Resolves a tree drop into reparent/move calls. Drops onto the source's own
  * descendants are rejected. A drop on a row's middle puts the source under
  * it; one on its top or bottom edge puts it directly above or below that
- * row, among the row's siblings, naming the row it went beside and the
- * sibling drawn on the drop's far side, with the parent whose children it
- * goes among, and, when the parent changes, the new parent in the same move. The edges place only under a manual sort, the one
- * that draws the order they place by. [drawn] is the tree's objects in the
- * order it draws them.
+ * row, among the rows drawn at its level, naming the row it went beside and
+ * the row drawn on the drop's far side. A row whose parent the tree does not
+ * draw is drawn at the top level, beside rows of other parents: a drop beside
+ * it reorders the rows drawn there and changes no parent, and one that would
+ * take a row out of a parent drawn to there is refused, since its place would
+ * be among a parent the user cannot see. A drop at another level drawn under
+ * a parent, or at the top level beside a row that is truly there, moves the
+ * source to that parent in the same move. The move names the parent it
+ * reorders within only when every row drawn at that level is that parent's
+ * child, so the server takes the neighbours there; a level that mixes parents
+ * names none. The edges place only under a manual sort, the one that draws
+ * the order they place by. [drawn] is the tree's objects in the order it
+ * draws them.
  */
 internal fun handleTreeDrop(
     sourceId: String,
@@ -151,6 +159,10 @@ internal fun handleTreeDrop(
     // A drop the hierarchy forbids does nothing, rather than being sent for
     // the server to refuse.
     val hierarchy = viewModel.uiState.value.crmDetails?.hierarchy.orEmpty()
+    // The parent each row is drawn under: its own when the tree draws it,
+    // else the top level, "".
+    val shown = drawn.mapTo(HashSet()) { obj -> obj.id }
+    val home = { obj: CrmObject -> obj.parent.takeIf { parent -> parent in shown }.orEmpty() }
 
     when (edge) {
         DragEdge.On -> {
@@ -165,26 +177,32 @@ internal fun handleTreeDrop(
             }
         }
         DragEdge.Top, DragEdge.Bottom -> {
-            // Directly above or below the target, among its parent's children:
-            // the new parent, when it changes, goes in the same move. Another
-            // sort draws no place to go, so an edge does nothing there.
+            // Directly above or below the target, among the rows drawn at its
+            // level: the new parent, when it changes, goes in the same move.
+            // Another sort draws no place to go, so an edge does nothing there.
             if (viewModel.placement() == Placement.None) return
-            val newParent = targetNode.obj.parent
-            val reparent = sourceObj.parent != newParent
-            if (reparent && !reparentAllowed(sourceObj, newParent, allObjects, hierarchy)) return
+            val level = home(targetNode.obj)
+            // Into another level only where the target's own parent is the
+            // one drawn there: beside a row whose parent is hidden, the row
+            // would go under that parent, out of sight.
+            val reparent = home(sourceObj) != level
+            if (reparent && targetNode.obj.parent != level) return
+            if (reparent && !reparentAllowed(sourceObj, level, allObjects, hierarchy)) return
             val below = edge == DragEdge.Bottom
-            // The target's siblings as the tree draws them: rows of its parent.
-            val siblings = drawn.filter { obj -> obj.parent == newParent }.map { obj -> obj.id }
+            // The rows drawn at the target's level, in the order drawn.
+            val rows = drawn.filter { obj -> home(obj) == level }
+            val parent = if (reparent) level else sourceObj.parent
             viewModel.moveBeside(
                 objectId = sourceId,
                 target = targetNode.obj.id,
                 below = below,
                 field = "",
-                parent = newParent.takeIf { reparent },
-                other = drawnBeside(siblings, targetNode.obj.id, below, sourceId),
+                parent = parent.takeIf { reparent },
+                other = drawnBeside(rows.map { obj -> obj.id }, targetNode.obj.id, below, sourceId),
                 // The parent it goes among, which a move that keeps its own
-                // names no other way, so the server takes a neighbour only there.
-                scope = newParent,
+                // names no other way, so the server takes the neighbours only
+                // there; none where the level draws rows of other parents.
+                scope = parent.takeIf { !reparent && rows.all { obj -> obj.parent == parent } },
             )
         }
         else -> { /* Start/End not used in vertical tree */ }

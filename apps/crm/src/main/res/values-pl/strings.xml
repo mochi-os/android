@@ -18,6 +18,12 @@
     <string name="crm_settings">Ustawienia</string>
     <string name="crm_design">Projekt</string>
     <string name="crm_export_failed">Nie udało się zapisać eksportu</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Wyeksportowano bez %1$s załącznika</item>
+        <item quantity="few">Wyeksportowano bez %1$s załączników</item>
+        <item quantity="many">Wyeksportowano bez %1$s załączników</item>
+        <item quantity="other">Wyeksportowano bez %1$s załącznika</item>
+    </plurals>
     <string name="crm_sort_rank">Ręczny</string>
     <string name="crm_sort_created">Utworzone</string>
     <string name="crm_sort_updated">Zaktualizowano</string>

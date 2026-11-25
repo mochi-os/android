@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Eller last opp en fil</string>
     <string name="projects_export">Eksporter data</string>
     <string name="projects_export_failed">Kunne ikke lagre eksporten</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Eksportert uten %1$s vedlegg</item>
+        <item quantity="other">Eksportert uten %1$s vedlegg</item>
+    </plurals>
     <string name="projects_export_saved">Prosjektdata lagret</string>
     <string name="projects_exporting">Forbereder eksport…</string>
     <string name="projects_board_add_column">Legg til kolonne</string>

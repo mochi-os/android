@@ -412,7 +412,8 @@ object CalendarsMapping {
      * value is the UTC midnight of its date, which is what the provider
      * stores; a date-time is read in the zone its `TZID` names, and a
      * floating one, which names none, in [floating]: the viewer's own zone,
-     * as the server lists it.
+     * as the server lists it. A time the clocks read twice or skip there is
+     * placed where the server places it ([placed]).
      */
     fun moment(property: EventProperty, floating: String = UTC): Long {
         val value = property.value.trim()
@@ -428,11 +429,29 @@ object CalendarsMapping {
             if (value.endsWith("Z")) {
                 LocalDateTime.parse(value.dropLast(1), STAMP).toInstant(ZoneOffset.UTC).toEpochMilli()
             } else {
-                LocalDateTime.parse(value, STAMP).atZone(zone(property, floating).let(::zoneOf)).toInstant().toEpochMilli()
+                placed(LocalDateTime.parse(value, STAMP), zoneOf(zone(property, floating))) * 1000
             }
         } catch (_: DateTimeParseException) {
             0
         }
+    }
+
+    /**
+     * The epoch second [local] reads on [zone]'s clock, placed where the
+     * server places it (Go's `time.Date`) and the web client does
+     * (`timestampAt`): at the offset in force at [local] taken as UTC, unless
+     * the instant that gives lies across a clock change from it, when at the
+     * offset in force at that instant. A reading the clocks read twice then
+     * falls in winter time in London, 01:30 on 27 October 2024 being 01:30
+     * UTC, and in summer time in New York; one they skip falls an hour on in
+     * London and an hour back in New York, 02:30 on 10 March 2024 being 01:30
+     * in winter time.
+     */
+    fun placed(local: LocalDateTime, zone: ZoneId): Long {
+        val wall = local.toEpochSecond(ZoneOffset.UTC)
+        val rules = zone.rules
+        val guess = rules.getOffset(Instant.ofEpochSecond(wall)).totalSeconds
+        return wall - rules.getOffset(Instant.ofEpochSecond(wall - guess)).totalSeconds
     }
 
     /** Whether the property carries a date rather than a date-time. */
@@ -479,6 +498,35 @@ object CalendarsMapping {
         }
         val local = ZonedDateTime.ofInstant(Instant.ofEpochMilli(moment), zoneOf(zone))
         return property(name, STAMP.format(local), "TZID", zone)
+    }
+
+    /**
+     * A date-time property for a clock [reading] in [zone], written as it
+     * reads: with [zone]'s `TZID`, in UTC with no zone, or with [floating]
+     * set floating. A reading the clocks skip, such as 02:30 on New York's
+     * 10 March 2024, stays as it reads, which RFC 5545 and the server take as
+     * the time of day of a series that starts there; [stamp] could write only
+     * the reading of an instant.
+     */
+    fun stamp(name: String, reading: LocalDateTime, zone: String, floating: Boolean = false): EventProperty {
+        if (floating) return property(name, STAMP.format(reading))
+        if (zone.isBlank() || zone == UTC) return property(name, STAMP.format(reading) + "Z")
+        return property(name, STAMP.format(reading), "TZID", zone)
+    }
+
+    /**
+     * The clock reading a date-time property names, as it is written: in
+     * the zone its `TZID` names, in UTC, or for a floating one on the clock
+     * wherever it is read. Null for a date or a value that will not read.
+     */
+    fun reading(property: EventProperty?): LocalDateTime? {
+        if (property == null || date(property)) return null
+        val value = property.value.trim().removeSuffix("Z")
+        return try {
+            LocalDateTime.parse(value, STAMP)
+        } catch (_: DateTimeParseException) {
+            null
+        }
     }
 
     /**

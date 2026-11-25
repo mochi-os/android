@@ -74,7 +74,7 @@ object CalendarsApp {
         "&finish={finish}&allday={allday}&date={date}" +
         "&summary={summary}&location={location}&description={description}&zones={zones}" +
         "&calendar={calendar}"
-    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}&moved={moved}"
+    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}&moved={moved}&reading={reading}"
 
     /** The flag it carries once the editor deleted something, which it offers to undo. */
     const val DELETED = "deleted"
@@ -160,16 +160,24 @@ object CalendarsApp {
      * seconds, as the server lists it, which "This event" detaches; 0 for one
      * that does not repeat. [moved] says it is an override's own start, which
      * a core that does not name the occurrence an override replaces lists.
+     * [reading] is the reading the listing gives the occurrence where its
+     * zone skips it ([Instance.reading]), which the editor opens it at.
      */
-    fun event(event: String, occurrence: Long = 0, moved: Boolean = false): String =
-        "calendars/events/edit/$event?occurrence=$occurrence" + if (moved) "&moved=1" else ""
+    fun event(event: String, occurrence: Long = 0, moved: Boolean = false, reading: String? = null): String =
+        "calendars/events/edit/$event?occurrence=$occurrence" + (if (moved) "&moved=1" else "") +
+            (reading?.takeIf { it.isNotBlank() }?.let { "&reading=${encoded(it)}" } ?: "")
 
     /**
      * The editor on the occurrence [instance] is: of a series, the occurrence
-     * of it an override replaces, wherever it was moved.
+     * of it an override replaces, wherever it was moved, and the reading the
+     * listing gives it, which an override's own start does not have.
      */
     fun event(instance: Instance): String =
-        if (instance.recurring) event(instance.event, instance.occurrence, instance.moved) else event(instance.event)
+        if (instance.recurring) {
+            event(instance.event, instance.occurrence, instance.moved, instance.reading.takeIf { !instance.exception })
+        } else {
+            event(instance.event)
+        }
 
     /**
      * What a notification's link names, or null when it names no event. A
@@ -380,6 +388,10 @@ fun NavGraphBuilder.calendarsNavGraph(
                 defaultValue = "0"
             },
             navArgument("moved") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("reading") {
                 type = NavType.StringType
                 defaultValue = ""
             },

@@ -16,6 +16,7 @@ import org.mochios.android.util.Zones
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.calendar.Wording
+import org.mochios.calendars.ui.calendar.places
 import org.mochios.calendars.ui.calendar.summary
 import java.text.SimpleDateFormat
 import java.time.ZoneId
@@ -119,6 +120,20 @@ class SummaryTest {
         val (zoned, none) = summary(flight, format(), zones = true, wording, icu)
         assertEquals("Monday 28 September 2026, 10:00 London to 13:00 New York", zoned)
         assertNull(none)
+    }
+
+    @Test
+    fun `one written in UTC reads in the user's zone alone, with no line of its own`() {
+        // 09:00 to 10:00 UTC is 10:00 to 11:00 in London's summer time.
+        val standup = timed(at(28, 10), at(28, 11), Zone("UTC", "UTC"))
+        for (zones in listOf(false, true)) {
+            assertEquals(
+                "zones $zones",
+                "Monday 28 September 2026, 10:00 to 11:00" to null,
+                summary(standup, format(), zones, wording, icu),
+            )
+        }
+        assertNull(places(standup, "Europe/London", zones = true, { from, to -> "$from to $to" }, icu))
     }
 
     @Test

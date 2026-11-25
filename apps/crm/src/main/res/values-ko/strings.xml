@@ -18,6 +18,9 @@
     <string name="crm_settings">설정</string>
     <string name="crm_design">디자인</string>
     <string name="crm_export_failed">내보내기를 저장하지 못했습니다</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">첨부 파일 %1$s개를 제외하고 내보냈어요</item>
+    </plurals>
     <string name="crm_sort_rank">수동</string>
     <string name="crm_sort_created">생성됨</string>
     <string name="crm_sort_updated">업데이트됨</string>

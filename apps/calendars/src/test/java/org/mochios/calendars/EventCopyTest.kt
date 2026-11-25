@@ -175,6 +175,15 @@ class EventCopyTest {
     }
 
     @Test
+    fun `a read-only occurrence written in UTC reads in the user's own zone, under any of UTC's names`() {
+        val bare = Instance(summary = "Call", start = FIRST, finish = FIRST + 1_800)
+        for (utc in listOf("UTC", "Etc/UTC")) {
+            assertEquals(utc, Zone(SYDNEY, SYDNEY), copied(bare.copy(zone = Zone(utc, utc)), SYDNEY, 15).zone)
+        }
+        assertEquals(Zone(LONDON, SYDNEY), copied(bare.copy(zone = Zone(LONDON, "UTC")), SYDNEY, 15).zone)
+    }
+
+    @Test
     fun `a read-only all-day occurrence keeps its dates and its whole days`() {
         // Two days, the 16th and 17th, listed at the user's own midnights.
         val instance = Instance(

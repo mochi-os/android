@@ -234,7 +234,7 @@ class AccessGatingTest {
     }
 
     @Test
-    fun `a card dropped on another on a board without lanes names the column field`() {
+    fun `a card dropped on another in its own column names no column`() {
         server.data("c1/-/objects", """{"objects": [
             {"id": "a", "class": "company", "parent": "", "rank": "a0", "values": {"name": "Acme", "stage": "lead"}},
             {"id": "b", "class": "company", "parent": "", "rank": "a1", "values": {"name": "Bolt", "stage": "lead"}}], "watched": []}""")
@@ -255,7 +255,7 @@ class AccessGatingTest {
         }
         until("the move") { server.of("c1/-/objects/b/move").isNotEmpty() }
         val move = server.of("c1/-/objects/b/move").single().json()
-        assertEquals("THE POINT: the column's field, which the server takes the move's neighbours in", "stage", move.get("field").asString)
-        assertEquals("with no value, which keeps the column it is in", "", move.get("value").asString)
+        assertFalse("THE POINT: the column does not change, so it is not named", move.has("field") || move.has("value"))
+        assertEquals("above Acme", "a", move.get("before").asString)
     }
 }

@@ -18,6 +18,11 @@
     <string name="crm_settings">Setări</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Exportul nu a putut fi salvat</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Exportat fără %1$s atașament</item>
+        <item quantity="few">Exportat fără %1$s atașamente</item>
+        <item quantity="other">Exportat fără %1$s de atașamente</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Creat</string>
     <string name="crm_sort_updated">Actualizat</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Jan ukax mä archivo apkatam</string>
     <string name="projects_export">Datonaka apsuña</string>
     <string name="projects_export_failed">Apsuta janiw imañjamäkiti</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s adjunto jan utjasa apsutawa</item>
+        <item quantity="other">%1$s adjuntonaka jan utjasa apsutawa</item>
+    </plurals>
     <string name="projects_export_saved">Proyecto yatiyawi imantata</string>
     <string name="projects_exporting">Apsuña wakichaskiwa…</string>
     <string name="projects_board_add_column">Columna yapxataña</string>

@@ -18,6 +18,9 @@
     <string name="crm_settings">Setelan</string>
     <string name="crm_design">Desain</string>
     <string name="crm_export_failed">Ekspor ora bisa disimpen</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">Diekspor tanpa %1$s lampiran</item>
+    </plurals>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Digawé</string>
     <string name="crm_sort_updated">Wis dianyari</string>

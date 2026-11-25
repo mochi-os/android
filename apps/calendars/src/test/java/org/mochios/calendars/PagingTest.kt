@@ -161,4 +161,26 @@ class PagingTest {
         assertFalse(earlier(ANCHOR, 0, bounds, LONDON))
         assertFalse(later(ANCHOR, 0, bounds, LONDON))
     }
+
+    @Test
+    fun `a page begins and ends at a midnight the clocks skip or read twice where the server places it`() {
+        // Havana's clocks go from midnight to 01:00 on 10 March 2024, and the
+        // server, as Go's time.Date, places that midnight an hour back, at
+        // 23:00 the evening before; Amman's come back from 01:00 to midnight
+        // on 30 October 2020, and the server takes the second midnight. The
+        // page from each day begins there, and the page before ends there.
+        val havana = ZoneId.of("America/Havana")
+        val amman = ZoneId.of("Asia/Amman")
+        val utc = { text: String -> java.time.Instant.parse(text).epochSecond }
+        assertEquals(
+            "THE POINT: an hour back in Havana, the second midnight in Amman",
+            listOf(utc("2024-03-10T04:00:00Z"), utc("2024-03-10T04:00:00Z"), utc("2020-10-29T22:00:00Z"), utc("2020-10-29T22:00:00Z")),
+            listOf(
+                page(LocalDate.of(2024, 3, 10), 0, havana).start,
+                page(LocalDate.of(2024, 3, 10), -1, havana).finish,
+                page(LocalDate.of(2020, 10, 30), 0, amman).start,
+                page(LocalDate.of(2020, 10, 30), -1, amman).finish,
+            ),
+        )
+    }
 }

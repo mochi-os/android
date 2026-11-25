@@ -18,6 +18,10 @@
     <string name="crm_settings">සැකසුම්</string>
     <string name="crm_design">සැලසුම</string>
     <string name="crm_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">ඇමුණුම් %1$s ක් නොමැතිව නිර්යාත කරන ලදී</item>
+        <item quantity="other">ඇමුණුම් %1$s ක් නොමැතිව නිර්යාත කරන ලදී</item>
+    </plurals>
     <string name="crm_sort_rank">අතින්</string>
     <string name="crm_sort_created">නිර්මාණය කරන ලදී</string>
     <string name="crm_sort_updated">යාවත්කාලීන කරන ලදී</string>

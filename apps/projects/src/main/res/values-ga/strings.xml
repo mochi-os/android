@@ -313,6 +313,13 @@
     <string name="projects_design_or_upload_json">Nó uaslódáil comhad</string>
     <string name="projects_export">Easpórtáil sonraí</string>
     <string name="projects_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="two">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="few">Easpórtáilte gan %1$s cheangaltán</item>
+        <item quantity="many">Easpórtáilte gan %1$s gceangaltán</item>
+        <item quantity="other">Easpórtáilte gan %1$s ceangaltán</item>
+    </plurals>
     <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
     <string name="projects_board_add_column">Cuir colún leis</string>

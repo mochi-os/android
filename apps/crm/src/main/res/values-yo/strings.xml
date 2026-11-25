@@ -18,6 +18,9 @@
     <string name="crm_settings">Àwọn ìṣètò</string>
     <string name="crm_design">Àpẹẹrẹ</string>
     <string name="crm_export_failed">A kò lè fi ìkójáde pamọ́</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">A ti gbé e jáde láìsí àsomọ́ %1$s</item>
+    </plurals>
     <string name="crm_sort_rank">Pẹ̀lú ọwọ́</string>
     <string name="crm_sort_created">Tí a dá</string>
     <string name="crm_sort_updated">Ti ṣe imudojúìwọ̀n</string>

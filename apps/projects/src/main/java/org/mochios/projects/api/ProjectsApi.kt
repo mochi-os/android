@@ -192,7 +192,9 @@ data class UpdateClassRequest(val name: String? = null, val title: String? = nul
 // Shareable project link returned by the `-/share` endpoint.
 data class ShareResponse(val link: String = "")
 
-data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
+// `failed` counts the attachments the round could not fetch, which the export
+// then leaves out.
+data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0, val failed: Int = 0)
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
 data class RepositoryListResponse(val repositories: List<Repository> = emptyList())
 data class BranchListResponse(val branches: List<Branch> = emptyList())

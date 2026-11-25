@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">یا یو فایل پورته کړئ</string>
     <string name="projects_export">ډاټا صادرول</string>
     <string name="projects_export_failed">صادرول خوندي نه شو</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">د %1$s ضمیمې پرته صادر شو</item>
+        <item quantity="other">د %1$s ضمیمو پرته صادر شو</item>
+    </plurals>
     <string name="projects_export_saved">د پروژې ډاټا خوندي شوه</string>
     <string name="projects_exporting">صادرول چمتو کیږي…</string>
     <string name="projects_board_add_column">کالم اضافه کړئ</string>

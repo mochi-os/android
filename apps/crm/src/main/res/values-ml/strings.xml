@@ -18,6 +18,10 @@
     <string name="crm_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="crm_design">ഡിസൈൻ</string>
     <string name="crm_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s അറ്റാച്ച്മെന്റ് ഇല്ലാതെ എക്സ്പോർട്ട് ചെയ്തു</item>
+        <item quantity="other">%1$s അറ്റാച്ച്മെന്റുകൾ ഇല്ലാതെ എക്സ്പോർട്ട് ചെയ്തു</item>
+    </plurals>
     <string name="crm_sort_rank">മാനുവൽ</string>
     <string name="crm_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="crm_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>

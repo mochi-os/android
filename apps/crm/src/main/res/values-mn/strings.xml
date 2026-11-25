@@ -18,6 +18,10 @@
     <string name="crm_settings">Тохиргоо</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Экспортыг хадгалж чадсангүй</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s хавсралтгүйгээр экспортлогдлоо</item>
+        <item quantity="other">%1$s хавсралтгүйгээр экспортлогдлоо</item>
+    </plurals>
     <string name="crm_sort_rank">Гар аргаар</string>
     <string name="crm_sort_created">Үүсгэгдсэн</string>
     <string name="crm_sort_updated">Шинэчлэгдсэн</string>

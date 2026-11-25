@@ -119,6 +119,24 @@ class CalendarsRouterTest {
     }
 
     /**
+     * An occurrence the listing gives the reading its zone skips opens with
+     * that reading; an override's is its own start's, not its occurrence's.
+     */
+    @Test
+    fun `an occurrence opens with the reading the listing gives it`() {
+        val skipped = Instance(event = "event-1", start = 1_710_052_200, recurring = true, reading = "20240310T023000")
+        assertEquals(
+            "calendars/events/edit/event-1?occurrence=1710052200&reading=20240310T023000",
+            CalendarsApp.event(skipped),
+        )
+        assertEquals(
+            "calendars/events/edit/event-1?occurrence=1709965800",
+            CalendarsApp.event(skipped.copy(exception = true, replaced = 1_709_965_800)),
+        )
+        assertTrue(CalendarsApp.EVENT_EDIT.contains("&reading={reading}"))
+    }
+
+    /**
      * An occurrence with no stored event travels in the route itself, so
      * every character its text can hold has to survive the query string.
      */

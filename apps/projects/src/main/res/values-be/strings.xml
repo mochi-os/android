@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">Або запампуйце файл</string>
     <string name="projects_export">Экспартаваць даныя</string>
     <string name="projects_export_failed">Не ўдалося захаваць экспарт</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Экспартавана без %1$s укладання</item>
+        <item quantity="few">Экспартавана без %1$s укладанняў</item>
+        <item quantity="many">Экспартавана без %1$s укладанняў</item>
+        <item quantity="other">Экспартавана без %1$s укладання</item>
+    </plurals>
     <string name="projects_export_saved">Даныя праекта захаваны</string>
     <string name="projects_exporting">Падрыхтоўка экспарту…</string>
     <string name="projects_board_add_column">Дадаць слупок</string>

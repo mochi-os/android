@@ -312,6 +312,12 @@
     <string name="projects_design_or_upload_json">No luchdaich faidhle suas</string>
     <string name="projects_export">Às-phortaich an dàta</string>
     <string name="projects_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Chaidh às-phortadh gun %1$s cheanglachan</item>
+        <item quantity="two">Chaidh às-phortadh gun %1$s cheanglachan</item>
+        <item quantity="few">Chaidh às-phortadh gun %1$s ceanglachain</item>
+        <item quantity="other">Chaidh às-phortadh gun %1$s ceanglachan</item>
+    </plurals>
     <string name="projects_export_saved">Chaidh dàta a\' phròiseict a shàbhaladh</string>
     <string name="projects_exporting">A\' deasachadh an às-phortaidh…</string>
     <string name="projects_board_add_column">Cuir colbh ris</string>

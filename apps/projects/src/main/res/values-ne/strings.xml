@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">वा फाइल अपलोड गर्नुहोस्</string>
     <string name="projects_export">डेटा निर्यात गर्नुहोस्</string>
     <string name="projects_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s संलग्नकबिना निर्यात गरियो</item>
+        <item quantity="other">%1$s संलग्नकहरूबिना निर्यात गरियो</item>
+    </plurals>
     <string name="projects_export_saved">परियोजना डेटा सुरक्षित गरियो</string>
     <string name="projects_exporting">निर्यात तयार गर्दै…</string>
     <string name="projects_board_add_column">स्तम्भ थप्नुहोस्</string>

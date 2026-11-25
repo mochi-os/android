@@ -7,8 +7,11 @@ package org.mochios.projects.repository
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.auth.SessionManager
 import java.util.concurrent.atomic.AtomicInteger
 import android.content.Context
@@ -107,6 +110,27 @@ class ProjectsRepository @Inject constructor(
         objectsCache.clear()
         watchedCache.clear()
     }
+
+    /**
+     * Where a project's moves and reparents wait their turn: a scope of the
+     * repository's own, so those still waiting when the board closes are
+     * sent all the same, and on the main thread, where the board that made
+     * them reads what each answers.
+     */
+    private val writes = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+
+    /** Each project's turn to write, by project. */
+    private val turns = ConcurrentHashMap<String, Mutex>()
+
+    /**
+     * Runs [write] once every write [queue]d for [projectId] before it has
+     * run, outliving the screen that asked for it. Sent at once, a later
+     * drag could reach the server first, and a drop beside a card whose own
+     * move had not landed would go beside where it was; a board opened again
+     * on the project waits behind those the closed one left.
+     */
+    fun queue(projectId: String, write: suspend () -> Unit): Job =
+        writes.launch { turns.computeIfAbsent(projectId) { Mutex() }.withLock { write() } }
 
     fun getCachedProjectInfo(projectId: String): ProjectDetails? {
         val (details, ts) = projectInfoCache[projectId] ?: return null

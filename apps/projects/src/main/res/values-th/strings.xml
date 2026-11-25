@@ -310,6 +310,9 @@
     <string name="projects_design_or_upload_json">หรืออัปโหลดไฟล์</string>
     <string name="projects_export">ส่งออกข้อมูล</string>
     <string name="projects_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="other">ส่งออกแล้ว โดยไม่มีไฟล์แนบ %1$s ไฟล์</item>
+    </plurals>
     <string name="projects_export_saved">บันทึกข้อมูลโครงการแล้ว</string>
     <string name="projects_exporting">กำลังเตรียมการส่งออก…</string>
     <string name="projects_board_add_column">เพิ่มคอลัมน์</string>

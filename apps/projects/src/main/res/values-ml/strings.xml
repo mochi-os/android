@@ -312,6 +312,10 @@
     <string name="projects_design_or_upload_json">അല്ലെങ്കിൽ ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="projects_export">ഡാറ്റ എക്സ്പോർട്ട് ചെയ്യുക</string>
     <string name="projects_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s അറ്റാച്ച്മെന്റ് ഇല്ലാതെ എക്സ്പോർട്ട് ചെയ്തു</item>
+        <item quantity="other">%1$s അറ്റാച്ച്മെന്റുകൾ ഇല്ലാതെ എക്സ്പോർട്ട് ചെയ്തു</item>
+    </plurals>
     <string name="projects_export_saved">പ്രോജക്റ്റ് ഡാറ്റ സംരക്ഷിച്ചു</string>
     <string name="projects_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
     <string name="projects_board_add_column">കോളം ചേർക്കുക</string>

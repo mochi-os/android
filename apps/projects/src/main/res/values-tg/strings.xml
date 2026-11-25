@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Ё файл бор кунед</string>
     <string name="projects_export">Содироти маълумот</string>
     <string name="projects_export_failed">Содиротро нигоҳ доштан нашуд</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Бе %1$s замима содир шуд</item>
+        <item quantity="other">Бе %1$s замима содир шуд</item>
+    </plurals>
     <string name="projects_export_saved">Маълумоти лоиҳа нигоҳ дошта шуд</string>
     <string name="projects_exporting">Содирот омода мешавад…</string>
     <string name="projects_board_add_column">Иловаи сутун</string>

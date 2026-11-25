@@ -311,6 +311,11 @@
     <string name="projects_design_or_upload_json">Или отпремите датотеку</string>
     <string name="projects_export">Извези податке</string>
     <string name="projects_export_failed">Извоз није могуће сачувати</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Извезено без %1$s прилога</item>
+        <item quantity="few">Извезено без %1$s прилога</item>
+        <item quantity="other">Извезено без %1$s прилога</item>
+    </plurals>
     <string name="projects_export_saved">Подаци пројекта су сачувани</string>
     <string name="projects_exporting">Припрема извоза…</string>
     <string name="projects_board_add_column">Додај колону</string>

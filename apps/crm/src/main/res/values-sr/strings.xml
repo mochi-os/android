@@ -18,6 +18,11 @@
     <string name="crm_settings">Подешавања</string>
     <string name="crm_design">Дизајн</string>
     <string name="crm_export_failed">Извоз није могуће сачувати</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Извезено без %1$s прилога</item>
+        <item quantity="few">Извезено без %1$s прилога</item>
+        <item quantity="other">Извезено без %1$s прилога</item>
+    </plurals>
     <string name="crm_sort_rank">Ручно</string>
     <string name="crm_sort_created">Креирано</string>
     <string name="crm_sort_updated">Ажурирано</string>

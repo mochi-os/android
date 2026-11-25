@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">ਜਾਂ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="projects_export">ਡਾਟਾ ਐਕਸਪੋਰਟ ਕਰੋ</string>
     <string name="projects_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s ਅਟੈਚਮੈਂਟ ਤੋਂ ਬਿਨਾਂ ਐਕਸਪੋਰਟ ਕੀਤਾ ਗਿਆ</item>
+        <item quantity="other">%1$s ਅਟੈਚਮੈਂਟਾਂ ਤੋਂ ਬਿਨਾਂ ਐਕਸਪੋਰਟ ਕੀਤਾ ਗਿਆ</item>
+    </plurals>
     <string name="projects_export_saved">ਪ੍ਰੋਜੈਕਟ ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="projects_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
     <string name="projects_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>

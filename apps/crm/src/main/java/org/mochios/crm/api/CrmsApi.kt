@@ -63,7 +63,9 @@ data class CrmInfoResponse(
 data class TemplateListResponse(val templates: List<Template> = emptyList())
 // data/export/warm reports how many attachments are still to be pulled in, so
 // the caller keeps warming until nothing remains before fetching the export.
-data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
+// `failed` counts the attachments the round could not fetch, which the export
+// then leaves out.
+data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0, val failed: Int = 0)
 data class ObjectListResponse(
     val objects: List<CrmObject> = emptyList(),
     val watched: List<String> = emptyList(),

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Au pakia faili</string>
     <string name="projects_export">Hamisha data</string>
     <string name="projects_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Imehamishwa bila kiambatisho %1$s</item>
+        <item quantity="other">Imehamishwa bila viambatisho %1$s</item>
+    </plurals>
     <string name="projects_export_saved">Data ya mradi imehifadhiwa</string>
     <string name="projects_exporting">Inaandaa uhamishaji…</string>
     <string name="projects_board_add_column">Ongeza safu</string>

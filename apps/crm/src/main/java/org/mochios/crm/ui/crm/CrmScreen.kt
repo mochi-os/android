@@ -74,6 +74,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -91,6 +92,7 @@ import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.push.VisibleEntityEffect
@@ -502,6 +504,11 @@ private fun CrmContent(
 
     val exportSaved = stringResource(R.string.crm_export_saved)
     val exportFailed = stringResource(R.string.crm_export_failed)
+    val exportMissing = pluralStringResource(
+        R.plurals.crm_export_missing,
+        uiState.exportMissing,
+        LocalFormat.current.formatNumber(uiState.exportMissing),
+    )
     val csvHeadings = listOf(
         stringResource(R.string.crm_export_csv_id),
         stringResource(R.string.crm_export_csv_class),
@@ -530,7 +537,11 @@ private fun CrmContent(
     LaunchedEffect(uiState.savedExport, uiState.exportFailed) {
         val saved = uiState.savedExport
         if (saved != null) {
-            Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            if (uiState.exportMissing > 0) {
+                Toast.makeText(context, exportMissing, Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(context, exportSaved, Toast.LENGTH_SHORT).show()
+            }
             shareExportFile(context, saved)
             viewModel.clearExportResult()
         } else if (uiState.exportFailed) {

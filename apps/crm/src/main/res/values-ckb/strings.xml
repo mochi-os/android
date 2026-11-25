@@ -18,6 +18,10 @@
     <string name="crm_settings">ڕێکخستنەکان</string>
     <string name="crm_design">دیزاین</string>
     <string name="crm_export_failed">نەتوانرا هەناردەکە پاشەکەوت بکرێت</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">بێ %1$s هاوپێچ هەناردە کرا</item>
+        <item quantity="other">بێ %1$s هاوپێچ هەناردە کرا</item>
+    </plurals>
     <string name="crm_sort_rank">دەستی</string>
     <string name="crm_sort_created">دروستکرا</string>
     <string name="crm_sort_updated">نوێکرایەوە</string>

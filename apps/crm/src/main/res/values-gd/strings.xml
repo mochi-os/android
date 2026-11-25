@@ -18,6 +18,12 @@
     <string name="crm_settings">Roghainnean</string>
     <string name="crm_design">Dealbhadh</string>
     <string name="crm_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Chaidh às-phortadh gun %1$s cheanglachan</item>
+        <item quantity="two">Chaidh às-phortadh gun %1$s cheanglachan</item>
+        <item quantity="few">Chaidh às-phortadh gun %1$s ceanglachain</item>
+        <item quantity="other">Chaidh às-phortadh gun %1$s ceanglachan</item>
+    </plurals>
     <string name="crm_sort_rank">Le làimh</string>
     <string name="crm_sort_created">Cruthaichte</string>
     <string name="crm_sort_updated">Ùraichte</string>

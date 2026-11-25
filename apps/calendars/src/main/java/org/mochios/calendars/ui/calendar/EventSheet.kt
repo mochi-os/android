@@ -70,6 +70,7 @@ import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.regional
 import org.mochios.android.R as MochiR
 
 /** How a summary puts its parts together, in the user's language. */
@@ -116,9 +117,10 @@ fun summary(
         }
         return days to null
     }
-    val startZone = instance.zone?.start?.takeIf { it.isNotBlank() }
-    val finishZone = instance.zone?.finish?.takeIf { it.isNotBlank() }
-    val foreign = (startZone != null && !Zones.same(startZone, user, registry)) ||
+    // An end written in UTC reads in the user's zone ([regional]).
+    val startZone = regional(instance.zone?.start)
+    val finishZone = regional(instance.zone?.finish)
+    val foreign =(startZone != null && !Zones.same(startZone, user, registry)) ||
         (finishZone != null && !Zones.same(finishZone, user, registry))
 
     // The span read in a pair of zones, the user's own when none is given.
@@ -156,8 +158,8 @@ fun places(
     registry: Zones.Registry = Zones.Platform,
 ): String? {
     if (instance.allday || !zones) return null
-    val start = instance.zone?.start?.takeIf { zone -> zone.isNotBlank() } ?: user
-    val finish = instance.zone?.finish?.takeIf { zone -> zone.isNotBlank() } ?: user
+    val start = regional(instance.zone?.start) ?: user
+    val finish = regional(instance.zone?.finish) ?: user
     if (Zones.same(start, user, registry) && Zones.same(finish, user, registry)) return null
     if (Zones.same(start, finish, registry)) return zoneCity(start)
     return range(zoneCity(start), zoneCity(finish))

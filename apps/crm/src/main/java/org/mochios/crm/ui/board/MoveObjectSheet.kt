@@ -139,8 +139,8 @@ fun MoveObjectSheet(
                                 .fillMaxWidth()
                                 .clickable {
                                     if (!isSelected) {
-                                        // In its own column, named with no value, which keeps it.
-                                        viewModel.moveObject(obj.id, field = columnFieldId, value = "", rowField = rowFieldId, rowValue = option.id)
+                                        // In its own column, which it keeps.
+                                        viewModel.moveToLane(obj.id, rowFieldId, option.id)
                                     }
                                     onDismiss()
                                 }

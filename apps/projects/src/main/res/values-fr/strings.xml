@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Ou téléversez un fichier</string>
     <string name="projects_export">Exporter les données</string>
     <string name="projects_export_failed">Impossible d\'enregistrer l\'export</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Exporté sans %1$s pièce jointe</item>
+        <item quantity="other">Exporté sans %1$s pièces jointes</item>
+    </plurals>
     <string name="projects_export_saved">Données du projet enregistrées</string>
     <string name="projects_exporting">Préparation de l\'export…</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>

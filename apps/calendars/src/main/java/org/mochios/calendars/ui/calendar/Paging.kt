@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import org.mochios.android.sync.CalendarsMapping
 import java.time.LocalDate
 import java.time.ZoneId
 
@@ -39,14 +40,16 @@ data class Page(val start: Long, val finish: Long)
 
 /**
  * The page [index] pages from [anchor], which is page 0 and begins on the
- * anchor day itself. A negative index reaches back. The server lists nothing
- * before 1970, so a page stops there.
+ * anchor day itself. A negative index reaches back. Each day begins at its
+ * midnight in [zone], placed where the server and the web client place it
+ * when the clocks skip or read it twice ([CalendarsMapping.placed]). The
+ * server lists nothing before 1970, so a page stops there.
  */
 fun page(anchor: LocalDate, index: Int, zone: ZoneId): Page {
     val start = anchor.plusDays(index * PAGE)
     return Page(
-        maxOf(0L, start.atStartOfDay(zone).toEpochSecond()),
-        maxOf(0L, start.plusDays(PAGE).atStartOfDay(zone).toEpochSecond()),
+        maxOf(0L, CalendarsMapping.placed(start.atStartOfDay(), zone)),
+        maxOf(0L, CalendarsMapping.placed(start.plusDays(PAGE).atStartOfDay(), zone)),
     )
 }
 

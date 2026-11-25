@@ -79,6 +79,12 @@ data class EditorUiState(
     val allday: Boolean = false,
     val start: Long = 0,
     val finish: Long = 0,
+    /**
+     * Each timed end as its clock reads, as typed or as the event stores it,
+     * which the form shows and writes while it is still the end's own
+     * ([live]): a time the clocks skip has no instant that reads it.
+     */
+    val reading: Reading = Reading(),
     val zone: Zone = Zone(),
     /** The zone a floating event's times were read in, which they are written back floating from; blank for any other. */
     val floating: String = "",
@@ -205,6 +211,14 @@ class EventEditViewModel @Inject constructor(
 
     /** The calendar viewed on its own that a new event was asked for from; empty for none. */
     private val chosen: String = handle.get<String>("calendar").orEmpty()
+
+    /**
+     * The reading the listing gives the occurrence opened where its zone
+     * skips the one its start reads ([Instance.reading]), which it opens at
+     * and a move of the series is measured from; null for none, when the
+     * series is read for it.
+     */
+    private val given: String? = handle.get<String>("reading")?.takeIf { it.isNotBlank() }
 
     init {
         val event = handle.get<String>("event")?.takeIf { it.isNotBlank() && it != "new" }
@@ -372,6 +386,7 @@ class EventEditViewModel @Inject constructor(
             allday = form.allday,
             start = form.start,
             finish = form.finish,
+            reading = form.reading,
             zone = form.zone,
             floating = form.floating,
             location = form.location,
@@ -458,6 +473,15 @@ class EventEditViewModel @Inject constructor(
             allday = allday,
             start = begins,
             finish = ends,
+            // The ends as the event writes them, so one written at a time
+            // the clocks skip opens, and saves, as it reads; an occurrence
+            // the master is moved onto reads as the series writes it there.
+            reading = when {
+                allday -> Reading()
+                begins == declared -> stored(shown, written(shown, zone), zone)
+                master != null -> opening(master, occurrence, zone, given)
+                else -> Reading()
+            },
             zone = written(shown, zone),
             floating = if (CalendarsMapping.floating(starts)) zone else "",
             location = shown.value("LOCATION"),
@@ -512,28 +536,18 @@ class EventEditViewModel @Inject constructor(
         toggled(this, value, model.zone, model.preferences.hours, model.preferences.duration)
     }
 
-    fun start(value: Long) = edit {
-        val length = finish - start
-        copy(start = value, finish = value + length)
-    }
+    /** The start as picked, [value] on its clock ([started]). */
+    fun start(value: LocalDateTime) = edit { started(this, value, this@EventEditViewModel.zone) }
 
     /**
      * The end as picked, even before the start: the End field then says so
-     * and Save waits, as the web editor does, rather than moving it.
+     * and Save waits, as the web editor does, rather than moving it
+     * ([finished]).
      */
-    fun finish(value: Long) = edit { copy(finish = value) }
+    fun finish(value: LocalDateTime) = edit { finished(this, value, this@EventEditViewModel.zone) }
 
-    /**
-     * The zones the ends read in. A time typed is in its own zone, so an end
-     * whose zone changes keeps its clock reading and its instant moves; an
-     * end that then falls before the start moves on by whole days until it
-     * follows, which is where an eastbound arrival lands anyway.
-     */
-    fun zone(value: Zone) = edit {
-        val begins = moved(start, zone.start, value.start)
-        val ends = moved(finish, zone.finish, value.finish)
-        copy(zone = value, start = begins, finish = following(begins, ends))
-    }
+    /** The zones the ends read in ([zoned]). */
+    fun zone(value: Zone) = edit { zoned(this, value, this@EventEditViewModel.zone) }
 
     private inline fun edit(change: EditorUiState.() -> EditorUiState) {
         _uiState.value = _uiState.value.change().copy(error = null)
@@ -645,14 +659,6 @@ class EventEditViewModel @Inject constructor(
         }
     }
 
-    /** Where the server lists the occurrence the form starts at: an all-day one at the user's own midnight. */
-    private fun listed(state: EditorUiState): Long {
-        if (state.recurrence.frequency == Frequency.NEVER) return 0
-        if (!state.allday) return state.start
-        val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())
-        return Instant.ofEpochSecond(state.start).atZone(ZoneOffset.UTC).toLocalDate().atStartOfDay(id).toEpochSecond()
-    }
-
     fun scope(scope: Scope) {
         val prompt = _uiState.value.prompt
         val closing = _uiState.value.closing
@@ -701,9 +707,9 @@ class EventEditViewModel @Inject constructor(
         viewModelScope.launch {
             writing.withLock {
                 val state = _uiState.value
-                val plain = carried?.components?.let { copied(it, state.occurrence, scope, zone) }
+                val plain = carried?.components?.let { copied(it, state.occurrence, scope, zone, given) }
                 val edited = dirty(state)
-                val form = (if (edited) duplicate(form(state), scope, carried?.components.orEmpty(), zone) else plain) ?: return@withLock
+                val form = (if (edited) duplicate(form(state), scope, carried?.components.orEmpty(), zone, given) else plain) ?: return@withLock
                 val calendar = state.calendars.firstOrNull { it.id == state.calendar }?.id
                     ?: state.calendars.firstOrNull()?.id.orEmpty()
                 open(form, state.calendars, calendar, plain?.takeIf { edited }?.let { it to calendar })
@@ -750,7 +756,7 @@ class EventEditViewModel @Inject constructor(
                         _uiState.value = _uiState.value.copy(
                             isSaving = false,
                             left = closing,
-                            follow = if (closing) null else Follow(saved.id, listed(state)),
+                            follow = if (closing) null else Follow(saved.id, listed(state, zone)),
                         )
                         return@withLock
                     }
@@ -790,7 +796,7 @@ class EventEditViewModel @Inject constructor(
             )
         }
         if (scope == Scope.FOLLOWING && state.recurring) {
-            val halves = split(carried?.components.orEmpty(), form(state), state.occurrence, zone)
+            val halves = split(carried?.components.orEmpty(), form(state), state.occurrence, zone, given)
             if (halves != null) {
                 val (before, after) = halves
                 return repository.splitEvent(state.event, etag, state.moment, before, after, state.calendar).second
@@ -837,7 +843,7 @@ class EventEditViewModel @Inject constructor(
 
     /** The tree to send, built from the form over what the server holds. */
     fun components(state: EditorUiState, scope: Scope): List<EventComponent> =
-        components(form(state), carried?.components.orEmpty(), scope, zone)
+        components(form(state), carried?.components.orEmpty(), scope, zone, given)
 
     /** The editor's fields, as the tree builder wants them. */
     private fun form(state: EditorUiState) = form(state, zone)
@@ -846,11 +852,8 @@ class EventEditViewModel @Inject constructor(
      * Where a new event opened with no time at all starts: today's next whole
      * hour, or tomorrow's working [hours] once today has none left.
      */
-    private fun opening(hours: Hours): Long {
-        val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())
-        val now = java.time.ZonedDateTime.now(id)
-        return defaultStart(now.toLocalDate(), now.toLocalDate(), now.toLocalTime(), hours).atZone(id).toEpochSecond()
-    }
+    private fun opening(hours: Hours): Long =
+        starting(java.time.ZonedDateTime.now(runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())), hours)
 
     /** The day [moment] falls on in the user's zone, at its UTC midnight, which is how an all-day form holds a day. */
     private fun day(moment: Long): Long =
@@ -859,6 +862,27 @@ class EventEditViewModel @Inject constructor(
             .toLocalDate()
             .atStartOfDay(ZoneOffset.UTC)
             .toEpochSecond()
+}
+
+/**
+ * Where a new event opened with no time at all starts at [now], the user's
+ * own clock: today's next whole hour, or tomorrow's working [hours] once
+ * today has none left, placed where the server places it when the clocks
+ * skip or read that hour twice ([CalendarsMapping.placed]).
+ */
+internal fun starting(now: java.time.ZonedDateTime, hours: Hours): Long =
+    CalendarsMapping.placed(defaultStart(now.toLocalDate(), now.toLocalDate(), now.toLocalTime(), hours), now.zone)
+
+/**
+ * Where the server lists the occurrence [state]'s form starts at: an all-day
+ * one at the [user]'s own midnight, placed as the server places it when the
+ * clocks skip or read it twice. 0 for an event that does not repeat.
+ */
+internal fun listed(state: EditorUiState, user: String): Long {
+    if (state.recurrence.frequency == Frequency.NEVER) return 0
+    if (!state.allday) return state.start
+    val id = runCatching { ZoneId.of(user) }.getOrDefault(ZoneId.systemDefault())
+    return CalendarsMapping.placed(Instant.ofEpochSecond(state.start).atZone(ZoneOffset.UTC).toLocalDate().atStartOfDay(), id)
 }
 
 /** The component's `VALARM`s. */
@@ -889,13 +913,17 @@ fun minutes(trigger: String): Int {
     return if (value.startsWith("-")) (seconds / 60).toInt() else -(seconds / 60).toInt()
 }
 
-/** The editor's fields, as the tree builder wants them; a blank zone is the [user]'s. */
-internal fun form(state: EditorUiState, user: String) = EventForm(
+/**
+ * The editor's fields, as the tree builder wants them; a blank zone is the
+ * [user]'s. Each timed end carries the reading it shows ([normal]).
+ */
+internal fun form(state: EditorUiState, user: String) = normal(EventForm(
     title = state.title,
     start = state.start,
     finish = state.finish,
     allday = state.allday,
     zone = Zone(state.zone.start.ifBlank { user }, state.zone.finish.ifBlank { user }),
+    reading = state.reading,
     location = state.location,
     colour = state.colour,
     url = state.url,
@@ -907,14 +935,15 @@ internal fun form(state: EditorUiState, user: String) = EventForm(
     occurrence = state.occurrence,
     series = state.series,
     floating = state.floating,
-)
+))
 
 /**
  * Whether the form or calendar differs from the one the editor opened, so
- * leaving would drop something; an edit undone by hand is no change.
+ * leaving would drop something; an edit undone by hand is no change, and
+ * neither is a reading the form shows alike ([normal]).
  */
 internal fun dirty(state: EditorUiState, user: String): Boolean =
-    state.opened != null && (form(state, user) to state.calendar) != state.opened
+    state.opened != null && (form(state, user) to state.calendar) != state.opened.let { (form, calendar) -> normal(form) to calendar }
 
 /**
  * The state once [saved], the form it wrote, has landed under [etag]: that
@@ -992,22 +1021,102 @@ internal fun toggled(
     val begins = shownIn(false, state.zone.start.ifBlank { user })
     val ends = shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } })
     if (value) {
-        val first = Instant.ofEpochSecond(state.start).atZone(begins)
-        val last = Instant.ofEpochSecond(state.finish).atZone(ends)
+        // Each end as its clock reads, a time the clocks skip as typed.
+        val first = reading(state.start, state.reading.start, begins)
+        val last = reading(state.finish, state.reading.finish, ends)
         return state.copy(
             allday = true,
             start = first.toLocalDate().atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
             finish = last.toLocalDate().plusDays(1).atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
+            reading = Reading(),
             clock = (first.hour * 60 + first.minute) to (last.hour * 60 + last.minute),
         )
     }
     val first = Instant.ofEpochSecond(state.start).atZone(ZoneOffset.UTC).toLocalDate()
     val last = Instant.ofEpochSecond(state.finish).atZone(ZoneOffset.UTC).toLocalDate().minusDays(1)
     val (from, to) = state.clock ?: beneath(first, now.toLocalDate(), now.toLocalTime(), hours, duration)
+    // Each time is written as it reads and placed where the server places
+    // it, which for one the clocks skip or read twice that day is not the
+    // platform's placing.
+    val opens = first.atTime(from / 60, from % 60)
+    val closes = last.atTime(to / 60, to % 60)
     return state.copy(
         allday = false,
-        start = first.atTime(from / 60, from % 60).atZone(begins).toEpochSecond(),
-        finish = last.atTime(to / 60, to % 60).atZone(ends).toEpochSecond(),
+        start = CalendarsMapping.placed(opens, begins),
+        finish = CalendarsMapping.placed(closes, ends),
+        reading = Reading(opens, closes),
         clock = null,
+    )
+}
+
+/**
+ * The clock reading of a timed end at [instant] in [zone]: its own [typed]
+ * reading while that is still the end's ([live]), so a time the clocks skip
+ * reads as typed, else its instant's.
+ */
+private fun reading(instant: Long, typed: LocalDateTime?, zone: ZoneId): LocalDateTime =
+    typed?.takeIf { CalendarsMapping.placed(it, zone) == instant }
+        ?: LocalDateTime.ofInstant(Instant.ofEpochSecond(instant), zone)
+
+/**
+ * The state once the start is picked as [value], on its clock: for an
+ * all-day event a day, held at its UTC midnight, the last day moving with
+ * it; for a timed one a reading in the start's zone, a blank one the
+ * [user]'s, written as it reads and placed where the server places it
+ * ([CalendarsMapping.placed]), the end moving as far on its own clock, as
+ * the web editor moves it.
+ */
+internal fun started(state: EditorUiState, value: LocalDateTime, user: String): EditorUiState {
+    if (state.allday) {
+        val day = value.toLocalDate().atStartOfDay(ZoneOffset.UTC).toEpochSecond()
+        return state.copy(start = day, finish = day + (state.finish - state.start))
+    }
+    val begins = shownIn(false, state.zone.start.ifBlank { user })
+    val ends = shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } })
+    val was = reading(state.start, state.reading.start, begins)
+    val closes = reading(state.finish, state.reading.finish, ends).plus(java.time.Duration.between(was, value))
+    return state.copy(
+        start = CalendarsMapping.placed(value, begins),
+        finish = CalendarsMapping.placed(closes, ends),
+        reading = Reading(value, closes),
+    )
+}
+
+/**
+ * The state once the end is picked as [value], on its clock, as [started]
+ * takes a start: a timed end is written as it reads and placed where the
+ * server places it; an all-day end is the day after the last, at its UTC
+ * midnight.
+ */
+internal fun finished(state: EditorUiState, value: LocalDateTime, user: String): EditorUiState {
+    if (state.allday) return state.copy(finish = value.toLocalDate().atStartOfDay(ZoneOffset.UTC).toEpochSecond())
+    val ends = shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } })
+    return state.copy(finish = CalendarsMapping.placed(value, ends), reading = state.reading.copy(finish = value))
+}
+
+/**
+ * The state once the ends' zones are [value]. A time typed is in its own
+ * zone, so an end whose zone changes keeps its clock reading, a time the
+ * clocks skip included, and its instant moves to where the server places
+ * that reading in the new zone; an end that then falls before the start
+ * moves on by whole days until it follows, which is where an eastbound
+ * arrival lands anyway. A blank zone is the [user]'s.
+ */
+internal fun zoned(state: EditorUiState, value: Zone, user: String): EditorUiState {
+    // An all-day event's days are dates, held at their UTC midnights.
+    if (state.allday) return state.copy(zone = value)
+    val opens = reading(state.start, state.reading.start, shownIn(false, state.zone.start.ifBlank { user }))
+    val closes = reading(state.finish, state.reading.finish, shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } }))
+    val begins = CalendarsMapping.placed(opens, shownIn(false, value.start.ifBlank { user }))
+    val finishes = shownIn(false, value.finish.ifBlank { value.start.ifBlank { user } })
+    val ends = CalendarsMapping.placed(closes, finishes)
+    // Whole days on, by the clock, until the end follows the start.
+    val days = (following(begins, ends) - ends) / 86_400
+    val later = closes.plusDays(days)
+    return state.copy(
+        zone = value,
+        start = begins,
+        finish = CalendarsMapping.placed(later, finishes),
+        reading = Reading(opens, later),
     )
 }

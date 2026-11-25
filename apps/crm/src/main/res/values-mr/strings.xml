@@ -18,6 +18,10 @@
     <string name="crm_settings">सेटिंग्ज</string>
     <string name="crm_design">डिझाइन</string>
     <string name="crm_export_failed">निर्यात जतन करता आले नाही</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s संलग्नकाशिवाय निर्यात केले</item>
+        <item quantity="other">%1$s संलग्नकांशिवाय निर्यात केले</item>
+    </plurals>
     <string name="crm_sort_rank">मॅन्युअल</string>
     <string name="crm_sort_created">तयार केले</string>
     <string name="crm_sort_updated">अपडेट केले</string>

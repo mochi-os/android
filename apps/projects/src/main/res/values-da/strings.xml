@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Eller upload en fil</string>
     <string name="projects_export">Eksportér data</string>
     <string name="projects_export_failed">Eksporten kunne ikke gemmes</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Eksporteret uden %1$s vedhæftning</item>
+        <item quantity="other">Eksporteret uden %1$s vedhæftninger</item>
+    </plurals>
     <string name="projects_export_saved">Projektdata gemt</string>
     <string name="projects_exporting">Forbereder eksport…</string>
     <string name="projects_board_add_column">Tilføj kolonne</string>

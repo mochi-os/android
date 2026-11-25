@@ -110,6 +110,7 @@ import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.regional
 
 /** The height of one hour row; the whole day is twenty-four of these. */
 private val HOUR = 56.dp
@@ -360,8 +361,8 @@ fun TimeGrid(
         }
         val content = hours(finger.y)
         val cut = if (lift.resize) resized(lift.cut, content) else moved(lift.cut, content - lift.grab - lift.cut.from)
-        val startZone = if (zones) zoneOf(lift.instance.zone?.start, user) else user
-        val finishZone = if (zones) zoneOf(lift.instance.zone?.finish, user) else user
+        val startZone = if (zones) zoneOf(regional(lift.instance.zone?.start), user) else user
+        val finishZone = if (zones) zoneOf(regional(lift.instance.zone?.finish), user) else user
         val (start, finish) = dropped(lift.instance, lift.day, lift.cut, day, cut, startZone, finishZone, lift.resize)
         return Landing.Timed(day, cut, start, finish)
     }

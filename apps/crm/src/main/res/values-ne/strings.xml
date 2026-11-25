@@ -18,6 +18,10 @@
     <string name="crm_settings">सेटिङहरू</string>
     <string name="crm_design">डिजाइन</string>
     <string name="crm_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">%1$s संलग्नकबिना निर्यात गरियो</item>
+        <item quantity="other">%1$s संलग्नकहरूबिना निर्यात गरियो</item>
+    </plurals>
     <string name="crm_sort_rank">म्यानुअल</string>
     <string name="crm_sort_created">सिर्जना गरियो</string>
     <string name="crm_sort_updated">अद्यावधिक गरियो</string>

@@ -18,6 +18,10 @@
     <string name="crm_settings">Կարգավորումներ</string>
     <string name="crm_design">Դիզայն</string>
     <string name="crm_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">Արտահանվեց առանց %1$s կցորդի</item>
+        <item quantity="other">Արտահանվեց առանց %1$s կցորդի</item>
+    </plurals>
     <string name="crm_sort_rank">Ձեռքով</string>
     <string name="crm_sort_created">Ստեղծված</string>
     <string name="crm_sort_updated">Թարմացված</string>

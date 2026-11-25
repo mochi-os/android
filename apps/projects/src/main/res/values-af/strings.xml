@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Of laai \'n lêer op</string>
     <string name="projects_export">Voer data uit</string>
     <string name="projects_export_failed">Kon nie die uitvoer stoor nie</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">Uitgevoer sonder %1$s aanhegsel</item>
+        <item quantity="other">Uitgevoer sonder %1$s aanhegsels</item>
+    </plurals>
     <string name="projects_export_saved">Projekdata gestoor</string>
     <string name="projects_exporting">Berei uitvoer voor…</string>
     <string name="projects_board_add_column">Voeg kolom by</string>

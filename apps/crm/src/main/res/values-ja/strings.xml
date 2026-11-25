@@ -18,6 +18,9 @@
     <string name="crm_settings">設定</string>
     <string name="crm_design">デザイン</string>
     <string name="crm_export_failed">エクスポートを保存できませんでした</string>
+    <plurals name="crm_export_missing">
+        <item quantity="other">添付ファイル %1$s 件を除いてエクスポートしました</item>
+    </plurals>
     <string name="crm_sort_rank">手動</string>
     <string name="crm_sort_created">作成日</string>
     <string name="crm_sort_updated">更新日</string>

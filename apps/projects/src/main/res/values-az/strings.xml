@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Yaxud fayl yükləyin</string>
     <string name="projects_export">Məlumatları ixrac et</string>
     <string name="projects_export_failed">İxrac saxlanıla bilmədi</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s qoşma olmadan ixrac edildi</item>
+        <item quantity="other">%1$s qoşma olmadan ixrac edildi</item>
+    </plurals>
     <string name="projects_export_saved">Layihə məlumatı saxlanıldı</string>
     <string name="projects_exporting">İxrac hazırlanır…</string>
     <string name="projects_board_add_column">Sütun əlavə et</string>

@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">يا فائل اپلوڊ ڪريو</string>
     <string name="projects_export">ڊيٽا برآمد ڪريو</string>
     <string name="projects_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s منسلڪ کان سواءِ برآمد ٿيو</item>
+        <item quantity="other">%1$s منسلڪات کان سواءِ برآمد ٿيو</item>
+    </plurals>
     <string name="projects_export_saved">پروجيڪٽ ڊيٽا محفوظ ٿي</string>
     <string name="projects_exporting">ايڪسپورٽ تيار ٿي رهيو آهي…</string>
     <string name="projects_board_add_column">ڪالم شامل ڪريو</string>

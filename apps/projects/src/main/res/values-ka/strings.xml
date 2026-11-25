@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">ან ატვირთეთ ფაილი</string>
     <string name="projects_export">მონაცემების ექსპორტი</string>
     <string name="projects_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">ექსპორტირდა %1$s დანართის გარეშე</item>
+        <item quantity="other">ექსპორტირდა %1$s დანართის გარეშე</item>
+    </plurals>
     <string name="projects_export_saved">პროექტის მონაცემები შენახულია</string>
     <string name="projects_exporting">ექსპორტის მომზადება…</string>
     <string name="projects_board_add_column">სვეტის დამატება</string>

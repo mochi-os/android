@@ -18,6 +18,10 @@
     <string name="crm_settings">Saitunan</string>
     <string name="crm_design">Zane</string>
     <string name="crm_export_failed">An kasa ajiye fitarwar</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">An fitar ba tare da fayil ɗin da aka makala %1$s ba</item>
+        <item quantity="other">An fitar ba tare da fayilolin da aka makala %1$s ba</item>
+    </plurals>
     <string name="crm_sort_rank">Hannu</string>
     <string name="crm_sort_created">An ƙirƙira</string>
     <string name="crm_sort_updated">An sabunta</string>

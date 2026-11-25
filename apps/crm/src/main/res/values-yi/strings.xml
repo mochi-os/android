@@ -18,6 +18,10 @@
     <string name="crm_settings">אײַנשטעלונגען</string>
     <string name="crm_design">אויסזען</string>
     <string name="crm_export_failed">מ׳האָט נישט געקענט אויפֿהיטן דעם עקספּאָרט</string>
+    <plurals name="crm_export_missing">
+        <item quantity="one">עקספּאָרטירט אָן %1$s בײַלאַגע</item>
+        <item quantity="other">עקספּאָרטירט אָן %1$s בײַלאַגעס</item>
+    </plurals>
     <string name="crm_sort_rank">מאַנואַל</string>
     <string name="crm_sort_created">באַשאַפֿן</string>
     <string name="crm_sort_updated">באַנײַט</string>

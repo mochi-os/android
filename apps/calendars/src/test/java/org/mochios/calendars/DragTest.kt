@@ -23,7 +23,9 @@ import org.mochios.calendars.ui.calendar.at
 import org.mochios.calendars.ui.calendar.dropped
 import org.mochios.calendars.ui.calendar.moved
 import org.mochios.calendars.ui.calendar.resized
+import org.mochios.calendars.ui.calendar.slid
 import org.mochios.calendars.ui.calendar.snap
+import org.mochios.calendars.ui.calendar.stepped
 import org.mochios.calendars.ui.calendar.takes
 import org.mochios.calendars.ui.editor.Scope
 import java.time.LocalDate
@@ -89,6 +91,63 @@ class DragTest {
         assertEquals(clock(LONDON, 2026, 9, 21, 10, 45), at(MONDAY, 10.75f, LONDON))
         assertEquals(clock(LONDON, 2026, 9, 21, 10, 20), at(MONDAY, 620 / 60f, LONDON))
         assertEquals(TUESDAY.atStartOfDay(LONDON).toEpochSecond(), at(MONDAY, 24f, LONDON))
+    }
+
+    // ---- a drop on a time the clocks skip or read twice ----
+    //
+    // Each is placed where the server places it, Go's time.Date: New York's
+    // skipped 02:30 on 10 March 2024 an hour back, at 01:30 in winter time;
+    // London's 01:30 on 27 October 2024, which comes round twice, in winter
+    // time; Havana's skipped midnight on 10 March 2024 an hour back, at 23:00
+    // the evening before; and Amman's midnight on 30 October 2020, which
+    // comes round twice, the second time. The platform would put each the
+    // other way.
+
+    private val HAVANA: ZoneId = ZoneId.of("America/Havana")
+    private val AMMAN: ZoneId = ZoneId.of("Asia/Amman")
+
+    /** An instant, written in UTC. */
+    private fun utc(text: String) = java.time.Instant.parse(text).epochSecond
+
+    @Test
+    fun `a drop on a time the clocks skip or read twice lands where the server places it`() {
+        assertEquals(
+            "THE POINT: an hour back in New York, winter time in London, the midnights as the server reads them",
+            listOf(
+                utc("2024-03-10T06:30:00Z"),
+                utc("2024-10-27T01:30:00Z"),
+                utc("2024-03-10T04:00:00Z"),
+                utc("2020-10-29T22:00:00Z"),
+            ),
+            listOf(
+                at(LocalDate.of(2024, 3, 10), 2.5f, NEW_YORK),
+                at(LocalDate.of(2024, 10, 27), 1.5f, LONDON),
+                at(LocalDate.of(2024, 3, 9), 24f, HAVANA),
+                at(LocalDate.of(2020, 10, 29), 24f, AMMAN),
+            ),
+        )
+    }
+
+    @Test
+    fun `an occurrence a drag carries onto a time the clocks skip or read twice lands where the server places it`() {
+        // A block dragged a day on, from Saturday 10:00 to Sunday 10:00, takes
+        // the series' 02:30 in New York and 01:30 in London along a day.
+        val york = slid(clock(NEW_YORK, 2024, 3, 9, 2, 30), clock(NEW_YORK, 2024, 3, 9, 10), clock(NEW_YORK, 2024, 3, 10, 10), NEW_YORK)
+        val london = slid(clock(LONDON, 2024, 10, 26, 1, 30), clock(LONDON, 2024, 10, 26, 10), clock(LONDON, 2024, 10, 27, 10), LONDON)
+        assertEquals(
+            "THE POINT: 01:30 in New York's winter time, and London's 01:30 in winter time",
+            listOf(utc("2024-03-10T06:30:00Z"), utc("2024-10-27T01:30:00Z")),
+            listOf(york, london),
+        )
+    }
+
+    @Test
+    fun `an end a chip carries a day onto a time the clocks skip or read twice lands where the server places it`() {
+        assertEquals(
+            "THE POINT: 01:30 in New York's winter time, and London's 01:30 in winter time",
+            listOf(utc("2024-03-10T06:30:00Z"), utc("2024-10-27T01:30:00Z")),
+            listOf(stepped(clock(NEW_YORK, 2024, 3, 9, 2, 30), 1, NEW_YORK), stepped(clock(LONDON, 2024, 10, 26, 1, 30), 1, LONDON)),
+        )
     }
 
     @Test

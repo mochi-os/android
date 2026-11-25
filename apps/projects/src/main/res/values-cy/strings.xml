@@ -314,6 +314,14 @@
     <string name="projects_design_or_upload_json">Neu uwchlwythwch ffeil</string>
     <string name="projects_export">Allforio data</string>
     <string name="projects_export_failed">Methwyd cadw\'r allforio</string>
+    <plurals name="projects_export_missing">
+        <item quantity="zero">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="one">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="two">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="few">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="many">Wedi\'i allforio heb %1$s atodiad</item>
+        <item quantity="other">Wedi\'i allforio heb %1$s atodiad</item>
+    </plurals>
     <string name="projects_export_saved">Cadwyd data\'r prosiect</string>
     <string name="projects_exporting">Yn paratoi\'r allforio…</string>
     <string name="projects_board_add_column">Ychwanegu colofn</string>

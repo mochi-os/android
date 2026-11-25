@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Yoki fayl yuklang</string>
     <string name="projects_export">Maʼlumotlarni eksport qilish</string>
     <string name="projects_export_failed">Eksportni saqlab bo\'lmadi</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s biriktirmasiz eksport qilindi</item>
+        <item quantity="other">%1$s biriktirmasiz eksport qilindi</item>
+    </plurals>
     <string name="projects_export_saved">Loyiha ma\'lumotlari saqlandi</string>
     <string name="projects_exporting">Eksport tayyorlanmoqda…</string>
     <string name="projects_board_add_column">Ustun qoʻshish</string>

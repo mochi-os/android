@@ -310,6 +310,10 @@
     <string name="projects_design_or_upload_json">Ýa-da faýl ýükläň</string>
     <string name="projects_export">Maglumatlary eksport et</string>
     <string name="projects_export_failed">Eksporty saklap bolmady</string>
+    <plurals name="projects_export_missing">
+        <item quantity="one">%1$s goşundysyz eksport edildi</item>
+        <item quantity="other">%1$s goşundysyz eksport edildi</item>
+    </plurals>
     <string name="projects_export_saved">Taslamanyň maglumaty saklandy</string>
     <string name="projects_exporting">Eksport taýýarlanýar…</string>
     <string name="projects_board_add_column">Sütün goşmak</string>
