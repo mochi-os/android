@@ -173,7 +173,7 @@ private fun DisputesBody(
 }
 
 @Composable
-private fun DisputeRow(
+internal fun DisputeRow(
     dispute: Dispute,
     onActionClick: () -> Unit,
 ) {
@@ -295,8 +295,9 @@ internal fun DisputeStatus(dispute: Dispute) {
     }
 }
 
+/** A dispute's reason as its card and dialog show it: a chargeback's is titled as one. */
 @Composable
-private fun disputeReasonText(dispute: Dispute): String {
+internal fun disputeReasonText(dispute: Dispute): String {
     return if (dispute.opener == "stripe") {
         stringResource(
             R.string.staff_disputes_dialog_title_chargeback,
@@ -307,12 +308,12 @@ private fun disputeReasonText(dispute: Dispute): String {
     }
 }
 
-/** Stripe's reason for a chargeback; one this client does not know reads "Unknown". */
+/** Stripe's reason for a chargeback; one this client does not know reads "Other reason", never as its code. */
 @Composable
 internal fun stripeReasonLabel(reason: String): String =
-    stringResource(stripeReasonRes(reason) ?: R.string.staff_status_unknown)
+    stringResource(stripeReasonRes(reason) ?: R.string.staff_disputes_reason_unknown)
 
-/** A buyer's reason for a dispute; anything else is the buyer's own words. */
+/** A buyer's reason for a dispute; one this client does not know reads "Other reason", never as its token. */
 @Composable
 internal fun disputeReasonLabel(reason: String): String =
-    disputeReasonRes(reason)?.let { label -> stringResource(label) } ?: reason
+    stringResource(disputeReasonRes(reason) ?: R.string.staff_disputes_reason_unknown)

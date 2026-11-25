@@ -108,7 +108,7 @@ fun EditListingScreen(
                     resources.getString(
                         R.string.market_editor_asset_too_large,
                         event.name,
-                        format.formatFileSize(ASSET_SIZE_MAXIMUM),
+                        format.formatFileSize(event.maximum),
                     ),
                 )
             }

@@ -77,7 +77,7 @@
     <string name="staff_disputes_refund_help">Deixe em branco para um reembolso total de %1$s. Insira um valor menor para um reembolso parcial.</string>
     <string name="staff_disputes_refund_must_be_positive">O valor do reembolso deve ser maior que zero</string>
     <string name="staff_disputes_resolving">Resolvendo…</string>
-    <string name="staff_disputes_stripe_subscription_canceled">assinatura cancelada</string>
+    <string name="staff_disputes_stripe_subscription_canceled">Assinatura cancelada</string>
     <string name="staff_disputes_view">Visualizar</string>
     <string name="staff_listings_action_reject_title">Recusar anúncio</string>
     <string name="staff_listings_any_status">Qualquer status</string>

@@ -181,7 +181,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun stripeStatus(): StripeStatus {
         return try {
-            api.getStripeStatus().unwrap()
+            api.checkStripeStatus().unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

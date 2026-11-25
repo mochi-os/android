@@ -10,8 +10,9 @@ import org.junit.Test
 import java.io.File
 
 /**
- * The editor refuses a digital asset over the Comptroller's 100 MB before
- * sending it: the Comptroller would refuse it only after the whole upload.
+ * The editor refuses a digital asset over the Comptroller's 100 MB, and a
+ * photo over its 10 MB, before sending it: the Comptroller would refuse it
+ * only after the whole upload.
  */
 class AssetLimitTest {
 
@@ -30,8 +31,22 @@ class AssetLimitTest {
         val film = file("film.mp4", ASSET_SIZE_MAXIMUM + 1)
         val book = file("book.pdf", ASSET_SIZE_MAXIMUM)
         val notes = file("notes.txt", 10)
-        val (accepted, refused) = assetsWithinLimit(listOf(film, book, notes))
+        val (accepted, refused) = withinLimit(listOf(film, book, notes), ASSET_SIZE_MAXIMUM)
         assertEquals(listOf("book.pdf", "notes.txt"), accepted.map { it.name })
         assertEquals(listOf("film.mp4"), refused.map { it.name })
+    }
+
+    @Test
+    fun `the photo maximum is the Comptroller's 10 MB`() {
+        assertEquals(10L * 1024 * 1024, PHOTO_SIZE_MAXIMUM)
+    }
+
+    @Test
+    fun `a photo over the photo maximum is refused and the rest are sent`() {
+        val poster = file("poster.jpg", PHOTO_SIZE_MAXIMUM + 1)
+        val front = file("front.jpg", PHOTO_SIZE_MAXIMUM)
+        val (accepted, refused) = withinLimit(listOf(poster, front), PHOTO_SIZE_MAXIMUM)
+        assertEquals(listOf("front.jpg"), accepted.map { it.name })
+        assertEquals(listOf("poster.jpg"), refused.map { it.name })
     }
 }

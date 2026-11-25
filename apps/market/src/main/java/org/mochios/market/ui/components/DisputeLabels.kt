@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.components
 
+import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.market.R
@@ -12,16 +13,18 @@ import org.mochios.market.R
 /**
  * A dispute's wire `reason` as a label. A Stripe chargeback (`opener ==
  * "stripe"`) carries Stripe's reason codes; a buyer's refund request carries
- * the market's own. An unknown code falls back to the code with the
- * underscores spaced out, as on web.
+ * the market's own. A code this client does not know reads as "Other reason",
+ * never as the code.
  */
 @Composable
 fun disputeReasonLabel(reason: String, opener: String): String {
-    val mapped = if (opener == "stripe") chargebackReason(reason) else refundReason(reason)
-    return if (mapped != null) stringResource(mapped) else reason.replace('_', ' ')
+    val mapped = if (opener == "stripe") chargebackReasonRes(reason) else refundReasonRes(reason)
+    return stringResource(mapped ?: R.string.market_dispute_reason_unknown)
 }
 
-private fun refundReason(reason: String): Int? = when (reason) {
+/** A buyer's reason for a refund request, from the five the Comptroller accepts. */
+@StringRes
+internal fun refundReasonRes(reason: String): Int? = when (reason) {
     "not_received" -> R.string.market_refund_reason_not_received
     "not_as_described" -> R.string.market_refund_reason_not_as_described
     "damaged" -> R.string.market_refund_reason_damaged
@@ -30,7 +33,9 @@ private fun refundReason(reason: String): Int? = when (reason) {
     else -> null
 }
 
-private fun chargebackReason(reason: String): Int? = when (reason) {
+/** Stripe's reason code for a chargeback: every reason Stripe documents for a dispute. */
+@StringRes
+internal fun chargebackReasonRes(reason: String): Int? = when (reason) {
     "fraudulent" -> R.string.market_chargeback_reason_fraudulent
     "duplicate" -> R.string.market_chargeback_reason_duplicate
     "general" -> R.string.market_chargeback_reason_general
@@ -43,6 +48,7 @@ private fun chargebackReason(reason: String): Int? = when (reason) {
     "debit_not_authorized" -> R.string.market_chargeback_reason_debit_not_authorized
     "incorrect_account_details" -> R.string.market_chargeback_reason_incorrect_account_details
     "insufficient_funds" -> R.string.market_chargeback_reason_insufficient_funds
+    "noncompliant" -> R.string.market_chargeback_reason_noncompliant
     "bank_cannot_process" -> R.string.market_chargeback_reason_bank_cannot_process
     "check_returned" -> R.string.market_chargeback_reason_check_returned
     else -> null

@@ -485,4 +485,6 @@
     <string name="staff_disputes_withdrawn">توسط خریدار پس گرفته شد</string>
     <string name="staff_status_denied">درخواست تجدیدنظر رد شد</string>
     <string name="staff_status_upheld">درخواست تجدیدنظر تأیید شد</string>
+    <string name="staff_disputes_reason_unknown">دلیل دیگر</string>
+    <string name="staff_disputes_stripe_noncompliant">مغایر با قوانین</string>
 </resources>

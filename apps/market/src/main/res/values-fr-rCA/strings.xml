@@ -165,4 +165,8 @@
     <string name="market_fee_preview_payout_period">Votre versement par période</string>
     <string name="market_refund_dialog_amount_invalid">Entrez un montant entre %1$s et %2$s</string>
     <string name="market_bid_dialog_instant_confirm">Acheter maintenant</string>
+    <string name="market_audit_appeal_denied">Appel refusé</string>
+    <string name="market_audit_appeal_upheld">Appel accueilli</string>
+    <string name="market_audit_moderation_rejected">Rejetée</string>
+    <string name="market_audit_reason_listing_removed">Annonce retirée</string>
 </resources>

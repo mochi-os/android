@@ -48,6 +48,9 @@ class StripeBannerTest {
 
     @Volatile private var status: MockResponse? = null
 
+    /** The method of the last status check. */
+    @Volatile private var method: String? = null
+
     @Before
     fun begin() {
         AppContext.set(context)
@@ -56,6 +59,7 @@ class StripeBannerTest {
             override fun dispatch(request: RecordedRequest): MockResponse =
                 when (request.path.orEmpty().substringBefore("?").removePrefix("/market/")) {
                     "-/accounts/stripe/status" -> {
+                        method = request.method
                         checks.incrementAndGet()
                         status ?: MockResponse().setResponseCode(502).setBody("""{"error": "Stripe is not answering"}""")
                     }
@@ -117,5 +121,17 @@ class StripeBannerTest {
         show()
         rule.onNodeWithText(context.getString(R.string.market_stripe_onboarding_check)).performClick()
         rule.waitUntil(5_000) { ready == 1 }
+    }
+
+    // The check asks Stripe, records the seller's onboarding state and spends
+    // the allowance the Stripe connection draws on, so it is a POST: a GET
+    // would let a link or an image spend it for the seller.
+    @Test
+    fun `the check is a POST`() {
+        status = MockResponse().setBody("""{"data": {"charges_enabled": true, "payouts_enabled": true}}""")
+        show()
+        rule.onNodeWithText(context.getString(R.string.market_stripe_onboarding_check)).performClick()
+        rule.waitUntil(5_000) { checks.get() == 1 }
+        assertEquals("POST", method)
     }
 }

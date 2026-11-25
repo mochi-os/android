@@ -2,6 +2,6 @@
 <resources>
     <string name="staff_audit_action_subscription_cancelled">Canceled</string>
     <string name="staff_audit_action_auction_cancelled">Auction canceled</string>
-    <string name="staff_disputes_stripe_check_returned">check returned</string>
-    <string name="staff_disputes_stripe_subscription_canceled">subscription canceled</string>
+    <string name="staff_disputes_stripe_check_returned">Check returned</string>
+    <string name="staff_disputes_stripe_subscription_canceled">Subscription canceled</string>
 </resources>

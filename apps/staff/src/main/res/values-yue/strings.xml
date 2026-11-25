@@ -484,4 +484,6 @@
     <string name="staff_payments_toast_refunded">付款已退款</string>
     <string name="staff_payments_toast_refund_failed">退唔到呢筆付款</string>
     <string name="staff_disputes_withdrawn">買家已撤回</string>
+    <string name="staff_disputes_reason_unknown">其他原因</string>
+    <string name="staff_disputes_stripe_noncompliant">唔合規</string>
 </resources>

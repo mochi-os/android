@@ -485,4 +485,6 @@
     <string name="staff_disputes_withdrawn">خريدار واپس ورتو</string>
     <string name="staff_status_denied">اپيل رد</string>
     <string name="staff_status_upheld">اپيل منظور</string>
+    <string name="staff_disputes_reason_unknown">ٻيو سبب</string>
+    <string name="staff_disputes_stripe_noncompliant">ضابطن مطابق ناهي</string>
 </resources>

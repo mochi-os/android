@@ -134,4 +134,8 @@
         <item quantity="other">Download uw %1$s bestanden hieronder.</item>
     </plurals>
     <string name="market_audit_other">Andere activiteit</string>
+    <string name="market_audit_appeal_denied">Beroep afgewezen</string>
+    <string name="market_audit_appeal_upheld">Beroep toegewezen</string>
+    <string name="market_audit_reason_reserve_not_met">Reserve niet bereikt</string>
+    <string name="market_audit_reason_timeout">Reviewperiode beëindigd</string>
 </resources>

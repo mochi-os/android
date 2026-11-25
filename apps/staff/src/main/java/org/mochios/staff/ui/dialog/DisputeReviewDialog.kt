@@ -39,7 +39,7 @@ import org.mochios.android.format.formatPrice
 import org.mochios.android.format.toMinorUnits
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.ui.components.StaffAuditTimeline
-import org.mochios.staff.ui.disputes.disputeReasonLabel
+import org.mochios.staff.ui.disputes.disputeReasonText
 import org.mochios.staff.ui.disputes.stripeReasonLabel
 import java.util.Locale
 
@@ -193,15 +193,7 @@ private fun MetadataCard(dispute: Dispute) {
                 formatPrice(dispute.orderRefunded, dispute.currency),
             )
         }
-        val reasonValue = if (dispute.opener == "stripe") {
-            stringResource(
-                R.string.staff_disputes_dialog_title_chargeback,
-                stripeReasonLabel(dispute.reason),
-            )
-        } else {
-            disputeReasonLabel(dispute.reason)
-        }
-        MetaRow(stringResource(R.string.staff_disputes_meta_reason), reasonValue)
+        MetaRow(stringResource(R.string.staff_disputes_meta_reason), disputeReasonText(dispute))
 
         // Stripe chargeback fee + refund-state summary.
         if (dispute.opener == "stripe" && dispute.fee > 0) {

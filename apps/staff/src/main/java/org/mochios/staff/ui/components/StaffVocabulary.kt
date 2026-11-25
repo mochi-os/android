@@ -135,7 +135,10 @@ internal fun reportActionRes(action: String): Int? = when (action) {
     else -> null
 }
 
-/** A buyer's reason for a dispute; anything else is the buyer's own words. */
+/**
+ * A buyer's reason for a dispute, from the five the Comptroller accepts
+ * (`VALID_DISPUTE_REASONS`); it stores any other as "other".
+ */
 @StringRes
 internal fun disputeReasonRes(reason: String): Int? = when (reason) {
     "not_received" -> R.string.staff_disputes_reason_not_received
@@ -146,7 +149,7 @@ internal fun disputeReasonRes(reason: String): Int? = when (reason) {
     else -> null
 }
 
-/** Stripe's reason code for a chargeback. */
+/** Stripe's reason code for a chargeback: every reason Stripe documents for a dispute. */
 @StringRes
 internal fun stripeReasonRes(reason: String): Int? = when (reason) {
     "bank_cannot_process" -> R.string.staff_disputes_stripe_bank_cannot_process
@@ -159,6 +162,7 @@ internal fun stripeReasonRes(reason: String): Int? = when (reason) {
     "general" -> R.string.staff_disputes_stripe_general
     "incorrect_account_details" -> R.string.staff_disputes_stripe_incorrect_account_details
     "insufficient_funds" -> R.string.staff_disputes_stripe_insufficient_funds
+    "noncompliant" -> R.string.staff_disputes_stripe_noncompliant
     "product_not_received" -> R.string.staff_disputes_stripe_product_not_received
     "product_unacceptable" -> R.string.staff_disputes_stripe_product_unacceptable
     "subscription_canceled" -> R.string.staff_disputes_stripe_subscription_canceled

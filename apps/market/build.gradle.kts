@@ -48,6 +48,7 @@ dependencies {
     testImplementation(libs.okhttp.mockwebserver)
     testImplementation(libs.retrofit)
     testImplementation(libs.retrofit.gson)
+    testImplementation(libs.coroutines.test)
 
     // Custom Tabs for Stripe Checkout / Connect onboarding redirects.
     implementation(libs.browser)

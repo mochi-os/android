@@ -307,4 +307,9 @@
     <string name="market_bid_dialog_instant_title">即時購買？</string>
     <string name="market_bid_dialog_instant_body">您的出價已達到即時購買價，因此會即時以 %1$s 購入此商品。之後您有 96 小時完成付款。</string>
     <string name="market_subscriptions_cancel_past_due_body">這會即時取消你的訂閱。由於續訂付款失敗，存取權會馬上終止。</string>
+    <string name="market_audit_appeal_denied">上訴駁回</string>
+    <string name="market_audit_appeal_upheld">上訴獲批</string>
+    <string name="market_audit_moderation_approved">已批准</string>
+    <string name="market_audit_refund_of">／%1$s</string>
+    <string name="market_audit_report_ban">賬戶已封禁</string>
 </resources>

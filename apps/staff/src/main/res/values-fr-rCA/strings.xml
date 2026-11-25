@@ -50,9 +50,9 @@
     <string name="staff_disputes_refund_help">Laisser vide pour un remboursement complet de %1$s. Saisir un montant inférieur pour un remboursement partiel.</string>
     <string name="staff_disputes_resolution_buyer">Trancher en faveur de l\'acheteur</string>
     <string name="staff_disputes_resolution_seller">Trancher en faveur du vendeur</string>
-    <string name="staff_disputes_stripe_customer_initiated">initié par le client</string>
-    <string name="staff_disputes_stripe_duplicate">frais en double</string>
-    <string name="staff_disputes_stripe_unrecognized">frais non reconnus</string>
+    <string name="staff_disputes_stripe_customer_initiated">Initié par le client</string>
+    <string name="staff_disputes_stripe_duplicate">Frais en double</string>
+    <string name="staff_disputes_stripe_unrecognized">Frais non reconnus</string>
     <string name="staff_listings_action_remove_title">Retirer l\'annonce</string>
     <string name="staff_listings_moderation_manual">Manuelle</string>
     <string name="staff_listings_moderation_rejected">Rejetée</string>

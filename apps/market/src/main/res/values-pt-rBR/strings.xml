@@ -281,4 +281,16 @@
     <string name="market_editor_asset_too_large">%1$s é grande demais. Um arquivo pode ter no máximo %2$s.</string>
     <string name="market_purchase_dispute_withdraw_body">A disputa é encerrada para o vendedor, e o pedido volta para onde estava.</string>
     <string name="market_subscriptions_cancel_past_due_body">Isso cancelará sua assinatura agora. O pagamento da renovação falhou, então o acesso termina imediatamente.</string>
+    <string name="market_audit_appeal_upheld">Recurso acolhido</string>
+    <string name="market_audit_moderation_rejected">Recusado</string>
+    <string name="market_audit_reason_checkout_expired">Checkout expirado</string>
+    <string name="market_audit_reason_deauthorized">Acesso ao Stripe revogado</string>
+    <string name="market_audit_reason_duplicate">Conta Stripe vinculada a outra conta</string>
+    <string name="market_audit_reason_no_bids">Nenhum lance feito</string>
+    <string name="market_audit_reason_no_winning_bid">Sem lance vencedor</string>
+    <string name="market_audit_reason_period_ended">Período de assinatura encerrado</string>
+    <string name="market_audit_reason_reserve_not_met">Reserva não atingida</string>
+    <string name="market_audit_reason_timeout">Período de avaliações encerrado</string>
+    <string name="market_audit_via_staff">Reembolsado pela equipe</string>
+    <string name="market_audit_moderation_review">Em análise</string>
 </resources>

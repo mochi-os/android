@@ -485,4 +485,6 @@
     <string name="staff_disputes_withdrawn">ਖਰੀਦਦਾਰ ਨੇ ਵਾਪਸ ਲਿਆ</string>
     <string name="staff_status_denied">ਅਪੀਲ ਅਸਵੀਕਾਰ</string>
     <string name="staff_status_upheld">ਅਪੀਲ ਮਨਜ਼ੂਰ</string>
+    <string name="staff_disputes_reason_unknown">ਹੋਰ ਕਾਰਨ</string>
+    <string name="staff_disputes_stripe_noncompliant">ਨਿਯਮਾਂ ਦੇ ਅਨੁਸਾਰ ਨਹੀਂ</string>
 </resources>

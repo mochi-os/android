@@ -139,9 +139,13 @@ interface MarketApi {
         @Field("error_description") errorDescription: String? = null,
     ): Response<ApiResponse<StripeOauthCompletion>>
 
-    /** Current Stripe Connect charges/payouts capability flags. */
-    @GET("-/accounts/stripe/status")
-    suspend fun getStripeStatus(): Response<ApiResponse<StripeStatus>>
+    /**
+     * Current Stripe Connect charges/payouts capability flags. A POST: the
+     * check asks Stripe, records the seller's onboarding state and spends the
+     * allowance the Stripe connection itself draws on.
+     */
+    @POST("-/accounts/stripe/status")
+    suspend fun checkStripeStatus(): Response<ApiResponse<StripeStatus>>
 
     // ---- Categories ----
 

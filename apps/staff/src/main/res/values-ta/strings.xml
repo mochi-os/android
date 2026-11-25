@@ -129,7 +129,7 @@
     <string name="staff_categories_dialog_name">பெயர்</string>
     <string name="staff_categories_dialog_parent">பெற்றோர்</string>
     <string name="staff_categories_dialog_parent_none">ஒன்றுமில்லை</string>
-    <string name="staff_categories_dialog_physical">உடல்நலம்</string>
+    <string name="staff_categories_dialog_physical">பௌதிக</string>
     <string name="staff_categories_dialog_position">நிலை</string>
     <string name="staff_categories_dialog_save">சேமி</string>
     <string name="staff_categories_dialog_saving">சேமிக்கிறது…</string>
@@ -142,7 +142,7 @@
     <string name="staff_categories_type_both">இரண்டும்</string>
     <string name="staff_categories_type_digital">டிஜிட்டல்</string>
     <string name="staff_categories_type_none">—</string>
-    <string name="staff_categories_type_physical">உடல்நலம்</string>
+    <string name="staff_categories_type_physical">பௌதிக</string>
     <string name="staff_channel_name">பணியாளர்கள்</string>
     <string name="staff_config_field_auto_approve">தானியங்கி அங்கீகார வரம்பு</string>
     <string name="staff_config_field_hold">வைத்திருப்பு வரம்பு</string>
@@ -420,14 +420,14 @@
     <string name="staff_status_cancelled">ரத்துசெய்யப்பட்டது</string>
     <string name="staff_status_inactive">செயலற்றது</string>
     <string name="staff_status_unknown">தெரியாதது</string>
-    <string name="staff_audit_action_order_staff_read">பணியாளர் ஆணையைப் பார்த்தார்</string>
+    <string name="staff_audit_action_order_staff_read">பணியாளர் ஆர்டரைப் பார்த்தார்</string>
     <string name="staff_audit_action_thread_staff_read">பணியாளர் உரையாடலைப் பார்த்தார்</string>
     <string name="staff_audit_action_listing_cleared">விற்பனையாளர் பட்டியலிலிருந்து அகற்றப்பட்டது</string>
-    <string name="staff_audit_action_payment_orphaned">ஆணை இல்லாத கட்டணம்</string>
+    <string name="staff_audit_action_payment_orphaned">ஆர்டர் இல்லாத கட்டணம்</string>
     <string name="staff_audit_action_other">பிற செயல்பாடு</string>
     <string name="staff_audit_actor_staff">பணியாளர்கள்</string>
     <string name="staff_audit_load_more">மேலும் ஏற்று</string>
-    <string name="staff_audit_kind_order">ஆணை</string>
+    <string name="staff_audit_kind_order">ஆர்டர்</string>
     <string name="staff_audit_kind_dispute">சர்ச்சை</string>
     <string name="staff_audit_kind_auction">ஏலம்</string>
     <string name="staff_audit_kind_subscription">சந்தா</string>
@@ -476,7 +476,7 @@
     <string name="staff_config_field_completion_timeout">நிறைவு காலக்கெடு</string>
     <string name="staff_config_field_seller_storage">ஒவ்வொரு விற்பனையாளருக்குமான சேமிப்பகம்</string>
     <string name="staff_config_suffix_megabytes">MB</string>
-    <string name="staff_payments_empty">ஆணை இல்லாத கட்டணங்கள் எதுவும் இல்லை</string>
+    <string name="staff_payments_empty">ஆர்டர் இல்லாத கட்டணங்கள் எதுவும் இல்லை</string>
     <string name="staff_payments_refund">பணத்தைத் திருப்பித் தா</string>
     <string name="staff_payments_not_refunded">திருப்பித் தரப்படவில்லை</string>
     <string name="staff_payments_refund_title">இந்தக் கட்டணத்தைத் திருப்பித் தரவா?</string>
@@ -485,4 +485,6 @@
     <string name="staff_disputes_withdrawn">வாங்குபவர் திரும்பப் பெற்றார்</string>
     <string name="staff_status_denied">மேல்முறையீடு நிராகரிக்கப்பட்டது</string>
     <string name="staff_status_upheld">மேல்முறையீடு அங்கீகரிக்கப்பட்டது</string>
+    <string name="staff_disputes_reason_unknown">பிற காரணம்</string>
+    <string name="staff_disputes_stripe_noncompliant">விதிகளுக்கு இணங்காதது</string>
 </resources>

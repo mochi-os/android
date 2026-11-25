@@ -159,4 +159,13 @@
     <string name="market_bid_dialog_instant_title">¿Comprar ahora?</string>
     <string name="market_bid_dialog_instant_body">Tu oferta alcanza el precio de compra inmediata, así que compra el artículo ahora por %1$s. Después tienes 96 horas para pagar.</string>
     <string name="market_subscriptions_cancel_past_due_body">Esto cancelará tu suscripción ahora. El pago de la renovación falló, así que el acceso termina de inmediato.</string>
+    <string name="market_audit_appeal_denied">Apelación denegada</string>
+    <string name="market_audit_appeal_upheld">Apelación admitida</string>
+    <string name="market_audit_reason_checkout_expired">Pago expirado</string>
+    <string name="market_audit_reason_listing_removed">Publicación eliminada</string>
+    <string name="market_audit_reason_no_bids">No se han realizado ofertas</string>
+    <string name="market_audit_reason_no_winning_bid">No hay oferta ganadora</string>
+    <string name="market_audit_reason_reserve_not_met">No se alcanzó la reserva</string>
+    <string name="market_audit_report_ban">Cuenta bloqueada</string>
+    <string name="market_audit_report_dismiss">Descartado</string>
 </resources>

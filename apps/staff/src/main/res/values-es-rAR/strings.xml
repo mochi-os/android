@@ -98,7 +98,7 @@
     <string name="staff_disputes_status_resolved_buyer">Resuelta (comprador)</string>
     <string name="staff_disputes_status_resolved_seller">Resuelta (vendedor)</string>
     <string name="staff_disputes_status_responded">Respondida</string>
-    <string name="staff_disputes_stripe_customer_initiated">iniciada por el cliente</string>
+    <string name="staff_disputes_stripe_customer_initiated">Iniciada por el cliente</string>
     <string name="staff_listings_empty">Sin publicaciones</string>
     <string name="staff_listings_moderation_hold">En espera</string>
     <string name="staff_listings_moderation_rejected">Rechazada</string>

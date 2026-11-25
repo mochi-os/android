@@ -71,6 +71,18 @@ class LabelsTest {
         rule.onAllNodesWithText("on_hold").assertCountEquals(0)
     }
 
+    @Test
+    fun `a dispute reason this client does not know is Other reason, never its token`() {
+        rule.setContent {
+            Text(disputeReasonLabel(reason = "something_new", opener = "stripe"))
+            Text(disputeReasonLabel(reason = "noncompliant", opener = "stripe"))
+            Text(disputeReasonLabel(reason = "something_else", opener = "buyer1"))
+        }
+        rule.onAllNodesWithText("Other reason").assertCountEquals(2)
+        rule.onNodeWithText("Non-compliant").assertExists()
+        rule.onAllNodesWithText("something", substring = true).assertCountEquals(0)
+    }
+
     /** Every action the Comptroller writes on a listing, order, dispute, subscription or auction (2026-11-23). */
     private val written = listOf(
         "listing.appeal_decided", "listing.appeal_submitted", "listing.approved", "listing.cleared",

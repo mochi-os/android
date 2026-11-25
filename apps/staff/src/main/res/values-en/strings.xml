@@ -9,8 +9,6 @@
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_audit_action_subscription_cancelled">Cancelled</string>
     <string name="staff_disputes_reason_unauthorised">Payment not made by me</string>
-    <string name="staff_disputes_stripe_check_returned">cheque returned</string>
-    <string name="staff_disputes_stripe_debit_not_authorized">debit not allowed</string>
-    <string name="staff_disputes_stripe_subscription_canceled">subscription cancelled</string>
-    <string name="staff_disputes_stripe_unrecognized">unknown charge</string>
+    <string name="staff_disputes_stripe_check_returned">Cheque returned</string>
+    <string name="staff_disputes_stripe_subscription_canceled">Subscription cancelled</string>
 </resources>

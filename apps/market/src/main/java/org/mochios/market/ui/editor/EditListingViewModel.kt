@@ -130,8 +130,8 @@ sealed class EditListingEvent {
     /** Emit when photos or files are added before the listing has a title, so
      * there is no listing row to attach them to yet. */
     data object TitleRequired : EditListingEvent()
-    /** A picked file over [ASSET_SIZE_MAXIMUM], refused before it was sent. */
-    data class TooLarge(val name: String) : EditListingEvent()
+    /** A picked file over [maximum] bytes, refused before it was sent. */
+    data class TooLarge(val name: String, val maximum: Long) : EditListingEvent()
 }
 
 /**
@@ -141,9 +141,12 @@ sealed class EditListingEvent {
  */
 internal const val ASSET_SIZE_MAXIMUM = 100L * 1024 * 1024
 
-/** [files] split into those within [ASSET_SIZE_MAXIMUM] and those over it. */
-internal fun assetsWithinLimit(files: List<File>): Pair<List<File>, List<File>> =
-    files.partition { file -> file.length() <= ASSET_SIZE_MAXIMUM }
+/** The largest listing photo, in bytes: the Comptroller's PHOTO_SIZE_MAXIMUM. */
+internal const val PHOTO_SIZE_MAXIMUM = 10L * 1024 * 1024
+
+/** [files] split into those within [maximum] bytes and those over it. */
+internal fun withinLimit(files: List<File>, maximum: Long): Pair<List<File>, List<File>> =
+    files.partition { file -> file.length() <= maximum }
 
 @HiltViewModel
 class EditListingViewModel @Inject constructor(
@@ -567,8 +570,10 @@ class EditListingViewModel @Inject constructor(
                 try {
                     val temps = repository.stageFiles(uris, fallbackName = "photo")
                     try {
-                        photoTracker.expect(temps)
-                        for (temp in temps) {
+                        val (accepted, refused) = withinLimit(temps, PHOTO_SIZE_MAXIMUM)
+                        for (file in refused) _events.emit(EditListingEvent.TooLarge(file.name, PHOTO_SIZE_MAXIMUM))
+                        photoTracker.expect(accepted)
+                        for (temp in accepted) {
                             val photo = repository.uploadPhoto(listingId, temp, photoTracker)
                             _state.value = _state.value.copy(photos = _state.value.photos + photo)
                         }
@@ -631,8 +636,8 @@ class EditListingViewModel @Inject constructor(
                 try {
                     val temps = repository.stageFiles(uris)
                     try {
-                        val (accepted, refused) = assetsWithinLimit(temps)
-                        for (file in refused) _events.emit(EditListingEvent.TooLarge(file.name))
+                        val (accepted, refused) = withinLimit(temps, ASSET_SIZE_MAXIMUM)
+                        for (file in refused) _events.emit(EditListingEvent.TooLarge(file.name, ASSET_SIZE_MAXIMUM))
                         assetTracker.expect(accepted)
                         for (temp in accepted) {
                             val asset = repository.uploadAsset(listingId, temp, assetTracker)

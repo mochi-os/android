@@ -392,20 +392,20 @@
     <string name="staff_team_toast_role_updated">Na-update ang papel</string>
 
 
-    <string name="staff_disputes_stripe_bank_cannot_process">hindi maproseso ng bangko</string>
-    <string name="staff_disputes_stripe_check_returned">ibinalik ang tseke</string>
-    <string name="staff_disputes_stripe_credit_not_processed">hindi naproseso ang credit</string>
-    <string name="staff_disputes_stripe_customer_initiated">inumpisahan ng customer</string>
-    <string name="staff_disputes_stripe_debit_not_authorized">hindi pinahintulutang debit</string>
-    <string name="staff_disputes_stripe_duplicate">dobleng singil</string>
-    <string name="staff_disputes_stripe_fraudulent">mapanlinlang</string>
-    <string name="staff_disputes_stripe_general">pangkalahatan</string>
-    <string name="staff_disputes_stripe_incorrect_account_details">maling detalye ng account</string>
-    <string name="staff_disputes_stripe_insufficient_funds">kulang sa pondo</string>
-    <string name="staff_disputes_stripe_product_not_received">hindi natanggap ang produkto</string>
-    <string name="staff_disputes_stripe_product_unacceptable">hindi katanggap-tanggap ang produkto</string>
-    <string name="staff_disputes_stripe_subscription_canceled">kinansela ang subscription</string>
-    <string name="staff_disputes_stripe_unrecognized">hindi nakikilalang singil</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">Hindi maproseso ng bangko</string>
+    <string name="staff_disputes_stripe_check_returned">Ibinalik ang tseke</string>
+    <string name="staff_disputes_stripe_credit_not_processed">Hindi naproseso ang credit</string>
+    <string name="staff_disputes_stripe_customer_initiated">Inumpisahan ng customer</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">Hindi pinahintulutang debit</string>
+    <string name="staff_disputes_stripe_duplicate">Dobleng singil</string>
+    <string name="staff_disputes_stripe_fraudulent">Mapanlinlang</string>
+    <string name="staff_disputes_stripe_general">Pangkalahatan</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">Maling detalye ng account</string>
+    <string name="staff_disputes_stripe_insufficient_funds">Kulang sa pondo</string>
+    <string name="staff_disputes_stripe_product_not_received">Hindi natanggap ang produkto</string>
+    <string name="staff_disputes_stripe_product_unacceptable">Hindi katanggap-tanggap ang produkto</string>
+    <string name="staff_disputes_stripe_subscription_canceled">Kinansela ang subscription</string>
+    <string name="staff_disputes_stripe_unrecognized">Hindi nakikilalang singil</string>
 
     <string name="staff_config_field_stripe_webhook">Lihim na panglagda ng Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Naisauli na</string>
@@ -487,4 +487,6 @@
     <string name="staff_disputes_withdrawn">Binawi ng mamimili</string>
     <string name="staff_status_denied">Tinanggihan ang apela</string>
     <string name="staff_status_upheld">Inaprubahan ang apela</string>
+    <string name="staff_disputes_reason_unknown">Ibang dahilan</string>
+    <string name="staff_disputes_stripe_noncompliant">Hindi sumusunod sa patakaran</string>
 </resources>

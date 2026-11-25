@@ -74,10 +74,10 @@
     <string name="staff_disputes_status_resolved_buyer">Gelöst (Käuferin/Käufer)</string>
     <string name="staff_disputes_status_resolved_seller">Gelöst (Verkäuferin/Verkäufer)</string>
     <string name="staff_disputes_stripe_check_returned">Scheck zurückgewiesen</string>
-    <string name="staff_disputes_stripe_customer_initiated">von Kundschaft veranlasst</string>
-    <string name="staff_disputes_stripe_duplicate">doppelte Belastung</string>
-    <string name="staff_disputes_stripe_insufficient_funds">ungenügende Deckung</string>
-    <string name="staff_disputes_stripe_unrecognized">nicht erkannte Belastung</string>
+    <string name="staff_disputes_stripe_customer_initiated">Von Kundschaft veranlasst</string>
+    <string name="staff_disputes_stripe_duplicate">Doppelte Belastung</string>
+    <string name="staff_disputes_stripe_insufficient_funds">Ungenügende Deckung</string>
+    <string name="staff_disputes_stripe_unrecognized">Nicht erkannte Belastung</string>
     <string name="staff_filter_label_seller">Verkäuferin/Verkäufer</string>
     <string name="staff_listings_action_approve_title">Inserat genehmigen</string>
     <string name="staff_listings_action_reject_title">Inserat ablehnen</string>

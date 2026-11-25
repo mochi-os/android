@@ -5,6 +5,8 @@
 
 package org.mochios.market.ui.components
 
+import android.content.res.Resources
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,9 +26,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import org.json.JSONException
+import org.json.JSONObject
+import org.mochios.android.format.formatPrice
+import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.MochiCard
@@ -109,6 +119,174 @@ internal fun auditActionResource(action: String): Int? {
     }
 }
 
+/** [auditDetail] for [event], in the user's language and number format. */
+@Composable
+internal fun auditDetail(event: AuditEvent): String? =
+    auditDetail(event.action, event.data, LocalResources.current, LocalFormat.current)
+
+/**
+ * The detail shown after an entry's action label, from its [data]: its
+ * reason, amount and refund in their currency, notes, description, carrier
+ * and tracking, a report's action, an appeal's decision, a listing's
+ * moderation and how the action came about; null when it holds none of these.
+ * Mirrors web `formatAuditDetail`, in its order. A wire value this client has
+ * no words for is left out, never shown as itself.
+ */
+internal fun auditDetail(action: String, data: String, resources: Resources, format: Format): String? {
+    if (data.isBlank()) return null
+    val payload = try {
+        JSONObject(data)
+    } catch (_: JSONException) {
+        return null
+    }
+    fun text(key: String): String = (payload.opt(key) as? String).orEmpty()
+    fun number(key: String): Long? = (payload.opt(key) as? Number)?.toLong()
+    fun label(@StringRes res: Int?): String? = res?.let { id -> resources.getString(id) }
+
+    val bits = mutableListOf<String>()
+    auditReason(action, text("reason"), resources)?.let { reason -> bits += reason }
+    val currency = text("currency")
+    if (currency.isNotEmpty()) {
+        number("amount")?.let { amount -> bits += formatPrice(amount, currency, format) }
+        number("refund_amount")?.let { refund ->
+            var words = formatPrice(refund, currency, format)
+            val total = number("total")
+            if (payload.opt("partial") == true && total != null) {
+                words += " " + resources.getString(R.string.market_audit_refund_of, formatPrice(total, currency, format))
+            }
+            bits += words
+        }
+    }
+    text("notes").takeIf { notes -> notes.isNotEmpty() }?.let { notes -> bits += notes }
+    text("description").takeIf { description -> description.isNotEmpty() }?.let { description -> bits += description }
+    val carrier = text("carrier")
+    if (carrier.isNotEmpty()) {
+        val tracking = text("tracking")
+        bits += if (tracking.isNotEmpty()) "$carrier: $tracking" else carrier
+    }
+    // Only a report's action is a decision a reader is told of, and only in
+    // words.
+    if (action == "report.actioned") label(reportActionRes(text("action")))?.let { words -> bits += words }
+    when (text("decision")) {
+        "upheld" -> bits += resources.getString(R.string.market_audit_appeal_upheld)
+        "denied" -> bits += resources.getString(R.string.market_audit_appeal_denied)
+    }
+    label(moderationRes(text("moderation")))?.let { moderation ->
+        bits += resources.getString(R.string.market_audit_moderation, moderation)
+    }
+    label(viaRes(text("via")))?.let { via -> bits += via }
+    return if (bits.isEmpty()) null else bits.joinToString(" — ")
+}
+
+/**
+ * Actions whose reason is what a person wrote: a reporter, staff removing,
+ * rejecting or sanctioning, or a seller appealing. Acting on a report without
+ * notes of its own records the report's reason instead.
+ */
+private val writtenReasons = setOf(
+    "account.banned",
+    "account.suspended",
+    "listing.appeal_submitted",
+    "listing.rejected",
+    "listing.removed",
+    "listing.warning",
+    "report.created",
+)
+
+/**
+ * An entry's [reason] in words: a token by the action it is written with, or
+ * on an action whose reason a person writes, their words. A token this client
+ * does not know is null, never itself.
+ */
+internal fun auditReason(action: String, reason: String, resources: Resources): String? {
+    if (reason.isEmpty()) return null
+    auditReasonRes(action, reason)?.let { res -> return resources.getString(res) }
+    if (action in writtenReasons) return reportReasonRes(reason)?.let { res -> resources.getString(res) } ?: reason
+    return null
+}
+
+/** The reason tokens each action is written with, as the Comptroller writes them. */
+@StringRes
+internal fun auditReasonRes(action: String, reason: String): Int? = when (action) {
+    "dispute.opened" -> refundReasonRes(reason)
+    "order.chargeback", "subscription.chargeback" -> chargebackReasonRes(reason)
+    "auction.ended_unsold" -> when (reason) {
+        "no_bids" -> R.string.market_audit_reason_no_bids
+        "reserve_not_met" -> R.string.market_audit_reason_reserve_not_met
+        "no_winning_bid" -> R.string.market_audit_reason_no_winning_bid
+        else -> null
+    }
+    "auction.cancelled" -> when (reason) {
+        "listing_removed" -> R.string.market_audit_reason_listing_removed
+        "payment_unavailable" -> R.string.market_audit_reason_payment_unavailable
+        else -> null
+    }
+    "subscription.cancelled" -> when (reason) {
+        "checkout_expired" -> R.string.market_audit_reason_checkout_expired
+        "period_ended" -> R.string.market_audit_reason_period_ended
+        else -> null
+    }
+    "subscription.cancel_scheduled" -> if (reason == "listing_removed") R.string.market_audit_reason_listing_removed else null
+    "account.stripe_disconnected" -> when (reason) {
+        "deauthorized" -> R.string.market_audit_reason_deauthorized
+        "unreachable" -> R.string.market_audit_reason_unreachable
+        "duplicate" -> R.string.market_audit_reason_duplicate
+        else -> null
+    }
+    "review.revealed" -> if (reason == "timeout") R.string.market_audit_reason_timeout else null
+    else -> null
+}
+
+/** A report's reason, by the reasons a reporter picks from. */
+@StringRes
+private fun reportReasonRes(reason: String): Int? = when (reason) {
+    "prohibited" -> R.string.market_report_reason_prohibited
+    "counterfeit" -> R.string.market_report_reason_counterfeit
+    "misleading" -> R.string.market_report_reason_misleading
+    "inappropriate" -> R.string.market_report_reason_inappropriate
+    "spam" -> R.string.market_report_reason_spam
+    "other" -> R.string.market_report_reason_other
+    else -> null
+}
+
+/** What staff did about a report. */
+@StringRes
+private fun reportActionRes(action: String): Int? = when (action) {
+    "dismiss" -> R.string.market_audit_report_dismiss
+    "warn" -> R.string.market_audit_report_warn
+    "remove" -> R.string.market_audit_reason_listing_removed
+    "suspend" -> R.string.market_audit_account_suspended
+    "ban" -> R.string.market_audit_report_ban
+    else -> null
+}
+
+/** A listing's moderation state, as the Comptroller stores it. */
+@StringRes
+private fun moderationRes(moderation: String): Int? = when (moderation) {
+    "approved" -> R.string.market_audit_moderation_approved
+    "review" -> R.string.market_audit_moderation_review
+    "hold" -> R.string.market_audit_moderation_hold
+    "manual" -> R.string.market_audit_listing_approved
+    "rejected" -> R.string.market_audit_moderation_rejected
+    else -> null
+}
+
+/** How an action came about, where the Comptroller records it. */
+@StringRes
+internal fun viaRes(via: String): Int? = when (via) {
+    "seller" -> R.string.market_audit_via_seller
+    "staff" -> R.string.market_audit_via_staff
+    "stripe" -> R.string.market_audit_via_stripe
+    "reconciled" -> R.string.market_audit_via_reconciled
+    "refund" -> R.string.market_audit_via_refund
+    "automatic" -> R.string.market_audit_via_automatic
+    "withdrawn" -> R.string.market_dispute_withdrawn_by_buyer
+    "dispute_resolved_seller" -> R.string.market_dispute_status_resolved_seller
+    "stripe_oauth" -> R.string.market_audit_account_stripe_connected
+    "instant" -> R.string.market_audit_via_instant
+    else -> null
+}
+
 /**
  * [events] in a card under a History heading, newest first as the server sends
  * them; draws nothing when there are none, since a viewer without read access
@@ -137,7 +315,8 @@ fun AuditHistoryCard(
 
 /**
  * [events] as a timeline: a dot per event with a line joining it to the next,
- * the action's label beside it and the time and actor under that.
+ * the action's label and its detail beside it and the time and actor under
+ * that.
  */
 @Composable
 fun AuditTimeline(
@@ -195,8 +374,16 @@ fun AuditTimeline(
                         .weight(1f)
                         .padding(start = 12.dp, bottom = if (last) 0.dp else 16.dp),
                 ) {
+                    val label = auditActionLabel(event.action)
+                    val detail = auditDetail(event)
+                    val muted = MaterialTheme.colorScheme.onSurfaceVariant
                     Text(
-                        text = auditActionLabel(event.action),
+                        text = buildAnnotatedString {
+                            append(label)
+                            if (detail != null) {
+                                withStyle(SpanStyle(color = muted)) { append(": $detail") }
+                            }
+                        },
                         style = MaterialTheme.typography.bodyMedium,
                     )
                     if (sub.isNotEmpty()) {
