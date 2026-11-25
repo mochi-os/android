@@ -119,13 +119,16 @@ class AssetOwnedTest {
         assertNull("the mark never leaves the phone", recorded.getHeader(OWNED))
     }
 
-    // Core does not mark the people app's banner and favicon as assets, and
-    // sets an asset token aside there.
+    // The people app marks its banner and favicon as assets, like every image
+    // route the client loads: they take the asset token too.
     @Test
-    fun `an own address whose action is not an asset's goes with the session and the app's token`() {
-        val recorded = fetch(origin() + "/people/1abc/-/banner", assetHeaders(OwnedAddress.of("/people/1abc/-/banner")))
-        assertEquals("Bearer token-people", recorded.getHeader("Authorization"))
-        assertEquals("session=s3cret", recorded.getHeader("Cookie"))
+    fun `a person's banner and favicon carry the asset token and no session`() {
+        for (image in listOf("banner", "favicon")) {
+            val path = "/people/1abc/-/$image"
+            val recorded = fetch(origin() + path, assetHeaders(OwnedAddress.of(path)))
+            assertEquals(image, "Bearer asset-people", recorded.getHeader("Authorization"))
+            assertNull("THE POINT: no session for the $image", recorded.getHeader("Cookie"))
+        }
     }
 
     @Test

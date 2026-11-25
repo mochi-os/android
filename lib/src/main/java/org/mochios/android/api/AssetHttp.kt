@@ -83,14 +83,6 @@ value class OwnedAddress private constructor(val address: String) {
     }
 }
 
-/**
- * The own addresses whose action core does not mark `asset`, so it sets an
- * asset token aside there: the people app's banner and favicon. They go with
- * the session and the app's token, as every own address did before asset
- * tokens.
- */
-private val SESSIONED = Regex("^/people/[^/]+/-/(banner|favicon)$")
-
 /** [address] resolved against [server]: an [owned] one onto it, any other as given. */
 fun resolved(server: String, address: String): String =
     if (owned(address)) server.trimEnd('/') + address else address
@@ -212,10 +204,9 @@ object AssetHttpModule {
  * its credential: the asset token of the app its path names ([asset]), and
  * nothing else. Core honours that token only on the actions an app marks as
  * serving assets, and only to read, so an address that names any other action
- * reaches it as an anonymous request whatever its path says. An address
- * whose action is not so marked ([SESSIONED]), or one for an app no asset
- * token can be had for, goes with the session cookie ([jar]) and the app's
- * own token ([token]) instead.
+ * reaches it as an anonymous request whatever its path says. An address for
+ * an app no asset token can be had for goes with the session cookie ([jar])
+ * and the app's own token ([token]) instead.
  */
 internal fun credentialed(
     request: Request,
@@ -224,7 +215,7 @@ internal fun credentialed(
     jar: CookieJar,
 ): Request {
     val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
-    if (app != null && !SESSIONED.matches(request.url.encodedPath)) {
+    if (app != null) {
         asset(app)?.let { held -> return authorised(request, held) }
     }
     return session(authorised(request, app?.let(token)), jar.loadForRequest(request.url))
