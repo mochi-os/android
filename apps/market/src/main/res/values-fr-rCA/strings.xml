@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="market_report_reason_spam">Pourriel</string>
+    <string name="market_report_reason_spam">Pourriel ou arnaque</string>
 
     <string name="market_condition_new">Nouveau</string>
     <string name="market_editor_condition_new">Nouveau</string>

@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Пацверджана</string>
     <string name="market_purchase_confirm_delivery">Пацвердзіць атрыманне</string>
     <string name="market_purchase_delivery">Дастаўка</string>
-    <string name="market_purchase_dispute_chargeback">Запыт на вяртанне плацяжу %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Запыт на вяртанне плацяжу: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваш банк падаў запыт на вяртанне плацяжу па гэтым заказе. Stripe вядзе спрэчку з прадаўцом; вынік з’явіцца тут, калі будзе прыняты.</string>
     <string name="market_purchase_dispute_details">Вашы звесткі</string>
     <string name="market_purchase_dispute_reason">Прычына</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Падача</string>
     <string name="market_report_dialog_success">Скарга адпраўлена</string>
     <string name="market_report_dialog_title">Паскардзіцца на аб\'яву</string>
-    <string name="market_report_reason_counterfeit">Падробка</string>
+    <string name="market_report_reason_counterfeit">Падробка або скрадзена</string>
     <string name="market_report_reason_inappropriate">Непрыдатнае змесціва</string>
     <string name="market_report_reason_misleading">Зман у апісанні</string>
     <string name="market_report_reason_other">Іншае</string>
-    <string name="market_report_reason_prohibited">Забаронены тавар</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_prohibited">Забаронены або нелегальны прадмет</string>
+    <string name="market_report_reason_spam">Спам або махлярства</string>
     <string name="market_reviews_awaiting_response">Чакае адказу</string>
     <string name="market_reviews_empty_received_subtitle">Пакупнікі і прадаўцы могуць пісаць водгукі адзін аднаму пасля завершанага заказу.</string>
     <string name="market_reviews_empty_received_title">Пакуль няма водгукаў</string>

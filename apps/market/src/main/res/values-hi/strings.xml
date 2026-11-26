@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">अनुचित सामग्री</string>
     <string name="market_report_reason_misleading">भ्रामक विवरण</string>
     <string name="market_report_reason_other">अन्य</string>
-    <string name="market_report_reason_spam">स्पैम</string>
+    <string name="market_report_reason_spam">स्पैम या स्कैम</string>
     <string name="market_reviews_empty_received_title">अभी तक कोई समीक्षा नहीं</string>
     <string name="market_reviews_response_submit">प्रतिक्रिया भेजें</string>
     <string name="market_reviews_tab_received">प्राप्त</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">प्रोफ़ाइल लोड नहीं की जा सकी</string>
     <string name="market_profile_joined">%1$s को शामिल हुए</string>
     <string name="market_profile_no_reviews">अभी तक कोई समीक्षा नहीं।</string>
-    <string name="market_purchase_dispute_chargeback">चार्जबैक %1$s</string>
+    <string name="market_purchase_dispute_chargeback">चार्जबैक: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">आपके बैंक ने इस ऑर्डर पर चार्जबैक दर्ज किया है। Stripe विक्रेता के साथ विवाद संभाल रहा है; निर्णय होने पर परिणाम यहाँ दिखाई देगा।</string>
     <string name="market_purchase_review_from">%1$s की समीक्षा</string>
     <string name="market_purchases_refunded_partial">−%1$s वापस किया गया</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">वापस किया जा रहा है…</string>
     <string name="market_report_dialog_details_label">विवरण (वैकल्पिक)</string>
     <string name="market_report_dialog_submitting">भेजा जा रहा है</string>
-    <string name="market_report_reason_counterfeit">नकली</string>
-    <string name="market_report_reason_prohibited">निषिद्ध वस्तु</string>
+    <string name="market_report_reason_counterfeit">नकली या चोरी</string>
+    <string name="market_report_reason_prohibited">निषिद्ध या अवैध आइटम</string>
     <string name="market_reviews_awaiting_response">जवाब की प्रतीक्षा है</string>
     <string name="market_reviews_empty_received_subtitle">ऑर्डर पूरा होने के बाद खरीदार और विक्रेता एक-दूसरे की समीक्षा कर सकते हैं।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड़ने के लिए कोई पूरा हुआ ऑर्डर खोलें।</string>

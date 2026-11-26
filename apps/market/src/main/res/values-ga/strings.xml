@@ -283,12 +283,12 @@
     <string name="market_report_dialog_submit">Cuir isteach</string>
     <string name="market_report_dialog_success">Cuireadh isteach an tuairisc</string>
     <string name="market_report_dialog_title">Tuairiscigh liostáil</string>
-    <string name="market_report_reason_counterfeit">Falsú</string>
+    <string name="market_report_reason_counterfeit">Falsa nó goidte</string>
     <string name="market_report_reason_inappropriate">Ábhar míchuí</string>
     <string name="market_report_reason_misleading">Cur síos míthreorach</string>
     <string name="market_report_reason_other">Eile</string>
-    <string name="market_report_reason_prohibited">Earra toirmiscthe</string>
-    <string name="market_report_reason_spam">Turscar</string>
+    <string name="market_report_reason_prohibited">Mír thoirmiscthe nó mhídhleathach</string>
+    <string name="market_report_reason_spam">Turscar nó scam</string>
     <string name="market_reviews_empty_received_title">Níl aon athbhreithniú fós</string>
     <string name="market_reviews_response_label">Freagra</string>
     <string name="market_reviews_response_submit">Cuir freagra isteach</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Tairiscint tosaigh: %1$s</string>
     <string name="market_profile_load_failed">Níorbh fhéidir an phróifíl a luchtú</string>
     <string name="market_profile_joined">Cláraithe %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Aisíocaíocht chárta %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Cúl-mhuirear: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Chuir do bhanc aisíocaíocht chárta i bhfeidhm ar an ordú seo. Tá Stripe ag plé leis an aighneas leis an díoltóir; taispeánfar an toradh anseo nuair a chinnfear é.</string>
     <string name="market_purchase_review_from">Léirmheas ó %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s aisíoctha</string>

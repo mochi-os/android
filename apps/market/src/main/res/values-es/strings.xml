@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Contenido inapropiado</string>
     <string name="market_report_reason_misleading">Descripción engañosa</string>
     <string name="market_report_reason_other">Otro</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam o estafa</string>
     <string name="market_reviews_empty_received_title">Aún no hay reseñas</string>
     <string name="market_reviews_response_submit">Enviar respuesta</string>
     <string name="market_reviews_tab_received">Recibido</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">No se pudo cargar el perfil</string>
     <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_no_reviews">Aún no hay reseñas.</string>
-    <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Devolución de cargo: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Tu banco ha presentado un contracargo en este pedido. Stripe está gestionando la disputa con el vendedor; el resultado aparecerá aquí cuando se resuelva.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsados</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Reembolsando…</string>
     <string name="market_report_dialog_details_label">Detalles (opcional)</string>
     <string name="market_report_dialog_submitting">Enviando</string>
-    <string name="market_report_reason_counterfeit">Falsificación</string>
-    <string name="market_report_reason_prohibited">Artículo prohibido</string>
+    <string name="market_report_reason_counterfeit">Falsificado o robado</string>
+    <string name="market_report_reason_prohibited">Artículo prohibido o ilegal</string>
     <string name="market_reviews_awaiting_response">Esperando respuesta</string>
     <string name="market_reviews_empty_received_subtitle">Compradores y vendedores pueden reseñarse mutuamente tras un pedido completado.</string>
     <string name="market_reviews_empty_sent_subtitle">Abra un pedido completado para dejar una reseña.</string>

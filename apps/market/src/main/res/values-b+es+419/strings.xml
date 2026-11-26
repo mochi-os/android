@@ -47,7 +47,6 @@
     <string name="market_report_dialog_failed">Error al enviar el reporte</string>
     <string name="market_report_dialog_success">Reporte enviado</string>
     <string name="market_report_dialog_title">Reportar anuncio</string>
-    <string name="market_report_reason_counterfeit">Falsificado</string>
     <string name="market_saved_title">Guardados</string>
     <string name="market_sidebar_browse">Explorar</string>
     <string name="market_sidebar_listings">Publicaciones</string>
@@ -168,4 +167,5 @@
     <string name="market_audit_reason_reserve_not_met">No se alcanzó la reserva</string>
     <string name="market_audit_report_ban">Cuenta bloqueada</string>
     <string name="market_audit_report_dismiss">Descartado</string>
+    <string name="market_purchase_dispute_chargeback">Contracargo: %1$s</string>
 </resources>

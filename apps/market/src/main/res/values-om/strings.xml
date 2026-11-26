@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Galchaa</string>
     <string name="market_report_dialog_success">Gabaasni dhiyaate</string>
     <string name="market_report_dialog_title">Tarreeffama gabaasi</string>
-    <string name="market_report_reason_counterfeit">Sobaadha</string>
+    <string name="market_report_reason_counterfeit">Sobaan ykn hatuu</string>
     <string name="market_report_reason_inappropriate">Qabiyyee mijaayaa hin taane</string>
     <string name="market_report_reason_misleading">Ibsa dogoggoraa</string>
     <string name="market_report_reason_other">Biraa</string>
-    <string name="market_report_reason_prohibited">Wanta dhorkamaa</string>
-    <string name="market_report_reason_spam">Hin barbaachisne</string>
+    <string name="market_report_reason_prohibited">Meeshaa dhorkame ykn seeraan ala</string>
+    <string name="market_report_reason_spam">Hin barbaachisne ykn fakkeessuu</string>
     <string name="market_reviews_empty_received_title">Hanga ammaatti gamaaggamni hin jiru</string>
     <string name="market_reviews_response_label">Deebii</string>
     <string name="market_reviews_response_submit">Deebii galchaa</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Caalbaasii jalqabaa: %1$s</string>
     <string name="market_profile_load_failed">Piroofaayilii fe\'uun hin danda\'amne</string>
     <string name="market_profile_joined">Kan makame %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Chaargii deebi\'e %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chaargii deebi\'e: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Baankiin kee ajaja kana irratti chaargii deebi\'e galmeesseera. Stripe falmii kana gurgurtaa waliin qabateera; bu\'aan isaa yeroo murtaa\'u asitti mul\'ata.</string>
     <string name="market_purchase_dispute_response">Deebii gurgurtaa</string>
     <string name="market_purchase_review_from">Madaallii %1$s irraa</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Ongepaste inhoud</string>
     <string name="market_report_reason_misleading">Misleidende beschrijving</string>
     <string name="market_report_reason_other">Overig</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam of oplichting</string>
     <string name="market_reviews_empty_received_title">Nog geen recensies</string>
     <string name="market_reviews_response_submit">Reactie indienen</string>
     <string name="market_reviews_tab_received">Ontvangen</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Profiel kon niet worden geladen</string>
     <string name="market_profile_joined">Lid geworden op %1$s</string>
     <string name="market_profile_no_reviews">Nog geen recensies.</string>
-    <string name="market_purchase_dispute_chargeback">Terugboeking %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Terugboeking: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Je bank heeft een terugboeking op deze bestelling ingediend. Stripe behandelt het geschil met de verkoper; de uitkomst verschijnt hier zodra er een besluit is.</string>
     <string name="market_purchase_review_from">Recensie van %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaald</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Terugbetalen…</string>
     <string name="market_report_dialog_details_label">Details (optioneel)</string>
     <string name="market_report_dialog_submitting">Verzenden</string>
-    <string name="market_report_reason_counterfeit">Namaak</string>
-    <string name="market_report_reason_prohibited">Verboden artikel</string>
+    <string name="market_report_reason_counterfeit">Vervalst of gestolen</string>
+    <string name="market_report_reason_prohibited">Verboden of illegaal item</string>
     <string name="market_reviews_awaiting_response">Wacht op reactie</string>
     <string name="market_reviews_empty_received_subtitle">Kopers en verkopers kunnen elkaar beoordelen na een afgeronde bestelling.</string>
     <string name="market_reviews_empty_sent_subtitle">Open een afgeronde bestelling om een beoordeling te schrijven.</string>

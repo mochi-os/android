@@ -126,7 +126,6 @@
     <string name="market_report_dialog_failed">No se pudo enviar la denuncia</string>
     <string name="market_report_dialog_success">Denuncia enviada</string>
     <string name="market_report_dialog_title">Denunciar publicación</string>
-    <string name="market_report_reason_counterfeit">Falsificación</string>
     <string name="market_reviews_empty_sent_subtitle">Abrí un pedido completado para dejar una reseña.</string>
     <string name="market_reviews_empty_sent_title">No escribiste ninguna reseña</string>
     <string name="market_reviews_response_placeholder">Escribí una respuesta</string>

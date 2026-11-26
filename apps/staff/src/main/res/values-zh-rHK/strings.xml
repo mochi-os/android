@@ -160,7 +160,6 @@
     <string name="staff_listings_any_moderation">任何審核狀態</string>
     <string name="staff_listings_approved_toast">刊登已批准</string>
     <string name="staff_listings_empty">沒有刊登</string>
-    <string name="staff_listings_moderation_hold">暫緩</string>
     <string name="staff_listings_seller_verified">已驗證賣家</string>
     <string name="staff_moderation_empty">沒有審核紀錄</string>
     <string name="staff_reports_action">處理</string>
@@ -185,7 +184,6 @@
     <string name="staff_sidebar_reports">舉報</string>
     <string name="staff_status_approved">已批准</string>
     <string name="staff_status_dismissed">已駁回</string>
-    <string name="staff_status_hold">暫緩</string>
     <string name="staff_status_support">客戶支援</string>
     <string name="staff_team_dialog_adding">正在新增…</string>
     <string name="staff_team_dialog_no_results">找不到任何人</string>

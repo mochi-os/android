@@ -78,7 +78,6 @@
     <string name="staff_sidebar_market">Marché</string>
     <string name="staff_status_actioned">Traité</string>
     <string name="staff_status_appealed">En appel</string>
-    <string name="staff_status_hold">En suspens</string>
     <string name="staff_status_rejected">Refusé</string>
     <string name="staff_status_review">Révision</string>
     <string name="staff_status_support">Soutien</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Nem megfelelő tartalom</string>
     <string name="market_report_reason_misleading">Félrevezető leírás</string>
     <string name="market_report_reason_other">Egyéb</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam vagy átverés</string>
     <string name="market_reviews_empty_received_title">Még nincsenek értékelések</string>
     <string name="market_reviews_response_submit">Válasz beküldése</string>
     <string name="market_reviews_tab_received">Kézhez kapva</string>
@@ -385,8 +385,8 @@
     <string name="market_refund_dialog_submitting">Visszatérítés…</string>
     <string name="market_report_dialog_details_label">Részletek (nem kötelező)</string>
     <string name="market_report_dialog_submitting">Beküldés</string>
-    <string name="market_report_reason_counterfeit">Hamisítvány</string>
-    <string name="market_report_reason_prohibited">Tiltott termék</string>
+    <string name="market_report_reason_counterfeit">Hamisított vagy lopott</string>
+    <string name="market_report_reason_prohibited">Tiltott vagy illegális tétel</string>
     <string name="market_reviews_awaiting_response">Válaszra vár</string>
     <string name="market_reviews_empty_received_subtitle">A vevők és eladók a rendelés teljesítése után értékelhetik egymást.</string>
     <string name="market_reviews_empty_sent_subtitle">Nyisson meg egy teljesített rendelést értékelés írásához.</string>

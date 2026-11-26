@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">תוכן לא הולם</string>
     <string name="market_report_reason_misleading">תיאור מטעה</string>
     <string name="market_report_reason_other">אחר</string>
-    <string name="market_report_reason_spam">ספאם</string>
+    <string name="market_report_reason_spam">ספאם או הונאה</string>
     <string name="market_reviews_empty_received_title">עדיין אין ביקורות</string>
     <string name="market_reviews_response_submit">שלח תגובה</string>
     <string name="market_reviews_tab_received">התקבל</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">לא ניתן היה לטעון את הפרופיל</string>
     <string name="market_profile_joined">הצטרף ב-%1$s</string>
     <string name="market_profile_no_reviews">אין ביקורות עדיין.</string>
-    <string name="market_purchase_dispute_chargeback">ביטול חיוב %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ביטול חיוב: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">הבנק שלכם הגיש ביטול חיוב על הזמנה זו. Stripe מטפלת בסכסוך מול המוכר; התוצאה תופיע כאן כשהיא תוכרע.</string>
     <string name="market_purchase_review_from">ביקורת מאת %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s זוכה</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">מחזיר…</string>
     <string name="market_report_dialog_details_label">פרטים (לא חובה)</string>
     <string name="market_report_dialog_submitting">שולח</string>
-    <string name="market_report_reason_counterfeit">מזויף</string>
-    <string name="market_report_reason_prohibited">פריט אסור</string>
+    <string name="market_report_reason_counterfeit">מזויף או גנוב</string>
+    <string name="market_report_reason_prohibited">פריט אסור או בלתי חוקי</string>
     <string name="market_reviews_awaiting_response">ממתין לתגובה</string>
     <string name="market_reviews_empty_received_subtitle">קונים ומוכרים יכולים לסקור זה את זה לאחר השלמת הזמנה.</string>
     <string name="market_reviews_empty_sent_subtitle">פתח הזמנה שהושלמה כדי לכתוב ביקורת.</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">অনুপযুক্ত কন্টেন্ট</string>
     <string name="market_report_reason_misleading">বিভ্রান্তিকর বিবরণ</string>
     <string name="market_report_reason_other">অন্যান্য</string>
-    <string name="market_report_reason_spam">স্প্যাম</string>
+    <string name="market_report_reason_spam">স্প্যাম বা স্ক্যাম</string>
     <string name="market_reviews_empty_received_title">এখনও কোনো রিভিউ নেই</string>
     <string name="market_reviews_response_submit">প্রতিক্রিয়া জমা দিন</string>
     <string name="market_reviews_tab_received">প্রাপ্ত</string>
@@ -370,7 +370,7 @@
     <string name="market_profile_load_failed">প্রোফাইল লোড করা যায়নি</string>
     <string name="market_profile_joined">%1$s-এ যোগ দিয়েছেন</string>
     <string name="market_profile_no_reviews">এখনও কোনো রিভিউ নেই।</string>
-    <string name="market_purchase_dispute_chargeback">চার্জব্যাক %1$s</string>
+    <string name="market_purchase_dispute_chargeback">চার্জব্যাক: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">আপনার ব্যাঙ্ক এই অর্ডারে একটি চার্জব্যাক দাখিল করেছে। Stripe বিক্রেতার সঙ্গে বিরোধটি পরিচালনা করছে; সিদ্ধান্ত নেওয়া হলে ফলাফল এখানে প্রদর্শিত হবে।</string>
     <string name="market_purchase_dispute_response">বিক্রেতার প্রতিক্রিয়া</string>
     <string name="market_purchase_review_from">%1$s-এর পর্যালোচনা</string>
@@ -381,8 +381,8 @@
     <string name="market_refund_dialog_submitting">ফেরত দেওয়া হচ্ছে…</string>
     <string name="market_report_dialog_details_label">বিবরণ (ঐচ্ছিক)</string>
     <string name="market_report_dialog_submitting">জমা দেওয়া হচ্ছে</string>
-    <string name="market_report_reason_counterfeit">নকল</string>
-    <string name="market_report_reason_prohibited">নিষিদ্ধ পণ্য</string>
+    <string name="market_report_reason_counterfeit">নকল বা চোরাই</string>
+    <string name="market_report_reason_prohibited">নিষিদ্ধ বা অবৈধ আইটেম</string>
     <string name="market_reviews_awaiting_response">উত্তরের অপেক্ষায়</string>
     <string name="market_reviews_empty_received_subtitle">অর্ডার সম্পূর্ণ হওয়ার পর ক্রেতা এবং বিক্রেতারা একে অপরকে পর্যালোচনা করতে পারেন।</string>
     <string name="market_reviews_empty_sent_subtitle">পর্যালোচনা দিতে একটি সম্পূর্ণ হওয়া অর্ডার খুলুন।</string>

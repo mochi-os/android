@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Maudhui yasiyofaa</string>
     <string name="market_report_reason_misleading">Maelezo yanayopotosha</string>
     <string name="market_report_reason_other">Nyingine</string>
-    <string name="market_report_reason_spam">Taka</string>
+    <string name="market_report_reason_spam">Taka au utapeli</string>
     <string name="market_reviews_empty_received_title">Hakuna maoni bado</string>
     <string name="market_reviews_response_submit">Wasilisha jibu</string>
     <string name="market_reviews_tab_received">Imepokelewa</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Imeshindwa kupakia wasifu</string>
     <string name="market_profile_joined">Alijiunga %1$s</string>
     <string name="market_profile_no_reviews">Hakuna ukaguzi bado.</string>
-    <string name="market_purchase_dispute_chargeback">Urejesho wa malipo %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Marejesho ya malipo: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Benki yako iliwasilisha urejesho wa malipo kwa agizo hili. Stripe inashughulikia mzozo na muuzaji; matokeo yataonekana hapa yatakapoamuliwa.</string>
     <string name="market_purchase_review_from">Ukaguzi kutoka kwa %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s imerejeshwa</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Inarejesha…</string>
     <string name="market_report_dialog_details_label">Maelezo (si lazima)</string>
     <string name="market_report_dialog_submitting">Inawasilisha</string>
-    <string name="market_report_reason_counterfeit">Bandia</string>
-    <string name="market_report_reason_prohibited">Bidhaa iliyozuiliwa</string>
+    <string name="market_report_reason_counterfeit">Ya kughushi au iliyoibwa</string>
+    <string name="market_report_reason_prohibited">Kipengele kilichokatazwa au haramu</string>
     <string name="market_reviews_awaiting_response">Inasubiri jibu</string>
     <string name="market_reviews_empty_received_subtitle">Wanunuzi na wauzaji wanaweza kuhakikiana baada ya agizo kukamilika.</string>
     <string name="market_reviews_empty_sent_subtitle">Fungua agizo lililokamilika ili kuandika hakiki.</string>

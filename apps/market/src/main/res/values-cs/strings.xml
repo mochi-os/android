@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Nevhodný obsah</string>
     <string name="market_report_reason_misleading">Zavádějící popis</string>
     <string name="market_report_reason_other">Ostatní</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam nebo podvod</string>
     <string name="market_reviews_empty_received_title">Zatím žádné recenze</string>
     <string name="market_reviews_response_submit">Odeslat odpověď</string>
     <string name="market_reviews_tab_received">Přijato</string>
@@ -431,7 +431,7 @@
     <string name="market_profile_load_failed">Profil se nepodařilo načíst</string>
     <string name="market_profile_joined">Připojil se %1$s</string>
     <string name="market_profile_no_reviews">Zatím žádné recenze.</string>
-    <string name="market_purchase_dispute_chargeback">Vrácení platby %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Vrácení platby: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaše banka podala k této objednávce žádost o vrácení platby. Spor řeší Stripe s prodejcem; výsledek se zde zobrazí, jakmile bude rozhodnuto.</string>
     <string name="market_purchase_dispute_response">Odpověď prodejce</string>
     <string name="market_purchase_review_from">Recenze od %1$s</string>
@@ -442,8 +442,8 @@
     <string name="market_refund_dialog_submitting">Vracení peněz…</string>
     <string name="market_report_dialog_details_label">Podrobnosti (nepovinné)</string>
     <string name="market_report_dialog_submitting">Odesílání</string>
-    <string name="market_report_reason_counterfeit">Padělek</string>
-    <string name="market_report_reason_prohibited">Zakázaná položka</string>
+    <string name="market_report_reason_counterfeit">Padělané nebo kradené</string>
+    <string name="market_report_reason_prohibited">Zakázaná nebo nelegální položka</string>
     <string name="market_reviews_awaiting_response">Čeká na odpověď</string>
     <string name="market_reviews_empty_received_subtitle">Kupující a prodávající si mohou po dokončené objednávce navzájem napsat recenzi.</string>
     <string name="market_reviews_empty_sent_subtitle">Otevřete dokončenou objednávku a napište recenzi.</string>

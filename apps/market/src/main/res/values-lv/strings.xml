@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Nepiemērots saturs</string>
     <string name="market_report_reason_misleading">Maldinošs apraksts</string>
     <string name="market_report_reason_other">Cits</string>
-    <string name="market_report_reason_spam">Surogātpasts</string>
+    <string name="market_report_reason_spam">Spam vai krāpniecība</string>
     <string name="market_reviews_empty_received_title">Vēl nav atsauksmju</string>
     <string name="market_reviews_response_submit">Iesniegt atbildi</string>
     <string name="market_reviews_tab_received">Saņemts</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Neizdevās ielādēt profilu</string>
     <string name="market_profile_joined">Pievienojās %1$s</string>
     <string name="market_profile_no_reviews">Vēl nav atsauksmju.</string>
-    <string name="market_purchase_dispute_chargeback">Maksājuma atgriešana %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Maksājuma apstrīdēšana: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Jūsu banka iesniedza maksājuma atgriešanu par šo pasūtījumu. Stripe risina strīdu ar pārdevēju; iznākums parādīsies šeit, kad būs pieņemts lēmums.</string>
     <string name="market_purchase_review_from">Atsauksme no %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s atmaksāts</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Atmaksā…</string>
     <string name="market_report_dialog_details_label">Sīkāka informācija (neobligāti)</string>
     <string name="market_report_dialog_submitting">Iesniedz</string>
-    <string name="market_report_reason_counterfeit">Viltojums</string>
-    <string name="market_report_reason_prohibited">Aizliegta prece</string>
+    <string name="market_report_reason_counterfeit">Viltots vai nozagts</string>
+    <string name="market_report_reason_prohibited">Aizliegta vai nelegāla prece</string>
     <string name="market_reviews_awaiting_response">Gaida atbildi</string>
     <string name="market_reviews_empty_received_subtitle">Pircēji un pārdevēji var novērtēt viens otru pēc pabeigta pasūtījuma.</string>
     <string name="market_reviews_empty_sent_subtitle">Atveriet pabeigtu pasūtījumu, lai atstātu atsauksmi.</string>

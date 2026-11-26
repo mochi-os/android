@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Неприкладан садржај</string>
     <string name="market_report_reason_misleading">Заводљив опис</string>
     <string name="market_report_reason_other">Друго</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_spam">Спам или превара</string>
     <string name="market_reviews_empty_received_title">Још нема рецензија</string>
     <string name="market_reviews_response_submit">Пошаљи одговор</string>
     <string name="market_reviews_tab_received">Примљено</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Учитавање профила није успело</string>
     <string name="market_profile_joined">Придружио се %1$s</string>
     <string name="market_profile_no_reviews">Још нема рецензија.</string>
-    <string name="market_purchase_dispute_chargeback">Сторнирање %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Сторнирање: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваша банка је поднела захтев за сторнирање ове поруџбине. Stripe решава спор са продавцем; исход ће се појавити овде када буде одлучен.</string>
     <string name="market_purchase_review_from">Рецензија од %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s рефундирано</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Враћање новца…</string>
     <string name="market_report_dialog_details_label">Детаљи (опционо)</string>
     <string name="market_report_dialog_submitting">Слање</string>
-    <string name="market_report_reason_counterfeit">Фалсификат</string>
-    <string name="market_report_reason_prohibited">Забрањена ставка</string>
+    <string name="market_report_reason_counterfeit">Фалсификовано или украдено</string>
+    <string name="market_report_reason_prohibited">Забрањена или незаконита ставка</string>
     <string name="market_reviews_awaiting_response">Чека се одговор</string>
     <string name="market_reviews_empty_received_subtitle">Купци и продавци могу да оцењују једни друге након завршене наруџбине.</string>
     <string name="market_reviews_empty_sent_subtitle">Отворите завршену наруџбину да бисте оставили рецензију.</string>

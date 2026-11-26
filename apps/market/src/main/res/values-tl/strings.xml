@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Ipasa</string>
     <string name="market_report_dialog_success">Naipasa ang report</string>
     <string name="market_report_dialog_title">I-report ang listing</string>
-    <string name="market_report_reason_counterfeit">Peke</string>
+    <string name="market_report_reason_counterfeit">Peke o ninakaw</string>
     <string name="market_report_reason_inappropriate">Hindi naaangkop na content</string>
     <string name="market_report_reason_misleading">Nakaliligaw na paglalarawan</string>
     <string name="market_report_reason_other">Iba pa</string>
-    <string name="market_report_reason_prohibited">Pinagbabawal na bagay</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Ipinagbabawal o iligal na item</string>
+    <string name="market_report_reason_spam">Spam o scam</string>
     <string name="market_reviews_empty_received_title">Wala pang review</string>
     <string name="market_reviews_response_label">Tugon</string>
     <string name="market_reviews_response_submit">Isumite ang sagot</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Panimulang bid: %1$s</string>
     <string name="market_profile_load_failed">Hindi na-load ang profile</string>
     <string name="market_profile_joined">Sumali noong %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Naghain ang iyong bangko ng chargeback sa order na ito. Hinaharap ng Stripe ang dispute kasama ang nagbebenta; lalabas dito ang resulta kapag napagpasyahan na.</string>
     <string name="market_purchase_review_from">Review mula kay %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s na-refund</string>

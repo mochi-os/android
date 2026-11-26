@@ -281,12 +281,12 @@
     <string name="market_report_dialog_submit">Ներկայացնել</string>
     <string name="market_report_dialog_success">Հաղորդումը ներկայացվեց</string>
     <string name="market_report_dialog_title">Հաղորդել հայտարարության մասին</string>
-    <string name="market_report_reason_counterfeit">Կեղծ</string>
+    <string name="market_report_reason_counterfeit">Կեղծ կամ գողացված</string>
     <string name="market_report_reason_inappropriate">Անպատշաճ բովանդակություն</string>
     <string name="market_report_reason_misleading">Ապակողմնորոշող նկարագրություն</string>
     <string name="market_report_reason_other">Այլ</string>
-    <string name="market_report_reason_prohibited">Արգելված ապրանք</string>
-    <string name="market_report_reason_spam">Սպամ</string>
+    <string name="market_report_reason_prohibited">Արգելված կամ ապօրինի ապրանք</string>
+    <string name="market_report_reason_spam">Սպամ կամ խաբեություն</string>
     <string name="market_reviews_empty_received_title">Դեռ կարծիքներ չկան</string>
     <string name="market_reviews_response_label">Պատասխան</string>
     <string name="market_reviews_response_submit">Ներկայացնել պատասխանը</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Մեկնարկային հայտ՝ %1$s</string>
     <string name="market_profile_load_failed">Չհաջողվեց բեռնել պրոֆիլը</string>
     <string name="market_profile_joined">Միացել է %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Հետգանձում %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Հետգանձում: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ձեր բանկը հետգանձում է ներկայացրել այս պատվերի վրա: Stripe-ը վարում է վեճը վաճառողի հետ; արդյունքը կհայտնվի այստեղ, երբ որոշվի:</string>
     <string name="market_purchase_review_from">Կարծիք %1$s-ից</string>
     <string name="market_purchases_refunded_partial">−%1$s վերադարձվել է</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Contenu inapproprié</string>
     <string name="market_report_reason_misleading">Description trompeuse</string>
     <string name="market_report_reason_other">Autre</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam ou arnaque</string>
     <string name="market_reviews_empty_received_title">Aucun avis pour le moment</string>
     <string name="market_reviews_response_submit">Envoyer la réponse</string>
     <string name="market_reviews_tab_received">Reçu</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Impossible de charger le profil</string>
     <string name="market_profile_joined">Inscrit le %1$s</string>
     <string name="market_profile_no_reviews">Aucun avis pour le moment.</string>
-    <string name="market_purchase_dispute_chargeback">Rétrofacturation %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Rétrofacturation : %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Votre banque a engagé une rétrofacturation sur cette commande. Stripe traite le litige avec le vendeur ; le résultat apparaîtra ici une fois la décision rendue.</string>
     <string name="market_purchase_review_from">Avis de %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s remboursé</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Remboursement…</string>
     <string name="market_report_dialog_details_label">Détails (facultatif)</string>
     <string name="market_report_dialog_submitting">Envoi en cours</string>
-    <string name="market_report_reason_counterfeit">Contrefaçon</string>
-    <string name="market_report_reason_prohibited">Article interdit</string>
+    <string name="market_report_reason_counterfeit">Contrefait ou volé</string>
+    <string name="market_report_reason_prohibited">Article interdit ou illégal</string>
     <string name="market_reviews_awaiting_response">En attente de réponse</string>
     <string name="market_reviews_empty_received_subtitle">Les acheteurs et les vendeurs peuvent s\'évaluer mutuellement après une commande terminée.</string>
     <string name="market_reviews_empty_sent_subtitle">Ouvrez une commande terminée pour laisser un avis.</string>

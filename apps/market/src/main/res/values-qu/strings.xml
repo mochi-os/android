@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Apachiy</string>
     <string name="market_report_dialog_success">Reporte apachisqa</string>
     <string name="market_report_dialog_title">Listadota reportay</string>
-    <string name="market_report_reason_counterfeit">Llulla</string>
+    <string name="market_report_reason_counterfeit">Yanqa utaq suwasqa</string>
     <string name="market_report_reason_inappropriate">Mana hina contenido</string>
     <string name="market_report_reason_misleading">Pantachiq willariy</string>
     <string name="market_report_reason_other">Huk</string>
-    <string name="market_report_reason_prohibited">Hark\'asqa item</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Hark\'asqa utaq ilegal item</string>
+    <string name="market_report_reason_spam">Spam utaq llullakuy</string>
     <string name="market_reviews_empty_received_title">Manaraq reseñakuna kanchu</string>
     <string name="market_reviews_response_label">Kutichiy</string>
     <string name="market_reviews_response_submit">Kutichiyta apachiy</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Qallariy puja: %1$s</string>
     <string name="market_profile_load_failed">Perfilta mana cargayta atikurqanchu</string>
     <string name="market_profile_joined">Yaykurqan %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Contracargo: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bancoyki kay pedidopi contracargota churarqan. Stripeqa qhatuqwan disputata kamachichkan; resultadoqa decidisqa kaptin kaypi rikurinqa.</string>
     <string name="market_purchase_dispute_response">Qhatuqpa kutichiynin</string>
     <string name="market_purchase_review_from">%1$s-pa reseñan</string>

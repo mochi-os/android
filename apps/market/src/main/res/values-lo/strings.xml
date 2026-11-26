@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">ສົ່ງ</string>
     <string name="market_report_dialog_success">ສົ່ງລາຍງານແລ້ວ</string>
     <string name="market_report_dialog_title">ລາຍງານລາຍການຂາຍ</string>
-    <string name="market_report_reason_counterfeit">ປອມ</string>
+    <string name="market_report_reason_counterfeit">ປອມ ຫຼື ຖືກລັກ</string>
     <string name="market_report_reason_inappropriate">ເນື້ອໃນບໍ່ເໝາະສົມ</string>
     <string name="market_report_reason_misleading">ລາຍລະອຽດເຮັດໃຫ້ເຂົ້າໃຈຜິດ</string>
     <string name="market_report_reason_other">ອື່ນໆ</string>
-    <string name="market_report_reason_prohibited">ສິນຄ້າຫ້າມ</string>
-    <string name="market_report_reason_spam">ສະແປມ</string>
+    <string name="market_report_reason_prohibited">ສິນຄ້າຕ້ອງຫ້າມຫຼືຜິດກົດໝາຍ</string>
+    <string name="market_report_reason_spam">ສະແປມ ຫຼື ການຫຼອກລວງ</string>
     <string name="market_reviews_empty_received_title">ຍັງບໍ່ມີຄຳວິຈານ</string>
     <string name="market_reviews_response_label">ຄຳຕອບ</string>
     <string name="market_reviews_response_submit">ສົ່ງການຕອບກັບ</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">ການປະມູນເລີ່ມຕົ້ນ: %1$s</string>
     <string name="market_profile_load_failed">ບໍ່ສາມາດໂຫຼດໂປຣໄຟລ໌ໄດ້</string>
     <string name="market_profile_joined">ເຂົ້າຮ່ວມ %1$s</string>
-    <string name="market_purchase_dispute_chargeback">ການຮຽກເງິນຄືນ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ການຮຽກເງິນຄືນ: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ທະນາຄານຂອງທ່ານໄດ້ຍື່ນການຮຽກເງິນຄືນສຳລັບການສັ່ງຊື້ນີ້. Stripe ກຳລັງຈັດການຂໍ້ຂັດແຍ່ງກັບຜູ້ຂາຍ; ຜົນຮັບຈະປາກົດຢູ່ນີ້ເມື່ອມີການຕັດສິນ.</string>
     <string name="market_purchase_dispute_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
     <string name="market_purchase_review_from">ການວິຈານຈາກ %1$s</string>

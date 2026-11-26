@@ -346,7 +346,7 @@
     <string name="market_profile_joined">%1$s 加入</string>
     <string name="market_profile_no_reviews">暫時未有評價。</string>
     <string name="market_purchase_confirm_delivery">確認收貨</string>
-    <string name="market_purchase_dispute_chargeback">退款爭議 %1$s</string>
+    <string name="market_purchase_dispute_chargeback">拒付申索：%1$s</string>
     <string name="market_purchase_dispute_chargeback_body">你銀行就呢張訂單提出咗退款爭議。Stripe 而家同賣家處理緊呢宗糾紛;有結果之後會喺度顯示。</string>
     <string name="market_purchase_dispute_details">你嘅詳情</string>
     <string name="market_purchase_dispute_resolution">工作人員裁決</string>
@@ -392,11 +392,11 @@
     <string name="market_report_dialog_submitting">提交緊</string>
     <string name="market_report_dialog_success">舉報已提交</string>
     <string name="market_report_dialog_title">舉報刊登物品</string>
-    <string name="market_report_reason_counterfeit">冒牌貨</string>
+    <string name="market_report_reason_counterfeit">冒牌貨或者賊贓</string>
     <string name="market_report_reason_inappropriate">不當內容</string>
     <string name="market_report_reason_misleading">描述具誤導性</string>
-    <string name="market_report_reason_prohibited">禁售物品</string>
-    <string name="market_report_reason_spam">垃圾訊息</string>
+    <string name="market_report_reason_prohibited">違禁或者非法物品</string>
+    <string name="market_report_reason_spam">垃圾訊息或者詐騙</string>
     <string name="market_reviews_awaiting_response">等緊回覆</string>
     <string name="market_reviews_empty_received_subtitle">買家同賣家可以喺訂單完成之後互相評價。</string>
     <string name="market_reviews_empty_received_title">暫時未有評價</string>

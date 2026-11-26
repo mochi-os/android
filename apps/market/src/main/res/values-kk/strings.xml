@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Тексерілді</string>
     <string name="market_purchase_confirm_delivery">Қабылдағанын растау</string>
     <string name="market_purchase_delivery">Жеткізу</string>
-    <string name="market_purchase_dispute_chargeback">Қайтару %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Чарджбэк: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Банкіңіз бұл тапсырысқа қайтару берді. Stripe сатушымен дау-дамайды басқарып жатыр; нәтиже шешілген кезде осында пайда болады.</string>
     <string name="market_purchase_dispute_details">Сіздің мәліметтеріңіз</string>
     <string name="market_purchase_dispute_reason">Себеп</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Жіберілуде</string>
     <string name="market_report_dialog_success">Шағым жіберілді</string>
     <string name="market_report_dialog_title">Хабарландыруға шағымдану</string>
-    <string name="market_report_reason_counterfeit">Жасанды</string>
+    <string name="market_report_reason_counterfeit">Жалған немесе ұрланған</string>
     <string name="market_report_reason_inappropriate">Сәйкес келмейтін мазмұн</string>
     <string name="market_report_reason_misleading">Жаңылыстыратын сипаттама</string>
     <string name="market_report_reason_other">Басқа</string>
-    <string name="market_report_reason_prohibited">Тыйым салынған зат</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_prohibited">Тыйым салынған немесе заңсыз тауар</string>
+    <string name="market_report_reason_spam">Спам немесе алаяқтық</string>
     <string name="market_reviews_awaiting_response">Жауап күтілуде</string>
     <string name="market_reviews_empty_received_subtitle">Сатып алушылар мен сатушылар тапсырыс аяқталғаннан кейін бір-біріне пікір қалдыра алады.</string>
     <string name="market_reviews_empty_received_title">Шолулар әлі жоқ</string>

@@ -287,12 +287,12 @@
     <string name="market_report_dialog_submit">Fi sí ilẹ̀</string>
     <string name="market_report_dialog_success">A ti fi ìròyìn ránṣẹ́</string>
     <string name="market_report_dialog_title">Ròyìn ìtòlẹ́</string>
-    <string name="market_report_reason_counterfeit">Èké</string>
+    <string name="market_report_reason_counterfeit">Ìríra tàbí jíjí</string>
     <string name="market_report_reason_inappropriate">Àkóónú aláìyẹ</string>
     <string name="market_report_reason_misleading">Àpèjúwe tí ń ṣì lọ́nà</string>
     <string name="market_report_reason_other">Mìíràn</string>
-    <string name="market_report_reason_prohibited">Ohun tí ó di</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Item tí a tako tàbí tí kò bófin mu</string>
+    <string name="market_report_reason_spam">Spam tàbí ẹ̀tàn</string>
     <string name="market_reviews_empty_received_title">Kò sí àyẹ̀wò síbẹ̀</string>
     <string name="market_reviews_response_label">Èsì</string>
     <string name="market_reviews_response_submit">Fi ìdáhùn lélẹ̀</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Ìdíje ìbẹ̀rẹ̀: %1$s</string>
     <string name="market_profile_load_failed">Kò lè ṣàmúwá ìmọ̀ nípa ẹni</string>
     <string name="market_profile_joined">Dara pọ̀ ní %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Ìfagílé owó %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Ìpadàwálé: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Báńkì rẹ fi ẹ̀sùn ìfagílé owó lélẹ̀ lórí àṣẹ yìí. Stripe ń bójú tó àríyànjiyàn náà pẹ̀lú olùtà; ìpinnu yóò farahàn níhìn-ín nígbà tí a bá ṣe é.</string>
     <string name="market_purchase_dispute_response">Ìdáhùn olùtà</string>
     <string name="market_purchase_review_from">Àyẹ̀wò láti ọ̀dọ̀ %1$s</string>

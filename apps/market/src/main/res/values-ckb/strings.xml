@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">ناردن</string>
     <string name="market_report_dialog_success">ڕاپۆرت نێردرا</string>
     <string name="market_report_dialog_title">ڕاپۆرتکردنی لیست</string>
-    <string name="market_report_reason_counterfeit">ساختە</string>
+    <string name="market_report_reason_counterfeit">ساختە یان دزراو</string>
     <string name="market_report_reason_inappropriate">ناوەڕۆکی نەشیاو</string>
     <string name="market_report_reason_misleading">وەسفی هەڵەخوازانە</string>
     <string name="market_report_reason_other">هیتر</string>
-    <string name="market_report_reason_prohibited">شتی قەدەغەکراو</string>
-    <string name="market_report_reason_spam">سپام</string>
+    <string name="market_report_reason_prohibited">بڕگەی قەدەغە یان نا یاسایی</string>
+    <string name="market_report_reason_spam">سپام یان فێڵ</string>
     <string name="market_reviews_empty_received_title">هێشتا هیچ هەڵسەنگاندنێک نییە</string>
     <string name="market_reviews_response_label">وەڵام</string>
     <string name="market_reviews_response_submit">وەڵام بنێرە</string>
@@ -439,7 +439,7 @@
     <string name="market_price_starting_bid">داوای دەستپێک: %1$s</string>
     <string name="market_profile_load_failed">نەتوانرا پرۆفایل بار بکرێت</string>
     <string name="market_profile_joined">بەشداری کرد لە %1$s</string>
-    <string name="market_purchase_dispute_chargeback">گەڕاندنەوەی پارە %1$s</string>
+    <string name="market_purchase_dispute_chargeback">گەڕاندنەوەی پارە: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">بانکەکەت داوای گەڕاندنەوەی پارەی ئەم داواکارییەی تۆمار کردووە. Stripe خەریکی چارەسەرکردنی کێشەکەیە لەگەڵ فرۆشیار؛ ئەنجامەکە لێرە دەردەکەوێت کاتێک بڕیاری لێدرا.</string>
     <string name="market_purchase_dispute_response">وەڵامی فرۆشیار</string>
     <string name="market_purchase_review_from">پێداچوونەوە لە %1$s</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Conținut neadecvat</string>
     <string name="market_report_reason_misleading">Descriere înșelătoare</string>
     <string name="market_report_reason_other">Altele</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam sau înșelătorie</string>
     <string name="market_reviews_empty_received_title">Încă nicio recenzie</string>
     <string name="market_reviews_response_submit">Trimite răspunsul</string>
     <string name="market_reviews_tab_received">Primit</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Profilul nu a putut fi încărcat</string>
     <string name="market_profile_joined">S-a alăturat în %1$s</string>
     <string name="market_profile_no_reviews">Nicio recenzie încă.</string>
-    <string name="market_purchase_dispute_chargeback">Stornare %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Stornare: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banca ta a inițiat o stornare pentru această comandă. Stripe gestionează disputa cu vânzătorul; rezultatul va apărea aici după ce va fi decis.</string>
     <string name="market_purchase_review_from">Recenzie de la %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s rambursat</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Se rambursează…</string>
     <string name="market_report_dialog_details_label">Detalii (opțional)</string>
     <string name="market_report_dialog_submitting">Se trimite</string>
-    <string name="market_report_reason_counterfeit">Contrafăcut</string>
-    <string name="market_report_reason_prohibited">Articol interzis</string>
+    <string name="market_report_reason_counterfeit">Contrafăcut sau furat</string>
+    <string name="market_report_reason_prohibited">Articol interzis sau ilegal</string>
     <string name="market_reviews_awaiting_response">În așteptarea răspunsului</string>
     <string name="market_reviews_empty_received_subtitle">Cumpărătorii și vânzătorii se pot recenza reciproc după o comandă finalizată.</string>
     <string name="market_reviews_empty_sent_subtitle">Deschideți o comandă finalizată pentru a lăsa o recenzie.</string>

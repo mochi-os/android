@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Upassende innhold</string>
     <string name="market_report_reason_misleading">Villedende beskrivelse</string>
     <string name="market_report_reason_other">Annet</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Søppel eller svindel</string>
     <string name="market_reviews_empty_received_title">Ingen anmeldelser ennå</string>
     <string name="market_reviews_response_submit">Send svar</string>
     <string name="market_reviews_tab_received">Mottatt</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Kunne ikke laste inn profilen</string>
     <string name="market_profile_joined">Ble med %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser ennå.</string>
-    <string name="market_purchase_dispute_chargeback">Tilbakeføring %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Tilbakeføring: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banken din har bedt om tilbakeføring for denne bestillingen. Stripe håndterer tvisten med selgeren; resultatet vises her når avgjørelsen er tatt.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refundert</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Refunderer …</string>
     <string name="market_report_dialog_details_label">Detaljer (valgfritt)</string>
     <string name="market_report_dialog_submitting">Sender inn</string>
-    <string name="market_report_reason_counterfeit">Forfalskning</string>
-    <string name="market_report_reason_prohibited">Forbudt vare</string>
+    <string name="market_report_reason_counterfeit">Forfalsket eller stjålet</string>
+    <string name="market_report_reason_prohibited">Forbudt eller ulovlig vare</string>
     <string name="market_reviews_awaiting_response">Venter på svar</string>
     <string name="market_reviews_empty_received_subtitle">Kjøpere og selgere kan vurdere hverandre etter en fullført bestilling.</string>
     <string name="market_reviews_empty_sent_subtitle">Åpne en fullført bestilling for å legge igjen en anmeldelse.</string>

@@ -72,4 +72,6 @@
     <string name="staff_audit_reason_timeout">Reviewperiode beëindigd</string>
     <string name="staff_status_denied">Beroep geweigerd</string>
     <string name="staff_status_upheld">Beroep goedgekeurd</string>
+    <string name="staff_listings_moderation_hold">In afwachting</string>
+    <string name="staff_status_hold">In afwachting</string>
 </resources>

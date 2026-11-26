@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Ακατάλληλο περιεχόμενο</string>
     <string name="market_report_reason_misleading">Παραπλανητική περιγραφή</string>
     <string name="market_report_reason_other">Άλλο</string>
-    <string name="market_report_reason_spam">Ανεπιθύμητο</string>
+    <string name="market_report_reason_spam">Ανεπιθύμητο ή απάτη</string>
     <string name="market_reviews_empty_received_title">Δεν υπάρχουν ακόμη κριτικές</string>
     <string name="market_reviews_response_submit">Υποβολή απάντησης</string>
     <string name="market_reviews_tab_received">Παραλήφθηκε</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Δεν ήταν δυνατή η φόρτωση του προφίλ</string>
     <string name="market_profile_joined">Εγγραφή %1$s</string>
     <string name="market_profile_no_reviews">Δεν υπάρχουν κριτικές ακόμη.</string>
-    <string name="market_purchase_dispute_chargeback">Αντιλογισμός %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Αντιστροφή χρέωσης: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Η τράπεζά σας υπέβαλε αντιλογισμό για αυτήν την παραγγελία. Η Stripe χειρίζεται τη διαφορά με τον πωλητή· το αποτέλεσμα θα εμφανιστεί εδώ όταν αποφασιστεί.</string>
     <string name="market_purchase_review_from">Κριτική από %1$s</string>
 
@@ -445,8 +445,8 @@
     <string name="market_refund_dialog_submitting">Γίνεται επιστροφή…</string>
     <string name="market_report_dialog_details_label">Λεπτομέρειες (προαιρετικό)</string>
     <string name="market_report_dialog_submitting">Υποβολή</string>
-    <string name="market_report_reason_counterfeit">Πλαστό</string>
-    <string name="market_report_reason_prohibited">Απαγορευμένο αντικείμενο</string>
+    <string name="market_report_reason_counterfeit">Πλαστό ή κλεμμένο</string>
+    <string name="market_report_reason_prohibited">Απαγορευμένο ή παράνομο αντικείμενο</string>
     <string name="market_reviews_awaiting_response">Αναμονή απάντησης</string>
     <string name="market_reviews_empty_received_subtitle">Αγοραστές και πωλητές μπορούν να αξιολογήσουν ο ένας τον άλλον μετά από ολοκληρωμένη παραγγελία.</string>
     <string name="market_reviews_empty_sent_subtitle">Ανοίξτε μια ολοκληρωμένη παραγγελία για να γράψετε κριτική.</string>

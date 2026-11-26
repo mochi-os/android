@@ -291,12 +291,12 @@
     <string name="market_report_dialog_submit">Aikawa</string>
     <string name="market_report_dialog_success">An gabatar da rahoto</string>
     <string name="market_report_dialog_title">Bayar da rahoton listing</string>
-    <string name="market_report_reason_counterfeit">Karya</string>
+    <string name="market_report_reason_counterfeit">Na bogi ko sata</string>
     <string name="market_report_reason_inappropriate">Abun ciki marar dacewa</string>
     <string name="market_report_reason_misleading">Bayanin ruɗarwa</string>
     <string name="market_report_reason_other">Sauran</string>
-    <string name="market_report_reason_prohibited">Abu da aka haramta</string>
-    <string name="market_report_reason_spam">Tarkacen saƙo</string>
+    <string name="market_report_reason_prohibited">Abu da aka haramta ko ba bisa doka</string>
+    <string name="market_report_reason_spam">Spam ko zamba</string>
     <string name="market_reviews_empty_received_title">Babu reviews tukuna</string>
     <string name="market_reviews_response_label">Amsa</string>
     <string name="market_reviews_response_submit">Aika amsa</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Tayin farawa: %1$s</string>
     <string name="market_profile_load_failed">Ba a iya loda bayanan martaba ba</string>
     <string name="market_profile_joined">Ya shiga %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Mayar da kuɗi %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Maido da kuɗi: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankin ku ya gabatar da koken mayar da kuɗi kan wannan oda. Stripe na sarrafa takaddamar tare da mai sayarwa; sakamakon zai bayyana a nan idan an yanke shawara.</string>
     <string name="market_purchase_dispute_response">Amsar mai sayarwa</string>
     <string name="market_purchase_review_from">Bita daga %1$s</string>

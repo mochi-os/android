@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Tabşyr</string>
     <string name="market_report_dialog_success">Hasabat tabşyryldy</string>
     <string name="market_report_dialog_title">Sanawa şikaýat et</string>
-    <string name="market_report_reason_counterfeit">Galp</string>
+    <string name="market_report_reason_counterfeit">Galp ýa-da ogurlanan</string>
     <string name="market_report_reason_inappropriate">Nädogry mazmun</string>
     <string name="market_report_reason_misleading">Çolaşdyryjy düşündiriş</string>
     <string name="market_report_reason_other">Beýleki</string>
-    <string name="market_report_reason_prohibited">Gadagan zat</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Gadagan ýa-da bikanun zat</string>
+    <string name="market_report_reason_spam">Spam ýa-da galp</string>
     <string name="market_reviews_empty_received_title">Heniz synlar ýok</string>
     <string name="market_reviews_response_label">Jogap</string>
     <string name="market_reviews_response_submit">Jogap tabşyr</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Başlangyç teklip: %1$s</string>
     <string name="market_profile_load_failed">Profili ýükläp bolmady</string>
     <string name="market_profile_joined">%1$s goşuldy</string>
-    <string name="market_purchase_dispute_chargeback">Tölegiň yzyna alynmagy %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Tölegiň yzyna alynmagy: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankyňyz bu sargyt boýunça tölegiň yzyna alynmagyny talap etdi. Stripe satyjy bilen jedeli çözýär; netije çykarylanda bu ýerde görkeziler.</string>
     <string name="market_purchase_dispute_response">Satyjynyň jogaby</string>
     <string name="market_purchase_review_from">%1$s tarapyndan synag</string>

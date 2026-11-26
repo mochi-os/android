@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Conteúdo inadequado</string>
     <string name="market_report_reason_misleading">Descrição enganosa</string>
     <string name="market_report_reason_other">Outro</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam ou fraude</string>
     <string name="market_reviews_empty_received_title">Ainda não há avaliações</string>
     <string name="market_reviews_response_submit">Submeter resposta</string>
     <string name="market_reviews_tab_received">Recebido</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Não foi possível carregar o perfil</string>
     <string name="market_profile_joined">Entrou em %1$s</string>
     <string name="market_profile_no_reviews">Ainda não há avaliações.</string>
-    <string name="market_purchase_dispute_chargeback">Estorno %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Estorno: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">O seu banco apresentou um estorno sobre esta encomenda. A Stripe está a tratar do litígio com o vendedor; o resultado aparecerá aqui quando for decidido.</string>
     <string name="market_purchase_review_from">Avaliação de %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Reembolsando…</string>
     <string name="market_report_dialog_details_label">Detalhes (opcional)</string>
     <string name="market_report_dialog_submitting">Enviando</string>
-    <string name="market_report_reason_counterfeit">Falsificado</string>
-    <string name="market_report_reason_prohibited">Item proibido</string>
+    <string name="market_report_reason_counterfeit">Falsificado ou roubado</string>
+    <string name="market_report_reason_prohibited">Artigo proibido ou ilegal</string>
     <string name="market_reviews_awaiting_response">A aguardar resposta</string>
     <string name="market_reviews_empty_received_subtitle">Compradores e vendedores podem avaliar-se mutuamente após um pedido concluído.</string>
     <string name="market_reviews_empty_sent_subtitle">Abra um pedido concluído para deixar uma avaliação.</string>

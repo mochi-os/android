@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Neprikladan sadržaj</string>
     <string name="market_report_reason_misleading">Obmanjujući opis</string>
     <string name="market_report_reason_other">Drugo</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam ili prevara</string>
     <string name="market_reviews_empty_received_title">Još nema recenzija</string>
     <string name="market_reviews_response_submit">Pošalji odgovor</string>
     <string name="market_reviews_tab_received">Primljeno</string>
@@ -431,7 +431,7 @@
     <string name="market_profile_load_failed">Nije moguće učitati profil</string>
     <string name="market_profile_joined">Pridružio se %1$s</string>
     <string name="market_profile_no_reviews">Još nema recenzija.</string>
-    <string name="market_purchase_dispute_chargeback">Povrat sredstava %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Povrat naplate: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaša banka je podnijela zahtjev za povrat sredstava za ovu narudžbu. Stripe rješava spor sa prodavcem; ishod će se pojaviti ovdje kada bude odlučen.</string>
     <string name="market_purchase_dispute_response">Odgovor prodavca</string>
     <string name="market_purchase_review_from">Recenzija od %1$s</string>
@@ -442,8 +442,8 @@
     <string name="market_refund_dialog_submitting">Vraćanje sredstava…</string>
     <string name="market_report_dialog_details_label">Detalji (opcionalno)</string>
     <string name="market_report_dialog_submitting">Slanje</string>
-    <string name="market_report_reason_counterfeit">Krivotvorina</string>
-    <string name="market_report_reason_prohibited">Zabranjen artikal</string>
+    <string name="market_report_reason_counterfeit">Krivotvoreno ili ukradeno</string>
+    <string name="market_report_reason_prohibited">Zabranjena ili nezakonita stavka</string>
     <string name="market_reviews_awaiting_response">Čeka se odgovor</string>
     <string name="market_reviews_empty_received_subtitle">Kupci i prodavci mogu recenzirati jedni druge nakon završene narudžbe.</string>
     <string name="market_reviews_empty_sent_subtitle">Otvorite završenu narudžbu da biste ostavili recenziju.</string>

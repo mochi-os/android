@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Unangemessener Inhalt</string>
     <string name="market_report_reason_misleading">Irreführende Beschreibung</string>
     <string name="market_report_reason_other">Sonstige</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam oder Betrug</string>
     <string name="market_reviews_empty_received_title">Noch keine Bewertungen</string>
     <string name="market_reviews_response_submit">Antwort einreichen</string>
     <string name="market_reviews_tab_received">Empfangen</string>
@@ -396,8 +396,8 @@
     <string name="market_refund_dialog_submitting">Erstattung läuft…</string>
     <string name="market_report_dialog_details_label">Details (optional)</string>
     <string name="market_report_dialog_submitting">Wird gesendet</string>
-    <string name="market_report_reason_counterfeit">Fälschung</string>
-    <string name="market_report_reason_prohibited">Verbotener Artikel</string>
+    <string name="market_report_reason_counterfeit">Gefälscht oder gestohlen</string>
+    <string name="market_report_reason_prohibited">Verbotener oder illegaler Artikel</string>
     <string name="market_reviews_awaiting_response">Antwort ausstehend</string>
     <string name="market_reviews_empty_received_subtitle">Käufer und Verkäufer können sich nach einer abgeschlossenen Bestellung gegenseitig bewerten.</string>
     <string name="market_reviews_empty_sent_subtitle">Öffnen Sie eine abgeschlossene Bestellung, um eine Bewertung abzugeben.</string>
@@ -476,7 +476,7 @@
     <string name="market_profile_load_failed">Profil konnte nicht geladen werden</string>
     <string name="market_profile_joined">Beigetreten %1$s</string>
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
-    <string name="market_purchase_dispute_chargeback">Rückbuchung %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Rückbuchung: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ihre Bank hat für diese Bestellung eine Rückbuchung veranlasst. Stripe bearbeitet die Streitigkeit mit dem Verkäufer; das Ergebnis erscheint hier, sobald entschieden wurde.</string>
     <string name="market_purchase_review_from">Bewertung von %1$s</string>
 

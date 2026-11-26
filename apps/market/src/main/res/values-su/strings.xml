@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Kirim</string>
     <string name="market_report_dialog_success">Laporan dikirim</string>
     <string name="market_report_dialog_title">Laporkeun daptaran</string>
-    <string name="market_report_reason_counterfeit">Palsu</string>
+    <string name="market_report_reason_counterfeit">Palsu atawa dipaling</string>
     <string name="market_report_reason_inappropriate">Eusi henteu pantes</string>
     <string name="market_report_reason_misleading">Pedaran nu nyasabkeun</string>
     <string name="market_report_reason_other">Séjén</string>
-    <string name="market_report_reason_prohibited">Barang dilarang</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Item dilarang atawa illegal</string>
+    <string name="market_report_reason_spam">Spam atawa scam</string>
     <string name="market_reviews_empty_received_title">Tacan aya ulasan</string>
     <string name="market_reviews_response_label">Walon</string>
     <string name="market_reviews_response_submit">Kirim réspon</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Tawaran awal: %1$s</string>
     <string name="market_profile_load_failed">Henteu tiasa ngamuat propil</string>
     <string name="market_profile_joined">Gabung %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank anjeun ngajukeun chargeback pikeun pesenan ieu. Stripe nu nanganan sengketa sareng padagang; hasilna bakal némbongan di dieu lamun parantos diputuskeun.</string>
     <string name="market_purchase_dispute_response">Tanggapan padagang</string>
     <string name="market_purchase_review_from">Tinjauan ti %1$s</string>

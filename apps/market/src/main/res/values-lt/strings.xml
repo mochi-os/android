@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Netinkamas turinys</string>
     <string name="market_report_reason_misleading">Klaidinantis aprašymas</string>
     <string name="market_report_reason_other">Kita</string>
-    <string name="market_report_reason_spam">Šlamštas</string>
+    <string name="market_report_reason_spam">Šlamštas arba sukčiavimas</string>
     <string name="market_reviews_empty_received_title">Dar nėra atsiliepimų</string>
     <string name="market_reviews_response_submit">Pateikti atsakymą</string>
     <string name="market_reviews_tab_received">Gauta</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Nepavyko įkelti profilio</string>
     <string name="market_profile_joined">Prisijungė %1$s</string>
     <string name="market_profile_no_reviews">Atsiliepimų dar nėra.</string>
-    <string name="market_purchase_dispute_chargeback">Atšaukimas %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Atgalinis mokėjimas: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Jūsų bankas pateikė šio užsakymo atšaukimą. Stripe sprendžia ginčą su pardavėju; rezultatas bus rodomas čia, kai bus priimtas sprendimas.</string>
     <string name="market_purchase_review_from">Atsiliepimas nuo %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s grąžinta</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Grąžinama…</string>
     <string name="market_report_dialog_details_label">Išsami informacija (nebūtina)</string>
     <string name="market_report_dialog_submitting">Pateikiama</string>
-    <string name="market_report_reason_counterfeit">Padirbinys</string>
-    <string name="market_report_reason_prohibited">Draudžiama prekė</string>
+    <string name="market_report_reason_counterfeit">Padirbtas arba pavogtas</string>
+    <string name="market_report_reason_prohibited">Draudžiama ar nelegali prekė</string>
     <string name="market_reviews_awaiting_response">Laukiama atsakymo</string>
     <string name="market_reviews_empty_received_subtitle">Pirkėjai ir pardavėjai gali įvertinti vienas kitą po įvykdyto užsakymo.</string>
     <string name="market_reviews_empty_sent_subtitle">Atidarykite įvykdytą užsakymą, kad paliktumėte atsiliepimą.</string>

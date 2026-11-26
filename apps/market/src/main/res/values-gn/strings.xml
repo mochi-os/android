@@ -274,12 +274,12 @@
     <string name="market_report_dialog_submit">Emondo</string>
     <string name="market_report_dialog_success">Reporte oñemondóma</string>
     <string name="market_report_dialog_title">Ereporta listado</string>
-    <string name="market_report_reason_counterfeit">Falsificado</string>
+    <string name="market_report_reason_counterfeit">Falsificado térã ñemonda</string>
     <string name="market_report_reason_inappropriate">Contenido ndoikoporãiva</string>
     <string name="market_report_reason_misleading">Ñemombe\'u japu</string>
     <string name="market_report_reason_other">Ambue</string>
-    <string name="market_report_reason_prohibited">Mba\'e ojejokóva</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Mba\'e oñembotovéva térã ndaikatúiva</string>
+    <string name="market_report_reason_spam">Spam térã ñembotavy</string>
     <string name="market_reviews_empty_received_title">Ndaipóri reseña gueteri</string>
     <string name="market_reviews_response_label">Mbohovái</string>
     <string name="market_reviews_response_submit">Emondo mbohovái</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Oferta ñepyrũ: %1$s</string>
     <string name="market_profile_load_failed">Ndaikatúi oñemyanyhẽ perfil</string>
     <string name="market_profile_joined">Oike %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ne banco omoĩ contracargo ko pedido rehe. Stripe oñangareko joavy rehe ñemuhára ndive; resultado ojehechaukáta ko\'ápe oñemoĩ vove.</string>
     <string name="market_purchase_review_from">Reseña %1$s-gui</string>
     <string name="market_purchases_refunded_partial">−%1$s viru oñembojevýma</string>

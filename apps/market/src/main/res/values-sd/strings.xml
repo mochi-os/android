@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">جمع ڪريو</string>
     <string name="market_report_dialog_success">رپورٽ جمع ٿي</string>
     <string name="market_report_dialog_title">فهرست رپورٽ ڪريو</string>
-    <string name="market_report_reason_counterfeit">جعلي</string>
+    <string name="market_report_reason_counterfeit">نقلي يا چوريل</string>
     <string name="market_report_reason_inappropriate">نامناسب مواد</string>
     <string name="market_report_reason_misleading">گمراهه ڪندڙ تفصيل</string>
     <string name="market_report_reason_other">ٻيو</string>
-    <string name="market_report_reason_prohibited">منع ٿيل شيء</string>
-    <string name="market_report_reason_spam">اسپام</string>
+    <string name="market_report_reason_prohibited">ممنوع يا غير قانوني شيء</string>
+    <string name="market_report_reason_spam">اسپام يا فراڊ</string>
     <string name="market_reviews_empty_received_title">اڃا ڪو جائزو نه آهي</string>
     <string name="market_reviews_response_label">جواب</string>
     <string name="market_reviews_response_submit">جواب جمع ڪريو</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">شروعاتي بولي: %1$s</string>
     <string name="market_profile_load_failed">پروفائيل لوڊ نه ٿي سگھيو</string>
     <string name="market_profile_joined">%1$s ۾ شامل ٿيو</string>
-    <string name="market_purchase_dispute_chargeback">چارج بيڪ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">چارج بيڪ: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">توهان جي بئنڪ هن آرڊر تي چارج بيڪ داخل ڪيو آهي. Stripe وڪرو ڪندڙ سان تڪرار سنڀالي رهيو آهي؛ فيصلو ٿيڻ تي نتيجو هتي ظاهر ٿيندو.</string>
     <string name="market_purchase_dispute_response">وڪرو ڪندڙ جو جواب</string>
     <string name="market_purchase_review_from">%1$s پاران جائزو</string>

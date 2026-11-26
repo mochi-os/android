@@ -285,12 +285,12 @@
     <string name="market_report_dialog_submit">Enviar</string>
     <string name="market_report_dialog_success">Informe enviado</string>
     <string name="market_report_dialog_title">Denunciar listaxe</string>
-    <string name="market_report_reason_counterfeit">Falsificación</string>
+    <string name="market_report_reason_counterfeit">Falsificado ou roubado</string>
     <string name="market_report_reason_inappropriate">Contido inapropiado</string>
     <string name="market_report_reason_misleading">Descrición enganosa</string>
     <string name="market_report_reason_other">Outro</string>
-    <string name="market_report_reason_prohibited">Artigo prohibido</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Artigo prohibido ou ilegal</string>
+    <string name="market_report_reason_spam">Spam ou estafa</string>
     <string name="market_reviews_empty_received_title">Aínda non hai reseñas</string>
     <string name="market_reviews_response_label">Resposta</string>
     <string name="market_reviews_response_submit">Enviar resposta</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Puxa inicial: %1$s</string>
     <string name="market_profile_load_failed">Non se puido cargar o perfil</string>
     <string name="market_profile_joined">Uniuse o %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Devolución de cargo %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Devolución: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">O teu banco presentou unha devolución de cargo neste pedido. Stripe está xestionando a disputa co vendedor; o resultado aparecerá aquí cando se decida.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Contingut inadequat</string>
     <string name="market_report_reason_misleading">Descripció enganyosa</string>
     <string name="market_report_reason_other">Altres</string>
-    <string name="market_report_reason_spam">Brossa</string>
+    <string name="market_report_reason_spam">Brossa o estafa</string>
     <string name="market_reviews_empty_received_title">Encara no hi ha ressenyes</string>
     <string name="market_reviews_response_submit">Envia resposta</string>
     <string name="market_reviews_tab_received">Rebut</string>
@@ -431,7 +431,7 @@
     <string name="market_profile_load_failed">No s\'ha pogut carregar el perfil</string>
     <string name="market_profile_joined">Es va unir el %1$s</string>
     <string name="market_profile_no_reviews">Encara no hi ha valoracions.</string>
-    <string name="market_purchase_dispute_chargeback">Devolució de càrrec %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Reclamació de càrrec: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">El vostre banc ha presentat una devolució de càrrec en aquesta comanda. Stripe està gestionant la disputa amb el venedor; el resultat apareixerà aquí quan es decideixi.</string>
     <string name="market_purchase_dispute_response">Resposta del venedor</string>
     <string name="market_purchase_review_from">Ressenya de %1$s</string>
@@ -442,8 +442,8 @@
     <string name="market_refund_dialog_submitting">Reemborsant…</string>
     <string name="market_report_dialog_details_label">Detalls (opcional)</string>
     <string name="market_report_dialog_submitting">Enviant</string>
-    <string name="market_report_reason_counterfeit">Falsificació</string>
-    <string name="market_report_reason_prohibited">Article prohibit</string>
+    <string name="market_report_reason_counterfeit">Falsificat o robat</string>
+    <string name="market_report_reason_prohibited">Article prohibit o il·legal</string>
     <string name="market_reviews_awaiting_response">Pendent de resposta</string>
     <string name="market_reviews_empty_received_subtitle">Compradors i venedors es poden ressenyar mútuament després d\'una comanda completada.</string>
     <string name="market_reviews_empty_sent_subtitle">Obriu una comanda completada per deixar una ressenya.</string>

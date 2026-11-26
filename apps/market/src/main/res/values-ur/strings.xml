@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">نامناسب مواد</string>
     <string name="market_report_reason_misleading">گمراہ کن تفصیل</string>
     <string name="market_report_reason_other">دیگر</string>
-    <string name="market_report_reason_spam">اسپام</string>
+    <string name="market_report_reason_spam">اسپام یا فراڈ</string>
     <string name="market_reviews_empty_received_title">ابھی تک کوئی ریویوز نہیں</string>
     <string name="market_reviews_response_submit">جواب جمع کرائیں</string>
     <string name="market_reviews_tab_received">موصول ہوگیا</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">پروفائل لوڈ نہیں ہو سکا</string>
     <string name="market_profile_joined">شامل ہوئے %1$s</string>
     <string name="market_profile_no_reviews">ابھی کوئی جائزے نہیں۔</string>
-    <string name="market_purchase_dispute_chargeback">چارج بیک %1$s</string>
+    <string name="market_purchase_dispute_chargeback">چارج بیک: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">آپ کے بینک نے اس آرڈر پر چارج بیک دائر کیا ہے۔ Stripe بیچنے والے کے ساتھ تنازعہ سنبھال رہا ہے؛ فیصلہ ہونے پر نتیجہ یہاں ظاہر ہوگا۔</string>
     <string name="market_purchase_review_from">%1$s کی طرف سے جائزہ</string>
     <string name="market_purchases_refunded_partial">−%1$s واپس کیا گیا</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">واپس کیا جا رہا ہے…</string>
     <string name="market_report_dialog_details_label">تفصیلات (اختیاری)</string>
     <string name="market_report_dialog_submitting">جمع کیا جا رہا ہے</string>
-    <string name="market_report_reason_counterfeit">جعلی</string>
-    <string name="market_report_reason_prohibited">ممنوعہ شے</string>
+    <string name="market_report_reason_counterfeit">جعلی یا چوری شدہ</string>
+    <string name="market_report_reason_prohibited">ممنوعہ یا غیر قانونی چیز</string>
     <string name="market_reviews_awaiting_response">جواب کا انتظار ہے</string>
     <string name="market_reviews_empty_received_subtitle">خریدار اور بیچنے والے مکمل آرڈر کے بعد ایک دوسرے کا جائزہ لے سکتے ہیں۔</string>
     <string name="market_reviews_empty_sent_subtitle">جائزہ چھوڑنے کے لیے مکمل آرڈر کھولیں۔</string>

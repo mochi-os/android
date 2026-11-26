@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">不適切なコンテンツ</string>
     <string name="market_report_reason_misleading">誤解を招く説明</string>
     <string name="market_report_reason_other">その他</string>
-    <string name="market_report_reason_spam">スパム</string>
+    <string name="market_report_reason_spam">スパムまたは詐欺</string>
     <string name="market_reviews_empty_received_title">まだレビューがありません</string>
     <string name="market_reviews_response_submit">応答を送信</string>
     <string name="market_reviews_tab_received">受領</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">プロフィールを読み込めませんでした</string>
     <string name="market_profile_joined">%1$s に参加</string>
     <string name="market_profile_no_reviews">レビューはまだありません。</string>
-    <string name="market_purchase_dispute_chargeback">チャージバック %1$s</string>
+    <string name="market_purchase_dispute_chargeback">チャージバック: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">この注文に対して銀行からチャージバックが申請されました。Stripeが出品者との紛争を処理しており、結果は決定次第ここに表示されます。</string>
     <string name="market_purchase_review_from">%1$s からのレビュー</string>
     <string name="market_purchases_refunded_partial">−%1$s 返金済み</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">返金中…</string>
     <string name="market_report_dialog_details_label">詳細（任意）</string>
     <string name="market_report_dialog_submitting">送信中</string>
-    <string name="market_report_reason_counterfeit">偽造品</string>
-    <string name="market_report_reason_prohibited">禁止商品</string>
+    <string name="market_report_reason_counterfeit">偽造品または盗難品</string>
+    <string name="market_report_reason_prohibited">禁止または違法なアイテム</string>
     <string name="market_reviews_awaiting_response">返信待ち</string>
     <string name="market_reviews_empty_received_subtitle">注文が完了すると、購入者と販売者が互いにレビューできます。</string>
     <string name="market_reviews_empty_sent_subtitle">完了した注文を開いてレビューを書いてください。</string>

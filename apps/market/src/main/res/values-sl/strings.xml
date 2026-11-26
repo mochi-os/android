@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Neprimerna vsebina</string>
     <string name="market_report_reason_misleading">Zavajajoč opis</string>
     <string name="market_report_reason_other">Drugo</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam ali prevara</string>
     <string name="market_reviews_empty_received_title">Še ni ocen</string>
     <string name="market_reviews_response_submit">Pošlji odgovor</string>
     <string name="market_reviews_tab_received">Prejeto</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Profila ni bilo mogoče naložiti</string>
     <string name="market_profile_joined">Pridružil(a) se %1$s</string>
     <string name="market_profile_no_reviews">Še ni mnenj.</string>
-    <string name="market_purchase_dispute_chargeback">Vračilo bremenitve %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Povratna bremenitev: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaša banka je za to naročilo vložila zahtevek za vračilo bremenitve. Stripe obravnava spor s prodajalcem; izid bo prikazan tukaj, ko bo znan.</string>
     <string name="market_purchase_review_from">Mnenje od %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrnjeno</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Vračanje…</string>
     <string name="market_report_dialog_details_label">Podrobnosti (neobvezno)</string>
     <string name="market_report_dialog_submitting">Pošiljanje</string>
-    <string name="market_report_reason_counterfeit">Ponaredek</string>
-    <string name="market_report_reason_prohibited">Prepovedan izdelek</string>
+    <string name="market_report_reason_counterfeit">Ponaredek ali ukradeno</string>
+    <string name="market_report_reason_prohibited">Prepovedan ali nezakonit predmet</string>
     <string name="market_reviews_awaiting_response">Čaka na odgovor</string>
     <string name="market_reviews_empty_received_subtitle">Kupci in prodajalci lahko ocenjujejo drug drugega po zaključenem naročilu.</string>
     <string name="market_reviews_empty_sent_subtitle">Odprite zaključeno naročilo, da pustite mnenje.</string>

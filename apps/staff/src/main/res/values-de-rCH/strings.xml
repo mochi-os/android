@@ -84,7 +84,6 @@
     <string name="staff_listings_action_remove_title">Inserat entfernen</string>
     <string name="staff_listings_approved_toast">Inserat genehmigt</string>
     <string name="staff_listings_empty">Keine Inserate</string>
-    <string name="staff_listings_moderation_hold">Zurückgehalten</string>
     <string name="staff_listings_moderation_review">Prüfen</string>
     <string name="staff_listings_rejected_toast">Inserat abgelehnt</string>
     <string name="staff_listings_removed_toast">Inserat entfernt</string>
@@ -107,7 +106,6 @@
     <string name="staff_sidebar_overview">Überblick</string>
     <string name="staff_status_admin">Administrator</string>
     <string name="staff_status_dismissed">Abgewiesen</string>
-    <string name="staff_status_hold">Zurückgestellt</string>
     <string name="staff_status_review">Überprüfen</string>
     <string name="staff_team_role_admin">Administrator</string>
 

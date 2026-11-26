@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">တင်ပြမည်</string>
     <string name="market_report_dialog_success">အစီရင်ခံစာ တင်ပြီး</string>
     <string name="market_report_dialog_title">စာရင်းကို အစီရင်ခံ</string>
-    <string name="market_report_reason_counterfeit">အတု</string>
+    <string name="market_report_reason_counterfeit">အတုအယောင် သို့မဟုတ် ခိုးယူခံရသည်</string>
     <string name="market_report_reason_inappropriate">မသင့်လျော်သော အကြောင်းအရာ</string>
     <string name="market_report_reason_misleading">လှည့်စားသော ဖော်ပြချက်</string>
     <string name="market_report_reason_other">အခြား</string>
-    <string name="market_report_reason_prohibited">တားမြစ်ထားသော ပစ္စည်း</string>
-    <string name="market_report_reason_spam">စပမ်း</string>
+    <string name="market_report_reason_prohibited">တားမြစ်ထား သို့မဟုတ် တရားမဝင်သော ပစ္စည်း</string>
+    <string name="market_report_reason_spam">စပမ်း သို့မဟုတ် လိမ်လည်မှု</string>
     <string name="market_reviews_empty_received_title">သုံးသပ်ချက်များ မရှိသေးပါ</string>
     <string name="market_reviews_response_label">ပြန်ကြားချက်</string>
     <string name="market_reviews_response_submit">တုံ့ပြန်ချက် တင်ပြမည်</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">စတင်လေလံ: %1$s</string>
     <string name="market_profile_load_failed">ပရိုဖိုင်ကို ဖွင့်၍ မရပါ</string>
     <string name="market_profile_joined">%1$s တွင် ဝင်ရောက်ခဲ့သည်</string>
-    <string name="market_purchase_dispute_chargeback">ပြန်အမ်းငွေတောင်းခံမှု %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ပြန်အမ်းငွေတောင်းခံမှု: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">သင်၏ဘဏ်က ဤမှာယူမှုအတွက် ပြန်အမ်းငွေတောင်းခံမှု တင်သွင်းခဲ့သည်။ Stripe က ရောင်းသူနှင့်အတူ အငြင်းပွားမှုကို ကိုင်တွယ်နေပါသည်။ ဆုံးဖြတ်ချက်ထွက်လာသည့်အခါ ဤနေရာတွင် ပေါ်လာပါမည်။</string>
     <string name="market_purchase_dispute_response">ရောင်းသူ၏ တုံ့ပြန်ချက်</string>
     <string name="market_purchase_review_from">%1$s ထံမှ သုံးသပ်ချက်</string>

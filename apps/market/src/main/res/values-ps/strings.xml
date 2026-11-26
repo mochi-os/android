@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">وسپارئ</string>
     <string name="market_report_dialog_success">راپور وسپارل شو</string>
     <string name="market_report_dialog_title">د لیست راپور</string>
-    <string name="market_report_reason_counterfeit">جعلي</string>
+    <string name="market_report_reason_counterfeit">جعلي یا غلا شوی</string>
     <string name="market_report_reason_inappropriate">نامناسبه منځپانګه</string>
     <string name="market_report_reason_misleading">ګمراه کوونکی تفصیل</string>
     <string name="market_report_reason_other">نور</string>
-    <string name="market_report_reason_prohibited">بندیز شوي توکي</string>
-    <string name="market_report_reason_spam">سپام</string>
+    <string name="market_report_reason_prohibited">منع شوی یا غیرقانوني توکی</string>
+    <string name="market_report_reason_spam">سپام یا کلاهبرداري</string>
     <string name="market_reviews_empty_received_title">تر اوسه هیڅ بیاکتنې نشته</string>
     <string name="market_reviews_response_label">ځواب</string>
     <string name="market_reviews_response_submit">ځواب وسپارئ</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">د پیل وړاندیز: %1$s</string>
     <string name="market_profile_load_failed">پروفایل نشي پورته کېدای</string>
     <string name="market_profile_joined">په %1$s کې یوځای شو</string>
-    <string name="market_purchase_dispute_chargeback">د پیسو بیرته اخیستنه %1$s</string>
+    <string name="market_purchase_dispute_chargeback">د پیسو بیرته اخیستنه: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ستاسو بانک پر دې امر د پیسو د بیرته اخیستنې غوښتنه وکړه. Stripe د پلورونکي سره د شخړې حلول کوي؛ پایله به دلته راښکاره شي کله چې فیصله وشي.</string>
     <string name="market_purchase_dispute_response">د پلورونکي ځواب</string>
     <string name="market_purchase_review_from">بیاکتنه له %1$s څخه</string>

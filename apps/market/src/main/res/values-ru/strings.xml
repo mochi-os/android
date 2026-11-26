@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Недопустимое содержимое</string>
     <string name="market_report_reason_misleading">Вводящее в заблуждение описание</string>
     <string name="market_report_reason_other">Другое</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_spam">Спам или мошенничество</string>
     <string name="market_reviews_empty_received_title">Отзывов пока нет</string>
     <string name="market_reviews_response_submit">Отправить ответ</string>
     <string name="market_reviews_tab_received">Получено</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Не удалось загрузить профиль</string>
     <string name="market_profile_joined">Присоединился %1$s</string>
     <string name="market_profile_no_reviews">Отзывов пока нет.</string>
-    <string name="market_purchase_dispute_chargeback">Возврат платежа %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Возвратный платёж: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваш банк инициировал возврат платежа по этому заказу. Stripe ведёт спор с продавцом; результат появится здесь, когда решение будет принято.</string>
     <string name="market_purchase_review_from">Отзыв от %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s возвращено</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Возврат…</string>
     <string name="market_report_dialog_details_label">Подробности (необязательно)</string>
     <string name="market_report_dialog_submitting">Отправка</string>
-    <string name="market_report_reason_counterfeit">Подделка</string>
-    <string name="market_report_reason_prohibited">Запрещённый товар</string>
+    <string name="market_report_reason_counterfeit">Подделка или украдено</string>
+    <string name="market_report_reason_prohibited">Запрещённый или незаконный товар</string>
     <string name="market_reviews_awaiting_response">Ожидает ответа</string>
     <string name="market_reviews_empty_received_subtitle">Покупатели и продавцы могут оставлять отзывы друг о друге после завершения заказа.</string>
     <string name="market_reviews_empty_sent_subtitle">Откройте завершённый заказ, чтобы оставить отзыв.</string>

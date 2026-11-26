@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">เนื้อหาไม่เหมาะสม</string>
     <string name="market_report_reason_misleading">คำอธิบายที่ทำให้เข้าใจผิด</string>
     <string name="market_report_reason_other">อื่น ๆ</string>
-    <string name="market_report_reason_spam">สแปม</string>
+    <string name="market_report_reason_spam">สแปมหรือหลอกลวง</string>
     <string name="market_reviews_empty_received_title">ยังไม่มีรีวิว</string>
     <string name="market_reviews_response_submit">ส่งการตอบกลับ</string>
     <string name="market_reviews_tab_received">ได้รับแล้ว</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">ไม่สามารถโหลดโปรไฟล์ได้</string>
     <string name="market_profile_joined">เข้าร่วมเมื่อ %1$s</string>
     <string name="market_profile_no_reviews">ยังไม่มีรีวิว</string>
-    <string name="market_purchase_dispute_chargeback">การปฏิเสธการชำระเงิน %1$s</string>
+    <string name="market_purchase_dispute_chargeback">การคืนเงิน: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ธนาคารของคุณได้ยื่นการปฏิเสธการชำระเงินสำหรับคำสั่งซื้อนี้ Stripe กำลังจัดการข้อพิพาทกับผู้ขาย ผลลัพธ์จะปรากฏที่นี่เมื่อมีการตัดสิน</string>
     <string name="market_purchase_review_from">รีวิวจาก %1$s</string>
     <string name="market_purchases_refunded_partial">คืนเงิน −%1$s</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">กำลังคืนเงิน…</string>
     <string name="market_report_dialog_details_label">รายละเอียด (ไม่บังคับ)</string>
     <string name="market_report_dialog_submitting">กำลังส่ง</string>
-    <string name="market_report_reason_counterfeit">ของปลอม</string>
-    <string name="market_report_reason_prohibited">สินค้าต้องห้าม</string>
+    <string name="market_report_reason_counterfeit">ของปลอมหรือถูกขโมย</string>
+    <string name="market_report_reason_prohibited">สินค้าต้องห้ามหรือผิดกฎหมาย</string>
     <string name="market_reviews_awaiting_response">รอการตอบกลับ</string>
     <string name="market_reviews_empty_received_subtitle">ผู้ซื้อและผู้ขายสามารถรีวิวกันได้หลังจากคำสั่งซื้อเสร็จสมบูรณ์</string>
     <string name="market_reviews_empty_sent_subtitle">เปิดคำสั่งซื้อที่เสร็จสมบูรณ์เพื่อเขียนรีวิว</string>

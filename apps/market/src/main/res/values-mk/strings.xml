@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Потврдено</string>
     <string name="market_purchase_confirm_delivery">Потврди прием</string>
     <string name="market_purchase_delivery">Испорака</string>
-    <string name="market_purchase_dispute_chargeback">Поврат %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Сторно плаќање: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Вашата банка поднесе поврат за оваа нарачка. Stripe го решава спорот со продавачот; резултатот ќе се појави овде кога ќе биде донесен.</string>
     <string name="market_purchase_dispute_details">Вашите детали</string>
     <string name="market_purchase_dispute_reason">Причина</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Се поднесува</string>
     <string name="market_report_dialog_success">Извештајот е поднесен</string>
     <string name="market_report_dialog_title">Пријави оглас</string>
-    <string name="market_report_reason_counterfeit">Фалсификат</string>
+    <string name="market_report_reason_counterfeit">Фалсификувано или украдено</string>
     <string name="market_report_reason_inappropriate">Несоодветна содржина</string>
     <string name="market_report_reason_misleading">Заведувачки опис</string>
     <string name="market_report_reason_other">Друго</string>
-    <string name="market_report_reason_prohibited">Забранет предмет</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_prohibited">Забранета или незаконска ставка</string>
+    <string name="market_report_reason_spam">Спам или измама</string>
     <string name="market_reviews_awaiting_response">Се чека одговор</string>
     <string name="market_reviews_empty_received_subtitle">Купувачите и продавачите можат да се оценуваат еден со друг по завршена нарачка.</string>
     <string name="market_reviews_empty_received_title">Сè уште нема прегледи</string>

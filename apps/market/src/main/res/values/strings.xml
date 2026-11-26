@@ -474,7 +474,7 @@
     <string name="market_profile_verified">Verified</string>
     <string name="market_purchase_confirm_delivery">Confirm receipt</string>
     <string name="market_purchase_delivery">Delivery</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Your bank filed a chargeback on this order. Stripe is handling the dispute with the seller; the outcome will appear here when it\'s decided.</string>
     <string name="market_purchase_dispute_details">Your details</string>
     <string name="market_purchase_dispute_reason">Reason</string>
@@ -543,12 +543,12 @@
     <string name="market_report_dialog_submitting">Submitting</string>
     <string name="market_report_dialog_success">Report submitted</string>
     <string name="market_report_dialog_title">Report listing</string>
-    <string name="market_report_reason_counterfeit">Counterfeit</string>
+    <string name="market_report_reason_counterfeit">Counterfeit or stolen</string>
     <string name="market_report_reason_inappropriate">Inappropriate content</string>
     <string name="market_report_reason_misleading">Misleading description</string>
     <string name="market_report_reason_other">Other</string>
-    <string name="market_report_reason_prohibited">Prohibited item</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Prohibited or illegal item</string>
+    <string name="market_report_reason_spam">Spam or scam</string>
     <string name="market_reviews_awaiting_response">Awaiting response</string>
     <string name="market_reviews_empty_received_subtitle">Buyers and sellers can review each other after a completed order.</string>
     <string name="market_reviews_empty_received_title">No reviews yet</string>

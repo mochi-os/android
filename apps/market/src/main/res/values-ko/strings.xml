@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">부적절한 콘텐츠</string>
     <string name="market_report_reason_misleading">오해의 소지가 있는 설명</string>
     <string name="market_report_reason_other">기타</string>
-    <string name="market_report_reason_spam">스팸</string>
+    <string name="market_report_reason_spam">스팸 또는 사기</string>
     <string name="market_reviews_empty_received_title">아직 리뷰가 없어요</string>
     <string name="market_reviews_response_submit">응답 제출</string>
     <string name="market_reviews_tab_received">받음</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">프로필을 불러올 수 없습니다</string>
     <string name="market_profile_joined">%1$s 가입</string>
     <string name="market_profile_no_reviews">아직 리뷰가 없습니다.</string>
-    <string name="market_purchase_dispute_chargeback">지급 거절 %1$s</string>
+    <string name="market_purchase_dispute_chargeback">지불 거절: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">은행에서 이 주문에 대해 지급 거절을 제기했습니다. Stripe가 판매자와 분쟁을 처리 중이며, 결정이 나면 여기에 결과가 표시됩니다.</string>
     <string name="market_purchase_review_from">%1$s님의 리뷰</string>
     <string name="market_purchases_refunded_partial">−%1$s 환불됨</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">환불 중…</string>
     <string name="market_report_dialog_details_label">세부 정보 (선택)</string>
     <string name="market_report_dialog_submitting">제출 중</string>
-    <string name="market_report_reason_counterfeit">위조품</string>
-    <string name="market_report_reason_prohibited">금지된 품목</string>
+    <string name="market_report_reason_counterfeit">위조 또는 도난</string>
+    <string name="market_report_reason_prohibited">금지되거나 불법인 항목</string>
     <string name="market_reviews_awaiting_response">답변 대기 중</string>
     <string name="market_reviews_empty_received_subtitle">구매자와 판매자는 주문 완료 후 서로를 리뷰할 수 있습니다.</string>
     <string name="market_reviews_empty_sent_subtitle">완료된 주문을 열어 리뷰를 남기세요.</string>

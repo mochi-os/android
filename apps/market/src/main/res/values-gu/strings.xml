@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">સબમિટ કરો</string>
     <string name="market_report_dialog_success">રિપોર્ટ સબમિટ થયો</string>
     <string name="market_report_dialog_title">લિસ્ટિંગ રિપોર્ટ કરો</string>
-    <string name="market_report_reason_counterfeit">નકલી</string>
+    <string name="market_report_reason_counterfeit">નકલી અથવા ચોરીનું</string>
     <string name="market_report_reason_inappropriate">અયોગ્ય સામગ્રી</string>
     <string name="market_report_reason_misleading">ગેરમાર્ગે દોરનાર વર્ણન</string>
     <string name="market_report_reason_other">અન્ય</string>
-    <string name="market_report_reason_prohibited">પ્રતિબંધિત વસ્તુ</string>
-    <string name="market_report_reason_spam">સ્પામ</string>
+    <string name="market_report_reason_prohibited">પ્રતિબંધિત અથવા ગેરકાયદેસર આઇટમ</string>
+    <string name="market_report_reason_spam">સ્પામ અથવા છેતરપિંડી</string>
     <string name="market_reviews_empty_received_title">હજુ સુધી કોઈ સમીક્ષાઓ નથી</string>
     <string name="market_reviews_response_label">પ્રતિસાદ</string>
     <string name="market_reviews_response_submit">પ્રતિસાદ સબમિટ કરો</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">પ્રારંભિક બોલી: %1$s</string>
     <string name="market_profile_load_failed">પ્રોફાઇલ લોડ કરી શકાઈ નથી</string>
     <string name="market_profile_joined">%1$s ના રોજ જોડાયા</string>
-    <string name="market_purchase_dispute_chargeback">ચાર્જબેક %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ચાર્જબેક: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">તમારી બેન્કે આ ઓર્ડર પર ચાર્જબેક દાખલ કર્યો છે. Stripe વિક્રેતા સાથે વિવાદ સંભાળી રહ્યું છે; નિર્ણય આવતા તેનું પરિણામ અહીં દેખાશે.</string>
     <string name="market_purchase_dispute_response">વિક્રેતાનો જવાબ</string>
     <string name="market_purchase_review_from">%1$s તરફથી સમીક્ષા</string>

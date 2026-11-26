@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Konten tidak pantas</string>
     <string name="market_report_reason_misleading">Deskripsi menyesatkan</string>
     <string name="market_report_reason_other">Lainnya</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam atau penipuan</string>
     <string name="market_reviews_empty_received_title">Belum ada ulasan</string>
     <string name="market_reviews_response_submit">Kirim respons</string>
     <string name="market_reviews_tab_received">Diterima</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Tidak dapat memuat profil</string>
     <string name="market_profile_joined">Bergabung %1$s</string>
     <string name="market_profile_no_reviews">Belum ada ulasan.</string>
-    <string name="market_purchase_dispute_chargeback">Tolak bayar %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Tagihan balik: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank Anda mengajukan chargeback untuk pesanan ini. Stripe sedang menangani sengketa dengan penjual; hasilnya akan muncul di sini setelah diputuskan.</string>
     <string name="market_purchase_review_from">Ulasan dari %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dikembalikan</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Mengembalikan dana…</string>
     <string name="market_report_dialog_details_label">Detail (opsional)</string>
     <string name="market_report_dialog_submitting">Mengirim</string>
-    <string name="market_report_reason_counterfeit">Palsu</string>
-    <string name="market_report_reason_prohibited">Barang terlarang</string>
+    <string name="market_report_reason_counterfeit">Palsu atau dicuri</string>
+    <string name="market_report_reason_prohibited">Item terlarang atau ilegal</string>
     <string name="market_reviews_awaiting_response">Menunggu tanggapan</string>
     <string name="market_reviews_empty_received_subtitle">Pembeli dan penjual dapat saling memberi ulasan setelah pesanan selesai.</string>
     <string name="market_reviews_empty_sent_subtitle">Buka pesanan yang sudah selesai untuk memberikan ulasan.</string>

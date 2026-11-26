@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Upassende indhold</string>
     <string name="market_report_reason_misleading">Vildledende beskrivelse</string>
     <string name="market_report_reason_other">Andet</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam eller svindel</string>
     <string name="market_reviews_empty_received_title">Ingen anmeldelser endnu</string>
     <string name="market_reviews_response_submit">Indsend svar</string>
     <string name="market_reviews_tab_received">Modtaget</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Kunne ikke indlæse profilen</string>
     <string name="market_profile_joined">Tilmeldt %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser endnu.</string>
-    <string name="market_purchase_dispute_chargeback">Tilbageførsel %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Tilbageførsel: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Din bank har indgivet en tilbageførsel på denne ordre. Stripe håndterer tvisten med sælgeren; resultatet vises her, når det er afgjort.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refunderet</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Refunderer…</string>
     <string name="market_report_dialog_details_label">Detaljer (valgfrit)</string>
     <string name="market_report_dialog_submitting">Indsender</string>
-    <string name="market_report_reason_counterfeit">Forfalskning</string>
-    <string name="market_report_reason_prohibited">Forbudt vare</string>
+    <string name="market_report_reason_counterfeit">Forfalsket eller stjålet</string>
+    <string name="market_report_reason_prohibited">Forbudt eller ulovlig vare</string>
     <string name="market_reviews_awaiting_response">Afventer svar</string>
     <string name="market_reviews_empty_received_subtitle">Købere og sælgere kan anmelde hinanden efter en gennemført ordre.</string>
     <string name="market_reviews_empty_sent_subtitle">Åbn en gennemført ordre for at skrive en anmeldelse.</string>

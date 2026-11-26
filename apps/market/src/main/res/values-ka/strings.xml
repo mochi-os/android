@@ -281,12 +281,12 @@
     <string name="market_report_dialog_submit">გაგზავნა</string>
     <string name="market_report_dialog_success">საჩივარი გაგზავნილია</string>
     <string name="market_report_dialog_title">განცხადების გასაჩივრება</string>
-    <string name="market_report_reason_counterfeit">ფალსიფიკაცია</string>
+    <string name="market_report_reason_counterfeit">ყალბი ან მოპარული</string>
     <string name="market_report_reason_inappropriate">შეუსაბამო შინაარსი</string>
     <string name="market_report_reason_misleading">შეცდომაში შემყვანი აღწერა</string>
     <string name="market_report_reason_other">სხვა</string>
-    <string name="market_report_reason_prohibited">აკრძალული ნივთი</string>
-    <string name="market_report_reason_spam">სპამი</string>
+    <string name="market_report_reason_prohibited">აკრძალული ან უკანონო ნივთი</string>
+    <string name="market_report_reason_spam">სპამი ან თაღლითობა</string>
     <string name="market_reviews_empty_received_title">მიმოხილვები ჯერ არ არის</string>
     <string name="market_reviews_response_label">პასუხი</string>
     <string name="market_reviews_response_submit">პასუხის გაგზავნა</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">საწყისი განაცხადი: %1$s</string>
     <string name="market_profile_load_failed">პროფილის ჩატვირთვა ვერ მოხერხდა</string>
     <string name="market_profile_joined">შემოუერთდა %1$s</string>
-    <string name="market_purchase_dispute_chargeback">გადახდის გასაჩივრება %1$s</string>
+    <string name="market_purchase_dispute_chargeback">გადახდის გასაჩივრება: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">თქვენმა ბანკმა ამ შეკვეთაზე გადახდის გასაჩივრება წარადგინა. Stripe განიხილავს დავას გამყიდველთან; შედეგი აქ გამოჩნდება გადაწყვეტილების მიღების შემდეგ.</string>
     <string name="market_purchase_dispute_response">გამყიდველის პასუხი</string>
     <string name="market_purchase_review_from">მიმოხილვა %1$s-სგან</string>

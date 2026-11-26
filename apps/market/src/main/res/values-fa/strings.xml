@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">محتوای نامناسب</string>
     <string name="market_report_reason_misleading">توضیحات گمراه‌کننده</string>
     <string name="market_report_reason_other">سایر</string>
-    <string name="market_report_reason_spam">هرزنامه</string>
+    <string name="market_report_reason_spam">هرزنامه یا کلاهبرداری</string>
     <string name="market_reviews_empty_received_title">هنوز بازبینی‌ای وجود ندارد</string>
     <string name="market_reviews_response_submit">ثبت پاسخ</string>
     <string name="market_reviews_tab_received">دریافت شد</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">بارگذاری نمایه ممکن نشد</string>
     <string name="market_profile_joined">عضو شده در %1$s</string>
     <string name="market_profile_no_reviews">هنوز نظری ثبت نشده است.</string>
-    <string name="market_purchase_dispute_chargeback">بازپرداخت اعتراضی %1$s</string>
+    <string name="market_purchase_dispute_chargeback">مغایرت مالی: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">بانک شما برای این سفارش درخواست بازپرداخت اعتراضی ثبت کرده است. Stripe در حال رسیدگی به اختلاف با فروشنده است؛ نتیجه پس از تصمیم‌گیری اینجا نمایش داده می‌شود.</string>
     <string name="market_purchase_review_from">نظر از %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s بازپرداخت شد</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">در حال بازپرداخت…</string>
     <string name="market_report_dialog_details_label">جزئیات (اختیاری)</string>
     <string name="market_report_dialog_submitting">در حال ارسال</string>
-    <string name="market_report_reason_counterfeit">تقلبی</string>
-    <string name="market_report_reason_prohibited">کالای ممنوع</string>
+    <string name="market_report_reason_counterfeit">تقلبی یا سرقتی</string>
+    <string name="market_report_reason_prohibited">آیتم ممنوع یا غیرقانونی</string>
     <string name="market_reviews_awaiting_response">در انتظار پاسخ</string>
     <string name="market_reviews_empty_received_subtitle">خریداران و فروشندگان می‌توانند پس از تکمیل سفارش یکدیگر را بررسی کنند.</string>
     <string name="market_reviews_empty_sent_subtitle">برای ثبت نظر، یک سفارش تکمیل‌شده را باز کنید.</string>

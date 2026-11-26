@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">சமர்ப்பி</string>
     <string name="market_report_dialog_success">புகார் சமர்ப்பிக்கப்பட்டது</string>
     <string name="market_report_dialog_title">பட்டியலைப் பற்றி புகாரளிக்கவும்</string>
-    <string name="market_report_reason_counterfeit">போலி</string>
+    <string name="market_report_reason_counterfeit">போலியான அல்லது திருடப்பட்டது</string>
     <string name="market_report_reason_inappropriate">பொருத்தமற்ற உள்ளடக்கம்</string>
     <string name="market_report_reason_misleading">தவறான விளக்கம்</string>
     <string name="market_report_reason_other">மற்றவை</string>
-    <string name="market_report_reason_prohibited">தடைசெய்யப்பட்ட பொருள்</string>
-    <string name="market_report_reason_spam">ஸ்பேம்</string>
+    <string name="market_report_reason_prohibited">தடைசெய்யப்பட்ட அல்லது சட்டவிரோதமான உருப்படி</string>
+    <string name="market_report_reason_spam">ஸ்பேம் அல்லது மோசடி</string>
     <string name="market_reviews_empty_received_title">விமர்சனங்கள் இன்னும் இல்லை</string>
     <string name="market_reviews_response_label">பதில்</string>
     <string name="market_reviews_response_submit">பதிலை சமர்ப்பி</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">தொடக்க ஏலம்: %1$s</string>
     <string name="market_profile_load_failed">சுயவிவரத்தை ஏற்ற முடியவில்லை</string>
     <string name="market_profile_joined">%1$s இல் இணைந்தார்</string>
-    <string name="market_purchase_dispute_chargeback">சார்ஜ்பேக் %1$s</string>
+    <string name="market_purchase_dispute_chargeback">திருப்பிச் செலுத்தல்: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">உங்கள் வங்கி இந்த ஆர்டரில் சார்ஜ்பேக் கோரிக்கையை தாக்கல் செய்துள்ளது. Stripe விற்பனையாளருடன் சர்ச்சையை கையாள்கிறது; முடிவு எடுக்கப்பட்டதும் அது இங்கே தோன்றும்.</string>
     <string name="market_purchase_dispute_response">விற்பனையாளரின் பதில்</string>
     <string name="market_purchase_review_from">%1$s இடமிருந்து விமர்சனம்</string>

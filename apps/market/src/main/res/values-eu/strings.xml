@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Egiaztatuta</string>
     <string name="market_purchase_confirm_delivery">Berretsi jasotzea</string>
     <string name="market_purchase_delivery">Bidalketa</string>
-    <string name="market_purchase_dispute_chargeback">Itzulketa %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Atzera-kargua: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Zure bankuak itzulketa egin du eskaera honetan. Stripe saltzailearekin gatazka kudeatzen ari da; emaitza hemen agertuko da erabakitzen denean.</string>
     <string name="market_purchase_dispute_details">Zure xehetasunak</string>
     <string name="market_purchase_dispute_reason">Arrazoia</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Bidaltzen</string>
     <string name="market_report_dialog_success">Salaketa bidali da</string>
     <string name="market_report_dialog_title">Salatu zerrenda</string>
-    <string name="market_report_reason_counterfeit">Faltsutua</string>
+    <string name="market_report_reason_counterfeit">Faltsutua edo lapurtua</string>
     <string name="market_report_reason_inappropriate">Eduki desegokia</string>
     <string name="market_report_reason_misleading">Deskribapen engainagarria</string>
     <string name="market_report_reason_other">Bestelakoa</string>
-    <string name="market_report_reason_prohibited">Debekatutako artikulua</string>
-    <string name="market_report_reason_spam">Spam-a</string>
+    <string name="market_report_reason_prohibited">Debekatua edo legez kanpoko elementua</string>
+    <string name="market_report_reason_spam">Spam edo iruzurra</string>
     <string name="market_reviews_awaiting_response">Erantzunaren zain</string>
     <string name="market_reviews_empty_received_subtitle">Erosleak eta saltzaileak elkar baloratu dezakete eskaera burutu ondoren.</string>
     <string name="market_reviews_empty_received_title">Oraindik iritzirik ez</string>

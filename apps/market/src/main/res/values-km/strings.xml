@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">ដាក់ស្នើ</string>
     <string name="market_report_dialog_success">បានដាក់ស្នើរបាយការណ៍</string>
     <string name="market_report_dialog_title">រាយការណ៍បញ្ជីលក់</string>
-    <string name="market_report_reason_counterfeit">ក្លែងក្លាយ</string>
+    <string name="market_report_reason_counterfeit">ក្លែងក្លាយ ឬលួច</string>
     <string name="market_report_reason_inappropriate">មាតិកាមិនសមរម្យ</string>
     <string name="market_report_reason_misleading">ការពិពណ៌នាបំភាន់</string>
     <string name="market_report_reason_other">ផ្សេងទៀត</string>
-    <string name="market_report_reason_prohibited">ទំនិញហាមឃាត់</string>
-    <string name="market_report_reason_spam">សារឥតបានការ</string>
+    <string name="market_report_reason_prohibited">ធាតុហាមឃាត់ ឬខុសច្បាប់</string>
+    <string name="market_report_reason_spam">សារឥតបានការ ឬបោកប្រាស់</string>
     <string name="market_reviews_empty_received_title">មិនទាន់មានការវាយតម្លៃ</string>
     <string name="market_reviews_response_label">ការឆ្លើយតប</string>
     <string name="market_reviews_response_submit">ដាក់ស្នើការឆ្លើយតប</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">ដេញចាប់ផ្ដើម៖ %1$s</string>
     <string name="market_profile_load_failed">មិនអាចផ្ទុកប្រវត្តិរូបបានទេ</string>
     <string name="market_profile_joined">បានចូលរួម %1$s</string>
-    <string name="market_purchase_dispute_chargeback">ការទាមទារប្រាក់វិញ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ការទាមទារប្រាក់វិញ៖ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ធនាគាររបស់អ្នកបានដាក់ការទាមទារប្រាក់វិញលើការបញ្ជាទិញនេះ។ Stripe កំពុងដោះស្រាយវិវាទជាមួយអ្នកលក់; លទ្ធផលនឹងបង្ហាញនៅទីនេះនៅពេលត្រូវបានសម្រេច។</string>
     <string name="market_purchase_dispute_response">ការឆ្លើយតបរបស់អ្នកលក់</string>
     <string name="market_purchase_review_from">ការវាយតម្លៃពី %1$s</string>

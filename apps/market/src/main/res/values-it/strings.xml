@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Contenuto inappropriato</string>
     <string name="market_report_reason_misleading">Descrizione fuorviante</string>
     <string name="market_report_reason_other">Altro</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam o truffa</string>
     <string name="market_reviews_empty_received_title">Ancora nessuna recensione</string>
     <string name="market_reviews_response_submit">Invia risposta</string>
     <string name="market_reviews_tab_received">Ricevuto</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Impossibile caricare il profilo</string>
     <string name="market_profile_joined">Iscritto il %1$s</string>
     <string name="market_profile_no_reviews">Ancora nessuna recensione.</string>
-    <string name="market_purchase_dispute_chargeback">Storno %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Storno: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">La tua banca ha avviato uno storno su questo ordine. Stripe sta gestendo la controversia con il venditore; l\'esito apparirà qui quando sarà deciso.</string>
     <string name="market_purchase_review_from">Recensione di %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s rimborsati</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Rimborso in corso…</string>
     <string name="market_report_dialog_details_label">Dettagli (facoltativo)</string>
     <string name="market_report_dialog_submitting">Invio in corso</string>
-    <string name="market_report_reason_counterfeit">Contraffatto</string>
-    <string name="market_report_reason_prohibited">Articolo vietato</string>
+    <string name="market_report_reason_counterfeit">Contraffatto o rubato</string>
+    <string name="market_report_reason_prohibited">Articolo proibito o illegale</string>
     <string name="market_reviews_awaiting_response">In attesa di risposta</string>
     <string name="market_reviews_empty_received_subtitle">Acquirenti e venditori possono recensirsi a vicenda dopo un ordine completato.</string>
     <string name="market_reviews_empty_sent_subtitle">Apri un ordine completato per lasciare una recensione.</string>

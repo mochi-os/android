@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Баталгаажсан</string>
     <string name="market_purchase_confirm_delivery">Хүлээж авсан гэдгийг баталгаажуулах</string>
     <string name="market_purchase_delivery">Хүргэлт</string>
-    <string name="market_purchase_dispute_chargeback">Буцаалт %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Төлбөр буцаалт: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Танай банк энэ захиалгад буцаалт тавьсан. Stripe худалдагчтай маргааныг шийдвэрлэж байна; үр дүн шийдэгдсэн үед энд харагдана.</string>
     <string name="market_purchase_dispute_details">Таны мэдээлэл</string>
     <string name="market_purchase_dispute_reason">Шалтгаан</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Илгээж байна</string>
     <string name="market_report_dialog_success">Гомдол илгээгдсэн</string>
     <string name="market_report_dialog_title">Зар гомдол</string>
-    <string name="market_report_reason_counterfeit">Хуурамч</string>
+    <string name="market_report_reason_counterfeit">Хуурамч эсвэл хулгайлсан</string>
     <string name="market_report_reason_inappropriate">Зохисгүй агуулга</string>
     <string name="market_report_reason_misleading">Төөрөгдүүлсэн тайлбар</string>
     <string name="market_report_reason_other">Бусад</string>
-    <string name="market_report_reason_prohibited">Хориглосон бараа</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_prohibited">Хориглогдсон эсвэл хууль бус зүйл</string>
+    <string name="market_report_reason_spam">Спам эсвэл залилан</string>
     <string name="market_reviews_awaiting_response">Хариу хүлээж байна</string>
     <string name="market_reviews_empty_received_subtitle">Худалдан авагч ба худалдагч захиалга дууссаны дараа бие биеэ үнэлж болно.</string>
     <string name="market_reviews_empty_received_title">Шүүмж алга</string>

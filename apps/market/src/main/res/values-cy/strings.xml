@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Wedi\'i ddilysu</string>
     <string name="market_purchase_confirm_delivery">Cadarnhau derbyniad</string>
     <string name="market_purchase_delivery">Danfoniad</string>
-    <string name="market_purchase_dispute_chargeback">Trosglwyddo %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Cefnataliad: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Mae\'ch banc wedi cofnodi trosglwyddo ar yr archeb hon. Mae Stripe yn delio â\'r anghydfod gyda\'r gwerthwr; bydd y canlyniad yn ymddangos yma pan benderfynir.</string>
     <string name="market_purchase_dispute_details">Eich manylion</string>
     <string name="market_purchase_dispute_reason">Rheswm</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Cyflwyno</string>
     <string name="market_report_dialog_success">Adroddiad wedi\'i gyflwyno</string>
     <string name="market_report_dialog_title">Riportio rhestriad</string>
-    <string name="market_report_reason_counterfeit">Ffug</string>
+    <string name="market_report_reason_counterfeit">Ffug neu wedi\'i ddwyn</string>
     <string name="market_report_reason_inappropriate">Cynnwys amhriodol</string>
     <string name="market_report_reason_misleading">Disgrifiad camarweiniol</string>
     <string name="market_report_reason_other">Arall</string>
-    <string name="market_report_reason_prohibited">Eitem wedi\'i gwahardd</string>
-    <string name="market_report_reason_spam">Sbam</string>
+    <string name="market_report_reason_prohibited">Eitem waharddedig neu anghyfreithlon</string>
+    <string name="market_report_reason_spam">Sbam neu sgam</string>
     <string name="market_reviews_awaiting_response">Yn aros am ymateb</string>
     <string name="market_reviews_empty_received_subtitle">Gall prynwyr a gwerthwyr adolygu ei gilydd ar ôl archeb gyflawn.</string>
     <string name="market_reviews_empty_received_title">Dim adolygiadau eto</string>

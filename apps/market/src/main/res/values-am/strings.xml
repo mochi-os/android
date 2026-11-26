@@ -303,7 +303,7 @@
     <string name="market_profile_verified">ተረጋግጧል</string>
     <string name="market_purchase_confirm_delivery">ደረሰኝ አረጋግጥ</string>
     <string name="market_purchase_delivery">መላኪያ</string>
-    <string name="market_purchase_dispute_chargeback">ቻርጅባክ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">የመመለሻ ክፍያ: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ባንክዎ በዚህ ትዕዛዝ ላይ ቻርጅባክ አስገብቷል። Stripe ከሻጩ ጋር ክርክሩን እያስተናገደ ነው፤ ውጤቱ ሲወሰን እዚህ ይታያል።</string>
     <string name="market_purchase_dispute_details">የእርስዎ ዝርዝሮች</string>
     <string name="market_purchase_dispute_reason">ምክንያት</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">በመላክ ላይ</string>
     <string name="market_report_dialog_success">ሪፖርት ተልኳል</string>
     <string name="market_report_dialog_title">ዝርዝርን ሪፖርት አድርግ</string>
-    <string name="market_report_reason_counterfeit">የተጭበረበረ</string>
+    <string name="market_report_reason_counterfeit">የተመሰለ ወይም የተሰረቀ</string>
     <string name="market_report_reason_inappropriate">ተገቢ ያልሆነ ይዘት</string>
     <string name="market_report_reason_misleading">የተሳሳተ መግለጫ</string>
     <string name="market_report_reason_other">ሌላ</string>
-    <string name="market_report_reason_prohibited">የተከለከለ ንጥል</string>
-    <string name="market_report_reason_spam">ስፓም</string>
+    <string name="market_report_reason_prohibited">የተከለከለ ወይም ህገ-ወጥ ንጥል</string>
+    <string name="market_report_reason_spam">አይፈለጌ ወይም ማጭበርበር</string>
     <string name="market_reviews_awaiting_response">ምላሽ በመጠባበቅ ላይ</string>
     <string name="market_reviews_empty_received_subtitle">ገዢዎች እና ሻጮች ከተጠናቀቀ ትዕዛዝ በኋላ እርስ በርስ መገምገም ይችላሉ።</string>
     <string name="market_reviews_empty_received_title">እስካሁን ግምገማዎች የሉም</string>

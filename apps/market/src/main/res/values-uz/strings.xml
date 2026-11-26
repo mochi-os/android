@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Yuborish</string>
     <string name="market_report_dialog_success">Hisobot yuborildi</string>
     <string name="market_report_dialog_title">Eʼlon haqida hisobot</string>
-    <string name="market_report_reason_counterfeit">Soxta</string>
+    <string name="market_report_reason_counterfeit">Soxta yoki oʻgʻirlangan</string>
     <string name="market_report_reason_inappropriate">Nomaqbul kontent</string>
     <string name="market_report_reason_misleading">Chalgʻituvchi tavsif</string>
     <string name="market_report_reason_other">Boshqa</string>
-    <string name="market_report_reason_prohibited">Taʼqiqlangan tovar</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Taqiqlangan yoki noqonuniy mahsulot</string>
+    <string name="market_report_reason_spam">Spam yoki firibgarlik</string>
     <string name="market_reviews_empty_received_title">Hozircha sharhlar yoʻq</string>
     <string name="market_reviews_response_label">Javob</string>
     <string name="market_reviews_response_submit">Javob yuborish</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Boshlang\'ich taklif: %1$s</string>
     <string name="market_profile_load_failed">Profilni yuklab bo\'lmadi</string>
     <string name="market_profile_joined">%1$s da qoʻshildi</string>
-    <string name="market_purchase_dispute_chargeback">To\'lov qaytarish %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankingiz bu buyurtma bo\'yicha to\'lovni qaytarish so\'rovini berdi. Stripe sotuvchi bilan nizoni hal qilmoqda; natija aniqlanganda shu yerda ko\'rinadi.</string>
     <string name="market_purchase_dispute_response">Sotuvchining javobi</string>
     <string name="market_purchase_review_from">%1$s sharhi</string>

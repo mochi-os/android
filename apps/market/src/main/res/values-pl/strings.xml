@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Nieodpowiednia treść</string>
     <string name="market_report_reason_misleading">Wprowadzający w błąd opis</string>
     <string name="market_report_reason_other">Inne</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Spam lub oszustwo</string>
     <string name="market_reviews_empty_received_title">Brak opinii</string>
     <string name="market_reviews_response_submit">Wyślij odpowiedź</string>
     <string name="market_reviews_tab_received">Otrzymane</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Nie udało się wczytać profilu</string>
     <string name="market_profile_joined">Dołączył(a) %1$s</string>
     <string name="market_profile_no_reviews">Brak recenzji.</string>
-    <string name="market_purchase_dispute_chargeback">Obciążenie zwrotne %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Obciążenie zwrotne: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Twój bank zgłosił obciążenie zwrotne dla tego zamówienia. Stripe rozpatruje spór ze sprzedawcą; wynik pojawi się tutaj po jego rozstrzygnięciu.</string>
     <string name="market_purchase_review_from">Recenzja od %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s zwrócone</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Zwracanie…</string>
     <string name="market_report_dialog_details_label">Szczegóły (opcjonalnie)</string>
     <string name="market_report_dialog_submitting">Wysyłanie</string>
-    <string name="market_report_reason_counterfeit">Podróbka</string>
-    <string name="market_report_reason_prohibited">Przedmiot zabroniony</string>
+    <string name="market_report_reason_counterfeit">Podrobione lub skradzione</string>
+    <string name="market_report_reason_prohibited">Przedmiot zakazany lub nielegalny</string>
     <string name="market_reviews_awaiting_response">Oczekuje na odpowiedź</string>
     <string name="market_reviews_empty_received_subtitle">Kupujący i sprzedający mogą oceniać się wzajemnie po zakończonym zamówieniu.</string>
     <string name="market_reviews_empty_sent_subtitle">Otwórz zakończone zamówienie, aby wystawić recenzję.</string>

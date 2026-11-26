@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">不當內容</string>
     <string name="market_report_reason_misleading">描述具誤導性</string>
     <string name="market_report_reason_other">其他</string>
-    <string name="market_report_reason_spam">垃圾訊息</string>
+    <string name="market_report_reason_spam">垃圾訊息或詐騙</string>
     <string name="market_reviews_empty_received_title">尚無評論</string>
     <string name="market_reviews_response_submit">提交回應</string>
     <string name="market_reviews_tab_received">已收到</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">無法載入個人檔案</string>
     <string name="market_profile_joined">加入於 %1$s</string>
     <string name="market_profile_no_reviews">尚無評論。</string>
-    <string name="market_purchase_dispute_chargeback">退款爭議 %1$s</string>
+    <string name="market_purchase_dispute_chargeback">拒付：%1$s</string>
     <string name="market_purchase_dispute_chargeback_body">您的銀行對此訂單提出了退款爭議。Stripe 正在與賣家處理此爭議；結果確定後將顯示於此。</string>
     <string name="market_purchase_review_from">來自 %1$s 的評論</string>
     <string name="market_purchases_refunded_partial">−%1$s 已退款</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">退款中…</string>
     <string name="market_report_dialog_details_label">詳情（選填）</string>
     <string name="market_report_dialog_submitting">正在送出</string>
-    <string name="market_report_reason_counterfeit">仿冒品</string>
-    <string name="market_report_reason_prohibited">違禁物品</string>
+    <string name="market_report_reason_counterfeit">仿冒或贓物</string>
+    <string name="market_report_reason_prohibited">違禁品或非法項目</string>
     <string name="market_reviews_awaiting_response">等待回覆</string>
     <string name="market_reviews_empty_received_subtitle">訂單完成後，買賣雙方可互相評價。</string>
     <string name="market_reviews_empty_sent_subtitle">開啟已完成的訂單以留下評價。</string>

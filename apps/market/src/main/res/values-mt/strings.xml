@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Issottometti</string>
     <string name="market_report_dialog_success">Rapport sottomess</string>
     <string name="market_report_dialog_title">Irraporta listing</string>
-    <string name="market_report_reason_counterfeit">Falz</string>
+    <string name="market_report_reason_counterfeit">Falsifikat jew misruq</string>
     <string name="market_report_reason_inappropriate">Kontenut mhux xieraq</string>
     <string name="market_report_reason_misleading">Deskrizzjoni qarrieqa</string>
     <string name="market_report_reason_other">Oħra</string>
-    <string name="market_report_reason_prohibited">Oġġett ipprojbit</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Oġġett ipprojbit jew illegali</string>
+    <string name="market_report_reason_spam">Spam jew skam</string>
     <string name="market_reviews_empty_received_title">L-ebda reviews s\'issa</string>
     <string name="market_reviews_response_label">Tweġiba</string>
     <string name="market_reviews_response_submit">Issottometti tweġiba</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Offerta tal-bidu: %1$s</string>
     <string name="market_profile_load_failed">Ma setax jitgħabba l-profil</string>
     <string name="market_profile_joined">Ingħaqad %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Tnaqqis %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Rifużjoni imposta: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Il-bank tiegħek ressaq tnaqqis fuq din l-ordni. Stripe qed jittratta t-tilwima mal-bejjiegħ; ir-riżultat jidher hawn meta jiġi deċiż.</string>
     <string name="market_purchase_dispute_response">Risposta tal-bejjiegħ</string>
     <string name="market_purchase_review_from">Reviżjoni minn %1$s</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Неприпустимий вміст</string>
     <string name="market_report_reason_misleading">Оманливий опис</string>
     <string name="market_report_reason_other">Інше</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_spam">Спам або шахрайство</string>
     <string name="market_reviews_empty_received_title">Відгуків ще немає</string>
     <string name="market_reviews_response_submit">Надіслати відповідь</string>
     <string name="market_reviews_tab_received">Отримано</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Не вдалося завантажити профіль</string>
     <string name="market_profile_joined">Приєднався %1$s</string>
     <string name="market_profile_no_reviews">Відгуків ще немає.</string>
-    <string name="market_purchase_dispute_chargeback">Повернення коштів %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Зворотний платіж: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваш банк ініціював повернення коштів за цим замовленням. Stripe вирішує спір із продавцем; результат з\'явиться тут, коли буде ухвалено рішення.</string>
     <string name="market_purchase_review_from">Відгук від %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s повернено</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Повернення…</string>
     <string name="market_report_dialog_details_label">Деталі (необов\'язково)</string>
     <string name="market_report_dialog_submitting">Надсилання</string>
-    <string name="market_report_reason_counterfeit">Підробка</string>
-    <string name="market_report_reason_prohibited">Заборонений товар</string>
+    <string name="market_report_reason_counterfeit">Підробка або викрадено</string>
+    <string name="market_report_reason_prohibited">Заборонений або незаконний товар</string>
     <string name="market_reviews_awaiting_response">Очікує відповіді</string>
     <string name="market_reviews_empty_received_subtitle">Покупці та продавці можуть залишати відгуки один одному після завершеного замовлення.</string>
     <string name="market_reviews_empty_sent_subtitle">Відкрийте завершене замовлення, щоб залишити відгук.</string>

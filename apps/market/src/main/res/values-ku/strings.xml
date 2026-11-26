@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Bişîne</string>
     <string name="market_report_dialog_success">Rapor hate şandin</string>
     <string name="market_report_dialog_title">Lîsteyê rapor bike</string>
-    <string name="market_report_reason_counterfeit">Sexte</string>
+    <string name="market_report_reason_counterfeit">Sexte an dizî</string>
     <string name="market_report_reason_inappropriate">Naveroka neguncayî</string>
     <string name="market_report_reason_misleading">Şirovea xeletkêş</string>
     <string name="market_report_reason_other">Yên din</string>
-    <string name="market_report_reason_prohibited">Tişt qedexe</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Babetê qedexe an neqanûnî</string>
+    <string name="market_report_reason_spam">Spam an xapandin</string>
     <string name="market_reviews_empty_received_title">Hêj tu nirxandin tune</string>
     <string name="market_reviews_response_label">Bersiv</string>
     <string name="market_reviews_response_submit">Bersivê bişîne</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Pêşkêşa destpêkê: %1$s</string>
     <string name="market_profile_load_failed">Profîl nehat barkirin</string>
     <string name="market_profile_joined">Tevlî bû %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Vegerandina dravê %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Vegerandina dravdanê: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banka te vegerandina dravê li ser vê fermanê tomar kir. Stripe nakokiyê bi firoşkar re birêve dibe; encam wê li vir xuya bibe dema biryar were dayîn.</string>
     <string name="market_purchase_dispute_response">Bersiva firoşkar</string>
     <string name="market_purchase_review_from">Nirxandin ji %1$s</string>

@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">पेस गर्नुहोस्</string>
     <string name="market_report_dialog_success">रिपोर्ट पेस गरियो</string>
     <string name="market_report_dialog_title">लिस्टिङ रिपोर्ट गर्नुहोस्</string>
-    <string name="market_report_reason_counterfeit">नक्कली</string>
+    <string name="market_report_reason_counterfeit">नक्कली वा चोरी गरिएको</string>
     <string name="market_report_reason_inappropriate">अनुपयुक्त सामग्री</string>
     <string name="market_report_reason_misleading">भ्रामक विवरण</string>
     <string name="market_report_reason_other">अन्य</string>
-    <string name="market_report_reason_prohibited">निषेधित वस्तु</string>
-    <string name="market_report_reason_spam">स्प्याम</string>
+    <string name="market_report_reason_prohibited">निषेधित वा अवैध वस्तु</string>
+    <string name="market_report_reason_spam">स्प्याम वा घोटाला</string>
     <string name="market_reviews_empty_received_title">अहिलेसम्म कुनै समीक्षा छैन</string>
     <string name="market_reviews_response_label">प्रतिक्रिया</string>
     <string name="market_reviews_response_submit">जवाफ पेस गर्नुहोस्</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">सुरुवाती बोली: %1$s</string>
     <string name="market_profile_load_failed">प्रोफाइल लोड गर्न सकिएन</string>
     <string name="market_profile_joined">%1$s मा सामेल भयो</string>
-    <string name="market_purchase_dispute_chargeback">चार्जब्याक %1$s</string>
+    <string name="market_purchase_dispute_chargeback">चार्जब्याक: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">तपाईंको बैंकले यस अर्डरमा चार्जब्याक दायर गरेको छ। Stripe ले बिक्रेतासँग विवाद ह्यान्डल गरिरहेको छ; निर्णय भएपछि नतिजा यहाँ देखिनेछ।</string>
     <string name="market_purchase_dispute_response">बिक्रेताको प्रतिक्रिया</string>
     <string name="market_purchase_review_from">%1$s बाट समीक्षा</string>

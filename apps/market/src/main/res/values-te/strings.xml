@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">సమర్పించండి</string>
     <string name="market_report_dialog_success">రిపోర్ట్ సమర్పించబడింది</string>
     <string name="market_report_dialog_title">లిస్టింగ్‌ను రిపోర్ట్ చేయండి</string>
-    <string name="market_report_reason_counterfeit">నకిలీ</string>
+    <string name="market_report_reason_counterfeit">నకిలీ లేదా దొంగిలించబడింది</string>
     <string name="market_report_reason_inappropriate">అనుచితమైన కంటెంట్</string>
     <string name="market_report_reason_misleading">తప్పుదోవ పట్టించే వివరణ</string>
     <string name="market_report_reason_other">ఇతర</string>
-    <string name="market_report_reason_prohibited">నిషేధిత వస్తువు</string>
-    <string name="market_report_reason_spam">స్పామ్</string>
+    <string name="market_report_reason_prohibited">నిషేధిత లేదా అక్రమ ఐటెం</string>
+    <string name="market_report_reason_spam">స్పామ్ లేదా మోసం</string>
     <string name="market_reviews_empty_received_title">ఇంకా రివ్యూలు లేవు</string>
     <string name="market_reviews_response_label">ప్రతిస్పందన</string>
     <string name="market_reviews_response_submit">ప్రతిస్పందన సమర్పించండి</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">ప్రారంభ బిడ్: %1$s</string>
     <string name="market_profile_load_failed">ప్రొఫైల్‌ను లోడ్ చేయడం సాధ్యం కాలేదు</string>
     <string name="market_profile_joined">%1$s లో చేరారు</string>
-    <string name="market_purchase_dispute_chargeback">చార్జ్‌బ్యాక్ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ఛార్జ్‌బ్యాక్: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">మీ బ్యాంక్ ఈ ఆర్డర్‌పై చార్జ్‌బ్యాక్ దాఖలు చేసింది. Stripe విక్రేతతో వివాదాన్ని నిర్వహిస్తోంది; నిర్ణయం తీసుకున్నప్పుడు ఫలితం ఇక్కడ కనిపిస్తుంది.</string>
     <string name="market_purchase_dispute_response">విక్రేత ప్రతిస్పందన</string>
     <string name="market_purchase_review_from">%1$s నుండి సమీక్ష</string>

@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Cuir a-steach</string>
     <string name="market_report_dialog_success">Chaidh an aithisg a chur a-steach</string>
     <string name="market_report_dialog_title">Aithris air an liostadh</string>
-    <string name="market_report_reason_counterfeit">Fhuadain</string>
+    <string name="market_report_reason_counterfeit">Meallta no goidte</string>
     <string name="market_report_reason_inappropriate">Susbaint mhì-iomchaidh</string>
     <string name="market_report_reason_misleading">Tuairisgeul meallta</string>
     <string name="market_report_reason_other">Eile</string>
-    <string name="market_report_reason_prohibited">Bathar toirmisgte</string>
-    <string name="market_report_reason_spam">Spama</string>
+    <string name="market_report_reason_prohibited">Nì toirmisgte no mì-laghail</string>
+    <string name="market_report_reason_spam">Spama no foill</string>
     <string name="market_reviews_empty_received_title">Chan eil lèirmheasan ann fhathast</string>
     <string name="market_reviews_response_label">Freagairt</string>
     <string name="market_reviews_response_submit">Cuir a-steach freagairt</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Tairgse tòiseachaidh: %1$s</string>
     <string name="market_profile_load_failed">Cha b\' urrainnear a\' phròifil a luchdadh</string>
     <string name="market_profile_joined">Air clàradh %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Cùl-thagradh %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Cur an aghaidh: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Chuir am banca agad cùl-thagradh a-steach air an òrdugh seo. Tha Stripe a\' làimhseachadh na connspaid leis an reiceadair; nochdaidh a\' bhuil an seo nuair a thèid a co-dhùnadh.</string>
     <string name="market_purchase_review_from">Lèirmheas o %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s air ath-dhìoladh</string>

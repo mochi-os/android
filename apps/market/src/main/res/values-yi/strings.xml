@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">אונטערגעב</string>
     <string name="market_report_dialog_success">באַריכט אײַנגעגעבן</string>
     <string name="market_report_dialog_title">באַריכט ליסטיגקײַט</string>
-    <string name="market_report_reason_counterfeit">געפעלשט</string>
+    <string name="market_report_reason_counterfeit">געפֿעלשט אָדער געגנבֿעט</string>
     <string name="market_report_reason_inappropriate">אומפּאַסיקער אינהאַלט</string>
     <string name="market_report_reason_misleading">אירעפֿירנדיקע באַשרײַבונג</string>
     <string name="market_report_reason_other">אַנדער</string>
-    <string name="market_report_reason_prohibited">אסור ארטיקל</string>
-    <string name="market_report_reason_spam">ספּאַם</string>
+    <string name="market_report_reason_prohibited">פֿאַרבאָטענער אָדער ניט-לעגאַלער עלעמענט</string>
+    <string name="market_report_reason_spam">ספּאַם אָדער שווינדל</string>
     <string name="market_reviews_empty_received_title">נאָך קיין רעצענזיעס</string>
     <string name="market_reviews_response_label">ענטפער</string>
     <string name="market_reviews_response_submit">געב אונטער ענטפֿער</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">אָנהייב־אָנבאָט: %1$s</string>
     <string name="market_profile_load_failed">ניט געלונגען אַרויפֿצולאָדן דאָס פּראָפֿיל</string>
     <string name="market_profile_joined">אַרײַנגעטראָטן %1$s</string>
-    <string name="market_purchase_dispute_chargeback">צוריקצאָלונג %1$s</string>
+    <string name="market_purchase_dispute_chargeback">צוריקצאָלונג: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">אײַער באַנק האָט אַרײַנגעגעבן אַ צוריקצאָלונג אויף דער באַשטעלונג. Stripe באַהאַנדלט די מחלוקה מיטן פֿאַרקויפֿער; דער רעזולטאַט וועט דאָ דערשײַנען ווען ער ווערט באַשלאָסן.</string>
     <string name="market_purchase_dispute_response">פֿאַרקויפֿערס ענטפֿער</string>
     <string name="market_purchase_review_from">רעצענזיע פֿון %1$s</string>

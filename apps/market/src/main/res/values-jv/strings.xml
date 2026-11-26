@@ -283,12 +283,12 @@
     <string name="market_report_dialog_submit">Kirim</string>
     <string name="market_report_dialog_success">Laporan dikirim</string>
     <string name="market_report_dialog_title">Laporan listing</string>
-    <string name="market_report_reason_counterfeit">Palsu</string>
+    <string name="market_report_reason_counterfeit">Palsu utawa colongan</string>
     <string name="market_report_reason_inappropriate">Konten ora pantes</string>
     <string name="market_report_reason_misleading">Katrangan ngapusi</string>
     <string name="market_report_reason_other">Liyané</string>
-    <string name="market_report_reason_prohibited">Barang dilarang</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Item dilarang utawa ilegal</string>
+    <string name="market_report_reason_spam">Spam utawa apus-apus</string>
     <string name="market_reviews_empty_received_title">Durung ana review</string>
     <string name="market_reviews_response_label">Wangsulan</string>
     <string name="market_reviews_response_submit">Kirim wangsulan</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Tawaran wiwitan: %1$s</string>
     <string name="market_profile_load_failed">Ora bisa ngemot profil</string>
     <string name="market_profile_joined">Gabung %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Chargeback: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank panjenengan ngajokake chargeback kanggo pesenan iki. Stripe ngurus regejegan karo penjual; asilé bakal katon ing kene yen wis diputusake.</string>
     <string name="market_purchase_dispute_response">Wangsulan saka penjual</string>
     <string name="market_purchase_review_from">Ulasan saka %1$s</string>

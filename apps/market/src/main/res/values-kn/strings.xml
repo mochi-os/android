@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">ಸಲ್ಲಿಸಿ</string>
     <string name="market_report_dialog_success">ರಿಪೋರ್ಟ್ ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
     <string name="market_report_dialog_title">ಲಿಸ್ಟಿಂಗ್ ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
-    <string name="market_report_reason_counterfeit">ನಕಲಿ</string>
+    <string name="market_report_reason_counterfeit">ನಕಲಿ ಅಥವಾ ಕಳುವಾದ</string>
     <string name="market_report_reason_inappropriate">ಸೂಕ್ತವಲ್ಲದ ಕಂಟೆಂಟ್</string>
     <string name="market_report_reason_misleading">ತಪ್ಪಾದ ವಿವರಣೆ</string>
     <string name="market_report_reason_other">ಇತರ</string>
-    <string name="market_report_reason_prohibited">ನಿಷೇಧಿತ ವಸ್ತು</string>
-    <string name="market_report_reason_spam">ಸ್ಪ್ಯಾಮ್</string>
+    <string name="market_report_reason_prohibited">ನಿಷೇಧಿತ ಅಥವಾ ಅಕ್ರಮ ಐಟಂ</string>
+    <string name="market_report_reason_spam">ಸ್ಪ್ಯಾಮ್ ಅಥವಾ ಸ್ಕ್ಯಾಮ್</string>
     <string name="market_reviews_empty_received_title">ಇನ್ನೂ ಯಾವುದೇ ರಿವ್ಯೂಗಳಿಲ್ಲ</string>
     <string name="market_reviews_response_label">ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="market_reviews_response_submit">ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸಲ್ಲಿಸಿ</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">ಪ್ರಾರಂಭಿಕ ಬಿಡ್: %1$s</string>
     <string name="market_profile_load_failed">ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_profile_joined">%1$s ರಂದು ಸೇರಿದರು</string>
-    <string name="market_purchase_dispute_chargeback">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಈ ಆದೇಶದ ಮೇಲೆ ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ಸಲ್ಲಿಸಿದೆ. Stripe ಮಾರಾಟಗಾರರೊಂದಿಗೆ ವಿವಾದವನ್ನು ನಿರ್ವಹಿಸುತ್ತಿದೆ; ನಿರ್ಧಾರವಾದಾಗ ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ.</string>
     <string name="market_purchase_dispute_response">ಮಾರಾಟಗಾರರ ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="market_purchase_review_from">%1$s ರಿಂದ ವಿಮರ್ಶೆ</string>

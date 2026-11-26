@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Təsdiqlənib</string>
     <string name="market_purchase_confirm_delivery">Qəbul olunduğunu təsdiqlə</string>
     <string name="market_purchase_delivery">Çatdırılma</string>
-    <string name="market_purchase_dispute_chargeback">Geri çağırma %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Ödəniş etirazı: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankınız bu sifarişə geri çağırma verib. Stripe satıcı ilə mübahisəni idarə edir; nəticə qərar verildikdə burada görünəcək.</string>
     <string name="market_purchase_dispute_details">Məlumatlarınız</string>
     <string name="market_purchase_dispute_reason">Səbəb</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Göndərilir</string>
     <string name="market_report_dialog_success">Hesabat təqdim edildi</string>
     <string name="market_report_dialog_title">Elanı şikayət et</string>
-    <string name="market_report_reason_counterfeit">Saxta</string>
+    <string name="market_report_reason_counterfeit">Saxta və ya oğurlanmış</string>
     <string name="market_report_reason_inappropriate">Uyğunsuz məzmun</string>
     <string name="market_report_reason_misleading">Yanıltıcı təsvir</string>
     <string name="market_report_reason_other">Digər</string>
-    <string name="market_report_reason_prohibited">Qadağan edilmiş məhsul</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Qadağan edilmiş və ya qanunsuz əşya</string>
+    <string name="market_report_reason_spam">Spam və ya fırıldaq</string>
     <string name="market_reviews_awaiting_response">Cavab gözlənilir</string>
     <string name="market_reviews_empty_received_subtitle">Alıcılar və satıcılar tamamlanan sifarişdən sonra bir-birinə rəy verə bilərlər.</string>
     <string name="market_reviews_empty_received_title">Hələ rəy yoxdur</string>

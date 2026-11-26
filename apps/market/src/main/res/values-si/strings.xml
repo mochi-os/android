@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">ඉදිරිපත් කරන්න</string>
     <string name="market_report_dialog_success">වාර්තාව ඉදිරිපත් කරන ලදී</string>
     <string name="market_report_dialog_title">ලැයිස්තුගත කිරීම වාර්තා කරන්න</string>
-    <string name="market_report_reason_counterfeit">ව්‍යාජ</string>
+    <string name="market_report_reason_counterfeit">ව්‍යාජ හෝ සොරකම් කළ</string>
     <string name="market_report_reason_inappropriate">නුසුදුසු අන්තර්ගතය</string>
     <string name="market_report_reason_misleading">නොමඟ යවන විස්තරය</string>
     <string name="market_report_reason_other">වෙනත්</string>
-    <string name="market_report_reason_prohibited">තහනම් භාණ්ඩය</string>
-    <string name="market_report_reason_spam">අයාචිත</string>
+    <string name="market_report_reason_prohibited">තහනම් කළ හෝ නීතිවිරෝධී අයිතමයක්</string>
+    <string name="market_report_reason_spam">අයාචිත හෝ වංචාව</string>
     <string name="market_reviews_empty_received_title">තවම සමාලෝචන නැත</string>
     <string name="market_reviews_response_label">ප්‍රතිචාරය</string>
     <string name="market_reviews_response_submit">ප්‍රතිචාරය ඉදිරිපත් කරන්න</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">ආරම්භක ලංසුව: %1$s</string>
     <string name="market_profile_load_failed">පැතිකඩ පූරණය කළ නොහැකි විය</string>
     <string name="market_profile_joined">%1$s දී එක් විය</string>
-    <string name="market_purchase_dispute_chargeback">ආපසු අයකිරීම %1$s</string>
+    <string name="market_purchase_dispute_chargeback">ආපසු චාර්ජ් කිරීම: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ඔබේ බැංකුව මෙම ඇණවුම මත ආපසු අයකිරීමක් ගොනු කළේය. Stripe විකුණුම්කරු සමඟ ආරවුල හසුරුවමින් සිටී; තීරණය වූ විට ප්‍රතිඵලය මෙහි දිස් වනු ඇත.</string>
     <string name="market_purchase_dispute_response">විකුණුම්කරුගේ ප්‍රතිචාරය</string>
     <string name="market_purchase_review_from">%1$s ගෙන් සමාලෝචනය</string>

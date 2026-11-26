@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Nội dung không phù hợp</string>
     <string name="market_report_reason_misleading">Mô tả gây hiểu nhầm</string>
     <string name="market_report_reason_other">Khác</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_spam">Thư rác hoặc lừa đảo</string>
     <string name="market_reviews_empty_received_title">Chưa có đánh giá</string>
     <string name="market_reviews_response_submit">Gửi phản hồi</string>
     <string name="market_reviews_tab_received">Đã nhận</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Không thể tải hồ sơ</string>
     <string name="market_profile_joined">Đã tham gia %1$s</string>
     <string name="market_profile_no_reviews">Chưa có đánh giá nào.</string>
-    <string name="market_purchase_dispute_chargeback">Bồi hoàn %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Bồi hoàn: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ngân hàng của bạn đã gửi yêu cầu bồi hoàn cho đơn hàng này. Stripe đang xử lý tranh chấp với người bán; kết quả sẽ hiển thị ở đây khi có quyết định.</string>
     <string name="market_purchase_review_from">Đánh giá từ %1$s</string>
 
@@ -445,8 +445,8 @@
     <string name="market_refund_dialog_submitting">Đang hoàn tiền…</string>
     <string name="market_report_dialog_details_label">Chi tiết (tùy chọn)</string>
     <string name="market_report_dialog_submitting">Đang gửi</string>
-    <string name="market_report_reason_counterfeit">Hàng giả</string>
-    <string name="market_report_reason_prohibited">Mặt hàng bị cấm</string>
+    <string name="market_report_reason_counterfeit">Hàng giả hoặc đồ ăn cắp</string>
+    <string name="market_report_reason_prohibited">Mục bị cấm hoặc bất hợp pháp</string>
     <string name="market_reviews_awaiting_response">Đang chờ phản hồi</string>
     <string name="market_reviews_empty_received_subtitle">Người mua và người bán có thể đánh giá lẫn nhau sau khi đơn hàng hoàn tất.</string>
     <string name="market_reviews_empty_sent_subtitle">Mở một đơn hàng đã hoàn tất để viết đánh giá.</string>

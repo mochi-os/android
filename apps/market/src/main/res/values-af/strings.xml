@@ -303,7 +303,7 @@
     <string name="market_profile_verified">Geverifieer</string>
     <string name="market_purchase_confirm_delivery">Bevestig ontvangs</string>
     <string name="market_purchase_delivery">Aflewering</string>
-    <string name="market_purchase_dispute_chargeback">Terugkering %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Terugheffing: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Jou bank het \'n terugkering vir hierdie bestelling ingedien. Stripe hanteer die geskil met die verkoper; die uitkoms sal hier verskyn wanneer dit besluit is.</string>
     <string name="market_purchase_dispute_details">Jou besonderhede</string>
     <string name="market_purchase_dispute_reason">Rede</string>
@@ -362,12 +362,12 @@
     <string name="market_report_dialog_submitting">Indien</string>
     <string name="market_report_dialog_success">Rapport ingedien</string>
     <string name="market_report_dialog_title">Rapporteer lys</string>
-    <string name="market_report_reason_counterfeit">Vervals</string>
+    <string name="market_report_reason_counterfeit">Vervals of gesteel</string>
     <string name="market_report_reason_inappropriate">Onvanpaste inhoud</string>
     <string name="market_report_reason_misleading">Misleidende beskrywing</string>
     <string name="market_report_reason_other">Ander</string>
-    <string name="market_report_reason_prohibited">Verbode item</string>
-    <string name="market_report_reason_spam">Strooipos</string>
+    <string name="market_report_reason_prohibited">Verbode of onwettige item</string>
+    <string name="market_report_reason_spam">Strooipos of bedrogspul</string>
     <string name="market_reviews_awaiting_response">Wag op antwoord</string>
     <string name="market_reviews_empty_received_subtitle">Kopers en verkopers kan mekaar resenseer nadat \'n bestelling voltooi is.</string>
     <string name="market_reviews_empty_received_title">Nog geen resensies nie</string>

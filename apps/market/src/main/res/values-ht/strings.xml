@@ -291,12 +291,12 @@
     <string name="market_report_dialog_submit">Soumèt</string>
     <string name="market_report_dialog_success">Rapò soumèt</string>
     <string name="market_report_dialog_title">Rapòte lis</string>
-    <string name="market_report_reason_counterfeit">Fo</string>
+    <string name="market_report_reason_counterfeit">Falsifye oswa vòlè</string>
     <string name="market_report_reason_inappropriate">Kontni inapwopriye</string>
     <string name="market_report_reason_misleading">Deskripsyon twonpè</string>
     <string name="market_report_reason_other">Lòt</string>
-    <string name="market_report_reason_prohibited">Atik entèdi</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Atik entèdi oswa ilegal</string>
+    <string name="market_report_reason_spam">Spam oswa eskwo</string>
     <string name="market_reviews_empty_received_title">Poko gen revizyon</string>
     <string name="market_reviews_response_label">Repons</string>
     <string name="market_reviews_response_submit">Soumèt repons</string>
@@ -441,7 +441,7 @@
     <string name="market_price_starting_bid">Òf kòmansman: %1$s</string>
     <string name="market_profile_load_failed">Pa t kapab chaje pwofil la</string>
     <string name="market_profile_joined">Antre %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Ranbousman bankè %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Ranbousman fòse: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank ou a te depoze yon ranbousman bankè sou kòmand sa a. Stripe ap jere diskisyon an avèk vandè a; rezilta a ap parèt isit la lè li deside.</string>
     <string name="market_purchase_dispute_response">Repons vandè a</string>
     <string name="market_purchase_review_from">Revizyon ki soti nan men %1$s</string>

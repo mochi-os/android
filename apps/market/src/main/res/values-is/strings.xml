@@ -285,12 +285,12 @@
     <string name="market_report_dialog_submit">Senda</string>
     <string name="market_report_dialog_success">Tilkynning send</string>
     <string name="market_report_dialog_title">Tilkynna skráningu</string>
-    <string name="market_report_reason_counterfeit">Fölsun</string>
+    <string name="market_report_reason_counterfeit">Falsað eða stolið</string>
     <string name="market_report_reason_inappropriate">Óviðeigandi efni</string>
     <string name="market_report_reason_misleading">Villandi lýsing</string>
     <string name="market_report_reason_other">Annað</string>
-    <string name="market_report_reason_prohibited">Bannaður hlutur</string>
-    <string name="market_report_reason_spam">Ruslpóstur</string>
+    <string name="market_report_reason_prohibited">Bannaður eða ólöglegur hlutur</string>
+    <string name="market_report_reason_spam">Ruslpóstur eða svindl</string>
     <string name="market_reviews_empty_received_title">Engar umsagnir ennþá</string>
     <string name="market_reviews_response_label">Svar</string>
     <string name="market_reviews_response_submit">Senda svar</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Upphafsboð: %1$s</string>
     <string name="market_profile_load_failed">Tókst ekki að hlaða notandasniði</string>
     <string name="market_profile_joined">Skráði sig %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Endurkrafa %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Endurkrafa: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankinn þinn lagði fram endurkröfu á þessari pöntun. Stripe sér um deiluna við seljandann; niðurstaðan birtist hér þegar ákvörðun liggur fyrir.</string>
     <string name="market_purchase_review_from">Umsögn frá %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s endurgreitt</string>

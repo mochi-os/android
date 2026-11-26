@@ -280,12 +280,12 @@
     <string name="market_report_dialog_submit">Dërgo</string>
     <string name="market_report_dialog_success">Raporti u dërgua</string>
     <string name="market_report_dialog_title">Raporto listimin</string>
-    <string name="market_report_reason_counterfeit">E falsifikuar</string>
+    <string name="market_report_reason_counterfeit">I falsifikuar ose i vjedhur</string>
     <string name="market_report_reason_inappropriate">Përmbajtje e papërshtatshme</string>
     <string name="market_report_reason_misleading">Përshkrim mashtrues</string>
     <string name="market_report_reason_other">Tjetër</string>
-    <string name="market_report_reason_prohibited">Artikulli i ndaluar</string>
-    <string name="market_report_reason_spam">Spam</string>
+    <string name="market_report_reason_prohibited">Artikull i ndaluar ose i paligjshëm</string>
+    <string name="market_report_reason_spam">Spam ose mashtrim</string>
     <string name="market_reviews_empty_received_title">Ende pa vlerësime</string>
     <string name="market_reviews_response_label">Përgjigje</string>
     <string name="market_reviews_response_submit">Dërgo përgjigjen</string>
@@ -442,7 +442,7 @@
     <string name="market_price_starting_bid">Oferta fillestare: %1$s</string>
     <string name="market_profile_load_failed">Profili nuk u ngarkua dot</string>
     <string name="market_profile_joined">U anëtarësua më %1$s</string>
-    <string name="market_purchase_dispute_chargeback">Kthim pagese %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Kthim pagese: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banka juaj paraqiti një kthim pagese për këtë porosi. Stripe po e trajton mosmarrëveshjen me shitësin; rezultati do të shfaqet këtu kur të vendoset.</string>
     <string name="market_purchase_review_from">Vlerësim nga %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s të rimbursuara</string>

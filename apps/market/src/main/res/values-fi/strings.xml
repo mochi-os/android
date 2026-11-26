@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Sopimaton sisältö</string>
     <string name="market_report_reason_misleading">Harhaanjohtava kuvaus</string>
     <string name="market_report_reason_other">Muu</string>
-    <string name="market_report_reason_spam">Roskaposti</string>
+    <string name="market_report_reason_spam">Roskaposti tai huijaus</string>
     <string name="market_reviews_empty_received_title">Ei vielä arvosteluja</string>
     <string name="market_reviews_response_submit">Lähetä vastaus</string>
     <string name="market_reviews_tab_received">Vastaanotettu</string>
@@ -434,7 +434,7 @@
     <string name="market_profile_load_failed">Profiilia ei voitu ladata</string>
     <string name="market_profile_joined">Liittyi %1$s</string>
     <string name="market_profile_no_reviews">Ei vielä arvosteluja.</string>
-    <string name="market_purchase_dispute_chargeback">Maksunpalautus %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Maksun peruutus: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Pankkisi teki tästä tilauksesta maksunpalautusvaatimuksen. Stripe hoitaa riitaa myyjän kanssa; lopputulos näkyy täällä, kun se on ratkaistu.</string>
     <string name="market_purchase_review_from">Arvostelu käyttäjältä %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s palautettu</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Palautetaan…</string>
     <string name="market_report_dialog_details_label">Lisätiedot (valinnainen)</string>
     <string name="market_report_dialog_submitting">Lähetetään</string>
-    <string name="market_report_reason_counterfeit">Väärennös</string>
-    <string name="market_report_reason_prohibited">Kielletty tuote</string>
+    <string name="market_report_reason_counterfeit">Väärennetty tai varastettu</string>
+    <string name="market_report_reason_prohibited">Kielletty tai laiton kohde</string>
     <string name="market_reviews_awaiting_response">Odottaa vastausta</string>
     <string name="market_reviews_empty_received_subtitle">Ostajat ja myyjät voivat arvostella toisensa valmiin tilauksen jälkeen.</string>
     <string name="market_reviews_empty_sent_subtitle">Avaa valmis tilaus jättääksesi arvostelun.</string>

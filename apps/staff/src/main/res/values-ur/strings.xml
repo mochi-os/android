@@ -265,7 +265,7 @@
     <string name="staff_listings_empty">کوئی لسٹنگز نہیں</string>
     <string name="staff_listings_filter_moderation_label">نگرانی</string>
     <string name="staff_listings_filter_status_label">اسٹیٹس</string>
-    <string name="staff_listings_moderation_hold">ہولڈ</string>
+    <string name="staff_listings_moderation_hold">زیر التوا</string>
     <string name="staff_listings_moderation_manual">دستی</string>
     <string name="staff_listings_moderation_rejected">مسترد ہو گیا</string>
     <string name="staff_listings_moderation_review">زیرِ جائزہ</string>
@@ -366,7 +366,7 @@
     <string name="staff_status_dismissed">برخاست</string>
     <string name="staff_status_draft">ڈرافٹ</string>
     <string name="staff_status_expired">میعاد ختم</string>
-    <string name="staff_status_hold">ہولڈ</string>
+    <string name="staff_status_hold">زیر التوا</string>
     <string name="staff_status_manual">دستی</string>
     <string name="staff_status_moderator">ماڈریٹر</string>
     <string name="staff_status_open">کھلا</string>

@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Мазмуни номувофиқ</string>
     <string name="market_report_reason_misleading">Тавсифи нодуруст</string>
     <string name="market_report_reason_other">Дигар</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_spam">Спам ё қаллобӣ</string>
     <string name="market_reviews_empty_received_title">То ҳол ягон шарҳ нест</string>
     <string name="market_reviews_response_submit">Посух пешниҳод кардан</string>
     <string name="market_reviews_tab_received">Қабулшуда</string>
@@ -432,7 +432,7 @@
     <string name="market_profile_load_failed">Профилро бор кардан имкон надошт</string>
     <string name="market_profile_joined">Ҳамроҳ шуд %1$s</string>
     <string name="market_profile_no_reviews">Ҳанӯз баррасиҳо нестанд.</string>
-    <string name="market_purchase_dispute_chargeback">Бозгашти пардохт %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Бозгашти пардохт: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Бонки шумо барои ин фармоиш бозгашти пардохтро пешниҳод кардааст. Stripe баҳсро бо фурӯшанда ҳал мекунад; натиҷа пас аз қабули қарор дар ин ҷо пайдо мешавад.</string>
     <string name="market_purchase_dispute_response">Ҷавоби фурӯшанда</string>
     <string name="market_purchase_review_from">Баррасӣ аз %1$s</string>
@@ -443,8 +443,8 @@
     <string name="market_refund_dialog_submitting">Баргардонида шуда истодааст…</string>
     <string name="market_report_dialog_details_label">Тафсилот (ихтиёрӣ)</string>
     <string name="market_report_dialog_submitting">Фиристода шуда истодааст</string>
-    <string name="market_report_reason_counterfeit">Қалбакӣ</string>
-    <string name="market_report_reason_prohibited">Ашёи манъшуда</string>
+    <string name="market_report_reason_counterfeit">Қалбакӣ ё дуздидашуда</string>
+    <string name="market_report_reason_prohibited">Ашёи манъшуда ё ғайриқонунӣ</string>
     <string name="market_reviews_awaiting_response">Интизори ҷавоб</string>
     <string name="market_reviews_empty_received_subtitle">Харидорон ва фурӯшандагон пас аз анҷоми фармоиш метавонанд якдигарро баррасӣ кунанд.</string>
     <string name="market_reviews_empty_sent_subtitle">Барои гузоштани баррасӣ фармоиши анҷомёфтаро кушоед.</string>

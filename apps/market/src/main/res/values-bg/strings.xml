@@ -246,7 +246,7 @@
     <string name="market_report_reason_inappropriate">Неподходящо съдържание</string>
     <string name="market_report_reason_misleading">Подвеждащо описание</string>
     <string name="market_report_reason_other">Друго</string>
-    <string name="market_report_reason_spam">Спам</string>
+    <string name="market_report_reason_spam">Спам или измама</string>
     <string name="market_reviews_empty_received_title">Все още няма ревюта</string>
     <string name="market_reviews_response_submit">Изпрати отговор</string>
     <string name="market_reviews_tab_received">Получено</string>
@@ -386,7 +386,7 @@
     <string name="market_editor_title_required">Въведете заглавие, преди да добавите снимки или файлове</string>
     <string name="market_editor_type">Начини на доставка</string>
     <string name="market_editor_zone_add">Добави зона</string>
-    <string name="market_purchase_dispute_chargeback">Обратно плащане %1$s</string>
+    <string name="market_purchase_dispute_chargeback">Обратно плащане: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Вашата банка подаде обратно плащане за тази поръчка. Stripe обработва спора с продавача; резултатът ще се покаже тук, когато бъде решен.</string>
     <string name="market_purchase_dispute_response">Отговор на продавача</string>
     <string name="market_purchase_review_from">Отзив от %1$s</string>
@@ -397,8 +397,8 @@
     <string name="market_refund_dialog_submitting">Възстановяване…</string>
     <string name="market_report_dialog_details_label">Подробности (по избор)</string>
     <string name="market_report_dialog_submitting">Изпращане</string>
-    <string name="market_report_reason_counterfeit">Фалшификат</string>
-    <string name="market_report_reason_prohibited">Забранен артикул</string>
+    <string name="market_report_reason_counterfeit">Фалшиво или откраднато</string>
+    <string name="market_report_reason_prohibited">Забранен или незаконен артикул</string>
     <string name="market_reviews_awaiting_response">Очаква отговор</string>
     <string name="market_reviews_empty_received_subtitle">Купувачите и продавачите могат да оставят отзив един за друг след завършена поръчка.</string>
     <string name="market_reviews_empty_sent_subtitle">Отворете завършена поръчка, за да оставите отзив.</string>
