@@ -47,6 +47,8 @@ class EventTextTest {
     val rule = createComposeRule()
 
     private var description by mutableStateOf("")
+    private var location by mutableStateOf("Room 4")
+    private var title by mutableStateOf("Standup")
     private var asked by mutableStateOf(0)
     private var saves = 0
     private val context = RuntimeEnvironment.getApplication()
@@ -55,9 +57,9 @@ class EventTextTest {
         rule.setContent {
             Box(Modifier.width(352.dp)) {
                 EventText(
-                    title = "Standup",
+                    title = title,
                     description = description,
-                    location = "Room 4",
+                    location = location,
                     url = "https://example.org",
                     untitled = false,
                     enabled = true,
@@ -74,7 +76,7 @@ class EventTextTest {
         rule.waitForIdle()
     }
 
-    /** The title's, description's, location's and link's fields, top to bottom. */
+    /** The title's, location's, link's and description's fields, top to bottom. */
     private fun fields() = rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes()
         .map { it.boundsInRoot }
 
@@ -87,18 +89,18 @@ class EventTextTest {
         }
         val expected = listOf(
             R.string.calendars_event_title,
-            R.string.calendars_event_description,
             R.string.calendars_event_location,
             R.string.calendars_event_url,
+            R.string.calendars_event_description,
         ).map(context::getString)
         assertEquals(expected, names)
         // The empty description shows its name in its place; the filled title does not.
-        assertEquals(1, rule.onAllNodesWithText(expected[1]).fetchSemanticsNodes().size)
+        assertEquals(1, rule.onAllNodesWithText(expected[3]).fetchSemanticsNodes().size)
         assertEquals(0, rule.onAllNodesWithText(expected[0]).fetchSemanticsNodes().size)
     }
 
     @Test
-    fun `the description sits straight below the title, then the location and the link`() {
+    fun `the location and the link sit below the title, then the description below the link`() {
         show()
         val boxes = fields().also { assertEquals(4, it.size) }
         for (index in 1 until boxes.size) {
@@ -107,9 +109,35 @@ class EventTextTest {
     }
 
     @Test
+    fun `a value wider than its field opens at its start, loaded or replaced`() {
+        location = "Conference room on the fourth floor of the east building, past the lifts"
+        title = "A standup whose title runs well past the width of a phone"
+        show()
+        val nodes = rule.onAllNodes(hasSetTextAction())
+        // The title, then the location: each shows where it begins.
+        for (index in 0..1) {
+            assertEquals(
+                TextRange(0),
+                nodes[index].fetchSemanticsNode().config[SemanticsProperties.TextSelectionRange],
+            )
+        }
+        // Replaced from outside, as a sync or a reload does: at its start again.
+        location = "Boardroom beside the reception desk on the ground floor of the west wing"
+        title = "Another long title, read again from the server after a sync"
+        rule.waitForIdle()
+        for (index in 0..1) {
+            assertEquals(
+                TextRange(0),
+                nodes[index].fetchSemanticsNode().config[SemanticsProperties.TextSelectionRange],
+            )
+        }
+    }
+
+    @Test
     fun `an empty description is two lines high, taller than the one-line title`() {
         show()
-        val (title, text) = fields()
+        val boxes = fields()
+        val (title, text) = boxes[0] to boxes[3]
         assertTrue("taller: ${text.height} against ${title.height}", text.height > title.height)
     }
 

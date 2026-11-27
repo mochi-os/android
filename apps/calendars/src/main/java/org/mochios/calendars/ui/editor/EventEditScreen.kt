@@ -577,9 +577,11 @@ private fun PlainField(
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     description: String = placeholder,
 ) {
-    var field by remember { mutableStateOf(TextFieldValue(value, TextRange(value.length))) }
-    // A value set from outside the field replaces it.
-    if (field.text != value) field = TextFieldValue(value, TextRange(value.length))
+    var field by remember { mutableStateOf(TextFieldValue(value)) }
+    // A value set from outside the field replaces it, the cursor at its start:
+    // a single line wider than the field shows where it begins, not where it
+    // ends.
+    if (field.text != value) field = TextFieldValue(value)
     PlainField(
         value = field,
         onValueChange = { typed ->
@@ -668,9 +670,9 @@ internal fun EventColour(colour: String, enabled: Boolean, onColour: (String) ->
 private val HEX = Regex("^#[0-9a-fA-F]{6}$")
 
 /**
- * The event's text, in the web editor's order: the title, the description
- * straight below it - two lines to start, growing with what is typed - then
- * the location and the link. The keyboard's action in the title is [onSave].
+ * The event's text, in the web editor's order: the title, the location and
+ * the link, then the description - two lines to start, growing with what is
+ * typed. The keyboard's action in the title is [onSave].
  * With [select], as on a copy, the title takes the focus with its text
  * selected, ready to be typed over. Each save tried without a title, counted
  * by [asked], brings the title into view and puts the cursor in it.
@@ -702,8 +704,9 @@ internal fun EventText(
         }
     }
     var field by remember { mutableStateOf(TextFieldValue(title)) }
-    // A title set from outside the field - loaded, or a copy opened - replaces it.
-    if (field.text != title) field = TextFieldValue(title, TextRange(title.length))
+    // A title set from outside the field - loaded, or a copy opened - replaces
+    // it, the cursor at its start, as the other fields' values do.
+    if (field.text != title) field = TextFieldValue(title)
     LaunchedEffect(select) {
         if (select) {
             field = TextFieldValue(title, TextRange(0, title.length))
@@ -739,16 +742,6 @@ internal fun EventText(
             }
         }
         EditorDivider()
-        EditorRow(icon = Icons.AutoMirrored.Outlined.Notes) {
-            PlainField(
-                value = description,
-                onValueChange = onDescription,
-                placeholder = stringResource(R.string.calendars_event_description),
-                enabled = enabled,
-                minLines = 2,
-                modifier = Modifier.weight(1f).leaving(onLeave),
-            )
-        }
         val context = LocalContext.current
         val format = LocalFormat.current
         EditorRow(icon = Icons.Outlined.LocationOn) {
@@ -782,6 +775,16 @@ internal fun EventText(
                 singleLine = true,
                 enabled = enabled,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                modifier = Modifier.weight(1f).leaving(onLeave),
+            )
+        }
+        EditorRow(icon = Icons.AutoMirrored.Outlined.Notes) {
+            PlainField(
+                value = description,
+                onValueChange = onDescription,
+                placeholder = stringResource(R.string.calendars_event_description),
+                enabled = enabled,
+                minLines = 2,
                 modifier = Modifier.weight(1f).leaving(onLeave),
             )
         }
