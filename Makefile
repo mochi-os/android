@@ -30,11 +30,18 @@ key = $(HOME)/.config/mochi/update-signing.key
 
 all: apk
 
+# The release build runs in one Gradle JVM, with Kotlin compiled inside it and
+# three workers. A cold build peaks at 9.3 GB of its own memory, at R8 and
+# packaging, so give it an 11 GB limit. With the defaults in gradle.properties
+# it starts a 4 GB Gradle daemon and a 4 GB Kotlin daemon, lint and R8 add their
+# workers on top, and the build was killed at 10 GB.
+bounded = --no-daemon --max-workers=3 -Pkotlin.compiler.execution.strategy=in-process "-Dorg.gradle.jvmargs=-Xmx6g -XX:MaxMetaspaceSize=1g -Dfile.encoding=UTF-8"
+
 # Every module's preBuild depends on the root checkLocaleCompleteness task, so
 # this fails on an incomplete string catalogue rather than shipping one. `make
 # locales` runs the same check alone.
 apk:
-	./gradlew :app:assembleRelease
+	./gradlew $(bounded) :app:assembleRelease
 
 # The portable form of the catalogue gate: no JVM, no Android SDK, no CI service.
 # Same script the gradle task and the lint workflow call, so there is one set of
